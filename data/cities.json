@@ -1,0 +1,55 @@
+[
+  {
+    "id": "delhi",
+    "name": "Delhi",
+    "bbox": [
+      76.84,
+      28.4,
+      77.35,
+      28.88
+    ],
+    "operator": "DMRC",
+    "phases": [
+      "I",
+      "II",
+      "III",
+      "IV"
+    ]
+  },
+  {
+    "id": "bengaluru",
+    "name": "Bengaluru",
+    "bbox": [
+      77.45,
+      12.8,
+      77.78,
+      13.15
+    ],
+    "operator": "BMRCL",
+    "phases": [
+      "1",
+      "2",
+      "2A",
+      "2B",
+      "3"
+    ]
+  },
+  {
+    "id": "mumbai",
+    "name": "Mumbai",
+    "bbox": [
+      72.75,
+      18.88,
+      73.05,
+      19.3
+    ],
+    "operator": "MMRDA",
+    "phases": [
+      "1",
+      "2A",
+      "2B",
+      "3",
+      "4"
+    ]
+  }
+]

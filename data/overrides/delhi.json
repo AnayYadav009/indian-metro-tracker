@@ -1,0 +1,281 @@
+{
+  "city": {
+    "id": "delhi",
+    "name": "Delhi",
+    "bbox": [76.84, 28.4, 77.35, 28.88],
+    "operator": "DMRC",
+    "phases": ["I", "II", "III", "IV"]
+  },
+  "lines": [
+    {
+      "id": "del-red",
+      "name": "Red Line",
+      "city": "Delhi",
+      "color": "#FF4040",
+      "operator": "DMRC"
+    },
+    {
+      "id": "del-yellow",
+      "name": "Yellow Line",
+      "city": "Delhi",
+      "color": "#FFD700",
+      "operator": "DMRC"
+    },
+    {
+      "id": "del-blue",
+      "name": "Blue Line",
+      "city": "Delhi",
+      "color": "#0070BB",
+      "operator": "DMRC"
+    },
+    {
+      "id": "del-green",
+      "name": "Green Line",
+      "city": "Delhi",
+      "color": "#008000",
+      "operator": "DMRC"
+    },
+    {
+      "id": "del-violet",
+      "name": "Violet Line",
+      "city": "Delhi",
+      "color": "#553592",
+      "operator": "DMRC"
+    },
+    {
+      "id": "del-airport",
+      "name": "Airport Express",
+      "city": "Delhi",
+      "color": "#FF8C00",
+      "operator": "DMRC"
+    },
+    {
+      "id": "del-pink",
+      "name": "Pink Line",
+      "city": "Delhi",
+      "color": "#FC8EAC",
+      "operator": "DMRC"
+    },
+    {
+      "id": "del-magenta",
+      "name": "Magenta Line",
+      "city": "Delhi",
+      "color": "#CC338B",
+      "operator": "DMRC"
+    },
+    {
+      "id": "del-grey",
+      "name": "Grey Line",
+      "city": "Delhi",
+      "color": "#838996",
+      "operator": "DMRC"
+    },
+    {
+      "id": "del-silver",
+      "name": "Silver Line (Golden)",
+      "city": "Delhi",
+      "color": "#A0A0A0",
+      "operator": "DMRC"
+    }
+  ],
+  "segments": [
+    {
+      "osmId": 447214,
+      "segment_id": "del-red-seg-01",
+      "line_id": "del-red",
+      "line_name": "Red Line",
+      "phase": "I",
+      "status": "operational",
+      "gauge": "broad",
+      "inaugurated_on": "2002-12-24",
+      "expected_completion": null,
+      "color": "#FF4040"
+    },
+    {
+      "osmId": 447210,
+      "segment_id": "del-yellow-seg-01",
+      "line_id": "del-yellow",
+      "line_name": "Yellow Line",
+      "phase": "I",
+      "status": "operational",
+      "gauge": "broad",
+      "inaugurated_on": "2004-12-20",
+      "expected_completion": null,
+      "color": "#FFD700"
+    },
+    {
+      "osmId": 447209,
+      "segment_id": "del-blue-seg-01",
+      "line_id": "del-blue",
+      "line_name": "Blue Line",
+      "phase": "I",
+      "status": "operational",
+      "gauge": "broad",
+      "inaugurated_on": "2005-12-31",
+      "expected_completion": null,
+      "color": "#0070BB"
+    },
+    {
+      "osmId": 2535795,
+      "segment_id": "del-blue-seg-02",
+      "line_id": "del-blue",
+      "line_name": "Blue Line (Branch)",
+      "phase": "II",
+      "status": "operational",
+      "gauge": "broad",
+      "inaugurated_on": "2011-07-14",
+      "expected_completion": null,
+      "color": "#0070BB"
+    },
+    {
+      "osmId": 8037666,
+      "segment_id": "del-green-seg-01",
+      "line_id": "del-green",
+      "line_name": "Green Line",
+      "phase": "II",
+      "status": "operational",
+      "gauge": "standard",
+      "inaugurated_on": "2010-04-03",
+      "expected_completion": null,
+      "color": "#008000"
+    },
+    {
+      "osmId": 2535796,
+      "segment_id": "del-green-seg-02",
+      "line_id": "del-green",
+      "line_name": "Green Line (Kirti Nagar branch)",
+      "phase": "II",
+      "status": "operational",
+      "gauge": "standard",
+      "inaugurated_on": "2011-08-27",
+      "expected_completion": null,
+      "color": "#008000"
+    },
+    {
+      "osmId": 2535797,
+      "segment_id": "del-violet-seg-01",
+      "line_id": "del-violet",
+      "line_name": "Violet Line",
+      "phase": "II",
+      "status": "operational",
+      "gauge": "standard",
+      "inaugurated_on": "2010-10-03",
+      "expected_completion": null,
+      "color": "#553592"
+    },
+    {
+      "osmId": 2535798,
+      "segment_id": "del-airport-seg-01",
+      "line_id": "del-airport",
+      "line_name": "Airport Express",
+      "phase": "II",
+      "status": "operational",
+      "gauge": "standard",
+      "inaugurated_on": "2011-02-23",
+      "expected_completion": null,
+      "color": "#FF8C00"
+    },
+    {
+      "osmId": 8241298,
+      "segment_id": "del-pink-seg-01",
+      "line_id": "del-pink",
+      "line_name": "Pink Line",
+      "phase": "III",
+      "status": "operational",
+      "gauge": "standard",
+      "inaugurated_on": "2018-03-14",
+      "expected_completion": null,
+      "color": "#FC8EAC"
+    },
+    {
+      "osmId": 8385429,
+      "segment_id": "del-magenta-seg-01",
+      "line_id": "del-magenta",
+      "line_name": "Magenta Line",
+      "phase": "III",
+      "status": "operational",
+      "gauge": "standard",
+      "inaugurated_on": "2017-12-25",
+      "expected_completion": null,
+      "color": "#CC338B"
+    },
+    {
+      "osmId": 3537978,
+      "segment_id": "del-grey-seg-01",
+      "line_id": "del-grey",
+      "line_name": "Grey Line",
+      "phase": "III",
+      "status": "operational",
+      "gauge": "standard",
+      "inaugurated_on": "2019-10-04",
+      "expected_completion": null,
+      "color": "#838996"
+    },
+    {
+      "osmId": 20300114,
+      "segment_id": "del-magenta-seg-02",
+      "line_id": "del-magenta",
+      "line_name": "Magenta Line (Ext Phase IV)",
+      "phase": "IV",
+      "status": "construction",
+      "gauge": "standard",
+      "inaugurated_on": null,
+      "expected_completion": "2026-06",
+      "color": "#CC338B"
+    },
+    {
+      "segment_id": "del-silver-seg-01",
+      "line_id": "del-silver",
+      "line_name": "Silver Line (Aerocity - Tughlakabad)",
+      "phase": "IV",
+      "status": "construction",
+      "gauge": "standard",
+      "inaugurated_on": null,
+      "expected_completion": "2026-12",
+      "color": "#A0A0A0",
+      "coordinates": [
+        [77.1215, 28.5532],
+        [77.1682, 28.5284],
+        [77.2114, 28.5141],
+        [77.2563, 28.5028],
+        [77.2882, 28.5085]
+      ]
+    },
+    {
+      "segment_id": "del-planned-seg-01",
+      "line_id": "del-silver",
+      "line_name": "Lajpat Nagar - Saket G Block Link",
+      "phase": "IV",
+      "status": "planned",
+      "gauge": "standard",
+      "inaugurated_on": null,
+      "expected_completion": "2028",
+      "color": "#A0A0A0",
+      "coordinates": [
+        [77.2375, 28.5684],
+        [77.2285, 28.5412],
+        [77.2114, 28.5141]
+      ]
+    }
+  ],
+  "interchangeStationNames": [
+    "Rajiv Chowk",
+    "Kashmere Gate",
+    "Central Secretariat",
+    "Hauz Khas",
+    "Botanical Garden",
+    "Mandi House",
+    "Yamuna Bank",
+    "Anand Vihar",
+    "Kirti Nagar",
+    "Inderlok",
+    "Janakpuri West",
+    "Kalkaji Mandir",
+    "Netaji Subhash Place",
+    "Welcome",
+    "Dilli Haat - INA",
+    "Lajpat Nagar",
+    "Mayur Vihar - I",
+    "New Delhi"
+  ]
+}
