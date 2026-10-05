@@ -18,16 +18,16 @@ The data layer is cleanly separated from the UI, so real data can replace mock d
 Non-goals (v1): live train tracking, route planning or fare calculation, user accounts.
 
 2. Optimal Tech Stack
-Layer	Choice	Rationale
-Framework	Next.js (App Router) + TypeScript	Full-stack in one repo; API routes or static data serving; easy deployment
-Map engine	MapLibre GL JS via react-map-gl (react-map-gl/maplibre)	WebGL rendering handles many polylines smoothly; supports line-dasharray, data-driven styling, and feature-state (hover/select); open source with no token or billing
-Basemap	A free vector style (e.g. OpenFreeMap or a MapTiler free tier) with a light, muted look	Muted basemaps make colored transit lines stand out
-Styling/UI	Tailwind CSS + shadcn/ui	Fast, consistent filter panels, drawers, and legends
-State	Zustand	Lightweight store for filters and selected feature
-Data (v1)	Static GeoJSON files in /data, validated with Zod	No database needed for a read-mostly dataset
-Data (v2, optional)	PostgreSQL + PostGIS, served through Next.js route handlers	Only if you need an admin panel or frequent updates
-Testing	Vitest (data validation, filter logic) + Playwright (map interactions)	Gives Antigravity's agents something concrete to run
-Deploy	Vercel	Zero-config for Next.js
+   Layer Choice Rationale
+   Framework Next.js (App Router) + TypeScript Full-stack in one repo; API routes or static data serving; easy deployment
+   Map engine MapLibre GL JS via react-map-gl (react-map-gl/maplibre) WebGL rendering handles many polylines smoothly; supports line-dasharray, data-driven styling, and feature-state (hover/select); open source with no token or billing
+   Basemap A free vector style (e.g. OpenFreeMap or a MapTiler free tier) with a light, muted look Muted basemaps make colored transit lines stand out
+   Styling/UI Tailwind CSS + shadcn/ui Fast, consistent filter panels, drawers, and legends
+   State Zustand Lightweight store for filters and selected feature
+   Data (v1) Static GeoJSON files in /data, validated with Zod No database needed for a read-mostly dataset
+   Data (v2, optional) PostgreSQL + PostGIS, served through Next.js route handlers Only if you need an admin panel or frequent updates
+   Testing Vitest (data validation, filter logic) + Playwright (map interactions) Gives Antigravity's agents something concrete to run
+   Deploy Vercel Zero-config for Next.js
 
 Why MapLibre over Leaflet: Leaflet renders each polyline as an SVG/DOM element, which gets sluggish with many stations and lines. MapLibre uses WebGL and layer-level filters, which suits this use case better.
 
@@ -37,8 +37,7 @@ Implementation note for agents: MapLibre's line-dasharray is not data-driven, so
 
 operational → solid
 construction → line-dasharray: [4, 2]
-planned → line-dasharray: [0.1, 2] with line-cap: round (renders as dots)
-3. Data Architecture Strategy
+planned → line-dasharray: [0.1, 2] with line-cap: round (renders as dots) 3. Data Architecture Strategy
 Core design decision: model segments, not whole lines
 
 A single metro line is often partly open, partly under construction, and partly planned (for example, a line opened in stretches over several years). If status lives only on the line, you can't draw that correctly. So:
