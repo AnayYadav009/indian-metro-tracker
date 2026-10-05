@@ -1,67 +1,72 @@
+"use client";
+
+import dynamic from "next/dynamic";
+import { MapSkeleton } from "@/components/map/map-skeleton";
+import { FilterPanel } from "@/components/filters/filter-panel";
+import { MetadataPanel } from "@/components/panels/metadata-panel";
+import { MapLegend } from "@/components/legend/map-legend";
+import { MockBanner } from "@/components/ui/mock-banner";
+import { NetworkStats } from "@/components/filters/network-stats";
+import { EmptyFilterState } from "@/components/map/empty-state";
+
+import { useUrlSync } from "@/hooks/use-url-sync";
+
+const MapCanvas = dynamic(
+  () => import("@/components/map/map-canvas").then((mod) => mod.MapCanvas),
+  {
+    ssr: false,
+    loading: () => <MapSkeleton />,
+  }
+);
+
 export default function HomePage() {
+  useUrlSync();
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between bg-slate-950 p-6 text-slate-100 md:p-24">
-      <div className="z-10 flex w-full max-w-5xl items-center justify-between font-mono text-sm">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-slate-800 bg-gradient-to-b from-slate-900 pb-6 pt-8 backdrop-blur-2xl md:static md:w-auto md:rounded-xl md:border md:bg-slate-900/60 md:p-4">
-          <span className="font-semibold text-emerald-400">Milestone 1</span>
-          <span className="mx-2 text-slate-500">•</span>
-          <span>Setup &amp; Boilerplate</span>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-slate-950 via-slate-950 md:static md:h-auto md:w-auto md:bg-none">
-          <span className="inline-flex items-center rounded-full bg-emerald-950/80 px-3 py-1 text-xs font-medium text-emerald-300 ring-1 ring-inset ring-emerald-600/30">
-            Static Export Configured
+    <div className="flex h-screen w-screen flex-col overflow-hidden bg-slate-950 text-slate-100">
+      {/* Header bar */}
+      <header className="z-20 flex h-14 shrink-0 items-center justify-between border-b border-slate-800 bg-slate-900/90 px-4 backdrop-blur md:px-6">
+        <div className="flex items-center gap-3">
+          <div className="flex h-8 w-8 items-center justify-center rounded-lg border border-emerald-500/20 bg-emerald-500/10 text-sm font-bold text-emerald-400">
+            IM
+          </div>
+          <div>
+            <h1 className="text-sm font-semibold tracking-tight text-slate-100 md:text-base">
+              Indian Metro Network Tracker
+            </h1>
+          </div>
+        </div>
+
+        {/* Live Network Metric Stats */}
+        <NetworkStats />
+
+        <div className="flex items-center gap-2">
+          <span
+            data-testid="data-last-updated"
+            className="hidden items-center rounded-full border border-slate-700 bg-slate-800 px-2.5 py-0.5 text-xs font-medium text-slate-300 md:inline-flex"
+          >
+            Data: Oct 2026 (OSM + MoHUA)
+          </span>
+          <span className="hidden items-center rounded-full border border-slate-700 bg-slate-800 px-2.5 py-0.5 text-xs font-medium text-slate-300 sm:inline-flex">
+            OpenFreeMap Positron
+          </span>
+          <span className="inline-flex items-center rounded-full border border-emerald-600/30 bg-emerald-950/80 px-2.5 py-0.5 text-xs font-medium text-emerald-400">
+            Milestone 7: Real Data Pipeline
           </span>
         </div>
-      </div>
+      </header>
 
-      <div className="my-16 max-w-2xl space-y-6 text-center">
-        <h1 className="bg-gradient-to-r from-blue-400 via-emerald-400 to-indigo-400 bg-clip-text text-4xl font-extrabold tracking-tight text-transparent md:text-6xl">
-          Indian Metro Network Tracker
-        </h1>
-        <p className="text-lg leading-relaxed text-slate-400 md:text-xl">
-          An interactive map visualizer tracking operational,
-          under-construction, and planned metro transit systems across all
-          Indian metropolitan cities.
-        </p>
-        <div className="inline-flex items-center gap-2 rounded-lg border border-slate-800 bg-slate-900/80 px-4 py-2 text-xs text-slate-300">
-          <span>Map Canvas (Milestone 2) launching next</span>
-        </div>
-      </div>
+      {/* Mandatory Mock Data Warning Banner whenever DATA_SOURCE === "mock" */}
+      <MockBanner />
 
-      <div className="grid w-full max-w-5xl grid-cols-1 gap-6 md:grid-cols-3">
-        <div className="space-y-2 rounded-xl border border-slate-800 bg-slate-900/40 p-6">
-          <h2 className="text-base font-semibold text-slate-200">Tech Stack</h2>
-          <p className="text-sm text-slate-400">
-            Next.js App Router, TypeScript, Tailwind CSS, shadcn/ui, MapLibre GL
-            JS, Zustand, and Zod.
-          </p>
-        </div>
-
-        <div className="space-y-2 rounded-xl border border-slate-800 bg-slate-900/40 p-6">
-          <h2 className="text-base font-semibold text-slate-200">
-            Testing &amp; CI/CD
-          </h2>
-          <p className="text-sm text-slate-400">
-            Unit testing with Vitest, E2E ready with Playwright, and zero-cost
-            deployment to GitHub Pages.
-          </p>
-        </div>
-
-        <div className="space-y-2 rounded-xl border border-slate-800 bg-slate-900/40 p-6">
-          <h2 className="text-base font-semibold text-slate-200">
-            Data Architecture
-          </h2>
-          <p className="text-sm text-slate-400">
-            Contiguous segment modeling (LineStrings) with independent phase and
-            status metadata.
-          </p>
-        </div>
-      </div>
-
-      <footer className="mt-12 text-center text-xs text-slate-500">
-        Indian Metro Network Tracker • Built strictly to BLUEPRINT.md &amp;
-        MILESTONES.md specifications
-      </footer>
-    </main>
+      {/* Interactive Map Area with Floating Filter Panel, Legend, and Metadata Panel */}
+      <main className="relative h-full w-full flex-1 overflow-hidden">
+        <FilterPanel />
+        <MetadataPanel />
+        <MapLegend />
+        <EmptyFilterState />
+        <MapCanvas className="h-full w-full" />
+      </main>
+    </div>
   );
 }

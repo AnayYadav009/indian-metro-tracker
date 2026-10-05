@@ -65,6 +65,8 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 - **Type check**: `npm run typecheck`
 - **Lint code**: `npm run lint`
 - **Format code**: `npm run format`
+- **Validate dataset**: `npm run validate:data`
+- **Run Overpass pipeline**: `npm run pipeline:all`
 - **Build static export**: `npm run build`
 
 ## Project Rules & Hard Constraints

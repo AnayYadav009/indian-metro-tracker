@@ -14,6 +14,21 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   trailingSlash: true,
+  transpilePackages: ["react-map-gl", "maplibre-gl"],
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.geojson$/,
+      type: "json",
+    });
+
+    config.resolve = config.resolve || {};
+    config.resolve.alias = {
+      ...(config.resolve.alias || {}),
+      "mapbox-gl": "maplibre-gl",
+    };
+
+    return config;
+  },
 };
 
 export default nextConfig;
