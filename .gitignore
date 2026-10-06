@@ -23,6 +23,7 @@
 *.pem
 /scratch/
 /public/maplibre-gl-worker.mjs
+/public/maplibre-gl-shared.mjs
 
 # debug
 npm-debug.log*

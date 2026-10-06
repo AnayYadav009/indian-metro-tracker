@@ -6,6 +6,8 @@ test.describe("MapLibre Worker Isolation (Zero Runtime unpkg)", () => {
   }) => {
     const unpkgRequests: string[] = [];
     const localWorkerRequests: string[] = [];
+    const localSharedRequests: string[] = [];
+    const failed404s: string[] = [];
 
     page.on("request", (req) => {
       const url = req.url();
@@ -14,6 +16,15 @@ test.describe("MapLibre Worker Isolation (Zero Runtime unpkg)", () => {
       }
       if (url.includes("maplibre-gl-worker.mjs")) {
         localWorkerRequests.push(url);
+      }
+      if (url.includes("maplibre-gl-shared.mjs")) {
+        localSharedRequests.push(url);
+      }
+    });
+
+    page.on("response", (res) => {
+      if (res.status() === 404) {
+        failed404s.push(res.url());
       }
     });
 
@@ -28,5 +39,9 @@ test.describe("MapLibre Worker Isolation (Zero Runtime unpkg)", () => {
 
     // Assert that the local worker was requested
     expect(localWorkerRequests.length).toBeGreaterThanOrEqual(1);
+
+    // Assert no 404 errors for maplibre files
+    const maplibre404s = failed404s.filter((u) => u.includes("maplibre-gl"));
+    expect(maplibre404s).toHaveLength(0);
   });
 });
