@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { validateMetroDataset } from "../lib/data-validator";
+import { atomicWriteFiles } from "./lib/atomic-write";
 import type { City, Line, SegmentFeatureCollection, StationFeatureCollection } from "../types/metro";
 
 const ROOT_DIR = path.resolve(__dirname, "..");
@@ -140,9 +141,11 @@ function migrateDatasetDirectory(targetDir: string, citiesJsonPath: string) {
   }
 
   // Atomically write files
-  fs.writeFileSync(linesPath, JSON.stringify(migratedLines, null, 2) + "\n", "utf-8");
-  fs.writeFileSync(segsPath, JSON.stringify(migratedSegs, null, 2) + "\n", "utf-8");
-  fs.writeFileSync(stnsPath, JSON.stringify(migratedStns, null, 2) + "\n", "utf-8");
+  atomicWriteFiles([
+    { target: linesPath, content: JSON.stringify(migratedLines, null, 2) + "\n" },
+    { target: segsPath, content: JSON.stringify(migratedSegs, null, 2) + "\n" },
+    { target: stnsPath, content: JSON.stringify(migratedStns, null, 2) + "\n" },
+  ]);
   console.log(`✅ Successfully migrated and verified ${path.relative(ROOT_DIR, targetDir)}`);
 }
 
@@ -151,6 +154,8 @@ function migrateOverrides() {
   if (!fs.existsSync(OVERRIDES_DIR)) return;
 
   const files = fs.readdirSync(OVERRIDES_DIR).filter((f) => f.endsWith(".json"));
+  const overrideWrites: { target: string; content: string }[] = [];
+
   for (const file of files) {
     const filePath = path.join(OVERRIDES_DIR, file);
     const data = JSON.parse(fs.readFileSync(filePath, "utf-8"));
@@ -171,9 +176,16 @@ function migrateOverrides() {
       }));
     }
 
-    fs.writeFileSync(filePath, JSON.stringify(data, null, 2) + "\n", "utf-8");
-    console.log(`✅ Migrated override: ${file}`);
+    overrideWrites.push({
+      target: filePath,
+      content: JSON.stringify(data, null, 2) + "\n",
+    });
   }
+
+  if (overrideWrites.length > 0) {
+    atomicWriteFiles(overrideWrites);
+  }
+  console.log(`✅ Migrated ${overrideWrites.length} override file(s) atomically`);
 }
 
 function runMigration() {

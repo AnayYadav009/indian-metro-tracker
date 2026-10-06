@@ -4,6 +4,7 @@ import { fetchOverpassDataForCity } from "./fetch-overpass";
 import { normalizeOverpassCity } from "./normalize";
 import { mergeCityOverrides, type CityOverrideData } from "./merge-overrides";
 import { validateMetroDataset } from "../../lib/data-validator";
+import { atomicWriteFiles } from "../lib/atomic-write";
 import type { City, Line, SegmentFeature, StationFeature } from "../../types/metro";
 
 const DATA_DIR = path.resolve(process.cwd(), "data");
@@ -119,39 +120,8 @@ export function saveActiveDataset(dataset: {
     },
   ];
 
-  const tempFiles: { temp: string; target: string }[] = [];
-  const timestamp = Date.now();
-
-  try {
-    // 2. Write to temporary files first
-    for (const file of filesToWrite) {
-      const tempPath = path.join(
-        DATA_DIR,
-        `.tmp-${path.basename(file.target)}-${timestamp}`
-      );
-      fs.writeFileSync(tempPath, file.content, "utf-8");
-      tempFiles.push({ temp: tempPath, target: file.target });
-    }
-
-    // 3. Atomically replace each file
-    for (const item of tempFiles) {
-      fs.renameSync(item.temp, item.target);
-    }
-
-    console.log(`✅ Active dataset written and verified atomically.`);
-  } catch (err) {
-    // Clean up any remaining temporary files
-    for (const item of tempFiles) {
-      if (fs.existsSync(item.temp)) {
-        try {
-          fs.unlinkSync(item.temp);
-        } catch {
-          // ignore cleanup errors
-        }
-      }
-    }
-    throw err;
-  }
+  atomicWriteFiles(filesToWrite);
+  console.log(`✅ Active dataset written and verified atomically.`);
 }
 
 // CLI runner
