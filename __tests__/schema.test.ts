@@ -39,6 +39,7 @@ describe("Schema Validation Tests", () => {
     const validLine = {
       id: "del-yellow",
       name: "Yellow Line",
+      city_id: "delhi",
       city: "Delhi",
       color: "#FFD700",
       operator: "DMRC",
@@ -57,6 +58,7 @@ describe("Schema Validation Tests", () => {
       segment_id: "test-seg-1",
       line_id: "del-yellow",
       line_name: "Yellow Line",
+      city_id: "delhi",
       city: "Delhi",
       operator: "DMRC",
       status: "operational",
@@ -93,6 +95,7 @@ describe("Schema Validation Tests", () => {
       segment_id: "test-seg-2",
       line_id: "del-silver",
       line_name: "Silver Line",
+      city_id: "delhi",
       city: "Delhi",
       operator: "DMRC",
       status: "construction",
@@ -138,6 +141,7 @@ describe("Schema Validation Tests", () => {
         segment_id: "test-seg",
         line_id: "test-line",
         line_name: "Test Line",
+        city_id: "delhi",
         city: "Delhi",
         operator: "DMRC",
         status: "planned",
@@ -176,6 +180,7 @@ describe("Schema Validation Tests", () => {
       properties: {
         station_id: "del-rajiv-chowk",
         name: "Rajiv Chowk",
+        city_id: "delhi",
         city: "Delhi",
         line_ids: ["del-yellow", "del-blue"],
         status: "operational",
@@ -207,6 +212,7 @@ describe("Schema Validation Tests", () => {
       {
         id: "del-yellow",
         name: "Yellow Line",
+        city_id: "delhi",
         city: "Delhi",
         color: "#FFD700",
         operator: "DMRC",
@@ -229,6 +235,7 @@ describe("Schema Validation Tests", () => {
             segment_id: "del-invalid-phase",
             line_id: "del-yellow",
             line_name: "Yellow Line",
+            city_id: "delhi",
             city: "Delhi",
             operator: "DMRC",
             status: "planned",
@@ -260,5 +267,38 @@ describe("Schema Validation Tests", () => {
 
     expect(result.valid).toBe(false);
     expect(result.errors.some((e) => e.includes("Phase-Unknown"))).toBe(true);
+  });
+
+  it("rejects record with unrecognized or missing city_id in validateMetroDataset", () => {
+    const testCities = [
+      {
+        id: "delhi",
+        name: "Delhi",
+        bbox: [76.84, 28.4, 77.35, 28.88] as [number, number, number, number],
+        operator: "DMRC",
+        phases: ["I", "II"],
+      },
+    ];
+
+    const unknownCityLines = [
+      {
+        id: "del-yellow",
+        name: "Yellow Line",
+        city_id: "atlantis", // Unknown city_id
+        city: "Delhi",
+        color: "#FFD700",
+        operator: "DMRC",
+      },
+    ];
+
+    const result = validateMetroDataset({
+      cities: testCities,
+      lines: unknownCityLines,
+      segments: { type: "FeatureCollection", features: [] },
+      stations: { type: "FeatureCollection", features: [] },
+    });
+
+    expect(result.valid).toBe(false);
+    expect(result.errors.some((e) => e.includes("unknown city_id 'atlantis'"))).toBe(true);
   });
 });

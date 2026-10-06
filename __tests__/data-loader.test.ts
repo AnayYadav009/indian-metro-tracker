@@ -93,6 +93,7 @@ describe("Metro Data Loader & Dataset Invariants", () => {
           {
             id: "chn-blue",
             name: "Blue Line",
+            city_id: "chennai",
             city: "Chennai",
             color: "#0066CC",
             operator: "CMRL",
@@ -115,6 +116,7 @@ describe("Metro Data Loader & Dataset Invariants", () => {
                 segment_id: "chn-blue-seg-01",
                 line_id: "chn-blue",
                 line_name: "Blue Line",
+                city_id: "chennai",
                 city: "Chennai",
                 operator: "CMRL",
                 status: "operational",

@@ -1,8 +1,7 @@
 import { describe, it, expect } from "vitest";
 import { validateMetroDataset } from "@/lib/data-validator";
-import type { RawMetroData } from "@/lib/data-validator";
 
-const mockTier1Dataset: RawMetroData = {
+const mockTier1Dataset: Parameters<typeof validateMetroDataset>[0] = {
   cities: [
     {
       id: "delhi",
@@ -30,6 +29,7 @@ const mockTier1Dataset: RawMetroData = {
     {
       id: "del-red",
       name: "Red Line",
+      city_id: "delhi",
       city: "Delhi",
       color: "#FF4040",
       operator: "DMRC",
@@ -37,6 +37,7 @@ const mockTier1Dataset: RawMetroData = {
     {
       id: "blr-purple",
       name: "Purple Line",
+      city_id: "bengaluru",
       city: "Bengaluru",
       color: "#800080",
       operator: "BMRCL",
@@ -44,6 +45,7 @@ const mockTier1Dataset: RawMetroData = {
     {
       id: "mum-line-1",
       name: "Line 1",
+      city_id: "mumbai",
       city: "Mumbai",
       color: "#0000FF",
       operator: "MMRDA",
@@ -65,6 +67,7 @@ const mockTier1Dataset: RawMetroData = {
           segment_id: "del-red-seg-01",
           line_id: "del-red",
           line_name: "Red Line",
+          city_id: "delhi",
           city: "Delhi",
           operator: "DMRC",
           status: "operational",
@@ -92,6 +95,7 @@ const mockTier1Dataset: RawMetroData = {
           segment_id: "del-red-seg-02",
           line_id: "del-red",
           line_name: "Red Line",
+          city_id: "delhi",
           city: "Delhi",
           operator: "DMRC",
           status: "operational",
@@ -119,6 +123,7 @@ const mockTier1Dataset: RawMetroData = {
           segment_id: "blr-purple-seg-01",
           line_id: "blr-purple",
           line_name: "Purple Line",
+          city_id: "bengaluru",
           city: "Bengaluru",
           operator: "BMRCL",
           status: "construction",
@@ -146,6 +151,7 @@ const mockTier1Dataset: RawMetroData = {
           segment_id: "blr-purple-seg-02",
           line_id: "blr-purple",
           line_name: "Purple Line",
+          city_id: "bengaluru",
           city: "Bengaluru",
           operator: "BMRCL",
           status: "construction",
@@ -173,6 +179,7 @@ const mockTier1Dataset: RawMetroData = {
           segment_id: "mum-line1-seg-01",
           line_id: "mum-line-1",
           line_name: "Line 1",
+          city_id: "mumbai",
           city: "Mumbai",
           operator: "MMRDA",
           status: "planned",
@@ -200,6 +207,7 @@ const mockTier1Dataset: RawMetroData = {
           segment_id: "mum-line1-seg-02",
           line_id: "mum-line-1",
           line_name: "Line 1",
+          city_id: "mumbai",
           city: "Mumbai",
           operator: "MMRDA",
           status: "planned",
@@ -228,6 +236,7 @@ const mockTier1Dataset: RawMetroData = {
         properties: {
           station_id: "del-kashmere-gate",
           name: "Kashmere Gate",
+          city_id: "delhi",
           city: "Delhi",
           line_ids: ["del-red"],
           is_interchange: true,

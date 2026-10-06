@@ -15,6 +15,7 @@ export interface CityOverrideData {
   lines: Array<{
     id: string;
     name: string;
+    city_id?: string;
     city: string;
     color: string;
     operator: string;
@@ -133,6 +134,7 @@ export function mergeCityOverrides(
         segment_id: segOverride.segment_id,
         line_id: segOverride.line_id,
         line_name: segOverride.line_name,
+        city_id: overrides.city.id,
         city: cityName,
         operator,
         status: segOverride.status,
@@ -280,6 +282,7 @@ export function mergeCityOverrides(
       properties: {
         station_id: stationId,
         name: rawName,
+        city_id: overrides.city.id,
         city: cityName,
         line_ids: Array.from(lineIdsSet),
         status: assignedStatus,

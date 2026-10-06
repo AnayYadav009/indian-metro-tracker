@@ -26,6 +26,7 @@ export type City = z.infer<typeof CitySchema>;
 export const LineSchema = z.object({
   id: z.string().min(1),
   name: z.string().min(1),
+  city_id: z.string().min(1),
   city: z.string().min(1),
   color: z.string().regex(/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/, "Invalid hex color"),
   operator: z.string().min(1),
@@ -37,6 +38,7 @@ export const SegmentPropertiesSchema = z
     segment_id: z.string().min(1),
     line_id: z.string().min(1),
     line_name: z.string().min(1),
+    city_id: z.string().min(1),
     city: z.string().min(1),
     operator: z.string().min(1),
     status: StatusSchema,
@@ -128,6 +130,7 @@ export const StationPropertiesSchema = z
   .object({
     station_id: z.string().min(1),
     name: z.string().min(1),
+    city_id: z.string().min(1),
     city: z.string().min(1),
     line_ids: z.array(z.string().min(1)).min(1),
     status: StatusSchema,

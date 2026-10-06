@@ -2,6 +2,7 @@
   {
     "id": "blr-purple",
     "name": "Purple Line",
+    "city_id": "bengaluru",
     "city": "Bengaluru",
     "color": "#800080",
     "operator": "BMRCL"
@@ -9,6 +10,7 @@
   {
     "id": "blr-green",
     "name": "Green Line",
+    "city_id": "bengaluru",
     "city": "Bengaluru",
     "color": "#009933",
     "operator": "BMRCL"
@@ -16,6 +18,7 @@
   {
     "id": "blr-yellow",
     "name": "Yellow Line",
+    "city_id": "bengaluru",
     "city": "Bengaluru",
     "color": "#FFCC00",
     "operator": "BMRCL"
@@ -23,6 +26,7 @@
   {
     "id": "blr-blue",
     "name": "Blue Line (Airport Link)",
+    "city_id": "bengaluru",
     "city": "Bengaluru",
     "color": "#1E90FF",
     "operator": "BMRCL"
@@ -30,6 +34,7 @@
   {
     "id": "blr-pink",
     "name": "Pink Line",
+    "city_id": "bengaluru",
     "city": "Bengaluru",
     "color": "#FF69B4",
     "operator": "BMRCL"
@@ -37,6 +42,7 @@
   {
     "id": "mum-line-1",
     "name": "Line 1 (Blue)",
+    "city_id": "mumbai",
     "city": "Mumbai",
     "color": "#0072CE",
     "operator": "MMRDA"
@@ -44,6 +50,7 @@
   {
     "id": "mum-line-2a",
     "name": "Line 2A (Yellow)",
+    "city_id": "mumbai",
     "city": "Mumbai",
     "color": "#FFD700",
     "operator": "MMRDA"
@@ -51,6 +58,7 @@
   {
     "id": "mum-line-7",
     "name": "Line 7 (Red)",
+    "city_id": "mumbai",
     "city": "Mumbai",
     "color": "#ED1C24",
     "operator": "MMRDA"
@@ -58,6 +66,7 @@
   {
     "id": "mum-line-3",
     "name": "Line 3 (Aqua)",
+    "city_id": "mumbai",
     "city": "Mumbai",
     "color": "#00A3E0",
     "operator": "MMRDA"
@@ -65,6 +74,7 @@
   {
     "id": "mum-line-4",
     "name": "Line 4 (Green)",
+    "city_id": "mumbai",
     "city": "Mumbai",
     "color": "#00B140",
     "operator": "MMRDA"
@@ -72,6 +82,7 @@
   {
     "id": "mum-line-2b",
     "name": "Line 2B (Yellow Ext)",
+    "city_id": "mumbai",
     "city": "Mumbai",
     "color": "#FFC72C",
     "operator": "MMRDA"
@@ -79,6 +90,7 @@
   {
     "id": "del-red",
     "name": "Red Line",
+    "city_id": "delhi",
     "city": "Delhi",
     "color": "#FF4040",
     "operator": "DMRC"
@@ -86,6 +98,7 @@
   {
     "id": "del-yellow",
     "name": "Yellow Line",
+    "city_id": "delhi",
     "city": "Delhi",
     "color": "#FFD700",
     "operator": "DMRC"
@@ -93,6 +106,7 @@
   {
     "id": "del-blue",
     "name": "Blue Line",
+    "city_id": "delhi",
     "city": "Delhi",
     "color": "#0070BB",
     "operator": "DMRC"
@@ -100,6 +114,7 @@
   {
     "id": "del-green",
     "name": "Green Line",
+    "city_id": "delhi",
     "city": "Delhi",
     "color": "#008000",
     "operator": "DMRC"
@@ -107,6 +122,7 @@
   {
     "id": "del-violet",
     "name": "Violet Line",
+    "city_id": "delhi",
     "city": "Delhi",
     "color": "#553592",
     "operator": "DMRC"
@@ -114,6 +130,7 @@
   {
     "id": "del-airport",
     "name": "Airport Express",
+    "city_id": "delhi",
     "city": "Delhi",
     "color": "#FF8C00",
     "operator": "DMRC"
@@ -121,6 +138,7 @@
   {
     "id": "del-pink",
     "name": "Pink Line",
+    "city_id": "delhi",
     "city": "Delhi",
     "color": "#FC8EAC",
     "operator": "DMRC"
@@ -128,6 +146,7 @@
   {
     "id": "del-magenta",
     "name": "Magenta Line",
+    "city_id": "delhi",
     "city": "Delhi",
     "color": "#CC338B",
     "operator": "DMRC"
@@ -135,6 +154,7 @@
   {
     "id": "del-grey",
     "name": "Grey Line",
+    "city_id": "delhi",
     "city": "Delhi",
     "color": "#838996",
     "operator": "DMRC"
@@ -142,6 +162,7 @@
   {
     "id": "del-silver",
     "name": "Silver Line (Golden)",
+    "city_id": "delhi",
     "city": "Delhi",
     "color": "#A0A0A0",
     "operator": "DMRC"

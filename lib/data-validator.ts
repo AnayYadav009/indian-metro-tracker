@@ -88,6 +88,7 @@ export function validateMetroDataset(rawData: {
   const stations = stationsParsed.data;
 
   // Build lookup maps for relational validation
+  const cityById = new Map<string, City>();
   const cityByNameOrId = new Map<string, City>();
   const seenCityIds = new Set<string>();
   cities.forEach((c) => {
@@ -95,6 +96,7 @@ export function validateMetroDataset(rawData: {
       errors.push(`Duplicate city ID '${c.id}' found`);
     }
     seenCityIds.add(c.id.toLowerCase());
+    cityById.set(c.id, c);
     cityByNameOrId.set(c.id.toLowerCase(), c);
     cityByNameOrId.set(c.name.toLowerCase(), c);
   });
@@ -107,6 +109,10 @@ export function validateMetroDataset(rawData: {
     }
     seenLineIds.add(l.id);
     lineById.set(l.id, l);
+
+    if (!cityById.has(l.city_id)) {
+      errors.push(`Line '${l.id}' references unknown city_id '${l.city_id}'`);
+    }
   });
 
   // Track segment ID uniqueness
@@ -122,8 +128,13 @@ export function validateMetroDataset(rawData: {
     }
     seenSegmentIds.add(props.segment_id);
 
-    // Verify city exists
-    const city = cityByNameOrId.get(props.city.toLowerCase());
+    // Verify city_id and city exist
+    if (!cityById.has(props.city_id)) {
+      errors.push(
+        `Segment '${props.segment_id}' references unknown city_id '${props.city_id}'`
+      );
+    }
+    const city = cityById.get(props.city_id) || cityByNameOrId.get(props.city.toLowerCase());
     if (!city) {
       errors.push(
         `Segment "${props.segment_id}" references unknown city "${props.city}"`
@@ -169,8 +180,13 @@ export function validateMetroDataset(rawData: {
     }
     seenStationIds.add(props.station_id);
 
-    // Verify city exists
-    const city = cityByNameOrId.get(props.city.toLowerCase());
+    // Verify city_id and city exist
+    if (!cityById.has(props.city_id)) {
+      errors.push(
+        `Station '${props.station_id}' references unknown city_id '${props.city_id}'`
+      );
+    }
+    const city = cityById.get(props.city_id) || cityByNameOrId.get(props.city.toLowerCase());
     if (!city) {
       errors.push(
         `Station "${props.station_id}" references unknown city "${props.city}"`

@@ -34,6 +34,7 @@ export interface MetroDataset {
 }
 
 export interface SegmentFilterOptions {
+  cityId?: string;
   city?: string;
   status?: Status;
   phase?: string;
@@ -41,6 +42,7 @@ export interface SegmentFilterOptions {
 }
 
 export interface StationFilterOptions {
+  cityId?: string;
   city?: string;
   status?: Status;
   phase?: string;

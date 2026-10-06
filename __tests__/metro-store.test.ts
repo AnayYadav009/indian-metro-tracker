@@ -95,6 +95,7 @@ describe("useMetroStore Zustand State Management", () => {
       segment_id: "test-seg-1",
       line_id: "test-line",
       line_name: "Test Line",
+      city_id: "delhi",
       city: "Delhi",
       operator: "DMRC",
       status: "operational",
@@ -121,6 +122,7 @@ describe("useMetroStore Zustand State Management", () => {
     const mockStation: StationProperties = {
       station_id: "test-station-1",
       name: "Test Station",
+      city_id: "delhi",
       city: "Delhi",
       line_ids: ["test-line"],
       status: "operational",

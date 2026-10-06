@@ -20,6 +20,7 @@ describe("MetadataPanel Component", () => {
       segment_id: "del-yellow-seg-01",
       line_id: "del-yellow",
       line_name: "Yellow Line",
+      city_id: "delhi",
       city: "Delhi",
       operator: "DMRC",
       status: "operational",
@@ -67,6 +68,7 @@ describe("MetadataPanel Component", () => {
       segment_id: "blr-pink-seg-01",
       line_id: "blr-pink",
       line_name: "Pink Line",
+      city_id: "bengaluru",
       city: "Bengaluru",
       operator: "BMRCL",
       status: "construction",
@@ -99,6 +101,7 @@ describe("MetadataPanel Component", () => {
     const mockStation: StationProperties = {
       station_id: "del-rajiv-chowk",
       name: "Rajiv Chowk",
+      city_id: "delhi",
       city: "Delhi",
       line_ids: ["del-yellow", "del-blue"],
       status: "operational",
@@ -146,6 +149,7 @@ describe("MetadataPanel Component", () => {
     const mockStation: StationProperties = {
       station_id: "del-rajiv-chowk",
       name: "Rajiv Chowk",
+      city_id: "delhi",
       city: "Delhi",
       line_ids: ["del-yellow"],
       status: "operational",

@@ -13,6 +13,7 @@
       "properties": {
         "station_id": "blr-madavara",
         "name": "Madavara",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-green"
@@ -39,6 +40,7 @@
       "properties": {
         "station_id": "blr-chikkabidarakallu",
         "name": "Chikkabidarakallu",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-green"
@@ -65,6 +67,7 @@
       "properties": {
         "station_id": "blr-manjunathanagara",
         "name": "Manjunathanagara",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-green"
@@ -91,6 +94,7 @@
       "properties": {
         "station_id": "blr-nagawara-proposed",
         "name": "Nagawara (Proposed)",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-pink"
@@ -117,6 +121,7 @@
       "properties": {
         "station_id": "blr-jayadeva-hospital",
         "name": "Jayadeva Hospital",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-yellow"
@@ -143,6 +148,7 @@
       "properties": {
         "station_id": "blr-benniganahalli",
         "name": "Benniganahalli",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-purple"
@@ -169,6 +175,7 @@
       "properties": {
         "station_id": "blr-whitefield-kadugodi",
         "name": "Whitefield (Kadugodi)",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-purple"
@@ -195,6 +202,7 @@
       "properties": {
         "station_id": "blr-hopefarm-channasandra",
         "name": "Hopefarm Channasandra",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-purple"
@@ -221,6 +229,7 @@
       "properties": {
         "station_id": "blr-pattandur-agrahara",
         "name": "Pattandur Agrahara",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-purple"
@@ -247,6 +256,7 @@
       "properties": {
         "station_id": "blr-sri-sathya-sai-hospital",
         "name": "Sri Sathya Sai Hospital",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-purple"
@@ -273,6 +283,7 @@
       "properties": {
         "station_id": "blr-nallurahalli",
         "name": "Nallurahalli",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-purple"
@@ -299,6 +310,7 @@
       "properties": {
         "station_id": "blr-kundalahalli",
         "name": "Kundalahalli",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-purple"
@@ -325,6 +337,7 @@
       "properties": {
         "station_id": "blr-seetharampalya",
         "name": "Seetharampalya",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-purple"
@@ -351,6 +364,7 @@
       "properties": {
         "station_id": "blr-hoodi",
         "name": "Hoodi",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-purple"
@@ -377,6 +391,7 @@
       "properties": {
         "station_id": "blr-garudacharpalya",
         "name": "Garudacharpalya",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-purple"
@@ -403,6 +418,7 @@
       "properties": {
         "station_id": "blr-singayyanapalya",
         "name": "Singayyanapalya",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-purple"
@@ -429,6 +445,7 @@
       "properties": {
         "station_id": "blr-krishnarajapura",
         "name": "Krishnarajapura",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-purple"
@@ -455,6 +472,7 @@
       "properties": {
         "station_id": "blr-delta-electronics-bommasandra",
         "name": "Delta Electronics Bommasandra",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-yellow"
@@ -481,6 +499,7 @@
       "properties": {
         "station_id": "blr-huskur-road",
         "name": "Huskur Road",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-yellow"
@@ -507,6 +526,7 @@
       "properties": {
         "station_id": "blr-infosys-foundation-konappana-agrahara",
         "name": "Infosys Foundation Konappana Agrahara",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-yellow"
@@ -533,6 +553,7 @@
       "properties": {
         "station_id": "blr-electronic-city",
         "name": "Electronic City",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-yellow"
@@ -559,6 +580,7 @@
       "properties": {
         "station_id": "blr-beratena-agrahara",
         "name": "Beratena Agrahara",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-yellow"
@@ -585,6 +607,7 @@
       "properties": {
         "station_id": "blr-hosa-road",
         "name": "Hosa Road",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-yellow"
@@ -611,6 +634,7 @@
       "properties": {
         "station_id": "blr-singasandra",
         "name": "Singasandra",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-yellow"
@@ -637,6 +661,7 @@
       "properties": {
         "station_id": "blr-kudlu-gate",
         "name": "Kudlu Gate",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-yellow"
@@ -663,6 +688,7 @@
       "properties": {
         "station_id": "blr-hongasandra",
         "name": "Hongasandra",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-yellow"
@@ -689,6 +715,7 @@
       "properties": {
         "station_id": "blr-bommanahalli",
         "name": "Bommanahalli",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-yellow"
@@ -715,6 +742,7 @@
       "properties": {
         "station_id": "blr-central-silk-board",
         "name": "Central Silk Board",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-yellow"
@@ -741,6 +769,7 @@
       "properties": {
         "station_id": "blr-btm-layout",
         "name": "BTM Layout",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-yellow"
@@ -767,6 +796,7 @@
       "properties": {
         "station_id": "blr-ragigudda",
         "name": "Ragigudda",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-yellow"
@@ -793,6 +823,7 @@
       "properties": {
         "station_id": "blr-dasarahalli",
         "name": "Dasarahalli",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-green"
@@ -819,6 +850,7 @@
       "properties": {
         "station_id": "blr-jalahalli",
         "name": "Jalahalli",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-green"
@@ -845,6 +877,7 @@
       "properties": {
         "station_id": "blr-srirampura",
         "name": "Srirampura",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-green"
@@ -871,6 +904,7 @@
       "properties": {
         "station_id": "blr-baiyappanahalli",
         "name": "Baiyappanahalli",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-purple"
@@ -897,6 +931,7 @@
       "properties": {
         "station_id": "blr-swami-vivekananda-road",
         "name": "Swami Vivekananda Road",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-purple"
@@ -923,6 +958,7 @@
       "properties": {
         "station_id": "blr-indiranagar",
         "name": "Indiranagar",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-purple"
@@ -949,6 +985,7 @@
       "properties": {
         "station_id": "blr-halasuru",
         "name": "Halasuru",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-purple"
@@ -975,6 +1012,7 @@
       "properties": {
         "station_id": "blr-trinity",
         "name": "Trinity",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-purple"
@@ -1001,6 +1039,7 @@
       "properties": {
         "station_id": "blr-mahatma-gandhi-road",
         "name": "Mahatma Gandhi Road",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-purple"
@@ -1027,6 +1066,7 @@
       "properties": {
         "station_id": "blr-cubbon-park",
         "name": "Cubbon Park",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-purple"
@@ -1053,6 +1093,7 @@
       "properties": {
         "station_id": "blr-dr-b-r-ambedkar-vidhana-soudha",
         "name": "Dr. B. R. Ambedkar, Vidhana Soudha",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-purple"
@@ -1079,6 +1120,7 @@
       "properties": {
         "station_id": "blr-sir-m-visvesvaraya-stn-central-college",
         "name": "Sir M. Visvesvaraya Stn., Central College",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-purple"
@@ -1105,6 +1147,7 @@
       "properties": {
         "station_id": "blr-nadaprabhu-kempegowda-majestic",
         "name": "Nadaprabhu Kempegowda, Majestic",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-purple",
@@ -1132,6 +1175,7 @@
       "properties": {
         "station_id": "blr-krantivira-sangolli-rayanna-railway",
         "name": "Krantivira Sangolli Rayanna Railway",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-purple"
@@ -1158,6 +1202,7 @@
       "properties": {
         "station_id": "blr-magadi-road",
         "name": "Magadi Road",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-purple"
@@ -1184,6 +1229,7 @@
       "properties": {
         "station_id": "blr-sri-balagangadharanatha-swamiji-hosahalli",
         "name": "Sri Balagangadharanatha Swamiji, Hosahalli",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-purple"
@@ -1210,6 +1256,7 @@
       "properties": {
         "station_id": "blr-vijayanagar",
         "name": "Vijayanagar",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-purple"
@@ -1236,6 +1283,7 @@
       "properties": {
         "station_id": "blr-attiguppe",
         "name": "Attiguppe",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-purple"
@@ -1262,6 +1310,7 @@
       "properties": {
         "station_id": "blr-deepanjali-nagar",
         "name": "Deepanjali Nagar",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-purple"
@@ -1288,6 +1337,7 @@
       "properties": {
         "station_id": "blr-mysore-road",
         "name": "Mysore Road",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-purple"
@@ -1314,6 +1364,7 @@
       "properties": {
         "station_id": "blr-mantri-square-sampige-road",
         "name": "Mantri Square Sampige Road",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-green"
@@ -1340,6 +1391,7 @@
       "properties": {
         "station_id": "blr-mahakavi-kuvempu-road",
         "name": "Mahakavi Kuvempu Road",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-green"
@@ -1366,6 +1418,7 @@
       "properties": {
         "station_id": "blr-rajajinagar",
         "name": "Rajajinagar",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-green"
@@ -1392,6 +1445,7 @@
       "properties": {
         "station_id": "blr-mahalakshmi",
         "name": "Mahalakshmi",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-green"
@@ -1418,6 +1472,7 @@
       "properties": {
         "station_id": "blr-sandal-soap-factory",
         "name": "Sandal Soap Factory",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-green"
@@ -1444,6 +1499,7 @@
       "properties": {
         "station_id": "blr-peenya",
         "name": "Peenya",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-green"
@@ -1470,6 +1526,7 @@
       "properties": {
         "station_id": "blr-peenya-industry",
         "name": "Peenya Industry",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-green"
@@ -1496,6 +1553,7 @@
       "properties": {
         "station_id": "blr-yelachenahalli",
         "name": "Yelachenahalli",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-green"
@@ -1522,6 +1580,7 @@
       "properties": {
         "station_id": "blr-jaya-prakash-nagar",
         "name": "Jaya Prakash Nagar",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-green"
@@ -1548,6 +1607,7 @@
       "properties": {
         "station_id": "blr-banashankari",
         "name": "Banashankari",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-green"
@@ -1574,6 +1634,7 @@
       "properties": {
         "station_id": "blr-rashtreeya-vidyalaya-road",
         "name": "Rashtreeya Vidyalaya Road",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-green",
@@ -1601,6 +1662,7 @@
       "properties": {
         "station_id": "blr-jayanagar",
         "name": "Jayanagar",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-green"
@@ -1627,6 +1689,7 @@
       "properties": {
         "station_id": "blr-south-end-circle",
         "name": "South End Circle",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-green"
@@ -1653,6 +1716,7 @@
       "properties": {
         "station_id": "blr-lalbagh",
         "name": "Lalbagh",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-green"
@@ -1679,6 +1743,7 @@
       "properties": {
         "station_id": "blr-national-college",
         "name": "National College",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-green"
@@ -1705,6 +1770,7 @@
       "properties": {
         "station_id": "blr-krishna-rajendra-market",
         "name": "Krishna Rajendra Market",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-green"
@@ -1731,6 +1797,7 @@
       "properties": {
         "station_id": "blr-chickpete",
         "name": "Chickpete",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-green"
@@ -1757,6 +1824,7 @@
       "properties": {
         "station_id": "blr-kengeri",
         "name": "Kengeri",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-purple"
@@ -1783,6 +1851,7 @@
       "properties": {
         "station_id": "blr-jnanabharathi",
         "name": "Jnanabharathi",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-purple"
@@ -1809,6 +1878,7 @@
       "properties": {
         "station_id": "blr-pantharapalya-nayandahalli",
         "name": "Pantharapalya - Nayandahalli",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-purple"
@@ -1835,6 +1905,7 @@
       "properties": {
         "station_id": "blr-kengeri-bus-terminal",
         "name": "Kengeri Bus Terminal",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-purple"
@@ -1861,6 +1932,7 @@
       "properties": {
         "station_id": "blr-rajarajeshwari-nagar",
         "name": "Rajarajeshwari Nagar",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-purple"
@@ -1887,6 +1959,7 @@
       "properties": {
         "station_id": "blr-pattanagere",
         "name": "Pattanagere",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-purple"
@@ -1913,6 +1986,7 @@
       "properties": {
         "station_id": "blr-challaghatta",
         "name": "Challaghatta",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-purple"
@@ -1939,6 +2013,7 @@
       "properties": {
         "station_id": "blr-silk-institute",
         "name": "Silk Institute",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-green"
@@ -1965,6 +2040,7 @@
       "properties": {
         "station_id": "blr-thalaghattapura",
         "name": "Thalaghattapura",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-green"
@@ -1991,6 +2067,7 @@
       "properties": {
         "station_id": "blr-vajarahalli",
         "name": "Vajarahalli",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-green"
@@ -2017,6 +2094,7 @@
       "properties": {
         "station_id": "blr-doddakallasandra",
         "name": "Doddakallasandra",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-green"
@@ -2043,6 +2121,7 @@
       "properties": {
         "station_id": "blr-konanakunte-cross",
         "name": "Konanakunte Cross",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-green"
@@ -2069,6 +2148,7 @@
       "properties": {
         "station_id": "blr-biocon-hebbagodi",
         "name": "Biocon Hebbagodi",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-yellow"
@@ -2095,6 +2175,7 @@
       "properties": {
         "station_id": "blr-nagasandra",
         "name": "Nagasandra",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-green"
@@ -2121,6 +2202,7 @@
       "properties": {
         "station_id": "blr-yeshwantpur",
         "name": "Yeshwantpur",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-green"
@@ -2147,6 +2229,7 @@
       "properties": {
         "station_id": "blr-kadugodi-tree-park",
         "name": "Kadugodi Tree Park",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
           "blr-purple"
@@ -2173,6 +2256,7 @@
       "properties": {
         "station_id": "mum-chembur",
         "name": "Chembur",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-2b"
@@ -2199,6 +2283,7 @@
       "properties": {
         "station_id": "mum-dahanukarwadi",
         "name": "Dahanukarwadi",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-2a"
@@ -2225,6 +2310,7 @@
       "properties": {
         "station_id": "mum-kandivali-west",
         "name": "Kandivali (West)",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-2a"
@@ -2251,6 +2337,7 @@
       "properties": {
         "station_id": "mum-borivali-west",
         "name": "Borivali (West)",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-2a"
@@ -2277,6 +2364,7 @@
       "properties": {
         "station_id": "mum-mandapeshwar-ic-colony",
         "name": "Mandapeshwar - I.C. Colony",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-2a"
@@ -2303,6 +2391,7 @@
       "properties": {
         "station_id": "mum-kandarpada",
         "name": "Kandarpada",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-2a"
@@ -2329,6 +2418,7 @@
       "properties": {
         "station_id": "mum-anand-nagar",
         "name": "Anand Nagar",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-2a"
@@ -2355,6 +2445,7 @@
       "properties": {
         "station_id": "mum-diamond-garden",
         "name": "Diamond Garden",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-2b"
@@ -2381,6 +2472,7 @@
       "properties": {
         "station_id": "mum-shimpoli",
         "name": "Shimpoli",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-2a"
@@ -2407,6 +2499,7 @@
       "properties": {
         "station_id": "mum-eksar",
         "name": "Eksar",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-2a"
@@ -2433,6 +2526,7 @@
       "properties": {
         "station_id": "mum-chhatrapati-shivaji-maharaj-international-airport-t2",
         "name": "Chhatrapati Shivaji Maharaj International Airport - T2",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-3"
@@ -2459,6 +2553,7 @@
       "properties": {
         "station_id": "mum-bandra-kurla-complex",
         "name": "Bandra Kurla Complex",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-3"
@@ -2485,6 +2580,7 @@
       "properties": {
         "station_id": "mum-seepz",
         "name": "SEEPZ",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-3"
@@ -2511,6 +2607,7 @@
       "properties": {
         "station_id": "mum-midc-andheri",
         "name": "MIDC - Andheri",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-3"
@@ -2537,6 +2634,7 @@
       "properties": {
         "station_id": "mum-marol-naka",
         "name": "Marol Naka",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-1",
@@ -2564,6 +2662,7 @@
       "properties": {
         "station_id": "mum-andheri-l1",
         "name": "Andheri L1",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-1"
@@ -2590,6 +2689,7 @@
       "properties": {
         "station_id": "mum-kapurbawdi",
         "name": "Kapurbawdi",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-4"
@@ -2616,6 +2716,7 @@
       "properties": {
         "station_id": "mum-gaimukh",
         "name": "Gaimukh",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-4"
@@ -2642,6 +2743,7 @@
       "properties": {
         "station_id": "mum-gowniwada",
         "name": "Gowniwada",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-4"
@@ -2668,6 +2770,7 @@
       "properties": {
         "station_id": "mum-lokmanya-nagar-bus-depot",
         "name": "Lokmanya Nagar Bus Depot",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-4"
@@ -2694,6 +2797,7 @@
       "properties": {
         "station_id": "mum-azad-nagar-bus-stop",
         "name": "Azad Nagar Bus Stop",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-4"
@@ -2720,6 +2824,7 @@
       "properties": {
         "station_id": "mum-subhash-chandra-bose-ground",
         "name": "Subhash Chandra Bose Ground",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-2a"
@@ -2746,6 +2851,7 @@
       "properties": {
         "station_id": "mum-airport-colony",
         "name": "Airport Colony",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-3"
@@ -2772,6 +2878,7 @@
       "properties": {
         "station_id": "mum-anik-nagar-bus-depot",
         "name": "Anik Nagar Bus Depot",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-4"
@@ -2798,6 +2905,7 @@
       "properties": {
         "station_id": "mum-manpada",
         "name": "Manpada",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-4"
@@ -2824,6 +2932,7 @@
       "properties": {
         "station_id": "mum-dahisar-east-line-7",
         "name": "Dahisar (East) [Line 7]",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-2a",
@@ -2851,6 +2960,7 @@
       "properties": {
         "station_id": "mum-dahisar-east-line-2",
         "name": "Dahisar (East) [Line 2]",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-2a",
@@ -2878,6 +2988,7 @@
       "properties": {
         "station_id": "mum-aarey",
         "name": "Aarey",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-7"
@@ -2904,6 +3015,7 @@
       "properties": {
         "station_id": "mum-dindoshi",
         "name": "Dindoshi",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-7"
@@ -2930,6 +3042,7 @@
       "properties": {
         "station_id": "mum-kurar",
         "name": "Kurar",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-7"
@@ -2956,6 +3069,7 @@
       "properties": {
         "station_id": "mum-akurli",
         "name": "Akurli",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-7"
@@ -2982,6 +3096,7 @@
       "properties": {
         "station_id": "mum-poisar",
         "name": "Poisar",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-7"
@@ -3008,6 +3123,7 @@
       "properties": {
         "station_id": "mum-magathane",
         "name": "Magathane",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-7"
@@ -3034,6 +3150,7 @@
       "properties": {
         "station_id": "mum-devipada",
         "name": "Devipada",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-7"
@@ -3060,6 +3177,7 @@
       "properties": {
         "station_id": "mum-rashtriya-udyan",
         "name": "Rashtriya Udyan",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-7"
@@ -3086,6 +3204,7 @@
       "properties": {
         "station_id": "mum-ovaripada",
         "name": "Ovaripada",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-7"
@@ -3112,6 +3231,7 @@
       "properties": {
         "station_id": "mum-shahid-bhagat-singh-garden",
         "name": "Shahid Bhagat Singh Garden",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-2a"
@@ -3138,6 +3258,7 @@
       "properties": {
         "station_id": "mum-gundavali",
         "name": "Gundavali",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-1",
@@ -3165,6 +3286,7 @@
       "properties": {
         "station_id": "mum-mogra",
         "name": "Mogra",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-7"
@@ -3191,6 +3313,7 @@
       "properties": {
         "station_id": "mum-jogeshwari-east",
         "name": "Jogeshwari (East)",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-7"
@@ -3217,6 +3340,7 @@
       "properties": {
         "station_id": "mum-goregaon-east",
         "name": "Goregaon (East)",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-7"
@@ -3243,6 +3367,7 @@
       "properties": {
         "station_id": "mum-andheri-west",
         "name": "Andheri (West)",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-1",
@@ -3270,6 +3395,7 @@
       "properties": {
         "station_id": "mum-lower-oshiwara",
         "name": "Lower Oshiwara",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-2a"
@@ -3296,6 +3422,7 @@
       "properties": {
         "station_id": "mum-oshiwara",
         "name": "Oshiwara",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-2a"
@@ -3322,6 +3449,7 @@
       "properties": {
         "station_id": "mum-goregaon-west",
         "name": "Goregaon (West)",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-2a"
@@ -3348,6 +3476,7 @@
       "properties": {
         "station_id": "mum-lower-malad",
         "name": "Lower Malad",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-2a"
@@ -3374,6 +3503,7 @@
       "properties": {
         "station_id": "mum-malad-west",
         "name": "Malad (West)",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-2a"
@@ -3400,6 +3530,7 @@
       "properties": {
         "station_id": "mum-valnai-meeth-chowky",
         "name": "Valnai-Meeth Chowky",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-2a"
@@ -3426,6 +3557,7 @@
       "properties": {
         "station_id": "mum-cbd-belapur",
         "name": "CBD Belapur",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-2b"
@@ -3452,6 +3584,7 @@
       "properties": {
         "station_id": "mum-rbi-colony",
         "name": "RBI Colony",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-2b"
@@ -3478,6 +3611,7 @@
       "properties": {
         "station_id": "mum-bandra-colony",
         "name": "Bandra Colony",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-3"
@@ -3504,6 +3638,7 @@
       "properties": {
         "station_id": "mum-santacruz",
         "name": "Santacruz",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-3"
@@ -3530,6 +3665,7 @@
       "properties": {
         "station_id": "mum-chhatrapati-shivaji-maharaj-international-airport-t1",
         "name": "Chhatrapati Shivaji Maharaj International Airport - T1",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-3"
@@ -3556,6 +3692,7 @@
       "properties": {
         "station_id": "mum-sahar-road",
         "name": "Sahar Road",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-3"
@@ -3582,6 +3719,7 @@
       "properties": {
         "station_id": "mum-bangur-nagar",
         "name": "Bangur Nagar",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-2a"
@@ -3608,6 +3746,7 @@
       "properties": {
         "station_id": "mum-dadar",
         "name": "Dadar",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-3"
@@ -3634,6 +3773,7 @@
       "properties": {
         "station_id": "mum-shitala-devi-mandir",
         "name": "Shitala Devi Mandir",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-3"
@@ -3660,6 +3800,7 @@
       "properties": {
         "station_id": "mum-dharavi",
         "name": "Dharavi",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-3"
@@ -3686,6 +3827,7 @@
       "properties": {
         "station_id": "mum-acharya-atre-chowk",
         "name": "Acharya Atre Chowk",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-3"
@@ -3712,6 +3854,7 @@
       "properties": {
         "station_id": "mum-worli",
         "name": "Worli",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-3"
@@ -3738,6 +3881,7 @@
       "properties": {
         "station_id": "mum-siddhivinayak-temple",
         "name": "Siddhivinayak Temple",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-3"
@@ -3764,6 +3908,7 @@
       "properties": {
         "station_id": "mum-jagannath-shankar-sheth-metro",
         "name": "Jagannath Shankar Sheth Metro",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-3"
@@ -3790,6 +3935,7 @@
       "properties": {
         "station_id": "mum-mahalaxmi",
         "name": "Mahalaxmi",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-3"
@@ -3816,6 +3962,7 @@
       "properties": {
         "station_id": "mum-science-centre",
         "name": "Science Centre",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-3"
@@ -3842,6 +3989,7 @@
       "properties": {
         "station_id": "mum-cuffe-parade",
         "name": "Cuffe Parade",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-3"
@@ -3868,6 +4016,7 @@
       "properties": {
         "station_id": "mum-vidhan-bhavan",
         "name": "Vidhan Bhavan",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-3"
@@ -3894,6 +4043,7 @@
       "properties": {
         "station_id": "mum-churchgate",
         "name": "Churchgate",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-3"
@@ -3920,6 +4070,7 @@
       "properties": {
         "station_id": "mum-hutatma-chowk",
         "name": "Hutatma Chowk",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-3"
@@ -3946,6 +4097,7 @@
       "properties": {
         "station_id": "mum-chhatrapati-shivaji-maharaj-terminus",
         "name": "Chhatrapati Shivaji Maharaj Terminus",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-3"
@@ -3972,6 +4124,7 @@
       "properties": {
         "station_id": "mum-kalbadevi",
         "name": "Kalbadevi",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-3"
@@ -3998,6 +4151,7 @@
       "properties": {
         "station_id": "mum-girgaon",
         "name": "Girgaon",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-3"
@@ -4024,6 +4178,7 @@
       "properties": {
         "station_id": "mum-grant-road",
         "name": "Grant Road",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-3"
@@ -4050,6 +4205,7 @@
       "properties": {
         "station_id": "mum-mandale",
         "name": "Mandale",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-2b"
@@ -4076,6 +4232,7 @@
       "properties": {
         "station_id": "mum-shivaji-chowk-chembur",
         "name": "Shivaji Chowk (Chembur)",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-2b"
@@ -4102,6 +4259,7 @@
       "properties": {
         "station_id": "mum-deonar",
         "name": "Deonar",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-2b"
@@ -4128,6 +4286,7 @@
       "properties": {
         "station_id": "mum-mankhurd",
         "name": "Mankhurd",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-2b"
@@ -4154,6 +4313,7 @@
       "properties": {
         "station_id": "mum-wagle-circle",
         "name": "Wagle Circle",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-4"
@@ -4180,6 +4340,7 @@
       "properties": {
         "station_id": "mum-shivai-nagar",
         "name": "Shivai Nagar",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-4"
@@ -4206,6 +4367,7 @@
       "properties": {
         "station_id": "mum-neelkanth-terminal",
         "name": "Neelkanth Terminal",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-4"
@@ -4232,6 +4394,7 @@
       "properties": {
         "station_id": "mum-ghandi-nagar",
         "name": "Ghandi Nagar",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-4"
@@ -4258,6 +4421,7 @@
       "properties": {
         "station_id": "mum-dr-kashinath-ghanekar-natyagruha",
         "name": "Dr. Kashinath Ghanekar Natyagruha",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-4"
@@ -4284,6 +4448,7 @@
       "properties": {
         "station_id": "mum-dongripada",
         "name": "Dongripada",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-4"
@@ -4310,6 +4475,7 @@
       "properties": {
         "station_id": "mum-vijay-nagari",
         "name": "Vijay Nagari",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-4"
@@ -4336,6 +4502,7 @@
       "properties": {
         "station_id": "mum-waghbil",
         "name": "Waghbil",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-4"
@@ -4362,6 +4529,7 @@
       "properties": {
         "station_id": "mum-waterfront",
         "name": "Waterfront",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-4"
@@ -4388,6 +4556,7 @@
       "properties": {
         "station_id": "mum-patlipada",
         "name": "Patlipada",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-4"
@@ -4414,6 +4583,7 @@
       "properties": {
         "station_id": "mum-pandurang-wadi",
         "name": "Pandurang Wadi",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-2a"
@@ -4440,6 +4610,7 @@
       "properties": {
         "station_id": "mum-miragaon",
         "name": "Miragaon",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-4"
@@ -4466,6 +4637,7 @@
       "properties": {
         "station_id": "mum-kashigaon",
         "name": "Kashigaon",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-4"
@@ -4492,6 +4664,7 @@
       "properties": {
         "station_id": "mum-sbi-dadar-metro",
         "name": "SBI-Dadar Metro",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
           "mum-line-3"
@@ -4518,6 +4691,7 @@
       "properties": {
         "station_id": "del-ramesh-nagar",
         "name": "Ramesh Nagar",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue"
@@ -4544,6 +4718,7 @@
       "properties": {
         "station_id": "del-patel-nagar",
         "name": "Patel Nagar",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue"
@@ -4570,6 +4745,7 @@
       "properties": {
         "station_id": "del-rithala",
         "name": "Rithala",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-red"
@@ -4596,6 +4772,7 @@
       "properties": {
         "station_id": "del-pratap-nagar",
         "name": "Pratap Nagar",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-red"
@@ -4622,6 +4799,7 @@
       "properties": {
         "station_id": "del-pul-bangash",
         "name": "Pul Bangash",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-red"
@@ -4648,6 +4826,7 @@
       "properties": {
         "station_id": "del-kashmere-gate",
         "name": "Kashmere Gate",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-red",
@@ -4676,6 +4855,7 @@
       "properties": {
         "station_id": "del-kohat-enclave",
         "name": "Kohat Enclave",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-red"
@@ -4702,6 +4882,7 @@
       "properties": {
         "station_id": "del-karol-bagh",
         "name": "Karol Bagh",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue"
@@ -4728,6 +4909,7 @@
       "properties": {
         "station_id": "del-kirti-nagar-blue-line",
         "name": "Kirti Nagar (Blue Line)",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue",
@@ -4755,6 +4937,7 @@
       "properties": {
         "station_id": "del-shadipur",
         "name": "Shadipur",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue"
@@ -4781,6 +4964,7 @@
       "properties": {
         "station_id": "del-moti-nagar",
         "name": "Moti Nagar",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue"
@@ -4807,6 +4991,7 @@
       "properties": {
         "station_id": "del-sikanderpur",
         "name": "Sikanderpur",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -4833,6 +5018,7 @@
       "properties": {
         "station_id": "del-delhi-aerocity",
         "name": "Delhi Aerocity",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-airport"
@@ -4859,6 +5045,7 @@
       "properties": {
         "station_id": "del-hauz-khas-yellow-line",
         "name": "Hauz Khas (Yellow Line)",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow",
@@ -4886,6 +5073,7 @@
       "properties": {
         "station_id": "del-shivaji-stadium",
         "name": "Shivaji Stadium",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-airport"
@@ -4912,6 +5100,7 @@
       "properties": {
         "station_id": "del-new-delhi",
         "name": "New Delhi",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow",
@@ -4939,6 +5128,7 @@
       "properties": {
         "station_id": "del-tis-hazari",
         "name": "Tis Hazari",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-red"
@@ -4965,6 +5155,7 @@
       "properties": {
         "station_id": "del-shastri-park",
         "name": "Shastri Park",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-red"
@@ -4991,6 +5182,7 @@
       "properties": {
         "station_id": "del-seelampur",
         "name": "Seelampur",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-red"
@@ -5017,6 +5209,7 @@
       "properties": {
         "station_id": "del-welcome-red-line",
         "name": "Welcome (Red Line)",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-red",
@@ -5044,6 +5237,7 @@
       "properties": {
         "station_id": "del-shahdara",
         "name": "Shahdara",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-red"
@@ -5070,6 +5264,7 @@
       "properties": {
         "station_id": "del-jhilmil",
         "name": "Jhilmil",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-red"
@@ -5096,6 +5291,7 @@
       "properties": {
         "station_id": "del-shastri-nagar",
         "name": "Shastri Nagar",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-red"
@@ -5122,6 +5318,7 @@
       "properties": {
         "station_id": "del-inderlok-red-line",
         "name": "Inderlok (Red Line)",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-red",
@@ -5149,6 +5346,7 @@
       "properties": {
         "station_id": "del-kanhaiya-nagar",
         "name": "Kanhaiya Nagar",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-red"
@@ -5175,6 +5373,7 @@
       "properties": {
         "station_id": "del-keshav-puram",
         "name": "Keshav Puram",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-red"
@@ -5201,6 +5400,7 @@
       "properties": {
         "station_id": "del-netaji-subhash-place-red-line",
         "name": "Netaji Subhash Place (Red Line)",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-red",
@@ -5228,6 +5428,7 @@
       "properties": {
         "station_id": "del-madhuban-chowk",
         "name": "Madhuban Chowk",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-red",
@@ -5255,6 +5456,7 @@
       "properties": {
         "station_id": "del-rohini-east",
         "name": "Rohini East",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-red"
@@ -5281,6 +5483,7 @@
       "properties": {
         "station_id": "del-gtb-nagar",
         "name": "GTB Nagar",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -5307,6 +5510,7 @@
       "properties": {
         "station_id": "del-igi-airport",
         "name": "IGI Airport",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-airport"
@@ -5333,6 +5537,7 @@
       "properties": {
         "station_id": "del-kalkaji-mandir",
         "name": "Kalkaji Mandir",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-violet",
@@ -5360,6 +5565,7 @@
       "properties": {
         "station_id": "del-dhaula-kuan",
         "name": "Dhaula Kuan",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-airport"
@@ -5386,6 +5592,7 @@
       "properties": {
         "station_id": "del-new-delhi-airport-express-terminal",
         "name": "New Delhi Airport Express Terminal",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow",
@@ -5413,6 +5620,7 @@
       "properties": {
         "station_id": "del-kirti-nagar-green-line",
         "name": "Kirti Nagar (Green Line)",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue",
@@ -5440,6 +5648,7 @@
       "properties": {
         "station_id": "del-satguru-ramsingh-marg",
         "name": "Satguru Ramsingh Marg",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-green"
@@ -5466,6 +5675,7 @@
       "properties": {
         "station_id": "del-rohini-west",
         "name": "Rohini West",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-red"
@@ -5492,6 +5702,7 @@
       "properties": {
         "station_id": "del-belvedere-towers",
         "name": "Belvedere Towers",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -5518,6 +5729,7 @@
       "properties": {
         "station_id": "del-dlf-phase-2",
         "name": "DLF Phase 2",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -5544,6 +5756,7 @@
       "properties": {
         "station_id": "del-sikanderpur-rmrg",
         "name": "Sikanderpur RMRG",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -5570,6 +5783,7 @@
       "properties": {
         "station_id": "del-moulsari-avenue",
         "name": "Moulsari Avenue",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -5596,6 +5810,7 @@
       "properties": {
         "station_id": "del-phase-3",
         "name": "Phase 3",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -5622,6 +5837,7 @@
       "properties": {
         "station_id": "del-dhansa-bus-stand",
         "name": "Dhansa Bus Stand",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-grey"
@@ -5648,6 +5864,7 @@
       "properties": {
         "station_id": "del-hauz-khas-magenta-line",
         "name": "Hauz Khas (Magenta Line)",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow",
@@ -5675,6 +5892,7 @@
       "properties": {
         "station_id": "del-munirka",
         "name": "Munirka",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-magenta"
@@ -5701,6 +5919,7 @@
       "properties": {
         "station_id": "del-sukhdev-vihar",
         "name": "Sukhdev Vihar",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-magenta"
@@ -5727,6 +5946,7 @@
       "properties": {
         "station_id": "del-vasant-vihar",
         "name": "Vasant Vihar",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-magenta"
@@ -5753,6 +5973,7 @@
       "properties": {
         "station_id": "del-shankar-vihar",
         "name": "Shankar Vihar",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-magenta"
@@ -5779,6 +6000,7 @@
       "properties": {
         "station_id": "del-sadar-bazar-cantonment",
         "name": "Sadar Bazar Cantonment",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-magenta"
@@ -5805,6 +6027,7 @@
       "properties": {
         "station_id": "del-palam",
         "name": "Palam",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-magenta"
@@ -5831,6 +6054,7 @@
       "properties": {
         "station_id": "del-dashrath-puri",
         "name": "Dashrath Puri",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-magenta"
@@ -5857,6 +6081,7 @@
       "properties": {
         "station_id": "del-janakpuri-west",
         "name": "Janakpuri West",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue",
@@ -5884,6 +6109,7 @@
       "properties": {
         "station_id": "del-okhla-bird-sanctuary",
         "name": "Okhla Bird Sanctuary",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-magenta"
@@ -5910,6 +6136,7 @@
       "properties": {
         "station_id": "del-greater-kailash",
         "name": "Greater Kailash",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-magenta"
@@ -5936,6 +6163,7 @@
       "properties": {
         "station_id": "del-kalindi-kunj",
         "name": "Kalindi Kunj",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-magenta"
@@ -5962,6 +6190,7 @@
       "properties": {
         "station_id": "del-okhla-vihar",
         "name": "Okhla Vihar",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-magenta"
@@ -5988,6 +6217,7 @@
       "properties": {
         "station_id": "del-panchsheel-park",
         "name": "Panchsheel Park",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-magenta"
@@ -6014,6 +6244,7 @@
       "properties": {
         "station_id": "del-r-k-puram",
         "name": "R. K. Puram",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-magenta"
@@ -6040,6 +6271,7 @@
       "properties": {
         "station_id": "del-jasola-vihar-shaheen-bagh",
         "name": "Jasola Vihar Shaheen Bagh",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-magenta"
@@ -6066,6 +6298,7 @@
       "properties": {
         "station_id": "del-botanical-garden-magenta-line",
         "name": "Botanical Garden (Magenta Line)",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue",
@@ -6093,6 +6326,7 @@
       "properties": {
         "station_id": "del-terminal-1-igi-airport",
         "name": "Terminal 1 IGI Airport",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-magenta"
@@ -6119,6 +6353,7 @@
       "properties": {
         "station_id": "del-trilokpuri-sanjay-lake",
         "name": "Trilokpuri Sanjay Lake",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-pink"
@@ -6145,6 +6380,7 @@
       "properties": {
         "station_id": "del-anand-vihar-blue-line",
         "name": "Anand Vihar (Blue Line)",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue",
@@ -6172,6 +6408,7 @@
       "properties": {
         "station_id": "del-karkarduma-pink-line",
         "name": "Karkarduma (Pink Line)",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue",
@@ -6199,6 +6436,7 @@
       "properties": {
         "station_id": "del-samaypur-badli",
         "name": "Samaypur Badli",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -6225,6 +6463,7 @@
       "properties": {
         "station_id": "del-rohini-sector-18-19",
         "name": "Rohini Sector 18, 19",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -6251,6 +6490,7 @@
       "properties": {
         "station_id": "del-sector-54-chowk",
         "name": "Sector 54 Chowk",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -6277,6 +6517,7 @@
       "properties": {
         "station_id": "del-sector-53-54",
         "name": "Sector 53-54",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -6303,6 +6544,7 @@
       "properties": {
         "station_id": "del-sector-42-43",
         "name": "Sector 42-43",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -6329,6 +6571,7 @@
       "properties": {
         "station_id": "del-jamia-millia-islamia",
         "name": "Jamia Millia Islamia",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-magenta"
@@ -6355,6 +6598,7 @@
       "properties": {
         "station_id": "del-chirag-delhi",
         "name": "Chirag Delhi",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-magenta",
@@ -6382,6 +6626,7 @@
       "properties": {
         "station_id": "del-dlf-phase-1",
         "name": "DLF Phase 1",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -6408,6 +6653,7 @@
       "properties": {
         "station_id": "del-sector-5556",
         "name": "Sector 55–56",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -6434,6 +6680,7 @@
       "properties": {
         "station_id": "del-ip-extension",
         "name": "IP Extension",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-pink"
@@ -6460,6 +6707,7 @@
       "properties": {
         "station_id": "del-karkarduma-court",
         "name": "Karkarduma Court",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-pink"
@@ -6486,6 +6734,7 @@
       "properties": {
         "station_id": "del-east-vinod-nagar-mayur-vihar-ii",
         "name": "East Vinod Nagar - Mayur Vihar - II",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-pink"
@@ -6512,6 +6761,7 @@
       "properties": {
         "station_id": "del-mandawali-west-vinod-nagar",
         "name": "Mandawali - West Vinod Nagar",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-pink"
@@ -6538,6 +6788,7 @@
       "properties": {
         "station_id": "del-dwarka-sector-28",
         "name": "Dwarka Sector-28",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-airport"
@@ -6564,6 +6815,7 @@
       "properties": {
         "station_id": "del-kirti-nagar",
         "name": "Kirti Nagar",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-green"
@@ -6590,6 +6842,7 @@
       "properties": {
         "station_id": "del-saket-d-block",
         "name": "Saket D Block",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-silver"
@@ -6616,6 +6869,7 @@
       "properties": {
         "station_id": "del-greater-kailash-2",
         "name": "Greater Kailash",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-violet"
@@ -6642,6 +6896,7 @@
       "properties": {
         "station_id": "del-sheikh-sarai",
         "name": "Sheikh Sarai",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-magenta"
@@ -6668,6 +6923,7 @@
       "properties": {
         "station_id": "del-district-court",
         "name": "District Court",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -6694,6 +6950,7 @@
       "properties": {
         "station_id": "del-saket-g-block",
         "name": "Saket G Block",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-silver"
@@ -6720,6 +6977,7 @@
       "properties": {
         "station_id": "del-loni-border",
         "name": "Loni Border",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-pink"
@@ -6746,6 +7004,7 @@
       "properties": {
         "station_id": "del-andrews-ganj",
         "name": "Andrews Ganj",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-violet"
@@ -6772,6 +7031,7 @@
       "properties": {
         "station_id": "del-lajpat-nagar",
         "name": "Lajpat Nagar",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-violet",
@@ -6800,6 +7060,7 @@
       "properties": {
         "station_id": "del-anaj-mandi",
         "name": "Anaj Mandi",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -6826,6 +7087,7 @@
       "properties": {
         "station_id": "del-new-sanoth-colony",
         "name": "New Sanoth Colony",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -6852,6 +7114,7 @@
       "properties": {
         "station_id": "del-sanoth",
         "name": "Sanoth",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -6878,6 +7141,7 @@
       "properties": {
         "station_id": "del-bawana-jj-colony",
         "name": "Bawana J.J. Colony",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-red"
@@ -6904,6 +7168,7 @@
       "properties": {
         "station_id": "del-bawana",
         "name": "Bawana",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-red"
@@ -6930,6 +7195,7 @@
       "properties": {
         "station_id": "del-bawana-ind-area-ii",
         "name": "Bawana Ind. Area-II",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-red"
@@ -6956,6 +7222,7 @@
       "properties": {
         "station_id": "del-bawana-ind-area-i",
         "name": "Bawana Ind. Area-I",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-red"
@@ -6982,6 +7249,7 @@
       "properties": {
         "station_id": "del-puth-khurd",
         "name": "Puth Khurd",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-red"
@@ -7008,6 +7276,7 @@
       "properties": {
         "station_id": "del-barwala",
         "name": "Barwala",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-red"
@@ -7034,6 +7303,7 @@
       "properties": {
         "station_id": "del-sector-37-rohini",
         "name": "Sector-37 Rohini",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-red"
@@ -7060,6 +7330,7 @@
       "properties": {
         "station_id": "del-sector-36-rohini",
         "name": "Sector-36 Rohini",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-red"
@@ -7086,6 +7357,7 @@
       "properties": {
         "station_id": "del-sector-32-rohini",
         "name": "Sector-32 Rohini",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-red"
@@ -7112,6 +7384,7 @@
       "properties": {
         "station_id": "del-sector-31-rohini",
         "name": "Sector-31 Rohini",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-red"
@@ -7138,6 +7411,7 @@
       "properties": {
         "station_id": "del-sector-26-rohini",
         "name": "Sector-26 Rohini",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-red"
@@ -7164,6 +7438,7 @@
       "properties": {
         "station_id": "del-sector-25-rohini",
         "name": "Sector-25 Rohini",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-red"
@@ -7190,6 +7465,7 @@
       "properties": {
         "station_id": "del-narela",
         "name": "Narela",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -7216,6 +7492,7 @@
       "properties": {
         "station_id": "del-domestic-airport",
         "name": "Domestic Airport",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-magenta"
@@ -7242,6 +7519,7 @@
       "properties": {
         "station_id": "del-vasantkunj-sector-d",
         "name": "Vasantkunj Sector D",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-airport"
@@ -7268,6 +7546,7 @@
       "properties": {
         "station_id": "del-ambedkar-nagar",
         "name": "Ambedkar Nagar",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-silver"
@@ -7294,6 +7573,7 @@
       "properties": {
         "station_id": "del-keshavpur",
         "name": "Keshavpur",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-magenta"
@@ -7320,6 +7600,7 @@
       "properties": {
         "station_id": "del-meerabagh",
         "name": "Meerabagh",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-magenta"
@@ -7346,6 +7627,7 @@
       "properties": {
         "station_id": "del-paschim-vihar",
         "name": "Paschim Vihar",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-green"
@@ -7372,6 +7654,7 @@
       "properties": {
         "station_id": "del-peeragarhi-chowk",
         "name": "Peeragarhi Chowk",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-green"
@@ -7398,6 +7681,7 @@
       "properties": {
         "station_id": "del-mangolpuri",
         "name": "Mangolpuri",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-green"
@@ -7424,6 +7708,7 @@
       "properties": {
         "station_id": "del-west-enclave",
         "name": "West Enclave",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-green"
@@ -7450,6 +7735,7 @@
       "properties": {
         "station_id": "del-pushpanjali",
         "name": "Pushpanjali",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-magenta"
@@ -7476,6 +7762,7 @@
       "properties": {
         "station_id": "del-deepali-chowk",
         "name": "Deepali Chowk",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-magenta"
@@ -7502,6 +7789,7 @@
       "properties": {
         "station_id": "del-haiderpur-village",
         "name": "Haiderpur Village",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-magenta"
@@ -7528,6 +7816,7 @@
       "properties": {
         "station_id": "del-ashok-vihar",
         "name": "Ashok Vihar",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -7554,6 +7843,7 @@
       "properties": {
         "station_id": "del-derawal-nagar",
         "name": "Derawal Nagar",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -7580,6 +7870,7 @@
       "properties": {
         "station_id": "del-sadar-bazar",
         "name": "Sadar Bazar",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-red"
@@ -7606,6 +7897,7 @@
       "properties": {
         "station_id": "del-north-pitampura-prashant-vihar",
         "name": "North Pitampura - Prashant Vihar",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-magenta"
@@ -7632,6 +7924,7 @@
       "properties": {
         "station_id": "del-bhalaswa",
         "name": "Bhalaswa",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-magenta"
@@ -7658,6 +7951,7 @@
       "properties": {
         "station_id": "del-azadpur",
         "name": "Azadpur",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow",
@@ -7685,6 +7979,7 @@
       "properties": {
         "station_id": "del-rajpura",
         "name": "Rajpura",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -7711,6 +8006,7 @@
       "properties": {
         "station_id": "del-ghanta-gharsabji-manti",
         "name": "Ghanta Ghar/Sabji Manti",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-red"
@@ -7737,6 +8033,7 @@
       "properties": {
         "station_id": "del-r-k-ashram-marg",
         "name": "R K Ashram Marg",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue"
@@ -7763,6 +8060,7 @@
       "properties": {
         "station_id": "del-daya-basti",
         "name": "Daya Basti",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-red"
@@ -7789,6 +8087,7 @@
       "properties": {
         "station_id": "del-sarai-rohilla",
         "name": "Sarai Rohilla",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-red"
@@ -7815,6 +8114,7 @@
       "properties": {
         "station_id": "del-ajmal-khan-park",
         "name": "Ajmal Khan Park",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue"
@@ -7841,6 +8141,7 @@
       "properties": {
         "station_id": "del-inderlok",
         "name": "Inderlok",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-red",
@@ -7868,6 +8169,7 @@
       "properties": {
         "station_id": "del-nabi-karim",
         "name": "Nabi Karim",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue"
@@ -7894,6 +8196,7 @@
       "properties": {
         "station_id": "del-lnjp-hospital",
         "name": "LNJP Hospital",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-violet"
@@ -7920,6 +8223,7 @@
       "properties": {
         "station_id": "del-delhi-gate",
         "name": "Delhi Gate",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-violet"
@@ -7946,6 +8250,7 @@
       "properties": {
         "station_id": "del-indra-gandhi-stadium",
         "name": "Indra Gandhi Stadium",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-violet"
@@ -7972,6 +8277,7 @@
       "properties": {
         "station_id": "del-indraprastha",
         "name": "Indraprastha",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue"
@@ -7998,6 +8304,7 @@
       "properties": {
         "station_id": "del-burari",
         "name": "Burari",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-pink"
@@ -8024,6 +8331,7 @@
       "properties": {
         "station_id": "del-jagatpur-wazirabad",
         "name": "Jagatpur - Wazirabad",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-pink"
@@ -8050,6 +8358,7 @@
       "properties": {
         "station_id": "del-khajuri-khas",
         "name": "Khajuri Khas",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-pink"
@@ -8076,6 +8385,7 @@
       "properties": {
         "station_id": "del-yamuna-vihar",
         "name": "Yamuna Vihar",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-pink"
@@ -8102,6 +8412,7 @@
       "properties": {
         "station_id": "del-bhajanpura",
         "name": "Bhajanpura",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-pink"
@@ -8128,6 +8439,7 @@
       "properties": {
         "station_id": "del-soorghat",
         "name": "Soorghat",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-pink"
@@ -8154,6 +8466,7 @@
       "properties": {
         "station_id": "del-aerocity",
         "name": "Aerocity",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-airport"
@@ -8180,6 +8493,7 @@
       "properties": {
         "station_id": "del-mahipalpur",
         "name": "Mahipalpur",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-airport"
@@ -8206,6 +8520,7 @@
       "properties": {
         "station_id": "del-mashoodpur",
         "name": "Mashoodpur",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-silver"
@@ -8232,6 +8547,7 @@
       "properties": {
         "station_id": "del-kishangarh",
         "name": "Kishangarh",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-silver"
@@ -8258,6 +8574,7 @@
       "properties": {
         "station_id": "del-mehrauli",
         "name": "Mehrauli",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -8284,6 +8601,7 @@
       "properties": {
         "station_id": "del-lado-sarai",
         "name": "Lado Sarai",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -8310,6 +8628,7 @@
       "properties": {
         "station_id": "del-saket",
         "name": "Saket",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -8336,6 +8655,7 @@
       "properties": {
         "station_id": "del-tigri",
         "name": "Tigri",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-silver"
@@ -8362,6 +8682,7 @@
       "properties": {
         "station_id": "del-anandamayee-marg",
         "name": "Anandamayee Marg",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-silver"
@@ -8388,6 +8709,7 @@
       "properties": {
         "station_id": "del-tughlakabad-railway-colony",
         "name": "Tughlakabad Railway Colony",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-violet"
@@ -8414,6 +8736,7 @@
       "properties": {
         "station_id": "del-haiderpur-badli-mor",
         "name": "Haiderpur Badli Mor",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow",
@@ -8441,6 +8764,7 @@
       "properties": {
         "station_id": "del-central-secretariat",
         "name": "Central Secretariat",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow",
@@ -8468,6 +8792,7 @@
       "properties": {
         "station_id": "del-dwarka-sector-11",
         "name": "Dwarka Sector 11",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue"
@@ -8494,6 +8819,7 @@
       "properties": {
         "station_id": "del-rajendra-place",
         "name": "Rajendra Place",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue"
@@ -8520,6 +8846,7 @@
       "properties": {
         "station_id": "del-nehru-enclave",
         "name": "Nehru Enclave",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-magenta"
@@ -8546,6 +8873,7 @@
       "properties": {
         "station_id": "del-shiv-vihar",
         "name": "Shiv Vihar",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-pink"
@@ -8572,6 +8900,7 @@
       "properties": {
         "station_id": "del-johri-enclave",
         "name": "Johri Enclave",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-pink"
@@ -8598,6 +8927,7 @@
       "properties": {
         "station_id": "del-gokulpuri",
         "name": "Gokulpuri",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-pink"
@@ -8624,6 +8954,7 @@
       "properties": {
         "station_id": "del-maujpur-babarpur",
         "name": "Maujpur-Babarpur",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-pink"
@@ -8650,6 +8981,7 @@
       "properties": {
         "station_id": "del-jaffrabad",
         "name": "Jaffrabad",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-pink"
@@ -8676,6 +9008,7 @@
       "properties": {
         "station_id": "del-welcome-pink-line",
         "name": "Welcome (Pink Line)",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-red",
@@ -8703,6 +9036,7 @@
       "properties": {
         "station_id": "del-east-azad-nagar",
         "name": "East Azad Nagar",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-pink"
@@ -8729,6 +9063,7 @@
       "properties": {
         "station_id": "del-krishna-nagar",
         "name": "Krishna Nagar",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-pink"
@@ -8755,6 +9090,7 @@
       "properties": {
         "station_id": "del-majlis-park",
         "name": "Majlis Park",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-pink",
@@ -8782,6 +9118,7 @@
       "properties": {
         "station_id": "del-vinobapuri",
         "name": "Vinobapuri",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-pink"
@@ -8808,6 +9145,7 @@
       "properties": {
         "station_id": "del-mayur-vihar-i-pink-line",
         "name": "Mayur Vihar - I (Pink Line)",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue",
@@ -8835,6 +9173,7 @@
       "properties": {
         "station_id": "del-shree-ram-mandir-mayur-vihar",
         "name": "Shree Ram Mandir Mayur Vihar",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-pink"
@@ -8861,6 +9200,7 @@
       "properties": {
         "station_id": "del-sarai-kale-khan-nizamuddin",
         "name": "Sarai Kale Khan - Nizamuddin",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-pink"
@@ -8887,6 +9227,7 @@
       "properties": {
         "station_id": "del-ashram",
         "name": "Ashram",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-pink"
@@ -8913,6 +9254,7 @@
       "properties": {
         "station_id": "del-shaheed-nagar",
         "name": "Shaheed Nagar",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-red"
@@ -8939,6 +9281,7 @@
       "properties": {
         "station_id": "del-raj-bagh",
         "name": "Raj Bagh",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-red"
@@ -8965,6 +9308,7 @@
       "properties": {
         "station_id": "del-sir-m-vishweshwaraiah-moti-bagh",
         "name": "Sir M. Vishweshwaraiah Moti Bagh",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-pink"
@@ -8991,6 +9335,7 @@
       "properties": {
         "station_id": "del-bhikaji-cama-place",
         "name": "Bhikaji Cama Place",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-pink"
@@ -9017,6 +9362,7 @@
       "properties": {
         "station_id": "del-dilli-haat-ina-pink-line",
         "name": "Dilli Haat - INA (Pink Line)",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow",
@@ -9044,6 +9390,7 @@
       "properties": {
         "station_id": "del-lajpat-nagar-pink-line",
         "name": "Lajpat Nagar (Pink Line)",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-violet",
@@ -9072,6 +9419,7 @@
       "properties": {
         "station_id": "del-south-extension",
         "name": "South Extension",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-pink"
@@ -9098,6 +9446,7 @@
       "properties": {
         "station_id": "del-mayapuri",
         "name": "Mayapuri",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-pink"
@@ -9124,6 +9473,7 @@
       "properties": {
         "station_id": "del-rajouri-garden-pink-line",
         "name": "Rajouri Garden (Pink Line)",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue",
@@ -9151,6 +9501,7 @@
       "properties": {
         "station_id": "del-rajouri-garden-blue-line",
         "name": "Rajouri Garden (Blue Line)",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue",
@@ -9178,6 +9529,7 @@
       "properties": {
         "station_id": "del-netaji-subhash-place-pink-line",
         "name": "Netaji Subhash Place (Pink Line)",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-red",
@@ -9205,6 +9557,7 @@
       "properties": {
         "station_id": "del-azadpur-pink-line",
         "name": "Azadpur (Pink Line)",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow",
@@ -9232,6 +9585,7 @@
       "properties": {
         "station_id": "del-azadpur-yellow-line",
         "name": "Azadpur (Yellow Line)",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow",
@@ -9259,6 +9613,7 @@
       "properties": {
         "station_id": "del-dilli-haat-ina-yellow-line",
         "name": "Dilli Haat - INA (Yellow Line)",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow",
@@ -9286,6 +9641,7 @@
       "properties": {
         "station_id": "del-karkarduma-blue-line",
         "name": "Karkarduma (Blue Line)",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue",
@@ -9313,6 +9669,7 @@
       "properties": {
         "station_id": "del-delhi-cantt",
         "name": "Delhi Cantt",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-pink"
@@ -9339,6 +9696,7 @@
       "properties": {
         "station_id": "del-shalimar-bagh",
         "name": "Shalimar Bagh",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-pink"
@@ -9365,6 +9723,7 @@
       "properties": {
         "station_id": "del-shakurpur",
         "name": "Shakurpur",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-pink"
@@ -9391,6 +9750,7 @@
       "properties": {
         "station_id": "del-sarojini-nagar",
         "name": "Sarojini Nagar",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-pink"
@@ -9417,6 +9777,7 @@
       "properties": {
         "station_id": "del-punjabi-bagh-west",
         "name": "Punjabi Bagh West",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-green",
@@ -9444,6 +9805,7 @@
       "properties": {
         "station_id": "del-naraina-vihar",
         "name": "Naraina Vihar",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-pink"
@@ -9470,6 +9832,7 @@
       "properties": {
         "station_id": "del-esi-basaidarapur",
         "name": "ESI - Basaidarapur",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-pink"
@@ -9496,6 +9859,7 @@
       "properties": {
         "station_id": "del-inderlok-green-line",
         "name": "Inderlok (Green Line)",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-red",
@@ -9523,6 +9887,7 @@
       "properties": {
         "station_id": "del-ashok-park-main",
         "name": "Ashok Park Main",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-green"
@@ -9549,6 +9914,7 @@
       "properties": {
         "station_id": "del-punjabi-bagh",
         "name": "Punjabi Bagh",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-green"
@@ -9575,6 +9941,7 @@
       "properties": {
         "station_id": "del-shivaji-park",
         "name": "Shivaji Park",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-green"
@@ -9601,6 +9968,7 @@
       "properties": {
         "station_id": "del-madipur",
         "name": "Madipur",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-green"
@@ -9627,6 +9995,7 @@
       "properties": {
         "station_id": "del-paschim-vihar-east",
         "name": "Paschim Vihar East",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-green"
@@ -9653,6 +10022,7 @@
       "properties": {
         "station_id": "del-peera-garhi",
         "name": "Peera Garhi",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-green"
@@ -9679,6 +10049,7 @@
       "properties": {
         "station_id": "del-udyog-nagar",
         "name": "Udyog Nagar",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-green"
@@ -9705,6 +10076,7 @@
       "properties": {
         "station_id": "del-surajmal-stadium",
         "name": "Surajmal Stadium",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-green"
@@ -9731,6 +10103,7 @@
       "properties": {
         "station_id": "del-nangloi",
         "name": "Nangloi",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-green"
@@ -9757,6 +10130,7 @@
       "properties": {
         "station_id": "del-nangloi-railway",
         "name": "Nangloi Railway",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-green"
@@ -9783,6 +10157,7 @@
       "properties": {
         "station_id": "del-rajdhani-park",
         "name": "Rajdhani Park",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-green"
@@ -9809,6 +10184,7 @@
       "properties": {
         "station_id": "del-mundka",
         "name": "Mundka",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-green"
@@ -9835,6 +10211,7 @@
       "properties": {
         "station_id": "del-mundka-industrial-area",
         "name": "Mundka Industrial Area",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-green"
@@ -9861,6 +10238,7 @@
       "properties": {
         "station_id": "del-ghevra",
         "name": "Ghevra",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-green"
@@ -9887,6 +10265,7 @@
       "properties": {
         "station_id": "del-tikri-kalan",
         "name": "Tikri Kalan",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-green"
@@ -9913,6 +10292,7 @@
       "properties": {
         "station_id": "del-tikri-border",
         "name": "Tikri Border",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-green"
@@ -9939,6 +10319,7 @@
       "properties": {
         "station_id": "del-pandit-shree-ram-sharma",
         "name": "Pandit Shree Ram Sharma",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-green"
@@ -9965,6 +10346,7 @@
       "properties": {
         "station_id": "del-bahadurgarh-city",
         "name": "Bahadurgarh City",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-green"
@@ -9991,6 +10373,7 @@
       "properties": {
         "station_id": "del-brigadier-hoshiyar-singh",
         "name": "Brigadier Hoshiyar Singh",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-green"
@@ -10017,6 +10400,7 @@
       "properties": {
         "station_id": "del-iit-delhi",
         "name": "IIT Delhi",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-magenta"
@@ -10043,6 +10427,7 @@
       "properties": {
         "station_id": "del-indraprastha-2",
         "name": "Indraprastha",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue"
@@ -10069,6 +10454,7 @@
       "properties": {
         "station_id": "del-yamuna-bank",
         "name": "Yamuna Bank",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue"
@@ -10095,6 +10481,7 @@
       "properties": {
         "station_id": "del-new-ashok-nagar",
         "name": "New Ashok Nagar",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue"
@@ -10121,6 +10508,7 @@
       "properties": {
         "station_id": "del-noida-golf-course",
         "name": "Noida Golf Course",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue"
@@ -10147,6 +10535,7 @@
       "properties": {
         "station_id": "del-noida-sector-18",
         "name": "Noida Sector 18",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue"
@@ -10173,6 +10562,7 @@
       "properties": {
         "station_id": "del-noida-sector-16",
         "name": "Noida Sector 16",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue"
@@ -10199,6 +10589,7 @@
       "properties": {
         "station_id": "del-noida-sector-15",
         "name": "Noida Sector 15",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue"
@@ -10225,6 +10616,7 @@
       "properties": {
         "station_id": "del-mayur-vihar-i-blue-line",
         "name": "Mayur Vihar - I (Blue Line)",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue",
@@ -10252,6 +10644,7 @@
       "properties": {
         "station_id": "del-dwarka-sector-12",
         "name": "Dwarka Sector 12",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue"
@@ -10278,6 +10671,7 @@
       "properties": {
         "station_id": "del-jhandewalan",
         "name": "Jhandewalan",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue"
@@ -10304,6 +10698,7 @@
       "properties": {
         "station_id": "del-rajiv-chowk",
         "name": "Rajiv Chowk",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow",
@@ -10331,6 +10726,7 @@
       "properties": {
         "station_id": "del-barakhambha-road",
         "name": "Barakhambha Road",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue"
@@ -10357,6 +10753,7 @@
       "properties": {
         "station_id": "del-mandi-house",
         "name": "Mandi House",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue",
@@ -10384,6 +10781,7 @@
       "properties": {
         "station_id": "del-supreme-court",
         "name": "Supreme Court",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue"
@@ -10410,6 +10808,7 @@
       "properties": {
         "station_id": "del-dwarka-sector-10",
         "name": "Dwarka Sector 10",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue"
@@ -10436,6 +10835,7 @@
       "properties": {
         "station_id": "del-dwarka-sector-9",
         "name": "Dwarka Sector 9",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue"
@@ -10462,6 +10862,7 @@
       "properties": {
         "station_id": "del-dwarka-sector-8",
         "name": "Dwarka Sector 8",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue"
@@ -10488,6 +10889,7 @@
       "properties": {
         "station_id": "del-dwarka-sector-21",
         "name": "Dwarka Sector 21",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue",
@@ -10515,6 +10917,7 @@
       "properties": {
         "station_id": "del-uttam-nagar-east",
         "name": "Uttam Nagar East",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue"
@@ -10541,6 +10944,7 @@
       "properties": {
         "station_id": "del-uttam-nagar-west",
         "name": "Uttam Nagar West",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue"
@@ -10567,6 +10971,7 @@
       "properties": {
         "station_id": "del-nawada",
         "name": "Nawada",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue"
@@ -10593,6 +10998,7 @@
       "properties": {
         "station_id": "del-dwarka-mor",
         "name": "Dwarka Mor",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue"
@@ -10619,6 +11025,7 @@
       "properties": {
         "station_id": "del-dwarka-kakrola-grey-line",
         "name": "Dwarka - Kakrola (Grey Line)",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue",
@@ -10646,6 +11053,7 @@
       "properties": {
         "station_id": "del-dwarka-kakrola-blue-line",
         "name": "Dwarka - Kakrola (Blue Line)",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue",
@@ -10673,6 +11081,7 @@
       "properties": {
         "station_id": "del-dwarka-sector-14",
         "name": "Dwarka Sector 14",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue"
@@ -10699,6 +11108,7 @@
       "properties": {
         "station_id": "del-dwarka-sector-13",
         "name": "Dwarka Sector 13",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue"
@@ -10725,6 +11135,7 @@
       "properties": {
         "station_id": "del-adarsh-nagar",
         "name": "Adarsh Nagar",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -10751,6 +11162,7 @@
       "properties": {
         "station_id": "del-jahangirpuri",
         "name": "Jahangirpuri",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -10777,6 +11189,7 @@
       "properties": {
         "station_id": "del-janakpuri-east",
         "name": "Janakpuri East",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue"
@@ -10803,6 +11216,7 @@
       "properties": {
         "station_id": "del-tilak-nagar",
         "name": "Tilak Nagar",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue"
@@ -10829,6 +11243,7 @@
       "properties": {
         "station_id": "del-subhash-nagar",
         "name": "Subhash Nagar",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue"
@@ -10855,6 +11270,7 @@
       "properties": {
         "station_id": "del-tagore-garden",
         "name": "Tagore Garden",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue"
@@ -10881,6 +11297,7 @@
       "properties": {
         "station_id": "del-guru-dronacharya",
         "name": "Guru Dronacharya",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -10907,6 +11324,7 @@
       "properties": {
         "station_id": "del-model-town",
         "name": "Model Town",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -10933,6 +11351,7 @@
       "properties": {
         "station_id": "del-m-g-road",
         "name": "M G Road",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -10959,6 +11378,7 @@
       "properties": {
         "station_id": "del-iffco-chowk",
         "name": "IFFCO Chowk",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -10985,6 +11405,7 @@
       "properties": {
         "station_id": "del-aiims",
         "name": "A.I.I.M.S.",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -11011,6 +11432,7 @@
       "properties": {
         "station_id": "del-green-park",
         "name": "Green Park",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -11037,6 +11459,7 @@
       "properties": {
         "station_id": "del-civil-lines",
         "name": "Civil Lines",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -11063,6 +11486,7 @@
       "properties": {
         "station_id": "del-vidhan-sabha",
         "name": "Vidhan Sabha",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -11089,6 +11513,7 @@
       "properties": {
         "station_id": "del-vishwa-vidyalaya",
         "name": "Vishwa Vidyalaya",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -11115,6 +11540,7 @@
       "properties": {
         "station_id": "del-millennium-city-centre-gurugram",
         "name": "Millennium City Centre Gurugram",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -11141,6 +11567,7 @@
       "properties": {
         "station_id": "del-malviya-nagar",
         "name": "Malviya Nagar",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -11167,6 +11594,7 @@
       "properties": {
         "station_id": "del-chhatarpur",
         "name": "Chhatarpur",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -11193,6 +11621,7 @@
       "properties": {
         "station_id": "del-sultanpur",
         "name": "Sultanpur",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -11219,6 +11648,7 @@
       "properties": {
         "station_id": "del-chandni-chowk",
         "name": "Chandni Chowk",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -11245,6 +11675,7 @@
       "properties": {
         "station_id": "del-chawri-bazaar",
         "name": "Chawri Bazaar",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -11271,6 +11702,7 @@
       "properties": {
         "station_id": "del-patel-chowk",
         "name": "Patel Chowk",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -11297,6 +11729,7 @@
       "properties": {
         "station_id": "del-seva-teerth",
         "name": "Seva Teerth",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -11323,6 +11756,7 @@
       "properties": {
         "station_id": "del-lok-kalyan-marg",
         "name": "Lok Kalyan Marg",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -11349,6 +11783,7 @@
       "properties": {
         "station_id": "del-jor-bagh",
         "name": "Jor Bagh",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -11375,6 +11810,7 @@
       "properties": {
         "station_id": "del-qutab-minar",
         "name": "Qutab Minar",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -11401,6 +11837,7 @@
       "properties": {
         "station_id": "del-ghitorni",
         "name": "Ghitorni",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -11427,6 +11864,7 @@
       "properties": {
         "station_id": "del-arjan-garh",
         "name": "Arjan Garh",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -11453,6 +11891,7 @@
       "properties": {
         "station_id": "del-nangli",
         "name": "Nangli",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-grey"
@@ -11479,6 +11918,7 @@
       "properties": {
         "station_id": "del-nehru-place",
         "name": "Nehru Place",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-violet"
@@ -11505,6 +11945,7 @@
       "properties": {
         "station_id": "del-kailash-colony",
         "name": "Kailash Colony",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-violet"
@@ -11531,6 +11972,7 @@
       "properties": {
         "station_id": "del-lal-quila",
         "name": "Lal Quila",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-violet"
@@ -11557,6 +11999,7 @@
       "properties": {
         "station_id": "del-khan-market",
         "name": "Khan Market",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-violet"
@@ -11583,6 +12026,7 @@
       "properties": {
         "station_id": "del-paschim-vihar-west",
         "name": "Paschim Vihar West",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-green"
@@ -11609,6 +12053,7 @@
       "properties": {
         "station_id": "del-najafgarh",
         "name": "Najafgarh",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-grey"
@@ -11635,6 +12080,7 @@
       "properties": {
         "station_id": "del-laxmi-nagar",
         "name": "Laxmi Nagar",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue"
@@ -11661,6 +12107,7 @@
       "properties": {
         "station_id": "del-preet-vihar",
         "name": "Preet Vihar",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue"
@@ -11687,6 +12134,7 @@
       "properties": {
         "station_id": "del-badhkal-mor",
         "name": "Badhkal Mor",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-violet"
@@ -11713,6 +12161,7 @@
       "properties": {
         "station_id": "del-moolchand",
         "name": "Moolchand",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-violet"
@@ -11739,6 +12188,7 @@
       "properties": {
         "station_id": "del-jangpura",
         "name": "Jangpura",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-violet"
@@ -11765,6 +12215,7 @@
       "properties": {
         "station_id": "del-jawaharlal-nehru-stadium",
         "name": "Jawaharlal Nehru Stadium",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-violet"
@@ -11791,6 +12242,7 @@
       "properties": {
         "station_id": "del-janpath",
         "name": "Janpath",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-violet"
@@ -11817,6 +12269,7 @@
       "properties": {
         "station_id": "del-ito",
         "name": "ITO",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-violet"
@@ -11843,6 +12296,7 @@
       "properties": {
         "station_id": "del-govind-puri",
         "name": "Govind Puri",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-violet"
@@ -11869,6 +12323,7 @@
       "properties": {
         "station_id": "del-harkesh-nagar-okhla",
         "name": "Harkesh Nagar Okhla",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-violet"
@@ -11895,6 +12350,7 @@
       "properties": {
         "station_id": "del-dabri-mor-janakpuri-south",
         "name": "Dabri Mor - Janakpuri South",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-magenta"
@@ -11921,6 +12377,7 @@
       "properties": {
         "station_id": "del-nirman-vihar",
         "name": "Nirman Vihar",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue"
@@ -11947,6 +12404,7 @@
       "properties": {
         "station_id": "del-vaishali",
         "name": "Vaishali",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue"
@@ -11973,6 +12431,7 @@
       "properties": {
         "station_id": "del-kaushambi",
         "name": "Kaushambi",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-blue"
@@ -11999,6 +12458,7 @@
       "properties": {
         "station_id": "del-mansarovar-park",
         "name": "Mansarovar Park",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-red"
@@ -12025,6 +12485,7 @@
       "properties": {
         "station_id": "del-yashobhoomi-dwarka-sector-25",
         "name": "Yashobhoomi Dwarka Sector 25",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-airport"
@@ -12051,6 +12512,7 @@
       "properties": {
         "station_id": "del-krishna-park-extension",
         "name": "Krishna Park Extension",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-magenta"
@@ -12077,6 +12539,7 @@
       "properties": {
         "station_id": "del-cyber-city",
         "name": "Cyber City",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow"
@@ -12103,6 +12566,7 @@
       "properties": {
         "station_id": "del-noida-sector-44",
         "name": "Noida Sector 44",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-magenta"
@@ -12129,6 +12593,7 @@
       "properties": {
         "station_id": "del-noida-office",
         "name": "Noida Office",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-magenta"
@@ -12155,6 +12620,7 @@
       "properties": {
         "station_id": "del-nanaksar-sonia-vihar",
         "name": "Nanaksar - Sonia Vihar",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-pink"
@@ -12181,6 +12647,7 @@
       "properties": {
         "station_id": "del-jharoda-majra",
         "name": "Jharoda Majra",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-pink"
@@ -12207,6 +12674,7 @@
       "properties": {
         "station_id": "del-mohan-estate",
         "name": "Mohan Estate",
+        "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-violet"

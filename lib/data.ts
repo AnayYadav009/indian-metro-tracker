@@ -147,7 +147,7 @@ export function getLines(city?: string): Line[] {
   if (!targetCity) return [];
 
   return lines.filter(
-    (l) => l.city.toLowerCase() === targetCity.name.toLowerCase() || l.city.toLowerCase() === targetCity.id.toLowerCase()
+    (l) => l.city_id === targetCity.id || l.city.toLowerCase() === targetCity.name.toLowerCase()
   );
 }
 
@@ -159,7 +159,14 @@ export function getSegments(options: SegmentFilterOptions = {}): SegmentFeature[
 
   return segments.features.filter((feature) => {
     const props = feature.properties;
-    if (options.city && props.city.toLowerCase() !== options.city.toLowerCase()) {
+    if (options.cityId && props.city_id.toLowerCase() !== options.cityId.toLowerCase()) {
+      return false;
+    }
+    if (
+      options.city &&
+      props.city.toLowerCase() !== options.city.toLowerCase() &&
+      props.city_id.toLowerCase() !== options.city.toLowerCase()
+    ) {
       return false;
     }
     if (options.status && props.status !== options.status) {
@@ -183,7 +190,14 @@ export function getStations(options: StationFilterOptions = {}): StationFeature[
 
   return stations.features.filter((feature) => {
     const props = feature.properties;
-    if (options.city && props.city.toLowerCase() !== options.city.toLowerCase()) {
+    if (options.cityId && props.city_id.toLowerCase() !== options.cityId.toLowerCase()) {
+      return false;
+    }
+    if (
+      options.city &&
+      props.city.toLowerCase() !== options.city.toLowerCase() &&
+      props.city_id.toLowerCase() !== options.city.toLowerCase()
+    ) {
       return false;
     }
     if (options.status && props.status !== options.status) {

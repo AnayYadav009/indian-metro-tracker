@@ -79,10 +79,7 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
     const conditions: unknown[] = ["all", ["==", ["get", "status"], "operational"]];
 
     if (selectedCityId) {
-      const activeCity = dataset.cities.find((c) => c.id === selectedCityId);
-      if (activeCity) {
-        conditions.push(["==", ["get", "city"], activeCity.name]);
-      }
+      conditions.push(["==", ["get", "city_id"], selectedCityId]);
     }
 
     if (selectedPhases.length > 0) {
@@ -90,7 +87,7 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
     }
 
     return conditions;
-  }, [selectedStatuses, selectedCityId, selectedPhases, dataset.cities]);
+  }, [selectedStatuses, selectedCityId, selectedPhases]);
 
   const constructionFilter = useMemo(() => {
     if (!selectedStatuses.includes("construction")) {
@@ -99,10 +96,7 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
     const conditions: unknown[] = ["all", ["==", ["get", "status"], "construction"]];
 
     if (selectedCityId) {
-      const activeCity = dataset.cities.find((c) => c.id === selectedCityId);
-      if (activeCity) {
-        conditions.push(["==", ["get", "city"], activeCity.name]);
-      }
+      conditions.push(["==", ["get", "city_id"], selectedCityId]);
     }
 
     if (selectedPhases.length > 0) {
@@ -110,7 +104,7 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
     }
 
     return conditions;
-  }, [selectedStatuses, selectedCityId, selectedPhases, dataset.cities]);
+  }, [selectedStatuses, selectedCityId, selectedPhases]);
 
   const plannedFilter = useMemo(() => {
     if (!selectedStatuses.includes("planned")) {
@@ -119,10 +113,7 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
     const conditions: unknown[] = ["all", ["==", ["get", "status"], "planned"]];
 
     if (selectedCityId) {
-      const activeCity = dataset.cities.find((c) => c.id === selectedCityId);
-      if (activeCity) {
-        conditions.push(["==", ["get", "city"], activeCity.name]);
-      }
+      conditions.push(["==", ["get", "city_id"], selectedCityId]);
     }
 
     if (selectedPhases.length > 0) {
@@ -130,7 +121,7 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
     }
 
     return conditions;
-  }, [selectedStatuses, selectedCityId, selectedPhases, dataset.cities]);
+  }, [selectedStatuses, selectedCityId, selectedPhases]);
 
   const stationFilter = useMemo(() => {
     const conditions: unknown[] = ["all"];
@@ -140,10 +131,7 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
     }
 
     if (selectedCityId) {
-      const activeCity = dataset.cities.find((c) => c.id === selectedCityId);
-      if (activeCity) {
-        conditions.push(["==", ["get", "city"], activeCity.name]);
-      }
+      conditions.push(["==", ["get", "city_id"], selectedCityId]);
     }
 
     if (selectedPhases.length > 0) {
@@ -151,7 +139,7 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
     }
 
     return conditions.length === 1 ? undefined : conditions;
-  }, [selectedStatuses, selectedCityId, selectedPhases, dataset.cities]);
+  }, [selectedStatuses, selectedCityId, selectedPhases]);
 
   // Pan/zoom map when city selection changes
   useEffect(() => {

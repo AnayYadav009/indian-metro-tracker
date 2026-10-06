@@ -61,7 +61,7 @@ export async function buildCityData(cityId: string, forceFetch = false): Promise
 
   return {
     city: overrides.city,
-    lines: overrides.lines,
+    lines: overrides.lines.map((l) => ({ ...l, city_id: (l as any).city_id || overrides.city.id })),
     segments,
     stations,
   };
@@ -180,15 +180,15 @@ if (require.main === module) {
         cityData.city,
       ];
       const mergedLines = [
-        ...existingLines.filter((l) => l.city.toLowerCase() !== cityData.city.name.toLowerCase()),
+        ...existingLines.filter((l) => (l.city_id || l.city).toLowerCase() !== cityArg.toLowerCase()),
         ...cityData.lines,
       ];
       const mergedSegs = [
-        ...existingSegs.filter((s: any) => s.properties.city.toLowerCase() !== cityData.city.name.toLowerCase()),
+        ...existingSegs.filter((s: any) => (s.properties.city_id || s.properties.city).toLowerCase() !== cityArg.toLowerCase()),
         ...cityData.segments,
       ];
       const mergedStns = [
-        ...existingStns.filter((s: any) => s.properties.city.toLowerCase() !== cityData.city.name.toLowerCase()),
+        ...existingStns.filter((s: any) => (s.properties.city_id || s.properties.city).toLowerCase() !== cityArg.toLowerCase()),
         ...cityData.stations,
       ];
 

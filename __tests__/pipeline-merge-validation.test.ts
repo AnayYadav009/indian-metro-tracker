@@ -22,6 +22,7 @@ describe("saveActiveDataset pre-save validation", () => {
   const lineDelhi: Line = {
     id: "del-red",
     name: "Red Line",
+    city_id: "delhi",
     city: "Delhi",
     color: "#FF0000",
     operator: "DMRC",
@@ -30,6 +31,7 @@ describe("saveActiveDataset pre-save validation", () => {
   const lineBengaluru: Line = {
     id: "blr-purple",
     name: "Purple Line",
+    city_id: "bengaluru",
     city: "Bengaluru",
     color: "#800080",
     operator: "BMRCL",
@@ -48,6 +50,7 @@ describe("saveActiveDataset pre-save validation", () => {
       segment_id: "del-seg-01",
       line_id: "del-red",
       line_name: "Red Line",
+      city_id: "delhi",
       city: "Delhi",
       operator: "DMRC",
       status: "operational",
@@ -72,6 +75,7 @@ describe("saveActiveDataset pre-save validation", () => {
     properties: {
       station_id: "shared-station-id",
       name: "Delhi Station",
+      city_id: "delhi",
       city: "Delhi",
       line_ids: ["del-red"],
       status: "operational",
@@ -94,6 +98,7 @@ describe("saveActiveDataset pre-save validation", () => {
     properties: {
       station_id: "shared-station-id", // DUPLICATE ID across cities!
       name: "Bengaluru Station",
+      city_id: "bengaluru",
       city: "Bengaluru",
       line_ids: ["blr-purple"],
       status: "operational",
