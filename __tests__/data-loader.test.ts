@@ -12,8 +12,8 @@ import {
 } from "@/lib/data";
 
 describe("Metro Data Loader & Milestone 3 Acceptance Criteria", () => {
-  it("exports a valid DATA_SOURCE ('mock' | 'real')", () => {
-    expect(["mock", "real"]).toContain(DATA_SOURCE);
+  it("exports a valid DATA_SOURCE ('mock' | 'real' | 'mixed')", () => {
+    expect(["mock", "real", "mixed"]).toContain(DATA_SOURCE);
   });
 
   it("loads and validates the complete metro dataset without error", () => {

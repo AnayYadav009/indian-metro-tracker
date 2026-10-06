@@ -21,15 +21,60 @@ import type {
 } from "@/types/metro";
 import { calculateLineStringLengthKm, checkLengthMismatch } from "./geo";
 
-/**
- * Global DATA_SOURCE flag.
- * In v1, defaults to "mock" for mock datasets.
- */
-const rawSegments = segmentsGeoJson as { features?: Array<{ properties?: { source?: string } }> };
+export type DataSourceState = "mock" | "real" | "mixed";
 
-export const DATA_SOURCE: "mock" | "real" =
-  (process.env.NEXT_PUBLIC_DATA_SOURCE as "mock" | "real") ||
-  (rawSegments?.features?.some((f) => f.properties?.source !== "mock") ? "real" : "mock");
+/**
+ * Pure function to determine the dataset source state across all entities.
+ * Returns:
+ * - "mock" if every record is mock
+ * - "real" if every record has a non-mock source
+ * - "mixed" if some records are mock and some are real
+ * Overridden if envOverride ("mock" | "real" | "mixed") is provided.
+ */
+export function determineDataSourceState(
+  segments: { features?: Array<{ properties?: { source?: string } }> },
+  stations: { features?: Array<{ properties?: { source?: string } }> },
+  lines: Array<{ source?: string }>,
+  envOverride?: string
+): DataSourceState {
+  if (envOverride === "mock" || envOverride === "real" || envOverride === "mixed") {
+    return envOverride;
+  }
+
+  const allSources: string[] = [];
+  if (segments?.features) {
+    for (const f of segments.features) {
+      if (f.properties?.source) allSources.push(f.properties.source);
+    }
+  }
+  if (stations?.features) {
+    for (const f of stations.features) {
+      if (f.properties?.source) allSources.push(f.properties.source);
+    }
+  }
+  if (Array.isArray(lines)) {
+    for (const l of lines) {
+      if (l?.source) allSources.push(l.source);
+    }
+  }
+
+  if (allSources.length === 0) return "mock";
+
+  const allMock = allSources.every((s) => s.toLowerCase() === "mock");
+  if (allMock) return "mock";
+
+  const allReal = allSources.every((s) => s.toLowerCase() !== "mock");
+  if (allReal) return "real";
+
+  return "mixed";
+}
+
+export const DATA_SOURCE: DataSourceState = determineDataSourceState(
+  segmentsGeoJson as any,
+  stationsGeoJson as any,
+  linesJson as any,
+  process.env.NEXT_PUBLIC_DATA_SOURCE
+);
 
 
 
@@ -160,4 +205,26 @@ export function getSegmentById(segmentId: string): SegmentFeature | undefined {
 export function getStationById(stationId: string): StationFeature | undefined {
   const { stations } = getMetroData();
   return stations.features.find((f) => f.properties.station_id === stationId);
+}
+
+/**
+ * Returns names of cities that contain any mock data records.
+ */
+export function getMockCityNames(): string[] {
+  const { segments, stations } = getMetroData();
+  const mockCityNames = new Set<string>();
+
+  for (const seg of segments.features) {
+    if (seg.properties.source?.toLowerCase() === "mock") {
+      mockCityNames.add(seg.properties.city);
+    }
+  }
+
+  for (const stn of stations.features) {
+    if (stn.properties.source?.toLowerCase() === "mock") {
+      mockCityNames.add(stn.properties.city);
+    }
+  }
+
+  return Array.from(mockCityNames);
 }
