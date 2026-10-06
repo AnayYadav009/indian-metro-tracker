@@ -35,7 +35,7 @@ describe("Schema Validation Tests", () => {
     expect(CitySchema.safeParse(invalidCity).success).toBe(false);
   });
 
-  it("validates LineSchema color hex codes", () => {
+  it("validates LineSchema color hex codes and requires source", () => {
     const validLine = {
       id: "del-yellow",
       name: "Yellow Line",
@@ -43,8 +43,15 @@ describe("Schema Validation Tests", () => {
       city: "Delhi",
       color: "#FFD700",
       operator: "DMRC",
+      source: "osm+dmrc",
     };
     expect(LineSchema.safeParse(validLine).success).toBe(true);
+
+    const missingSource = {
+      ...validLine,
+      source: undefined,
+    };
+    expect(LineSchema.safeParse(missingSource).success).toBe(false);
 
     const invalidLine = {
       ...validLine,
@@ -216,6 +223,7 @@ describe("Schema Validation Tests", () => {
         city: "Delhi",
         color: "#FFD700",
         operator: "DMRC",
+        source: "osm+dmrc",
       },
     ];
 
@@ -288,6 +296,7 @@ describe("Schema Validation Tests", () => {
         city: "Delhi",
         color: "#FFD700",
         operator: "DMRC",
+        source: "osm+dmrc",
       },
     ];
 
@@ -351,6 +360,7 @@ describe("Schema Validation Tests", () => {
         city: "Mumbai", // Mismatched: city_id is delhi, but city is Mumbai
         color: "#FFD700",
         operator: "DMRC",
+        source: "osm+dmrc",
       },
     ];
 
@@ -365,6 +375,162 @@ describe("Schema Validation Tests", () => {
     expect(
       result.errors.some((e) =>
         e.includes("must match city name 'Delhi' for city_id 'delhi'")
+      )
+    ).toBe(true);
+  });
+
+  it("enforces references validation for non-mock segments with source !== 'osm'", () => {
+    const testCities = [
+      {
+        id: "bengaluru",
+        name: "Bengaluru",
+        bbox: [77.45, 12.8, 77.78, 13.15] as [number, number, number, number],
+        operator: "BMRCL",
+        phases: ["1", "2"],
+      },
+    ];
+    const testLines = [
+      {
+        id: "blr-purple",
+        name: "Purple Line",
+        city_id: "bengaluru",
+        city: "Bengaluru",
+        color: "#800080",
+        operator: "BMRCL",
+        source: "osm+bmrcl",
+      },
+    ];
+
+    // Construction segment with source osm+bmrcl and NO references: MUST BE ERROR
+    const constructionNoRefs = {
+      type: "Feature",
+      geometry: { type: "LineString", coordinates: [[77.5, 12.9], [77.51, 12.91]] },
+      properties: {
+        segment_id: "blr-const-seg",
+        line_id: "blr-purple",
+        line_name: "Purple Line",
+        city_id: "bengaluru",
+        city: "Bengaluru",
+        operator: "BMRCL",
+        status: "construction",
+        phase: "2",
+        length_km: 2.1,
+        gauge: "standard",
+        inaugurated_on: null,
+        expected_completion: "2027",
+        stations_count: 2,
+        color: "#800080",
+        source: "osm+bmrcl",
+        references: [],
+        last_verified: "2026-10-06",
+      },
+    };
+
+    // Operational segment with source osm+bmrcl and NO references: MUST BE WARNING
+    const operationalNoRefs = {
+      type: "Feature",
+      geometry: { type: "LineString", coordinates: [[77.5, 12.9], [77.51, 12.91]] },
+      properties: {
+        segment_id: "blr-oper-seg",
+        line_id: "blr-purple",
+        line_name: "Purple Line",
+        city_id: "bengaluru",
+        city: "Bengaluru",
+        operator: "BMRCL",
+        status: "operational",
+        phase: "1",
+        length_km: 2.1,
+        gauge: "standard",
+        inaugurated_on: "2015-05-01",
+        expected_completion: null,
+        stations_count: 2,
+        color: "#800080",
+        source: "osm+bmrcl",
+        references: [],
+        last_verified: "2026-10-06",
+      },
+    };
+
+    const resError = validateMetroDataset({
+      cities: testCities,
+      lines: testLines,
+      segments: { type: "FeatureCollection", features: [constructionNoRefs] },
+      stations: { type: "FeatureCollection", features: [] },
+    });
+    expect(resError.valid).toBe(false);
+    expect(resError.errors.some((e) => e.includes("blr-const-seg") && e.includes("references"))).toBe(true);
+
+    const resWarn = validateMetroDataset({
+      cities: testCities,
+      lines: testLines,
+      segments: { type: "FeatureCollection", features: [operationalNoRefs] },
+      stations: { type: "FeatureCollection", features: [] },
+    });
+    expect(resWarn.valid).toBe(true);
+    expect(resWarn.warnings.some((w) => w.includes("blr-oper-seg") && w.includes("references"))).toBe(true);
+  });
+
+  it("prints a warning for construction segments whose expected_completion is earlier than injected clock date", () => {
+    const testCities = [
+      {
+        id: "delhi",
+        name: "Delhi",
+        bbox: [76.84, 28.4, 77.35, 28.88] as [number, number, number, number],
+        operator: "DMRC",
+        phases: ["IV"],
+      },
+    ];
+    const testLines = [
+      {
+        id: "del-magenta",
+        name: "Magenta Line",
+        city_id: "delhi",
+        city: "Delhi",
+        color: "#CC338B",
+        operator: "DMRC",
+        source: "osm",
+      },
+    ];
+
+    const staleSegment = {
+      type: "Feature",
+      geometry: { type: "LineString", coordinates: [[77.2, 28.6], [77.21, 28.61]] },
+      properties: {
+        segment_id: "del-stale-seg",
+        line_id: "del-magenta",
+        line_name: "Magenta Line",
+        city_id: "delhi",
+        city: "Delhi",
+        operator: "DMRC",
+        status: "construction",
+        phase: "IV",
+        length_km: 1.5,
+        gauge: "standard",
+        inaugurated_on: null,
+        expected_completion: "2025-12", // In the past relative to 2026-10-06
+        stations_count: 2,
+        color: "#CC338B",
+        source: "osm",
+        references: [],
+        last_verified: "2026-10-06",
+      },
+    };
+
+    // Inject clock: 2026-10-06
+    const result = validateMetroDataset(
+      {
+        cities: testCities,
+        lines: testLines,
+        segments: { type: "FeatureCollection", features: [staleSegment] },
+        stations: { type: "FeatureCollection", features: [] },
+      },
+      { currentDate: "2026-10-06" }
+    );
+
+    expect(result.valid).toBe(true);
+    expect(
+      result.warnings.some((w) =>
+        w.includes("del-stale-seg") && w.includes("stale expected_completion '2025-12'")
       )
     ).toBe(true);
   });

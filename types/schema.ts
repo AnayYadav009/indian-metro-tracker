@@ -30,6 +30,7 @@ export const LineSchema = z.object({
   city: z.string().min(1),
   color: z.string().regex(/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/, "Invalid hex color"),
   operator: z.string().min(1),
+  source: z.string().min(1, "source is required"),
 });
 export type Line = z.infer<typeof LineSchema>;
 
@@ -62,6 +63,7 @@ export const SegmentPropertiesSchema = z
     last_verified: z
       .string()
       .regex(/^\d{4}-\d{2}-\d{2}$/, "Format must be YYYY-MM-DD"),
+    completion_unconfirmed: z.boolean().default(false).optional(),
   })
   .superRefine((data, ctx) => {
     if (data.status === "operational") {
@@ -80,10 +82,10 @@ export const SegmentPropertiesSchema = z
         });
       }
     } else if (data.status === "construction") {
-      if (!data.expected_completion) {
+      if (!data.expected_completion && !data.completion_unconfirmed) {
         ctx.addIssue({
           code: z.ZodIssueCode.custom,
-          message: "expected_completion is required when status is 'construction'",
+          message: "expected_completion is required when status is 'construction' unless completion_unconfirmed is true",
           path: ["expected_completion"],
         });
       }
@@ -104,14 +106,17 @@ export const SegmentPropertiesSchema = z
       }
     }
 
-    if (data.source.toLowerCase().includes("manual")) {
-      if (!data.references || data.references.length === 0) {
-        ctx.addIssue({
-          code: z.ZodIssueCode.custom,
-          message: "references array must contain at least one valid URL when source contains 'manual'",
-          path: ["references"],
-        });
-      }
+    const isNonMock = data.source.toLowerCase() !== "mock";
+    const isManual = data.source.toLowerCase().includes("manual");
+    const isNotPureOsm = data.source.toLowerCase() !== "osm";
+    const missingRefs = !data.references || data.references.length === 0;
+
+    if (isManual && missingRefs) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: `Manual segment '${data.segment_id}' requires at least one valid URL in 'references'`,
+        path: ["references"],
+      });
     }
   });
 export type SegmentProperties = z.infer<typeof SegmentPropertiesSchema>;
@@ -163,6 +168,7 @@ export const StationPropertiesSchema = z
       .string()
       .regex(/^\d{4}-\d{2}-\d{2}$/, "Format must be YYYY-MM-DD")
       .default("2026-10-05"),
+    completion_unconfirmed: z.boolean().default(false).optional(),
   })
   .superRefine((data, ctx) => {
     if (data.status === "operational") {
@@ -181,10 +187,10 @@ export const StationPropertiesSchema = z
         });
       }
     } else if (data.status === "construction") {
-      if (!data.expected_completion) {
+      if (!data.expected_completion && !data.completion_unconfirmed) {
         ctx.addIssue({
           code: z.ZodIssueCode.custom,
-          message: "expected_completion is required when status is 'construction'",
+          message: "expected_completion is required when status is 'construction' unless completion_unconfirmed is true",
           path: ["expected_completion"],
         });
       }

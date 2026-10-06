@@ -24,7 +24,8 @@
       "city": "Bengaluru",
       "color": "#800080",
       "operator": "BMRCL",
-      "city_id": "bengaluru"
+      "city_id": "bengaluru",
+      "source": "osm+bmrcl"
     },
     {
       "id": "blr-green",
@@ -32,7 +33,8 @@
       "city": "Bengaluru",
       "color": "#009933",
       "operator": "BMRCL",
-      "city_id": "bengaluru"
+      "city_id": "bengaluru",
+      "source": "osm+bmrcl"
     },
     {
       "id": "blr-yellow",
@@ -40,7 +42,8 @@
       "city": "Bengaluru",
       "color": "#FFCC00",
       "operator": "BMRCL",
-      "city_id": "bengaluru"
+      "city_id": "bengaluru",
+      "source": "osm+bmrcl"
     },
     {
       "id": "blr-blue",
@@ -48,7 +51,8 @@
       "city": "Bengaluru",
       "color": "#1E90FF",
       "operator": "BMRCL",
-      "city_id": "bengaluru"
+      "city_id": "bengaluru",
+      "source": "osm+bmrcl"
     },
     {
       "id": "blr-pink",
@@ -56,7 +60,8 @@
       "city": "Bengaluru",
       "color": "#FF69B4",
       "operator": "BMRCL",
-      "city_id": "bengaluru"
+      "city_id": "bengaluru",
+      "source": "osm+bmrcl"
     }
   ],
   "segments": [
@@ -92,11 +97,12 @@
       "line_id": "blr-yellow",
       "line_name": "Yellow Line (RV Road - Bommasandra)",
       "phase": "2",
-      "status": "construction",
+      "status": "operational",
       "gauge": "standard",
-      "inaugurated_on": null,
-      "expected_completion": "2025-12",
+      "inaugurated_on": "2025-08-10",
+      "expected_completion": null,
       "color": "#FFCC00",
+      "references": ["https://english.bmrc.co.in/"],
       "city_id": "bengaluru"
     },
     {
@@ -107,8 +113,11 @@
       "status": "construction",
       "gauge": "standard",
       "inaugurated_on": null,
-      "expected_completion": "2026-12",
+      "expected_completion": null,
+      "completion_unconfirmed": true,
       "color": "#1E90FF",
+      "references": ["https://english.bmrc.co.in/"],
+      "last_verified": "2026-10-06",
       "coordinates": [
         [
           77.6245,
@@ -149,8 +158,11 @@
       "status": "construction",
       "gauge": "standard",
       "inaugurated_on": null,
-      "expected_completion": "2026-06",
+      "expected_completion": null,
+      "completion_unconfirmed": true,
       "color": "#FF69B4",
+      "references": ["https://english.bmrc.co.in/"],
+      "last_verified": "2026-10-06",
       "coordinates": [
         [
           77.5852,
@@ -179,8 +191,11 @@
       "status": "planned",
       "gauge": "standard",
       "inaugurated_on": null,
-      "expected_completion": "2030",
+      "expected_completion": null,
+      "completion_unconfirmed": true,
       "color": "#800080",
+      "references": ["https://english.bmrc.co.in/"],
+      "last_verified": "2026-10-06",
       "coordinates": [
         [
           77.5342,

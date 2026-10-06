@@ -5,7 +5,8 @@
     "city_id": "delhi",
     "city": "Delhi",
     "color": "#FFD700",
-    "operator": "DMRC"
+    "operator": "DMRC",
+    "source": "mock"
   },
   {
     "id": "del-blue",
@@ -13,7 +14,8 @@
     "city_id": "delhi",
     "city": "Delhi",
     "color": "#0070BB",
-    "operator": "DMRC"
+    "operator": "DMRC",
+    "source": "mock"
   },
   {
     "id": "del-silver",
@@ -21,7 +23,8 @@
     "city_id": "delhi",
     "city": "Delhi",
     "color": "#A0A0A0",
-    "operator": "DMRC"
+    "operator": "DMRC",
+    "source": "mock"
   },
   {
     "id": "blr-purple",
@@ -29,7 +32,8 @@
     "city_id": "bengaluru",
     "city": "Bengaluru",
     "color": "#800080",
-    "operator": "BMRCL"
+    "operator": "BMRCL",
+    "source": "mock"
   },
   {
     "id": "blr-blue",
@@ -37,7 +41,8 @@
     "city_id": "bengaluru",
     "city": "Bengaluru",
     "color": "#1E90FF",
-    "operator": "BMRCL"
+    "operator": "BMRCL",
+    "source": "mock"
   },
   {
     "id": "mum-line-1",
@@ -45,7 +50,8 @@
     "city_id": "mumbai",
     "city": "Mumbai",
     "color": "#0072CE",
-    "operator": "MMRDA"
+    "operator": "MMRDA",
+    "source": "mock"
   },
   {
     "id": "mum-line-3",
@@ -53,7 +59,8 @@
     "city_id": "mumbai",
     "city": "Mumbai",
     "color": "#00A3E0",
-    "operator": "MMRDA"
+    "operator": "MMRDA",
+    "source": "mock"
   },
   {
     "id": "mum-line-4",
@@ -61,6 +68,7 @@
     "city_id": "mumbai",
     "city": "Mumbai",
     "color": "#00B140",
-    "operator": "MMRDA"
+    "operator": "MMRDA",
+    "source": "mock"
   }
 ]

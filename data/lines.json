@@ -2,90 +2,101 @@
   {
     "id": "blr-purple",
     "name": "Purple Line",
-    "city_id": "bengaluru",
     "city": "Bengaluru",
     "color": "#800080",
-    "operator": "BMRCL"
+    "operator": "BMRCL",
+    "city_id": "bengaluru",
+    "source": "osm+bmrcl"
   },
   {
     "id": "blr-green",
     "name": "Green Line",
-    "city_id": "bengaluru",
     "city": "Bengaluru",
     "color": "#009933",
-    "operator": "BMRCL"
+    "operator": "BMRCL",
+    "city_id": "bengaluru",
+    "source": "osm+bmrcl"
   },
   {
     "id": "blr-yellow",
     "name": "Yellow Line",
-    "city_id": "bengaluru",
     "city": "Bengaluru",
     "color": "#FFCC00",
-    "operator": "BMRCL"
+    "operator": "BMRCL",
+    "city_id": "bengaluru",
+    "source": "osm+bmrcl"
   },
   {
     "id": "blr-blue",
     "name": "Blue Line (Airport Link)",
-    "city_id": "bengaluru",
     "city": "Bengaluru",
     "color": "#1E90FF",
-    "operator": "BMRCL"
+    "operator": "BMRCL",
+    "city_id": "bengaluru",
+    "source": "osm+bmrcl"
   },
   {
     "id": "blr-pink",
     "name": "Pink Line",
-    "city_id": "bengaluru",
     "city": "Bengaluru",
     "color": "#FF69B4",
-    "operator": "BMRCL"
+    "operator": "BMRCL",
+    "city_id": "bengaluru",
+    "source": "osm+bmrcl"
   },
   {
     "id": "mum-line-1",
     "name": "Line 1 (Blue)",
-    "city_id": "mumbai",
     "city": "Mumbai",
     "color": "#0072CE",
-    "operator": "MMRDA"
+    "operator": "MMRDA",
+    "city_id": "mumbai",
+    "source": "osm+mmrda"
   },
   {
     "id": "mum-line-2a",
     "name": "Line 2A (Yellow)",
-    "city_id": "mumbai",
     "city": "Mumbai",
     "color": "#FFD700",
-    "operator": "MMRDA"
+    "operator": "MMRDA",
+    "city_id": "mumbai",
+    "source": "osm+mmrda"
   },
   {
     "id": "mum-line-7",
     "name": "Line 7 (Red)",
-    "city_id": "mumbai",
     "city": "Mumbai",
     "color": "#ED1C24",
-    "operator": "MMRDA"
+    "operator": "MMRDA",
+    "city_id": "mumbai",
+    "source": "osm+mmrda"
   },
   {
     "id": "mum-line-3",
     "name": "Line 3 (Aqua)",
-    "city_id": "mumbai",
     "city": "Mumbai",
     "color": "#00A3E0",
-    "operator": "MMRDA"
+    "operator": "MMRDA",
+    "city_id": "mumbai",
+    "source": "osm+mmrda"
   },
   {
     "id": "mum-line-4",
     "name": "Line 4 (Green)",
-    "city_id": "mumbai",
     "city": "Mumbai",
     "color": "#00B140",
-    "operator": "MMRDA"
+    "operator": "MMRDA",
+    "city_id": "mumbai",
+    "source": "osm+mmrda"
   },
   {
     "id": "mum-line-2b",
     "name": "Line 2B (Yellow Ext)",
-    "city_id": "mumbai",
     "city": "Mumbai",
     "color": "#FFC72C",
-    "operator": "MMRDA"
+    "operator": "MMRDA",
+    "city_id": "mumbai",
+    "source": "osm+mmrda"
   },
   {
     "id": "del-red",
@@ -93,7 +104,8 @@
     "city": "Delhi",
     "color": "#FF4040",
     "operator": "DMRC",
-    "city_id": "delhi"
+    "city_id": "delhi",
+    "source": "osm+dmrc"
   },
   {
     "id": "del-yellow",
@@ -101,7 +113,8 @@
     "city": "Delhi",
     "color": "#FFD700",
     "operator": "DMRC",
-    "city_id": "delhi"
+    "city_id": "delhi",
+    "source": "osm+dmrc"
   },
   {
     "id": "del-blue",
@@ -109,7 +122,8 @@
     "city": "Delhi",
     "color": "#0070BB",
     "operator": "DMRC",
-    "city_id": "delhi"
+    "city_id": "delhi",
+    "source": "osm+dmrc"
   },
   {
     "id": "del-green",
@@ -117,7 +131,8 @@
     "city": "Delhi",
     "color": "#008000",
     "operator": "DMRC",
-    "city_id": "delhi"
+    "city_id": "delhi",
+    "source": "osm+dmrc"
   },
   {
     "id": "del-violet",
@@ -125,7 +140,8 @@
     "city": "Delhi",
     "color": "#553592",
     "operator": "DMRC",
-    "city_id": "delhi"
+    "city_id": "delhi",
+    "source": "osm+dmrc"
   },
   {
     "id": "del-airport",
@@ -133,7 +149,8 @@
     "city": "Delhi",
     "color": "#FF8C00",
     "operator": "DMRC",
-    "city_id": "delhi"
+    "city_id": "delhi",
+    "source": "osm+dmrc"
   },
   {
     "id": "del-pink",
@@ -141,7 +158,8 @@
     "city": "Delhi",
     "color": "#FC8EAC",
     "operator": "DMRC",
-    "city_id": "delhi"
+    "city_id": "delhi",
+    "source": "osm+dmrc"
   },
   {
     "id": "del-magenta",
@@ -149,7 +167,8 @@
     "city": "Delhi",
     "color": "#CC338B",
     "operator": "DMRC",
-    "city_id": "delhi"
+    "city_id": "delhi",
+    "source": "osm+dmrc"
   },
   {
     "id": "del-grey",
@@ -157,7 +176,8 @@
     "city": "Delhi",
     "color": "#838996",
     "operator": "DMRC",
-    "city_id": "delhi"
+    "city_id": "delhi",
+    "source": "osm+dmrc"
   },
   {
     "id": "del-silver",
@@ -165,6 +185,7 @@
     "city": "Delhi",
     "color": "#A0A0A0",
     "operator": "DMRC",
-    "city_id": "delhi"
+    "city_id": "delhi",
+    "source": "osm+dmrc"
   }
 ]

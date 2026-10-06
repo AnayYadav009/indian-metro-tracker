@@ -29,6 +29,21 @@ export function generateDedupeReport(cityId: string) {
     throw new Error(`Raw Overpass data not found at ${rawPath}`);
   }
 
+  const overridesPath = path.resolve(process.cwd(), "data", "overrides", `${cityId}.json`);
+  let dedupeRadiusM = 350;
+  const aliasMap = new Map<string, string>();
+
+  if (fs.existsSync(overridesPath)) {
+    const overrides = JSON.parse(fs.readFileSync(overridesPath, "utf-8"));
+    if (overrides.dedupeRadiusM) dedupeRadiusM = overrides.dedupeRadiusM;
+    if (overrides.stationAliases) {
+      for (const [k, v] of Object.entries(overrides.stationAliases)) {
+        aliasMap.set(k.toLowerCase().trim(), (v as string).trim());
+        aliasMap.set((v as string).toLowerCase().trim(), k.trim());
+      }
+    }
+  }
+
   const raw = JSON.parse(fs.readFileSync(rawPath, "utf-8"));
   const elements: RawNode[] = raw.elements || [];
 
@@ -49,46 +64,68 @@ export function generateDedupeReport(cityId: string) {
 
   const retainedNodes: Array<{
     osmId: number;
-    name: string;
+    rawName: string;
+    cleanName: string;
+    resolvedName: string;
     lat: number;
     lon: number;
     coords: [number, number];
+    tags?: Record<string, string>;
   }> = [];
 
   const mergedNodes: Array<{
     droppedOsmId: number;
-    droppedName: string;
+    rawName: string;
+    cleanName: string;
+    resolvedName: string;
     lat: number;
     lon: number;
     mergedIntoOsmId: number;
-    mergedIntoName: string;
+    mergedIntoRawName: string;
+    mergedIntoFinalName: string;
     distanceMetres: number;
     differentNames: boolean;
   }> = [];
 
   for (const node of stationNodes) {
     const rawName = node.tags!.name || node.tags!["name:en"] || `Station ${node.id}`;
+    // Strip line qualifiers and suffixes
     const cleanName = rawName
+      .replace(/\s*\([^)]*(line|corridor|branch)[^)]*\)/gi, "")
       .replace(/\s+metro\s+station/i, "")
       .replace(/\s+station/i, "")
       .trim();
+
+    const resolvedName = aliasMap.get(cleanName.toLowerCase()) || cleanName;
 
     const coords: [number, number] = [
       Number(Number(node.lon).toFixed(6)),
       Number(Number(node.lat).toFixed(6)),
     ];
 
-    // Deduplication rule from merge-overrides.ts:
-    // pointDistanceKm < 0.08 (80m) OR (same name AND pointDistanceKm < 0.3 (300m))
+    // Deduplication rule:
+    // 1. Within dedupeRadiusM (default 350m) AND same base name (or alias match)
+    // 2. OR within dedupeRadiusM AND both nodes share explicit interchange tags
+    // Different base names never merge on proximity alone.
     let matched: (typeof retainedNodes)[0] | null = null;
     let matchedDistM = Infinity;
 
     for (const r of retainedNodes) {
       const distM = pointDistanceM(coords, r.coords);
-      const isProximityMatch = distM < 80;
-      const isNameMatch = r.name.toLowerCase() === cleanName.toLowerCase() && distM < 300;
+      if (distM > dedupeRadiusM) continue;
 
-      if (isProximityMatch || isNameMatch) {
+      const sameName =
+        r.resolvedName.toLowerCase() === resolvedName.toLowerCase() ||
+        r.cleanName.toLowerCase() === cleanName.toLowerCase();
+      const aliasMatch =
+        aliasMap.get(r.cleanName.toLowerCase())?.toLowerCase() === cleanName.toLowerCase() ||
+        aliasMap.get(r.resolvedName.toLowerCase())?.toLowerCase() === resolvedName.toLowerCase();
+      const sharedInterchangeTag = Boolean(
+        (node.tags?.interchange === "yes" || node.tags?.public_transport === "stop_area") &&
+          (r.tags?.interchange === "yes" || r.tags?.public_transport === "stop_area")
+      );
+
+      if (sameName || aliasMatch || sharedInterchangeTag) {
         matched = r;
         matchedDistM = distM;
         break;
@@ -98,21 +135,27 @@ export function generateDedupeReport(cityId: string) {
     if (matched) {
       mergedNodes.push({
         droppedOsmId: node.id,
-        droppedName: cleanName,
+        rawName,
+        cleanName,
+        resolvedName,
         lat: Number(Number(node.lat).toFixed(6)),
         lon: Number(Number(node.lon).toFixed(6)),
         mergedIntoOsmId: matched.osmId,
-        mergedIntoName: matched.name,
+        mergedIntoRawName: matched.rawName,
+        mergedIntoFinalName: matched.resolvedName,
         distanceMetres: Number(matchedDistM.toFixed(1)),
-        differentNames: cleanName.toLowerCase() !== matched.name.toLowerCase(),
+        differentNames: rawName.toLowerCase() !== matched.rawName.toLowerCase(),
       });
     } else {
       retainedNodes.push({
         osmId: node.id,
-        name: cleanName,
+        rawName,
+        cleanName,
+        resolvedName,
         lat: Number(Number(node.lat).toFixed(6)),
         lon: Number(Number(node.lon).toFixed(6)),
         coords,
+        tags: node.tags,
       });
     }
   }
@@ -120,6 +163,7 @@ export function generateDedupeReport(cityId: string) {
   console.log(`\n======================================================`);
   console.log(`📊 Station Deduplication Report for ${cityId.toUpperCase()}`);
   console.log(`======================================================`);
+  console.log(`Radius configured: ${dedupeRadiusM} m`);
   console.log(`Raw station nodes extracted: ${stationNodes.length}`);
   console.log(`Unique master stations retained: ${retainedNodes.length}`);
   console.log(`Station nodes merged/dropped: ${mergedNodes.length}`);
@@ -128,25 +172,26 @@ export function generateDedupeReport(cityId: string) {
   console.table(
     mergedNodes.map((m) => ({
       "OSM ID": m.droppedOsmId,
-      Name: m.droppedName,
+      Name: m.cleanName,
       "Lat / Lon": `${m.lat}, ${m.lon}`,
       "Merged Into ID": m.mergedIntoOsmId,
-      "Merged Into Name": m.mergedIntoName,
+      "Merged Into Name": m.mergedIntoFinalName,
       "Distance (m)": m.distanceMetres,
-      "Diff Name?": m.differentNames ? "YES" : "No",
+      "Raw Diff?": m.differentNames ? "YES" : "No",
     }))
   );
 
   const diffNameNodes = mergedNodes.filter((m) => m.differentNames);
   if (diffNameNodes.length > 0) {
-    console.log(`\n⚠️  Merged Nodes with DIFFERENT Names (${diffNameNodes.length}):`);
+    console.log(`\n🔍 Merged Nodes with DIFFERENT Original Names (${diffNameNodes.length}):`);
     console.table(
       diffNameNodes.map((m) => ({
-        "OSM ID": m.droppedOsmId,
-        Name: m.droppedName,
-        "Lat / Lon": `${m.lat}, ${m.lon}`,
-        "Merged Into ID": m.mergedIntoOsmId,
-        "Merged Into Name": m.mergedIntoName,
+        "Dropped OSM ID": m.droppedOsmId,
+        "Original Dropped Name": m.rawName,
+        "Cleaned Dropped Name": m.cleanName,
+        "Merged Into OSM ID": m.mergedIntoOsmId,
+        "Original Master Name": m.mergedIntoRawName,
+        "Final Merged Master Name": m.mergedIntoFinalName,
         "Distance (m)": m.distanceMetres,
       }))
     );

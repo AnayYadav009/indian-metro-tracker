@@ -33,6 +33,7 @@ const mockTier1Dataset: Parameters<typeof validateMetroDataset>[0] = {
       city: "Delhi",
       color: "#FF4040",
       operator: "DMRC",
+      source: "mock",
     },
     {
       id: "blr-purple",
@@ -41,6 +42,7 @@ const mockTier1Dataset: Parameters<typeof validateMetroDataset>[0] = {
       city: "Bengaluru",
       color: "#800080",
       operator: "BMRCL",
+      source: "mock",
     },
     {
       id: "mum-line-1",
@@ -49,6 +51,7 @@ const mockTier1Dataset: Parameters<typeof validateMetroDataset>[0] = {
       city: "Mumbai",
       color: "#0000FF",
       operator: "MMRDA",
+      source: "mock",
     },
   ],
   segments: {

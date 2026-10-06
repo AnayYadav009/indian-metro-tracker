@@ -23,7 +23,8 @@
       "city": "Delhi",
       "color": "#FF4040",
       "operator": "DMRC",
-      "city_id": "delhi"
+      "city_id": "delhi",
+      "source": "osm+dmrc"
     },
     {
       "id": "del-yellow",
@@ -31,7 +32,8 @@
       "city": "Delhi",
       "color": "#FFD700",
       "operator": "DMRC",
-      "city_id": "delhi"
+      "city_id": "delhi",
+      "source": "osm+dmrc"
     },
     {
       "id": "del-blue",
@@ -39,7 +41,8 @@
       "city": "Delhi",
       "color": "#0070BB",
       "operator": "DMRC",
-      "city_id": "delhi"
+      "city_id": "delhi",
+      "source": "osm+dmrc"
     },
     {
       "id": "del-green",
@@ -47,7 +50,8 @@
       "city": "Delhi",
       "color": "#008000",
       "operator": "DMRC",
-      "city_id": "delhi"
+      "city_id": "delhi",
+      "source": "osm+dmrc"
     },
     {
       "id": "del-violet",
@@ -55,7 +59,8 @@
       "city": "Delhi",
       "color": "#553592",
       "operator": "DMRC",
-      "city_id": "delhi"
+      "city_id": "delhi",
+      "source": "osm+dmrc"
     },
     {
       "id": "del-airport",
@@ -63,7 +68,8 @@
       "city": "Delhi",
       "color": "#FF8C00",
       "operator": "DMRC",
-      "city_id": "delhi"
+      "city_id": "delhi",
+      "source": "osm+dmrc"
     },
     {
       "id": "del-pink",
@@ -71,7 +77,8 @@
       "city": "Delhi",
       "color": "#FC8EAC",
       "operator": "DMRC",
-      "city_id": "delhi"
+      "city_id": "delhi",
+      "source": "osm+dmrc"
     },
     {
       "id": "del-magenta",
@@ -79,7 +86,8 @@
       "city": "Delhi",
       "color": "#CC338B",
       "operator": "DMRC",
-      "city_id": "delhi"
+      "city_id": "delhi",
+      "source": "osm+dmrc"
     },
     {
       "id": "del-grey",
@@ -87,7 +95,8 @@
       "city": "Delhi",
       "color": "#838996",
       "operator": "DMRC",
-      "city_id": "delhi"
+      "city_id": "delhi",
+      "source": "osm+dmrc"
     },
     {
       "id": "del-silver",
@@ -95,7 +104,8 @@
       "city": "Delhi",
       "color": "#A0A0A0",
       "operator": "DMRC",
-      "city_id": "delhi"
+      "city_id": "delhi",
+      "source": "osm+dmrc"
     }
   ],
   "segments": [
@@ -251,7 +261,8 @@
       "status": "construction",
       "gauge": "standard",
       "inaugurated_on": null,
-      "expected_completion": "2026-06",
+      "expected_completion": null,
+      "completion_unconfirmed": true,
       "color": "#CC338B",
       "city_id": "delhi"
     }
@@ -275,5 +286,9 @@
     "Lajpat Nagar",
     "Mayur Vihar - I",
     "New Delhi"
-  ]
+  ],
+  "dedupeRadiusM": 350,
+  "stationAliases": {
+    "Ramakrishna Ashram Marg": "R K Ashram Marg"
+  }
 }

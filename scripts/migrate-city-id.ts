@@ -35,6 +35,7 @@ function migrateLines(lines: any[], cityLookup: Map<string, string>): Line[] {
       city: l.city,
       color: l.color,
       operator: l.operator,
+      source: l.source || "osm",
     };
   });
 }
