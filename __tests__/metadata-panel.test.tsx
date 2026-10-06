@@ -5,7 +5,7 @@ import { MetadataPanel } from "@/components/panels/metadata-panel";
 import { useMetroStore } from "@/store/use-metro-store";
 import type { SegmentProperties, StationProperties } from "@/types/schema";
 
-describe("Milestone 5 - MetadataPanel Component", () => {
+describe("MetadataPanel Component", () => {
   beforeEach(() => {
     useMetroStore.getState().clearSelectedFeature();
   });
@@ -20,6 +20,7 @@ describe("Milestone 5 - MetadataPanel Component", () => {
       segment_id: "del-yellow-seg-01",
       line_id: "del-yellow",
       line_name: "Yellow Line",
+      city_id: "delhi",
       city: "Delhi",
       operator: "DMRC",
       status: "operational",
@@ -31,6 +32,7 @@ describe("Milestone 5 - MetadataPanel Component", () => {
       stations_count: 11,
       color: "#FFD700",
       source: "mock",
+      references: ["https://example.com/source-doc"],
       last_verified: "2026-10-05",
     };
 
@@ -60,6 +62,11 @@ describe("Milestone 5 - MetadataPanel Component", () => {
     expect(screen.getByText("broad")).toBeInTheDocument();
     expect(screen.getByText("2004-12-20")).toBeInTheDocument();
     expect(screen.getByText("Verified: 2026-10-05")).toBeInTheDocument();
+
+    // References citation link
+    const refLink = screen.getByRole("link", { name: "https://example.com/source-doc" });
+    expect(refLink).toBeInTheDocument();
+    expect(refLink).toHaveAttribute("href", "https://example.com/source-doc");
   });
 
   it("renders under-construction segment with expected completion date", () => {
@@ -67,6 +74,7 @@ describe("Milestone 5 - MetadataPanel Component", () => {
       segment_id: "blr-pink-seg-01",
       line_id: "blr-pink",
       line_name: "Pink Line",
+      city_id: "bengaluru",
       city: "Bengaluru",
       operator: "BMRCL",
       status: "construction",
@@ -78,6 +86,7 @@ describe("Milestone 5 - MetadataPanel Component", () => {
       stations_count: 12,
       color: "#EC4899",
       source: "mock",
+      references: [],
       last_verified: "2026-10-05",
     };
 
@@ -99,6 +108,7 @@ describe("Milestone 5 - MetadataPanel Component", () => {
     const mockStation: StationProperties = {
       station_id: "del-rajiv-chowk",
       name: "Rajiv Chowk",
+      city_id: "delhi",
       city: "Delhi",
       line_ids: ["del-yellow", "del-blue"],
       status: "operational",
@@ -146,6 +156,7 @@ describe("Milestone 5 - MetadataPanel Component", () => {
     const mockStation: StationProperties = {
       station_id: "del-rajiv-chowk",
       name: "Rajiv Chowk",
+      city_id: "delhi",
       city: "Delhi",
       line_ids: ["del-yellow"],
       status: "operational",

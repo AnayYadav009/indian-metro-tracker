@@ -19,14 +19,11 @@ if (typeof window !== "undefined") {
 }
 
 import {
+  BASEMAP_CONFIG,
   BASEMAP_STYLE_URL,
   INITIAL_VIEW_STATE,
-  OSM_ATTRIBUTION,
-  OSM_ATTRIBUTION_URL,
-  OPENFREEMAP_ATTRIBUTION,
-  OPENFREEMAP_ATTRIBUTION_URL,
 } from "@/lib/map-config";
-import { getMetroData } from "@/lib/data";
+import { getMetroData, getSegmentById, getStationById } from "@/lib/data";
 import { useMetroStore } from "@/store/use-metro-store";
 import {
   INTERACTIVE_LAYER_IDS,
@@ -37,6 +34,7 @@ import {
   stationCircleLayer,
   getSelectedStationLayer,
   stationLabelsLayer,
+  withFilter,
 } from "./map-layers";
 import { HoverTooltip } from "./hover-tooltip";
 
@@ -74,17 +72,14 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
   const dataset = useMemo(() => getMetroData(), []);
 
   // MapLibre WebGL Layer Filter Expressions (filters applied directly by GPU without re-parsing GeoJSON)
-  const operationalFilter = useMemo<any>(() => {
+  const operationalFilter = useMemo(() => {
     if (!selectedStatuses.includes("operational")) {
       return ["==", ["get", "status"], "__NONE__"];
     }
-    const conditions: any[] = ["all", ["==", ["get", "status"], "operational"]];
+    const conditions: unknown[] = ["all", ["==", ["get", "status"], "operational"]];
 
     if (selectedCityId) {
-      const activeCity = dataset.cities.find((c) => c.id === selectedCityId);
-      if (activeCity) {
-        conditions.push(["==", ["get", "city"], activeCity.name]);
-      }
+      conditions.push(["==", ["get", "city_id"], selectedCityId]);
     }
 
     if (selectedPhases.length > 0) {
@@ -92,19 +87,16 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
     }
 
     return conditions;
-  }, [selectedStatuses, selectedCityId, selectedPhases, dataset.cities]);
+  }, [selectedStatuses, selectedCityId, selectedPhases]);
 
-  const constructionFilter = useMemo<any>(() => {
+  const constructionFilter = useMemo(() => {
     if (!selectedStatuses.includes("construction")) {
       return ["==", ["get", "status"], "__NONE__"];
     }
-    const conditions: any[] = ["all", ["==", ["get", "status"], "construction"]];
+    const conditions: unknown[] = ["all", ["==", ["get", "status"], "construction"]];
 
     if (selectedCityId) {
-      const activeCity = dataset.cities.find((c) => c.id === selectedCityId);
-      if (activeCity) {
-        conditions.push(["==", ["get", "city"], activeCity.name]);
-      }
+      conditions.push(["==", ["get", "city_id"], selectedCityId]);
     }
 
     if (selectedPhases.length > 0) {
@@ -112,19 +104,16 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
     }
 
     return conditions;
-  }, [selectedStatuses, selectedCityId, selectedPhases, dataset.cities]);
+  }, [selectedStatuses, selectedCityId, selectedPhases]);
 
-  const plannedFilter = useMemo<any>(() => {
+  const plannedFilter = useMemo(() => {
     if (!selectedStatuses.includes("planned")) {
       return ["==", ["get", "status"], "__NONE__"];
     }
-    const conditions: any[] = ["all", ["==", ["get", "status"], "planned"]];
+    const conditions: unknown[] = ["all", ["==", ["get", "status"], "planned"]];
 
     if (selectedCityId) {
-      const activeCity = dataset.cities.find((c) => c.id === selectedCityId);
-      if (activeCity) {
-        conditions.push(["==", ["get", "city"], activeCity.name]);
-      }
+      conditions.push(["==", ["get", "city_id"], selectedCityId]);
     }
 
     if (selectedPhases.length > 0) {
@@ -132,20 +121,17 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
     }
 
     return conditions;
-  }, [selectedStatuses, selectedCityId, selectedPhases, dataset.cities]);
+  }, [selectedStatuses, selectedCityId, selectedPhases]);
 
-  const stationFilter = useMemo<any>(() => {
-    const conditions: any[] = ["all"];
+  const stationFilter = useMemo(() => {
+    const conditions: unknown[] = ["all"];
 
     if (selectedStatuses.length < 3) {
       conditions.push(["in", ["get", "status"], ["literal", selectedStatuses]]);
     }
 
     if (selectedCityId) {
-      const activeCity = dataset.cities.find((c) => c.id === selectedCityId);
-      if (activeCity) {
-        conditions.push(["==", ["get", "city"], activeCity.name]);
-      }
+      conditions.push(["==", ["get", "city_id"], selectedCityId]);
     }
 
     if (selectedPhases.length > 0) {
@@ -153,7 +139,7 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
     }
 
     return conditions.length === 1 ? undefined : conditions;
-  }, [selectedStatuses, selectedCityId, selectedPhases, dataset.cities]);
+  }, [selectedStatuses, selectedCityId, selectedPhases]);
 
   // Pan/zoom map when city selection changes
   useEffect(() => {
@@ -201,9 +187,7 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
 
       if (stationF && stationF.properties) {
         const stationId = stationF.properties.station_id;
-        const matched = dataset.stations.features.find(
-          (f) => f.properties.station_id === stationId
-        );
+        const matched = getStationById(stationId);
         if (matched) {
           setSelectedFeature({
             type: "station",
@@ -224,9 +208,7 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
 
       if (segmentF && segmentF.properties) {
         const segmentId = segmentF.properties.segment_id;
-        const matched = dataset.segments.features.find(
-          (f) => f.properties.segment_id === segmentId
-        );
+        const matched = getSegmentById(segmentId);
         if (matched) {
           setSelectedFeature({
             type: "segment",
@@ -239,7 +221,7 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
       // If clicked on canvas without interactive feature, clear selection
       clearSelectedFeature();
     },
-    [clearSelectedFeature, dataset, setSelectedFeature]
+    [clearSelectedFeature, setSelectedFeature]
   );
 
   // Handle mouse move for hover tooltip and pointer cursor
@@ -323,17 +305,17 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
         <Source id="metro-segments" type="geojson" data={dataset.segments}>
           {/* Highlight glowing underlay for selected segment */}
           <Layer {...getSelectedSegmentLayer(selectedSegmentId)} />
-          <Layer {...({ ...operationalLineLayer, filter: operationalFilter } as any)} />
-          <Layer {...({ ...constructionLineLayer, filter: constructionFilter } as any)} />
-          <Layer {...({ ...plannedLineLayer, filter: plannedFilter } as any)} />
+          <Layer {...withFilter(operationalLineLayer, operationalFilter)} />
+          <Layer {...withFilter(constructionLineLayer, constructionFilter)} />
+          <Layer {...withFilter(plannedLineLayer, plannedFilter)} />
         </Source>
 
         {/* Metro Stations: Points with interchange indicators and labels */}
         <Source id="metro-stations" type="geojson" data={dataset.stations}>
           {/* Highlight ring for selected station */}
           <Layer {...getSelectedStationLayer(selectedStationId)} />
-          <Layer {...({ ...stationCircleLayer, ...(stationFilter ? { filter: stationFilter } : {}) } as any)} />
-          <Layer {...({ ...stationLabelsLayer, ...(stationFilter ? { filter: stationFilter } : {}) } as any)} />
+          <Layer {...withFilter(stationCircleLayer, stationFilter)} />
+          <Layer {...withFilter(stationLabelsLayer, stationFilter)} />
         </Source>
       </Map>
 
@@ -343,25 +325,25 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
       {/* Mandatory visible OSM & OpenFreeMap attribution */}
       <div
         data-testid="osm-attribution"
-        className="absolute bottom-2 right-2 z-10 rounded border border-slate-800 bg-slate-950/85 px-2.5 py-1 text-[11px] text-slate-300 shadow backdrop-blur-sm"
+        className="absolute bottom-2 right-2 z-40 rounded border border-slate-800 bg-slate-950/90 px-2.5 py-1 text-[11px] text-slate-300 shadow backdrop-blur-sm pointer-events-auto"
       >
         <span>Basemap: </span>
         <a
-          href={OPENFREEMAP_ATTRIBUTION_URL}
+          href={BASEMAP_CONFIG.providerUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="text-slate-300 underline underline-offset-2 hover:text-white"
         >
-          {OPENFREEMAP_ATTRIBUTION}
+          {BASEMAP_CONFIG.provider}
         </a>
         <span className="mx-1.5 text-slate-600">|</span>
         <a
-          href={OSM_ATTRIBUTION_URL}
+          href={BASEMAP_CONFIG.osmAttributionUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="text-slate-300 underline underline-offset-2 hover:text-white"
         >
-          {OSM_ATTRIBUTION}
+          {BASEMAP_CONFIG.osmAttribution}
         </a>
       </div>
     </div>

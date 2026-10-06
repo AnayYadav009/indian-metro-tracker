@@ -2,9 +2,19 @@
   "city": {
     "id": "delhi",
     "name": "Delhi",
-    "bbox": [76.84, 28.4, 77.35, 28.88],
+    "bbox": [
+      76.84,
+      28.4,
+      77.35,
+      28.88
+    ],
     "operator": "DMRC",
-    "phases": ["I", "II", "III", "IV"]
+    "phases": [
+      "I",
+      "II",
+      "III",
+      "IV"
+    ]
   },
   "lines": [
     {
@@ -12,70 +22,80 @@
       "name": "Red Line",
       "city": "Delhi",
       "color": "#FF4040",
-      "operator": "DMRC"
+      "operator": "DMRC",
+      "city_id": "delhi"
     },
     {
       "id": "del-yellow",
       "name": "Yellow Line",
       "city": "Delhi",
       "color": "#FFD700",
-      "operator": "DMRC"
+      "operator": "DMRC",
+      "city_id": "delhi"
     },
     {
       "id": "del-blue",
       "name": "Blue Line",
       "city": "Delhi",
       "color": "#0070BB",
-      "operator": "DMRC"
+      "operator": "DMRC",
+      "city_id": "delhi"
     },
     {
       "id": "del-green",
       "name": "Green Line",
       "city": "Delhi",
       "color": "#008000",
-      "operator": "DMRC"
+      "operator": "DMRC",
+      "city_id": "delhi"
     },
     {
       "id": "del-violet",
       "name": "Violet Line",
       "city": "Delhi",
       "color": "#553592",
-      "operator": "DMRC"
+      "operator": "DMRC",
+      "city_id": "delhi"
     },
     {
       "id": "del-airport",
       "name": "Airport Express",
       "city": "Delhi",
       "color": "#FF8C00",
-      "operator": "DMRC"
+      "operator": "DMRC",
+      "city_id": "delhi"
     },
     {
       "id": "del-pink",
       "name": "Pink Line",
       "city": "Delhi",
       "color": "#FC8EAC",
-      "operator": "DMRC"
+      "operator": "DMRC",
+      "city_id": "delhi"
     },
     {
       "id": "del-magenta",
       "name": "Magenta Line",
       "city": "Delhi",
       "color": "#CC338B",
-      "operator": "DMRC"
+      "operator": "DMRC",
+      "city_id": "delhi"
     },
     {
       "id": "del-grey",
       "name": "Grey Line",
       "city": "Delhi",
       "color": "#838996",
-      "operator": "DMRC"
+      "operator": "DMRC",
+      "city_id": "delhi"
     },
     {
       "id": "del-silver",
       "name": "Silver Line (Golden)",
       "city": "Delhi",
       "color": "#A0A0A0",
-      "operator": "DMRC"
+      "operator": "DMRC",
+      "city_id": "delhi"
     }
   ],
   "segments": [
@@ -89,7 +109,8 @@
       "gauge": "broad",
       "inaugurated_on": "2002-12-24",
       "expected_completion": null,
-      "color": "#FF4040"
+      "color": "#FF4040",
+      "city_id": "delhi"
     },
     {
       "osmId": 447210,
@@ -101,7 +122,8 @@
       "gauge": "broad",
       "inaugurated_on": "2004-12-20",
       "expected_completion": null,
-      "color": "#FFD700"
+      "color": "#FFD700",
+      "city_id": "delhi"
     },
     {
       "osmId": 447209,
@@ -113,7 +135,8 @@
       "gauge": "broad",
       "inaugurated_on": "2005-12-31",
       "expected_completion": null,
-      "color": "#0070BB"
+      "color": "#0070BB",
+      "city_id": "delhi"
     },
     {
       "osmId": 2535795,
@@ -125,7 +148,8 @@
       "gauge": "broad",
       "inaugurated_on": "2011-07-14",
       "expected_completion": null,
-      "color": "#0070BB"
+      "color": "#0070BB",
+      "city_id": "delhi"
     },
     {
       "osmId": 8037666,
@@ -137,7 +161,8 @@
       "gauge": "standard",
       "inaugurated_on": "2010-04-03",
       "expected_completion": null,
-      "color": "#008000"
+      "color": "#008000",
+      "city_id": "delhi"
     },
     {
       "osmId": 2535796,
@@ -149,7 +174,8 @@
       "gauge": "standard",
       "inaugurated_on": "2011-08-27",
       "expected_completion": null,
-      "color": "#008000"
+      "color": "#008000",
+      "city_id": "delhi"
     },
     {
       "osmId": 2535797,
@@ -161,7 +187,8 @@
       "gauge": "standard",
       "inaugurated_on": "2010-10-03",
       "expected_completion": null,
-      "color": "#553592"
+      "color": "#553592",
+      "city_id": "delhi"
     },
     {
       "osmId": 2535798,
@@ -173,7 +200,8 @@
       "gauge": "standard",
       "inaugurated_on": "2011-02-23",
       "expected_completion": null,
-      "color": "#FF8C00"
+      "color": "#FF8C00",
+      "city_id": "delhi"
     },
     {
       "osmId": 8241298,
@@ -185,7 +213,8 @@
       "gauge": "standard",
       "inaugurated_on": "2018-03-14",
       "expected_completion": null,
-      "color": "#FC8EAC"
+      "color": "#FC8EAC",
+      "city_id": "delhi"
     },
     {
       "osmId": 8385429,
@@ -197,7 +226,8 @@
       "gauge": "standard",
       "inaugurated_on": "2017-12-25",
       "expected_completion": null,
-      "color": "#CC338B"
+      "color": "#CC338B",
+      "city_id": "delhi"
     },
     {
       "osmId": 3537978,
@@ -209,7 +239,8 @@
       "gauge": "standard",
       "inaugurated_on": "2019-10-04",
       "expected_completion": null,
-      "color": "#838996"
+      "color": "#838996",
+      "city_id": "delhi"
     },
     {
       "osmId": 20300114,
@@ -221,41 +252,8 @@
       "gauge": "standard",
       "inaugurated_on": null,
       "expected_completion": "2026-06",
-      "color": "#CC338B"
-    },
-    {
-      "segment_id": "del-silver-seg-01",
-      "line_id": "del-silver",
-      "line_name": "Silver Line (Aerocity - Tughlakabad)",
-      "phase": "IV",
-      "status": "construction",
-      "gauge": "standard",
-      "inaugurated_on": null,
-      "expected_completion": "2026-12",
-      "color": "#A0A0A0",
-      "coordinates": [
-        [77.1215, 28.5532],
-        [77.1682, 28.5284],
-        [77.2114, 28.5141],
-        [77.2563, 28.5028],
-        [77.2882, 28.5085]
-      ]
-    },
-    {
-      "segment_id": "del-planned-seg-01",
-      "line_id": "del-silver",
-      "line_name": "Lajpat Nagar - Saket G Block Link",
-      "phase": "IV",
-      "status": "planned",
-      "gauge": "standard",
-      "inaugurated_on": null,
-      "expected_completion": "2028",
-      "color": "#A0A0A0",
-      "coordinates": [
-        [77.2375, 28.5684],
-        [77.2285, 28.5412],
-        [77.2114, 28.5141]
-      ]
+      "color": "#CC338B",
+      "city_id": "delhi"
     }
   ],
   "interchangeStationNames": [

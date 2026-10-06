@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-test.describe("Map Legend and Mock Banner (Milestone 6)", () => {
+test.describe("Map Legend and Data Source Status", () => {
   test.beforeEach(async ({ page }) => {
     await page.goto("/");
   });
@@ -8,7 +8,7 @@ test.describe("Map Legend and Mock Banner (Milestone 6)", () => {
   test("verifies mock banner is hidden when real data pipeline is active", async ({
     page,
   }) => {
-    // In Milestone 7 with real data loaded, mock banner should not be displayed
+    // When real data pipeline is active, mock banner should not be displayed
     const mockBanner = page.getByTestId("mock-data-banner");
     await expect(mockBanner).not.toBeVisible();
   });

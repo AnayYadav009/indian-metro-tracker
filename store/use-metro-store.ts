@@ -102,5 +102,10 @@ export const useMetroStore = create<MetroStoreState>((set) => ({
 
   clearSelectedFeature: () => set({ selectedFeature: null }),
 
-  setHoveredFeature: (hovered) => set({ hoveredFeature: hovered }),
+  setHoveredFeature: (hovered) =>
+    set((state) => {
+      if (!state.hoveredFeature && !hovered) return state;
+      if (state.hoveredFeature?.id === hovered?.id) return state;
+      return { hoveredFeature: hovered };
+    }),
 }));

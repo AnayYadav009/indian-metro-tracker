@@ -21,12 +21,6 @@ const nextConfig: NextConfig = {
       type: "json",
     });
 
-    config.resolve = config.resolve || {};
-    config.resolve.alias = {
-      ...(config.resolve.alias || {}),
-      "mapbox-gl": "maplibre-gl",
-    };
-
     return config;
   },
 };

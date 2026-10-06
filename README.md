@@ -57,17 +57,21 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### Quality & Verification Scripts
+### Available Scripts
 
-- **Run unit tests**: `npm test`
-- **Run unit tests in watch mode**: `npm run test:watch`
-- **Run E2E tests**: `npm run test:e2e`
-- **Type check**: `npm run typecheck`
-- **Lint code**: `npm run lint`
-- **Format code**: `npm run format`
-- **Validate dataset**: `npm run validate:data`
-- **Run Overpass pipeline**: `npm run pipeline:all`
-- **Build static export**: `npm run build`
+- **`npm run dev`**: Start the Next.js local development server (`next dev`).
+- **`npm run build`**: Build the production static export (`next build`) to the `out/` directory.
+- **`npm start`**: Serve the static export locally with path traversal protection (`node scripts/serve.mjs`).
+- **`npm run lint`**: Lint source files with ESLint (`eslint .`).
+- **`npm run format`**: Format codebase using Prettier (`prettier --write .`).
+- **`npm run typecheck`**: Run TypeScript compiler type checking without emitting files (`tsc --noEmit`).
+- **`npm test`**: Run Vitest unit and integration test suite (`vitest run`).
+- **`npm run test:watch`**: Run Vitest in interactive watch mode (`vitest`).
+- **`npm run test:e2e`**: Run Playwright end-to-end browser tests (`playwright test`).
+- **`npm run validate:data`**: Validate datasets against Zod schemas and relational rules (`tsx scripts/validate-data.ts`).
+- **`npm run pipeline:fetch`**: Fetch raw OSM transit elements via Overpass API (`tsx scripts/pipeline/fetch-overpass.ts`).
+- **`npm run pipeline:build`**: Normalize, merge overrides, and build dataset for a city (`tsx scripts/pipeline/build-real-data.ts`).
+- **`npm run pipeline:all`**: Run full pipeline build across all configured cities (`tsx scripts/pipeline/build-all.ts`).
 
 ## Project Rules & Hard Constraints
 
@@ -75,3 +79,9 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 - **Static Export**: Zero runtime server dependencies; pure static deployment.
 - **Segment Modeling**: Transit lines are modeled as contiguous LineString segments to accurately reflect partial openings and phase rollouts.
 - **Milestone Discipline**: Developed one milestone at a time with strict acceptance testing.
+
+## Data Licence & Attribution
+
+- **Geospatial & Transit Network Data**: Contains data from OpenStreetMap, available under the [Open Database License (ODbL) 1.0](https://opendatacommons.org/licenses/odbl/). © [OpenStreetMap contributors](https://www.openstreetmap.org/copyright).
+- **Map Vector Tiles**: Sourced from [OpenFreeMap](https://openfreemap.org), licensed under open data terms.
+- **Application Code**: MIT License.

@@ -71,6 +71,27 @@ export function SegmentDetail({ segment }: SegmentDetailProps) {
         </div>
       </div>
 
+      {/* References links */}
+      {segment.references && segment.references.length > 0 && (
+        <div data-testid="segment-references" className="rounded-lg border border-slate-800 bg-slate-950/60 p-3 text-xs">
+          <span className="text-slate-400 font-medium block mb-1.5">References & Citations</span>
+          <ul className="flex flex-col gap-1">
+            {segment.references.map((url, idx) => (
+              <li key={idx} className="truncate">
+                <a
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sky-400 underline underline-offset-2 hover:text-sky-300 break-all"
+                >
+                  {url}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
       {/* Provenance footer */}
       <div className="flex items-center justify-between border-t border-slate-800/80 pt-3 text-[11px] text-slate-400">
         <span className="flex items-center gap-1.5">

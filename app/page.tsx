@@ -1,5 +1,6 @@
 "use client";
 
+import React, { useMemo } from "react";
 import dynamic from "next/dynamic";
 import { MapSkeleton } from "@/components/map/map-skeleton";
 import { FilterPanel } from "@/components/filters/filter-panel";
@@ -8,6 +9,8 @@ import { MapLegend } from "@/components/legend/map-legend";
 import { MockBanner } from "@/components/ui/mock-banner";
 import { NetworkStats } from "@/components/filters/network-stats";
 import { EmptyFilterState } from "@/components/map/empty-state";
+import { BASEMAP_CONFIG } from "@/lib/map-config";
+import { getDatasetMetadataSummary } from "@/lib/data";
 
 import { useUrlSync } from "@/hooks/use-url-sync";
 
@@ -21,9 +24,10 @@ const MapCanvas = dynamic(
 
 export default function HomePage() {
   useUrlSync();
+  const metadataSummary = useMemo(() => getDatasetMetadataSummary(), []);
 
   return (
-    <div className="flex h-screen w-screen flex-col overflow-hidden bg-slate-950 text-slate-100">
+    <div className="flex h-dvh w-screen flex-col overflow-hidden bg-slate-950 text-slate-100">
       {/* Header bar */}
       <header className="z-20 flex h-14 shrink-0 items-center justify-between border-b border-slate-800 bg-slate-900/90 px-4 backdrop-blur md:px-6">
         <div className="flex items-center gap-3">
@@ -45,13 +49,10 @@ export default function HomePage() {
             data-testid="data-last-updated"
             className="hidden items-center rounded-full border border-slate-700 bg-slate-800 px-2.5 py-0.5 text-xs font-medium text-slate-300 md:inline-flex"
           >
-            Data: Oct 2026 (OSM + MoHUA)
+            {metadataSummary.badgeLabel}
           </span>
           <span className="hidden items-center rounded-full border border-slate-700 bg-slate-800 px-2.5 py-0.5 text-xs font-medium text-slate-300 sm:inline-flex">
-            OpenFreeMap Positron
-          </span>
-          <span className="inline-flex items-center rounded-full border border-emerald-600/30 bg-emerald-950/80 px-2.5 py-0.5 text-xs font-medium text-emerald-400">
-            Milestone 7: Real Data Pipeline
+            {BASEMAP_CONFIG.name}
           </span>
         </div>
       </header>

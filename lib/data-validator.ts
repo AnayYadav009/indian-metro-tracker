@@ -88,21 +88,64 @@ export function validateMetroDataset(rawData: {
   const stations = stationsParsed.data;
 
   // Build lookup maps for relational validation
+  const cityById = new Map<string, City>();
   const cityByNameOrId = new Map<string, City>();
+  const seenCityIds = new Set<string>();
   cities.forEach((c) => {
+    if (seenCityIds.has(c.id.toLowerCase())) {
+      errors.push(`Duplicate city ID '${c.id}' found`);
+    }
+    seenCityIds.add(c.id.toLowerCase());
+    cityById.set(c.id, c);
     cityByNameOrId.set(c.id.toLowerCase(), c);
     cityByNameOrId.set(c.name.toLowerCase(), c);
   });
 
   const lineById = new Map<string, Line>();
-  lines.forEach((l) => lineById.set(l.id, l));
+  const seenLineIds = new Set<string>();
+  lines.forEach((l) => {
+    if (seenLineIds.has(l.id)) {
+      errors.push(`Duplicate line ID '${l.id}' found`);
+    }
+    seenLineIds.add(l.id);
+    lineById.set(l.id, l);
 
+    const lineCity = cityById.get(l.city_id);
+    if (!lineCity) {
+      errors.push(`Line '${l.id}' references unknown city_id '${l.city_id}'`);
+    } else if (l.city !== lineCity.name) {
+      errors.push(
+        `Line '${l.id}' city '${l.city}' must match city name '${lineCity.name}' for city_id '${l.city_id}'`
+      );
+    }
+  });
+
+  // Track segment ID uniqueness
+  const seenSegmentIds = new Set<string>();
   // 5. Relational validation for Segments
   for (const feature of segments.features) {
     const props = feature.properties;
 
-    // Verify city exists
-    const city = cityByNameOrId.get(props.city.toLowerCase());
+    if (seenSegmentIds.has(props.segment_id)) {
+      errors.push(
+        `Duplicate segment ID '${props.segment_id}' found across segments collection`
+      );
+    }
+    seenSegmentIds.add(props.segment_id);
+
+    // Verify city_id and city exist
+    const segCity = cityById.get(props.city_id);
+    if (!segCity) {
+      errors.push(
+        `Segment '${props.segment_id}' references unknown city_id '${props.city_id}'`
+      );
+    } else if (props.city !== segCity.name) {
+      errors.push(
+        `Segment '${props.segment_id}' city '${props.city}' must match city name '${segCity.name}' for city_id '${props.city_id}'`
+      );
+    }
+
+    const city = segCity || cityByNameOrId.get(props.city.toLowerCase());
     if (!city) {
       errors.push(
         `Segment "${props.segment_id}" references unknown city "${props.city}"`
@@ -114,6 +157,16 @@ export function validateMetroDataset(rawData: {
           `Segment "${props.segment_id}" has phase "${props.phase}", but city "${city.name}" only allows phases: [${city.phases.join(", ")}]`
         );
       }
+    }
+
+    // Verify manual source has non-empty references
+    if (
+      props.source.toLowerCase().includes("manual") &&
+      (!props.references || props.references.length === 0)
+    ) {
+      errors.push(
+        `Segment '${props.segment_id}' has source '${props.source}' but missing or empty references array`
+      );
     }
 
     // Verify line_id exists
@@ -135,12 +188,32 @@ export function validateMetroDataset(rawData: {
     }
   }
 
+  // Track station ID uniqueness
+  const seenStationIds = new Set<string>();
   // 6. Relational validation for Stations
   for (const feature of stations.features) {
     const props = feature.properties;
 
-    // Verify city exists
-    const city = cityByNameOrId.get(props.city.toLowerCase());
+    if (seenStationIds.has(props.station_id)) {
+      errors.push(
+        `Duplicate station ID '${props.station_id}' found across stations collection`
+      );
+    }
+    seenStationIds.add(props.station_id);
+
+    // Verify city_id and city exist
+    const stCity = cityById.get(props.city_id);
+    if (!stCity) {
+      errors.push(
+        `Station '${props.station_id}' references unknown city_id '${props.city_id}'`
+      );
+    } else if (props.city !== stCity.name) {
+      errors.push(
+        `Station '${props.station_id}' city '${props.city}' must match city name '${stCity.name}' for city_id '${props.city_id}'`
+      );
+    }
+
+    const city = stCity || cityByNameOrId.get(props.city.toLowerCase());
     if (!city) {
       errors.push(
         `Station "${props.station_id}" references unknown city "${props.city}"`

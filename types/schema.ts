@@ -26,6 +26,7 @@ export type City = z.infer<typeof CitySchema>;
 export const LineSchema = z.object({
   id: z.string().min(1),
   name: z.string().min(1),
+  city_id: z.string().min(1),
   city: z.string().min(1),
   color: z.string().regex(/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/, "Invalid hex color"),
   operator: z.string().min(1),
@@ -37,6 +38,7 @@ export const SegmentPropertiesSchema = z
     segment_id: z.string().min(1),
     line_id: z.string().min(1),
     line_name: z.string().min(1),
+    city_id: z.string().min(1),
     city: z.string().min(1),
     operator: z.string().min(1),
     status: StatusSchema,
@@ -54,6 +56,9 @@ export const SegmentPropertiesSchema = z
     stations_count: z.number().int().nonnegative(),
     color: z.string().regex(/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/, "Invalid hex color"),
     source: z.string().min(1),
+    references: z
+      .array(z.string().regex(/^https?:\/\//, "Reference must be a valid http or https URL"))
+      .default([]),
     last_verified: z
       .string()
       .regex(/^\d{4}-\d{2}-\d{2}$/, "Format must be YYYY-MM-DD"),
@@ -98,6 +103,16 @@ export const SegmentPropertiesSchema = z
         });
       }
     }
+
+    if (data.source.toLowerCase().includes("manual")) {
+      if (!data.references || data.references.length === 0) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: "references array must contain at least one valid URL when source contains 'manual'",
+          path: ["references"],
+        });
+      }
+    }
   });
 export type SegmentProperties = z.infer<typeof SegmentPropertiesSchema>;
 
@@ -128,6 +143,7 @@ export const StationPropertiesSchema = z
   .object({
     station_id: z.string().min(1),
     name: z.string().min(1),
+    city_id: z.string().min(1),
     city: z.string().min(1),
     line_ids: z.array(z.string().min(1)).min(1),
     status: StatusSchema,

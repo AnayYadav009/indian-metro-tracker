@@ -4,7 +4,7 @@ import React from "react";
 import { MapLegend } from "@/components/legend/map-legend";
 import { useMetroStore } from "@/store/use-metro-store";
 
-describe("Milestone 6 - MapLegend Component", () => {
+describe("MapLegend Component", () => {
   beforeEach(() => {
     useMetroStore.getState().resetFilters();
   });

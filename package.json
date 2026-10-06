@@ -5,16 +5,21 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
+    "start": "node scripts/serve.mjs",
+    "lint": "eslint .",
     "format": "prettier --write .",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:e2e": "playwright test",
-    "validate:data": "npx tsx scripts/validate-data.ts",
-    "pipeline:fetch": "npx tsx scripts/pipeline/fetch-overpass.ts",
-    "pipeline:build": "npx tsx scripts/pipeline/build-real-data.ts"
+    "validate:data": "tsx scripts/validate-data.ts",
+    "pipeline:fetch": "tsx scripts/pipeline/fetch-overpass.ts",
+    "pipeline:build": "tsx scripts/pipeline/build-real-data.ts",
+    "pipeline:all": "tsx scripts/pipeline/build-all.ts",
+    "audit:dedupe": "tsx scripts/audit/dedupe-report.ts"
+  },
+  "engines": {
+    "node": ">=18.18.0"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
@@ -30,6 +35,7 @@
     "zustand": "^5.0.3"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.3.7",
     "@playwright/test": "^1.51.0",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -46,6 +52,7 @@
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwindcss": "^3.4.17",
+    "tsx": "^4.23.15",
     "typescript": "^5.8.2",
     "vitest": "^3.0.8"
   }

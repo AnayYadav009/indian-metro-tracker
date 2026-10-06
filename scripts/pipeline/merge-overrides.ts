@@ -15,6 +15,7 @@ export interface CityOverrideData {
   lines: Array<{
     id: string;
     name: string;
+    city_id?: string;
     city: string;
     color: string;
     operator: string;
@@ -32,6 +33,8 @@ export interface CityOverrideData {
     color: string;
     stations_count?: number;
     coordinates?: [number, number][];
+    references?: string[];
+    last_verified?: string;
   }>;
   interchangeStationNames?: string[];
   stationOverrides?: Record<
@@ -101,14 +104,17 @@ export function mergeCityOverrides(
     let coords: [number, number][] | undefined;
     let stationsCount = segOverride.stations_count || 10;
 
+    let isOsmSourced = false;
     if (segOverride.osmId && normalizedSegsByOsmId.has(segOverride.osmId)) {
       const normSeg = normalizedSegsByOsmId.get(segOverride.osmId)!;
       coords = normSeg.coordinates;
       if (normSeg.stationOsmIds && normSeg.stationOsmIds.length > 0) {
         stationsCount = normSeg.stationOsmIds.length;
       }
+      isOsmSourced = true;
     } else if (segOverride.coordinates && segOverride.coordinates.length >= 2) {
       coords = segOverride.coordinates;
+      isOsmSourced = false;
     }
 
     if (!coords || coords.length < 2) {
@@ -118,6 +124,13 @@ export function mergeCityOverrides(
 
     const computedKm = calculateLineStringLengthKm(coords);
     const lengthKm = Number(computedKm.toFixed(1));
+    const segmentSource = isOsmSourced ? "osm" : "manual";
+    if (segmentSource === "manual" && !segOverride.last_verified) {
+      throw new Error(
+        `Manual segment '${segOverride.segment_id}' must explicitly provide last_verified date in overrides.`
+      );
+    }
+    const lastVerifiedDate = segmentSource === "manual" ? segOverride.last_verified! : today;
 
     segmentFeatures.push({
       type: "Feature",
@@ -129,6 +142,7 @@ export function mergeCityOverrides(
         segment_id: segOverride.segment_id,
         line_id: segOverride.line_id,
         line_name: segOverride.line_name,
+        city_id: overrides.city.id,
         city: cityName,
         operator,
         status: segOverride.status,
@@ -142,8 +156,9 @@ export function mergeCityOverrides(
             : null,
         stations_count: stationsCount,
         color: segOverride.color,
-        source: sourceTag,
-        last_verified: today,
+        source: segmentSource,
+        references: segOverride.references || [],
+        last_verified: lastVerifiedDate,
       },
     });
 
@@ -223,6 +238,10 @@ export function mergeCityOverrides(
       assignedStatus = closestSegment.status;
     }
 
+    if (station.status && station.status !== "operational") {
+      assignedStatus = station.status;
+    }
+
     // Check interchange flag
     const isInterchange =
       interchangeSet.has(rawName.toLowerCase()) ||
@@ -272,6 +291,7 @@ export function mergeCityOverrides(
       properties: {
         station_id: stationId,
         name: rawName,
+        city_id: overrides.city.id,
         city: cityName,
         line_ids: Array.from(lineIdsSet),
         status: assignedStatus,
@@ -280,7 +300,7 @@ export function mergeCityOverrides(
         opened_on: openedOn,
         expected_completion: expectedCompletion,
         layout,
-        source: sourceTag,
+        source: "osm",
         last_verified: today,
       },
     });

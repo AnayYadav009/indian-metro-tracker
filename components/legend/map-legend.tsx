@@ -4,6 +4,7 @@ import React, { useState, useMemo } from "react";
 import { ChevronDown, ChevronUp, Layers } from "lucide-react";
 import { useMetroStore } from "@/store/use-metro-store";
 import { getMetroData } from "@/lib/data";
+import { BASEMAP_CONFIG } from "@/lib/map-config";
 
 interface MapLegendProps {
   className?: string;
@@ -184,13 +185,25 @@ export function MapLegend({ className = "" }: MapLegendProps) {
             </div>
           )}
 
-          {/* Data Last Updated Note */}
+          {/* Data Last Updated & Licence Note */}
           <div
             data-testid="legend-last-updated"
-            className="border-t border-slate-800/80 pt-2 text-[10px] text-slate-400 flex items-center justify-between"
+            className="border-t border-slate-800/80 pt-2 text-[10px] text-slate-400 flex flex-col gap-1"
           >
-            <span>Updated: Oct 2026</span>
-            <span className="font-mono text-emerald-400">OSM + MoHUA</span>
+            <div className="flex items-center justify-between">
+              <span>Updated: Oct 2026</span>
+              <a
+                href={BASEMAP_CONFIG.dataLicenseUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-mono text-emerald-400 hover:text-emerald-300 underline"
+              >
+                {BASEMAP_CONFIG.dataLicense}
+              </a>
+            </div>
+            <div className="text-[9px] text-slate-500">
+              Data {BASEMAP_CONFIG.osmAttribution}
+            </div>
           </div>
         </div>
       )}
