@@ -27,7 +27,7 @@ export default function HomePage() {
   const metadataSummary = useMemo(() => getDatasetMetadataSummary(), []);
 
   return (
-    <div className="flex h-screen w-screen flex-col overflow-hidden bg-slate-950 text-slate-100">
+    <div className="flex h-dvh w-screen flex-col overflow-hidden bg-slate-950 text-slate-100">
       {/* Header bar */}
       <header className="z-20 flex h-14 shrink-0 items-center justify-between border-b border-slate-800 bg-slate-900/90 px-4 backdrop-blur md:px-6">
         <div className="flex items-center gap-3">
