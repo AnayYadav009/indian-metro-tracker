@@ -89,17 +89,38 @@ export function validateMetroDataset(rawData: {
 
   // Build lookup maps for relational validation
   const cityByNameOrId = new Map<string, City>();
+  const seenCityIds = new Set<string>();
   cities.forEach((c) => {
+    if (seenCityIds.has(c.id.toLowerCase())) {
+      errors.push(`Duplicate city ID '${c.id}' found`);
+    }
+    seenCityIds.add(c.id.toLowerCase());
     cityByNameOrId.set(c.id.toLowerCase(), c);
     cityByNameOrId.set(c.name.toLowerCase(), c);
   });
 
   const lineById = new Map<string, Line>();
-  lines.forEach((l) => lineById.set(l.id, l));
+  const seenLineIds = new Set<string>();
+  lines.forEach((l) => {
+    if (seenLineIds.has(l.id)) {
+      errors.push(`Duplicate line ID '${l.id}' found`);
+    }
+    seenLineIds.add(l.id);
+    lineById.set(l.id, l);
+  });
 
+  // Track segment ID uniqueness
+  const seenSegmentIds = new Set<string>();
   // 5. Relational validation for Segments
   for (const feature of segments.features) {
     const props = feature.properties;
+
+    if (seenSegmentIds.has(props.segment_id)) {
+      errors.push(
+        `Duplicate segment ID '${props.segment_id}' found across segments collection`
+      );
+    }
+    seenSegmentIds.add(props.segment_id);
 
     // Verify city exists
     const city = cityByNameOrId.get(props.city.toLowerCase());
@@ -135,9 +156,18 @@ export function validateMetroDataset(rawData: {
     }
   }
 
+  // Track station ID uniqueness
+  const seenStationIds = new Set<string>();
   // 6. Relational validation for Stations
   for (const feature of stations.features) {
     const props = feature.properties;
+
+    if (seenStationIds.has(props.station_id)) {
+      errors.push(
+        `Duplicate station ID '${props.station_id}' found across stations collection`
+      );
+    }
+    seenStationIds.add(props.station_id);
 
     // Verify city exists
     const city = cityByNameOrId.get(props.city.toLowerCase());

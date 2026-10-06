@@ -73,20 +73,85 @@ export function saveActiveDataset(dataset: {
   segments: SegmentFeature[];
   stations: StationFeature[];
 }) {
-  console.log(`\n💾 Writing active real dataset to /data/...`);
-  fs.writeFileSync(path.join(DATA_DIR, "cities.json"), JSON.stringify(dataset.cities, null, 2), "utf-8");
-  fs.writeFileSync(path.join(DATA_DIR, "lines.json"), JSON.stringify(dataset.lines, null, 2), "utf-8");
-  fs.writeFileSync(
-    path.join(DATA_DIR, "segments.geojson"),
-    JSON.stringify({ type: "FeatureCollection", features: dataset.segments }, null, 2),
-    "utf-8"
-  );
-  fs.writeFileSync(
-    path.join(DATA_DIR, "stations.geojson"),
-    JSON.stringify({ type: "FeatureCollection", features: dataset.stations }, null, 2),
-    "utf-8"
-  );
-  console.log(`✅ Active dataset written successfully.`);
+  // 1. Run full schema and relational validation on the merged dataset
+  console.log(`\n🔍 Re-validating full merged dataset before saving...`);
+  const validation = validateMetroDataset({
+    cities: dataset.cities,
+    lines: dataset.lines,
+    segments: { type: "FeatureCollection", features: dataset.segments },
+    stations: { type: "FeatureCollection", features: dataset.stations },
+  });
+
+  if (!validation.valid || !validation.dataset) {
+    console.error(`❌ Merged dataset validation failed with ${validation.errors.length} error(s):`);
+    validation.errors.forEach((e) => console.error(`   • ${e}`));
+    throw new Error(
+      `Cannot save active dataset: Merged validation failed with ${validation.errors.length} error(s)`
+    );
+  }
+
+  console.log(`\n💾 Writing active real dataset to /data/ atomically...`);
+
+  const filesToWrite = [
+    {
+      target: path.join(DATA_DIR, "cities.json"),
+      content: JSON.stringify(dataset.cities, null, 2),
+    },
+    {
+      target: path.join(DATA_DIR, "lines.json"),
+      content: JSON.stringify(dataset.lines, null, 2),
+    },
+    {
+      target: path.join(DATA_DIR, "segments.geojson"),
+      content: JSON.stringify(
+        { type: "FeatureCollection", features: dataset.segments },
+        null,
+        2
+      ),
+    },
+    {
+      target: path.join(DATA_DIR, "stations.geojson"),
+      content: JSON.stringify(
+        { type: "FeatureCollection", features: dataset.stations },
+        null,
+        2
+      ),
+    },
+  ];
+
+  const tempFiles: { temp: string; target: string }[] = [];
+  const timestamp = Date.now();
+
+  try {
+    // 2. Write to temporary files first
+    for (const file of filesToWrite) {
+      const tempPath = path.join(
+        DATA_DIR,
+        `.tmp-${path.basename(file.target)}-${timestamp}`
+      );
+      fs.writeFileSync(tempPath, file.content, "utf-8");
+      tempFiles.push({ temp: tempPath, target: file.target });
+    }
+
+    // 3. Atomically replace each file
+    for (const item of tempFiles) {
+      fs.renameSync(item.temp, item.target);
+    }
+
+    console.log(`✅ Active dataset written and verified atomically.`);
+  } catch (err) {
+    // Clean up any remaining temporary files
+    for (const item of tempFiles) {
+      if (fs.existsSync(item.temp)) {
+        try {
+          fs.unlinkSync(item.temp);
+        } catch {
+          // ignore cleanup errors
+        }
+      }
+    }
+    throw err;
+  }
 }
 
 // CLI runner
