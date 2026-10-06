@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { z } from "zod";
 import { create } from "zustand";
 
-describe("Milestone 1 - Setup & Boilerplate", () => {
+describe("Application Setup & Boilerplate", () => {
   it("renders the placeholder homepage with correct heading", () => {
     render(<HomePage />);
     const heading = screen.getByRole("heading", {

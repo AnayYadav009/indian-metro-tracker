@@ -4,7 +4,7 @@ import React from "react";
 import { MockBanner } from "@/components/ui/mock-banner";
 import { DATA_SOURCE } from "@/lib/data";
 
-describe("Milestone 6 - MockBanner Component", () => {
+describe("MockBanner Component", () => {
   it("renders the illustrative mock data notice when DATA_SOURCE is mock", () => {
     render(<MockBanner />);
 

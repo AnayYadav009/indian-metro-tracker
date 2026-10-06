@@ -5,7 +5,7 @@ import { MetadataPanel } from "@/components/panels/metadata-panel";
 import { useMetroStore } from "@/store/use-metro-store";
 import type { SegmentProperties, StationProperties } from "@/types/schema";
 
-describe("Milestone 5 - MetadataPanel Component", () => {
+describe("MetadataPanel Component", () => {
   beforeEach(() => {
     useMetroStore.getState().clearSelectedFeature();
   });

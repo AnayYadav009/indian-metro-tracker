@@ -8,7 +8,7 @@ import {
   OPENFREEMAP_ATTRIBUTION_URL,
 } from "@/lib/map-config";
 
-describe("Milestone 2 - Map Configuration & Hard Constraints", () => {
+describe("Map Configuration & Hard Constraints", () => {
   it("defines a single free basemap style URL", () => {
     expect(BASEMAP_STYLE_URL).toBeDefined();
     expect(typeof BASEMAP_STYLE_URL).toBe("string");

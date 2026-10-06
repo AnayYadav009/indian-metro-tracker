@@ -19,7 +19,7 @@ vi.mock("react-map-gl/maplibre", () => {
   };
 });
 
-describe("Milestone 2 & 5 - Map Canvas Components", () => {
+describe("Map Canvas Components & Rendering", () => {
   it("renders MapSkeleton correctly", () => {
     render(<MapSkeleton />);
     expect(screen.getByTestId("map-skeleton")).toBeInTheDocument();
