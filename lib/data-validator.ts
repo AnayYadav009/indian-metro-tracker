@@ -8,6 +8,15 @@ import {
 import type { City, Line, MetroDataset } from "../types/metro";
 import { calculateLineStringLengthKm, checkLengthMismatch } from "./geo";
 
+export const INDIA_COORDINATE_ENVELOPE = {
+  minLng: 68,
+  maxLng: 98,
+  minLat: 6,
+  maxLat: 38,
+} as const;
+
+export const BBOX_MARGIN_DEG = 0.05;
+
 export interface ValidationResult {
   valid: boolean;
   errors: string[];
@@ -216,6 +225,34 @@ export function validateMetroDataset(
         `Segment "${props.segment_id}" length mismatch: declared ${props.length_km} km vs computed ${lengthCheck.computedKm} km (${lengthCheck.mismatchPct}% difference)`
       );
     }
+
+    // Coordinate Envelope and City Bounding Box checks
+    let segmentHasBboxWarning = false;
+    for (const [lng, lat] of feature.geometry.coordinates) {
+      if (
+        lng < INDIA_COORDINATE_ENVELOPE.minLng ||
+        lng > INDIA_COORDINATE_ENVELOPE.maxLng ||
+        lat < INDIA_COORDINATE_ENVELOPE.minLat ||
+        lat > INDIA_COORDINATE_ENVELOPE.maxLat
+      ) {
+        errors.push(
+          `Segment '${props.segment_id}' coordinate [${lng}, ${lat}] is outside the valid India coordinate envelope (lng 68–98, lat 6–38) - possible swapped lat/lng`
+        );
+      } else if (city && !segmentHasBboxWarning) {
+        const [minLng, minLat, maxLng, maxLat] = city.bbox;
+        if (
+          lng < minLng - BBOX_MARGIN_DEG ||
+          lng > maxLng + BBOX_MARGIN_DEG ||
+          lat < minLat - BBOX_MARGIN_DEG ||
+          lat > maxLat + BBOX_MARGIN_DEG
+        ) {
+          segmentHasBboxWarning = true;
+          warnings.push(
+            `Segment '${props.segment_id}' (city: ${city.name}) has coordinate [${lng}, ${lat}] outside city bounding box margin [${city.bbox.join(", ")}] (+/-${BBOX_MARGIN_DEG}°)`
+          );
+        }
+      }
+    }
   }
 
   // Track station ID uniqueness
@@ -262,6 +299,31 @@ export function validateMetroDataset(
       if (!lineById.has(lineId)) {
         errors.push(
           `Station "${props.station_id}" references unknown line_id "${lineId}"`
+        );
+      }
+    }
+
+    // Coordinate Envelope and City Bounding Box checks
+    const [stLng, stLat] = feature.geometry.coordinates;
+    if (
+      stLng < INDIA_COORDINATE_ENVELOPE.minLng ||
+      stLng > INDIA_COORDINATE_ENVELOPE.maxLng ||
+      stLat < INDIA_COORDINATE_ENVELOPE.minLat ||
+      stLat > INDIA_COORDINATE_ENVELOPE.maxLat
+    ) {
+      errors.push(
+        `Station '${props.station_id}' coordinate [${stLng}, ${stLat}] is outside the valid India coordinate envelope (lng 68–98, lat 6–38) - possible swapped lat/lng`
+      );
+    } else if (city) {
+      const [minLng, minLat, maxLng, maxLat] = city.bbox;
+      if (
+        stLng < minLng - BBOX_MARGIN_DEG ||
+        stLng > maxLng + BBOX_MARGIN_DEG ||
+        stLat < minLat - BBOX_MARGIN_DEG ||
+        stLat > maxLat + BBOX_MARGIN_DEG
+      ) {
+        warnings.push(
+          `Station '${props.station_id}' (city: ${city.name}) coordinate [${stLng}, ${stLat}] is outside city bounding box margin [${city.bbox.join(", ")}] (+/-${BBOX_MARGIN_DEG}°)`
         );
       }
     }

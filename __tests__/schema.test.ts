@@ -554,4 +554,153 @@ describe("Schema Validation Tests", () => {
       )
     ).toBe(true);
   });
+
+  it("detects swapped lat/lng coordinates outside India envelope as an error", () => {
+    const testCities = [
+      {
+        id: "delhi",
+        name: "Delhi",
+        bbox: [76.84, 28.4, 77.35, 28.88] as [number, number, number, number],
+        operator: "DMRC",
+        phases: ["IV"],
+      },
+    ];
+    const testLines = [
+      {
+        id: "del-magenta",
+        name: "Magenta Line",
+        city_id: "delhi",
+        city: "Delhi",
+        color: "#CC338B",
+        operator: "DMRC",
+        source: "osm",
+      },
+    ];
+
+    // Swapped coords: [28.6, 77.2] instead of [77.2, 28.6]
+    const swappedSegment = {
+      type: "Feature",
+      geometry: { type: "LineString", coordinates: [[28.6, 77.2], [28.61, 77.21]] },
+      properties: {
+        segment_id: "del-swapped-seg",
+        line_id: "del-magenta",
+        line_name: "Magenta Line",
+        city_id: "delhi",
+        city: "Delhi",
+        operator: "DMRC",
+        status: "operational",
+        phase: "IV",
+        length_km: 1.5,
+        gauge: "standard",
+        inaugurated_on: "2020-01-01",
+        expected_completion: null,
+        stations_count: 2,
+        color: "#CC338B",
+        source: "osm",
+        references: [],
+        last_verified: "2026-10-06",
+      },
+    };
+
+    const swappedStation = {
+      type: "Feature",
+      geometry: { type: "Point", coordinates: [28.6, 77.2] },
+      properties: {
+        station_id: "del-swapped-stn",
+        name: "Swapped Station",
+        city_id: "delhi",
+        city: "Delhi",
+        line_ids: ["del-magenta"],
+        status: "operational",
+        phase: "IV",
+        is_interchange: false,
+        opened_on: "2020-01-01",
+        expected_completion: null,
+        layout: "underground",
+        source: "osm",
+        last_verified: "2026-10-06",
+      },
+    };
+
+    const result = validateMetroDataset({
+      cities: testCities,
+      lines: testLines,
+      segments: { type: "FeatureCollection", features: [swappedSegment] },
+      stations: { type: "FeatureCollection", features: [swappedStation] },
+    });
+
+    expect(result.valid).toBe(false);
+    expect(
+      result.errors.some((e) =>
+        e.includes("del-swapped-seg") && e.includes("India coordinate envelope")
+      )
+    ).toBe(true);
+    expect(
+      result.errors.some((e) =>
+        e.includes("del-swapped-stn") && e.includes("India coordinate envelope")
+      )
+    ).toBe(true);
+  });
+
+  it("issues a warning for coordinates slightly outside city bbox but within India envelope", () => {
+    const testCities = [
+      {
+        id: "delhi",
+        name: "Delhi",
+        bbox: [76.84, 28.4, 77.35, 28.88] as [number, number, number, number],
+        operator: "DMRC",
+        phases: ["I"],
+      },
+    ];
+    const testLines = [
+      {
+        id: "del-red",
+        name: "Red Line",
+        city_id: "delhi",
+        city: "Delhi",
+        color: "#E31837",
+        operator: "DMRC",
+        source: "osm",
+      },
+    ];
+
+    // Coordinate [77.41, 28.67] is in UP/Ghaziabad, slightly outside maxLng 77.35 + 0.05 (77.40)
+    const ncrSegment = {
+      type: "Feature",
+      geometry: { type: "LineString", coordinates: [[77.30, 28.67], [77.41, 28.67]] },
+      properties: {
+        segment_id: "del-ghaziabad-seg",
+        line_id: "del-red",
+        line_name: "Red Line",
+        city_id: "delhi",
+        city: "Delhi",
+        operator: "DMRC",
+        status: "operational",
+        phase: "I",
+        length_km: 11.0,
+        gauge: "broad",
+        inaugurated_on: "2002-12-25",
+        expected_completion: null,
+        stations_count: 5,
+        color: "#E31837",
+        source: "osm",
+        references: [],
+        last_verified: "2026-10-06",
+      },
+    };
+
+    const result = validateMetroDataset({
+      cities: testCities,
+      lines: testLines,
+      segments: { type: "FeatureCollection", features: [ncrSegment] },
+      stations: { type: "FeatureCollection", features: [] },
+    });
+
+    expect(result.valid).toBe(true);
+    expect(
+      result.warnings.some((w) =>
+        w.includes("del-ghaziabad-seg") && w.includes("outside city bounding box margin")
+      )
+    ).toBe(true);
+  });
 });
