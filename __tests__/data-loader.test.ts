@@ -8,22 +8,34 @@ import {
   getStations,
   getSegmentById,
   getStationById,
-  validateMetroDataset,
   getDatasetMetadataSummary,
 } from "@/lib/data";
+import { validateMetroDataset } from "@/lib/data-validator";
 
 describe("Metro Data Loader & Dataset Invariants", () => {
   it("exports a valid DATA_SOURCE ('mock' | 'real' | 'mixed')", () => {
     expect(["mock", "real", "mixed"]).toContain(DATA_SOURCE);
   });
 
-  it("loads and validates the complete metro dataset without error", () => {
+  it("loads the complete metro dataset without error", () => {
     const dataset = getMetroData();
     expect(dataset).toBeDefined();
     expect(dataset.cities.length).toBeGreaterThan(0);
     expect(dataset.lines.length).toBeGreaterThan(0);
     expect(dataset.segments.features.length).toBeGreaterThan(0);
     expect(dataset.stations.features.length).toBeGreaterThan(0);
+  });
+
+  it("proves real dataset passes full validateMetroDataset schema and relational rules", () => {
+    const dataset = getMetroData();
+    const result = validateMetroDataset({
+      cities: dataset.cities,
+      lines: dataset.lines,
+      segments: dataset.segments,
+      stations: dataset.stations,
+    });
+    expect(result.valid).toBe(true);
+    expect(result.errors).toHaveLength(0);
   });
 
   it("derives dynamic dataset metadata summary with last verified date and sources", () => {

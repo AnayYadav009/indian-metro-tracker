@@ -7,7 +7,7 @@ import {
   StationFeatureSchema,
   SegmentPropertiesSchema,
 } from "@/types/schema";
-import { validateMetroDataset } from "@/lib/data";
+import { validateMetroDataset } from "@/lib/data-validator";
 
 describe("Schema Validation Tests", () => {
   it("validates StatusSchema correctly", () => {

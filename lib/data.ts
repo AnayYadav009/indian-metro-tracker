@@ -1,25 +1,19 @@
-import { z } from "zod";
 import citiesJson from "@/data/cities.json";
 import linesJson from "@/data/lines.json";
 import segmentsGeoJson from "@/data/segments.geojson";
 import stationsGeoJson from "@/data/stations.geojson";
 
-import {
-  CitySchema,
-  LineSchema,
-  SegmentFeatureCollectionSchema,
-  StationFeatureCollectionSchema,
-} from "@/types/schema";
 import type {
   City,
   Line,
   MetroDataset,
   SegmentFeature,
+  SegmentFeatureCollection,
   SegmentFilterOptions,
   StationFeature,
+  StationFeatureCollection,
   StationFilterOptions,
 } from "@/types/metro";
-import { calculateLineStringLengthKm, checkLengthMismatch } from "./geo";
 
 export type DataSourceState = "mock" | "real" | "mixed";
 
@@ -76,42 +70,25 @@ export const DATA_SOURCE: DataSourceState = determineDataSourceState(
   process.env.NEXT_PUBLIC_DATA_SOURCE
 );
 
-
-
-import { validateMetroDataset, type ValidationResult } from "./data-validator";
-export { validateMetroDataset, type ValidationResult };
-
 let cachedDataset: MetroDataset | null = null;
 let segmentsById: Map<string, SegmentFeature> | null = null;
 let stationsById: Map<string, StationFeature> | null = null;
 
 /**
- * Loads, validates, and returns the full metro dataset.
- * Throws an error if data validation fails.
+ * Loads and returns the full metro dataset.
+ * Data is validated at build/prebuild time, avoiding client-side runtime overhead.
  */
 export function getMetroData(): MetroDataset {
   if (cachedDataset) {
     return cachedDataset;
   }
 
-  const result = validateMetroDataset({
-    cities: citiesJson,
-    lines: linesJson,
-    segments: segmentsGeoJson,
-    stations: stationsGeoJson,
-  });
-
-  if (!result.valid || !result.dataset) {
-    throw new Error(
-      `Metro dataset validation failed with ${result.errors.length} error(s):\n${result.errors.join("\n")}`
-    );
-  }
-
-  if (result.warnings.length > 0) {
-    console.warn(`Metro dataset warnings (${result.warnings.length}):\n${result.warnings.join("\n")}`);
-  }
-
-  cachedDataset = result.dataset;
+  cachedDataset = {
+    cities: citiesJson as City[],
+    lines: linesJson as Line[],
+    segments: segmentsGeoJson as unknown as SegmentFeatureCollection,
+    stations: stationsGeoJson as unknown as StationFeatureCollection,
+  };
 
   // Build O(1) indexed lookup maps for performance
   segmentsById = new Map();
