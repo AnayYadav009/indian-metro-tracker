@@ -179,22 +179,26 @@ describe("Metro Data Loader & Dataset Invariants", () => {
       blrLines.forEach((l) => expect(l.city).toBe("Bengaluru"));
     });
 
-    it("getSegments filters by city and status", () => {
+    it("getSegments filters by cityId and status", () => {
       const delhiOperational = getSegments({
-        city: "Delhi",
+        cityId: "delhi",
         status: "operational",
       });
       expect(delhiOperational.length).toBeGreaterThan(0);
       delhiOperational.forEach((s) => {
-        expect(s.properties.city).toBe("Delhi");
+        expect(s.properties.city_id).toBe("delhi");
         expect(s.properties.status).toBe("operational");
       });
     });
 
-    it("getStations filters by interchange and city", () => {
-      const interchanges = getStations({ isInterchange: true });
-      expect(interchanges.length).toBeGreaterThan(0);
-      interchanges.forEach((st) => {
+    it("getStations filters by interchange and cityId", () => {
+      const delhiInterchanges = getStations({
+        cityId: "delhi",
+        isInterchange: true,
+      });
+      expect(delhiInterchanges.length).toBeGreaterThan(0);
+      delhiInterchanges.forEach((st) => {
+        expect(st.properties.city_id).toBe("delhi");
         expect(st.properties.is_interchange).toBe(true);
       });
     });

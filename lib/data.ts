@@ -114,18 +114,16 @@ export function getCities(): City[] {
 /**
  * Get all lines, optionally filtered by city name or id.
  */
-export function getLines(city?: string): Line[] {
+export function getLines(cityId?: string): Line[] {
   const { lines, cities } = getMetroData();
-  if (!city) return lines;
+  if (!cityId) return lines;
 
   const targetCity = cities.find(
-    (c) => c.id.toLowerCase() === city.toLowerCase() || c.name.toLowerCase() === city.toLowerCase()
+    (c) => c.id.toLowerCase() === cityId.toLowerCase() || c.name.toLowerCase() === cityId.toLowerCase()
   );
   if (!targetCity) return [];
 
-  return lines.filter(
-    (l) => l.city_id === targetCity.id || l.city.toLowerCase() === targetCity.name.toLowerCase()
-  );
+  return lines.filter((l) => l.city_id === targetCity.id);
 }
 
 /**
@@ -137,13 +135,6 @@ export function getSegments(options: SegmentFilterOptions = {}): SegmentFeature[
   return segments.features.filter((feature) => {
     const props = feature.properties;
     if (options.cityId && props.city_id.toLowerCase() !== options.cityId.toLowerCase()) {
-      return false;
-    }
-    if (
-      options.city &&
-      props.city.toLowerCase() !== options.city.toLowerCase() &&
-      props.city_id.toLowerCase() !== options.city.toLowerCase()
-    ) {
       return false;
     }
     if (options.status && props.status !== options.status) {
@@ -168,13 +159,6 @@ export function getStations(options: StationFilterOptions = {}): StationFeature[
   return stations.features.filter((feature) => {
     const props = feature.properties;
     if (options.cityId && props.city_id.toLowerCase() !== options.cityId.toLowerCase()) {
-      return false;
-    }
-    if (
-      options.city &&
-      props.city.toLowerCase() !== options.city.toLowerCase() &&
-      props.city_id.toLowerCase() !== options.city.toLowerCase()
-    ) {
       return false;
     }
     if (options.status && props.status !== options.status) {

@@ -19,18 +19,10 @@ export function MapLegend({ className = "" }: MapLegendProps) {
   // Filter lines to display in legend based on active city
   const activeLines = useMemo(() => {
     if (!selectedCityId) {
-      // If all cities selected, show a representative sample of primary lines
-      return dataset.lines.slice(0, 6);
+      return [];
     }
-    const targetCity = dataset.cities.find((c) => c.id === selectedCityId);
-    if (!targetCity) return dataset.lines;
-
-    return dataset.lines.filter(
-      (l) =>
-        l.city.toLowerCase() === targetCity.name.toLowerCase() ||
-        l.city.toLowerCase() === targetCity.id.toLowerCase()
-    );
-  }, [selectedCityId, dataset.lines, dataset.cities]);
+    return dataset.lines.filter((l) => l.city_id === selectedCityId);
+  }, [selectedCityId, dataset.lines]);
 
   const activeCityName = useMemo(() => {
     if (!selectedCityId) return "All Networks";
@@ -157,7 +149,7 @@ export function MapLegend({ className = "" }: MapLegendProps) {
           </div>
 
           {/* Section 3: Active Line Colors for Selected City */}
-          {activeLines.length > 0 && (
+          {selectedCityId && activeLines.length > 0 && (
             <div className="border-t border-slate-800/80 pt-2.5">
               <div className="mb-2 flex items-center justify-between">
                 <h4 className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
@@ -182,6 +174,11 @@ export function MapLegend({ className = "" }: MapLegendProps) {
                   </div>
                 ))}
               </div>
+            </div>
+          )}
+          {!selectedCityId && (
+            <div className="border-t border-slate-800/80 pt-2 text-[11px] text-slate-400 italic">
+              Select a city to view its line color palette.
             </div>
           )}
 

@@ -59,7 +59,14 @@ describe("MapLegend Component", () => {
     expect(screen.getByTestId("legend-content")).toBeInTheDocument();
   });
 
-  it("updates active lines list when a city is selected in the store", () => {
+  it("shows hint when no city is selected", () => {
+    render(<MapLegend />);
+    expect(
+      screen.getByText("Select a city to view its line color palette.")
+    ).toBeInTheDocument();
+  });
+
+  it("updates active lines list when a city is selected in the store by city_id", () => {
     useMetroStore.getState().setSelectedCity("delhi");
     render(<MapLegend />);
 
@@ -69,3 +76,4 @@ describe("MapLegend Component", () => {
     );
   });
 });
+
