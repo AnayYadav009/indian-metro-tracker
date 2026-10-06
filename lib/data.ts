@@ -82,6 +82,8 @@ import { validateMetroDataset, type ValidationResult } from "./data-validator";
 export { validateMetroDataset, type ValidationResult };
 
 let cachedDataset: MetroDataset | null = null;
+let segmentsById: Map<string, SegmentFeature> | null = null;
+let stationsById: Map<string, StationFeature> | null = null;
 
 /**
  * Loads, validates, and returns the full metro dataset.
@@ -110,6 +112,18 @@ export function getMetroData(): MetroDataset {
   }
 
   cachedDataset = result.dataset;
+
+  // Build O(1) indexed lookup maps for performance
+  segmentsById = new Map();
+  for (const seg of cachedDataset.segments.features) {
+    segmentsById.set(seg.properties.segment_id, seg);
+  }
+
+  stationsById = new Map();
+  for (const st of cachedDataset.stations.features) {
+    stationsById.set(st.properties.station_id, st);
+  }
+
   return cachedDataset;
 }
 
@@ -192,19 +206,23 @@ export function getStations(options: StationFilterOptions = {}): StationFeature[
 }
 
 /**
- * Find a segment by its unique segment_id.
+ * Find a segment by its unique segment_id (O(1) indexed lookup).
  */
 export function getSegmentById(segmentId: string): SegmentFeature | undefined {
-  const { segments } = getMetroData();
-  return segments.features.find((f) => f.properties.segment_id === segmentId);
+  if (!segmentsById) {
+    getMetroData();
+  }
+  return segmentsById?.get(segmentId);
 }
 
 /**
- * Find a station by its unique station_id.
+ * Find a station by its unique station_id (O(1) indexed lookup).
  */
 export function getStationById(stationId: string): StationFeature | undefined {
-  const { stations } = getMetroData();
-  return stations.features.find((f) => f.properties.station_id === stationId);
+  if (!stationsById) {
+    getMetroData();
+  }
+  return stationsById?.get(stationId);
 }
 
 /**

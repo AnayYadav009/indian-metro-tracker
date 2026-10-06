@@ -23,7 +23,7 @@ import {
   BASEMAP_STYLE_URL,
   INITIAL_VIEW_STATE,
 } from "@/lib/map-config";
-import { getMetroData } from "@/lib/data";
+import { getMetroData, getSegmentById, getStationById } from "@/lib/data";
 import { useMetroStore } from "@/store/use-metro-store";
 import {
   INTERACTIVE_LAYER_IDS,
@@ -199,9 +199,7 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
 
       if (stationF && stationF.properties) {
         const stationId = stationF.properties.station_id;
-        const matched = dataset.stations.features.find(
-          (f) => f.properties.station_id === stationId
-        );
+        const matched = getStationById(stationId);
         if (matched) {
           setSelectedFeature({
             type: "station",
@@ -222,9 +220,7 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
 
       if (segmentF && segmentF.properties) {
         const segmentId = segmentF.properties.segment_id;
-        const matched = dataset.segments.features.find(
-          (f) => f.properties.segment_id === segmentId
-        );
+        const matched = getSegmentById(segmentId);
         if (matched) {
           setSelectedFeature({
             type: "segment",
@@ -237,7 +233,7 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
       // If clicked on canvas without interactive feature, clear selection
       clearSelectedFeature();
     },
-    [clearSelectedFeature, dataset, setSelectedFeature]
+    [clearSelectedFeature, setSelectedFeature]
   );
 
   // Handle mouse move for hover tooltip and pointer cursor
