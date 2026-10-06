@@ -1,22 +1,5 @@
 [
   {
-    "id": "delhi",
-    "name": "Delhi",
-    "bbox": [
-      76.84,
-      28.4,
-      77.35,
-      28.88
-    ],
-    "operator": "DMRC",
-    "phases": [
-      "I",
-      "II",
-      "III",
-      "IV"
-    ]
-  },
-  {
     "id": "bengaluru",
     "name": "Bengaluru",
     "bbox": [
@@ -50,6 +33,23 @@
       "2B",
       "3",
       "4"
+    ]
+  },
+  {
+    "id": "delhi",
+    "name": "Delhi",
+    "bbox": [
+      76.84,
+      28.4,
+      77.35,
+      28.88
+    ],
+    "operator": "DMRC",
+    "phases": [
+      "I",
+      "II",
+      "III",
+      "IV"
     ]
   }
 ]

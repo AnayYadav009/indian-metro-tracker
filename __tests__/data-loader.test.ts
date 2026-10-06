@@ -76,14 +76,14 @@ describe("Metro Data Loader & Milestone 3 Acceptance Criteria", () => {
         if (DATA_SOURCE === "mock") {
           expect(segment.properties.source).toBe("mock");
         } else {
-          expect(segment.properties.source).toMatch(/^(osm|mock)/);
+          expect(segment.properties.source).toMatch(/^(osm|manual|mock)/);
         }
       }
       for (const station of dataset.stations.features) {
         if (DATA_SOURCE === "mock") {
           expect(station.properties.source).toBe("mock");
         } else {
-          expect(station.properties.source).toMatch(/^(osm|mock)/);
+          expect(station.properties.source).toMatch(/^(osm|manual|mock)/);
         }
       }
     });

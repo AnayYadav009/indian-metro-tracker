@@ -18,6 +18,15 @@ export const BASEMAP_CONFIG = {
   dataLicenseUrl: "https://opendatacommons.org/licenses/odbl/",
 } as const;
 
+// Initial map viewport centered on India
+export const INITIAL_VIEW_STATE = {
+  longitude: 78.9629,
+  latitude: 22.5937,
+  zoom: 4.5,
+  minZoom: 3.5,
+  maxZoom: 18,
+};
+
 // Backward-compatible export constants derived from BASEMAP_CONFIG
 export const BASEMAP_STYLE_URL = BASEMAP_CONFIG.styleUrl;
 export const OSM_ATTRIBUTION = BASEMAP_CONFIG.osmAttribution;

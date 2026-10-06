@@ -8,6 +8,7 @@ export interface NormalizedStation {
   coordinates: [number, number]; // [lng, lat]
   tags: Record<string, string>;
   lineRefs: string[];
+  status?: "operational" | "construction" | "planned";
 }
 
 export interface NormalizedSegment {
@@ -45,13 +46,18 @@ export function slugify(str: string): string {
 export function normalizeOverpassCity(cityId: string, rawData: any): NormalizedCityData {
   const elements: any[] = rawData.elements || [];
 
-  // 1. Extract stations
+  // 1. Extract stations (subway, light rail, and under-construction stations)
   const stationNodes = elements.filter(
     (e) =>
       e.type === "node" &&
       e.tags &&
       e.tags.name &&
-      (e.tags.railway === "station" || e.tags.station === "subway" || e.tags.subway === "yes")
+      (e.tags.railway === "station" ||
+        e.tags.station === "subway" ||
+        e.tags.subway === "yes" ||
+        e.tags.station === "light_rail" ||
+        e.tags.light_rail === "yes" ||
+        (e.tags.railway === "construction" && (e.tags.construction === "station" || e.tags.subway === "yes")))
   );
 
   const stationsMap = new Map<number, NormalizedStation>();
@@ -63,6 +69,13 @@ export function normalizeOverpassCity(cityId: string, rawData: any): NormalizedC
       .replace(/\s+station/i, "")
       .trim();
 
+    let stationStatus: "operational" | "construction" | "planned" = "operational";
+    if (node.tags.railway === "construction" || node.tags.construction === "station") {
+      stationStatus = "construction";
+    } else if (node.tags.railway === "proposed" || node.tags.proposed === "station") {
+      stationStatus = "planned";
+    }
+
     stationsMap.set(node.id, {
       osmId: node.id,
       name: cleanName,
@@ -72,12 +85,20 @@ export function normalizeOverpassCity(cityId: string, rawData: any): NormalizedC
       ],
       tags: node.tags,
       lineRefs: [],
+      status: stationStatus,
     });
   }
 
   // 2. Extract route relations
   const routeRelations = elements.filter(
-    (e) => e.type === "relation" && e.tags && (e.tags.route === "subway" || e.tags.route === "light_rail")
+    (e) =>
+      e.type === "relation" &&
+      e.tags &&
+      (e.tags.route === "subway" ||
+        e.tags.route === "light_rail" ||
+        e.tags.railway === "subway" ||
+        e.tags.railway === "construction" ||
+        e.tags.railway === "proposed")
   );
 
   const segments: NormalizedSegment[] = [];
@@ -160,6 +181,48 @@ export function normalizeOverpassCity(cityId: string, rawData: any): NormalizedC
         stationOsmIds,
       });
     }
+  }
+
+  // 3. Extract standalone under-construction and proposed ways
+  const constructionWays = elements.filter(
+    (e) =>
+      e.type === "way" &&
+      e.tags &&
+      (e.tags.railway === "construction" || e.tags.railway === "proposed") &&
+      e.geometry &&
+      Array.isArray(e.geometry) &&
+      e.geometry.length >= 2
+  );
+
+  for (const way of constructionWays) {
+    const wayName = way.tags.name || way.tags["name:en"] || `Way ${way.id}`;
+    const wayRef = way.tags.ref || "";
+    const wayColour = way.tags.colour || way.tags.color;
+    const network = way.tags.network || "";
+    const operator = way.tags.operator || "";
+
+    const coords: [number, number][] = way.geometry.map((pt: any) => [
+      Number(Number(pt.lon).toFixed(6)),
+      Number(Number(pt.lat).toFixed(6)),
+    ]);
+
+    const status: "operational" | "construction" | "planned" =
+      way.tags.railway === "construction" ? "construction" : "planned";
+    const lengthKm = calculateLineStringLengthKm(coords);
+
+    segments.push({
+      osmId: way.id,
+      name: wayName,
+      ref: wayRef,
+      colour: wayColour,
+      network,
+      operator,
+      coordinates: coords,
+      lengthKm,
+      status,
+      tags: way.tags,
+      stationOsmIds: [],
+    });
   }
 
   return {

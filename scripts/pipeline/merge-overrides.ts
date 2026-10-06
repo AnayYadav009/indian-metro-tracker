@@ -101,14 +101,17 @@ export function mergeCityOverrides(
     let coords: [number, number][] | undefined;
     let stationsCount = segOverride.stations_count || 10;
 
+    let isOsmSourced = false;
     if (segOverride.osmId && normalizedSegsByOsmId.has(segOverride.osmId)) {
       const normSeg = normalizedSegsByOsmId.get(segOverride.osmId)!;
       coords = normSeg.coordinates;
       if (normSeg.stationOsmIds && normSeg.stationOsmIds.length > 0) {
         stationsCount = normSeg.stationOsmIds.length;
       }
+      isOsmSourced = true;
     } else if (segOverride.coordinates && segOverride.coordinates.length >= 2) {
       coords = segOverride.coordinates;
+      isOsmSourced = false;
     }
 
     if (!coords || coords.length < 2) {
@@ -118,6 +121,7 @@ export function mergeCityOverrides(
 
     const computedKm = calculateLineStringLengthKm(coords);
     const lengthKm = Number(computedKm.toFixed(1));
+    const segmentSource = isOsmSourced ? "osm" : "manual";
 
     segmentFeatures.push({
       type: "Feature",
@@ -142,7 +146,7 @@ export function mergeCityOverrides(
             : null,
         stations_count: stationsCount,
         color: segOverride.color,
-        source: sourceTag,
+        source: segmentSource,
         last_verified: today,
       },
     });
@@ -223,6 +227,10 @@ export function mergeCityOverrides(
       assignedStatus = closestSegment.status;
     }
 
+    if (station.status && station.status !== "operational") {
+      assignedStatus = station.status;
+    }
+
     // Check interchange flag
     const isInterchange =
       interchangeSet.has(rawName.toLowerCase()) ||
@@ -280,7 +288,7 @@ export function mergeCityOverrides(
         opened_on: openedOn,
         expected_completion: expectedCompletion,
         layout,
-        source: sourceTag,
+        source: "osm",
         last_verified: today,
       },
     });

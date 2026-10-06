@@ -1,75 +1,5 @@
 [
   {
-    "id": "del-red",
-    "name": "Red Line",
-    "city": "Delhi",
-    "color": "#FF4040",
-    "operator": "DMRC"
-  },
-  {
-    "id": "del-yellow",
-    "name": "Yellow Line",
-    "city": "Delhi",
-    "color": "#FFD700",
-    "operator": "DMRC"
-  },
-  {
-    "id": "del-blue",
-    "name": "Blue Line",
-    "city": "Delhi",
-    "color": "#0070BB",
-    "operator": "DMRC"
-  },
-  {
-    "id": "del-green",
-    "name": "Green Line",
-    "city": "Delhi",
-    "color": "#008000",
-    "operator": "DMRC"
-  },
-  {
-    "id": "del-violet",
-    "name": "Violet Line",
-    "city": "Delhi",
-    "color": "#553592",
-    "operator": "DMRC"
-  },
-  {
-    "id": "del-airport",
-    "name": "Airport Express",
-    "city": "Delhi",
-    "color": "#FF8C00",
-    "operator": "DMRC"
-  },
-  {
-    "id": "del-pink",
-    "name": "Pink Line",
-    "city": "Delhi",
-    "color": "#FC8EAC",
-    "operator": "DMRC"
-  },
-  {
-    "id": "del-magenta",
-    "name": "Magenta Line",
-    "city": "Delhi",
-    "color": "#CC338B",
-    "operator": "DMRC"
-  },
-  {
-    "id": "del-grey",
-    "name": "Grey Line",
-    "city": "Delhi",
-    "color": "#838996",
-    "operator": "DMRC"
-  },
-  {
-    "id": "del-silver",
-    "name": "Silver Line (Golden)",
-    "city": "Delhi",
-    "color": "#A0A0A0",
-    "operator": "DMRC"
-  },
-  {
     "id": "blr-purple",
     "name": "Purple Line",
     "city": "Bengaluru",
@@ -145,5 +75,75 @@
     "city": "Mumbai",
     "color": "#FFC72C",
     "operator": "MMRDA"
+  },
+  {
+    "id": "del-red",
+    "name": "Red Line",
+    "city": "Delhi",
+    "color": "#FF4040",
+    "operator": "DMRC"
+  },
+  {
+    "id": "del-yellow",
+    "name": "Yellow Line",
+    "city": "Delhi",
+    "color": "#FFD700",
+    "operator": "DMRC"
+  },
+  {
+    "id": "del-blue",
+    "name": "Blue Line",
+    "city": "Delhi",
+    "color": "#0070BB",
+    "operator": "DMRC"
+  },
+  {
+    "id": "del-green",
+    "name": "Green Line",
+    "city": "Delhi",
+    "color": "#008000",
+    "operator": "DMRC"
+  },
+  {
+    "id": "del-violet",
+    "name": "Violet Line",
+    "city": "Delhi",
+    "color": "#553592",
+    "operator": "DMRC"
+  },
+  {
+    "id": "del-airport",
+    "name": "Airport Express",
+    "city": "Delhi",
+    "color": "#FF8C00",
+    "operator": "DMRC"
+  },
+  {
+    "id": "del-pink",
+    "name": "Pink Line",
+    "city": "Delhi",
+    "color": "#FC8EAC",
+    "operator": "DMRC"
+  },
+  {
+    "id": "del-magenta",
+    "name": "Magenta Line",
+    "city": "Delhi",
+    "color": "#CC338B",
+    "operator": "DMRC"
+  },
+  {
+    "id": "del-grey",
+    "name": "Grey Line",
+    "city": "Delhi",
+    "color": "#838996",
+    "operator": "DMRC"
+  },
+  {
+    "id": "del-silver",
+    "name": "Silver Line (Golden)",
+    "city": "Delhi",
+    "color": "#A0A0A0",
+    "operator": "DMRC"
   }
 ]

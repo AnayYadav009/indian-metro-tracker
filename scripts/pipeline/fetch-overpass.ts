@@ -10,8 +10,9 @@ export interface BoundingBox {
 
 const OVERPASS_ENDPOINTS = [
   "https://overpass-api.de/api/interpreter",
-  "https://overpass.private.coffee/api/interpreter",
+  "https://overpass.kumi.systems/api/interpreter",
   "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+  "https://overpass.private.coffee/api/interpreter",
 ];
 
 export async function fetchOverpassDataForCity(
@@ -33,13 +34,29 @@ export async function fetchOverpassDataForCity(
 
   console.log(`🌐 Querying Overpass API for ${cityId} (bbox: [${minLng}, ${minLat}, ${maxLng}, ${maxLat}])...`);
 
-  const query = `[out:json][timeout:30];
+  const query = `[out:json][timeout:90];
 (
+  // Metro & Light Rail Route Relations
   relation["route"="subway"](${minLat},${minLng},${maxLat},${maxLng});
   relation["route"="light_rail"](${minLat},${minLng},${maxLat},${maxLng});
   relation["railway"="subway"](${minLat},${minLng},${maxLat},${maxLng});
+  relation["railway"="construction"]["construction"="subway"](${minLat},${minLng},${maxLat},${maxLng});
+  relation["railway"="proposed"]["proposed"="subway"](${minLat},${minLng},${maxLat},${maxLng});
+
+  // Under-construction and proposed tracks/ways with geometry
+  way["railway"="construction"]["construction"="subway"](${minLat},${minLng},${maxLat},${maxLng});
+  way["railway"="construction"]["construction"="light_rail"](${minLat},${minLng},${maxLat},${maxLng});
+  way["railway"="proposed"]["proposed"="subway"](${minLat},${minLng},${maxLat},${maxLng});
+  way["railway"="proposed"]["proposed"="light_rail"](${minLat},${minLng},${maxLat},${maxLng});
+
+  // Stations: Operational, Light rail, and Under Construction
   node["railway"="station"]["subway"="yes"](${minLat},${minLng},${maxLat},${maxLng});
   node["station"="subway"](${minLat},${minLng},${maxLat},${maxLng});
+  node["railway"="station"]["light_rail"="yes"](${minLat},${minLng},${maxLat},${maxLng});
+  node["station"="light_rail"](${minLat},${minLng},${maxLat},${maxLng});
+  node["railway"="station"]["construction"="subway"](${minLat},${minLng},${maxLat},${maxLng});
+  node["railway"="station"]["construction"="light_rail"](${minLat},${minLng},${maxLat},${maxLng});
+  node["railway"="construction"]["construction"="station"](${minLat},${minLng},${maxLat},${maxLng});
 );
 out body geom;
 `;
@@ -50,10 +67,11 @@ out body geom;
       console.log(`   Trying ${endpoint}...`);
       const response = await fetch(endpoint, {
         method: "POST",
+        signal: AbortSignal.timeout(60000),
         headers: {
-          "User-Agent": "IndianMetroTracker/1.0 (https://github.com/anay/indian-metro-tracker)",
-          "Accept": "application/json",
-          "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+          "User-Agent": "IndianMetroTracker/1.0",
+          "Accept": "*/*",
+          "Content-Type": "application/x-www-form-urlencoded",
         },
         body: `data=${encodeURIComponent(query)}`,
       });
