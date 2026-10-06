@@ -22,6 +22,7 @@
 .DS_Store
 *.pem
 /scratch/
+/public/maplibre-gl-worker.mjs
 
 # debug
 npm-debug.log*

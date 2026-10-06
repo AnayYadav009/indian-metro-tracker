@@ -11,11 +11,10 @@ import Map, {
 import * as maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 
-// Fix for Next.js 15 Webpack worker loading issue
+// Fix for Next.js 15 Webpack worker loading issue - load from local public asset
 if (typeof window !== "undefined") {
-  maplibregl.setWorkerUrl(
-    "https://unpkg.com/maplibre-gl@6.12.0/dist/maplibre-gl-worker.mjs"
-  );
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+  maplibregl.setWorkerUrl(`${basePath}/maplibre-gl-worker.mjs`);
 }
 
 import {
