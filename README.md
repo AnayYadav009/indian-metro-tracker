@@ -75,3 +75,9 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 - **Static Export**: Zero runtime server dependencies; pure static deployment.
 - **Segment Modeling**: Transit lines are modeled as contiguous LineString segments to accurately reflect partial openings and phase rollouts.
 - **Milestone Discipline**: Developed one milestone at a time with strict acceptance testing.
+
+## Data Licence & Attribution
+
+- **Geospatial & Transit Network Data**: Contains data from OpenStreetMap, available under the [Open Database License (ODbL) 1.0](https://opendatacommons.org/licenses/odbl/). © [OpenStreetMap contributors](https://www.openstreetmap.org/copyright).
+- **Map Vector Tiles**: Sourced from [OpenFreeMap](https://openfreemap.org), licensed under open data terms.
+- **Application Code**: MIT License.

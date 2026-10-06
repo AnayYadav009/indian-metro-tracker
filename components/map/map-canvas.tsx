@@ -19,12 +19,9 @@ if (typeof window !== "undefined") {
 }
 
 import {
+  BASEMAP_CONFIG,
   BASEMAP_STYLE_URL,
   INITIAL_VIEW_STATE,
-  OSM_ATTRIBUTION,
-  OSM_ATTRIBUTION_URL,
-  OPENFREEMAP_ATTRIBUTION,
-  OPENFREEMAP_ATTRIBUTION_URL,
 } from "@/lib/map-config";
 import { getMetroData } from "@/lib/data";
 import { useMetroStore } from "@/store/use-metro-store";
@@ -343,25 +340,25 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
       {/* Mandatory visible OSM & OpenFreeMap attribution */}
       <div
         data-testid="osm-attribution"
-        className="absolute bottom-2 right-2 z-10 rounded border border-slate-800 bg-slate-950/85 px-2.5 py-1 text-[11px] text-slate-300 shadow backdrop-blur-sm"
+        className="absolute bottom-2 right-2 z-40 rounded border border-slate-800 bg-slate-950/90 px-2.5 py-1 text-[11px] text-slate-300 shadow backdrop-blur-sm pointer-events-auto"
       >
         <span>Basemap: </span>
         <a
-          href={OPENFREEMAP_ATTRIBUTION_URL}
+          href={BASEMAP_CONFIG.providerUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="text-slate-300 underline underline-offset-2 hover:text-white"
         >
-          {OPENFREEMAP_ATTRIBUTION}
+          {BASEMAP_CONFIG.provider}
         </a>
         <span className="mx-1.5 text-slate-600">|</span>
         <a
-          href={OSM_ATTRIBUTION_URL}
+          href={BASEMAP_CONFIG.osmAttributionUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="text-slate-300 underline underline-offset-2 hover:text-white"
         >
-          {OSM_ATTRIBUTION}
+          {BASEMAP_CONFIG.osmAttribution}
         </a>
       </div>
     </div>
