@@ -3479,7 +3479,9 @@
         "expected_completion": null,
         "stations_count": 3,
         "color": "#800080",
-        "source": "osm+bmrcl",
+        "source": "osm",
+        "references": [],
+        "completion_unconfirmed": false,
         "last_verified": "2026-10-05"
       }
     },
@@ -5385,7 +5387,9 @@
         "expected_completion": null,
         "stations_count": 10,
         "color": "#009933",
-        "source": "osm+bmrcl",
+        "source": "osm",
+        "references": [],
+        "completion_unconfirmed": false,
         "last_verified": "2026-10-05"
       }
     },
@@ -6183,15 +6187,19 @@
         "city_id": "bengaluru",
         "city": "Bengaluru",
         "operator": "BMRCL",
-        "status": "construction",
+        "status": "operational",
         "phase": "2",
         "length_km": 18.1,
         "gauge": "standard",
-        "inaugurated_on": null,
-        "expected_completion": "2025-12",
+        "inaugurated_on": "2025-08-10",
+        "expected_completion": null,
         "stations_count": 10,
         "color": "#FFCC00",
-        "source": "osm+bmrcl",
+        "source": "osm",
+        "references": [
+          "https://english.bmrc.co.in/"
+        ],
+        "completion_unconfirmed": false,
         "last_verified": "2026-10-05"
       }
     },
@@ -6242,11 +6250,15 @@
         "length_km": 41.3,
         "gauge": "standard",
         "inaugurated_on": null,
-        "expected_completion": "2026-12",
+        "expected_completion": null,
         "stations_count": 10,
         "color": "#1E90FF",
-        "source": "osm+bmrcl",
-        "last_verified": "2026-10-05"
+        "source": "manual",
+        "references": [
+          "https://english.bmrc.co.in/"
+        ],
+        "completion_unconfirmed": true,
+        "last_verified": "2026-10-06"
       }
     },
     {
@@ -6284,11 +6296,15 @@
         "length_km": 17.3,
         "gauge": "standard",
         "inaugurated_on": null,
-        "expected_completion": "2026-06",
+        "expected_completion": null,
         "stations_count": 10,
         "color": "#FF69B4",
-        "source": "osm+bmrcl",
-        "last_verified": "2026-10-05"
+        "source": "manual",
+        "references": [
+          "https://english.bmrc.co.in/"
+        ],
+        "completion_unconfirmed": true,
+        "last_verified": "2026-10-06"
       }
     },
     {
@@ -6322,11 +6338,15 @@
         "length_km": 9,
         "gauge": "standard",
         "inaugurated_on": null,
-        "expected_completion": "2030",
+        "expected_completion": null,
         "stations_count": 10,
         "color": "#800080",
-        "source": "osm+bmrcl",
-        "last_verified": "2026-10-05"
+        "source": "manual",
+        "references": [
+          "https://english.bmrc.co.in/"
+        ],
+        "completion_unconfirmed": true,
+        "last_verified": "2026-10-06"
       }
     },
     {
@@ -7267,7 +7287,9 @@
         "expected_completion": null,
         "stations_count": 10,
         "color": "#0072CE",
-        "source": "osm+mmrda",
+        "source": "osm",
+        "references": [],
+        "completion_unconfirmed": false,
         "last_verified": "2026-10-05"
       }
     },
@@ -8333,7 +8355,9 @@
         "expected_completion": null,
         "stations_count": 10,
         "color": "#FFD700",
-        "source": "osm+mmrda",
+        "source": "osm",
+        "references": [],
+        "completion_unconfirmed": false,
         "last_verified": "2026-10-05"
       }
     },
@@ -8927,7 +8951,9 @@
         "expected_completion": null,
         "stations_count": 10,
         "color": "#ED1C24",
-        "source": "osm+mmrda",
+        "source": "osm",
+        "references": [],
+        "completion_unconfirmed": false,
         "last_verified": "2026-10-05"
       }
     },
@@ -10065,7 +10091,9 @@
         "expected_completion": null,
         "stations_count": 10,
         "color": "#00A3E0",
-        "source": "osm+mmrda",
+        "source": "osm",
+        "references": [],
+        "completion_unconfirmed": false,
         "last_verified": "2026-10-05"
       }
     },
@@ -13820,10 +13848,14 @@
         "length_km": 144.8,
         "gauge": "standard",
         "inaugurated_on": null,
-        "expected_completion": "2026-12",
+        "expected_completion": null,
         "stations_count": 4,
         "color": "#00B140",
-        "source": "osm+mmrda",
+        "source": "osm",
+        "references": [
+          "https://mmrda.maharashtra.gov.in/"
+        ],
+        "completion_unconfirmed": true,
         "last_verified": "2026-10-05"
       }
     },
@@ -14142,10 +14174,14 @@
         "length_km": 5.5,
         "gauge": "standard",
         "inaugurated_on": null,
-        "expected_completion": "2026-06",
+        "expected_completion": null,
         "stations_count": 10,
         "color": "#FFC72C",
-        "source": "osm+mmrda",
+        "source": "osm",
+        "references": [
+          "https://mmrda.maharashtra.gov.in/"
+        ],
+        "completion_unconfirmed": true,
         "last_verified": "2026-10-05"
       }
     },
@@ -14180,11 +14216,15 @@
         "length_km": 4.2,
         "gauge": "standard",
         "inaugurated_on": null,
-        "expected_completion": "2027",
+        "expected_completion": null,
         "stations_count": 10,
         "color": "#00B140",
-        "source": "osm+mmrda",
-        "last_verified": "2026-10-05"
+        "source": "manual",
+        "references": [
+          "https://mmrda.maharashtra.gov.in/"
+        ],
+        "completion_unconfirmed": true,
+        "last_verified": "2026-10-06"
       }
     },
     {
@@ -15334,6 +15374,8 @@
         "stations_count": 10,
         "color": "#FF4040",
         "source": "osm",
+        "references": [],
+        "completion_unconfirmed": false,
         "last_verified": "2026-10-05"
       }
     },
@@ -16920,6 +16962,8 @@
         "stations_count": 10,
         "color": "#FFD700",
         "source": "osm",
+        "references": [],
+        "completion_unconfirmed": false,
         "last_verified": "2026-10-05"
       }
     },
@@ -18970,6 +19014,8 @@
         "stations_count": 10,
         "color": "#0070BB",
         "source": "osm",
+        "references": [],
+        "completion_unconfirmed": false,
         "last_verified": "2026-10-05"
       }
     },
@@ -19392,6 +19438,8 @@
         "stations_count": 10,
         "color": "#0070BB",
         "source": "osm",
+        "references": [],
+        "completion_unconfirmed": false,
         "last_verified": "2026-10-05"
       }
     },
@@ -19966,6 +20014,8 @@
         "stations_count": 10,
         "color": "#008000",
         "source": "osm",
+        "references": [],
+        "completion_unconfirmed": false,
         "last_verified": "2026-10-05"
       }
     },
@@ -20160,6 +20210,8 @@
         "stations_count": 10,
         "color": "#008000",
         "source": "osm",
+        "references": [],
+        "completion_unconfirmed": false,
         "last_verified": "2026-10-05"
       }
     },
@@ -21686,6 +21738,8 @@
         "stations_count": 10,
         "color": "#553592",
         "source": "osm",
+        "references": [],
+        "completion_unconfirmed": false,
         "last_verified": "2026-10-05"
       }
     },
@@ -22304,6 +22358,8 @@
         "stations_count": 10,
         "color": "#FF8C00",
         "source": "osm",
+        "references": [],
+        "completion_unconfirmed": false,
         "last_verified": "2026-10-05"
       }
     },
@@ -25994,6 +26050,8 @@
         "stations_count": 10,
         "color": "#FC8EAC",
         "source": "osm",
+        "references": [],
+        "completion_unconfirmed": false,
         "last_verified": "2026-10-05"
       }
     },
@@ -27116,6 +27174,8 @@
         "stations_count": 10,
         "color": "#CC338B",
         "source": "osm",
+        "references": [],
+        "completion_unconfirmed": false,
         "last_verified": "2026-10-05"
       }
     },
@@ -27322,6 +27382,8 @@
         "stations_count": 10,
         "color": "#838996",
         "source": "osm",
+        "references": [],
+        "completion_unconfirmed": false,
         "last_verified": "2026-10-05"
       }
     },
@@ -27796,10 +27858,12 @@
         "length_km": 9.3,
         "gauge": "standard",
         "inaugurated_on": null,
-        "expected_completion": "2026-06",
+        "expected_completion": null,
         "stations_count": 10,
         "color": "#CC338B",
         "source": "osm",
+        "references": [],
+        "completion_unconfirmed": true,
         "last_verified": "2026-10-05"
       }
     }

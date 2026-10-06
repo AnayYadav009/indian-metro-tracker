@@ -97,6 +97,7 @@ describe("Metro Data Loader & Dataset Invariants", () => {
             city: "Chennai",
             color: "#0066CC",
             operator: "CMRL",
+            source: "mock",
           },
         ],
         segments: {

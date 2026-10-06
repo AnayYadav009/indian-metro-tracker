@@ -26,6 +26,7 @@ describe("saveActiveDataset pre-save validation", () => {
     city: "Delhi",
     color: "#FF0000",
     operator: "DMRC",
+    source: "osm",
   };
 
   const lineBengaluru: Line = {
@@ -35,6 +36,7 @@ describe("saveActiveDataset pre-save validation", () => {
     city: "Bengaluru",
     color: "#800080",
     operator: "BMRCL",
+    source: "osm",
   };
 
   const segmentDelhi: SegmentFeature = {

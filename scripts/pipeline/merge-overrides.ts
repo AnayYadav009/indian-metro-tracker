@@ -19,6 +19,7 @@ export interface CityOverrideData {
     city: string;
     color: string;
     operator: string;
+    source: string;
   }>;
   segments: Array<{
     osmId?: number;
@@ -34,9 +35,12 @@ export interface CityOverrideData {
     stations_count?: number;
     coordinates?: [number, number][];
     references?: string[];
+    completion_unconfirmed?: boolean;
     last_verified?: string;
   }>;
   interchangeStationNames?: string[];
+  dedupeRadiusM?: number;
+  stationAliases?: Record<string, string>;
   stationOverrides?: Record<
     string,
     {
@@ -158,6 +162,7 @@ export function mergeCityOverrides(
         color: segOverride.color,
         source: segmentSource,
         references: segOverride.references || [],
+        completion_unconfirmed: segOverride.completion_unconfirmed || false,
         last_verified: lastVerifiedDate,
       },
     });
@@ -175,12 +180,29 @@ export function mergeCityOverrides(
     (overrides.interchangeStationNames || []).map((n) => n.toLowerCase())
   );
 
+  const dedupeRadiusKm = (overrides.dedupeRadiusM || 350) / 1000;
+  const aliasMap = new Map<string, string>();
+  if (overrides.stationAliases) {
+    for (const [k, v] of Object.entries(overrides.stationAliases)) {
+      aliasMap.set(k.toLowerCase().trim(), v.trim());
+      aliasMap.set(v.toLowerCase().trim(), k.trim());
+    }
+  }
+
   const stationFeatures: StationFeature[] = [];
   const seenStationIds = new Set<string>();
-  const seenStationCoords: Array<{ id: string; coords: [number, number]; name: string }> = [];
+  const seenStationCoords: Array<{
+    id: string;
+    coords: [number, number];
+    name: string;
+    baseName: string;
+    tags?: Record<string, string>;
+  }> = [];
 
   for (const station of normalized.stations) {
     const rawName = station.name;
+    const resolvedName = aliasMap.get(rawName.toLowerCase()) || rawName;
+
     const prefix =
       overrides.city.id === "delhi"
         ? "del"
@@ -189,15 +211,30 @@ export function mergeCityOverrides(
           : overrides.city.id === "mumbai"
             ? "mum"
             : overrides.city.id;
-    const baseSlug = `${prefix}-${slugify(rawName)}`;
+    const baseSlug = `${prefix}-${slugify(resolvedName)}`;
     let stationId = baseSlug;
 
-    // Check proximity deduplication (within 80 meters with similar name)
-    const existing = seenStationCoords.find(
-      (s) =>
-        pointDistanceKm(station.coordinates, s.coords) < 0.08 ||
-        (s.name.toLowerCase() === rawName.toLowerCase() && pointDistanceKm(station.coordinates, s.coords) < 0.3)
-    );
+    // Deduplication rule:
+    // 1. Within dedupeRadiusM (default 350m) AND same base name (or alias match)
+    // 2. OR within dedupeRadiusM AND both nodes share explicit interchange tags
+    // Different base names never merge on proximity alone.
+    const existing = seenStationCoords.find((s) => {
+      const dist = pointDistanceKm(station.coordinates, s.coords);
+      if (dist > dedupeRadiusKm) return false;
+
+      const sameName =
+        s.baseName.toLowerCase() === resolvedName.toLowerCase() ||
+        s.baseName.toLowerCase() === rawName.toLowerCase();
+      const aliasMatch =
+        aliasMap.get(s.baseName.toLowerCase())?.toLowerCase() === resolvedName.toLowerCase();
+      const sharedInterchangeTag = Boolean(
+        (station.tags?.interchange === "yes" || station.tags?.public_transport === "stop_area") &&
+          (s.tags?.interchange === "yes" || s.tags?.public_transport === "stop_area")
+      );
+
+      return sameName || aliasMatch || sharedInterchangeTag;
+    });
+
     if (existing) {
       continue;
     }
@@ -207,39 +244,84 @@ export function mergeCityOverrides(
       stationId = `${baseSlug}-${++counter}`;
     }
     seenStationIds.add(stationId);
-    seenStationCoords.push({ id: stationId, coords: station.coordinates, name: rawName });
+    seenStationCoords.push({
+      id: stationId,
+      coords: station.coordinates,
+      name: resolvedName,
+      baseName: resolvedName,
+      tags: station.tags,
+    });
 
     // Associate station with lines
     const lineIdsSet = new Set<string>();
     let assignedPhase = overrides.city.phases[0];
     let assignedStatus: "operational" | "construction" | "planned" = "operational";
 
-    // Proximity to segments (match lines within 300 meters)
     let closestDist = Infinity;
     let closestSegment = segmentsForProximity[0];
 
     for (const seg of segmentsForProximity) {
       const dist = minDistanceToLine(station.coordinates, seg.coords);
-      if (dist < 0.3) {
-        lineIdsSet.add(seg.line_id);
-      }
       if (dist < closestDist) {
         closestDist = dist;
         closestSegment = seg;
       }
     }
 
-    if (lineIdsSet.size === 0 && closestSegment) {
-      lineIdsSet.add(closestSegment.line_id);
-    }
+    if (overrides.city.id === "mumbai") {
+      const matchedStatuses: Array<"operational" | "construction" | "planned"> = [];
+      const matchedPhases: string[] = [];
 
-    if (closestSegment) {
-      assignedPhase = closestSegment.phase;
-      assignedStatus = closestSegment.status;
-    }
+      for (const relRef of station.lineRefs || []) {
+        const segOverride = overrides.segments.find(s => s.osmId === Number(relRef));
+        if (segOverride) {
+          lineIdsSet.add(segOverride.line_id);
+          matchedStatuses.push(segOverride.status);
+          if (segOverride.phase) matchedPhases.push(segOverride.phase);
+        }
+      }
 
-    if (station.status && station.status !== "operational") {
-      assignedStatus = station.status;
+      if (lineIdsSet.size > 0) {
+        if (matchedStatuses.includes("operational")) {
+          assignedStatus = "operational";
+        } else if (matchedStatuses.every((s) => s === "construction" || s === "planned")) {
+          assignedStatus = matchedStatuses.includes("construction") ? "construction" : "planned";
+        } else {
+          assignedStatus = "planned";
+        }
+        assignedPhase = matchedPhases[0] || overrides.city.phases[0];
+      } else {
+        // Fallback
+        if (closestSegment) {
+          lineIdsSet.add(closestSegment.line_id);
+          assignedStatus = closestSegment.status;
+          assignedPhase = closestSegment.phase;
+        }
+        if (station.tags?.railway === "construction" || station.tags?.proposed || station.tags?.railway === "proposed") {
+          assignedStatus = station.tags.railway === "construction" ? "construction" : "planned";
+        }
+      }
+    } else {
+      // Original proximity logic for other cities
+      for (const seg of segmentsForProximity) {
+        const dist = minDistanceToLine(station.coordinates, seg.coords);
+        if (dist < 0.3) {
+          lineIdsSet.add(seg.line_id);
+        }
+      }
+
+      if (lineIdsSet.size === 0 && closestSegment) {
+        lineIdsSet.add(closestSegment.line_id);
+      }
+
+      if (closestSegment) {
+        assignedPhase = closestSegment.phase;
+        assignedStatus = closestSegment.status;
+      }
+
+      if (station.status && station.status !== "operational") {
+        assignedStatus = station.status;
+      }
     }
 
     // Check interchange flag

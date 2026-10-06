@@ -63,8 +63,9 @@ export function normalizeOverpassCity(cityId: string, rawData: any): NormalizedC
   const stationsMap = new Map<number, NormalizedStation>();
   for (const node of stationNodes) {
     const rawName = node.tags.name || node.tags["name:en"] || `Station ${node.id}`;
-    // Clean name (e.g., strip " Metro Station")
+    // Clean name (e.g., strip line qualifiers "(Blue Line)", " Metro Station", etc.)
     const cleanName = rawName
+      .replace(/\s*\([^)]*(line|corridor|branch)[^)]*\)/gi, "")
       .replace(/\s+metro\s+station/i, "")
       .replace(/\s+station/i, "")
       .trim();
@@ -118,6 +119,12 @@ export function normalizeOverpassCity(cityId: string, rawData: any): NormalizedC
       for (const m of rel.members) {
         if (m.type === "node" && stationsMap.has(m.ref)) {
           stationOsmIds.push(m.ref);
+          if (m.role === "stop" || m.role === "platform" || m.role === "station" || !m.role) {
+            const st = stationsMap.get(m.ref)!;
+            if (!st.lineRefs.includes(rel.id.toString())) {
+              st.lineRefs.push(rel.id.toString());
+            }
+          }
         } else if (m.type === "way" && m.geometry && Array.isArray(m.geometry) && m.geometry.length > 0) {
           const wayCoords: [number, number][] = m.geometry.map((pt: any) => [
             Number(Number(pt.lon).toFixed(6)),

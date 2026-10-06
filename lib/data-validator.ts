@@ -20,12 +20,15 @@ export interface ValidationResult {
  * Zero-code-change requirement: Cities, lines, and phases are dynamically checked
  * based on data files, allowing any new city to be added with zero code modifications.
  */
-export function validateMetroDataset(rawData: {
-  cities: unknown;
-  lines: unknown;
-  segments: unknown;
-  stations: unknown;
-}): ValidationResult {
+export function validateMetroDataset(
+  rawData: {
+    cities: unknown;
+    lines: unknown;
+    segments: unknown;
+    stations: unknown;
+  },
+  options?: { currentDate?: string }
+): ValidationResult {
   const errors: string[] = [];
   const warnings: string[] = [];
 
@@ -159,14 +162,41 @@ export function validateMetroDataset(rawData: {
       }
     }
 
-    // Verify manual source has non-empty references
-    if (
-      props.source.toLowerCase().includes("manual") &&
-      (!props.references || props.references.length === 0)
-    ) {
-      errors.push(
-        `Segment '${props.segment_id}' has source '${props.source}' but missing or empty references array`
-      );
+    // 1.1 References required for non-mock segments with source !== "osm"
+    const isNonMock = props.source.toLowerCase() !== "mock";
+    const isNotPureOsm = props.source.toLowerCase() !== "osm";
+    const missingRefs = !props.references || props.references.length === 0;
+
+    if (isNonMock && isNotPureOsm && missingRefs) {
+      if (props.status === "construction" || props.status === "planned") {
+        errors.push(
+          `Segment '${props.segment_id}' (${props.status}) has source '${props.source}' but missing or empty references array`
+        );
+      } else if (props.status === "operational") {
+        warnings.push(
+          `Operational segment '${props.segment_id}' has non-osm source '${props.source}' without references citations`
+        );
+      }
+    }
+
+    // 1.2 Staleness check for construction segments
+    if (props.status === "construction" && props.expected_completion) {
+      const currentDate = options?.currentDate || new Date().toISOString().slice(0, 10);
+      let isPast = false;
+      if (props.expected_completion.length === 4) {
+        isPast = `${props.expected_completion}-12-31` < currentDate;
+      } else {
+        const [year, month] = props.expected_completion.split("-");
+        const lastDayOfMonth = new Date(Number(year), Number(month), 0).getDate();
+        const formattedMonthEnd = `${props.expected_completion}-${String(lastDayOfMonth).padStart(2, "0")}`;
+        isPast = formattedMonthEnd < currentDate;
+      }
+
+      if (isPast) {
+        warnings.push(
+          `Construction segment '${props.segment_id}' has stale expected_completion '${props.expected_completion}' earlier than current date '${currentDate}'`
+        );
+      }
     }
 
     // Verify line_id exists

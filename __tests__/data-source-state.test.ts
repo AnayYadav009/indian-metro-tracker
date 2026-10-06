@@ -55,6 +55,24 @@ describe("determineDataSourceState pure function", () => {
     expect(result).toBe("mixed");
   });
 
+  it("returns 'mixed' when segments and stations are real but lines contain mock source", () => {
+    const mockLines = [{ source: "mock" }];
+    const result = determineDataSourceState(realSegments, realStations, mockLines);
+    expect(result).toBe("mixed");
+  });
+
+  it("returns 'real' when segments, stations, and lines are all real", () => {
+    const realLines = [{ source: "osm+dmrc" }, { source: "osm+bmrcl" }];
+    const result = determineDataSourceState(realSegments, realStations, realLines);
+    expect(result).toBe("real");
+  });
+
+  it("returns 'mock' when segments, stations, and lines are all mock", () => {
+    const mockLines = [{ source: "mock" }];
+    const result = determineDataSourceState(mockSegments, mockStations, mockLines);
+    expect(result).toBe("mock");
+  });
+
   it("respects NEXT_PUBLIC_DATA_SOURCE override when provided", () => {
     expect(determineDataSourceState(realSegments, realStations, [], "mock")).toBe("mock");
     expect(determineDataSourceState(mockSegments, mockStations, [], "real")).toBe("real");

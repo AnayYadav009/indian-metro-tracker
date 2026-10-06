@@ -24,7 +24,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -51,7 +51,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -78,7 +78,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -99,13 +99,13 @@
         "line_ids": [
           "blr-pink"
         ],
-        "status": "construction",
+        "status": "planned",
         "phase": "2",
         "is_interchange": false,
         "opened_on": null,
-        "expected_completion": "2026-12",
+        "expected_completion": "2028",
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -126,13 +126,13 @@
         "line_ids": [
           "blr-yellow"
         ],
-        "status": "construction",
+        "status": "operational",
         "phase": "2",
         "is_interchange": true,
-        "opened_on": null,
-        "expected_completion": "2026-12",
+        "opened_on": "2006-11-11",
+        "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -159,7 +159,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -186,7 +186,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -213,7 +213,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -240,7 +240,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -267,7 +267,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -294,7 +294,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -321,7 +321,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -348,7 +348,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -375,7 +375,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -402,7 +402,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -429,7 +429,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -456,7 +456,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -477,13 +477,13 @@
         "line_ids": [
           "blr-yellow"
         ],
-        "status": "construction",
+        "status": "operational",
         "phase": "2",
         "is_interchange": false,
-        "opened_on": null,
-        "expected_completion": "2026-12",
+        "opened_on": "2006-11-11",
+        "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -504,13 +504,13 @@
         "line_ids": [
           "blr-yellow"
         ],
-        "status": "construction",
+        "status": "operational",
         "phase": "2",
         "is_interchange": false,
-        "opened_on": null,
-        "expected_completion": "2026-12",
+        "opened_on": "2006-11-11",
+        "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -531,13 +531,13 @@
         "line_ids": [
           "blr-yellow"
         ],
-        "status": "construction",
+        "status": "operational",
         "phase": "2",
         "is_interchange": false,
-        "opened_on": null,
-        "expected_completion": "2026-12",
+        "opened_on": "2006-11-11",
+        "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -558,13 +558,13 @@
         "line_ids": [
           "blr-yellow"
         ],
-        "status": "construction",
+        "status": "operational",
         "phase": "2",
         "is_interchange": false,
-        "opened_on": null,
-        "expected_completion": "2026-12",
+        "opened_on": "2006-11-11",
+        "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -585,13 +585,13 @@
         "line_ids": [
           "blr-yellow"
         ],
-        "status": "construction",
+        "status": "operational",
         "phase": "2",
         "is_interchange": false,
-        "opened_on": null,
-        "expected_completion": "2026-12",
+        "opened_on": "2006-11-11",
+        "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -612,13 +612,13 @@
         "line_ids": [
           "blr-yellow"
         ],
-        "status": "construction",
+        "status": "operational",
         "phase": "2",
         "is_interchange": false,
-        "opened_on": null,
-        "expected_completion": "2026-12",
+        "opened_on": "2006-11-11",
+        "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -639,13 +639,13 @@
         "line_ids": [
           "blr-yellow"
         ],
-        "status": "construction",
+        "status": "operational",
         "phase": "2",
         "is_interchange": false,
-        "opened_on": null,
-        "expected_completion": "2026-12",
+        "opened_on": "2006-11-11",
+        "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -666,13 +666,13 @@
         "line_ids": [
           "blr-yellow"
         ],
-        "status": "construction",
+        "status": "operational",
         "phase": "2",
         "is_interchange": false,
-        "opened_on": null,
-        "expected_completion": "2026-12",
+        "opened_on": "2006-11-11",
+        "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -693,13 +693,13 @@
         "line_ids": [
           "blr-yellow"
         ],
-        "status": "construction",
+        "status": "operational",
         "phase": "2",
         "is_interchange": false,
-        "opened_on": null,
-        "expected_completion": "2026-12",
+        "opened_on": "2006-11-11",
+        "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -720,13 +720,13 @@
         "line_ids": [
           "blr-yellow"
         ],
-        "status": "construction",
+        "status": "operational",
         "phase": "2",
         "is_interchange": false,
-        "opened_on": null,
-        "expected_completion": "2026-12",
+        "opened_on": "2006-11-11",
+        "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -747,13 +747,13 @@
         "line_ids": [
           "blr-yellow"
         ],
-        "status": "construction",
+        "status": "operational",
         "phase": "2",
         "is_interchange": true,
-        "opened_on": null,
-        "expected_completion": "2026-12",
+        "opened_on": "2006-11-11",
+        "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -774,13 +774,13 @@
         "line_ids": [
           "blr-yellow"
         ],
-        "status": "construction",
+        "status": "operational",
         "phase": "2",
         "is_interchange": false,
-        "opened_on": null,
-        "expected_completion": "2026-12",
+        "opened_on": "2006-11-11",
+        "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -801,13 +801,13 @@
         "line_ids": [
           "blr-yellow"
         ],
-        "status": "construction",
+        "status": "operational",
         "phase": "2",
         "is_interchange": false,
-        "opened_on": null,
-        "expected_completion": "2026-12",
+        "opened_on": "2006-11-11",
+        "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -834,7 +834,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -861,7 +861,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -888,7 +888,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -915,7 +915,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -942,7 +942,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -969,7 +969,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -996,7 +996,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -1023,7 +1023,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -1050,7 +1050,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -1077,7 +1077,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "underground",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -1104,7 +1104,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "underground",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -1131,7 +1131,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "underground",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -1159,7 +1159,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -1186,7 +1186,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -1213,7 +1213,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -1240,7 +1240,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -1267,7 +1267,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -1294,7 +1294,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -1321,7 +1321,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -1348,7 +1348,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -1375,7 +1375,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -1402,7 +1402,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -1429,7 +1429,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -1456,7 +1456,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -1483,7 +1483,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -1510,7 +1510,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -1537,7 +1537,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -1564,7 +1564,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -1591,7 +1591,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -1618,7 +1618,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -1646,7 +1646,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -1673,7 +1673,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -1700,7 +1700,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -1727,7 +1727,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -1754,7 +1754,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -1781,7 +1781,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "underground",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -1808,7 +1808,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "underground",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -1835,7 +1835,34 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
+        "last_verified": "2026-10-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.599976,
+          12.916733
+        ]
+      },
+      "properties": {
+        "station_id": "blr-jayadeva-interchange-uc",
+        "name": "Jayadeva Interchange (u/c)",
+        "city_id": "bengaluru",
+        "city": "Bengaluru",
+        "line_ids": [
+          "blr-yellow"
+        ],
+        "status": "construction",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2026-12",
+        "layout": "elevated",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -1862,7 +1889,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -1889,7 +1916,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -1916,7 +1943,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -1943,7 +1970,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -1970,7 +1997,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -1997,7 +2024,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -2024,7 +2051,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -2051,7 +2078,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -2078,7 +2105,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -2105,7 +2132,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -2132,7 +2159,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -2153,13 +2180,13 @@
         "line_ids": [
           "blr-yellow"
         ],
-        "status": "construction",
+        "status": "operational",
         "phase": "2",
         "is_interchange": false,
-        "opened_on": null,
-        "expected_completion": "2026-12",
+        "opened_on": "2006-11-11",
+        "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -2186,7 +2213,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -2213,7 +2240,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -2240,7 +2267,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+bmrcl",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -2267,7 +2294,7 @@
         "opened_on": null,
         "expected_completion": "2026-12",
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -2294,7 +2321,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -2321,7 +2348,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -2348,7 +2375,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -2375,7 +2402,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -2402,7 +2429,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -2429,7 +2456,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -2456,7 +2483,7 @@
         "opened_on": null,
         "expected_completion": "2026-12",
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -2483,7 +2510,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -2510,7 +2537,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -2537,7 +2564,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -2564,7 +2591,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -2591,7 +2618,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -2618,7 +2645,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -2637,7 +2664,6 @@
         "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
-          "mum-line-1",
           "mum-line-3"
         ],
         "status": "operational",
@@ -2646,7 +2672,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -2673,7 +2699,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -2700,7 +2726,7 @@
         "opened_on": null,
         "expected_completion": "2026-12",
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -2727,7 +2753,7 @@
         "opened_on": null,
         "expected_completion": "2026-12",
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -2754,7 +2780,7 @@
         "opened_on": null,
         "expected_completion": "2026-12",
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -2775,13 +2801,13 @@
         "line_ids": [
           "mum-line-4"
         ],
-        "status": "construction",
+        "status": "planned",
         "phase": "4",
         "is_interchange": false,
         "opened_on": null,
-        "expected_completion": "2026-12",
+        "expected_completion": "2028",
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -2808,7 +2834,7 @@
         "opened_on": null,
         "expected_completion": "2026-12",
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -2835,7 +2861,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -2862,7 +2888,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -2889,7 +2915,7 @@
         "opened_on": null,
         "expected_completion": "2026-12",
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -2910,13 +2936,13 @@
         "line_ids": [
           "mum-line-4"
         ],
-        "status": "construction",
+        "status": "planned",
         "phase": "4",
         "is_interchange": false,
         "opened_on": null,
-        "expected_completion": "2026-12",
+        "expected_completion": "2028",
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -2935,16 +2961,15 @@
         "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
-          "mum-line-2a",
           "mum-line-7"
         ],
         "status": "operational",
         "phase": "1",
-        "is_interchange": true,
+        "is_interchange": false,
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -2963,16 +2988,15 @@
         "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
-          "mum-line-2a",
-          "mum-line-7"
+          "mum-line-2a"
         ],
         "status": "operational",
         "phase": "2A",
-        "is_interchange": true,
+        "is_interchange": false,
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -2999,7 +3023,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -3026,7 +3050,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -3053,7 +3077,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -3080,7 +3104,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -3107,7 +3131,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -3134,7 +3158,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -3161,7 +3185,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -3188,7 +3212,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -3215,7 +3239,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -3242,7 +3266,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -3261,7 +3285,6 @@
         "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
-          "mum-line-1",
           "mum-line-7"
         ],
         "status": "operational",
@@ -3270,7 +3293,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -3297,7 +3320,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -3324,7 +3347,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -3351,7 +3374,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -3370,16 +3393,15 @@
         "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
-          "mum-line-1",
           "mum-line-2a"
         ],
         "status": "operational",
         "phase": "2A",
-        "is_interchange": true,
+        "is_interchange": false,
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -3406,7 +3428,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -3433,7 +3455,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -3460,7 +3482,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -3487,7 +3509,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -3514,7 +3536,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -3541,7 +3563,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -3568,7 +3590,7 @@
         "opened_on": null,
         "expected_completion": "2026-12",
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -3595,7 +3617,7 @@
         "opened_on": null,
         "expected_completion": "2026-12",
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -3622,7 +3644,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -3649,7 +3671,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -3676,7 +3698,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -3703,7 +3725,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -3730,7 +3752,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -3757,7 +3779,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -3784,7 +3806,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -3811,7 +3833,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -3838,7 +3860,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -3865,7 +3887,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -3892,7 +3914,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -3919,7 +3941,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -3946,7 +3968,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -3973,7 +3995,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -4000,7 +4022,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -4027,7 +4049,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -4054,7 +4076,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -4081,7 +4103,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -4108,7 +4130,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -4135,7 +4157,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -4162,7 +4184,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -4189,7 +4211,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -4216,7 +4238,7 @@
         "opened_on": null,
         "expected_completion": "2026-12",
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -4243,7 +4265,7 @@
         "opened_on": null,
         "expected_completion": "2026-12",
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -4270,7 +4292,7 @@
         "opened_on": null,
         "expected_completion": "2026-12",
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -4297,7 +4319,7 @@
         "opened_on": null,
         "expected_completion": "2026-12",
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -4318,13 +4340,13 @@
         "line_ids": [
           "mum-line-4"
         ],
-        "status": "construction",
+        "status": "planned",
         "phase": "4",
         "is_interchange": false,
         "opened_on": null,
-        "expected_completion": "2026-12",
+        "expected_completion": "2028",
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -4345,13 +4367,13 @@
         "line_ids": [
           "mum-line-4"
         ],
-        "status": "construction",
+        "status": "planned",
         "phase": "4",
         "is_interchange": false,
         "opened_on": null,
-        "expected_completion": "2026-12",
+        "expected_completion": "2028",
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -4372,13 +4394,13 @@
         "line_ids": [
           "mum-line-4"
         ],
-        "status": "construction",
+        "status": "planned",
         "phase": "4",
         "is_interchange": false,
         "opened_on": null,
-        "expected_completion": "2026-12",
+        "expected_completion": "2028",
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -4399,13 +4421,13 @@
         "line_ids": [
           "mum-line-4"
         ],
-        "status": "construction",
+        "status": "planned",
         "phase": "4",
         "is_interchange": false,
         "opened_on": null,
-        "expected_completion": "2026-12",
+        "expected_completion": "2028",
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -4426,13 +4448,13 @@
         "line_ids": [
           "mum-line-4"
         ],
-        "status": "construction",
+        "status": "planned",
         "phase": "4",
         "is_interchange": false,
         "opened_on": null,
-        "expected_completion": "2026-12",
+        "expected_completion": "2028",
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -4453,13 +4475,13 @@
         "line_ids": [
           "mum-line-4"
         ],
-        "status": "construction",
+        "status": "planned",
         "phase": "4",
         "is_interchange": false,
         "opened_on": null,
-        "expected_completion": "2026-12",
+        "expected_completion": "2028",
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -4480,13 +4502,13 @@
         "line_ids": [
           "mum-line-4"
         ],
-        "status": "construction",
+        "status": "planned",
         "phase": "4",
         "is_interchange": false,
         "opened_on": null,
-        "expected_completion": "2026-12",
+        "expected_completion": "2028",
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -4507,13 +4529,13 @@
         "line_ids": [
           "mum-line-4"
         ],
-        "status": "construction",
+        "status": "planned",
         "phase": "4",
         "is_interchange": false,
         "opened_on": null,
-        "expected_completion": "2026-12",
+        "expected_completion": "2028",
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -4534,13 +4556,13 @@
         "line_ids": [
           "mum-line-4"
         ],
-        "status": "construction",
+        "status": "planned",
         "phase": "4",
         "is_interchange": false,
         "opened_on": null,
-        "expected_completion": "2026-12",
+        "expected_completion": "2028",
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -4561,13 +4583,40 @@
         "line_ids": [
           "mum-line-4"
         ],
-        "status": "construction",
+        "status": "planned",
         "phase": "4",
         "is_interchange": false,
         "opened_on": null,
-        "expected_completion": "2026-12",
+        "expected_completion": "2028",
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
+        "last_verified": "2026-10-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.867452,
+          19.25108
+        ]
+      },
+      "properties": {
+        "station_id": "mum-dahisar-east-line-9",
+        "name": "Dahisar (East) [Line 9]",
+        "city_id": "mumbai",
+        "city": "Mumbai",
+        "line_ids": [
+          "mum-line-2a"
+        ],
+        "status": "operational",
+        "phase": "2A",
+        "is_interchange": false,
+        "opened_on": "2006-11-11",
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -4594,7 +4643,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -4621,7 +4670,7 @@
         "opened_on": null,
         "expected_completion": "2026-12",
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -4648,7 +4697,7 @@
         "opened_on": null,
         "expected_completion": "2026-12",
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -4675,7 +4724,7 @@
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
-        "source": "osm+mmrda",
+        "source": "osm",
         "last_verified": "2026-10-05"
       }
     },
@@ -4907,8 +4956,8 @@
         ]
       },
       "properties": {
-        "station_id": "del-kirti-nagar-blue-line",
-        "name": "Kirti Nagar (Blue Line)",
+        "station_id": "del-kirti-nagar",
+        "name": "Kirti Nagar",
         "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
@@ -5043,8 +5092,8 @@
         ]
       },
       "properties": {
-        "station_id": "del-hauz-khas-yellow-line",
-        "name": "Hauz Khas (Yellow Line)",
+        "station_id": "del-hauz-khas",
+        "name": "Hauz Khas",
         "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
@@ -5207,8 +5256,8 @@
         ]
       },
       "properties": {
-        "station_id": "del-welcome-red-line",
-        "name": "Welcome (Red Line)",
+        "station_id": "del-welcome",
+        "name": "Welcome",
         "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
@@ -5316,8 +5365,8 @@
         ]
       },
       "properties": {
-        "station_id": "del-inderlok-red-line",
-        "name": "Inderlok (Red Line)",
+        "station_id": "del-inderlok",
+        "name": "Inderlok",
         "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
@@ -5398,8 +5447,8 @@
         ]
       },
       "properties": {
-        "station_id": "del-netaji-subhash-place-red-line",
-        "name": "Netaji Subhash Place (Red Line)",
+        "station_id": "del-netaji-subhash-place",
+        "name": "Netaji Subhash Place",
         "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
@@ -5597,34 +5646,6 @@
         "line_ids": [
           "del-yellow",
           "del-airport"
-        ],
-        "status": "operational",
-        "phase": "II",
-        "is_interchange": true,
-        "opened_on": "2006-11-11",
-        "expected_completion": null,
-        "layout": "elevated",
-        "source": "osm",
-        "last_verified": "2026-10-05"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          77.15136,
-          28.654541
-        ]
-      },
-      "properties": {
-        "station_id": "del-kirti-nagar-green-line",
-        "name": "Kirti Nagar (Green Line)",
-        "city_id": "delhi",
-        "city": "Delhi",
-        "line_ids": [
-          "del-blue",
-          "del-green"
         ],
         "status": "operational",
         "phase": "II",
@@ -5845,34 +5866,6 @@
         "status": "operational",
         "phase": "III",
         "is_interchange": false,
-        "opened_on": "2006-11-11",
-        "expected_completion": null,
-        "layout": "elevated",
-        "source": "osm",
-        "last_verified": "2026-10-05"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          77.205045,
-          28.543369
-        ]
-      },
-      "properties": {
-        "station_id": "del-hauz-khas-magenta-line",
-        "name": "Hauz Khas (Magenta Line)",
-        "city_id": "delhi",
-        "city": "Delhi",
-        "line_ids": [
-          "del-yellow",
-          "del-magenta"
-        ],
-        "status": "operational",
-        "phase": "III",
-        "is_interchange": true,
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
@@ -6296,8 +6289,8 @@
         ]
       },
       "properties": {
-        "station_id": "del-botanical-garden-magenta-line",
-        "name": "Botanical Garden (Magenta Line)",
+        "station_id": "del-botanical-garden",
+        "name": "Botanical Garden",
         "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
@@ -6378,8 +6371,8 @@
         ]
       },
       "properties": {
-        "station_id": "del-anand-vihar-blue-line",
-        "name": "Anand Vihar (Blue Line)",
+        "station_id": "del-anand-vihar",
+        "name": "Anand Vihar",
         "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
@@ -6406,8 +6399,8 @@
         ]
       },
       "properties": {
-        "station_id": "del-karkarduma-pink-line",
-        "name": "Karkarduma (Pink Line)",
+        "station_id": "del-karkarduma",
+        "name": "Karkarduma",
         "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
@@ -6812,7 +6805,7 @@
         ]
       },
       "properties": {
-        "station_id": "del-kirti-nagar",
+        "station_id": "del-kirti-nagar-2",
         "name": "Kirti Nagar",
         "city_id": "delhi",
         "city": "Delhi",
@@ -8029,7 +8022,7 @@
         ]
       },
       "properties": {
-        "station_id": "del-r-k-ashram-marg",
+        "station_id": "del-ramakrishna-ashram-marg",
         "name": "R K Ashram Marg",
         "city_id": "delhi",
         "city": "Delhi",
@@ -8120,34 +8113,6 @@
         "status": "construction",
         "phase": "I",
         "is_interchange": false,
-        "opened_on": null,
-        "expected_completion": "2026-12",
-        "layout": "elevated",
-        "source": "osm",
-        "last_verified": "2026-10-05"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          77.171474,
-          28.671886
-        ]
-      },
-      "properties": {
-        "station_id": "del-inderlok",
-        "name": "Inderlok",
-        "city_id": "delhi",
-        "city": "Delhi",
-        "line_ids": [
-          "del-red",
-          "del-green"
-        ],
-        "status": "construction",
-        "phase": "I",
-        "is_interchange": true,
         "opened_on": null,
         "expected_completion": "2026-12",
         "layout": "elevated",
@@ -8999,34 +8964,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          77.277024,
-          28.672402
-        ]
-      },
-      "properties": {
-        "station_id": "del-welcome-pink-line",
-        "name": "Welcome (Pink Line)",
-        "city_id": "delhi",
-        "city": "Delhi",
-        "line_ids": [
-          "del-red",
-          "del-pink"
-        ],
-        "status": "operational",
-        "phase": "III",
-        "is_interchange": true,
-        "opened_on": "2006-11-11",
-        "expected_completion": null,
-        "layout": "elevated",
-        "source": "osm",
-        "last_verified": "2026-10-05"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           77.284843,
           28.664676
         ]
@@ -9141,8 +9078,8 @@
         ]
       },
       "properties": {
-        "station_id": "del-mayur-vihar-i-pink-line",
-        "name": "Mayur Vihar - I (Pink Line)",
+        "station_id": "del-mayur-vihar-i",
+        "name": "Mayur Vihar - I",
         "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
@@ -9358,40 +9295,12 @@
         ]
       },
       "properties": {
-        "station_id": "del-dilli-haat-ina-pink-line",
-        "name": "Dilli Haat - INA (Pink Line)",
+        "station_id": "del-dilli-haat-ina",
+        "name": "Dilli Haat - INA",
         "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
           "del-yellow",
-          "del-pink"
-        ],
-        "status": "operational",
-        "phase": "III",
-        "is_interchange": true,
-        "opened_on": "2006-11-11",
-        "expected_completion": null,
-        "layout": "elevated",
-        "source": "osm",
-        "last_verified": "2026-10-05"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          77.238506,
-          28.56958
-        ]
-      },
-      "properties": {
-        "station_id": "del-lajpat-nagar-pink-line",
-        "name": "Lajpat Nagar (Pink Line)",
-        "city_id": "delhi",
-        "city": "Delhi",
-        "line_ids": [
-          "del-violet",
           "del-pink"
         ],
         "status": "operational",
@@ -9468,8 +9377,8 @@
         ]
       },
       "properties": {
-        "station_id": "del-rajouri-garden-pink-line",
-        "name": "Rajouri Garden (Pink Line)",
+        "station_id": "del-rajouri-garden",
+        "name": "Rajouri Garden",
         "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
@@ -9478,174 +9387,6 @@
         ],
         "status": "operational",
         "phase": "III",
-        "is_interchange": true,
-        "opened_on": "2006-11-11",
-        "expected_completion": null,
-        "layout": "elevated",
-        "source": "osm",
-        "last_verified": "2026-10-05"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          77.12272,
-          28.649056
-        ]
-      },
-      "properties": {
-        "station_id": "del-rajouri-garden-blue-line",
-        "name": "Rajouri Garden (Blue Line)",
-        "city_id": "delhi",
-        "city": "Delhi",
-        "line_ids": [
-          "del-blue",
-          "del-pink"
-        ],
-        "status": "operational",
-        "phase": "I",
-        "is_interchange": true,
-        "opened_on": "2006-11-11",
-        "expected_completion": null,
-        "layout": "elevated",
-        "source": "osm",
-        "last_verified": "2026-10-05"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          77.154261,
-          28.694715
-        ]
-      },
-      "properties": {
-        "station_id": "del-netaji-subhash-place-pink-line",
-        "name": "Netaji Subhash Place (Pink Line)",
-        "city_id": "delhi",
-        "city": "Delhi",
-        "line_ids": [
-          "del-red",
-          "del-pink"
-        ],
-        "status": "operational",
-        "phase": "III",
-        "is_interchange": true,
-        "opened_on": "2006-11-11",
-        "expected_completion": null,
-        "layout": "elevated",
-        "source": "osm",
-        "last_verified": "2026-10-05"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          77.181949,
-          28.705782
-        ]
-      },
-      "properties": {
-        "station_id": "del-azadpur-pink-line",
-        "name": "Azadpur (Pink Line)",
-        "city_id": "delhi",
-        "city": "Delhi",
-        "line_ids": [
-          "del-yellow",
-          "del-pink"
-        ],
-        "status": "operational",
-        "phase": "III",
-        "is_interchange": true,
-        "opened_on": "2006-11-11",
-        "expected_completion": null,
-        "layout": "elevated",
-        "source": "osm",
-        "last_verified": "2026-10-05"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          77.180372,
-          28.707045
-        ]
-      },
-      "properties": {
-        "station_id": "del-azadpur-yellow-line",
-        "name": "Azadpur (Yellow Line)",
-        "city_id": "delhi",
-        "city": "Delhi",
-        "line_ids": [
-          "del-yellow",
-          "del-pink"
-        ],
-        "status": "operational",
-        "phase": "I",
-        "is_interchange": true,
-        "opened_on": "2006-11-11",
-        "expected_completion": null,
-        "layout": "elevated",
-        "source": "osm",
-        "last_verified": "2026-10-05"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          77.209302,
-          28.574177
-        ]
-      },
-      "properties": {
-        "station_id": "del-dilli-haat-ina-yellow-line",
-        "name": "Dilli Haat - INA (Yellow Line)",
-        "city_id": "delhi",
-        "city": "Delhi",
-        "line_ids": [
-          "del-yellow",
-          "del-pink"
-        ],
-        "status": "operational",
-        "phase": "I",
-        "is_interchange": true,
-        "opened_on": "2006-11-11",
-        "expected_completion": null,
-        "layout": "elevated",
-        "source": "osm",
-        "last_verified": "2026-10-05"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          77.305518,
-          28.648318
-        ]
-      },
-      "properties": {
-        "station_id": "del-karkarduma-blue-line",
-        "name": "Karkarduma (Blue Line)",
-        "city_id": "delhi",
-        "city": "Delhi",
-        "line_ids": [
-          "del-blue",
-          "del-pink"
-        ],
-        "status": "operational",
-        "phase": "II",
         "is_interchange": true,
         "opened_on": "2006-11-11",
         "expected_completion": null,
@@ -9837,34 +9578,6 @@
         "status": "operational",
         "phase": "III",
         "is_interchange": false,
-        "opened_on": "2006-11-11",
-        "expected_completion": null,
-        "layout": "elevated",
-        "source": "osm",
-        "last_verified": "2026-10-05"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          77.169187,
-          28.672707
-        ]
-      },
-      "properties": {
-        "station_id": "del-inderlok-green-line",
-        "name": "Inderlok (Green Line)",
-        "city_id": "delhi",
-        "city": "Delhi",
-        "line_ids": [
-          "del-red",
-          "del-green"
-        ],
-        "status": "operational",
-        "phase": "II",
-        "is_interchange": true,
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
@@ -10417,33 +10130,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          77.249551,
-          28.620602
-        ]
-      },
-      "properties": {
-        "station_id": "del-indraprastha-2",
-        "name": "Indraprastha",
-        "city_id": "delhi",
-        "city": "Delhi",
-        "line_ids": [
-          "del-blue"
-        ],
-        "status": "operational",
-        "phase": "I",
-        "is_interchange": false,
-        "opened_on": "2006-11-11",
-        "expected_completion": null,
-        "layout": "elevated",
-        "source": "osm",
-        "last_verified": "2026-10-05"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           77.268013,
           28.623312
         ]
@@ -10594,34 +10280,6 @@
         "status": "operational",
         "phase": "I",
         "is_interchange": false,
-        "opened_on": "2006-11-11",
-        "expected_completion": null,
-        "layout": "elevated",
-        "source": "osm",
-        "last_verified": "2026-10-05"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          77.28954,
-          28.604064
-        ]
-      },
-      "properties": {
-        "station_id": "del-mayur-vihar-i-blue-line",
-        "name": "Mayur Vihar - I (Blue Line)",
-        "city_id": "delhi",
-        "city": "Delhi",
-        "line_ids": [
-          "del-blue",
-          "del-pink"
-        ],
-        "status": "operational",
-        "phase": "I",
-        "is_interchange": true,
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
@@ -11020,8 +10678,8 @@
         ]
       },
       "properties": {
-        "station_id": "del-dwarka-kakrola-grey-line",
-        "name": "Dwarka - Kakrola (Grey Line)",
+        "station_id": "del-dwarka-kakrola",
+        "name": "Dwarka - Kakrola",
         "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
@@ -11030,34 +10688,6 @@
         ],
         "status": "operational",
         "phase": "III",
-        "is_interchange": true,
-        "opened_on": "2006-11-11",
-        "expected_completion": null,
-        "layout": "elevated",
-        "source": "osm",
-        "last_verified": "2026-10-05"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          77.022763,
-          28.614936
-        ]
-      },
-      "properties": {
-        "station_id": "del-dwarka-kakrola-blue-line",
-        "name": "Dwarka - Kakrola (Blue Line)",
-        "city_id": "delhi",
-        "city": "Delhi",
-        "line_ids": [
-          "del-blue",
-          "del-grey"
-        ],
-        "status": "operational",
-        "phase": "I",
         "is_interchange": true,
         "opened_on": "2006-11-11",
         "expected_completion": null,
