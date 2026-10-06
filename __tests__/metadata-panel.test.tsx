@@ -32,6 +32,7 @@ describe("MetadataPanel Component", () => {
       stations_count: 11,
       color: "#FFD700",
       source: "mock",
+      references: ["https://example.com/source-doc"],
       last_verified: "2026-10-05",
     };
 
@@ -61,6 +62,11 @@ describe("MetadataPanel Component", () => {
     expect(screen.getByText("broad")).toBeInTheDocument();
     expect(screen.getByText("2004-12-20")).toBeInTheDocument();
     expect(screen.getByText("Verified: 2026-10-05")).toBeInTheDocument();
+
+    // References citation link
+    const refLink = screen.getByRole("link", { name: "https://example.com/source-doc" });
+    expect(refLink).toBeInTheDocument();
+    expect(refLink).toHaveAttribute("href", "https://example.com/source-doc");
   });
 
   it("renders under-construction segment with expected completion date", () => {
@@ -80,6 +86,7 @@ describe("MetadataPanel Component", () => {
       stations_count: 12,
       color: "#EC4899",
       source: "mock",
+      references: [],
       last_verified: "2026-10-05",
     };
 

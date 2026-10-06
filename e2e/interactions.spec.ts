@@ -1,11 +1,11 @@
 import { test, expect } from "@playwright/test";
 
-test.describe("Interactions & Metadata Panels (Milestone 5)", () => {
+test.describe("Interactions & Metadata Panels", () => {
   test.beforeEach(async ({ page }) => {
     await page.goto("/");
   });
 
-  test("verifies milestone header, map container, and data-last-updated", async ({
+  test("verifies app header, map container, and data-last-updated", async ({
     page,
   }) => {
     await expect(page.getByRole("heading", { name: "Indian Metro Network Tracker" })).toBeVisible();

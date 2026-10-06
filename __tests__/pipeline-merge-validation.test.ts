@@ -59,6 +59,7 @@ describe("saveActiveDataset pre-save validation", () => {
       gauge: "standard",
       stations_count: 2,
       source: "osm+dmrc",
+      references: [],
       last_verified: "2026-10-05",
       inaugurated_on: "2002-12-25",
       expected_completion: null,

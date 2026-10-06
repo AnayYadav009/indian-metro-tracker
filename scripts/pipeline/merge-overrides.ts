@@ -33,6 +33,8 @@ export interface CityOverrideData {
     color: string;
     stations_count?: number;
     coordinates?: [number, number][];
+    references?: string[];
+    last_verified?: string;
   }>;
   interchangeStationNames?: string[];
   stationOverrides?: Record<
@@ -123,6 +125,12 @@ export function mergeCityOverrides(
     const computedKm = calculateLineStringLengthKm(coords);
     const lengthKm = Number(computedKm.toFixed(1));
     const segmentSource = isOsmSourced ? "osm" : "manual";
+    if (segmentSource === "manual" && !segOverride.last_verified) {
+      throw new Error(
+        `Manual segment '${segOverride.segment_id}' must explicitly provide last_verified date in overrides.`
+      );
+    }
+    const lastVerifiedDate = segmentSource === "manual" ? segOverride.last_verified! : today;
 
     segmentFeatures.push({
       type: "Feature",
@@ -149,7 +157,8 @@ export function mergeCityOverrides(
         stations_count: stationsCount,
         color: segOverride.color,
         source: segmentSource,
-        last_verified: today,
+        references: segOverride.references || [],
+        last_verified: lastVerifiedDate,
       },
     });
 

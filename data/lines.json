@@ -90,81 +90,81 @@
   {
     "id": "del-red",
     "name": "Red Line",
-    "city_id": "delhi",
     "city": "Delhi",
     "color": "#FF4040",
-    "operator": "DMRC"
+    "operator": "DMRC",
+    "city_id": "delhi"
   },
   {
     "id": "del-yellow",
     "name": "Yellow Line",
-    "city_id": "delhi",
     "city": "Delhi",
     "color": "#FFD700",
-    "operator": "DMRC"
+    "operator": "DMRC",
+    "city_id": "delhi"
   },
   {
     "id": "del-blue",
     "name": "Blue Line",
-    "city_id": "delhi",
     "city": "Delhi",
     "color": "#0070BB",
-    "operator": "DMRC"
+    "operator": "DMRC",
+    "city_id": "delhi"
   },
   {
     "id": "del-green",
     "name": "Green Line",
-    "city_id": "delhi",
     "city": "Delhi",
     "color": "#008000",
-    "operator": "DMRC"
+    "operator": "DMRC",
+    "city_id": "delhi"
   },
   {
     "id": "del-violet",
     "name": "Violet Line",
-    "city_id": "delhi",
     "city": "Delhi",
     "color": "#553592",
-    "operator": "DMRC"
+    "operator": "DMRC",
+    "city_id": "delhi"
   },
   {
     "id": "del-airport",
     "name": "Airport Express",
-    "city_id": "delhi",
     "city": "Delhi",
     "color": "#FF8C00",
-    "operator": "DMRC"
+    "operator": "DMRC",
+    "city_id": "delhi"
   },
   {
     "id": "del-pink",
     "name": "Pink Line",
-    "city_id": "delhi",
     "city": "Delhi",
     "color": "#FC8EAC",
-    "operator": "DMRC"
+    "operator": "DMRC",
+    "city_id": "delhi"
   },
   {
     "id": "del-magenta",
     "name": "Magenta Line",
-    "city_id": "delhi",
     "city": "Delhi",
     "color": "#CC338B",
-    "operator": "DMRC"
+    "operator": "DMRC",
+    "city_id": "delhi"
   },
   {
     "id": "del-grey",
     "name": "Grey Line",
-    "city_id": "delhi",
     "city": "Delhi",
     "color": "#838996",
-    "operator": "DMRC"
+    "operator": "DMRC",
+    "city_id": "delhi"
   },
   {
     "id": "del-silver",
     "name": "Silver Line (Golden)",
-    "city_id": "delhi",
     "city": "Delhi",
     "color": "#A0A0A0",
-    "operator": "DMRC"
+    "operator": "DMRC",
+    "city_id": "delhi"
   }
 ]

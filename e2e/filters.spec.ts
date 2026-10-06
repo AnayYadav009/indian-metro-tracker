@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-test.describe("Filter UI and Map Interaction (Milestone 4)", () => {
+test.describe("Filter UI and Map Interaction", () => {
   test.beforeEach(async ({ page }) => {
     await page.goto("/");
   });

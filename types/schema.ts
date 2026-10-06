@@ -56,6 +56,9 @@ export const SegmentPropertiesSchema = z
     stations_count: z.number().int().nonnegative(),
     color: z.string().regex(/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/, "Invalid hex color"),
     source: z.string().min(1),
+    references: z
+      .array(z.string().regex(/^https?:\/\//, "Reference must be a valid http or https URL"))
+      .default([]),
     last_verified: z
       .string()
       .regex(/^\d{4}-\d{2}-\d{2}$/, "Format must be YYYY-MM-DD"),
@@ -97,6 +100,16 @@ export const SegmentPropertiesSchema = z
           code: z.ZodIssueCode.custom,
           message: "inaugurated_on must be null when status is 'planned'",
           path: ["inaugurated_on"],
+        });
+      }
+    }
+
+    if (data.source.toLowerCase().includes("manual")) {
+      if (!data.references || data.references.length === 0) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: "references array must contain at least one valid URL when source contains 'manual'",
+          path: ["references"],
         });
       }
     }

@@ -110,8 +110,13 @@ export function validateMetroDataset(rawData: {
     seenLineIds.add(l.id);
     lineById.set(l.id, l);
 
-    if (!cityById.has(l.city_id)) {
+    const lineCity = cityById.get(l.city_id);
+    if (!lineCity) {
       errors.push(`Line '${l.id}' references unknown city_id '${l.city_id}'`);
+    } else if (l.city !== lineCity.name) {
+      errors.push(
+        `Line '${l.id}' city '${l.city}' must match city name '${lineCity.name}' for city_id '${l.city_id}'`
+      );
     }
   });
 
@@ -129,12 +134,18 @@ export function validateMetroDataset(rawData: {
     seenSegmentIds.add(props.segment_id);
 
     // Verify city_id and city exist
-    if (!cityById.has(props.city_id)) {
+    const segCity = cityById.get(props.city_id);
+    if (!segCity) {
       errors.push(
         `Segment '${props.segment_id}' references unknown city_id '${props.city_id}'`
       );
+    } else if (props.city !== segCity.name) {
+      errors.push(
+        `Segment '${props.segment_id}' city '${props.city}' must match city name '${segCity.name}' for city_id '${props.city_id}'`
+      );
     }
-    const city = cityById.get(props.city_id) || cityByNameOrId.get(props.city.toLowerCase());
+
+    const city = segCity || cityByNameOrId.get(props.city.toLowerCase());
     if (!city) {
       errors.push(
         `Segment "${props.segment_id}" references unknown city "${props.city}"`
@@ -146,6 +157,16 @@ export function validateMetroDataset(rawData: {
           `Segment "${props.segment_id}" has phase "${props.phase}", but city "${city.name}" only allows phases: [${city.phases.join(", ")}]`
         );
       }
+    }
+
+    // Verify manual source has non-empty references
+    if (
+      props.source.toLowerCase().includes("manual") &&
+      (!props.references || props.references.length === 0)
+    ) {
+      errors.push(
+        `Segment '${props.segment_id}' has source '${props.source}' but missing or empty references array`
+      );
     }
 
     // Verify line_id exists
@@ -181,12 +202,18 @@ export function validateMetroDataset(rawData: {
     seenStationIds.add(props.station_id);
 
     // Verify city_id and city exist
-    if (!cityById.has(props.city_id)) {
+    const stCity = cityById.get(props.city_id);
+    if (!stCity) {
       errors.push(
         `Station '${props.station_id}' references unknown city_id '${props.city_id}'`
       );
+    } else if (props.city !== stCity.name) {
+      errors.push(
+        `Station '${props.station_id}' city '${props.city}' must match city name '${stCity.name}' for city_id '${props.city_id}'`
+      );
     }
-    const city = cityById.get(props.city_id) || cityByNameOrId.get(props.city.toLowerCase());
+
+    const city = stCity || cityByNameOrId.get(props.city.toLowerCase());
     if (!city) {
       errors.push(
         `Station "${props.station_id}" references unknown city "${props.city}"`

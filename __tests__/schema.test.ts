@@ -301,4 +301,71 @@ describe("Schema Validation Tests", () => {
     expect(result.valid).toBe(false);
     expect(result.errors.some((e) => e.includes("unknown city_id 'atlantis'"))).toBe(true);
   });
+
+  it("rejects manual segment when references array is missing or empty", () => {
+    const invalidManualProps = {
+      segment_id: "test-manual-1",
+      line_id: "del-yellow",
+      line_name: "Yellow Line",
+      city_id: "delhi",
+      city: "Delhi",
+      operator: "DMRC",
+      status: "operational",
+      phase: "I",
+      length_km: 10,
+      gauge: "broad",
+      inaugurated_on: "2004-12-20",
+      expected_completion: null,
+      stations_count: 5,
+      color: "#FFD700",
+      source: "manual",
+      references: [], // Empty references must fail
+      last_verified: "2026-10-05",
+    };
+
+    expect(SegmentPropertiesSchema.safeParse(invalidManualProps).success).toBe(false);
+
+    const validManualProps = {
+      ...invalidManualProps,
+      references: ["https://example.com/delhi-metro-spec"],
+    };
+    expect(SegmentPropertiesSchema.safeParse(validManualProps).success).toBe(true);
+  });
+
+  it("rejects record where city does not match the name in cities.json for city_id", () => {
+    const testCities = [
+      {
+        id: "delhi",
+        name: "Delhi",
+        bbox: [76.84, 28.4, 77.35, 28.88] as [number, number, number, number],
+        operator: "DMRC",
+        phases: ["I", "II"],
+      },
+    ];
+
+    const mismatchedCityLine = [
+      {
+        id: "del-yellow",
+        name: "Yellow Line",
+        city_id: "delhi",
+        city: "Mumbai", // Mismatched: city_id is delhi, but city is Mumbai
+        color: "#FFD700",
+        operator: "DMRC",
+      },
+    ];
+
+    const result = validateMetroDataset({
+      cities: testCities,
+      lines: mismatchedCityLine,
+      segments: { type: "FeatureCollection", features: [] },
+      stations: { type: "FeatureCollection", features: [] },
+    });
+
+    expect(result.valid).toBe(false);
+    expect(
+      result.errors.some((e) =>
+        e.includes("must match city name 'Delhi' for city_id 'delhi'")
+      )
+    ).toBe(true);
+  });
 });

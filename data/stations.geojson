@@ -6601,12 +6601,11 @@
         "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
-          "del-magenta",
-          "del-silver"
+          "del-magenta"
         ],
         "status": "operational",
         "phase": "III",
-        "is_interchange": true,
+        "is_interchange": false,
         "opened_on": "2006-11-11",
         "expected_completion": null,
         "layout": "elevated",
@@ -6845,10 +6844,10 @@
         "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
-          "del-silver"
+          "del-magenta"
         ],
         "status": "construction",
-        "phase": "IV",
+        "phase": "III",
         "is_interchange": false,
         "opened_on": null,
         "expected_completion": "2026-12",
@@ -6953,10 +6952,10 @@
         "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
-          "del-silver"
+          "del-yellow"
         ],
         "status": "construction",
-        "phase": "IV",
+        "phase": "I",
         "is_interchange": false,
         "opened_on": null,
         "expected_completion": "2026-12",
@@ -7035,8 +7034,7 @@
         "city": "Delhi",
         "line_ids": [
           "del-violet",
-          "del-pink",
-          "del-silver"
+          "del-pink"
         ],
         "status": "construction",
         "phase": "II",
@@ -7549,10 +7547,10 @@
         "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
-          "del-silver"
+          "del-yellow"
         ],
         "status": "construction",
-        "phase": "IV",
+        "phase": "I",
         "is_interchange": false,
         "opened_on": null,
         "expected_completion": "2026-12",
@@ -8523,10 +8521,10 @@
         "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
-          "del-silver"
+          "del-yellow"
         ],
         "status": "construction",
-        "phase": "IV",
+        "phase": "I",
         "is_interchange": false,
         "opened_on": null,
         "expected_completion": "2026-12",
@@ -8550,10 +8548,10 @@
         "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
-          "del-silver"
+          "del-yellow"
         ],
         "status": "construction",
-        "phase": "IV",
+        "phase": "I",
         "is_interchange": false,
         "opened_on": null,
         "expected_completion": "2026-12",
@@ -8658,10 +8656,10 @@
         "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
-          "del-silver"
+          "del-magenta"
         ],
         "status": "construction",
-        "phase": "IV",
+        "phase": "III",
         "is_interchange": false,
         "opened_on": null,
         "expected_completion": "2026-12",
@@ -8685,10 +8683,10 @@
         "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
-          "del-silver"
+          "del-violet"
         ],
         "status": "construction",
-        "phase": "IV",
+        "phase": "II",
         "is_interchange": false,
         "opened_on": null,
         "expected_completion": "2026-12",
@@ -9394,8 +9392,7 @@
         "city": "Delhi",
         "line_ids": [
           "del-violet",
-          "del-pink",
-          "del-silver"
+          "del-pink"
         ],
         "status": "operational",
         "phase": "III",

@@ -107,6 +107,7 @@ describe("useMetroStore Zustand State Management", () => {
       stations_count: 10,
       color: "#FFD700",
       source: "mock",
+      references: [],
       last_verified: "2026-10-05",
     };
 
