@@ -34,6 +34,7 @@ import {
   stationCircleLayer,
   getSelectedStationLayer,
   stationLabelsLayer,
+  withFilter,
 } from "./map-layers";
 import { HoverTooltip } from "./hover-tooltip";
 
@@ -71,11 +72,11 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
   const dataset = useMemo(() => getMetroData(), []);
 
   // MapLibre WebGL Layer Filter Expressions (filters applied directly by GPU without re-parsing GeoJSON)
-  const operationalFilter = useMemo<any>(() => {
+  const operationalFilter = useMemo(() => {
     if (!selectedStatuses.includes("operational")) {
       return ["==", ["get", "status"], "__NONE__"];
     }
-    const conditions: any[] = ["all", ["==", ["get", "status"], "operational"]];
+    const conditions: unknown[] = ["all", ["==", ["get", "status"], "operational"]];
 
     if (selectedCityId) {
       const activeCity = dataset.cities.find((c) => c.id === selectedCityId);
@@ -91,11 +92,11 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
     return conditions;
   }, [selectedStatuses, selectedCityId, selectedPhases, dataset.cities]);
 
-  const constructionFilter = useMemo<any>(() => {
+  const constructionFilter = useMemo(() => {
     if (!selectedStatuses.includes("construction")) {
       return ["==", ["get", "status"], "__NONE__"];
     }
-    const conditions: any[] = ["all", ["==", ["get", "status"], "construction"]];
+    const conditions: unknown[] = ["all", ["==", ["get", "status"], "construction"]];
 
     if (selectedCityId) {
       const activeCity = dataset.cities.find((c) => c.id === selectedCityId);
@@ -111,11 +112,11 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
     return conditions;
   }, [selectedStatuses, selectedCityId, selectedPhases, dataset.cities]);
 
-  const plannedFilter = useMemo<any>(() => {
+  const plannedFilter = useMemo(() => {
     if (!selectedStatuses.includes("planned")) {
       return ["==", ["get", "status"], "__NONE__"];
     }
-    const conditions: any[] = ["all", ["==", ["get", "status"], "planned"]];
+    const conditions: unknown[] = ["all", ["==", ["get", "status"], "planned"]];
 
     if (selectedCityId) {
       const activeCity = dataset.cities.find((c) => c.id === selectedCityId);
@@ -131,8 +132,8 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
     return conditions;
   }, [selectedStatuses, selectedCityId, selectedPhases, dataset.cities]);
 
-  const stationFilter = useMemo<any>(() => {
-    const conditions: any[] = ["all"];
+  const stationFilter = useMemo(() => {
+    const conditions: unknown[] = ["all"];
 
     if (selectedStatuses.length < 3) {
       conditions.push(["in", ["get", "status"], ["literal", selectedStatuses]]);
@@ -320,17 +321,17 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
         <Source id="metro-segments" type="geojson" data={dataset.segments}>
           {/* Highlight glowing underlay for selected segment */}
           <Layer {...getSelectedSegmentLayer(selectedSegmentId)} />
-          <Layer {...({ ...operationalLineLayer, filter: operationalFilter } as any)} />
-          <Layer {...({ ...constructionLineLayer, filter: constructionFilter } as any)} />
-          <Layer {...({ ...plannedLineLayer, filter: plannedFilter } as any)} />
+          <Layer {...withFilter(operationalLineLayer, operationalFilter)} />
+          <Layer {...withFilter(constructionLineLayer, constructionFilter)} />
+          <Layer {...withFilter(plannedLineLayer, plannedFilter)} />
         </Source>
 
         {/* Metro Stations: Points with interchange indicators and labels */}
         <Source id="metro-stations" type="geojson" data={dataset.stations}>
           {/* Highlight ring for selected station */}
           <Layer {...getSelectedStationLayer(selectedStationId)} />
-          <Layer {...({ ...stationCircleLayer, ...(stationFilter ? { filter: stationFilter } : {}) } as any)} />
-          <Layer {...({ ...stationLabelsLayer, ...(stationFilter ? { filter: stationFilter } : {}) } as any)} />
+          <Layer {...withFilter(stationCircleLayer, stationFilter)} />
+          <Layer {...withFilter(stationLabelsLayer, stationFilter)} />
         </Source>
       </Map>
 
