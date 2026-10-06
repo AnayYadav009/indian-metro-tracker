@@ -228,3 +228,84 @@ export function getMockCityNames(): string[] {
 
   return Array.from(mockCityNames);
 }
+
+/**
+ * Derives a formatted summary of the active dataset:
+ * - Formats the latest last_verified date (e.g., "Oct 2026")
+ * - Extracts and formats unique source organizations (e.g., "OSM, DMRC, BMRCL, MMRDA")
+ */
+export function getDatasetMetadataSummary(): {
+  lastVerifiedFormatted: string;
+  sourcesFormatted: string;
+  badgeLabel: string;
+} {
+  const { segments, stations } = getMetroData();
+
+  let latestDateStr = "";
+  const sourceTokens = new Set<string>();
+
+  const processRecord = (props?: { source?: string; last_verified?: string }) => {
+    if (!props) return;
+    if (props.last_verified && props.last_verified > latestDateStr) {
+      latestDateStr = props.last_verified;
+    }
+    if (props.source) {
+      const parts = props.source.split(/[+,]/).map((p) => p.trim().toLowerCase());
+      for (const part of parts) {
+        if (part) sourceTokens.add(part);
+      }
+    }
+  };
+
+  for (const seg of segments.features) {
+    processRecord(seg.properties);
+  }
+  for (const stn of stations.features) {
+    processRecord(stn.properties);
+  }
+
+  let dateFormatted = "Unknown";
+  if (latestDateStr) {
+    try {
+      const [year, month] = latestDateStr.split("-");
+      if (year && month) {
+        const monthNames = [
+          "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+          "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+        ];
+        const monthIdx = parseInt(month, 10) - 1;
+        dateFormatted = `${monthNames[monthIdx] || month} ${year}`;
+      } else {
+        dateFormatted = latestDateStr;
+      }
+    } catch {
+      dateFormatted = latestDateStr;
+    }
+  }
+
+  const formattedSources = Array.from(sourceTokens).map((tok) => {
+    switch (tok) {
+      case "osm":
+        return "OSM";
+      case "dmrc":
+        return "DMRC";
+      case "bmrcl":
+        return "BMRCL";
+      case "mmrda":
+        return "MMRDA";
+      case "mock":
+        return "Mock";
+      default:
+        return tok.toUpperCase();
+    }
+  });
+
+  const sourcesStr = formattedSources.length > 0 ? formattedSources.join(", ") : "OSM";
+  const badgeLabel = `Data: ${dateFormatted} (${sourcesStr})`;
+
+  return {
+    lastVerifiedFormatted: dateFormatted,
+    sourcesFormatted: sourcesStr,
+    badgeLabel,
+  };
+}

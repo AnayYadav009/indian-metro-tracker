@@ -9,6 +9,7 @@ import {
   getSegmentById,
   getStationById,
   validateMetroDataset,
+  getDatasetMetadataSummary,
 } from "@/lib/data";
 
 describe("Metro Data Loader & Milestone 3 Acceptance Criteria", () => {
@@ -23,6 +24,13 @@ describe("Metro Data Loader & Milestone 3 Acceptance Criteria", () => {
     expect(dataset.lines.length).toBeGreaterThan(0);
     expect(dataset.segments.features.length).toBeGreaterThan(0);
     expect(dataset.stations.features.length).toBeGreaterThan(0);
+  });
+
+  it("derives dynamic dataset metadata summary with last verified date and sources", () => {
+    const summary = getDatasetMetadataSummary();
+    expect(summary).toBeDefined();
+    expect(summary.badgeLabel).toMatch(/^Data: [A-Z][a-z]{2} \d{4} \(.+\)$/);
+    expect(summary.badgeLabel).not.toContain("MoHUA");
   });
 
   describe("Milestone 3 Criteria Verification", () => {
