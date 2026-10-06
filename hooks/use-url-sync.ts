@@ -64,12 +64,12 @@ export function useUrlSync() {
         const [type, id] = selectedParam.split(":");
         if (type === "segment" && id) {
           const seg = getSegmentById(id);
-          if (seg) {
+          if (seg && (!city || seg.properties.city_id === city)) {
             setSelectedFeature({ type: "segment", data: seg.properties });
           }
         } else if (type === "station" && id) {
           const stn = getStationById(id);
-          if (stn) {
+          if (stn && (!city || stn.properties.city_id === city)) {
             setSelectedFeature({ type: "station", data: stn.properties });
           }
         }

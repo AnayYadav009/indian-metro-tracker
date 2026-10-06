@@ -32,6 +32,36 @@ describe("useMetroStore Zustand State Management", () => {
     expect(useMetroStore.getState().selectedPhases).toEqual([]);
   });
 
+  it("clears selectedFeature when switching to a city that does not own the feature", () => {
+    const mockStation: StationProperties = {
+      station_id: "del-rajiv-chowk",
+      name: "Rajiv Chowk",
+      city_id: "delhi",
+      city: "Delhi",
+      line_ids: ["del-yellow"],
+      status: "operational",
+      phase: "I",
+      is_interchange: true,
+      opened_on: "2005-01-01",
+      expected_completion: null,
+      layout: "underground",
+      source: "mock",
+      last_verified: "2026-10-05",
+    };
+
+    useMetroStore.getState().setSelectedCity("delhi");
+    useMetroStore.getState().setSelectedFeature({
+      type: "station",
+      data: mockStation,
+    });
+    expect(useMetroStore.getState().selectedFeature).not.toBeNull();
+
+    // Switch city to bengaluru: should clear Delhi feature
+    useMetroStore.getState().setSelectedCity("bengaluru");
+    expect(useMetroStore.getState().selectedCityId).toBe("bengaluru");
+    expect(useMetroStore.getState().selectedFeature).toBeNull();
+  });
+
   it("toggles status filters correctly", () => {
     // Initially all 3 are active
     expect(useMetroStore.getState().selectedStatuses.length).toBe(3);

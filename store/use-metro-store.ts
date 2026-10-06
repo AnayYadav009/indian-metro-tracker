@@ -52,10 +52,19 @@ export const useMetroStore = create<MetroStoreState>((set) => ({
   hoveredFeature: null,
 
   setSelectedCity: (cityId) =>
-    set({
-      selectedCityId: cityId,
-      // Reset selected phases when changing city because phases are city-specific
-      selectedPhases: [],
+    set((state) => {
+      // Clear selected feature if switching cities and feature belongs to a different city
+      const shouldClearFeature =
+        cityId !== null &&
+        state.selectedFeature !== null &&
+        state.selectedFeature.data.city_id !== cityId;
+
+      return {
+        selectedCityId: cityId,
+        // Reset selected phases when changing city because phases are city-specific
+        selectedPhases: [],
+        ...(shouldClearFeature ? { selectedFeature: null } : {}),
+      };
     }),
 
   toggleStatus: (status) =>
