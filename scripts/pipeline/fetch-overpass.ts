@@ -20,7 +20,8 @@ const OVERPASS_ENDPOINTS = [
 export async function fetchOverpassDataForCity(
   cityId: string,
   bbox: [number, number, number, number],
-  force = false
+  force = false,
+  backoffMs = 1000
 ): Promise<any> {
   const [minLng, minLat, maxLng, maxLat] = bbox;
   const rawDir = path.resolve(process.cwd(), "data", "raw");
@@ -64,7 +65,8 @@ out body geom;
 `;
 
   let lastError: Error | null = null;
-  for (const endpoint of OVERPASS_ENDPOINTS) {
+  for (let i = 0; i < OVERPASS_ENDPOINTS.length; i++) {
+    const endpoint = OVERPASS_ENDPOINTS[i];
     try {
       console.log(`   Trying ${endpoint}...`);
       const response = await fetch(endpoint, {
@@ -87,12 +89,33 @@ out body geom;
         throw new Error("Invalid Overpass response: missing 'elements' array");
       }
 
-      fs.writeFileSync(cacheFile, JSON.stringify(json, null, 2), "utf-8");
+      // Atomically write cache to avoid partial file corruption
+      const tempCacheFile = `${cacheFile}.tmp`;
+      fs.writeFileSync(tempCacheFile, JSON.stringify(json, null, 2), "utf-8");
+      fs.renameSync(tempCacheFile, cacheFile);
+
       console.log(`✅ Saved ${json.elements.length} elements for ${cityId} to ${cacheFile}`);
       return json;
     } catch (err: any) {
       console.warn(`   ⚠️ Endpoint ${endpoint} failed: ${err.message}`);
       lastError = err;
+
+      // Small backoff before attempting next mirror endpoint
+      if (i < OVERPASS_ENDPOINTS.length - 1 && backoffMs > 0) {
+        await new Promise((resolve) => setTimeout(resolve, backoffMs));
+      }
+    }
+  }
+
+  // If all endpoints failed but an existing cache file exists, gracefully fall back with warning
+  if (fs.existsSync(cacheFile)) {
+    try {
+      console.warn(
+        `⚠️  All Overpass mirrors failed for ${cityId}. Falling back to previously cached dataset at ${cacheFile}.`
+      );
+      return JSON.parse(fs.readFileSync(cacheFile, "utf-8"));
+    } catch {
+      // If cached file is unreadable, proceed to throw lastError
     }
   }
 
