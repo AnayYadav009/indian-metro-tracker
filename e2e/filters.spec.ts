@@ -35,17 +35,27 @@ test.describe("Filter UI and Map Interaction", () => {
   test("allows selecting a city and shows dynamic city phases", async ({
     page,
   }) => {
+    // When no city is selected, phase pills are hidden and empty hint is visible
+    await expect(page.getByTestId("phase-filter-empty-hint")).toBeVisible();
+    await expect(page.getByTestId("phase-pill-all")).not.toBeVisible();
+    await expect(page.getByTestId("phase-pill-I")).not.toBeVisible();
+
     // Click Delhi
     await page.getByTestId("city-select-delhi").click();
 
-    // Delhi phases I-IV should appear
+    // Delhi phases I-IV should appear and empty hint should disappear
+    await expect(page.getByTestId("phase-filter-empty-hint")).not.toBeVisible();
     await expect(page.getByTestId("phase-pill-I")).toBeVisible();
+    await expect(page.getByTestId("phase-pill-I")).toHaveText("Phase I");
     await expect(page.getByTestId("phase-pill-IV")).toBeVisible();
+    await expect(page.getByTestId("phase-pill-IV")).toHaveText("Phase IV");
 
     // Click Bengaluru
     await page.getByTestId("city-select-bengaluru").click();
     await expect(page.getByTestId("phase-pill-1")).toBeVisible();
+    await expect(page.getByTestId("phase-pill-1")).toHaveText("Phase 1");
     await expect(page.getByTestId("phase-pill-2B")).toBeVisible();
+    await expect(page.getByTestId("phase-pill-2B")).toHaveText("Phase 2B");
   });
 
   test("toggles status filters and reset button works", async ({ page }) => {

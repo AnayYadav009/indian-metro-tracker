@@ -47,13 +47,15 @@ export function useUrlSync() {
         }
       }
 
-      // Hydrate phases
+      // Hydrate phases only if city is present
       const phaseParam = params.get("phase");
-      if (phaseParam) {
+      if (city && phaseParam) {
         const phases = phaseParam.split(",").map((p) => decodeURIComponent(p.trim())).filter(Boolean);
         if (phases.length > 0) {
           setPhases(phases);
         }
+      } else {
+        setPhases([]);
       }
 
       // Hydrate selection: ?selected=segment:del-yellow-seg-01 or ?selected=station:del-rajiv-chowk
@@ -92,7 +94,7 @@ export function useUrlSync() {
         params.set("status", selectedStatuses.join(","));
       }
 
-      if (selectedPhases.length > 0) {
+      if (selectedCityId && selectedPhases.length > 0) {
         params.set("phase", selectedPhases.join(","));
       }
 

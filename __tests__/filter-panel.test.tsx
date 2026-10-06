@@ -76,4 +76,22 @@ describe("FilterPanel Component", () => {
     fireEvent.click(collapseBtn);
     expect(screen.getByTestId("filter-search-input")).toBeInTheDocument();
   });
+
+  it("shows muted hint when no city is selected and shows city phase pills when city is chosen", () => {
+    render(<FilterPanel />);
+    expect(screen.getByTestId("phase-filter-empty-hint")).toBeInTheDocument();
+    expect(
+      screen.getByText("Select a city to filter by phase")
+    ).toBeInTheDocument();
+    expect(screen.queryByTestId("phase-pill-I")).not.toBeInTheDocument();
+
+    // Select Delhi
+    const delhiBtn = screen.getByTestId("city-select-delhi");
+    fireEvent.click(delhiBtn);
+
+    expect(screen.queryByTestId("phase-filter-empty-hint")).not.toBeInTheDocument();
+    expect(screen.getByTestId("phase-pill-I")).toBeInTheDocument();
+    expect(screen.getByTestId("phase-pill-I")).toHaveTextContent("Phase I");
+    expect(screen.getByTestId("phase-pill-IV")).toHaveTextContent("Phase IV");
+  });
 });
