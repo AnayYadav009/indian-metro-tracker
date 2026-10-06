@@ -26,7 +26,7 @@ describe("Map Canvas Components & Rendering", () => {
     expect(screen.getByText("Loading Map Canvas...")).toBeInTheDocument();
   });
 
-  it("renders MapCanvas with container, layers, and persistent OSM attribution", () => {
+  it("renders MapCanvas with container, sources, and line layers", () => {
     render(<MapCanvas />);
     expect(screen.getByTestId("map-container")).toBeInTheDocument();
     expect(screen.getByTestId("mock-maplibre-map")).toBeInTheDocument();
@@ -34,10 +34,5 @@ describe("Map Canvas Components & Rendering", () => {
     expect(screen.getAllByTestId("mock-map-source").length).toBe(2);
     // 7 layers: segment glow + 3 line status layers + station highlight + station circles + station labels
     expect(screen.getAllByTestId("mock-map-layer").length).toBe(7);
-
-    const attribution = screen.getByTestId("osm-attribution");
-    expect(attribution).toBeInTheDocument();
-    expect(attribution).toHaveTextContent("© OpenStreetMap contributors");
-    expect(attribution).toHaveTextContent("OpenFreeMap");
   });
 });

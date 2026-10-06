@@ -9,6 +9,7 @@ import { MapLegend } from "@/components/legend/map-legend";
 import { MockBanner } from "@/components/ui/mock-banner";
 import { NetworkStats } from "@/components/filters/network-stats";
 import { EmptyFilterState } from "@/components/map/empty-state";
+import { OsmAttribution } from "@/components/map/osm-attribution";
 import { BASEMAP_CONFIG } from "@/lib/map-config";
 import { getDatasetMetadataSummary } from "@/lib/data";
 
@@ -64,9 +65,17 @@ export default function HomePage() {
       <main className="relative h-full w-full flex-1 overflow-hidden">
         <FilterPanel />
         <MetadataPanel />
-        <MapLegend />
         <EmptyFilterState />
         <MapCanvas className="h-full w-full" />
+
+        {/* Bottom-right unified container: Legend stacked above Attribution */}
+        <div
+          data-testid="bottom-right-container"
+          className="absolute bottom-2 right-2 z-20 flex flex-col items-end gap-1.5 pointer-events-none"
+        >
+          <MapLegend />
+          <OsmAttribution />
+        </div>
       </main>
     </div>
   );

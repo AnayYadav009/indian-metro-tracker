@@ -40,7 +40,7 @@ export function MapLegend({ className = "" }: MapLegendProps) {
   return (
     <div
       data-testid="map-legend"
-      className={`absolute bottom-6 right-4 z-20 flex flex-col rounded-xl border border-slate-800 bg-slate-900/95 shadow-2xl backdrop-blur-md transition-all duration-200 ${
+      className={`relative z-20 flex flex-col rounded-xl border border-slate-800 bg-slate-900/95 shadow-2xl backdrop-blur-md transition-all duration-200 pointer-events-auto ${
         isExpanded ? "w-64 sm:w-72" : "w-auto"
       } ${className}`}
     >

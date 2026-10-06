@@ -5,6 +5,7 @@ import { X } from "lucide-react";
 import { useMetroStore } from "@/store/use-metro-store";
 import { SegmentDetail } from "./segment-detail";
 import { StationDetail } from "./station-detail";
+import { OsmAttribution } from "@/components/map/osm-attribution";
 
 export function MetadataPanel() {
   const selectedFeature = useMetroStore((state) => state.selectedFeature);
@@ -54,6 +55,14 @@ export function MetadataPanel() {
         ) : (
           <StationDetail station={selectedFeature.data} />
         )}
+      </div>
+
+      {/* Mobile-only visible attribution docked at the bottom of the open sheet */}
+      <div className="mt-3 pt-2 border-t border-slate-800/60 md:hidden">
+        <OsmAttribution
+          data-testid="osm-attribution-mobile"
+          className="border-0 bg-transparent px-0 py-0 shadow-none text-[10px]"
+        />
       </div>
     </div>
   );
