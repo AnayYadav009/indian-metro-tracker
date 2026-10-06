@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "node scripts/serve.mjs",
     "lint": "next lint",
     "format": "prettier --write .",
     "typecheck": "tsc --noEmit",
@@ -14,7 +14,8 @@
     "test:e2e": "playwright test",
     "validate:data": "npx tsx scripts/validate-data.ts",
     "pipeline:fetch": "npx tsx scripts/pipeline/fetch-overpass.ts",
-    "pipeline:build": "npx tsx scripts/pipeline/build-real-data.ts"
+    "pipeline:build": "npx tsx scripts/pipeline/build-real-data.ts",
+    "pipeline:all": "npx tsx scripts/pipeline/build-all.ts"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
