@@ -99,6 +99,7 @@ function migrateStations(stationsCollection: any, cityLookup: Map<string, string
           opened_on: props.opened_on ?? null,
           expected_completion: props.expected_completion ?? null,
           layout: props.layout,
+          // Historical migration fallbacks: kept deliberately for backwards-compatibility of this one-off script
           source: props.source ?? "mock",
           last_verified: props.last_verified ?? "2026-10-05",
         },

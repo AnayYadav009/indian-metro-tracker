@@ -202,6 +202,26 @@ describe("Schema Validation Tests", () => {
     };
 
     expect(StationFeatureSchema.safeParse(validStation).success).toBe(true);
+
+    // Missing last_verified must fail
+    const missingLastVerified = {
+      ...validStation,
+      properties: {
+        ...validStation.properties,
+        last_verified: undefined,
+      },
+    };
+    expect(StationFeatureSchema.safeParse(missingLastVerified).success).toBe(false);
+
+    // Missing source must fail
+    const missingSource = {
+      ...validStation,
+      properties: {
+        ...validStation.properties,
+        source: undefined,
+      },
+    };
+    expect(StationFeatureSchema.safeParse(missingSource).success).toBe(false);
   });
 
   it("validates dynamic per-city phase constraints in validateMetroDataset", () => {

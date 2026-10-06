@@ -163,11 +163,10 @@ export const StationPropertiesSchema = z
       .regex(/^(\d{4}-\d{2}|\d{4})$/, "Format must be YYYY-MM or YYYY")
       .nullable(),
     layout: LayoutSchema,
-    source: z.string().default("mock"),
+    source: z.string().min(1, "source is required"),
     last_verified: z
       .string()
-      .regex(/^\d{4}-\d{2}-\d{2}$/, "Format must be YYYY-MM-DD")
-      .default("2026-10-05"),
+      .regex(/^\d{4}-\d{2}-\d{2}$/, "Format must be YYYY-MM-DD"),
     completion_unconfirmed: z.boolean().default(false).optional(),
   })
   .superRefine((data, ctx) => {
