@@ -34,6 +34,8 @@ import {
   getSelectedStationLayer,
   stationLabelsLayer,
   withFilter,
+  buildStatusFilter,
+  buildStationFilter,
 } from "./map-layers";
 import { HoverTooltip } from "./hover-tooltip";
 
@@ -71,74 +73,25 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
   const dataset = useMemo(() => getMetroData(), []);
 
   // MapLibre WebGL Layer Filter Expressions (filters applied directly by GPU without re-parsing GeoJSON)
-  const operationalFilter = useMemo(() => {
-    if (!selectedStatuses.includes("operational")) {
-      return ["==", ["get", "status"], "__NONE__"];
-    }
-    const conditions: unknown[] = ["all", ["==", ["get", "status"], "operational"]];
+  const operationalFilter = useMemo(
+    () => buildStatusFilter("operational", selectedStatuses, selectedCityId, selectedPhases),
+    [selectedStatuses, selectedCityId, selectedPhases]
+  );
 
-    if (selectedCityId) {
-      conditions.push(["==", ["get", "city_id"], selectedCityId]);
-    }
+  const constructionFilter = useMemo(
+    () => buildStatusFilter("construction", selectedStatuses, selectedCityId, selectedPhases),
+    [selectedStatuses, selectedCityId, selectedPhases]
+  );
 
-    if (selectedPhases.length > 0) {
-      conditions.push(["in", ["get", "phase"], ["literal", selectedPhases]]);
-    }
+  const plannedFilter = useMemo(
+    () => buildStatusFilter("planned", selectedStatuses, selectedCityId, selectedPhases),
+    [selectedStatuses, selectedCityId, selectedPhases]
+  );
 
-    return conditions;
-  }, [selectedStatuses, selectedCityId, selectedPhases]);
-
-  const constructionFilter = useMemo(() => {
-    if (!selectedStatuses.includes("construction")) {
-      return ["==", ["get", "status"], "__NONE__"];
-    }
-    const conditions: unknown[] = ["all", ["==", ["get", "status"], "construction"]];
-
-    if (selectedCityId) {
-      conditions.push(["==", ["get", "city_id"], selectedCityId]);
-    }
-
-    if (selectedPhases.length > 0) {
-      conditions.push(["in", ["get", "phase"], ["literal", selectedPhases]]);
-    }
-
-    return conditions;
-  }, [selectedStatuses, selectedCityId, selectedPhases]);
-
-  const plannedFilter = useMemo(() => {
-    if (!selectedStatuses.includes("planned")) {
-      return ["==", ["get", "status"], "__NONE__"];
-    }
-    const conditions: unknown[] = ["all", ["==", ["get", "status"], "planned"]];
-
-    if (selectedCityId) {
-      conditions.push(["==", ["get", "city_id"], selectedCityId]);
-    }
-
-    if (selectedPhases.length > 0) {
-      conditions.push(["in", ["get", "phase"], ["literal", selectedPhases]]);
-    }
-
-    return conditions;
-  }, [selectedStatuses, selectedCityId, selectedPhases]);
-
-  const stationFilter = useMemo(() => {
-    const conditions: unknown[] = ["all"];
-
-    if (selectedStatuses.length < 3) {
-      conditions.push(["in", ["get", "status"], ["literal", selectedStatuses]]);
-    }
-
-    if (selectedCityId) {
-      conditions.push(["==", ["get", "city_id"], selectedCityId]);
-    }
-
-    if (selectedPhases.length > 0) {
-      conditions.push(["in", ["get", "phase"], ["literal", selectedPhases]]);
-    }
-
-    return conditions.length === 1 ? undefined : conditions;
-  }, [selectedStatuses, selectedCityId, selectedPhases]);
+  const stationFilter = useMemo(
+    () => buildStationFilter(selectedStatuses, selectedCityId, selectedPhases),
+    [selectedStatuses, selectedCityId, selectedPhases]
+  );
 
   // Pan/zoom map when city selection changes
   useEffect(() => {
