@@ -1,6 +1,11 @@
 import fs from "node:fs";
 import path from "node:path";
-import { calculateLineStringLengthKm, pointToPolylineDistanceM } from "../../lib/geo";
+import {
+  calculateLineStringLengthKm,
+  pointToPolylineDistanceM,
+  haversineDistanceKm,
+  haversineDistanceM,
+} from "../../lib/geo";
 import { slugify, type NormalizedCityData, type NormalizedSegment, type NormalizedStation } from "./normalize";
 import type { SegmentFeature, StationFeature } from "../../types/metro";
 
@@ -165,7 +170,7 @@ export function mergeCityOverrides(
 
     // Deduplication rule
     const existing = deduplicatedStations.find((s) => {
-      const dist = pointDistanceKm(station.coordinates, s.coords);
+      const dist = haversineDistanceKm(station.coordinates, s.coords);
       if (dist > dedupeRadiusKm) return false;
 
       const sameName =

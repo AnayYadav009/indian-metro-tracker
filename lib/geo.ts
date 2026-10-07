@@ -71,15 +71,18 @@ export function checkLengthMismatch(
  *
  * Coordinate order: [longitude, latitude] (WGS84).
  */
-export function pointToSegmentDistanceM(
+/**
+ * Internal helper to project a point onto a line segment in a local equirectangular flat coordinate space.
+ * Returns fractional parameter t [0, 1] and projected relative offsets nearX, nearY.
+ */
+function projectPointOntoSegment(
   point: [number, number],
   segStart: [number, number],
   segEnd: [number, number]
-): number {
+): { t: number; nearX: number; nearY: number } {
   const [pLng, pLat] = point;
   const cosLat = Math.cos((pLat * Math.PI) / 180);
 
-  // Project to a local flat coordinate system (units ≈ degrees scaled by cosLat for x)
   const ax = (segStart[0] - pLng) * cosLat;
   const ay = segStart[1] - pLat;
   const bx = (segEnd[0] - pLng) * cosLat;
@@ -89,19 +92,34 @@ export function pointToSegmentDistanceM(
   const dy = by - ay;
   const lenSq = dx * dx + dy * dy;
 
-  let nearX: number;
-  let nearY: number;
-
   if (lenSq === 0) {
-    // Zero-length segment: distance is point-to-point
-    nearX = ax;
-    nearY = ay;
-  } else {
-    const t = Math.max(0, Math.min(1, (-ax * dx + -ay * dy) / lenSq));
-    nearX = ax + t * dx;
-    nearY = ay + t * dy;
+    return { t: 0, nearX: ax, nearY: ay };
   }
 
+  const t = Math.max(0, Math.min(1, (-ax * dx + -ay * dy) / lenSq));
+  return {
+    t,
+    nearX: ax + t * dx,
+    nearY: ay + t * dy,
+  };
+}
+
+/**
+ * Calculates the shortest distance in metres from a point [lng, lat] to a line segment
+ * defined by [segStart, segEnd].
+ *
+ * Uses flat-earth approximation scaled by cos(lat) for segment projection, which is
+ * accurate to < 0.1% over typical transit segment lengths (< 50 km). Zero-length segments
+ * return the point-to-point distance.
+ *
+ * Coordinate order: [longitude, latitude] (WGS84).
+ */
+export function pointToSegmentDistanceM(
+  point: [number, number],
+  segStart: [number, number],
+  segEnd: [number, number]
+): number {
+  const { nearX, nearY } = projectPointOntoSegment(point, segStart, segEnd);
   // Convert back to approximate metres
   const distDeg = Math.sqrt(nearX * nearX + nearY * nearY);
   return distDeg * (Math.PI / 180) * 6_371_000;
@@ -130,22 +148,7 @@ export function nearestPointOnSegment(
   distanceM: number;
   t: number;
 } {
-  const [pLng, pLat] = point;
-  const cosLat = Math.cos((pLat * Math.PI) / 180);
-
-  const ax = (segStart[0] - pLng) * cosLat;
-  const ay = segStart[1] - pLat;
-  const bx = (segEnd[0] - pLng) * cosLat;
-  const by = segEnd[1] - pLat;
-
-  const dx = bx - ax;
-  const dy = by - ay;
-  const lenSq = dx * dx + dy * dy;
-
-  let t = 0;
-  if (lenSq > 0) {
-    t = Math.max(0, Math.min(1, (-ax * dx + -ay * dy) / lenSq));
-  }
+  const { t } = projectPointOntoSegment(point, segStart, segEnd);
 
   const nearestLng = segStart[0] + t * (segEnd[0] - segStart[0]);
   const nearestLat = segStart[1] + t * (segEnd[1] - segStart[1]);
