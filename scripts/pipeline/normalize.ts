@@ -41,24 +41,29 @@ export function slugify(str: string): string {
 }
 
 /**
+ * Tests whether an OSM element represents a metro station node.
+ */
+export function isStationNode(e: { type: string; tags?: Record<string, string> }): boolean {
+  if (e.type !== "node" || !e.tags || !e.tags.name) return false;
+  const tags = e.tags;
+  return (
+    tags.railway === "station" ||
+    tags.station === "subway" ||
+    tags.subway === "yes" ||
+    tags.station === "light_rail" ||
+    tags.light_rail === "yes" ||
+    (tags.railway === "construction" && (tags.construction === "station" || tags.subway === "yes"))
+  );
+}
+
+/**
  * Normalizes raw Overpass response elements into structured transit segments and stations.
  */
 export function normalizeOverpassCity(cityId: string, rawData: any): NormalizedCityData {
   const elements: any[] = rawData.elements || [];
 
   // 1. Extract stations (subway, light rail, and under-construction stations)
-  const stationNodes = elements.filter(
-    (e) =>
-      e.type === "node" &&
-      e.tags &&
-      e.tags.name &&
-      (e.tags.railway === "station" ||
-        e.tags.station === "subway" ||
-        e.tags.subway === "yes" ||
-        e.tags.station === "light_rail" ||
-        e.tags.light_rail === "yes" ||
-        (e.tags.railway === "construction" && (e.tags.construction === "station" || e.tags.subway === "yes")))
-  );
+  const stationNodes = elements.filter(isStationNode);
 
   const stationsMap = new Map<number, NormalizedStation>();
   for (const node of stationNodes) {
