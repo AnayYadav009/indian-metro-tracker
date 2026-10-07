@@ -3,6 +3,7 @@
 import React, { useMemo } from "react";
 import { useMetroStore } from "@/store/use-metro-store";
 import { getMetroData } from "@/lib/data";
+import { matchesSegmentFilter } from "@/lib/filter-utils";
 
 export function NetworkStats() {
   const selectedCityId = useMetroStore((state) => state.selectedCityId);
@@ -17,28 +18,11 @@ export function NetworkStats() {
       ? dataset.cities.find((c) => c.id === selectedCityId)
       : null;
 
-    const query = searchQuery.trim().toLowerCase();
+    const criteria = { activeCity, selectedStatuses, selectedPhases, searchQuery };
 
-    const filteredSegments = dataset.segments.features.filter((f) => {
-      const props = f.properties;
-      if (activeCity) {
-        if (
-          props.city.toLowerCase() !== activeCity.name.toLowerCase() &&
-          props.city.toLowerCase() !== activeCity.id.toLowerCase()
-        ) {
-          return false;
-        }
-      }
-      if (!selectedStatuses.includes(props.status)) return false;
-      if (selectedPhases.length > 0 && !selectedPhases.includes(props.phase)) return false;
-      if (query) {
-        const matchesLine = props.line_name.toLowerCase().includes(query);
-        const matchesCity = props.city.toLowerCase().includes(query);
-        const matchesPhase = props.phase.toLowerCase().includes(query);
-        if (!matchesLine && !matchesCity && !matchesPhase) return false;
-      }
-      return true;
-    });
+    const filteredSegments = dataset.segments.features.filter((f) =>
+      matchesSegmentFilter(f.properties, criteria)
+    );
 
     let operationalKm = 0;
     let constructionKm = 0;
