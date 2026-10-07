@@ -17,15 +17,8 @@ export function StatusFilter() {
   const getCountForStatus = (status: Status) => {
     return dataset.segments.features.filter((f) => {
       if (f.properties.status !== status) return false;
-      if (selectedCityId) {
-        const city = dataset.cities.find((c) => c.id === selectedCityId);
-        if (
-          city &&
-          f.properties.city.toLowerCase() !== city.name.toLowerCase() &&
-          f.properties.city.toLowerCase() !== city.id.toLowerCase()
-        ) {
-          return false;
-        }
+      if (selectedCityId && f.properties.city_id !== selectedCityId) {
+        return false;
       }
       return true;
     }).length;
