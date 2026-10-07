@@ -73,6 +73,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 - **`npm run pipeline:build`**: Normalize, merge overrides, and build dataset for a city (`tsx scripts/pipeline/build-real-data.ts`).
 - **`npm run pipeline:all`**: Run full pipeline build across all configured cities (`tsx scripts/pipeline/build-all.ts`).
 - **`npm run audit:dedupe`**: Audit station proximity deduplication and report candidate clusters (`tsx scripts/audit/dedupe-report.ts`).
+- **`npm run audit:data`**: Run full consistency and relational audit report (`tsx scripts/audit/consistency-report.ts`).
 
 ## Project Rules & Hard Constraints
 
