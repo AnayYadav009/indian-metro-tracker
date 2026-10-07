@@ -76,5 +76,3 @@ export function EmptyFilterState() {
     </div>
   );
 }
-
-export default EmptyFilterState;

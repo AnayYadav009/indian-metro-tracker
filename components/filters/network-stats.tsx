@@ -84,5 +84,3 @@ export function NetworkStats() {
     </div>
   );
 }
-
-export default NetworkStats;

@@ -323,5 +323,3 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
     </div>
   );
 }
-
-export default MapCanvas;
