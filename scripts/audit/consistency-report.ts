@@ -14,28 +14,13 @@ import {
   formatJsonReport,
 } from "./audit-engine";
 import type { BaselineFile } from "./audit-engine";
+import { loadMetroDatasetFromDisk } from "../lib/load-dataset";
 
 function main() {
   const dataDir = path.resolve(process.cwd(), "data");
   const reportsDir = path.resolve(process.cwd(), "reports/data-audit");
 
-  // Load data files
-  const citiesPath = path.join(dataDir, "cities.json");
-  const linesPath = path.join(dataDir, "lines.json");
-  const segmentsPath = path.join(dataDir, "segments.geojson");
-  const stationsPath = path.join(dataDir, "stations.geojson");
-
-  for (const p of [citiesPath, linesPath, segmentsPath, stationsPath]) {
-    if (!fs.existsSync(p)) {
-      console.error(`❌ Missing file: ${p}`);
-      process.exit(1);
-    }
-  }
-
-  const cities = JSON.parse(fs.readFileSync(citiesPath, "utf-8"));
-  const lines = JSON.parse(fs.readFileSync(linesPath, "utf-8"));
-  const segments = JSON.parse(fs.readFileSync(segmentsPath, "utf-8"));
-  const stations = JSON.parse(fs.readFileSync(stationsPath, "utf-8"));
+  const { cities, lines, segments, stations } = loadMetroDatasetFromDisk(dataDir);
 
   // Load overrides for self-intersection exemptions, intentional breaks, and out of scope stations
   const selfIntersectionExemptions: string[] = [];
