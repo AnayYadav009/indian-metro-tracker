@@ -1,0 +1,1768 @@
+[
+  {
+    "id": "blr-nagawara-proposed",
+    "name": "Nagawara (Proposed)",
+    "city": "bengaluru",
+    "assignedLines": [
+      "blr-pink"
+    ],
+    "status": "planned",
+    "phase": "2",
+    "dist_assigned": 2185,
+    "nearest_assigned_seg": "blr-pink-seg-01",
+    "dist_any": 2185,
+    "nearest_any_line": "blr-pink",
+    "perLine": {
+      "blr-pink": 2185
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-ajmal-khan-park",
+    "name": "Ajmal Khan Park",
+    "city": "delhi",
+    "assignedLines": [
+      "del-blue"
+    ],
+    "status": "construction",
+    "phase": "I",
+    "dist_assigned": 903,
+    "nearest_assigned_seg": "del-blue-seg-01",
+    "dist_any": 903,
+    "nearest_any_line": "del-blue",
+    "perLine": {
+      "del-blue": 903
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-ambedkar-nagar",
+    "name": "Ambedkar Nagar",
+    "city": "delhi",
+    "assignedLines": [
+      "del-yellow"
+    ],
+    "status": "construction",
+    "phase": "I",
+    "dist_assigned": 2507,
+    "nearest_assigned_seg": "del-yellow-seg-01",
+    "dist_any": 2507,
+    "nearest_any_line": "del-yellow",
+    "perLine": {
+      "del-yellow": 2507
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-anaj-mandi",
+    "name": "Anaj Mandi",
+    "city": "delhi",
+    "assignedLines": [
+      "del-yellow"
+    ],
+    "status": "construction",
+    "phase": "I",
+    "dist_assigned": 10999,
+    "nearest_assigned_seg": "del-yellow-seg-01",
+    "dist_any": 10999,
+    "nearest_any_line": "del-yellow",
+    "perLine": {
+      "del-yellow": 10999
+    },
+    "cls": "b",
+    "reason": "Belongs to Delhi Red Line Phase 4 extension (Rithala-Narela-Kundli), erroneously assigned to del-yellow",
+    "rec": "reassign to del-red"
+  },
+  {
+    "id": "del-anandamayee-marg",
+    "name": "Anandamayee Marg",
+    "city": "delhi",
+    "assignedLines": [
+      "del-violet"
+    ],
+    "status": "construction",
+    "phase": "II",
+    "dist_assigned": 1937,
+    "nearest_assigned_seg": "del-violet-seg-01",
+    "dist_any": 1937,
+    "nearest_any_line": "del-violet",
+    "perLine": {
+      "del-violet": 1937
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-ashok-vihar",
+    "name": "Ashok Vihar",
+    "city": "delhi",
+    "assignedLines": [
+      "del-yellow"
+    ],
+    "status": "construction",
+    "phase": "I",
+    "dist_assigned": 693,
+    "nearest_assigned_seg": "del-yellow-seg-01",
+    "dist_any": 693,
+    "nearest_any_line": "del-yellow",
+    "perLine": {
+      "del-yellow": 693
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-azadpur",
+    "name": "Azadpur",
+    "city": "delhi",
+    "assignedLines": [
+      "del-yellow",
+      "del-pink"
+    ],
+    "status": "construction",
+    "phase": "I",
+    "dist_assigned": 78,
+    "nearest_assigned_seg": "del-yellow-seg-01",
+    "dist_any": 78,
+    "nearest_any_line": "del-yellow",
+    "perLine": {
+      "del-yellow": 78,
+      "del-pink": 218
+    },
+    "cls": "c",
+    "reason": "Operational interchange station on-track for 1st line (<=4m), 200m offset from 2nd line polyline",
+    "rec": "fix geometry"
+  },
+  {
+    "id": "del-barwala",
+    "name": "Barwala",
+    "city": "delhi",
+    "assignedLines": [
+      "del-red"
+    ],
+    "status": "construction",
+    "phase": "I",
+    "dist_assigned": 6450,
+    "nearest_assigned_seg": "del-red-seg-01",
+    "dist_any": 6450,
+    "nearest_any_line": "del-red",
+    "perLine": {
+      "del-red": 6450
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-bawana",
+    "name": "Bawana",
+    "city": "delhi",
+    "assignedLines": [
+      "del-red"
+    ],
+    "status": "construction",
+    "phase": "I",
+    "dist_assigned": 10419,
+    "nearest_assigned_seg": "del-red-seg-01",
+    "dist_any": 10419,
+    "nearest_any_line": "del-red",
+    "perLine": {
+      "del-red": 10419
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-bawana-ind-area-i",
+    "name": "Bawana Ind. Area-I",
+    "city": "delhi",
+    "assignedLines": [
+      "del-red"
+    ],
+    "status": "construction",
+    "phase": "I",
+    "dist_assigned": 8528,
+    "nearest_assigned_seg": "del-red-seg-01",
+    "dist_any": 8528,
+    "nearest_any_line": "del-red",
+    "perLine": {
+      "del-red": 8528
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-bawana-ind-area-ii",
+    "name": "Bawana Ind. Area-II",
+    "city": "delhi",
+    "assignedLines": [
+      "del-red"
+    ],
+    "status": "construction",
+    "phase": "I",
+    "dist_assigned": 9636,
+    "nearest_assigned_seg": "del-red-seg-01",
+    "dist_any": 9636,
+    "nearest_any_line": "del-red",
+    "perLine": {
+      "del-red": 9636
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-bawana-jj-colony",
+    "name": "Bawana J.J. Colony",
+    "city": "delhi",
+    "assignedLines": [
+      "del-red"
+    ],
+    "status": "construction",
+    "phase": "I",
+    "dist_assigned": 10948,
+    "nearest_assigned_seg": "del-red-seg-01",
+    "dist_any": 10948,
+    "nearest_any_line": "del-red",
+    "perLine": {
+      "del-red": 10948
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-belvedere-towers",
+    "name": "Belvedere Towers",
+    "city": "delhi",
+    "assignedLines": [
+      "del-yellow"
+    ],
+    "status": "operational",
+    "phase": "I",
+    "dist_assigned": 1224,
+    "nearest_assigned_seg": "del-yellow-seg-01",
+    "dist_any": 1224,
+    "nearest_any_line": "del-yellow",
+    "perLine": {
+      "del-yellow": 1224
+    },
+    "cls": "e",
+    "reason": "Rapid Metro Gurugram system (separate operator/concession, out of DMRC scope)",
+    "rec": "exclude from scope"
+  },
+  {
+    "id": "del-cyber-city",
+    "name": "Cyber City",
+    "city": "delhi",
+    "assignedLines": [
+      "del-yellow"
+    ],
+    "status": "operational",
+    "phase": "I",
+    "dist_assigned": 1891,
+    "nearest_assigned_seg": "del-yellow-seg-01",
+    "dist_any": 1891,
+    "nearest_any_line": "del-yellow",
+    "perLine": {
+      "del-yellow": 1891
+    },
+    "cls": "e",
+    "reason": "Rapid Metro Gurugram system (separate operator/concession, out of DMRC scope)",
+    "rec": "exclude from scope"
+  },
+  {
+    "id": "del-daya-basti",
+    "name": "Daya Basti",
+    "city": "delhi",
+    "assignedLines": [
+      "del-red"
+    ],
+    "status": "construction",
+    "phase": "I",
+    "dist_assigned": 292,
+    "nearest_assigned_seg": "del-red-seg-01",
+    "dist_any": 292,
+    "nearest_any_line": "del-red",
+    "perLine": {
+      "del-red": 292
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-delhi-gate",
+    "name": "Delhi Gate",
+    "city": "delhi",
+    "assignedLines": [
+      "del-violet"
+    ],
+    "status": "construction",
+    "phase": "II",
+    "dist_assigned": 202,
+    "nearest_assigned_seg": "del-violet-seg-01",
+    "dist_any": 202,
+    "nearest_any_line": "del-violet",
+    "perLine": {
+      "del-violet": 202
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-derawal-nagar",
+    "name": "Derawal Nagar",
+    "city": "delhi",
+    "assignedLines": [
+      "del-yellow"
+    ],
+    "status": "construction",
+    "phase": "I",
+    "dist_assigned": 1156,
+    "nearest_assigned_seg": "del-yellow-seg-01",
+    "dist_any": 1156,
+    "nearest_any_line": "del-yellow",
+    "perLine": {
+      "del-yellow": 1156
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-district-court",
+    "name": "District Court",
+    "city": "delhi",
+    "assignedLines": [
+      "del-yellow"
+    ],
+    "status": "construction",
+    "phase": "I",
+    "dist_assigned": 1572,
+    "nearest_assigned_seg": "del-yellow-seg-01",
+    "dist_any": 1572,
+    "nearest_any_line": "del-yellow",
+    "perLine": {
+      "del-yellow": 1572
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-dlf-phase-1",
+    "name": "DLF Phase 1",
+    "city": "delhi",
+    "assignedLines": [
+      "del-yellow"
+    ],
+    "status": "operational",
+    "phase": "I",
+    "dist_assigned": 1080,
+    "nearest_assigned_seg": "del-yellow-seg-01",
+    "dist_any": 1080,
+    "nearest_any_line": "del-yellow",
+    "perLine": {
+      "del-yellow": 1080
+    },
+    "cls": "e",
+    "reason": "Rapid Metro Gurugram system (separate operator/concession, out of DMRC scope)",
+    "rec": "exclude from scope"
+  },
+  {
+    "id": "del-dlf-phase-2",
+    "name": "DLF Phase 2",
+    "city": "delhi",
+    "assignedLines": [
+      "del-yellow"
+    ],
+    "status": "operational",
+    "phase": "I",
+    "dist_assigned": 675,
+    "nearest_assigned_seg": "del-yellow-seg-01",
+    "dist_any": 675,
+    "nearest_any_line": "del-yellow",
+    "perLine": {
+      "del-yellow": 675
+    },
+    "cls": "e",
+    "reason": "Rapid Metro Gurugram system (separate operator/concession, out of DMRC scope)",
+    "rec": "exclude from scope"
+  },
+  {
+    "id": "del-dwarka-sector-28",
+    "name": "Dwarka Sector-28",
+    "city": "delhi",
+    "assignedLines": [
+      "del-airport"
+    ],
+    "status": "construction",
+    "phase": "II",
+    "dist_assigned": 3385,
+    "nearest_assigned_seg": "del-airport-seg-01",
+    "dist_any": 3385,
+    "nearest_any_line": "del-airport",
+    "perLine": {
+      "del-airport": 3385
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-ghanta-gharsabji-manti",
+    "name": "Ghanta Ghar/Sabji Manti",
+    "city": "delhi",
+    "assignedLines": [
+      "del-red"
+    ],
+    "status": "construction",
+    "phase": "I",
+    "dist_assigned": 1204,
+    "nearest_assigned_seg": "del-red-seg-01",
+    "dist_any": 1204,
+    "nearest_any_line": "del-red",
+    "perLine": {
+      "del-red": 1204
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-greater-kailash-2",
+    "name": "Greater Kailash",
+    "city": "delhi",
+    "assignedLines": [
+      "del-violet"
+    ],
+    "status": "construction",
+    "phase": "II",
+    "dist_assigned": 905,
+    "nearest_assigned_seg": "del-violet-seg-01",
+    "dist_any": 905,
+    "nearest_any_line": "del-violet",
+    "perLine": {
+      "del-violet": 905
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-indra-gandhi-stadium",
+    "name": "Indra Gandhi Stadium",
+    "city": "delhi",
+    "assignedLines": [
+      "del-violet"
+    ],
+    "status": "construction",
+    "phase": "II",
+    "dist_assigned": 554,
+    "nearest_assigned_seg": "del-violet-seg-01",
+    "dist_any": 554,
+    "nearest_any_line": "del-violet",
+    "perLine": {
+      "del-violet": 554
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-indraprastha",
+    "name": "Indraprastha",
+    "city": "delhi",
+    "assignedLines": [
+      "del-blue"
+    ],
+    "status": "construction",
+    "phase": "I",
+    "dist_assigned": 334,
+    "nearest_assigned_seg": "del-blue-seg-01",
+    "dist_any": 334,
+    "nearest_any_line": "del-blue",
+    "perLine": {
+      "del-blue": 334
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-kalkaji-mandir",
+    "name": "Kalkaji Mandir",
+    "city": "delhi",
+    "assignedLines": [
+      "del-violet",
+      "del-magenta"
+    ],
+    "status": "operational",
+    "phase": "II",
+    "dist_assigned": 3,
+    "nearest_assigned_seg": "del-violet-seg-01",
+    "dist_any": 3,
+    "nearest_any_line": "del-violet",
+    "perLine": {
+      "del-violet": 3,
+      "del-magenta": 211
+    },
+    "cls": "c",
+    "reason": "Operational interchange station on-track for 1st line (<=4m), 200m offset from 2nd line polyline",
+    "rec": "fix geometry"
+  },
+  {
+    "id": "del-keshavpur",
+    "name": "Keshavpur",
+    "city": "delhi",
+    "assignedLines": [
+      "del-magenta"
+    ],
+    "status": "construction",
+    "phase": "III",
+    "dist_assigned": 470,
+    "nearest_assigned_seg": "del-magenta-seg-01",
+    "dist_any": 470,
+    "nearest_any_line": "del-magenta",
+    "perLine": {
+      "del-magenta": 470
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-kirti-nagar-2",
+    "name": "Kirti Nagar",
+    "city": "delhi",
+    "assignedLines": [
+      "del-green"
+    ],
+    "status": "construction",
+    "phase": "II",
+    "dist_assigned": 293,
+    "nearest_assigned_seg": "del-green-seg-02",
+    "dist_any": 293,
+    "nearest_any_line": "del-green",
+    "perLine": {
+      "del-green": 293
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-kishangarh",
+    "name": "Kishangarh",
+    "city": "delhi",
+    "assignedLines": [
+      "del-yellow"
+    ],
+    "status": "construction",
+    "phase": "I",
+    "dist_assigned": 1707,
+    "nearest_assigned_seg": "del-yellow-seg-01",
+    "dist_any": 1707,
+    "nearest_any_line": "del-yellow",
+    "perLine": {
+      "del-yellow": 1707
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-lado-sarai",
+    "name": "Lado Sarai",
+    "city": "delhi",
+    "assignedLines": [
+      "del-yellow"
+    ],
+    "status": "construction",
+    "phase": "I",
+    "dist_assigned": 625,
+    "nearest_assigned_seg": "del-yellow-seg-01",
+    "dist_any": 625,
+    "nearest_any_line": "del-yellow",
+    "perLine": {
+      "del-yellow": 625
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-lnjp-hospital",
+    "name": "LNJP Hospital",
+    "city": "delhi",
+    "assignedLines": [
+      "del-violet"
+    ],
+    "status": "construction",
+    "phase": "II",
+    "dist_assigned": 522,
+    "nearest_assigned_seg": "del-violet-seg-01",
+    "dist_any": 522,
+    "nearest_any_line": "del-violet",
+    "perLine": {
+      "del-violet": 522
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-loni-border",
+    "name": "Loni Border",
+    "city": "delhi",
+    "assignedLines": [
+      "del-pink"
+    ],
+    "status": "construction",
+    "phase": "III",
+    "dist_assigned": 3121,
+    "nearest_assigned_seg": "del-pink-seg-01",
+    "dist_any": 3121,
+    "nearest_any_line": "del-pink",
+    "perLine": {
+      "del-pink": 3121
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-mahipalpur",
+    "name": "Mahipalpur",
+    "city": "delhi",
+    "assignedLines": [
+      "del-airport"
+    ],
+    "status": "construction",
+    "phase": "II",
+    "dist_assigned": 997,
+    "nearest_assigned_seg": "del-airport-seg-01",
+    "dist_any": 997,
+    "nearest_any_line": "del-airport",
+    "perLine": {
+      "del-airport": 997
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-mangolpuri",
+    "name": "Mangolpuri",
+    "city": "delhi",
+    "assignedLines": [
+      "del-green"
+    ],
+    "status": "construction",
+    "phase": "II",
+    "dist_assigned": 873,
+    "nearest_assigned_seg": "del-green-seg-01",
+    "dist_any": 873,
+    "nearest_any_line": "del-green",
+    "perLine": {
+      "del-green": 873
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-mashoodpur",
+    "name": "Mashoodpur",
+    "city": "delhi",
+    "assignedLines": [
+      "del-yellow"
+    ],
+    "status": "construction",
+    "phase": "I",
+    "dist_assigned": 2933,
+    "nearest_assigned_seg": "del-yellow-seg-01",
+    "dist_any": 2933,
+    "nearest_any_line": "del-yellow",
+    "perLine": {
+      "del-yellow": 2933
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-meerabagh",
+    "name": "Meerabagh",
+    "city": "delhi",
+    "assignedLines": [
+      "del-magenta"
+    ],
+    "status": "construction",
+    "phase": "III",
+    "dist_assigned": 1730,
+    "nearest_assigned_seg": "del-magenta-seg-01",
+    "dist_any": 1730,
+    "nearest_any_line": "del-magenta",
+    "perLine": {
+      "del-magenta": 1730
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-mehrauli",
+    "name": "Mehrauli",
+    "city": "delhi",
+    "assignedLines": [
+      "del-yellow"
+    ],
+    "status": "construction",
+    "phase": "I",
+    "dist_assigned": 945,
+    "nearest_assigned_seg": "del-yellow-seg-01",
+    "dist_any": 945,
+    "nearest_any_line": "del-yellow",
+    "perLine": {
+      "del-yellow": 945
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-moulsari-avenue",
+    "name": "Moulsari Avenue",
+    "city": "delhi",
+    "assignedLines": [
+      "del-yellow"
+    ],
+    "status": "operational",
+    "phase": "I",
+    "dist_assigned": 2089,
+    "nearest_assigned_seg": "del-yellow-seg-01",
+    "dist_any": 2089,
+    "nearest_any_line": "del-yellow",
+    "perLine": {
+      "del-yellow": 2089
+    },
+    "cls": "e",
+    "reason": "Rapid Metro Gurugram system (separate operator/concession, out of DMRC scope)",
+    "rec": "exclude from scope"
+  },
+  {
+    "id": "del-nabi-karim",
+    "name": "Nabi Karim",
+    "city": "delhi",
+    "assignedLines": [
+      "del-blue"
+    ],
+    "status": "construction",
+    "phase": "I",
+    "dist_assigned": 1352,
+    "nearest_assigned_seg": "del-blue-seg-01",
+    "dist_any": 1352,
+    "nearest_any_line": "del-blue",
+    "perLine": {
+      "del-blue": 1352
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-narela",
+    "name": "Narela",
+    "city": "delhi",
+    "assignedLines": [
+      "del-yellow"
+    ],
+    "status": "construction",
+    "phase": "I",
+    "dist_assigned": 12613,
+    "nearest_assigned_seg": "del-yellow-seg-01",
+    "dist_any": 12613,
+    "nearest_any_line": "del-yellow",
+    "perLine": {
+      "del-yellow": 12613
+    },
+    "cls": "b",
+    "reason": "Belongs to Delhi Red Line Phase 4 extension (Rithala-Narela-Kundli), erroneously assigned to del-yellow",
+    "rec": "reassign to del-red"
+  },
+  {
+    "id": "del-netaji-subhash-place",
+    "name": "Netaji Subhash Place",
+    "city": "delhi",
+    "assignedLines": [
+      "del-red",
+      "del-pink"
+    ],
+    "status": "operational",
+    "phase": "I",
+    "dist_assigned": 4,
+    "nearest_assigned_seg": "del-red-seg-01",
+    "dist_any": 4,
+    "nearest_any_line": "del-red",
+    "perLine": {
+      "del-red": 4,
+      "del-pink": 209
+    },
+    "cls": "c",
+    "reason": "Operational interchange station on-track for 1st line (<=4m), 200m offset from 2nd line polyline",
+    "rec": "fix geometry"
+  },
+  {
+    "id": "del-new-sanoth-colony",
+    "name": "New Sanoth Colony",
+    "city": "delhi",
+    "assignedLines": [
+      "del-yellow"
+    ],
+    "status": "construction",
+    "phase": "I",
+    "dist_assigned": 11252,
+    "nearest_assigned_seg": "del-yellow-seg-01",
+    "dist_any": 11252,
+    "nearest_any_line": "del-yellow",
+    "perLine": {
+      "del-yellow": 11252
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-noida-office",
+    "name": "Noida Office",
+    "city": "delhi",
+    "assignedLines": [
+      "del-magenta"
+    ],
+    "status": "planned",
+    "phase": "III",
+    "dist_assigned": 1542,
+    "nearest_assigned_seg": "del-magenta-seg-01",
+    "dist_any": 1542,
+    "nearest_any_line": "del-magenta",
+    "perLine": {
+      "del-magenta": 1542
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-noida-sector-44",
+    "name": "Noida Sector 44",
+    "city": "delhi",
+    "assignedLines": [
+      "del-magenta"
+    ],
+    "status": "planned",
+    "phase": "III",
+    "dist_assigned": 850,
+    "nearest_assigned_seg": "del-magenta-seg-01",
+    "dist_any": 850,
+    "nearest_any_line": "del-magenta",
+    "perLine": {
+      "del-magenta": 850
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-paschim-vihar",
+    "name": "Paschim Vihar",
+    "city": "delhi",
+    "assignedLines": [
+      "del-green"
+    ],
+    "status": "construction",
+    "phase": "II",
+    "dist_assigned": 1231,
+    "nearest_assigned_seg": "del-green-seg-01",
+    "dist_any": 1231,
+    "nearest_any_line": "del-green",
+    "perLine": {
+      "del-green": 1231
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-phase-3",
+    "name": "Phase 3",
+    "city": "delhi",
+    "assignedLines": [
+      "del-yellow"
+    ],
+    "status": "operational",
+    "phase": "I",
+    "dist_assigned": 1312,
+    "nearest_assigned_seg": "del-yellow-seg-01",
+    "dist_any": 1312,
+    "nearest_any_line": "del-yellow",
+    "perLine": {
+      "del-yellow": 1312
+    },
+    "cls": "e",
+    "reason": "Rapid Metro Gurugram system (separate operator/concession, out of DMRC scope)",
+    "rec": "exclude from scope"
+  },
+  {
+    "id": "del-pushpanjali",
+    "name": "Pushpanjali",
+    "city": "delhi",
+    "assignedLines": [
+      "del-magenta"
+    ],
+    "status": "construction",
+    "phase": "IV",
+    "dist_assigned": 965,
+    "nearest_assigned_seg": "del-magenta-seg-02",
+    "dist_any": 965,
+    "nearest_any_line": "del-magenta",
+    "perLine": {
+      "del-magenta": 965
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-puth-khurd",
+    "name": "Puth Khurd",
+    "city": "delhi",
+    "assignedLines": [
+      "del-red"
+    ],
+    "status": "construction",
+    "phase": "I",
+    "dist_assigned": 7713,
+    "nearest_assigned_seg": "del-red-seg-01",
+    "dist_any": 7713,
+    "nearest_any_line": "del-red",
+    "perLine": {
+      "del-red": 7713
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-rajpura",
+    "name": "Rajpura",
+    "city": "delhi",
+    "assignedLines": [
+      "del-yellow"
+    ],
+    "status": "construction",
+    "phase": "I",
+    "dist_assigned": 1626,
+    "nearest_assigned_seg": "del-yellow-seg-01",
+    "dist_any": 1626,
+    "nearest_any_line": "del-yellow",
+    "perLine": {
+      "del-yellow": 1626
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-sadar-bazar",
+    "name": "Sadar Bazar",
+    "city": "delhi",
+    "assignedLines": [
+      "del-red"
+    ],
+    "status": "construction",
+    "phase": "I",
+    "dist_assigned": 869,
+    "nearest_assigned_seg": "del-red-seg-01",
+    "dist_any": 869,
+    "nearest_any_line": "del-red",
+    "perLine": {
+      "del-red": 869
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-saket-d-block",
+    "name": "Saket D Block",
+    "city": "delhi",
+    "assignedLines": [
+      "del-magenta"
+    ],
+    "status": "construction",
+    "phase": "III",
+    "dist_assigned": 1494,
+    "nearest_assigned_seg": "del-magenta-seg-01",
+    "dist_any": 1494,
+    "nearest_any_line": "del-magenta",
+    "perLine": {
+      "del-magenta": 1494
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-saket-g-block",
+    "name": "Saket G Block",
+    "city": "delhi",
+    "assignedLines": [
+      "del-yellow"
+    ],
+    "status": "construction",
+    "phase": "I",
+    "dist_assigned": 1547,
+    "nearest_assigned_seg": "del-yellow-seg-01",
+    "dist_any": 1547,
+    "nearest_any_line": "del-yellow",
+    "perLine": {
+      "del-yellow": 1547
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-sanoth",
+    "name": "Sanoth",
+    "city": "delhi",
+    "assignedLines": [
+      "del-yellow"
+    ],
+    "status": "construction",
+    "phase": "I",
+    "dist_assigned": 11028,
+    "nearest_assigned_seg": "del-yellow-seg-01",
+    "dist_any": 11028,
+    "nearest_any_line": "del-yellow",
+    "perLine": {
+      "del-yellow": 11028
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-sarai-rohilla",
+    "name": "Sarai Rohilla",
+    "city": "delhi",
+    "assignedLines": [
+      "del-red"
+    ],
+    "status": "construction",
+    "phase": "I",
+    "dist_assigned": 1115,
+    "nearest_assigned_seg": "del-red-seg-01",
+    "dist_any": 1115,
+    "nearest_any_line": "del-red",
+    "perLine": {
+      "del-red": 1115
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-sector-25-rohini",
+    "name": "Sector-25 Rohini",
+    "city": "delhi",
+    "assignedLines": [
+      "del-red"
+    ],
+    "status": "construction",
+    "phase": "I",
+    "dist_assigned": 1137,
+    "nearest_assigned_seg": "del-red-seg-01",
+    "dist_any": 1137,
+    "nearest_any_line": "del-red",
+    "perLine": {
+      "del-red": 1137
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-sector-26-rohini",
+    "name": "Sector-26 Rohini",
+    "city": "delhi",
+    "assignedLines": [
+      "del-red"
+    ],
+    "status": "construction",
+    "phase": "I",
+    "dist_assigned": 2133,
+    "nearest_assigned_seg": "del-red-seg-01",
+    "dist_any": 2133,
+    "nearest_any_line": "del-red",
+    "perLine": {
+      "del-red": 2133
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-sector-31-rohini",
+    "name": "Sector-31 Rohini",
+    "city": "delhi",
+    "assignedLines": [
+      "del-red"
+    ],
+    "status": "construction",
+    "phase": "I",
+    "dist_assigned": 3356,
+    "nearest_assigned_seg": "del-red-seg-01",
+    "dist_any": 3356,
+    "nearest_any_line": "del-red",
+    "perLine": {
+      "del-red": 3356
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-sector-32-rohini",
+    "name": "Sector-32 Rohini",
+    "city": "delhi",
+    "assignedLines": [
+      "del-red"
+    ],
+    "status": "construction",
+    "phase": "I",
+    "dist_assigned": 4329,
+    "nearest_assigned_seg": "del-red-seg-01",
+    "dist_any": 4329,
+    "nearest_any_line": "del-red",
+    "perLine": {
+      "del-red": 4329
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-sector-36-rohini",
+    "name": "Sector-36 Rohini",
+    "city": "delhi",
+    "assignedLines": [
+      "del-red"
+    ],
+    "status": "construction",
+    "phase": "I",
+    "dist_assigned": 5352,
+    "nearest_assigned_seg": "del-red-seg-01",
+    "dist_any": 5352,
+    "nearest_any_line": "del-red",
+    "perLine": {
+      "del-red": 5352
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-sector-37-rohini",
+    "name": "Sector-37 Rohini",
+    "city": "delhi",
+    "assignedLines": [
+      "del-red"
+    ],
+    "status": "construction",
+    "phase": "I",
+    "dist_assigned": 6253,
+    "nearest_assigned_seg": "del-red-seg-01",
+    "dist_any": 6253,
+    "nearest_any_line": "del-red",
+    "perLine": {
+      "del-red": 6253
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-sector-42-43",
+    "name": "Sector 42-43",
+    "city": "delhi",
+    "assignedLines": [
+      "del-yellow"
+    ],
+    "status": "operational",
+    "phase": "I",
+    "dist_assigned": 2295,
+    "nearest_assigned_seg": "del-yellow-seg-01",
+    "dist_any": 2295,
+    "nearest_any_line": "del-yellow",
+    "perLine": {
+      "del-yellow": 2295
+    },
+    "cls": "e",
+    "reason": "Rapid Metro Gurugram system (separate operator/concession, out of DMRC scope)",
+    "rec": "exclude from scope"
+  },
+  {
+    "id": "del-sector-53-54",
+    "name": "Sector 53-54",
+    "city": "delhi",
+    "assignedLines": [
+      "del-yellow"
+    ],
+    "status": "operational",
+    "phase": "I",
+    "dist_assigned": 3054,
+    "nearest_assigned_seg": "del-yellow-seg-01",
+    "dist_any": 3054,
+    "nearest_any_line": "del-yellow",
+    "perLine": {
+      "del-yellow": 3054
+    },
+    "cls": "e",
+    "reason": "Rapid Metro Gurugram system (separate operator/concession, out of DMRC scope)",
+    "rec": "exclude from scope"
+  },
+  {
+    "id": "del-sector-54-chowk",
+    "name": "Sector 54 Chowk",
+    "city": "delhi",
+    "assignedLines": [
+      "del-yellow"
+    ],
+    "status": "operational",
+    "phase": "I",
+    "dist_assigned": 4293,
+    "nearest_assigned_seg": "del-yellow-seg-01",
+    "dist_any": 4293,
+    "nearest_any_line": "del-yellow",
+    "perLine": {
+      "del-yellow": 4293
+    },
+    "cls": "e",
+    "reason": "Rapid Metro Gurugram system (separate operator/concession, out of DMRC scope)",
+    "rec": "exclude from scope"
+  },
+  {
+    "id": "del-sector-5556",
+    "name": "Sector 55–56",
+    "city": "delhi",
+    "assignedLines": [
+      "del-yellow"
+    ],
+    "status": "operational",
+    "phase": "I",
+    "dist_assigned": 5090,
+    "nearest_assigned_seg": "del-yellow-seg-01",
+    "dist_any": 5090,
+    "nearest_any_line": "del-yellow",
+    "perLine": {
+      "del-yellow": 5090
+    },
+    "cls": "e",
+    "reason": "Rapid Metro Gurugram system (separate operator/concession, out of DMRC scope)",
+    "rec": "exclude from scope"
+  },
+  {
+    "id": "del-sheikh-sarai",
+    "name": "Sheikh Sarai",
+    "city": "delhi",
+    "assignedLines": [
+      "del-magenta"
+    ],
+    "status": "construction",
+    "phase": "III",
+    "dist_assigned": 1238,
+    "nearest_assigned_seg": "del-magenta-seg-01",
+    "dist_any": 1238,
+    "nearest_any_line": "del-magenta",
+    "perLine": {
+      "del-magenta": 1238
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-tigri",
+    "name": "Tigri",
+    "city": "delhi",
+    "assignedLines": [
+      "del-magenta"
+    ],
+    "status": "construction",
+    "phase": "III",
+    "dist_assigned": 3265,
+    "nearest_assigned_seg": "del-magenta-seg-01",
+    "dist_any": 3265,
+    "nearest_any_line": "del-magenta",
+    "perLine": {
+      "del-magenta": 3265
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-tughlakabad-railway-colony",
+    "name": "Tughlakabad Railway Colony",
+    "city": "delhi",
+    "assignedLines": [
+      "del-violet"
+    ],
+    "status": "construction",
+    "phase": "II",
+    "dist_assigned": 779,
+    "nearest_assigned_seg": "del-violet-seg-01",
+    "dist_any": 779,
+    "nearest_any_line": "del-violet",
+    "perLine": {
+      "del-violet": 779
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-vasantkunj-sector-d",
+    "name": "Vasantkunj Sector D",
+    "city": "delhi",
+    "assignedLines": [
+      "del-airport"
+    ],
+    "status": "construction",
+    "phase": "II",
+    "dist_assigned": 2278,
+    "nearest_assigned_seg": "del-airport-seg-01",
+    "dist_any": 2278,
+    "nearest_any_line": "del-airport",
+    "perLine": {
+      "del-airport": 2278
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "del-west-enclave",
+    "name": "West Enclave",
+    "city": "delhi",
+    "assignedLines": [
+      "del-green"
+    ],
+    "status": "construction",
+    "phase": "II",
+    "dist_assigned": 1575,
+    "nearest_assigned_seg": "del-green-seg-01",
+    "dist_any": 1575,
+    "nearest_any_line": "del-green",
+    "perLine": {
+      "del-green": 1575
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "mum-airport-colony",
+    "name": "Airport Colony",
+    "city": "mumbai",
+    "assignedLines": [
+      "mum-line-3"
+    ],
+    "status": "operational",
+    "phase": "3",
+    "dist_assigned": 730,
+    "nearest_assigned_seg": "mum-line-3-seg-01",
+    "dist_any": 730,
+    "nearest_any_line": "mum-line-3",
+    "perLine": {
+      "mum-line-3": 730
+    },
+    "cls": "c",
+    "reason": "Operational underground Line 3 station offset by 730m from simplified segment centerline",
+    "rec": "fix geometry"
+  },
+  {
+    "id": "mum-azad-nagar-bus-stop",
+    "name": "Azad Nagar Bus Stop",
+    "city": "mumbai",
+    "assignedLines": [
+      "mum-line-4"
+    ],
+    "status": "construction",
+    "phase": "4",
+    "dist_assigned": 567,
+    "nearest_assigned_seg": "mum-line-4-seg-01",
+    "dist_any": 567,
+    "nearest_any_line": "mum-line-4",
+    "perLine": {
+      "mum-line-4": 567
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "mum-cbd-belapur",
+    "name": "CBD Belapur",
+    "city": "mumbai",
+    "assignedLines": [
+      "mum-line-2b"
+    ],
+    "status": "construction",
+    "phase": "2B",
+    "dist_assigned": 11162,
+    "nearest_assigned_seg": "mum-line-2b-seg-01",
+    "dist_any": 11162,
+    "nearest_any_line": "mum-line-2b",
+    "perLine": {
+      "mum-line-2b": 11162
+    },
+    "cls": "e",
+    "reason": "Navi Mumbai Metro Line 1 system (CIDCO operator, not Mumbai Metro Line 2B)",
+    "rec": "exclude from scope"
+  },
+  {
+    "id": "mum-dr-kashinath-ghanekar-natyagruha",
+    "name": "Dr. Kashinath Ghanekar Natyagruha",
+    "city": "mumbai",
+    "assignedLines": [
+      "mum-line-4"
+    ],
+    "status": "planned",
+    "phase": "4",
+    "dist_assigned": 582,
+    "nearest_assigned_seg": "mum-line-4-seg-01",
+    "dist_any": 582,
+    "nearest_any_line": "mum-line-4",
+    "perLine": {
+      "mum-line-4": 582
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "mum-ghandi-nagar",
+    "name": "Ghandi Nagar",
+    "city": "mumbai",
+    "assignedLines": [
+      "mum-line-4"
+    ],
+    "status": "planned",
+    "phase": "4",
+    "dist_assigned": 342,
+    "nearest_assigned_seg": "mum-line-4-seg-01",
+    "dist_any": 342,
+    "nearest_any_line": "mum-line-4",
+    "perLine": {
+      "mum-line-4": 342
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "mum-kashigaon",
+    "name": "Kashigaon",
+    "city": "mumbai",
+    "assignedLines": [
+      "mum-line-4"
+    ],
+    "status": "construction",
+    "phase": "4",
+    "dist_assigned": 629,
+    "nearest_assigned_seg": "mum-line-4-seg-01",
+    "dist_any": 629,
+    "nearest_any_line": "mum-line-4",
+    "perLine": {
+      "mum-line-4": 629
+    },
+    "cls": "b",
+    "reason": "Belongs to Mumbai Line 9 (Dahisar East to Mira Bhayandar), missing from segments data",
+    "rec": "reassign to mum-line-9 and add Line 9 geometry"
+  },
+  {
+    "id": "mum-lokmanya-nagar-bus-depot",
+    "name": "Lokmanya Nagar Bus Depot",
+    "city": "mumbai",
+    "assignedLines": [
+      "mum-line-4"
+    ],
+    "status": "planned",
+    "phase": "4",
+    "dist_assigned": 1401,
+    "nearest_assigned_seg": "mum-line-4-seg-01",
+    "dist_any": 1401,
+    "nearest_any_line": "mum-line-4",
+    "perLine": {
+      "mum-line-4": 1401
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "mum-manpada",
+    "name": "Manpada",
+    "city": "mumbai",
+    "assignedLines": [
+      "mum-line-4"
+    ],
+    "status": "planned",
+    "phase": "4",
+    "dist_assigned": 350,
+    "nearest_assigned_seg": "mum-line-4-seg-01",
+    "dist_any": 350,
+    "nearest_any_line": "mum-line-4",
+    "perLine": {
+      "mum-line-4": 350
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "mum-neelkanth-terminal",
+    "name": "Neelkanth Terminal",
+    "city": "mumbai",
+    "assignedLines": [
+      "mum-line-4"
+    ],
+    "status": "planned",
+    "phase": "4",
+    "dist_assigned": 1214,
+    "nearest_assigned_seg": "mum-line-4-seg-01",
+    "dist_any": 1214,
+    "nearest_any_line": "mum-line-4",
+    "perLine": {
+      "mum-line-4": 1214
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "mum-pandurang-wadi",
+    "name": "Pandurang Wadi",
+    "city": "mumbai",
+    "assignedLines": [
+      "mum-line-2a"
+    ],
+    "status": "operational",
+    "phase": "2A",
+    "dist_assigned": 576,
+    "nearest_assigned_seg": "mum-line-2a-seg-01",
+    "dist_any": 576,
+    "nearest_any_line": "mum-line-2a",
+    "perLine": {
+      "mum-line-2a": 576
+    },
+    "cls": "b",
+    "reason": "Belongs to Mumbai Line 9 (Dahisar East to Mira Bhayandar), missing from segments data",
+    "rec": "reassign to mum-line-9 and add Line 9 geometry"
+  },
+  {
+    "id": "mum-patlipada",
+    "name": "Patlipada",
+    "city": "mumbai",
+    "assignedLines": [
+      "mum-line-4"
+    ],
+    "status": "planned",
+    "phase": "4",
+    "dist_assigned": 800,
+    "nearest_assigned_seg": "mum-line-4-seg-01",
+    "dist_any": 800,
+    "nearest_any_line": "mum-line-4",
+    "perLine": {
+      "mum-line-4": 800
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "mum-rbi-colony",
+    "name": "RBI Colony",
+    "city": "mumbai",
+    "assignedLines": [
+      "mum-line-2b"
+    ],
+    "status": "construction",
+    "phase": "2B",
+    "dist_assigned": 11870,
+    "nearest_assigned_seg": "mum-line-2b-seg-01",
+    "dist_any": 11870,
+    "nearest_any_line": "mum-line-2b",
+    "perLine": {
+      "mum-line-2b": 11870
+    },
+    "cls": "e",
+    "reason": "Navi Mumbai Metro Line 1 system (CIDCO operator, not Mumbai Metro Line 2B)",
+    "rec": "exclude from scope"
+  },
+  {
+    "id": "mum-shahid-bhagat-singh-garden",
+    "name": "Shahid Bhagat Singh Garden",
+    "city": "mumbai",
+    "assignedLines": [
+      "mum-line-2a"
+    ],
+    "status": "operational",
+    "phase": "2A",
+    "dist_assigned": 4038,
+    "nearest_assigned_seg": "mum-line-2a-seg-01",
+    "dist_any": 4038,
+    "nearest_any_line": "mum-line-2a",
+    "perLine": {
+      "mum-line-2a": 4038
+    },
+    "cls": "b",
+    "reason": "Belongs to Mumbai Line 9 (Dahisar East to Mira Bhayandar), missing from segments data",
+    "rec": "reassign to mum-line-9 and add Line 9 geometry"
+  },
+  {
+    "id": "mum-shivai-nagar",
+    "name": "Shivai Nagar",
+    "city": "mumbai",
+    "assignedLines": [
+      "mum-line-4"
+    ],
+    "status": "planned",
+    "phase": "4",
+    "dist_assigned": 1537,
+    "nearest_assigned_seg": "mum-line-4-seg-01",
+    "dist_any": 1537,
+    "nearest_any_line": "mum-line-4",
+    "perLine": {
+      "mum-line-4": 1537
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "mum-subhash-chandra-bose-ground",
+    "name": "Subhash Chandra Bose Ground",
+    "city": "mumbai",
+    "assignedLines": [
+      "mum-line-2a"
+    ],
+    "status": "operational",
+    "phase": "2A",
+    "dist_assigned": 4118,
+    "nearest_assigned_seg": "mum-line-2a-seg-01",
+    "dist_any": 4118,
+    "nearest_any_line": "mum-line-2a",
+    "perLine": {
+      "mum-line-2a": 4118
+    },
+    "cls": "b",
+    "reason": "Belongs to Mumbai Line 9 (Dahisar East to Mira Bhayandar), missing from segments data",
+    "rec": "reassign to mum-line-9 and add Line 9 geometry"
+  },
+  {
+    "id": "mum-vijay-nagari",
+    "name": "Vijay Nagari",
+    "city": "mumbai",
+    "assignedLines": [
+      "mum-line-4"
+    ],
+    "status": "planned",
+    "phase": "4",
+    "dist_assigned": 231,
+    "nearest_assigned_seg": "mum-line-4-seg-01",
+    "dist_any": 231,
+    "nearest_any_line": "mum-line-4",
+    "perLine": {
+      "mum-line-4": 231
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "mum-waghbil",
+    "name": "Waghbil",
+    "city": "mumbai",
+    "assignedLines": [
+      "mum-line-4"
+    ],
+    "status": "planned",
+    "phase": "4",
+    "dist_assigned": 1117,
+    "nearest_assigned_seg": "mum-line-4-seg-01",
+    "dist_any": 1117,
+    "nearest_any_line": "mum-line-4",
+    "perLine": {
+      "mum-line-4": 1117
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "mum-wagle-circle",
+    "name": "Wagle Circle",
+    "city": "mumbai",
+    "assignedLines": [
+      "mum-line-4"
+    ],
+    "status": "planned",
+    "phase": "4",
+    "dist_assigned": 1030,
+    "nearest_assigned_seg": "mum-line-4-seg-01",
+    "dist_any": 1030,
+    "nearest_any_line": "mum-line-4",
+    "perLine": {
+      "mum-line-4": 1030
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  },
+  {
+    "id": "mum-waterfront",
+    "name": "Waterfront",
+    "city": "mumbai",
+    "assignedLines": [
+      "mum-line-4"
+    ],
+    "status": "planned",
+    "phase": "4",
+    "dist_assigned": 1948,
+    "nearest_assigned_seg": "mum-line-4-seg-01",
+    "dist_any": 1948,
+    "nearest_any_line": "mum-line-4",
+    "perLine": {
+      "mum-line-4": 1948
+    },
+    "cls": "a",
+    "reason": "No geometry exists for the correct line (non-operational planned/construction stretch)",
+    "rec": "add schematic connector"
+  }
+]

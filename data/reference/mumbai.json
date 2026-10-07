@@ -1,0 +1,253 @@
+{
+  "city_id": "mumbai",
+  "compiled_on": "2026-10-07",
+  "lines": [
+    {
+      "line_id": "mum-line-1",
+      "official_name": "Metro Line 1 (Blue Line)",
+      "operator": "MMOPL",
+      "topology": "linear",
+      "operational_stations": 12,
+      "operational_length_km": 11.4,
+      "planned_length_km": 11.4,
+      "terminals": [
+        "Versova",
+        "Ghatkopar"
+      ],
+      "status": "operational",
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "Versova - Andheri - Ghatkopar",
+          "phase": "1",
+          "opened_on": "2014-06-08",
+          "stations_added": 12,
+          "confidence": "unverified"
+        }
+      ],
+      "construction": [],
+      "notes": "11.4 km operational elevated corridor connecting Versova and Ghatkopar across 12 stations.",
+      "confidence": "unverified"
+    },
+    {
+      "line_id": "mum-line-2a",
+      "official_name": "Metro Line 2A (Yellow Line)",
+      "operator": "MMMOCL",
+      "topology": "linear",
+      "operational_stations": 17,
+      "operational_length_km": 18.6,
+      "planned_length_km": 18.6,
+      "terminals": [
+        "Dahisar East",
+        "Andheri West"
+      ],
+      "status": "operational",
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "Phase 1 (Dahisar East - Dahanukarwadi)",
+          "phase": null,
+          "opened_on": "2022-04-02",
+          "stations_added": 9,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Phase 2 (Dahanukarwadi - Andheri West)",
+          "phase": null,
+          "opened_on": "2023-01-19",
+          "stations_added": 8,
+          "confidence": "unverified"
+        }
+      ],
+      "construction": [],
+      "notes": "18.6 km operational elevated corridor connecting Dahisar East to Andheri West across 17 stations.",
+      "confidence": "unverified"
+    },
+    {
+      "line_id": "mum-line-7",
+      "official_name": "Metro Line 7 (Red Line)",
+      "operator": "MMMOCL",
+      "topology": "linear",
+      "operational_stations": 14,
+      "operational_length_km": 16.5,
+      "planned_length_km": 16.5,
+      "terminals": [
+        "Dahisar East",
+        "Gundavali"
+      ],
+      "status": "operational",
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "Phase 1 (Dahisar East - Aarey)",
+          "phase": null,
+          "opened_on": "2022-04-02",
+          "stations_added": 9,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Phase 2 (Aarey - Gundavali)",
+          "phase": null,
+          "opened_on": "2023-01-19",
+          "stations_added": 5,
+          "confidence": "unverified"
+        }
+      ],
+      "construction": [],
+      "notes": "16.5 km operational elevated corridor running along Western Express Highway from Dahisar East to Gundavali across 14 stations.",
+      "confidence": "unverified"
+    },
+    {
+      "line_id": "mum-line-9",
+      "official_name": "Metro Line 9 (Red Line Extension)",
+      "operator": "MMMOCL",
+      "topology": "linear",
+      "operational_stations": 4,
+      "operational_length_km": 4.97,
+      "planned_length_km": 13.58,
+      "terminals": [
+        "Dahisar East",
+        "Kashigaon"
+      ],
+      "status": "operational",
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "Phase 1 (Dahisar East - Kashigaon)",
+          "phase": null,
+          "opened_on": "2026-04-07",
+          "stations_added": 4,
+          "confidence": "unverified"
+        }
+      ],
+      "construction": [
+        {
+          "stretch": "Phase 2 (Kashigaon - Subhash Chandra Bose Stadium)",
+          "phase": null,
+          "expected_completion": null,
+          "stations": 4,
+          "notes": "Estimated completion late 2026. Official total corridor length is 11.386 km elevated + 2.195 km underground (13.581 km total with Line 7A). Phase 1 length: MMRDA official project documentation cites 4.97 km; PTI press release reported 5.6 km."
+        }
+      ],
+      "notes": "Length conflict: MMRDA official technical documentation states 4.97 km for Dahisar East-Kashigaon; PTI reports 5.6 km. Line 9 total planned is 13.58 km.",
+      "confidence": "unverified"
+    },
+    {
+      "line_id": "mum-line-3",
+      "official_name": "Metro Line 3 (Aqua Line)",
+      "operator": "MMRCL",
+      "topology": "linear",
+      "operational_stations": 27,
+      "operational_length_km": 33.5,
+      "planned_length_km": 33.5,
+      "terminals": [
+        "Cuffe Parade",
+        "Aarey JVLR"
+      ],
+      "status": "operational",
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "Phase 1 (Aarey JVLR - BKC)",
+          "phase": null,
+          "opened_on": "2024-10-07",
+          "stations_added": 10,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Phase 2A (BKC - Acharya Atre Chowk / Worli)",
+          "phase": null,
+          "opened_on": "2025-05-10",
+          "stations_added": 6,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Phase 2B / Final stretch (Acharya Atre Chowk - Cuffe Parade)",
+          "phase": null,
+          "opened_on": "2025-10-09",
+          "stations_added": 11,
+          "confidence": "unverified"
+        }
+      ],
+      "construction": [],
+      "notes": "Project nodal owner is MMRCL; 10-year O&M contractor is DMRC. Fully underground corridor (33.5 km, 27 stations). Final stretch inaugurated on Oct 8, 2025; commercial public-service operations started at 5:55 AM on October 9, 2025. Phase 1 date and stations_added marked unverified (official page matched terminals only).",
+      "confidence": "unverified"
+    },
+    {
+      "line_id": "mum-line-4",
+      "official_name": "Metro Line 4 (Green Line)",
+      "operator": "MMMOCL",
+      "topology": "linear",
+      "operational_stations": 0,
+      "operational_length_km": 0,
+      "planned_length_km": 32.32,
+      "terminals": [
+        "Bhakti Park Wadala",
+        "Kasarvadavali"
+      ],
+      "status": "under_construction",
+      "disjoint_stretches": false,
+      "openings": [],
+      "construction": [
+        {
+          "stretch": "Priority Section (Gaimukh - Cadbury Junction)",
+          "phase": null,
+          "expected_completion": null,
+          "stations": 8,
+          "notes": "Targeted late 2026 in MMRDA project reviews."
+        },
+        {
+          "stretch": "Full Line (Wadala - Kasarvadavali)",
+          "phase": null,
+          "expected_completion": null,
+          "stations": 30,
+          "notes": "Targeted late 2027 in MMRDA project reviews."
+        }
+      ],
+      "notes": "Official planned length is 32.32 km with 30 planned stations connecting Wadala to Kasarvadavali.",
+      "confidence": "unverified"
+    },
+    {
+      "line_id": "mum-line-2b",
+      "official_name": "Metro Line 2B (Yellow Line Extension)",
+      "operator": "MMMOCL",
+      "topology": "linear",
+      "operational_stations": null,
+      "operational_length_km": 5.5,
+      "planned_length_km": 23.64,
+      "terminals": [
+        "Chembur",
+        "Mandale"
+      ],
+      "status": "operational",
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "Phase 1 (Mandale - Diamond Garden)",
+          "phase": null,
+          "opened_on": "2026-04-07",
+          "stations_added": 5,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Phase 1A (Diamond Garden - Chembur integration)",
+          "phase": null,
+          "opened_on": "2026-08-13",
+          "stations_added": 1,
+          "confidence": "unverified"
+        }
+      ],
+      "construction": [
+        {
+          "stretch": "Phase 2 (Chembur - DN Nagar)",
+          "phase": null,
+          "expected_completion": null,
+          "stations": null,
+          "notes": "Targeted completion late 2027. Under construction between Chembur and DN Nagar."
+        }
+      ],
+      "notes": "Station count conflict: The official MMRDA page lists 22 stations for Metro Line 2B (23.643 km from DN Nagar to Mandale). No source supports 20 stations. Total stations and Phase 2 station count are stored as null.",
+      "confidence": "unverified"
+    }
+  ]
+}

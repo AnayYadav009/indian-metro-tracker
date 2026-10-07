@@ -237,7 +237,7 @@ export function getDatasetMetadataSummary(): {
   let latestDateStr = "";
   const sourceTokens = new Set<string>();
 
-  const processRecord = (props?: { source?: string; last_verified?: string }) => {
+  const processRecord = (props?: { source?: string; last_verified?: string | null }) => {
     if (!props) return;
     if (props.last_verified && props.last_verified > latestDateStr) {
       latestDateStr = props.last_verified;

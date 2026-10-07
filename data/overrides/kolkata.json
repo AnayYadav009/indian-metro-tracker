@@ -1,0 +1,288 @@
+{
+  "city": {
+    "id": "kolkata",
+    "name": "Kolkata",
+    "bbox": [
+      88.24,
+      22.42,
+      88.52,
+      22.78
+    ],
+    "operator": "Metro Railway, Kolkata",
+    "phases": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+    ]
+  },
+  "lines": [
+    {
+      "id": "kol-blue",
+      "name": "Blue Line (Line 1)",
+      "city": "Kolkata",
+      "color": "#0072CE",
+      "operator": "Metro Railway, Kolkata",
+      "city_id": "kolkata",
+      "source": "osm+mtp"
+    },
+    {
+      "id": "kol-green",
+      "name": "Green Line (Line 2)",
+      "city": "Kolkata",
+      "color": "#009A44",
+      "operator": "KMRC",
+      "city_id": "kolkata",
+      "source": "osm+kmrc"
+    },
+    {
+      "id": "kol-purple",
+      "name": "Purple Line (Line 3)",
+      "city": "Kolkata",
+      "color": "#702082",
+      "operator": "Metro Railway, Kolkata",
+      "city_id": "kolkata",
+      "source": "osm+mtp"
+    },
+    {
+      "id": "kol-yellow",
+      "name": "Yellow Line (Line 4)",
+      "city": "Kolkata",
+      "color": "#FFD100",
+      "operator": "Metro Railway, Kolkata",
+      "city_id": "kolkata",
+      "source": "osm+mtp"
+    },
+    {
+      "id": "kol-orange",
+      "name": "Orange Line (Line 6)",
+      "city": "Kolkata",
+      "color": "#FF8200",
+      "operator": "Metro Railway, Kolkata",
+      "city_id": "kolkata",
+      "source": "osm+mtp"
+    },
+    {
+      "id": "kol-pink",
+      "name": "Pink Line (Line 5)",
+      "city": "Kolkata",
+      "color": "#E31B6D",
+      "operator": "Metro Railway, Kolkata",
+      "city_id": "kolkata",
+      "source": "mtp"
+    }
+  ],
+  "segments": [
+    {
+      "osmId": 8034180,
+      "segment_id": "kol-blue-seg-01",
+      "line_id": "kol-blue",
+      "line_name": "Blue Line (Dakshineswar - Kavi Subhash)",
+      "phase": "1",
+      "status": "operational",
+      "gauge": "broad",
+      "inaugurated_on": "1984-10-24",
+      "expected_completion": null,
+      "color": "#0072CE",
+      "references": [
+        "https://mtp.indianrailways.gov.in",
+        "https://pib.gov.in/PressReleasePage.aspx?PRID=1699923"
+      ]
+    },
+    {
+      "osmId": 11720071,
+      "segment_id": "kol-green-seg-01",
+      "line_id": "kol-green",
+      "line_name": "Green Line (Howrah Maidan - Salt Lake Sector V)",
+      "phase": "2",
+      "status": "operational",
+      "gauge": "standard",
+      "inaugurated_on": "2020-02-14",
+      "expected_completion": null,
+      "color": "#009A44",
+      "references": [
+        "https://www.kmrc.in",
+        "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1602930",
+        "https://pib.gov.in/PressReleasePage.aspx?PRID=2011707",
+        "https://pib.gov.in/PressReleasePage.aspx?PRID=2159869"
+      ]
+    },
+    {
+      "osmId": 15068962,
+      "segment_id": "kol-purple-seg-01",
+      "line_id": "kol-purple",
+      "line_name": "Purple Line (Joka - Majerhat)",
+      "phase": "3",
+      "status": "operational",
+      "gauge": "broad",
+      "inaugurated_on": "2023-01-02",
+      "expected_completion": null,
+      "color": "#702082",
+      "references": [
+        "https://pib.gov.in/PressReleasePage.aspx?PRID=1887680",
+        "https://pib.gov.in/PressReleasePage.aspx?PRID=2011707"
+      ]
+    },
+    {
+      "osmId": 1128141380,
+      "segment_id": "kol-purple-seg-02",
+      "line_id": "kol-purple",
+      "line_name": "Purple Line Extension (Majerhat - Esplanade)",
+      "phase": "3",
+      "status": "construction",
+      "gauge": "broad",
+      "inaugurated_on": null,
+      "expected_completion": "2028",
+      "color": "#702082",
+      "references": [
+        "https://mtp.indianrailways.gov.in"
+      ]
+    },
+    {
+      "osmId": 19508983,
+      "segment_id": "kol-yellow-seg-01",
+      "line_id": "kol-yellow",
+      "line_name": "Yellow Line (Noapara - Jai Hind Airport)",
+      "phase": "4",
+      "status": "operational",
+      "gauge": "broad",
+      "inaugurated_on": "2025-08-22",
+      "expected_completion": null,
+      "color": "#FFD100",
+      "references": [
+        "https://pib.gov.in/PressReleasePage.aspx?PRID=2159869"
+      ]
+    },
+    {
+      "osmId": 535333480,
+      "segment_id": "kol-yellow-seg-02",
+      "line_id": "kol-yellow",
+      "line_name": "Yellow Line Extension (Jai Hind - Barasat)",
+      "phase": "4",
+      "status": "planned",
+      "gauge": "broad",
+      "inaugurated_on": null,
+      "expected_completion": null,
+      "completion_unconfirmed": true,
+      "color": "#FFD100",
+      "references": [
+        "https://mtp.indianrailways.gov.in"
+      ]
+    },
+    {
+      "osmId": 17320238,
+      "segment_id": "kol-orange-seg-01",
+      "line_id": "kol-orange",
+      "line_name": "Orange Line (Kavi Subhash - Beleghata)",
+      "phase": "6",
+      "status": "operational",
+      "gauge": "broad",
+      "inaugurated_on": "2024-03-15",
+      "expected_completion": null,
+      "color": "#FF8200",
+      "references": [
+        "https://pib.gov.in/PressReleasePage.aspx?PRID=2011707",
+        "https://pib.gov.in/PressReleasePage.aspx?PRID=2159869"
+      ]
+    },
+    {
+      "osmId": 610018735,
+      "segment_id": "kol-orange-seg-02",
+      "line_id": "kol-orange",
+      "line_name": "Orange Line Extension (Beleghata - Jai Hind Airport)",
+      "phase": "6",
+      "status": "construction",
+      "gauge": "broad",
+      "inaugurated_on": null,
+      "expected_completion": "2027",
+      "color": "#FF8200",
+      "references": [
+        "https://mtp.indianrailways.gov.in"
+      ]
+    },
+    {
+      "segment_id": "kol-pink-seg-01",
+      "line_id": "kol-pink",
+      "line_name": "Pink Line (Baranagar - Barrackpore)",
+      "phase": "5",
+      "status": "planned",
+      "gauge": "broad",
+      "inaugurated_on": null,
+      "expected_completion": null,
+      "completion_unconfirmed": true,
+      "color": "#E31B6D",
+      "references": [
+        "https://mtp.indianrailways.gov.in"
+      ]
+    }
+  ],
+  "interchangeStationNames": [
+    "Esplanade",
+    "Kavi Subhash",
+    "Noapara"
+  ],
+  "dedupeRadiusM": 300,
+  "stationAliases": {
+    "Tollygunge": "Mahanayak Uttam Kumar",
+    "Kudghat": "Netaji",
+    "Bansdroni": "Masterda Surya Sen",
+    "Naktala": "Gitanjali",
+    "Garia Bazar": "Kavi Nazrul",
+    "Garia": "Kavi Nazrul",
+    "Briji": "Shahid Khudiram",
+    "New Garia": "Kavi Subhash",
+    "Bhowanipore": "Netaji Bhavan",
+    "Ruby": "Hemanta Mukhopadhyay",
+    "Ruby More": "Hemanta Mukhopadhyay",
+    "Metropolitan": "Beleghata",
+    "Dakshineshwar": "Dakshineswar",
+    "Biman Bandar": "Jai Hind",
+    "Bimanbandar": "Jai Hind",
+    "Kolkata Airport": "Jai Hind",
+    "Airport": "Jai Hind",
+    "Netaji Subhash Chandra Bose International Airport": "Jai Hind"
+  },
+  "stationOverrides": {
+    "kolkata-park-street": {
+      "line_ids": ["kol-blue"],
+      "status": "operational",
+      "phase": "1"
+    },
+    "kolkata-maidan": {
+      "line_ids": ["kol-blue"],
+      "status": "operational",
+      "phase": "1"
+    },
+    "kolkata-esplanade": {
+      "line_ids": ["kol-blue", "kol-green"],
+      "status": "operational",
+      "phase": "1"
+    },
+    "kolkata-salt-lake-sector-v": {
+      "line_ids": ["kol-green"],
+      "status": "operational",
+      "phase": "2"
+    },
+    "kolkata-jai-hind": {
+      "line_ids": ["kol-yellow"],
+      "status": "operational",
+      "phase": "4"
+    },
+    "kolkata-nalban": {
+      "line_ids": ["kol-orange"],
+      "status": "construction",
+      "phase": "6"
+    }
+  },
+  "out_of_scope_line_ids": [
+    "kol-pink"
+  ],
+  "selfIntersectionExemptions": [
+    "kol-green-seg-01"
+  ],
+  "intentionalBreaks": [
+    "kol-purple-seg-01|kol-purple-seg-02"
+  ]
+}

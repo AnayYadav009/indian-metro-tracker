@@ -44,7 +44,8 @@
         "stations_count": 10,
         "color": "#FFD700",
         "source": "mock",
-        "last_verified": "2026-10-05"
+        "last_verified": "2026-10-05",
+        "retrieved_at": "2026-10-07"
       }
     },
     {
@@ -90,7 +91,8 @@
         "stations_count": 15,
         "color": "#A0A0A0",
         "source": "mock",
-        "last_verified": "2026-10-05"
+        "last_verified": "2026-10-05",
+        "retrieved_at": "2026-10-07"
       }
     },
     {
@@ -132,7 +134,8 @@
         "stations_count": 8,
         "color": "#FFD700",
         "source": "mock",
-        "last_verified": "2026-10-05"
+        "last_verified": "2026-10-05",
+        "retrieved_at": "2026-10-07"
       }
     },
     {
@@ -174,7 +177,8 @@
         "stations_count": 6,
         "color": "#800080",
         "source": "mock",
-        "last_verified": "2026-10-05"
+        "last_verified": "2026-10-05",
+        "retrieved_at": "2026-10-07"
       }
     },
     {
@@ -220,7 +224,8 @@
         "stations_count": 17,
         "color": "#1E90FF",
         "source": "mock",
-        "last_verified": "2026-10-05"
+        "last_verified": "2026-10-05",
+        "retrieved_at": "2026-10-07"
       }
     },
     {
@@ -262,7 +267,8 @@
         "stations_count": 12,
         "color": "#1E90FF",
         "source": "mock",
-        "last_verified": "2026-10-05"
+        "last_verified": "2026-10-05",
+        "retrieved_at": "2026-10-07"
       }
     },
     {
@@ -308,7 +314,8 @@
         "stations_count": 12,
         "color": "#0072CE",
         "source": "mock",
-        "last_verified": "2026-10-05"
+        "last_verified": "2026-10-05",
+        "retrieved_at": "2026-10-07"
       }
     },
     {
@@ -350,7 +357,8 @@
         "stations_count": 14,
         "color": "#00A3E0",
         "source": "mock",
-        "last_verified": "2026-10-05"
+        "last_verified": "2026-10-05",
+        "retrieved_at": "2026-10-07"
       }
     },
     {
@@ -388,7 +396,8 @@
         "stations_count": 5,
         "color": "#00B140",
         "source": "mock",
-        "last_verified": "2026-10-05"
+        "last_verified": "2026-10-05",
+        "retrieved_at": "2026-10-07"
       }
     }
   ]

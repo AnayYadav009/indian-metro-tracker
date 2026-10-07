@@ -1,0 +1,1807 @@
+{
+  "date": "2026-10-07",
+  "summaries": [
+    {
+      "city_id": "bengaluru",
+      "city_name": "Bengaluru",
+      "lines": 5,
+      "segments": 6,
+      "stations": 84,
+      "segmentSources": {
+        "osm": 3,
+        "manual": 3
+      },
+      "stationSources": {
+        "osm": 84
+      },
+      "lineSources": {
+        "osm+bmrcl": 5
+      }
+    },
+    {
+      "city_id": "mumbai",
+      "city_name": "Mumbai",
+      "lines": 6,
+      "segments": 7,
+      "stations": 91,
+      "segmentSources": {
+        "osm": 6,
+        "manual": 1
+      },
+      "stationSources": {
+        "osm": 91
+      },
+      "lineSources": {
+        "osm+mmrda": 6
+      }
+    },
+    {
+      "city_id": "delhi",
+      "city_name": "Delhi",
+      "lines": 10,
+      "segments": 12,
+      "stations": 280,
+      "segmentSources": {
+        "osm": 12
+      },
+      "stationSources": {
+        "osm": 280
+      },
+      "lineSources": {
+        "osm+dmrc": 10
+      }
+    },
+    {
+      "city_id": "kolkata",
+      "city_name": "Kolkata",
+      "lines": 6,
+      "segments": 8,
+      "stations": 56,
+      "segmentSources": {
+        "osm": 8
+      },
+      "stationSources": {
+        "osm": 56
+      },
+      "lineSources": {
+        "osm+mtp": 4,
+        "osm+kmrc": 1,
+        "mtp": 1
+      }
+    },
+    {
+      "city_id": "chennai",
+      "city_name": "Chennai",
+      "lines": 5,
+      "segments": 3,
+      "stations": 41,
+      "segmentSources": {
+        "osm": 3
+      },
+      "stationSources": {
+        "osm": 41
+      },
+      "lineSources": {
+        "osm+cmrl": 2,
+        "cmrl": 3
+      }
+    }
+  ],
+  "findings": [
+    {
+      "city_id": "bengaluru",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "blr-nagawara-proposed",
+      "message": "Station is 2196 m from nearest segment of line 'blr-pink' (threshold: 200 m)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "consecutive-segment-gap",
+      "severity": "warn",
+      "subject": "blr-planned-seg-01|blr-purple-seg-01",
+      "message": "Segments of line 'blr-purple' have nearest endpoint gap of 10540 m (threshold: 150 m)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "blr-green",
+      "message": "Operational length: computed 35.22 km vs reference 33.46 km (5.3%) (unverified reference)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "blr-yellow",
+      "message": "Operational length: computed 18.10 km vs reference 19.15 km (5.5%) (unverified reference)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-phase-date",
+      "severity": "warn",
+      "subject": "blr-green-seg-01",
+      "message": "Phase '1' opened_on: data has '2014-03-01', reference has '2015-05-01' (unverified reference)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-phase-date",
+      "severity": "warn",
+      "subject": "blr-green-seg-01",
+      "message": "Phase '1' opened_on: data has '2014-03-01', reference has '2017-06-18' (unverified reference)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-phase-date",
+      "severity": "warn",
+      "subject": "blr-purple-seg-01",
+      "message": "Phase '1' opened_on: data has '2011-10-20', reference has '2015-11-16' (unverified reference)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-phase-date",
+      "severity": "warn",
+      "subject": "blr-purple-seg-01",
+      "message": "Phase '1' opened_on: data has '2011-10-20', reference has '2016-04-30' (unverified reference)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-station-count",
+      "severity": "warn",
+      "subject": "blr-green",
+      "message": "Operational station count: data has 31, reference has 32 (unverified reference)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-station-count",
+      "severity": "warn",
+      "subject": "blr-pink",
+      "message": "Operational station count: data has 1, reference has 0 (unverified reference)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-terminal-mismatch",
+      "severity": "warn",
+      "subject": "blr-blue",
+      "message": "Terminal 'Central Silk Board' from reference not found in data station names (unverified reference)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-terminal-mismatch",
+      "severity": "warn",
+      "subject": "blr-blue",
+      "message": "Terminal 'KIAL Terminals' from reference not found in data station names (unverified reference)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-terminal-mismatch",
+      "severity": "warn",
+      "subject": "blr-pink",
+      "message": "Terminal 'Kalena Agrahara' from reference not found in data station names (unverified reference)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-terminal-mismatch",
+      "severity": "warn",
+      "subject": "blr-pink",
+      "message": "Terminal 'Nagawara' from reference not found in data station names (unverified reference)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-terminal-mismatch",
+      "severity": "warn",
+      "subject": "blr-yellow",
+      "message": "Terminal 'Bommasandra' from reference not found in data station names (unverified reference)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "interchange-consistency",
+      "severity": "warn",
+      "subject": "blr-central-silk-board",
+      "message": "is_interchange is true but station is on only 1 line(s)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "interchange-consistency",
+      "severity": "warn",
+      "subject": "blr-jayadeva-hospital",
+      "message": "is_interchange is true but station is on only 1 line(s)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-no-reference",
+      "severity": "warn",
+      "subject": "blr-green-seg-01",
+      "message": "Operational segment has no references"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-no-reference",
+      "severity": "warn",
+      "subject": "blr-purple-seg-01",
+      "message": "Operational segment has no references"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "blr-green-seg-01",
+      "message": "Segment start is 608 m from nearest station of line 'blr-green' (threshold: 150 m)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "blr-green-seg-01",
+      "message": "Segment end is 363 m from nearest station of line 'blr-green' (threshold: 150 m)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "blr-pink-seg-01",
+      "message": "Segment start is 11835 m from nearest station of line 'blr-pink' (threshold: 150 m)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "blr-pink-seg-01",
+      "message": "Segment end is 2196 m from nearest station of line 'blr-pink' (threshold: 150 m)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "blr-planned-seg-01",
+      "message": "Segment start is 907 m from nearest station of line 'blr-purple' (threshold: 150 m)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "blr-planned-seg-01",
+      "message": "Segment end is 8974 m from nearest station of line 'blr-purple' (threshold: 150 m)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "segment-self-intersecting",
+      "severity": "warn",
+      "subject": "blr-green-seg-01",
+      "message": "Segment is self-intersecting"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "segment-self-intersecting",
+      "severity": "warn",
+      "subject": "blr-purple-seg-01",
+      "message": "Segment is self-intersecting"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "blr-mahatma-gandhi-road",
+      "message": "Station is 115 m from nearest segment of line 'blr-pink' (threshold: 75 m)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "last-verified-distribution",
+      "severity": "info",
+      "subject": "bengaluru",
+      "message": "last_verified distribution: 2026-10-06: 3; missing: 87"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "che-blue",
+      "message": "Operational length: computed 31.61 km vs reference 32.65 km (3.2%)"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "che-green",
+      "message": "Operational length: computed 23.98 km vs reference 21.96 km (9.2%)"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "che-corridor-4-seg-01",
+      "message": "Segment end is 14200 m from nearest station of line 'che-corridor-4' (threshold: 150 m)"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "che-green-seg-01",
+      "message": "Segment end is 209 m from nearest station of line 'che-green' (threshold: 150 m)"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "chennai-vadapalani",
+      "message": "Station is 112 m from nearest segment of line 'che-corridor-4' (threshold: 75 m)"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "last-verified-distribution",
+      "severity": "info",
+      "subject": "chennai",
+      "message": "last_verified distribution: missing: 44"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "segment-self-intersecting",
+      "severity": "info",
+      "subject": "che-blue-seg-01",
+      "message": "Segment is self-intersecting (exempted — loop line)"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "segment-self-intersecting",
+      "severity": "info",
+      "subject": "che-green-seg-01",
+      "message": "Segment is self-intersecting (exempted — loop line)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-ajmal-khan-park",
+      "message": "Station is 908 m from nearest segment of line 'del-blue' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-ambedkar-nagar",
+      "message": "Station is 2505 m from nearest segment of line 'del-yellow' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-anaj-mandi",
+      "message": "Station is 11050 m from nearest segment of line 'del-yellow' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-anandamayee-marg",
+      "message": "Station is 1935 m from nearest segment of line 'del-violet' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-ashok-vihar",
+      "message": "Station is 697 m from nearest segment of line 'del-yellow' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-barwala",
+      "message": "Station is 6464 m from nearest segment of line 'del-red' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-bawana",
+      "message": "Station is 10451 m from nearest segment of line 'del-red' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-bawana-ind-area-i",
+      "message": "Station is 8551 m from nearest segment of line 'del-red' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-bawana-ind-area-ii",
+      "message": "Station is 9661 m from nearest segment of line 'del-red' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-bawana-jj-colony",
+      "message": "Station is 10987 m from nearest segment of line 'del-red' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-belvedere-towers",
+      "message": "Station is 1230 m from nearest segment of line 'del-yellow' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-cyber-city",
+      "message": "Station is 1901 m from nearest segment of line 'del-yellow' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-daya-basti",
+      "message": "Station is 294 m from nearest segment of line 'del-red' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-delhi-gate",
+      "message": "Station is 202 m from nearest segment of line 'del-violet' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-derawal-nagar",
+      "message": "Station is 1162 m from nearest segment of line 'del-yellow' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-district-court",
+      "message": "Station is 1570 m from nearest segment of line 'del-yellow' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-dlf-phase-1",
+      "message": "Station is 1085 m from nearest segment of line 'del-yellow' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-dlf-phase-2",
+      "message": "Station is 678 m from nearest segment of line 'del-yellow' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-dwarka-sector-28",
+      "message": "Station is 3382 m from nearest segment of line 'del-airport' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-ghanta-gharsabji-manti",
+      "message": "Station is 1210 m from nearest segment of line 'del-red' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-greater-kailash-2",
+      "message": "Station is 907 m from nearest segment of line 'del-violet' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-indra-gandhi-stadium",
+      "message": "Station is 553 m from nearest segment of line 'del-violet' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-indraprastha",
+      "message": "Station is 335 m from nearest segment of line 'del-blue' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-keshavpur",
+      "message": "Station is 472 m from nearest segment of line 'del-magenta' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-kirti-nagar-2",
+      "message": "Station is 294 m from nearest segment of line 'del-green' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-kishangarh",
+      "message": "Station is 1714 m from nearest segment of line 'del-yellow' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-lado-sarai",
+      "message": "Station is 626 m from nearest segment of line 'del-yellow' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-lnjp-hospital",
+      "message": "Station is 521 m from nearest segment of line 'del-violet' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-loni-border",
+      "message": "Station is 3123 m from nearest segment of line 'del-pink' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-mahipalpur",
+      "message": "Station is 1001 m from nearest segment of line 'del-airport' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-mangolpuri",
+      "message": "Station is 878 m from nearest segment of line 'del-green' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-mashoodpur",
+      "message": "Station is 2939 m from nearest segment of line 'del-yellow' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-meerabagh",
+      "message": "Station is 1738 m from nearest segment of line 'del-magenta' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-mehrauli",
+      "message": "Station is 948 m from nearest segment of line 'del-yellow' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-moulsari-avenue",
+      "message": "Station is 2100 m from nearest segment of line 'del-yellow' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-nabi-karim",
+      "message": "Station is 1356 m from nearest segment of line 'del-blue' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-narela",
+      "message": "Station is 12676 m from nearest segment of line 'del-yellow' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-new-sanoth-colony",
+      "message": "Station is 11291 m from nearest segment of line 'del-yellow' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-noida-office",
+      "message": "Station is 1549 m from nearest segment of line 'del-magenta' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-noida-sector-44",
+      "message": "Station is 853 m from nearest segment of line 'del-magenta' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-paschim-vihar",
+      "message": "Station is 1238 m from nearest segment of line 'del-green' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-phase-3",
+      "message": "Station is 1319 m from nearest segment of line 'del-yellow' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-pushpanjali",
+      "message": "Station is 965 m from nearest segment of line 'del-magenta' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-puth-khurd",
+      "message": "Station is 7734 m from nearest segment of line 'del-red' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-rajpura",
+      "message": "Station is 1634 m from nearest segment of line 'del-yellow' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-sadar-bazar",
+      "message": "Station is 874 m from nearest segment of line 'del-red' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-saket-d-block",
+      "message": "Station is 1502 m from nearest segment of line 'del-magenta' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-saket-g-block",
+      "message": "Station is 1545 m from nearest segment of line 'del-yellow' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-sanoth",
+      "message": "Station is 11057 m from nearest segment of line 'del-yellow' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-sarai-rohilla",
+      "message": "Station is 1121 m from nearest segment of line 'del-red' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-sector-25-rohini",
+      "message": "Station is 1139 m from nearest segment of line 'del-red' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-sector-26-rohini",
+      "message": "Station is 2136 m from nearest segment of line 'del-red' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-sector-31-rohini",
+      "message": "Station is 3360 m from nearest segment of line 'del-red' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-sector-32-rohini",
+      "message": "Station is 4334 m from nearest segment of line 'del-red' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-sector-36-rohini",
+      "message": "Station is 5357 m from nearest segment of line 'del-red' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-sector-37-rohini",
+      "message": "Station is 6261 m from nearest segment of line 'del-red' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-sector-42-43",
+      "message": "Station is 2292 m from nearest segment of line 'del-yellow' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-sector-53-54",
+      "message": "Station is 3055 m from nearest segment of line 'del-yellow' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-sector-54-chowk",
+      "message": "Station is 4301 m from nearest segment of line 'del-yellow' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-sector-5556",
+      "message": "Station is 5105 m from nearest segment of line 'del-yellow' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-sheikh-sarai",
+      "message": "Station is 1245 m from nearest segment of line 'del-magenta' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-tigri",
+      "message": "Station is 3281 m from nearest segment of line 'del-magenta' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-tughlakabad-railway-colony",
+      "message": "Station is 778 m from nearest segment of line 'del-violet' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-vasantkunj-sector-d",
+      "message": "Station is 2285 m from nearest segment of line 'del-airport' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "del-west-enclave",
+      "message": "Station is 1584 m from nearest segment of line 'del-green' (threshold: 200 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "consecutive-segment-gap",
+      "severity": "warn",
+      "subject": "del-blue-seg-01|del-blue-seg-02",
+      "message": "Segments of line 'del-blue' have nearest endpoint gap of 4217 m (threshold: 150 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "consecutive-segment-gap",
+      "severity": "warn",
+      "subject": "del-green-seg-01|del-green-seg-02",
+      "message": "Segments of line 'del-green' have nearest endpoint gap of 1358 m (threshold: 150 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "consecutive-segment-gap",
+      "severity": "warn",
+      "subject": "del-magenta-seg-01|del-magenta-seg-02",
+      "message": "Segments of line 'del-magenta' have nearest endpoint gap of 6499 m (threshold: 150 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "coords-city-bbox",
+      "severity": "warn",
+      "subject": "del-red-seg-01",
+      "message": "Coordinate [77.40029, 28.67507] outside city bbox [76.84, 28.4, 77.35, 28.88] ±0.05°"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "coords-city-bbox",
+      "severity": "warn",
+      "subject": "del-violet-seg-01",
+      "message": "Coordinate [77.31653, 28.34999] outside city bbox [76.84, 28.4, 77.35, 28.88] ±0.05°"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "duplicate-station-name",
+      "severity": "warn",
+      "subject": "del-greater-kailash|del-greater-kailash-2",
+      "message": "Duplicate normalized station name 'greater kailash': [del-greater-kailash, del-greater-kailash-2]"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "duplicate-station-name",
+      "severity": "warn",
+      "subject": "del-kirti-nagar|del-kirti-nagar-2",
+      "message": "Duplicate normalized station name 'kirti nagar': [del-kirti-nagar, del-kirti-nagar-2]"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "del-airport",
+      "message": "Operational length: computed 23.72 km vs reference 24.69 km (3.9%) (unverified reference)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "del-green",
+      "message": "Operational length: computed 27.85 km vs reference 28.79 km (3.3%) (unverified reference)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "del-grey",
+      "message": "Operational length: computed 6.03 km vs reference 5.19 km (16.3%) (unverified reference)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "del-magenta",
+      "message": "Operational length: computed 39.89 km vs reference 50.18 km (20.5%) (unverified reference)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "del-pink",
+      "message": "Operational length: computed 75.17 km vs reference 71.55 km (5.1%) (unverified reference)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "del-red",
+      "message": "Operational length: computed 33.37 km vs reference 34.55 km (3.4%) (unverified reference)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "del-violet",
+      "message": "Operational length: computed 44.86 km vs reference 46.34 km (3.2%) (unverified reference)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-station-count",
+      "severity": "warn",
+      "subject": "del-airport",
+      "message": "Operational station count: data has 8, reference has 7 (unverified reference)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-station-count",
+      "severity": "warn",
+      "subject": "del-blue",
+      "message": "Operational station count: data has 46, reference has 58 (unverified reference)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-station-count",
+      "severity": "warn",
+      "subject": "del-magenta",
+      "message": "Operational station count: data has 26, reference has 33 (unverified reference)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-station-count",
+      "severity": "warn",
+      "subject": "del-red",
+      "message": "Operational station count: data has 22, reference has 29 (unverified reference)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-station-count",
+      "severity": "warn",
+      "subject": "del-violet",
+      "message": "Operational station count: data has 17, reference has 34 (unverified reference)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-station-count",
+      "severity": "warn",
+      "subject": "del-yellow",
+      "message": "Operational station count: data has 46, reference has 37 (unverified reference)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-terminal-mismatch",
+      "severity": "warn",
+      "subject": "del-blue",
+      "message": "Terminal 'Noida Electronic City' from reference not found in data station names (unverified reference)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-terminal-mismatch",
+      "severity": "warn",
+      "subject": "del-grey",
+      "message": "Terminal 'Dwarka' from reference not found in data station names (unverified reference)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-terminal-mismatch",
+      "severity": "warn",
+      "subject": "del-red",
+      "message": "Terminal 'Shaheed Sthal' from reference not found in data station names (unverified reference)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-terminal-mismatch",
+      "severity": "warn",
+      "subject": "del-violet",
+      "message": "Terminal 'Raja Nahar Singh' from reference not found in data station names (unverified reference)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "interchange-consistency",
+      "severity": "warn",
+      "subject": "del-kalkaji-mandir",
+      "message": "is_interchange is true but station is on only 1 line(s)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "interchange-consistency",
+      "severity": "warn",
+      "subject": "del-kirti-nagar-2",
+      "message": "is_interchange is true but station is on only 1 line(s)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "interchange-consistency",
+      "severity": "warn",
+      "subject": "del-netaji-subhash-place",
+      "message": "is_interchange is true but station is on only 1 line(s)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "interchange-consistency",
+      "severity": "warn",
+      "subject": "del-yamuna-bank",
+      "message": "is_interchange is true but station is on only 1 line(s)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "severity": "warn",
+      "subject": "del-airport-seg-01",
+      "message": "Operational segment has no references"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "severity": "warn",
+      "subject": "del-blue-seg-01",
+      "message": "Operational segment has no references"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "severity": "warn",
+      "subject": "del-blue-seg-02",
+      "message": "Operational segment has no references"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "severity": "warn",
+      "subject": "del-green-seg-01",
+      "message": "Operational segment has no references"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "severity": "warn",
+      "subject": "del-green-seg-02",
+      "message": "Operational segment has no references"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "severity": "warn",
+      "subject": "del-grey-seg-01",
+      "message": "Operational segment has no references"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "severity": "warn",
+      "subject": "del-magenta-seg-01",
+      "message": "Operational segment has no references"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "severity": "warn",
+      "subject": "del-pink-seg-01",
+      "message": "Operational segment has no references"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "severity": "warn",
+      "subject": "del-red-seg-01",
+      "message": "Operational segment has no references"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "severity": "warn",
+      "subject": "del-violet-seg-01",
+      "message": "Operational segment has no references"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "severity": "warn",
+      "subject": "del-yellow-seg-01",
+      "message": "Operational segment has no references"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "del-blue-seg-01",
+      "message": "Segment start is 4206 m from nearest station of line 'del-blue' (threshold: 150 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "del-green-seg-01",
+      "message": "Segment start is 159 m from nearest station of line 'del-green' (threshold: 150 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "del-pink-seg-01",
+      "message": "Segment end is 234 m from nearest station of line 'del-pink' (threshold: 150 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "del-red-seg-01",
+      "message": "Segment end is 6726 m from nearest station of line 'del-red' (threshold: 150 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "del-violet-seg-01",
+      "message": "Segment end is 9215 m from nearest station of line 'del-violet' (threshold: 150 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "del-yellow-seg-01",
+      "message": "Segment start is 446 m from nearest station of line 'del-yellow' (threshold: 150 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "segment-self-intersecting",
+      "severity": "warn",
+      "subject": "del-grey-seg-01",
+      "message": "Segment is self-intersecting"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "segment-self-intersecting",
+      "severity": "warn",
+      "subject": "del-magenta-seg-01",
+      "message": "Segment is self-intersecting"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "segment-self-intersecting",
+      "severity": "warn",
+      "subject": "del-pink-seg-01",
+      "message": "Segment is self-intersecting"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "segment-self-intersecting",
+      "severity": "warn",
+      "subject": "del-yellow-seg-01",
+      "message": "Segment is self-intersecting"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "del-aerocity",
+      "message": "Station is 88 m from nearest segment of line 'del-airport' (threshold: 75 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "del-andrews-ganj",
+      "message": "Station is 198 m from nearest segment of line 'del-violet' (threshold: 75 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "del-azadpur",
+      "message": "Station is 77 m from nearest segment of line 'del-yellow' (threshold: 75 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "del-dilli-haat-ina",
+      "message": "Station is 158 m from nearest segment of line 'del-yellow' (threshold: 75 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "del-domestic-airport",
+      "message": "Station is 138 m from nearest segment of line 'del-magenta' (threshold: 75 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "del-hauz-khas",
+      "message": "Station is 124 m from nearest segment of line 'del-magenta' (threshold: 75 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "del-inderlok",
+      "message": "Station is 159 m from nearest segment of line 'del-green' (threshold: 75 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "del-karkarduma",
+      "message": "Station is 89 m from nearest segment of line 'del-blue' (threshold: 75 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "del-kirti-nagar",
+      "message": "Station is 129 m from nearest segment of line 'del-green' (threshold: 75 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "del-madhuban-chowk",
+      "message": "Station is 168 m from nearest segment of line 'del-magenta' (threshold: 75 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "del-mayur-vihar-i",
+      "message": "Station is 110 m from nearest segment of line 'del-blue' (threshold: 75 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "del-new-delhi",
+      "message": "Station is 116 m from nearest segment of line 'del-airport' (threshold: 75 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "del-punjabi-bagh-west",
+      "message": "Station is 154 m from nearest segment of line 'del-green' (threshold: 75 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "del-rajouri-garden",
+      "message": "Station is 131 m from nearest segment of line 'del-blue' (threshold: 75 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "del-saket",
+      "message": "Station is 108 m from nearest segment of line 'del-yellow' (threshold: 75 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "del-welcome",
+      "message": "Station is 85 m from nearest segment of line 'del-pink' (threshold: 75 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "last-verified-distribution",
+      "severity": "info",
+      "subject": "delhi",
+      "message": "last_verified distribution: missing: 292"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "kol-green",
+      "message": "Operational length: computed 18.21 km vs reference 16.55 km (10.0%)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "kol-purple",
+      "message": "Operational length: computed 7.99 km vs reference 7.75 km (3.1%)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "kol-yellow",
+      "message": "Operational length: computed 6.41 km vs reference 6.77 km (5.3%)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "kol-green-seg-01",
+      "message": "Segment end is 197 m from nearest station of line 'kol-green' (threshold: 150 m)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "kol-orange-seg-01",
+      "message": "Segment start is 221 m from nearest station of line 'kol-orange' (threshold: 150 m)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "kol-orange-seg-02",
+      "message": "Segment end is 8476 m from nearest station of line 'kol-orange' (threshold: 150 m)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "kol-purple-seg-02",
+      "message": "Segment start is 978 m from nearest station of line 'kol-purple' (threshold: 150 m)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "kol-purple-seg-02",
+      "message": "Segment end is 5663 m from nearest station of line 'kol-purple' (threshold: 150 m)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "kol-yellow-seg-02",
+      "message": "Segment start is 9846 m from nearest station of line 'kol-yellow' (threshold: 150 m)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "kolkata-kavi-subhash",
+      "message": "Station is 85 m from nearest segment of line 'kol-orange' (threshold: 75 m)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "last-verified-distribution",
+      "severity": "info",
+      "subject": "kolkata",
+      "message": "last_verified distribution: missing: 64"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "segment-self-intersecting",
+      "severity": "info",
+      "subject": "kol-green-seg-01",
+      "message": "Segment is self-intersecting (exempted — loop line)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-line-missing",
+      "severity": "error",
+      "subject": "mum-line-9",
+      "message": "Line 'mum-line-9' in reference but not in data"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "mum-airport-colony",
+      "message": "Station is 733 m from nearest segment of line 'mum-line-3' (threshold: 200 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "mum-azad-nagar-bus-stop",
+      "message": "Station is 566 m from nearest segment of line 'mum-line-4' (threshold: 200 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "mum-cbd-belapur",
+      "message": "Station is 11156 m from nearest segment of line 'mum-line-2b' (threshold: 200 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "mum-dr-kashinath-ghanekar-natyagruha",
+      "message": "Station is 582 m from nearest segment of line 'mum-line-4' (threshold: 200 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "mum-ghandi-nagar",
+      "message": "Station is 342 m from nearest segment of line 'mum-line-4' (threshold: 200 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "mum-kashigaon",
+      "message": "Station is 631 m from nearest segment of line 'mum-line-4' (threshold: 200 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "mum-lokmanya-nagar-bus-depot",
+      "message": "Station is 1401 m from nearest segment of line 'mum-line-4' (threshold: 200 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "mum-manpada",
+      "message": "Station is 350 m from nearest segment of line 'mum-line-4' (threshold: 200 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "mum-neelkanth-terminal",
+      "message": "Station is 1215 m from nearest segment of line 'mum-line-4' (threshold: 200 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "mum-pandurang-wadi",
+      "message": "Station is 577 m from nearest segment of line 'mum-line-2a' (threshold: 200 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "mum-patlipada",
+      "message": "Station is 799 m from nearest segment of line 'mum-line-4' (threshold: 200 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "mum-rbi-colony",
+      "message": "Station is 11861 m from nearest segment of line 'mum-line-2b' (threshold: 200 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "mum-shahid-bhagat-singh-garden",
+      "message": "Station is 4060 m from nearest segment of line 'mum-line-2a' (threshold: 200 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "mum-shivai-nagar",
+      "message": "Station is 1537 m from nearest segment of line 'mum-line-4' (threshold: 200 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "mum-subhash-chandra-bose-ground",
+      "message": "Station is 4140 m from nearest segment of line 'mum-line-2a' (threshold: 200 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "mum-vijay-nagari",
+      "message": "Station is 231 m from nearest segment of line 'mum-line-4' (threshold: 200 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "mum-waghbil",
+      "message": "Station is 1117 m from nearest segment of line 'mum-line-4' (threshold: 200 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "mum-wagle-circle",
+      "message": "Station is 1030 m from nearest segment of line 'mum-line-4' (threshold: 200 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "mum-waterfront",
+      "message": "Station is 1948 m from nearest segment of line 'mum-line-4' (threshold: 200 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "consecutive-segment-gap",
+      "severity": "warn",
+      "subject": "mum-line-4-seg-01|mum-planned-seg-01",
+      "message": "Segments of line 'mum-line-4' have nearest endpoint gap of 1228 m (threshold: 150 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "mum-line-2a",
+      "message": "Operational length: computed 17.76 km vs reference 18.6 km (4.5%) (unverified reference)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "mum-line-2b",
+      "message": "Operational length: computed 0.00 km vs reference 5.5 km (100.0%) (unverified reference)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "mum-line-7",
+      "message": "Operational length: computed 28.97 km vs reference 16.5 km (75.6%) (unverified reference)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-station-count",
+      "severity": "warn",
+      "subject": "mum-line-1",
+      "message": "Operational station count: data has 3, reference has 12 (unverified reference)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-station-count",
+      "severity": "warn",
+      "subject": "mum-line-2a",
+      "message": "Operational station count: data has 20, reference has 17 (unverified reference)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-station-count",
+      "severity": "warn",
+      "subject": "mum-line-7",
+      "message": "Operational station count: data has 16, reference has 14 (unverified reference)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-terminal-mismatch",
+      "severity": "warn",
+      "subject": "mum-line-1",
+      "message": "Terminal 'Versova' from reference not found in data station names (unverified reference)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-terminal-mismatch",
+      "severity": "warn",
+      "subject": "mum-line-1",
+      "message": "Terminal 'Ghatkopar' from reference not found in data station names (unverified reference)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-terminal-mismatch",
+      "severity": "warn",
+      "subject": "mum-line-2a",
+      "message": "Terminal 'Dahisar East' from reference not found in data station names (unverified reference)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-terminal-mismatch",
+      "severity": "warn",
+      "subject": "mum-line-2a",
+      "message": "Terminal 'Andheri West' from reference not found in data station names (unverified reference)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-terminal-mismatch",
+      "severity": "warn",
+      "subject": "mum-line-3",
+      "message": "Terminal 'Aarey JVLR' from reference not found in data station names (unverified reference)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-terminal-mismatch",
+      "severity": "warn",
+      "subject": "mum-line-4",
+      "message": "Terminal 'Bhakti Park Wadala' from reference not found in data station names (unverified reference)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-terminal-mismatch",
+      "severity": "warn",
+      "subject": "mum-line-4",
+      "message": "Terminal 'Kasarvadavali' from reference not found in data station names (unverified reference)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-terminal-mismatch",
+      "severity": "warn",
+      "subject": "mum-line-7",
+      "message": "Terminal 'Dahisar East' from reference not found in data station names (unverified reference)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "interchange-consistency",
+      "severity": "warn",
+      "subject": "mum-chhatrapati-shivaji-maharaj-terminus",
+      "message": "is_interchange is true but station is on only 1 line(s)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "interchange-consistency",
+      "severity": "warn",
+      "subject": "mum-dadar",
+      "message": "is_interchange is true but station is on only 1 line(s)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "interchange-consistency",
+      "severity": "warn",
+      "subject": "mum-gundavali",
+      "message": "is_interchange is true but station is on only 1 line(s)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "line-operator-matches-reference",
+      "severity": "warn",
+      "subject": "mum-line-1",
+      "message": "Line operator: data has 'MMRDA', reference has 'MMOPL' (unverified reference)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "line-operator-matches-reference",
+      "severity": "warn",
+      "subject": "mum-line-2a",
+      "message": "Line operator: data has 'MMRDA', reference has 'MMMOCL' (unverified reference)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "line-operator-matches-reference",
+      "severity": "warn",
+      "subject": "mum-line-2b",
+      "message": "Line operator: data has 'MMRDA', reference has 'MMMOCL' (unverified reference)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "line-operator-matches-reference",
+      "severity": "warn",
+      "subject": "mum-line-3",
+      "message": "Line operator: data has 'MMRDA', reference has 'MMRCL' (unverified reference)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "line-operator-matches-reference",
+      "severity": "warn",
+      "subject": "mum-line-4",
+      "message": "Line operator: data has 'MMRDA', reference has 'MMMOCL' (unverified reference)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "line-operator-matches-reference",
+      "severity": "warn",
+      "subject": "mum-line-7",
+      "message": "Line operator: data has 'MMRDA', reference has 'MMMOCL' (unverified reference)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-no-reference",
+      "severity": "warn",
+      "subject": "mum-line-1-seg-01",
+      "message": "Operational segment has no references"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-no-reference",
+      "severity": "warn",
+      "subject": "mum-line-2a-seg-01",
+      "message": "Operational segment has no references"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-no-reference",
+      "severity": "warn",
+      "subject": "mum-line-3-seg-01",
+      "message": "Operational segment has no references"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-no-reference",
+      "severity": "warn",
+      "subject": "mum-line-7-seg-01",
+      "message": "Operational segment has no references"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "mum-line-1-seg-01",
+      "message": "Segment start is 1377 m from nearest station of line 'mum-line-1' (threshold: 150 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "mum-line-1-seg-01",
+      "message": "Segment end is 3973 m from nearest station of line 'mum-line-1' (threshold: 150 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "mum-line-3-seg-01",
+      "message": "Segment start is 1235 m from nearest station of line 'mum-line-3' (threshold: 150 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "mum-line-3-seg-01",
+      "message": "Segment end is 301 m from nearest station of line 'mum-line-3' (threshold: 150 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "mum-line-4-seg-01",
+      "message": "Segment start is 362 m from nearest station of line 'mum-line-4' (threshold: 150 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "mum-line-4-seg-01",
+      "message": "Segment end is 343 m from nearest station of line 'mum-line-4' (threshold: 150 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "mum-planned-seg-01",
+      "message": "Segment start is 1375 m from nearest station of line 'mum-line-4' (threshold: 150 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "mum-planned-seg-01",
+      "message": "Segment end is 3551 m from nearest station of line 'mum-line-4' (threshold: 150 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "segment-self-intersecting",
+      "severity": "warn",
+      "subject": "mum-line-4-seg-01",
+      "message": "Segment is self-intersecting"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "segment-self-intersecting",
+      "severity": "warn",
+      "subject": "mum-line-7-seg-01",
+      "message": "Segment is self-intersecting"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "mum-andheri-west",
+      "message": "Station is 118 m from nearest segment of line 'mum-line-1' (threshold: 75 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "mum-chembur",
+      "message": "Station is 154 m from nearest segment of line 'mum-line-4' (threshold: 75 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "mum-dahisar-east-line-2",
+      "message": "Station is 142 m from nearest segment of line 'mum-line-7' (threshold: 75 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "mum-dahisar-east-line-7",
+      "message": "Station is 120 m from nearest segment of line 'mum-line-2a' (threshold: 75 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "mum-dahisar-east-line-9",
+      "message": "Station is 97 m from nearest segment of line 'mum-line-7' (threshold: 75 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "mum-miragaon",
+      "message": "Station is 170 m from nearest segment of line 'mum-line-4' (threshold: 75 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "last-verified-distribution",
+      "severity": "info",
+      "subject": "mumbai",
+      "message": "last_verified distribution: 2026-10-06: 1; missing: 97"
+    }
+  ]
+}

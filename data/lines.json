@@ -187,5 +187,104 @@
     "operator": "DMRC",
     "city_id": "delhi",
     "source": "osm+dmrc"
+  },
+  {
+    "id": "kol-blue",
+    "name": "Blue Line (Line 1)",
+    "city": "Kolkata",
+    "color": "#0072CE",
+    "operator": "Metro Railway, Kolkata",
+    "city_id": "kolkata",
+    "source": "osm+mtp"
+  },
+  {
+    "id": "kol-green",
+    "name": "Green Line (Line 2)",
+    "city": "Kolkata",
+    "color": "#009A44",
+    "operator": "KMRC",
+    "city_id": "kolkata",
+    "source": "osm+kmrc"
+  },
+  {
+    "id": "kol-purple",
+    "name": "Purple Line (Line 3)",
+    "city": "Kolkata",
+    "color": "#702082",
+    "operator": "Metro Railway, Kolkata",
+    "city_id": "kolkata",
+    "source": "osm+mtp"
+  },
+  {
+    "id": "kol-yellow",
+    "name": "Yellow Line (Line 4)",
+    "city": "Kolkata",
+    "color": "#FFD100",
+    "operator": "Metro Railway, Kolkata",
+    "city_id": "kolkata",
+    "source": "osm+mtp"
+  },
+  {
+    "id": "kol-orange",
+    "name": "Orange Line (Line 6)",
+    "city": "Kolkata",
+    "color": "#FF8200",
+    "operator": "Metro Railway, Kolkata",
+    "city_id": "kolkata",
+    "source": "osm+mtp"
+  },
+  {
+    "id": "kol-pink",
+    "name": "Pink Line (Line 5)",
+    "city": "Kolkata",
+    "color": "#E31B6D",
+    "operator": "Metro Railway, Kolkata",
+    "city_id": "kolkata",
+    "source": "mtp"
+  },
+  {
+    "id": "che-blue",
+    "name": "Blue Line (Corridor 1)",
+    "city": "Chennai",
+    "color": "#0072CE",
+    "operator": "CMRL",
+    "city_id": "chennai",
+    "source": "osm+cmrl"
+  },
+  {
+    "id": "che-green",
+    "name": "Green Line (Corridor 2)",
+    "city": "Chennai",
+    "color": "#009A44",
+    "operator": "CMRL",
+    "city_id": "chennai",
+    "source": "osm+cmrl"
+  },
+  {
+    "id": "che-corridor-3",
+    "name": "Purple Line (Corridor 3)",
+    "city": "Chennai",
+    "color": "#702082",
+    "operator": "CMRL",
+    "city_id": "chennai",
+    "source": "cmrl"
+  },
+  {
+    "id": "che-corridor-4",
+    "name": "Yellow Line (Corridor 4)",
+    "city": "Chennai",
+    "color": "#FFD100",
+    "operator": "CMRL",
+    "city_id": "chennai",
+    "source": "cmrl"
+  },
+  {
+    "id": "che-corridor-5",
+    "name": "Red Line (Corridor 5)",
+    "city": "Chennai",
+    "color": "#ED1C24",
+    "operator": "CMRL",
+    "city_id": "chennai",
+    "source": "cmrl"
   }
 ]

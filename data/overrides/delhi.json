@@ -290,5 +290,8 @@
   "dedupeRadiusM": 350,
   "stationAliases": {
     "Ramakrishna Ashram Marg": "R K Ashram Marg"
-  }
+  },
+  "out_of_scope_line_ids": [
+    "del-silver"
+  ]
 }

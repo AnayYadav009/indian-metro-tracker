@@ -19,7 +19,9 @@
     "pipeline:fetch": "tsx scripts/pipeline/fetch-overpass.ts",
     "pipeline:build": "tsx scripts/pipeline/build-real-data.ts",
     "pipeline:all": "tsx scripts/pipeline/build-all.ts",
-    "audit:dedupe": "tsx scripts/audit/dedupe-report.ts"
+    "audit:dedupe": "tsx scripts/audit/dedupe-report.ts",
+    "audit:links": "tsx scripts/audit/check-reference-links.ts",
+    "audit:data": "tsx scripts/audit/consistency-report.ts"
   },
   "engines": {
     "node": ">=18.18.0"

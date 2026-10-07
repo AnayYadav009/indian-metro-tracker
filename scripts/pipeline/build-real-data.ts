@@ -33,9 +33,20 @@ export async function buildCityData(cityId: string, forceFetch = false): Promise
   const normalized = normalizeOverpassCity(cityId, rawData);
   console.log(`   Found ${normalized.segments.length} route segments and ${normalized.stations.length} stations.`);
 
+  // Check cache file mtime for retrieved_at date
+  const rawCacheFile = path.resolve(process.cwd(), "data", "raw", `${cityId}.json`);
+  let retrievedAt: string | undefined;
+  if (fs.existsSync(rawCacheFile)) {
+    try {
+      retrievedAt = fs.statSync(rawCacheFile).mtime.toISOString().slice(0, 10);
+    } catch {
+      // ignore
+    }
+  }
+
   // 3. Merge Overrides
   console.log(`🔗 Merging official metadata & overrides for ${cityId}...`);
-  const { segments, stations } = mergeCityOverrides(normalized, overrides);
+  const { segments, stations } = mergeCityOverrides(normalized, overrides, retrievedAt);
   console.log(`   Generated ${segments.length} validated segments and ${stations.length} stations.`);
 
   // 4. Validate isolated city dataset

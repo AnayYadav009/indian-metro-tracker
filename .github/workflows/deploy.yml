@@ -43,6 +43,19 @@ jobs:
 
       - name: Build static site
         run: npm run build
+        env:
+          NEXT_PUBLIC_BASE_PATH: /indian-metro-tracker
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Run E2E Smoke Tests on static export
+        run: |
+          node scripts/serve.mjs &
+          sleep 2
+          npx playwright test
+        env:
+          CI: true
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

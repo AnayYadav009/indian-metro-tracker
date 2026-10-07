@@ -20,6 +20,12 @@ export const CitySchema = z.object({
   bbox: BoundingBoxSchema,
   operator: z.string().min(1),
   phases: z.array(z.string().min(1)).min(1),
+  tier: z.union([z.literal(1), z.literal(2)]).default(1).optional(),
+  network_id: z.string().min(1).optional(),
+  retrieved_at: z
+    .string()
+    .regex(/^\d{4}-\d{2}-\d{2}$/, "Format must be YYYY-MM-DD")
+    .optional(),
 });
 export type City = z.infer<typeof CitySchema>;
 
@@ -31,6 +37,10 @@ export const LineSchema = z.object({
   color: z.string().regex(/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/, "Invalid hex color"),
   operator: z.string().min(1),
   source: z.string().min(1, "source is required"),
+  retrieved_at: z
+    .string()
+    .regex(/^\d{4}-\d{2}-\d{2}$/, "Format must be YYYY-MM-DD")
+    .optional(),
 });
 export type Line = z.infer<typeof LineSchema>;
 
@@ -45,6 +55,7 @@ export const SegmentPropertiesSchema = z
     status: StatusSchema,
     phase: z.string().min(1),
     length_km: z.number().positive(),
+    official_length_km: z.number().positive().optional(),
     gauge: z.string().min(1),
     inaugurated_on: z
       .string()
@@ -62,11 +73,24 @@ export const SegmentPropertiesSchema = z
       .default([]),
     last_verified: z
       .string()
-      .regex(/^\d{4}-\d{2}-\d{2}$/, "Format must be YYYY-MM-DD"),
+      .regex(/^\d{4}-\d{2}-\d{2}$/, "Format must be YYYY-MM-DD")
+      .nullable(),
+    retrieved_at: z
+      .string()
+      .regex(/^\d{4}-\d{2}-\d{2}$/, "Format must be YYYY-MM-DD")
+      .optional(),
     completion_unconfirmed: z.boolean().default(false).optional(),
+    geometry_quality: z.enum(["exact", "schematic"]).default("exact").optional(),
   })
   .superRefine((data, ctx) => {
     if (data.status === "operational") {
+      if (data.geometry_quality === "schematic") {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: "Operational segment must not have geometry_quality: 'schematic'",
+          path: ["geometry_quality"],
+        });
+      }
       if (!data.inaugurated_on) {
         ctx.addIssue({
           code: z.ZodIssueCode.custom,
@@ -151,6 +175,7 @@ export const StationPropertiesSchema = z
     city_id: z.string().min(1),
     city: z.string().min(1),
     line_ids: z.array(z.string().min(1)).min(1),
+    segment_id: z.string().min(1).optional(),
     status: StatusSchema,
     phase: z.string().min(1),
     is_interchange: z.boolean(),
@@ -166,18 +191,16 @@ export const StationPropertiesSchema = z
     source: z.string().min(1, "source is required"),
     last_verified: z
       .string()
-      .regex(/^\d{4}-\d{2}-\d{2}$/, "Format must be YYYY-MM-DD"),
+      .regex(/^\d{4}-\d{2}-\d{2}$/, "Format must be YYYY-MM-DD")
+      .nullable(),
+    retrieved_at: z
+      .string()
+      .regex(/^\d{4}-\d{2}-\d{2}$/, "Format must be YYYY-MM-DD")
+      .optional(),
     completion_unconfirmed: z.boolean().default(false).optional(),
   })
   .superRefine((data, ctx) => {
     if (data.status === "operational") {
-      if (!data.opened_on) {
-        ctx.addIssue({
-          code: z.ZodIssueCode.custom,
-          message: "opened_on is required when status is 'operational'",
-          path: ["opened_on"],
-        });
-      }
       if (data.expected_completion !== null) {
         ctx.addIssue({
           code: z.ZodIssueCode.custom,

@@ -1,0 +1,1945 @@
+{
+  "date": "2026-10-07",
+  "summary": {
+    "total_errors": 116,
+    "total_warnings": 398,
+    "total_info": 3
+  },
+  "root_causes": {
+    "R1": {
+      "code": "R1",
+      "title": "Placeholder stations_count = 10",
+      "file": "scripts/pipeline/merge-overrides.ts",
+      "line": 109,
+      "function": "mergeOverridesIntoGeoJSON",
+      "description": "Hardcoded fallback 'let stationsCount = segOverride.stations_count || 10;' sets 10 on segments without explicit count.",
+      "affected_rules": [
+        "stations-count-mismatch (25 errors)"
+      ]
+    },
+    "R2": {
+      "code": "R2",
+      "title": "Placeholder opened_on = 2006-11-11",
+      "file": "scripts/pipeline/merge-overrides.ts",
+      "line": 346,
+      "function": "mergeOverridesIntoGeoJSON",
+      "description": "Hardcoded fallback 'openedOn = \"2006-11-11\"; // Fallback operational opening' sets placeholder date on all operational stations.",
+      "affected_rules": [
+        "station-opened-before-segment (272 warnings)"
+      ]
+    },
+    "R3": {
+      "code": "R3",
+      "title": "Hardcoded last_verified = today",
+      "file": "scripts/pipeline/merge-overrides.ts",
+      "lines": [
+        137,
+        386
+      ],
+      "function": "mergeOverridesIntoGeoJSON",
+      "description": "Pipeline assigns current date 'today' to OSM segments/stations rather than preserving verified date or retrieved_at.",
+      "affected_rules": [
+        "last-verified-distribution (3 info)"
+      ]
+    },
+    "R4": {
+      "code": "R4",
+      "title": "Line has no segment geometry (future/ghost stations)",
+      "file": "scripts/pipeline/normalize.ts",
+      "lines": [
+        110,
+        205
+      ],
+      "function": "normalizeElements",
+      "description": "Stations ingested for future planned corridors (e.g., Delhi Golden Line del-silver, extension spurs) without corresponding segment geometry.",
+      "affected_rules": [
+        "line-no-segments (1 error)",
+        "station-far-from-all-segments (class a: 26 stations)"
+      ]
+    },
+    "R5": {
+      "code": "R5",
+      "title": "Station assigned to the wrong line",
+      "file": "scripts/pipeline/merge-overrides.ts",
+      "line": 359,
+      "function": "stationOverrides handling",
+      "description": "Station line_ids contains incorrect line or misses the actual polyline it sits on (e.g. adjacent lines or unmerged interchange).",
+      "affected_rules": [
+        "station-far-from-all-segments (class b)"
+      ]
+    },
+    "R6": {
+      "code": "R6",
+      "title": "Segment geometry wrong, stitched badly, or spanning several statuses/phases",
+      "file": "scripts/pipeline/merge-overrides.ts",
+      "lines": [
+        100,
+        150
+      ],
+      "function": "mergeOverridesIntoGeoJSON",
+      "description": "Coarse or lumped polylines from OSM where line paths deviate from true alignments, self-intersect, or leave endpoint gaps.",
+      "affected_rules": [
+        "station-far-from-all-segments (class c: 61 stations)",
+        "station-far-from-nearest-segment (17 warnings)",
+        "segment-end-far-from-station (20 warnings)",
+        "segment-self-intersecting (8 warnings)",
+        "consecutive-segment-gap (5 warnings)",
+        "coords-city-bbox (2 warnings)",
+        "duplicate-station-name (2 warnings)",
+        "ground-truth-length (12 warnings)"
+      ]
+    },
+    "R7": {
+      "code": "R7",
+      "title": "Status stale versus reality",
+      "file": "data/overrides/*.json & data/segments.geojson",
+      "lines": [],
+      "function": "Static dataset values",
+      "description": "Recent 2024-2026 expansions (Mumbai Lines 9 and 2B, Line 3 Cuffe Parade, Delhi Pink loop, Delhi Magenta Phase 4) not updated in raw segment/station data.",
+      "affected_rules": [
+        "ground-truth-line-missing (1 error)",
+        "station-status-mismatch (1 error)",
+        "ground-truth-station-count (10 warnings)",
+        "ground-truth-phase-date (4 warnings)",
+        "ground-truth-terminal-mismatch (21 warnings)",
+        "station-far-from-all-segments (class d: 1 station)"
+      ]
+    },
+    "R8": {
+      "code": "R8",
+      "title": "Interchange modelling mismatch",
+      "file": "scripts/audit/audit-engine.ts",
+      "line": 960,
+      "function": "auditDataset (C9 check)",
+      "description": "Single physical interchange node assigned multiple line_ids or within 100m of another station with is_interchange=false.",
+      "affected_rules": [
+        "interchange-consistency (8 warnings)"
+      ]
+    },
+    "R9": {
+      "code": "R9",
+      "title": "Operator mislabelled from city default",
+      "file": "scripts/pipeline/merge-overrides.ts",
+      "line": 95,
+      "function": "mergeOverridesIntoGeoJSON",
+      "description": "All segments within a city inherit city-level operator override (e.g. MMMOCL in Mumbai) instead of per-line operators (MMOPL, MMRCL).",
+      "affected_rules": [
+        "Checked under C8 segment-operator-mismatch"
+      ]
+    },
+    "R10": {
+      "code": "R10",
+      "title": "Missing references on operational records",
+      "file": "scripts/pipeline/merge-overrides.ts",
+      "line": 164,
+      "function": "mergeOverridesIntoGeoJSON",
+      "description": "Operational segments have empty references array: 'references: segOverride.references || []'.",
+      "affected_rules": [
+        "operational-no-reference (17 warnings)"
+      ]
+    },
+    "R11": {
+      "code": "R11",
+      "title": "Deprecated Overpass mirror in fetch pipeline",
+      "file": "scripts/pipeline/fetch-overpass.ts",
+      "line": 16,
+      "function": "OVERPASS_ENDPOINTS",
+      "description": "Unreliable Russian mirror 'https://maps.mail.ru/osm/tools/overpass/api/interpreter' present in fallback rotation list.",
+      "affected_rules": [
+        "Pipeline infrastructure"
+      ]
+    }
+  },
+  "line_station_comparisons": [
+    {
+      "city_id": "delhi",
+      "line_id": "del-red",
+      "official_name": "Red Line (Line 1)",
+      "data_operational_stations": 22,
+      "reference_operational_stations": 29,
+      "candidates": null,
+      "difference": -7
+    },
+    {
+      "city_id": "delhi",
+      "line_id": "del-yellow",
+      "official_name": "Yellow Line (Line 2)",
+      "data_operational_stations": 46,
+      "reference_operational_stations": 37,
+      "candidates": null,
+      "difference": 9
+    },
+    {
+      "city_id": "delhi",
+      "line_id": "del-blue",
+      "official_name": "Blue Line (Line 3 & Line 4)",
+      "data_operational_stations": 46,
+      "reference_operational_stations": 58,
+      "candidates": null,
+      "difference": -12
+    },
+    {
+      "city_id": "delhi",
+      "line_id": "del-green",
+      "official_name": "Green Line (Line 5)",
+      "data_operational_stations": 24,
+      "reference_operational_stations": 24,
+      "candidates": null,
+      "difference": 0
+    },
+    {
+      "city_id": "delhi",
+      "line_id": "del-violet",
+      "official_name": "Violet Line (Line 6)",
+      "data_operational_stations": 17,
+      "reference_operational_stations": 34,
+      "candidates": null,
+      "difference": -17
+    },
+    {
+      "city_id": "delhi",
+      "line_id": "del-airport",
+      "official_name": "Airport Express (Orange Line)",
+      "data_operational_stations": 8,
+      "reference_operational_stations": 7,
+      "candidates": null,
+      "difference": 1
+    },
+    {
+      "city_id": "delhi",
+      "line_id": "del-pink",
+      "official_name": "Pink Line (Line 7)",
+      "data_operational_stations": 43,
+      "reference_operational_stations": null,
+      "candidates": [
+        46,
+        47
+      ],
+      "difference": "N/A (unverified / candidate)"
+    },
+    {
+      "city_id": "delhi",
+      "line_id": "del-magenta",
+      "official_name": "Magenta Line (Line 8)",
+      "data_operational_stations": 27,
+      "reference_operational_stations": 33,
+      "candidates": null,
+      "difference": -6
+    },
+    {
+      "city_id": "delhi",
+      "line_id": "del-grey",
+      "official_name": "Grey Line (Line 9)",
+      "data_operational_stations": 4,
+      "reference_operational_stations": 4,
+      "candidates": null,
+      "difference": 0
+    },
+    {
+      "city_id": "delhi",
+      "line_id": "del-silver",
+      "official_name": "Golden Line (Line 10, formerly Silver)",
+      "data_operational_stations": 0,
+      "reference_operational_stations": 0,
+      "candidates": null,
+      "difference": 0
+    },
+    {
+      "city_id": "bengaluru",
+      "line_id": "blr-purple",
+      "official_name": "Purple Line",
+      "data_operational_stations": 37,
+      "reference_operational_stations": 37,
+      "candidates": null,
+      "difference": 0
+    },
+    {
+      "city_id": "bengaluru",
+      "line_id": "blr-green",
+      "official_name": "Green Line",
+      "data_operational_stations": 31,
+      "reference_operational_stations": 32,
+      "candidates": null,
+      "difference": -1
+    },
+    {
+      "city_id": "bengaluru",
+      "line_id": "blr-yellow",
+      "official_name": "Yellow Line",
+      "data_operational_stations": 16,
+      "reference_operational_stations": 16,
+      "candidates": null,
+      "difference": 0
+    },
+    {
+      "city_id": "bengaluru",
+      "line_id": "blr-blue",
+      "official_name": "Blue Line (Airport Metro)",
+      "data_operational_stations": 0,
+      "reference_operational_stations": 0,
+      "candidates": null,
+      "difference": 0
+    },
+    {
+      "city_id": "bengaluru",
+      "line_id": "blr-pink",
+      "official_name": "Pink Line",
+      "data_operational_stations": 0,
+      "reference_operational_stations": 0,
+      "candidates": null,
+      "difference": 0
+    },
+    {
+      "city_id": "mumbai",
+      "line_id": "mum-line-1",
+      "official_name": "Metro Line 1 (Blue Line)",
+      "data_operational_stations": 1,
+      "reference_operational_stations": 12,
+      "candidates": null,
+      "difference": -11
+    },
+    {
+      "city_id": "mumbai",
+      "line_id": "mum-line-2a",
+      "official_name": "Metro Line 2A (Yellow Line)",
+      "data_operational_stations": 21,
+      "reference_operational_stations": 17,
+      "candidates": null,
+      "difference": 4
+    },
+    {
+      "city_id": "mumbai",
+      "line_id": "mum-line-7",
+      "official_name": "Metro Line 7 (Red Line)",
+      "data_operational_stations": 14,
+      "reference_operational_stations": 14,
+      "candidates": null,
+      "difference": 0
+    },
+    {
+      "city_id": "mumbai",
+      "line_id": "mum-line-9",
+      "official_name": "Metro Line 9 (Red Line Extension)",
+      "data_operational_stations": 0,
+      "reference_operational_stations": 4,
+      "candidates": null,
+      "difference": -4
+    },
+    {
+      "city_id": "mumbai",
+      "line_id": "mum-line-3",
+      "official_name": "Metro Line 3 (Aqua Line)",
+      "data_operational_stations": 28,
+      "reference_operational_stations": 27,
+      "candidates": null,
+      "difference": 1
+    },
+    {
+      "city_id": "mumbai",
+      "line_id": "mum-line-4",
+      "official_name": "Metro Line 4 (Green Line)",
+      "data_operational_stations": 0,
+      "reference_operational_stations": 0,
+      "candidates": null,
+      "difference": 0
+    },
+    {
+      "city_id": "mumbai",
+      "line_id": "mum-line-2b",
+      "official_name": "Metro Line 2B (Yellow Line Extension)",
+      "data_operational_stations": 0,
+      "reference_operational_stations": null,
+      "candidates": null,
+      "difference": "N/A (unverified / candidate)"
+    }
+  ],
+  "far_stations": [
+    {
+      "station_id": "blr-nagawara-proposed",
+      "name": "Nagawara (Proposed)",
+      "city": "bengaluru",
+      "assigned_lines": [
+        "blr-pink"
+      ],
+      "status": "planned",
+      "phase": "2",
+      "dist_assigned_m": 2185,
+      "nearest_assigned_seg": "blr-pink-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 2185,
+      "nearest_any_seg": "blr-pink-seg-01",
+      "nearest_any_line": "blr-pink",
+      "cls": "a",
+      "rec": "add schematic connector"
+    },
+    {
+      "station_id": "del-ajmal-khan-park",
+      "name": "Ajmal Khan Park",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-blue"
+      ],
+      "status": "construction",
+      "phase": "I",
+      "dist_assigned_m": 903,
+      "nearest_assigned_seg": "del-blue-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 903,
+      "nearest_any_seg": "del-blue-seg-01",
+      "nearest_any_line": "del-blue",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "del-ambedkar-nagar",
+      "name": "Ambedkar Nagar",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-yellow"
+      ],
+      "status": "construction",
+      "phase": "I",
+      "dist_assigned_m": 2507,
+      "nearest_assigned_seg": "del-yellow-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 2507,
+      "nearest_any_seg": "del-yellow-seg-01",
+      "nearest_any_line": "del-yellow",
+      "cls": "a",
+      "rec": "add schematic connector"
+    },
+    {
+      "station_id": "del-anaj-mandi",
+      "name": "Anaj Mandi",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-yellow"
+      ],
+      "status": "construction",
+      "phase": "I",
+      "dist_assigned_m": 10999,
+      "nearest_assigned_seg": "del-yellow-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 10999,
+      "nearest_any_seg": "del-yellow-seg-01",
+      "nearest_any_line": "del-yellow",
+      "cls": "a",
+      "rec": "add schematic connector"
+    },
+    {
+      "station_id": "del-anandamayee-marg",
+      "name": "Anandamayee Marg",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-violet"
+      ],
+      "status": "construction",
+      "phase": "II",
+      "dist_assigned_m": 1937,
+      "nearest_assigned_seg": "del-violet-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 1937,
+      "nearest_any_seg": "del-violet-seg-01",
+      "nearest_any_line": "del-violet",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "del-ashok-vihar",
+      "name": "Ashok Vihar",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-yellow"
+      ],
+      "status": "construction",
+      "phase": "I",
+      "dist_assigned_m": 693,
+      "nearest_assigned_seg": "del-yellow-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 693,
+      "nearest_any_seg": "del-yellow-seg-01",
+      "nearest_any_line": "del-yellow",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "del-azadpur",
+      "name": "Azadpur",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-yellow",
+        "del-pink"
+      ],
+      "status": "construction",
+      "phase": "I",
+      "dist_assigned_m": 78,
+      "nearest_assigned_seg": "del-yellow-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 78,
+      "nearest_any_seg": "del-yellow-seg-01",
+      "nearest_any_line": "del-yellow",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "del-barwala",
+      "name": "Barwala",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-red"
+      ],
+      "status": "construction",
+      "phase": "I",
+      "dist_assigned_m": 6450,
+      "nearest_assigned_seg": "del-red-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 6450,
+      "nearest_any_seg": "del-red-seg-01",
+      "nearest_any_line": "del-red",
+      "cls": "a",
+      "rec": "add schematic connector"
+    },
+    {
+      "station_id": "del-bawana",
+      "name": "Bawana",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-red"
+      ],
+      "status": "construction",
+      "phase": "I",
+      "dist_assigned_m": 10419,
+      "nearest_assigned_seg": "del-red-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 10419,
+      "nearest_any_seg": "del-red-seg-01",
+      "nearest_any_line": "del-red",
+      "cls": "a",
+      "rec": "add schematic connector"
+    },
+    {
+      "station_id": "del-bawana-ind-area-i",
+      "name": "Bawana Ind. Area-I",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-red"
+      ],
+      "status": "construction",
+      "phase": "I",
+      "dist_assigned_m": 8528,
+      "nearest_assigned_seg": "del-red-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 8528,
+      "nearest_any_seg": "del-red-seg-01",
+      "nearest_any_line": "del-red",
+      "cls": "a",
+      "rec": "add schematic connector"
+    },
+    {
+      "station_id": "del-bawana-ind-area-ii",
+      "name": "Bawana Ind. Area-II",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-red"
+      ],
+      "status": "construction",
+      "phase": "I",
+      "dist_assigned_m": 9636,
+      "nearest_assigned_seg": "del-red-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 9636,
+      "nearest_any_seg": "del-red-seg-01",
+      "nearest_any_line": "del-red",
+      "cls": "a",
+      "rec": "add schematic connector"
+    },
+    {
+      "station_id": "del-bawana-jj-colony",
+      "name": "Bawana J.J. Colony",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-red"
+      ],
+      "status": "construction",
+      "phase": "I",
+      "dist_assigned_m": 10948,
+      "nearest_assigned_seg": "del-red-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 10948,
+      "nearest_any_seg": "del-red-seg-01",
+      "nearest_any_line": "del-red",
+      "cls": "a",
+      "rec": "add schematic connector"
+    },
+    {
+      "station_id": "del-belvedere-towers",
+      "name": "Belvedere Towers",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-yellow"
+      ],
+      "status": "operational",
+      "phase": "I",
+      "dist_assigned_m": 1224,
+      "nearest_assigned_seg": "del-yellow-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 1224,
+      "nearest_any_seg": "del-yellow-seg-01",
+      "nearest_any_line": "del-yellow",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "del-cyber-city",
+      "name": "Cyber City",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-yellow"
+      ],
+      "status": "operational",
+      "phase": "I",
+      "dist_assigned_m": 1891,
+      "nearest_assigned_seg": "del-yellow-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 1891,
+      "nearest_any_seg": "del-yellow-seg-01",
+      "nearest_any_line": "del-yellow",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "del-daya-basti",
+      "name": "Daya Basti",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-red"
+      ],
+      "status": "construction",
+      "phase": "I",
+      "dist_assigned_m": 292,
+      "nearest_assigned_seg": "del-red-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 292,
+      "nearest_any_seg": "del-red-seg-01",
+      "nearest_any_line": "del-red",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "del-delhi-gate",
+      "name": "Delhi Gate",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-violet"
+      ],
+      "status": "construction",
+      "phase": "II",
+      "dist_assigned_m": 202,
+      "nearest_assigned_seg": "del-violet-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 202,
+      "nearest_any_seg": "del-violet-seg-01",
+      "nearest_any_line": "del-violet",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "del-derawal-nagar",
+      "name": "Derawal Nagar",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-yellow"
+      ],
+      "status": "construction",
+      "phase": "I",
+      "dist_assigned_m": 1156,
+      "nearest_assigned_seg": "del-yellow-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 1156,
+      "nearest_any_seg": "del-yellow-seg-01",
+      "nearest_any_line": "del-yellow",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "del-district-court",
+      "name": "District Court",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-yellow"
+      ],
+      "status": "construction",
+      "phase": "I",
+      "dist_assigned_m": 1572,
+      "nearest_assigned_seg": "del-yellow-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 1572,
+      "nearest_any_seg": "del-yellow-seg-01",
+      "nearest_any_line": "del-yellow",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "del-dlf-phase-1",
+      "name": "DLF Phase 1",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-yellow"
+      ],
+      "status": "operational",
+      "phase": "I",
+      "dist_assigned_m": 1080,
+      "nearest_assigned_seg": "del-yellow-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 1080,
+      "nearest_any_seg": "del-yellow-seg-01",
+      "nearest_any_line": "del-yellow",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "del-dlf-phase-2",
+      "name": "DLF Phase 2",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-yellow"
+      ],
+      "status": "operational",
+      "phase": "I",
+      "dist_assigned_m": 675,
+      "nearest_assigned_seg": "del-yellow-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 675,
+      "nearest_any_seg": "del-yellow-seg-01",
+      "nearest_any_line": "del-yellow",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "del-dwarka-sector-28",
+      "name": "Dwarka Sector-28",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-airport"
+      ],
+      "status": "construction",
+      "phase": "II",
+      "dist_assigned_m": 3385,
+      "nearest_assigned_seg": "del-airport-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 3385,
+      "nearest_any_seg": "del-airport-seg-01",
+      "nearest_any_line": "del-airport",
+      "cls": "a",
+      "rec": "add schematic connector"
+    },
+    {
+      "station_id": "del-ghanta-gharsabji-manti",
+      "name": "Ghanta Ghar/Sabji Manti",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-red"
+      ],
+      "status": "construction",
+      "phase": "I",
+      "dist_assigned_m": 1204,
+      "nearest_assigned_seg": "del-red-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 1204,
+      "nearest_any_seg": "del-red-seg-01",
+      "nearest_any_line": "del-red",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "del-greater-kailash-2",
+      "name": "Greater Kailash",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-violet"
+      ],
+      "status": "construction",
+      "phase": "II",
+      "dist_assigned_m": 905,
+      "nearest_assigned_seg": "del-violet-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 905,
+      "nearest_any_seg": "del-violet-seg-01",
+      "nearest_any_line": "del-violet",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "del-indra-gandhi-stadium",
+      "name": "Indra Gandhi Stadium",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-violet"
+      ],
+      "status": "construction",
+      "phase": "II",
+      "dist_assigned_m": 554,
+      "nearest_assigned_seg": "del-violet-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 554,
+      "nearest_any_seg": "del-violet-seg-01",
+      "nearest_any_line": "del-violet",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "del-indraprastha",
+      "name": "Indraprastha",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-blue"
+      ],
+      "status": "construction",
+      "phase": "I",
+      "dist_assigned_m": 334,
+      "nearest_assigned_seg": "del-blue-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 334,
+      "nearest_any_seg": "del-blue-seg-01",
+      "nearest_any_line": "del-blue",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "del-kalkaji-mandir",
+      "name": "Kalkaji Mandir",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-violet",
+        "del-magenta"
+      ],
+      "status": "operational",
+      "phase": "II",
+      "dist_assigned_m": 3,
+      "nearest_assigned_seg": "del-violet-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 3,
+      "nearest_any_seg": "del-violet-seg-01",
+      "nearest_any_line": "del-violet",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "del-keshavpur",
+      "name": "Keshavpur",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-magenta"
+      ],
+      "status": "construction",
+      "phase": "III",
+      "dist_assigned_m": 470,
+      "nearest_assigned_seg": "del-magenta-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 470,
+      "nearest_any_seg": "del-magenta-seg-01",
+      "nearest_any_line": "del-magenta",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "del-kirti-nagar-2",
+      "name": "Kirti Nagar",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-green"
+      ],
+      "status": "construction",
+      "phase": "II",
+      "dist_assigned_m": 293,
+      "nearest_assigned_seg": "del-green-seg-02",
+      "assigned_has_geom": true,
+      "dist_any_m": 293,
+      "nearest_any_seg": "del-green-seg-02",
+      "nearest_any_line": "del-green",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "del-kishangarh",
+      "name": "Kishangarh",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-yellow"
+      ],
+      "status": "construction",
+      "phase": "I",
+      "dist_assigned_m": 1707,
+      "nearest_assigned_seg": "del-yellow-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 1707,
+      "nearest_any_seg": "del-yellow-seg-01",
+      "nearest_any_line": "del-yellow",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "del-lado-sarai",
+      "name": "Lado Sarai",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-yellow"
+      ],
+      "status": "construction",
+      "phase": "I",
+      "dist_assigned_m": 625,
+      "nearest_assigned_seg": "del-yellow-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 625,
+      "nearest_any_seg": "del-yellow-seg-01",
+      "nearest_any_line": "del-yellow",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "del-lnjp-hospital",
+      "name": "LNJP Hospital",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-violet"
+      ],
+      "status": "construction",
+      "phase": "II",
+      "dist_assigned_m": 522,
+      "nearest_assigned_seg": "del-violet-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 522,
+      "nearest_any_seg": "del-violet-seg-01",
+      "nearest_any_line": "del-violet",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "del-loni-border",
+      "name": "Loni Border",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-pink"
+      ],
+      "status": "construction",
+      "phase": "III",
+      "dist_assigned_m": 3121,
+      "nearest_assigned_seg": "del-pink-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 3121,
+      "nearest_any_seg": "del-pink-seg-01",
+      "nearest_any_line": "del-pink",
+      "cls": "a",
+      "rec": "add schematic connector"
+    },
+    {
+      "station_id": "del-mahipalpur",
+      "name": "Mahipalpur",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-airport"
+      ],
+      "status": "construction",
+      "phase": "II",
+      "dist_assigned_m": 997,
+      "nearest_assigned_seg": "del-airport-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 997,
+      "nearest_any_seg": "del-airport-seg-01",
+      "nearest_any_line": "del-airport",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "del-mangolpuri",
+      "name": "Mangolpuri",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-green"
+      ],
+      "status": "construction",
+      "phase": "II",
+      "dist_assigned_m": 873,
+      "nearest_assigned_seg": "del-green-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 873,
+      "nearest_any_seg": "del-green-seg-01",
+      "nearest_any_line": "del-green",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "del-mashoodpur",
+      "name": "Mashoodpur",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-yellow"
+      ],
+      "status": "construction",
+      "phase": "I",
+      "dist_assigned_m": 2933,
+      "nearest_assigned_seg": "del-yellow-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 2933,
+      "nearest_any_seg": "del-yellow-seg-01",
+      "nearest_any_line": "del-yellow",
+      "cls": "a",
+      "rec": "add schematic connector"
+    },
+    {
+      "station_id": "del-meerabagh",
+      "name": "Meerabagh",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-magenta"
+      ],
+      "status": "construction",
+      "phase": "III",
+      "dist_assigned_m": 1730,
+      "nearest_assigned_seg": "del-magenta-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 1730,
+      "nearest_any_seg": "del-magenta-seg-01",
+      "nearest_any_line": "del-magenta",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "del-mehrauli",
+      "name": "Mehrauli",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-yellow"
+      ],
+      "status": "construction",
+      "phase": "I",
+      "dist_assigned_m": 945,
+      "nearest_assigned_seg": "del-yellow-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 945,
+      "nearest_any_seg": "del-yellow-seg-01",
+      "nearest_any_line": "del-yellow",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "del-moulsari-avenue",
+      "name": "Moulsari Avenue",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-yellow"
+      ],
+      "status": "operational",
+      "phase": "I",
+      "dist_assigned_m": 2089,
+      "nearest_assigned_seg": "del-yellow-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 2089,
+      "nearest_any_seg": "del-yellow-seg-01",
+      "nearest_any_line": "del-yellow",
+      "cls": "a",
+      "rec": "add schematic connector"
+    },
+    {
+      "station_id": "del-nabi-karim",
+      "name": "Nabi Karim",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-blue"
+      ],
+      "status": "construction",
+      "phase": "I",
+      "dist_assigned_m": 1352,
+      "nearest_assigned_seg": "del-blue-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 1352,
+      "nearest_any_seg": "del-blue-seg-01",
+      "nearest_any_line": "del-blue",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "del-narela",
+      "name": "Narela",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-yellow"
+      ],
+      "status": "construction",
+      "phase": "I",
+      "dist_assigned_m": 12613,
+      "nearest_assigned_seg": "del-yellow-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 12613,
+      "nearest_any_seg": "del-yellow-seg-01",
+      "nearest_any_line": "del-yellow",
+      "cls": "a",
+      "rec": "add schematic connector"
+    },
+    {
+      "station_id": "del-netaji-subhash-place",
+      "name": "Netaji Subhash Place",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-red",
+        "del-pink"
+      ],
+      "status": "operational",
+      "phase": "I",
+      "dist_assigned_m": 4,
+      "nearest_assigned_seg": "del-red-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 4,
+      "nearest_any_seg": "del-red-seg-01",
+      "nearest_any_line": "del-red",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "del-new-sanoth-colony",
+      "name": "New Sanoth Colony",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-yellow"
+      ],
+      "status": "construction",
+      "phase": "I",
+      "dist_assigned_m": 11252,
+      "nearest_assigned_seg": "del-yellow-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 11252,
+      "nearest_any_seg": "del-yellow-seg-01",
+      "nearest_any_line": "del-yellow",
+      "cls": "a",
+      "rec": "add schematic connector"
+    },
+    {
+      "station_id": "del-noida-office",
+      "name": "Noida Office",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-magenta"
+      ],
+      "status": "planned",
+      "phase": "III",
+      "dist_assigned_m": 1542,
+      "nearest_assigned_seg": "del-magenta-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 1542,
+      "nearest_any_seg": "del-magenta-seg-01",
+      "nearest_any_line": "del-magenta",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "del-noida-sector-44",
+      "name": "Noida Sector 44",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-magenta"
+      ],
+      "status": "planned",
+      "phase": "III",
+      "dist_assigned_m": 850,
+      "nearest_assigned_seg": "del-magenta-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 850,
+      "nearest_any_seg": "del-magenta-seg-01",
+      "nearest_any_line": "del-magenta",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "del-paschim-vihar",
+      "name": "Paschim Vihar",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-green"
+      ],
+      "status": "construction",
+      "phase": "II",
+      "dist_assigned_m": 1231,
+      "nearest_assigned_seg": "del-green-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 1231,
+      "nearest_any_seg": "del-green-seg-01",
+      "nearest_any_line": "del-green",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "del-phase-3",
+      "name": "Phase 3",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-yellow"
+      ],
+      "status": "operational",
+      "phase": "I",
+      "dist_assigned_m": 1312,
+      "nearest_assigned_seg": "del-yellow-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 1312,
+      "nearest_any_seg": "del-yellow-seg-01",
+      "nearest_any_line": "del-yellow",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "del-pushpanjali",
+      "name": "Pushpanjali",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-magenta"
+      ],
+      "status": "construction",
+      "phase": "IV",
+      "dist_assigned_m": 965,
+      "nearest_assigned_seg": "del-magenta-seg-02",
+      "assigned_has_geom": true,
+      "dist_any_m": 965,
+      "nearest_any_seg": "del-magenta-seg-02",
+      "nearest_any_line": "del-magenta",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "del-puth-khurd",
+      "name": "Puth Khurd",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-red"
+      ],
+      "status": "construction",
+      "phase": "I",
+      "dist_assigned_m": 7713,
+      "nearest_assigned_seg": "del-red-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 7713,
+      "nearest_any_seg": "del-red-seg-01",
+      "nearest_any_line": "del-red",
+      "cls": "a",
+      "rec": "add schematic connector"
+    },
+    {
+      "station_id": "del-rajpura",
+      "name": "Rajpura",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-yellow"
+      ],
+      "status": "construction",
+      "phase": "I",
+      "dist_assigned_m": 1626,
+      "nearest_assigned_seg": "del-yellow-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 1626,
+      "nearest_any_seg": "del-yellow-seg-01",
+      "nearest_any_line": "del-yellow",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "del-sadar-bazar",
+      "name": "Sadar Bazar",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-red"
+      ],
+      "status": "construction",
+      "phase": "I",
+      "dist_assigned_m": 869,
+      "nearest_assigned_seg": "del-red-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 869,
+      "nearest_any_seg": "del-red-seg-01",
+      "nearest_any_line": "del-red",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "del-saket-d-block",
+      "name": "Saket D Block",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-magenta"
+      ],
+      "status": "construction",
+      "phase": "III",
+      "dist_assigned_m": 1494,
+      "nearest_assigned_seg": "del-magenta-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 1494,
+      "nearest_any_seg": "del-magenta-seg-01",
+      "nearest_any_line": "del-magenta",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "del-saket-g-block",
+      "name": "Saket G Block",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-yellow"
+      ],
+      "status": "construction",
+      "phase": "I",
+      "dist_assigned_m": 1547,
+      "nearest_assigned_seg": "del-yellow-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 1547,
+      "nearest_any_seg": "del-yellow-seg-01",
+      "nearest_any_line": "del-yellow",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "del-sanoth",
+      "name": "Sanoth",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-yellow"
+      ],
+      "status": "construction",
+      "phase": "I",
+      "dist_assigned_m": 11028,
+      "nearest_assigned_seg": "del-yellow-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 11028,
+      "nearest_any_seg": "del-yellow-seg-01",
+      "nearest_any_line": "del-yellow",
+      "cls": "a",
+      "rec": "add schematic connector"
+    },
+    {
+      "station_id": "del-sarai-rohilla",
+      "name": "Sarai Rohilla",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-red"
+      ],
+      "status": "construction",
+      "phase": "I",
+      "dist_assigned_m": 1115,
+      "nearest_assigned_seg": "del-red-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 1115,
+      "nearest_any_seg": "del-red-seg-01",
+      "nearest_any_line": "del-red",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "del-sector-25-rohini",
+      "name": "Sector-25 Rohini",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-red"
+      ],
+      "status": "construction",
+      "phase": "I",
+      "dist_assigned_m": 1137,
+      "nearest_assigned_seg": "del-red-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 1137,
+      "nearest_any_seg": "del-red-seg-01",
+      "nearest_any_line": "del-red",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "del-sector-26-rohini",
+      "name": "Sector-26 Rohini",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-red"
+      ],
+      "status": "construction",
+      "phase": "I",
+      "dist_assigned_m": 2133,
+      "nearest_assigned_seg": "del-red-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 2133,
+      "nearest_any_seg": "del-red-seg-01",
+      "nearest_any_line": "del-red",
+      "cls": "a",
+      "rec": "add schematic connector"
+    },
+    {
+      "station_id": "del-sector-31-rohini",
+      "name": "Sector-31 Rohini",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-red"
+      ],
+      "status": "construction",
+      "phase": "I",
+      "dist_assigned_m": 3356,
+      "nearest_assigned_seg": "del-red-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 3356,
+      "nearest_any_seg": "del-red-seg-01",
+      "nearest_any_line": "del-red",
+      "cls": "a",
+      "rec": "add schematic connector"
+    },
+    {
+      "station_id": "del-sector-32-rohini",
+      "name": "Sector-32 Rohini",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-red"
+      ],
+      "status": "construction",
+      "phase": "I",
+      "dist_assigned_m": 4329,
+      "nearest_assigned_seg": "del-red-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 4329,
+      "nearest_any_seg": "del-red-seg-01",
+      "nearest_any_line": "del-red",
+      "cls": "a",
+      "rec": "add schematic connector"
+    },
+    {
+      "station_id": "del-sector-36-rohini",
+      "name": "Sector-36 Rohini",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-red"
+      ],
+      "status": "construction",
+      "phase": "I",
+      "dist_assigned_m": 5352,
+      "nearest_assigned_seg": "del-red-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 5352,
+      "nearest_any_seg": "del-red-seg-01",
+      "nearest_any_line": "del-red",
+      "cls": "a",
+      "rec": "add schematic connector"
+    },
+    {
+      "station_id": "del-sector-37-rohini",
+      "name": "Sector-37 Rohini",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-red"
+      ],
+      "status": "construction",
+      "phase": "I",
+      "dist_assigned_m": 6253,
+      "nearest_assigned_seg": "del-red-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 6253,
+      "nearest_any_seg": "del-red-seg-01",
+      "nearest_any_line": "del-red",
+      "cls": "a",
+      "rec": "add schematic connector"
+    },
+    {
+      "station_id": "del-sector-42-43",
+      "name": "Sector 42-43",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-yellow"
+      ],
+      "status": "operational",
+      "phase": "I",
+      "dist_assigned_m": 2295,
+      "nearest_assigned_seg": "del-yellow-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 2295,
+      "nearest_any_seg": "del-yellow-seg-01",
+      "nearest_any_line": "del-yellow",
+      "cls": "a",
+      "rec": "add schematic connector"
+    },
+    {
+      "station_id": "del-sector-53-54",
+      "name": "Sector 53-54",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-yellow"
+      ],
+      "status": "operational",
+      "phase": "I",
+      "dist_assigned_m": 3054,
+      "nearest_assigned_seg": "del-yellow-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 3054,
+      "nearest_any_seg": "del-yellow-seg-01",
+      "nearest_any_line": "del-yellow",
+      "cls": "a",
+      "rec": "add schematic connector"
+    },
+    {
+      "station_id": "del-sector-54-chowk",
+      "name": "Sector 54 Chowk",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-yellow"
+      ],
+      "status": "operational",
+      "phase": "I",
+      "dist_assigned_m": 4293,
+      "nearest_assigned_seg": "del-yellow-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 4293,
+      "nearest_any_seg": "del-yellow-seg-01",
+      "nearest_any_line": "del-yellow",
+      "cls": "a",
+      "rec": "add schematic connector"
+    },
+    {
+      "station_id": "del-sector-5556",
+      "name": "Sector 55–56",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-yellow"
+      ],
+      "status": "operational",
+      "phase": "I",
+      "dist_assigned_m": 5090,
+      "nearest_assigned_seg": "del-yellow-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 5090,
+      "nearest_any_seg": "del-yellow-seg-01",
+      "nearest_any_line": "del-yellow",
+      "cls": "a",
+      "rec": "add schematic connector"
+    },
+    {
+      "station_id": "del-sheikh-sarai",
+      "name": "Sheikh Sarai",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-magenta"
+      ],
+      "status": "construction",
+      "phase": "III",
+      "dist_assigned_m": 1238,
+      "nearest_assigned_seg": "del-magenta-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 1238,
+      "nearest_any_seg": "del-magenta-seg-01",
+      "nearest_any_line": "del-magenta",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "del-tigri",
+      "name": "Tigri",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-magenta"
+      ],
+      "status": "construction",
+      "phase": "III",
+      "dist_assigned_m": 3265,
+      "nearest_assigned_seg": "del-magenta-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 3265,
+      "nearest_any_seg": "del-magenta-seg-01",
+      "nearest_any_line": "del-magenta",
+      "cls": "a",
+      "rec": "add schematic connector"
+    },
+    {
+      "station_id": "del-tughlakabad-railway-colony",
+      "name": "Tughlakabad Railway Colony",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-violet"
+      ],
+      "status": "construction",
+      "phase": "II",
+      "dist_assigned_m": 779,
+      "nearest_assigned_seg": "del-violet-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 779,
+      "nearest_any_seg": "del-violet-seg-01",
+      "nearest_any_line": "del-violet",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "del-vasantkunj-sector-d",
+      "name": "Vasantkunj Sector D",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-airport"
+      ],
+      "status": "construction",
+      "phase": "II",
+      "dist_assigned_m": 2278,
+      "nearest_assigned_seg": "del-airport-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 2278,
+      "nearest_any_seg": "del-airport-seg-01",
+      "nearest_any_line": "del-airport",
+      "cls": "a",
+      "rec": "add schematic connector"
+    },
+    {
+      "station_id": "del-west-enclave",
+      "name": "West Enclave",
+      "city": "delhi",
+      "assigned_lines": [
+        "del-green"
+      ],
+      "status": "construction",
+      "phase": "II",
+      "dist_assigned_m": 1575,
+      "nearest_assigned_seg": "del-green-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 1575,
+      "nearest_any_seg": "del-green-seg-01",
+      "nearest_any_line": "del-green",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "mum-airport-colony",
+      "name": "Airport Colony",
+      "city": "mumbai",
+      "assigned_lines": [
+        "mum-line-3"
+      ],
+      "status": "operational",
+      "phase": "3",
+      "dist_assigned_m": 730,
+      "nearest_assigned_seg": "mum-line-3-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 730,
+      "nearest_any_seg": "mum-line-3-seg-01",
+      "nearest_any_line": "mum-line-3",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "mum-azad-nagar-bus-stop",
+      "name": "Azad Nagar Bus Stop",
+      "city": "mumbai",
+      "assigned_lines": [
+        "mum-line-4"
+      ],
+      "status": "construction",
+      "phase": "4",
+      "dist_assigned_m": 567,
+      "nearest_assigned_seg": "mum-line-4-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 567,
+      "nearest_any_seg": "mum-line-4-seg-01",
+      "nearest_any_line": "mum-line-4",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "mum-cbd-belapur",
+      "name": "CBD Belapur",
+      "city": "mumbai",
+      "assigned_lines": [
+        "mum-line-2b"
+      ],
+      "status": "construction",
+      "phase": "2B",
+      "dist_assigned_m": 11162,
+      "nearest_assigned_seg": "mum-line-2b-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 11162,
+      "nearest_any_seg": "mum-line-2b-seg-01",
+      "nearest_any_line": "mum-line-2b",
+      "cls": "a",
+      "rec": "add schematic connector"
+    },
+    {
+      "station_id": "mum-dr-kashinath-ghanekar-natyagruha",
+      "name": "Dr. Kashinath Ghanekar Natyagruha",
+      "city": "mumbai",
+      "assigned_lines": [
+        "mum-line-4"
+      ],
+      "status": "planned",
+      "phase": "4",
+      "dist_assigned_m": 582,
+      "nearest_assigned_seg": "mum-line-4-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 582,
+      "nearest_any_seg": "mum-line-4-seg-01",
+      "nearest_any_line": "mum-line-4",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "mum-ghandi-nagar",
+      "name": "Ghandi Nagar",
+      "city": "mumbai",
+      "assigned_lines": [
+        "mum-line-4"
+      ],
+      "status": "planned",
+      "phase": "4",
+      "dist_assigned_m": 342,
+      "nearest_assigned_seg": "mum-line-4-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 342,
+      "nearest_any_seg": "mum-line-4-seg-01",
+      "nearest_any_line": "mum-line-4",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "mum-kashigaon",
+      "name": "Kashigaon",
+      "city": "mumbai",
+      "assigned_lines": [
+        "mum-line-4"
+      ],
+      "status": "construction",
+      "phase": "4",
+      "dist_assigned_m": 629,
+      "nearest_assigned_seg": "mum-line-4-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 629,
+      "nearest_any_seg": "mum-line-4-seg-01",
+      "nearest_any_line": "mum-line-4",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "mum-lokmanya-nagar-bus-depot",
+      "name": "Lokmanya Nagar Bus Depot",
+      "city": "mumbai",
+      "assigned_lines": [
+        "mum-line-4"
+      ],
+      "status": "planned",
+      "phase": "4",
+      "dist_assigned_m": 1401,
+      "nearest_assigned_seg": "mum-line-4-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 1401,
+      "nearest_any_seg": "mum-line-4-seg-01",
+      "nearest_any_line": "mum-line-4",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "mum-manpada",
+      "name": "Manpada",
+      "city": "mumbai",
+      "assigned_lines": [
+        "mum-line-4"
+      ],
+      "status": "planned",
+      "phase": "4",
+      "dist_assigned_m": 350,
+      "nearest_assigned_seg": "mum-line-4-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 350,
+      "nearest_any_seg": "mum-line-4-seg-01",
+      "nearest_any_line": "mum-line-4",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "mum-neelkanth-terminal",
+      "name": "Neelkanth Terminal",
+      "city": "mumbai",
+      "assigned_lines": [
+        "mum-line-4"
+      ],
+      "status": "planned",
+      "phase": "4",
+      "dist_assigned_m": 1214,
+      "nearest_assigned_seg": "mum-line-4-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 1214,
+      "nearest_any_seg": "mum-line-4-seg-01",
+      "nearest_any_line": "mum-line-4",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "mum-pandurang-wadi",
+      "name": "Pandurang Wadi",
+      "city": "mumbai",
+      "assigned_lines": [
+        "mum-line-2a"
+      ],
+      "status": "operational",
+      "phase": "2A",
+      "dist_assigned_m": 576,
+      "nearest_assigned_seg": "mum-line-2a-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 576,
+      "nearest_any_seg": "mum-line-2a-seg-01",
+      "nearest_any_line": "mum-line-2a",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "mum-patlipada",
+      "name": "Patlipada",
+      "city": "mumbai",
+      "assigned_lines": [
+        "mum-line-4"
+      ],
+      "status": "planned",
+      "phase": "4",
+      "dist_assigned_m": 800,
+      "nearest_assigned_seg": "mum-line-4-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 800,
+      "nearest_any_seg": "mum-line-4-seg-01",
+      "nearest_any_line": "mum-line-4",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "mum-rbi-colony",
+      "name": "RBI Colony",
+      "city": "mumbai",
+      "assigned_lines": [
+        "mum-line-2b"
+      ],
+      "status": "construction",
+      "phase": "2B",
+      "dist_assigned_m": 11870,
+      "nearest_assigned_seg": "mum-line-2b-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 11870,
+      "nearest_any_seg": "mum-line-2b-seg-01",
+      "nearest_any_line": "mum-line-2b",
+      "cls": "a",
+      "rec": "add schematic connector"
+    },
+    {
+      "station_id": "mum-shahid-bhagat-singh-garden",
+      "name": "Shahid Bhagat Singh Garden",
+      "city": "mumbai",
+      "assigned_lines": [
+        "mum-line-2a"
+      ],
+      "status": "operational",
+      "phase": "2A",
+      "dist_assigned_m": 4038,
+      "nearest_assigned_seg": "mum-line-2a-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 4038,
+      "nearest_any_seg": "mum-line-2a-seg-01",
+      "nearest_any_line": "mum-line-2a",
+      "cls": "a",
+      "rec": "add schematic connector"
+    },
+    {
+      "station_id": "mum-shivai-nagar",
+      "name": "Shivai Nagar",
+      "city": "mumbai",
+      "assigned_lines": [
+        "mum-line-4"
+      ],
+      "status": "planned",
+      "phase": "4",
+      "dist_assigned_m": 1537,
+      "nearest_assigned_seg": "mum-line-4-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 1537,
+      "nearest_any_seg": "mum-line-4-seg-01",
+      "nearest_any_line": "mum-line-4",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "mum-subhash-chandra-bose-ground",
+      "name": "Subhash Chandra Bose Ground",
+      "city": "mumbai",
+      "assigned_lines": [
+        "mum-line-2a"
+      ],
+      "status": "operational",
+      "phase": "2A",
+      "dist_assigned_m": 4118,
+      "nearest_assigned_seg": "mum-line-2a-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 4118,
+      "nearest_any_seg": "mum-line-2a-seg-01",
+      "nearest_any_line": "mum-line-2a",
+      "cls": "a",
+      "rec": "add schematic connector"
+    },
+    {
+      "station_id": "mum-vijay-nagari",
+      "name": "Vijay Nagari",
+      "city": "mumbai",
+      "assigned_lines": [
+        "mum-line-4"
+      ],
+      "status": "planned",
+      "phase": "4",
+      "dist_assigned_m": 231,
+      "nearest_assigned_seg": "mum-line-4-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 231,
+      "nearest_any_seg": "mum-line-4-seg-01",
+      "nearest_any_line": "mum-line-4",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "mum-waghbil",
+      "name": "Waghbil",
+      "city": "mumbai",
+      "assigned_lines": [
+        "mum-line-4"
+      ],
+      "status": "planned",
+      "phase": "4",
+      "dist_assigned_m": 1117,
+      "nearest_assigned_seg": "mum-line-4-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 1117,
+      "nearest_any_seg": "mum-line-4-seg-01",
+      "nearest_any_line": "mum-line-4",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "mum-wagle-circle",
+      "name": "Wagle Circle",
+      "city": "mumbai",
+      "assigned_lines": [
+        "mum-line-4"
+      ],
+      "status": "planned",
+      "phase": "4",
+      "dist_assigned_m": 1030,
+      "nearest_assigned_seg": "mum-line-4-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 1030,
+      "nearest_any_seg": "mum-line-4-seg-01",
+      "nearest_any_line": "mum-line-4",
+      "cls": "c",
+      "rec": "fix geometry"
+    },
+    {
+      "station_id": "mum-waterfront",
+      "name": "Waterfront",
+      "city": "mumbai",
+      "assigned_lines": [
+        "mum-line-4"
+      ],
+      "status": "planned",
+      "phase": "4",
+      "dist_assigned_m": 1948,
+      "nearest_assigned_seg": "mum-line-4-seg-01",
+      "assigned_has_geom": true,
+      "dist_any_m": 1948,
+      "nearest_any_seg": "mum-line-4-seg-01",
+      "nearest_any_line": "mum-line-4",
+      "cls": "c",
+      "rec": "fix geometry"
+    }
+  ]
+}

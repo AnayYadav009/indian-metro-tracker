@@ -197,5 +197,11 @@
     "BKC",
     "Chhatrapati Shivaji Maharaj Terminus",
     "Dadar"
-  ]
-}
+  ],
+  "stationOverrides": {
+    "Dongripada": {
+      "status": "construction",
+      "expected_completion": "2028"
+    }
+  }
+}

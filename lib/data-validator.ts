@@ -303,6 +303,13 @@ export function validateMetroDataset(
       }
     }
 
+    // Verify segment_id exists if specified
+    if (props.segment_id && !seenSegmentIds.has(props.segment_id)) {
+      errors.push(
+        `Station "${props.station_id}" references unknown segment_id "${props.segment_id}"`
+      );
+    }
+
     // Coordinate Envelope and City Bounding Box checks
     const [stLng, stLat] = feature.geometry.coordinates;
     if (

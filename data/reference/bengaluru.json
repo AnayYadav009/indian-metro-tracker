@@ -1,0 +1,227 @@
+{
+  "city_id": "bengaluru",
+  "compiled_on": "2026-10-07",
+  "lines": [
+    {
+      "line_id": "blr-purple",
+      "official_name": "Purple Line",
+      "operator": "BMRCL",
+      "topology": "linear",
+      "operational_stations": 37,
+      "operational_length_km": 43.49,
+      "planned_length_km": 43.49,
+      "terminals": [
+        "Whitefield (Kadugodi)",
+        "Challaghatta"
+      ],
+      "status": "operational",
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "Reach 1 (Baiyappanahalli - MG Road)",
+          "phase": "1",
+          "opened_on": "2011-10-20",
+          "stations_added": 6,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Reach 2 (Magadi Road - Mysuru Road)",
+          "phase": "1",
+          "opened_on": "2015-11-16",
+          "stations_added": 6,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "UG East-West connection (MG Road - Magadi Road)",
+          "phase": "1",
+          "opened_on": "2016-04-30",
+          "stations_added": 5,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Reach 2A extension (Mysuru Road - Kengeri)",
+          "phase": "2",
+          "opened_on": "2021-08-30",
+          "stations_added": 6,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Whitefield - KR Puram",
+          "phase": "2",
+          "opened_on": "2023-03-26",
+          "stations_added": 12,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Reach 2B extension (Kengeri - Challaghatta)",
+          "phase": "2",
+          "opened_on": "2023-10-09",
+          "stations_added": 1,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Missing link (Baiyappanahalli - KR Puram)",
+          "phase": "2",
+          "opened_on": "2023-10-09",
+          "stations_added": 1,
+          "confidence": "unverified"
+        }
+      ],
+      "construction": [],
+      "notes": "43.49 km fully operational linear corridor across 37 stations connecting Whitefield (Kadugodi) to Challaghatta.",
+      "confidence": "unverified"
+    },
+    {
+      "line_id": "blr-green",
+      "official_name": "Green Line",
+      "operator": "BMRCL",
+      "topology": "linear",
+      "operational_stations": 32,
+      "operational_length_km": 33.46,
+      "planned_length_km": 33.46,
+      "terminals": [
+        "Madavara",
+        "Silk Institute"
+      ],
+      "status": "operational",
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "Reach 3/3A (Sampige Road - Peenya Industry)",
+          "phase": "1",
+          "opened_on": "2014-03-01",
+          "stations_added": 10,
+          "confidence": "unverified",
+          "notes": "Inaugurated March 1, 2014 across 10 stations (Sampige Road to Peenya Industry)."
+        },
+        {
+          "stage": "Reach 3B (Peenya Industry - Nagasandra)",
+          "phase": "1",
+          "opened_on": "2015-05-01",
+          "stations_added": 3,
+          "confidence": "unverified",
+          "notes": "Inaugurated May 1, 2015 across 3 new stations (Jalahalli, Dasarahalli, Nagasandra)."
+        },
+        {
+          "stage": "Reach 4/4A & UG link (Sampige Road - Yelachenahalli)",
+          "phase": "1",
+          "opened_on": "2017-06-18",
+          "stations_added": 11,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Reach 4B extension (Yelachenahalli - Silk Institute)",
+          "phase": "2",
+          "opened_on": "2021-01-15",
+          "stations_added": 5,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Reach 3C extension (Nagasandra - Madavara)",
+          "phase": "2",
+          "opened_on": "2024-11-07",
+          "stations_added": 3,
+          "confidence": "unverified"
+        }
+      ],
+      "construction": [],
+      "notes": "33.46 km fully operational linear corridor across 32 stations. Reach 3/3A (Sampige Road to Peenya Industry, 10 stations) opened March 1, 2014; Reach 3B (Peenya Industry to Nagasandra, 3 stations) opened May 1, 2015.",
+      "confidence": "unverified"
+    },
+    {
+      "line_id": "blr-yellow",
+      "official_name": "Yellow Line",
+      "operator": "BMRCL",
+      "topology": "linear",
+      "operational_stations": 16,
+      "operational_length_km": 19.15,
+      "planned_length_km": 19.15,
+      "terminals": [
+        "Rashtreeya Vidyalaya Road",
+        "Bommasandra"
+      ],
+      "status": "operational",
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "Reach 5 (RV Road - Bommasandra)",
+          "phase": "2",
+          "opened_on": "2025-08-10",
+          "stations_added": 16,
+          "confidence": "unverified"
+        }
+      ],
+      "construction": [],
+      "notes": "19.15 km operational linear corridor with 16 stations connecting RV Road to Electronic City and Bommasandra.",
+      "confidence": "unverified"
+    },
+    {
+      "line_id": "blr-blue",
+      "official_name": "Blue Line (Airport Metro)",
+      "operator": "BMRCL",
+      "topology": "linear",
+      "operational_stations": 0,
+      "operational_length_km": 0,
+      "planned_length_km": 58.19,
+      "terminals": [
+        "Central Silk Board",
+        "KIAL Terminals"
+      ],
+      "status": "under_construction",
+      "disjoint_stretches": false,
+      "openings": [],
+      "construction": [
+        {
+          "stretch": "Phase 2A (Central Silk Board - KR Puram)",
+          "phase": "2",
+          "expected_completion": null,
+          "stations": 13,
+          "notes": "Estimated commercial operation mid-2027 (trials October 2026)."
+        },
+        {
+          "stretch": "Phase 2B (KR Puram - Kempegowda International Airport)",
+          "phase": "2",
+          "expected_completion": null,
+          "stations": 17,
+          "notes": "Estimated completion March 2028."
+        }
+      ],
+      "notes": "Total planned corridor spans 58.19 km with 30 stations. Phase 2A (Silk Board to KR Puram, 19.75 km, 13 stations) and Phase 2B (KR Puram to Airport, 38.44 km, 17 stations).",
+      "confidence": "unverified"
+    },
+    {
+      "line_id": "blr-pink",
+      "official_name": "Pink Line",
+      "operator": "BMRCL",
+      "topology": "linear",
+      "operational_stations": 0,
+      "operational_length_km": 0,
+      "planned_length_km": 21.25,
+      "terminals": [
+        "Kalena Agrahara",
+        "Nagawara"
+      ],
+      "status": "under_construction",
+      "disjoint_stretches": false,
+      "openings": [],
+      "construction": [
+        {
+          "stretch": "Reach 6 Elevated (Kalena Agrahara - Tavarekere)",
+          "phase": "2",
+          "expected_completion": null,
+          "stations": 6,
+          "notes": "CMRS statutory inspection scheduled October 6-8, 2026; opening targeted late 2026."
+        },
+        {
+          "stretch": "Reach 6 Underground (Dairy Circle - Nagawara)",
+          "phase": "2",
+          "expected_completion": null,
+          "stations": 12,
+          "notes": "Targeted completion March 2027."
+        }
+      ],
+      "notes": "21.25 km line with 18 stations (6 elevated, 12 underground) connecting Kalena Agrahara to Nagawara.",
+      "confidence": "unverified"
+    }
+  ]
+}

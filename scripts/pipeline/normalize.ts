@@ -62,7 +62,7 @@ export function normalizeOverpassCity(cityId: string, rawData: any): NormalizedC
 
   const stationsMap = new Map<number, NormalizedStation>();
   for (const node of stationNodes) {
-    const rawName = node.tags.name || node.tags["name:en"] || `Station ${node.id}`;
+    const rawName = node.tags["name:en"] || node.tags.name || `Station ${node.id}`;
     // Clean name (e.g., strip line qualifiers "(Blue Line)", " Metro Station", etc.)
     const cleanName = rawName
       .replace(/\s*\([^)]*(line|corridor|branch)[^)]*\)/gi, "")

@@ -93,22 +93,22 @@ describe("Metro Data Loader & Dataset Invariants", () => {
         cities: [
           ...dataset.cities,
           {
-            id: "chennai",
-            name: "Chennai",
-            bbox: [80.1, 12.9, 80.3, 13.2] as [number, number, number, number],
-            operator: "CMRL",
+            id: "hyderabad",
+            name: "Hyderabad",
+            bbox: [78.2, 17.2, 78.6, 17.6] as [number, number, number, number],
+            operator: "HMRL",
             phases: ["Phase 1", "Phase 2"],
           },
         ],
         lines: [
           ...dataset.lines,
           {
-            id: "chn-blue",
-            name: "Blue Line",
-            city_id: "chennai",
-            city: "Chennai",
-            color: "#0066CC",
-            operator: "CMRL",
+            id: "hyd-red",
+            name: "Red Line",
+            city_id: "hyderabad",
+            city: "Hyderabad",
+            color: "#ED1C24",
+            operator: "HMRL",
             source: "mock",
           },
         ],
@@ -121,25 +121,25 @@ describe("Metro Data Loader & Dataset Invariants", () => {
               geometry: {
                 type: "LineString",
                 coordinates: [
-                  [80.20, 13.01],
-                  [80.25, 13.08],
+                  [78.45, 17.38],
+                  [78.48, 17.43],
                 ],
               },
               properties: {
-                segment_id: "chn-blue-seg-01",
-                line_id: "chn-blue",
-                line_name: "Blue Line",
-                city_id: "chennai",
-                city: "Chennai",
-                operator: "CMRL",
+                segment_id: "hyd-red-seg-01",
+                line_id: "hyd-red",
+                line_name: "Red Line",
+                city_id: "hyderabad",
+                city: "Hyderabad",
+                operator: "HMRL",
                 status: "operational",
                 phase: "Phase 1",
                 length_km: 8.5,
                 gauge: "standard",
-                inaugurated_on: "2015-06-29",
+                inaugurated_on: "2017-11-28",
                 expected_completion: null,
                 stations_count: 7,
-                color: "#0066CC",
+                color: "#ED1C24",
                 source: "mock",
                 last_verified: "2026-10-05",
               },
@@ -151,10 +151,10 @@ describe("Metro Data Loader & Dataset Invariants", () => {
 
       const result = validateMetroDataset(mockRawData);
       expect(result.valid).toBe(true);
-      expect(result.dataset?.cities.some((c) => c.id === "chennai")).toBe(true);
+      expect(result.dataset?.cities.some((c) => c.id === "hyderabad")).toBe(true);
       expect(
         result.dataset?.segments.features.some(
-          (s) => s.properties.segment_id === "chn-blue-seg-01"
+          (s) => s.properties.segment_id === "hyd-red-seg-01"
         )
       ).toBe(true);
     });
