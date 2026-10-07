@@ -1,5 +1,6 @@
 import React from "react";
 import type { Status, Layout } from "@/types/schema";
+import { STATUS_DEFINITIONS, LAYOUT_DEFINITIONS } from "@/lib/metro-styles";
 
 interface StatusBadgeProps {
   status: Status;
@@ -11,7 +12,7 @@ export function StatusBadge({ status, className = "" }: StatusBadgeProps) {
     return (
       <span
         data-testid="status-badge-operational"
-        className={`inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-1 text-xs font-semibold text-emerald-400 ${className}`}
+        className={`${STATUS_DEFINITIONS.operational.badgeClass} ${className}`}
       >
         <span className="inline-block h-1.5 w-3.5 rounded-full bg-emerald-400" />
         Operational
@@ -23,7 +24,7 @@ export function StatusBadge({ status, className = "" }: StatusBadgeProps) {
     return (
       <span
         data-testid="status-badge-construction"
-        className={`inline-flex items-center gap-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 px-2.5 py-1 text-xs font-semibold text-amber-400 ${className}`}
+        className={`${STATUS_DEFINITIONS.construction.badgeClass} ${className}`}
       >
         <span className="inline-flex gap-0.5">
           <span className="h-1.5 w-1.5 rounded-sm bg-amber-400" />
@@ -37,7 +38,7 @@ export function StatusBadge({ status, className = "" }: StatusBadgeProps) {
   return (
     <span
       data-testid="status-badge-planned"
-      className={`inline-flex items-center gap-1.5 rounded-full border border-violet-500/30 bg-violet-500/10 px-2.5 py-1 text-xs font-semibold text-violet-400 ${className}`}
+      className={`${STATUS_DEFINITIONS.planned.badgeClass} ${className}`}
     >
       <span className="inline-flex gap-0.5">
         <span className="h-1 w-1 rounded-full bg-violet-400" />
@@ -61,27 +62,12 @@ export function PhaseBadge({ phase }: { phase: string }) {
 }
 
 export function LayoutBadge({ layout }: { layout: Layout }) {
-  const styles: Record<Layout, { label: string; color: string }> = {
-    underground: {
-      label: "Underground",
-      color: "border-sky-500/30 bg-sky-500/10 text-sky-400",
-    },
-    elevated: {
-      label: "Elevated",
-      color: "border-teal-500/30 bg-teal-500/10 text-teal-400",
-    },
-    "at-grade": {
-      label: "At-Grade",
-      color: "border-slate-500/30 bg-slate-500/10 text-slate-400",
-    },
-  };
-
-  const current = styles[layout] || styles.elevated;
+  const current = LAYOUT_DEFINITIONS[layout] || LAYOUT_DEFINITIONS.elevated;
 
   return (
     <span
       data-testid="layout-badge"
-      className={`inline-flex items-center rounded-md border px-2 py-0.5 text-xs font-medium ${current.color}`}
+      className={`inline-flex items-center rounded-md border px-2 py-0.5 text-xs font-medium ${current.badgeClass}`}
     >
       {current.label}
     </span>
