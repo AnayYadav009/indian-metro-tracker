@@ -1,0 +1,399 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`MapLibre Layer Filter Expressions Characterization > generates correct construction filter for: city selected with all statuses and specific phases 1`] = `
+[
+  "all",
+  [
+    "==",
+    [
+      "get",
+      "status",
+    ],
+    "construction",
+  ],
+  [
+    "==",
+    [
+      "get",
+      "city_id",
+    ],
+    "delhi",
+  ],
+  [
+    "in",
+    [
+      "get",
+      "phase",
+    ],
+    [
+      "literal",
+      [
+        "III",
+        "IV",
+      ],
+    ],
+  ],
+]
+`;
+
+exports[`MapLibre Layer Filter Expressions Characterization > generates correct construction filter for: default state (all statuses, no city, no phases) 1`] = `
+[
+  "all",
+  [
+    "==",
+    [
+      "get",
+      "status",
+    ],
+    "construction",
+  ],
+]
+`;
+
+exports[`MapLibre Layer Filter Expressions Characterization > generates correct construction filter for: no statuses selected 1`] = `
+[
+  "==",
+  [
+    "get",
+    "status",
+  ],
+  "__NONE__",
+]
+`;
+
+exports[`MapLibre Layer Filter Expressions Characterization > generates correct construction filter for: single status selected with city and no phases 1`] = `
+[
+  "all",
+  [
+    "==",
+    [
+      "get",
+      "status",
+    ],
+    "construction",
+  ],
+  [
+    "==",
+    [
+      "get",
+      "city_id",
+    ],
+    "mumbai",
+  ],
+]
+`;
+
+exports[`MapLibre Layer Filter Expressions Characterization > generates correct construction filter for: status disabled (operational filtered out) 1`] = `
+[
+  "==",
+  [
+    "get",
+    "status",
+  ],
+  "__NONE__",
+]
+`;
+
+exports[`MapLibre Layer Filter Expressions Characterization > generates correct operational filter for: city selected with all statuses and specific phases 1`] = `
+[
+  "all",
+  [
+    "==",
+    [
+      "get",
+      "status",
+    ],
+    "operational",
+  ],
+  [
+    "==",
+    [
+      "get",
+      "city_id",
+    ],
+    "delhi",
+  ],
+  [
+    "in",
+    [
+      "get",
+      "phase",
+    ],
+    [
+      "literal",
+      [
+        "III",
+        "IV",
+      ],
+    ],
+  ],
+]
+`;
+
+exports[`MapLibre Layer Filter Expressions Characterization > generates correct operational filter for: default state (all statuses, no city, no phases) 1`] = `
+[
+  "all",
+  [
+    "==",
+    [
+      "get",
+      "status",
+    ],
+    "operational",
+  ],
+]
+`;
+
+exports[`MapLibre Layer Filter Expressions Characterization > generates correct operational filter for: no statuses selected 1`] = `
+[
+  "==",
+  [
+    "get",
+    "status",
+  ],
+  "__NONE__",
+]
+`;
+
+exports[`MapLibre Layer Filter Expressions Characterization > generates correct operational filter for: single status selected with city and no phases 1`] = `
+[
+  "==",
+  [
+    "get",
+    "status",
+  ],
+  "__NONE__",
+]
+`;
+
+exports[`MapLibre Layer Filter Expressions Characterization > generates correct operational filter for: status disabled (operational filtered out) 1`] = `
+[
+  "==",
+  [
+    "get",
+    "status",
+  ],
+  "__NONE__",
+]
+`;
+
+exports[`MapLibre Layer Filter Expressions Characterization > generates correct planned filter for: city selected with all statuses and specific phases 1`] = `
+[
+  "all",
+  [
+    "==",
+    [
+      "get",
+      "status",
+    ],
+    "planned",
+  ],
+  [
+    "==",
+    [
+      "get",
+      "city_id",
+    ],
+    "delhi",
+  ],
+  [
+    "in",
+    [
+      "get",
+      "phase",
+    ],
+    [
+      "literal",
+      [
+        "III",
+        "IV",
+      ],
+    ],
+  ],
+]
+`;
+
+exports[`MapLibre Layer Filter Expressions Characterization > generates correct planned filter for: default state (all statuses, no city, no phases) 1`] = `
+[
+  "all",
+  [
+    "==",
+    [
+      "get",
+      "status",
+    ],
+    "planned",
+  ],
+]
+`;
+
+exports[`MapLibre Layer Filter Expressions Characterization > generates correct planned filter for: no statuses selected 1`] = `
+[
+  "==",
+  [
+    "get",
+    "status",
+  ],
+  "__NONE__",
+]
+`;
+
+exports[`MapLibre Layer Filter Expressions Characterization > generates correct planned filter for: single status selected with city and no phases 1`] = `
+[
+  "==",
+  [
+    "get",
+    "status",
+  ],
+  "__NONE__",
+]
+`;
+
+exports[`MapLibre Layer Filter Expressions Characterization > generates correct planned filter for: status disabled (operational filtered out) 1`] = `
+[
+  "all",
+  [
+    "==",
+    [
+      "get",
+      "status",
+    ],
+    "planned",
+  ],
+  [
+    "==",
+    [
+      "get",
+      "city_id",
+    ],
+    "bengaluru",
+  ],
+  [
+    "in",
+    [
+      "get",
+      "phase",
+    ],
+    [
+      "literal",
+      [
+        "Phase 2",
+      ],
+    ],
+  ],
+]
+`;
+
+exports[`MapLibre Layer Filter Expressions Characterization > generates correct station filter for: city selected with all statuses and specific phases 1`] = `
+[
+  "all",
+  [
+    "==",
+    [
+      "get",
+      "city_id",
+    ],
+    "delhi",
+  ],
+  [
+    "in",
+    [
+      "get",
+      "phase",
+    ],
+    [
+      "literal",
+      [
+        "III",
+        "IV",
+      ],
+    ],
+  ],
+]
+`;
+
+exports[`MapLibre Layer Filter Expressions Characterization > generates correct station filter for: default state (all statuses, no city, no phases) 1`] = `undefined`;
+
+exports[`MapLibre Layer Filter Expressions Characterization > generates correct station filter for: no statuses selected 1`] = `
+[
+  "all",
+  [
+    "in",
+    [
+      "get",
+      "status",
+    ],
+    [
+      "literal",
+      [],
+    ],
+  ],
+]
+`;
+
+exports[`MapLibre Layer Filter Expressions Characterization > generates correct station filter for: single status selected with city and no phases 1`] = `
+[
+  "all",
+  [
+    "in",
+    [
+      "get",
+      "status",
+    ],
+    [
+      "literal",
+      [
+        "construction",
+      ],
+    ],
+  ],
+  [
+    "==",
+    [
+      "get",
+      "city_id",
+    ],
+    "mumbai",
+  ],
+]
+`;
+
+exports[`MapLibre Layer Filter Expressions Characterization > generates correct station filter for: status disabled (operational filtered out) 1`] = `
+[
+  "all",
+  [
+    "in",
+    [
+      "get",
+      "status",
+    ],
+    [
+      "literal",
+      [
+        "planned",
+      ],
+    ],
+  ],
+  [
+    "==",
+    [
+      "get",
+      "city_id",
+    ],
+    "bengaluru",
+  ],
+  [
+    "in",
+    [
+      "get",
+      "phase",
+    ],
+    [
+      "literal",
+      [
+        "Phase 2",
+      ],
+    ],
+  ],
+]
+`;

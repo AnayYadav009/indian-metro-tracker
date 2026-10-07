@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 
 test.describe("Kolkata Visual & Interaction QA (Step 5)", () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto("http://localhost:3001/");
+    await page.goto("/");
   });
 
   test("verifies Kolkata in city selector, phases, line legend, and station panel", async ({
