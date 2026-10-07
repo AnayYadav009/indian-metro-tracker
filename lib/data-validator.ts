@@ -8,14 +8,14 @@ import {
 import type { City, Line, MetroDataset } from "../types/metro";
 import { calculateLineStringLengthKm, checkLengthMismatch } from "./geo";
 
-export const INDIA_COORDINATE_ENVELOPE = {
+const INDIA_COORDINATE_ENVELOPE = {
   minLng: 68,
   maxLng: 98,
   minLat: 6,
   maxLat: 38,
 } as const;
 
-export const BBOX_MARGIN_DEG = 0.05;
+const BBOX_MARGIN_DEG = 0.05;
 
 export interface ValidationResult {
   valid: boolean;
