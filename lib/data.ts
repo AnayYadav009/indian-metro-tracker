@@ -64,9 +64,9 @@ export function determineDataSourceState(
 }
 
 export const DATA_SOURCE: DataSourceState = determineDataSourceState(
-  segmentsGeoJson as any,
-  stationsGeoJson as any,
-  linesJson as any,
+  segmentsGeoJson as unknown as SegmentFeatureCollection,
+  stationsGeoJson as unknown as StationFeatureCollection,
+  linesJson as unknown as Line[],
   process.env.NEXT_PUBLIC_DATA_SOURCE
 );
 

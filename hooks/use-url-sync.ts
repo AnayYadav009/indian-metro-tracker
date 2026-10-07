@@ -60,14 +60,17 @@ export function useUrlSync() {
 
       // Hydrate selection: ?selected=segment:del-yellow-seg-01 or ?selected=station:del-rajiv-chowk
       const selectedParam = params.get("selected");
-      if (selectedParam) {
-        const [type, id] = selectedParam.split(":");
-        if (type === "segment" && id) {
+      if (selectedParam && selectedParam.includes(":")) {
+        const colonIndex = selectedParam.indexOf(":");
+        const type = selectedParam.slice(0, colonIndex);
+        const id = selectedParam.slice(colonIndex + 1);
+
+        if (id && type === "segment") {
           const seg = getSegmentById(id);
           if (seg && (!city || seg.properties.city_id === city)) {
             setSelectedFeature({ type: "segment", data: seg.properties });
           }
-        } else if (type === "station" && id) {
+        } else if (id && type === "station") {
           const stn = getStationById(id);
           if (stn && (!city || stn.properties.city_id === city)) {
             setSelectedFeature({ type: "station", data: stn.properties });
