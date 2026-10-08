@@ -1,0 +1,209 @@
+{
+  "city": {
+    "id": "pune",
+    "name": "Pune",
+    "bbox": [
+      73.7,
+      18.48,
+      73.93,
+      18.65
+    ],
+    "operator": "Maha Metro",
+    "phases": [
+      "1",
+      "1A",
+      "1B"
+    ]
+  },
+  "lines": [
+    {
+      "id": "pun-purple",
+      "name": "Purple Line (Line 1)",
+      "city": "Pune",
+      "color": "#800080",
+      "operator": "Maha Metro",
+      "city_id": "pune",
+      "source": "osm+maha_metro"
+    },
+    {
+      "id": "pun-aqua",
+      "name": "Aqua Line (Line 2)",
+      "city": "Pune",
+      "color": "#00FFFF",
+      "operator": "Maha Metro",
+      "city_id": "pune",
+      "source": "osm+maha_metro"
+    },
+    {
+      "id": "pun-line-3",
+      "name": "Line 3 (Puneri Metro)",
+      "city": "Pune",
+      "color": "#FF69B4",
+      "operator": "Pune IT City Metro Rail Limited",
+      "city_id": "pune",
+      "source": "osm+pmrda"
+    }
+  ],
+  "segments": [
+    {
+      "osmId": 13917123,
+      "segment_id": "pun-purple-seg-01",
+      "line_id": "pun-purple",
+      "line_name": "Purple Line (PCMC - Swargate)",
+      "phase": "1",
+      "status": "operational",
+      "gauge": "standard",
+      "inaugurated_on": "2022-03-06",
+      "expected_completion": null,
+      "color": "#800080",
+      "references": [
+        "https://www.punemetrorail.org"
+      ],
+      "city_id": "pune"
+    },
+    {
+      "osmId": 13916710,
+      "segment_id": "pun-aqua-seg-01",
+      "line_id": "pun-aqua",
+      "line_name": "Aqua Line (Vanaz - Ramwadi)",
+      "phase": "1",
+      "status": "operational",
+      "gauge": "standard",
+      "inaugurated_on": "2022-03-06",
+      "expected_completion": null,
+      "color": "#00FFFF",
+      "references": [
+        "https://www.punemetrorail.org"
+      ],
+      "city_id": "pune"
+    }
+  ],
+  "interchangeStationNames": [
+    "District Court",
+    "Civil Court"
+  ],
+  "dedupeRadiusM": 400,
+  "stationAliases": {
+    "Civil Court": "District Court",
+    "Civil Court (Interchange)": "District Court",
+    "PCMC Bhavan": "PCMC",
+    "Pimpri Chinchwad Municipal Corporation (PCMC)": "PCMC",
+    "Bhosari (Nashik Phata)": "Bhosari",
+    "Nashik Phata": "Bhosari",
+    "PMC Bhavan": "PMC",
+    "Shivajinagar": "Line 3 Shivajinagar",
+    "Range Hills": "Range Hill",
+    "Kasba Peth कसबा पेठ": "Kasba Peth",
+    "कसबा पेठ": "Kasba Peth",
+    "Budhwar Peth": "Kasba Peth",
+    "महात्मा फुले मंदाई": "Mahatma Phule Mandai",
+    "Paud Phata": "Ideal Colony",
+    "Yerwada": "Yerwada",
+    "Yervada": "Yerwada",
+    "Yervada Metro Station": "Yerwada",
+    "Pune Railway Station": "Pune Railway Station",
+    "Pune Railway": "Pune Railway Station"
+  },
+  "stationOverrides": {
+    "Range Hill": {
+      "status": "construction",
+      "expected_completion": "2026-12",
+      "phase": "1",
+      "line_ids": [
+        "pun-purple"
+      ]
+    }
+  },
+  "out_of_scope_station_ids": [
+    "Line 3 Shivajinagar",
+    "pun-kothrud",
+    "pun-kothrud-bus-depot",
+    "pun-hadapsar",
+    "pun-swargate-north",
+    "pun-nal-stop",
+    "pun-chinchwad",
+    "pun-somnath-nagar",
+    "pun-viman-nagar",
+    "pun-karve-putala",
+    "pun-dahanukar-colony",
+    "pun-karve-nagar",
+    "pun-hingane-chowk",
+    "pun-rajaram-pul",
+    "pun-deshpande-udyan",
+    "pun-dandekar-pul",
+    "pun-chandani-chowk",
+    "pun-market-yard",
+    "pun-seven-loves-chowk",
+    "pun-pune-cantonment-board",
+    "pun-race-course",
+    "pun-fatima-nagar",
+    "pun-ramtekadi",
+    "pun-balewadi-stadium",
+    "pun-doehler-india",
+    "pun-infosys",
+    "pun-agriculture-college",
+    "pun-wipro",
+    "pun-rbi",
+    "pun-wakad-chowk",
+    "pun-savitribal-phule-pune-university",
+    "pun-yashada",
+    "pun-krushi-anusandhan",
+    "pun-baner",
+    "pun-baner-gaon",
+    "pun-balewadi-phata",
+    "pun-high-street",
+    "pun-nicmar",
+    "pun-jakat-naka",
+    "pun-hinjawadi",
+    "Kothrud",
+    "Kothrud Bus Depot",
+    "Hadapsar",
+    "Swargate North",
+    "Nal Stop",
+    "Chinchwad",
+    "Somnath Nagar",
+    "Viman Nagar",
+    "Karve Putala",
+    "Dahanukar Colony",
+    "Karve Nagar",
+    "Hingane Chowk",
+    "Rajaram Pul",
+    "Deshpande Udyan",
+    "Dandekar Pul",
+    "Chandani Chowk",
+    "Market Yard",
+    "Seven Loves Chowk",
+    "Pune Cantonment Board",
+    "Race Course",
+    "Fatima Nagar",
+    "Ramtekadi",
+    "Balewadi Stadium",
+    "Doehler India",
+    "Infosys",
+    "Agriculture College",
+    "Wipro",
+    "RBI",
+    "Wakad Chowk",
+    "Wakad Chowk metro Station",
+    "Savitribal Phule Pune University",
+    "YASHADA",
+    "Krushi Anusandhan",
+    "Baner",
+    "Baner Gaon",
+    "Balewadi Phata",
+    "High Street",
+    "NICMAR",
+    "Jakat Naka",
+    "Hinjawadi",
+    "Shivaji Nagar Railway Station",
+    "Shivaji Nagar Railway",
+    "pune-anand-nagar"
+  ],
+  "out_of_scope_line_ids": [
+    "pun-line-3"
+  ],
+  "selfIntersectionExemptions": [
+    "pun-purple-seg-01",
+    "pun-aqua-seg-01"
+  ]
+}

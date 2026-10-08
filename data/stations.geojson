@@ -17094,6 +17094,819 @@
         "last_verified": null,
         "retrieved_at": "2026-10-07"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.85956,
+          18.52142
+        ]
+      },
+      "properties": {
+        "station_id": "pune-kasba-peth",
+        "name": "Kasba Peth",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-purple"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.80523,
+          18.50721
+        ]
+      },
+      "properties": {
+        "station_id": "pune-vanaz",
+        "name": "Vanaz",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-aqua"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.82216,
+          18.50889
+        ]
+      },
+      "properties": {
+        "station_id": "pune-ideal-colony",
+        "name": "Ideal Colony",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-aqua"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.82877,
+          18.50737
+        ]
+      },
+      "properties": {
+        "station_id": "pune-sndt-college",
+        "name": "SNDT College",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-aqua"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.83804,
+          18.512
+        ]
+      },
+      "properties": {
+        "station_id": "pune-garware-college",
+        "name": "Garware College",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-aqua"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.81407,
+          18.50959
+        ]
+      },
+      "properties": {
+        "station_id": "pune-anandnagar",
+        "name": "Anandnagar",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-aqua"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.83115,
+          18.59111
+        ]
+      },
+      "properties": {
+        "station_id": "pune-phugewadi",
+        "name": "Phugewadi",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-purple"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.84446,
+          18.51643
+        ]
+      },
+      "properties": {
+        "station_id": "pune-deccan-gymkhana",
+        "name": "Deccan Gymkhana",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-aqua"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.84581,
+          18.55029
+        ]
+      },
+      "properties": {
+        "station_id": "pune-range-hill",
+        "name": "Range Hill",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-purple"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2026-12",
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.83377,
+          18.58376
+        ]
+      },
+      "properties": {
+        "station_id": "pune-dapodi",
+        "name": "Dapodi",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-purple"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.85335,
+          18.52274
+        ]
+      },
+      "properties": {
+        "station_id": "pune-pmc",
+        "name": "PMC",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-aqua"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.87775,
+          18.53272
+        ]
+      },
+      "properties": {
+        "station_id": "pune-ruby-hall-clinic",
+        "name": "Ruby Hall Clinic",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-aqua"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.85775,
+          18.52672
+        ]
+      },
+      "properties": {
+        "station_id": "pune-district-court",
+        "name": "District Court",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-purple",
+          "pun-aqua"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": true,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.81575,
+          18.61453
+        ]
+      },
+      "properties": {
+        "station_id": "pune-sant-tukaram-nagar",
+        "name": "Sant Tukaram Nagar",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-purple"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.82726,
+          18.59962
+        ]
+      },
+      "properties": {
+        "station_id": "pune-kasarwadi",
+        "name": "Kasarwadi",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-purple"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.8201,
+          18.6093
+        ]
+      },
+      "properties": {
+        "station_id": "pune-bhosari",
+        "name": "Bhosari",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-purple"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.85746,
+          18.49975
+        ]
+      },
+      "properties": {
+        "station_id": "pune-swargate",
+        "name": "Swargate",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-purple"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.8381,
+          18.56966
+        ]
+      },
+      "properties": {
+        "station_id": "pune-bopodi",
+        "name": "Bopodi",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-purple"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.80327,
+          18.6293
+        ]
+      },
+      "properties": {
+        "station_id": "pune-pcmc",
+        "name": "PCMC",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-purple"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.8496,
+          18.53215
+        ]
+      },
+      "properties": {
+        "station_id": "pune-shivaji-nagar",
+        "name": "Shivaji Nagar",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-purple"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "underground",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.8726,
+          18.52972
+        ]
+      },
+      "properties": {
+        "station_id": "pune-pune-railway-station",
+        "name": "Pune Railway Station",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-aqua"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.86505,
+          18.5301
+        ]
+      },
+      "properties": {
+        "station_id": "pune-mangalwar-peth",
+        "name": "Mangalwar Peth",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-aqua"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.84697,
+          18.51966
+        ]
+      },
+      "properties": {
+        "station_id": "pune-chhatrapati-sambhaji-udyan",
+        "name": "Chhatrapati Sambhaji Udyan",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-aqua"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.90898,
+          18.55734
+        ]
+      },
+      "properties": {
+        "station_id": "pune-ramwadi",
+        "name": "Ramwadi",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-aqua"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.88342,
+          18.5406
+        ]
+      },
+      "properties": {
+        "station_id": "pune-bund-garden",
+        "name": "Bund Garden",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-aqua"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.88662,
+          18.54532
+        ]
+      },
+      "properties": {
+        "station_id": "pune-yerwada",
+        "name": "Yerwada",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-aqua"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.90567,
+          18.54446
+        ]
+      },
+      "properties": {
+        "station_id": "pune-kalyani-nagar",
+        "name": "Kalyani Nagar",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-aqua"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.85708,
+          18.51292
+        ]
+      },
+      "properties": {
+        "station_id": "pune-mahatma-phule-mandai",
+        "name": "Mahatma Phule Mandai",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-purple"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.84208,
+          18.56226
+        ]
+      },
+      "properties": {
+        "station_id": "pune-khadki",
+        "name": "Khadki",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-purple"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
     }
   ]
 }
