@@ -1,5 +1,133 @@
 [
   {
+    "id": "hyd-red",
+    "name": "Red Line (Corridor I)",
+    "city": "Hyderabad",
+    "color": "#D84A4E",
+    "operator": "LTMRHL",
+    "city_id": "hyderabad",
+    "source": "osm+ltmrhl"
+  },
+  {
+    "id": "hyd-blue",
+    "name": "Blue Line (Corridor III)",
+    "city": "Hyderabad",
+    "color": "#0081BF",
+    "operator": "LTMRHL",
+    "city_id": "hyderabad",
+    "source": "osm+ltmrhl"
+  },
+  {
+    "id": "hyd-green",
+    "name": "Green Line (Corridor II)",
+    "city": "Hyderabad",
+    "color": "#008D42",
+    "operator": "LTMRHL",
+    "city_id": "hyderabad",
+    "source": "osm+ltmrhl"
+  },
+  {
+    "id": "gur-rapid",
+    "name": "Rapid Metro",
+    "city": "Gurugram",
+    "city_id": "gurugram",
+    "color": "#94a3b8",
+    "operator": "Rapid Metro Gurgaon Ltd (RMGL)",
+    "source": "osm+rmgl",
+    "notes": "Built by Rapid Metro Gurgaon Ltd (RMGL); operations taken over by DMRC on 2019-10-22."
+  },
+  {
+    "id": "nmm-line-1",
+    "name": "Line 1",
+    "city": "Navi Mumbai",
+    "city_id": "navi-mumbai",
+    "color": "#77248b",
+    "operator": "Maha Metro",
+    "source": "osm+cidco",
+    "notes": "Owned by CIDCO; operated and maintained by Maha Metro under a 10-year contract signed in 2021. OSM tags operator as CIDCO creating a documented source conflict."
+  },
+  {
+    "id": "noi-aqua",
+    "name": "Aqua Line",
+    "city": "Noida",
+    "city_id": "noida",
+    "color": "#00CED1",
+    "operator": "NMRC",
+    "source": "osm+nmrc"
+  },
+  {
+    "id": "che-blue",
+    "name": "Blue Line (Corridor 1)",
+    "city": "Chennai",
+    "color": "#0072CE",
+    "operator": "CMRL",
+    "city_id": "chennai",
+    "source": "osm+cmrl"
+  },
+  {
+    "id": "che-green",
+    "name": "Green Line (Corridor 2)",
+    "city": "Chennai",
+    "color": "#009A44",
+    "operator": "CMRL",
+    "city_id": "chennai",
+    "source": "osm+cmrl"
+  },
+  {
+    "id": "che-corridor-3",
+    "name": "Purple Line (Corridor 3)",
+    "city": "Chennai",
+    "color": "#702082",
+    "operator": "CMRL",
+    "city_id": "chennai",
+    "source": "cmrl"
+  },
+  {
+    "id": "che-corridor-4",
+    "name": "Yellow Line (Corridor 4)",
+    "city": "Chennai",
+    "color": "#FFD100",
+    "operator": "CMRL",
+    "city_id": "chennai",
+    "source": "cmrl"
+  },
+  {
+    "id": "che-corridor-5",
+    "name": "Red Line (Corridor 5)",
+    "city": "Chennai",
+    "color": "#ED1C24",
+    "operator": "CMRL",
+    "city_id": "chennai",
+    "source": "cmrl"
+  },
+  {
+    "id": "pun-purple",
+    "name": "Purple Line (Line 1)",
+    "city": "Pune",
+    "color": "#800080",
+    "operator": "Maha Metro",
+    "city_id": "pune",
+    "source": "osm+maha_metro"
+  },
+  {
+    "id": "pun-aqua",
+    "name": "Aqua Line (Line 2)",
+    "city": "Pune",
+    "color": "#00FFFF",
+    "operator": "Maha Metro",
+    "city_id": "pune",
+    "source": "osm+maha_metro"
+  },
+  {
+    "id": "pun-line-3",
+    "name": "Line 3 (Puneri Metro)",
+    "city": "Pune",
+    "color": "#FF69B4",
+    "operator": "Pune IT City Metro Rail Limited",
+    "city_id": "pune",
+    "source": "osm+pmrda"
+  },
+  {
     "id": "blr-purple",
     "name": "Purple Line",
     "city": "Bengaluru",
@@ -99,6 +227,96 @@
     "source": "osm+mmrda"
   },
   {
+    "id": "mum-line-9",
+    "name": "Line 9 (Red Line Ext)",
+    "city": "Mumbai",
+    "color": "#D32F2F",
+    "operator": "MMMOCL",
+    "city_id": "mumbai",
+    "source": "osm+mmrda"
+  },
+  {
+    "id": "kol-blue",
+    "name": "Blue Line (Line 1)",
+    "city": "Kolkata",
+    "color": "#0072CE",
+    "operator": "Metro Railway, Kolkata",
+    "city_id": "kolkata",
+    "source": "osm+mtp"
+  },
+  {
+    "id": "kol-green",
+    "name": "Green Line (Line 2)",
+    "city": "Kolkata",
+    "color": "#009A44",
+    "operator": "KMRC",
+    "city_id": "kolkata",
+    "source": "osm+kmrc"
+  },
+  {
+    "id": "kol-purple",
+    "name": "Purple Line (Line 3)",
+    "city": "Kolkata",
+    "color": "#702082",
+    "operator": "Metro Railway, Kolkata",
+    "city_id": "kolkata",
+    "source": "osm+mtp"
+  },
+  {
+    "id": "kol-yellow",
+    "name": "Yellow Line (Line 4)",
+    "city": "Kolkata",
+    "color": "#FFD100",
+    "operator": "Metro Railway, Kolkata",
+    "city_id": "kolkata",
+    "source": "osm+mtp"
+  },
+  {
+    "id": "kol-orange",
+    "name": "Orange Line (Line 6)",
+    "city": "Kolkata",
+    "color": "#FF8200",
+    "operator": "Metro Railway, Kolkata",
+    "city_id": "kolkata",
+    "source": "osm+mtp"
+  },
+  {
+    "id": "ahm-blue",
+    "name": "Blue Line (Line 1 / East-West Corridor)",
+    "city": "Ahmedabad",
+    "color": "#0000FF",
+    "operator": "GMRC",
+    "city_id": "ahmedabad",
+    "source": "osm+gmrc"
+  },
+  {
+    "id": "ahm-red",
+    "name": "Red Line (Line 2 / North-South Corridor)",
+    "city": "Ahmedabad",
+    "color": "#FF0000",
+    "operator": "GMRC",
+    "city_id": "ahmedabad",
+    "source": "osm+gmrc"
+  },
+  {
+    "id": "ahm-yellow",
+    "name": "Yellow Line (Line 3 / Motera Stadium - Mahatma Mandir)",
+    "city": "Ahmedabad",
+    "color": "#FFD700",
+    "operator": "GMRC",
+    "city_id": "ahmedabad",
+    "source": "osm+gmrc"
+  },
+  {
+    "id": "ahm-violet",
+    "name": "Violet Line (Line 4 / GNLU - GIFT City Spur)",
+    "city": "Ahmedabad",
+    "color": "#8A2BE2",
+    "operator": "GMRC",
+    "city_id": "ahmedabad",
+    "source": "osm+gmrc"
+  },
+  {
     "id": "del-red",
     "name": "Red Line",
     "city": "Delhi",
@@ -178,203 +396,5 @@
     "operator": "DMRC",
     "city_id": "delhi",
     "source": "osm+dmrc"
-  },
-  {
-    "id": "del-silver",
-    "name": "Silver Line (Golden)",
-    "city": "Delhi",
-    "color": "#A0A0A0",
-    "operator": "DMRC",
-    "city_id": "delhi",
-    "source": "osm+dmrc"
-  },
-  {
-    "id": "kol-blue",
-    "name": "Blue Line (Line 1)",
-    "city": "Kolkata",
-    "color": "#0072CE",
-    "operator": "Metro Railway, Kolkata",
-    "city_id": "kolkata",
-    "source": "osm+mtp"
-  },
-  {
-    "id": "kol-green",
-    "name": "Green Line (Line 2)",
-    "city": "Kolkata",
-    "color": "#009A44",
-    "operator": "KMRC",
-    "city_id": "kolkata",
-    "source": "osm+kmrc"
-  },
-  {
-    "id": "kol-purple",
-    "name": "Purple Line (Line 3)",
-    "city": "Kolkata",
-    "color": "#702082",
-    "operator": "Metro Railway, Kolkata",
-    "city_id": "kolkata",
-    "source": "osm+mtp"
-  },
-  {
-    "id": "kol-yellow",
-    "name": "Yellow Line (Line 4)",
-    "city": "Kolkata",
-    "color": "#FFD100",
-    "operator": "Metro Railway, Kolkata",
-    "city_id": "kolkata",
-    "source": "osm+mtp"
-  },
-  {
-    "id": "kol-orange",
-    "name": "Orange Line (Line 6)",
-    "city": "Kolkata",
-    "color": "#FF8200",
-    "operator": "Metro Railway, Kolkata",
-    "city_id": "kolkata",
-    "source": "osm+mtp"
-  },
-  {
-    "id": "kol-pink",
-    "name": "Pink Line (Line 5)",
-    "city": "Kolkata",
-    "color": "#E31B6D",
-    "operator": "Metro Railway, Kolkata",
-    "city_id": "kolkata",
-    "source": "mtp"
-  },
-  {
-    "id": "che-blue",
-    "name": "Blue Line (Corridor 1)",
-    "city": "Chennai",
-    "color": "#0072CE",
-    "operator": "CMRL",
-    "city_id": "chennai",
-    "source": "osm+cmrl"
-  },
-  {
-    "id": "che-green",
-    "name": "Green Line (Corridor 2)",
-    "city": "Chennai",
-    "color": "#009A44",
-    "operator": "CMRL",
-    "city_id": "chennai",
-    "source": "osm+cmrl"
-  },
-  {
-    "id": "che-corridor-3",
-    "name": "Purple Line (Corridor 3)",
-    "city": "Chennai",
-    "color": "#702082",
-    "operator": "CMRL",
-    "city_id": "chennai",
-    "source": "cmrl"
-  },
-  {
-    "id": "che-corridor-4",
-    "name": "Yellow Line (Corridor 4)",
-    "city": "Chennai",
-    "color": "#FFD100",
-    "operator": "CMRL",
-    "city_id": "chennai",
-    "source": "cmrl"
-  },
-  {
-    "id": "che-corridor-5",
-    "name": "Red Line (Corridor 5)",
-    "city": "Chennai",
-    "color": "#ED1C24",
-    "operator": "CMRL",
-    "city_id": "chennai",
-    "source": "cmrl"
-  },
-  {
-    "id": "hyd-red",
-    "name": "Red Line (Corridor I)",
-    "city": "Hyderabad",
-    "color": "#D84A4E",
-    "operator": "LTMRHL",
-    "city_id": "hyderabad",
-    "source": "osm+ltmrhl"
-  },
-  {
-    "id": "hyd-blue",
-    "name": "Blue Line (Corridor III)",
-    "city": "Hyderabad",
-    "color": "#0081BF",
-    "operator": "LTMRHL",
-    "city_id": "hyderabad",
-    "source": "osm+ltmrhl"
-  },
-  {
-    "id": "hyd-green",
-    "name": "Green Line (Corridor II)",
-    "city": "Hyderabad",
-    "color": "#008D42",
-    "operator": "LTMRHL",
-    "city_id": "hyderabad",
-    "source": "osm+ltmrhl"
-  },
-  {
-    "id": "pun-purple",
-    "name": "Purple Line (Line 1)",
-    "city": "Pune",
-    "color": "#800080",
-    "operator": "Maha Metro",
-    "city_id": "pune",
-    "source": "osm+maha_metro"
-  },
-  {
-    "id": "pun-aqua",
-    "name": "Aqua Line (Line 2)",
-    "city": "Pune",
-    "color": "#00FFFF",
-    "operator": "Maha Metro",
-    "city_id": "pune",
-    "source": "osm+maha_metro"
-  },
-  {
-    "id": "pun-line-3",
-    "name": "Line 3 (Puneri Metro)",
-    "city": "Pune",
-    "color": "#FF69B4",
-    "operator": "Pune IT City Metro Rail Limited",
-    "city_id": "pune",
-    "source": "osm+pmrda"
-  },
-  {
-    "id": "ahm-blue",
-    "name": "Blue Line (Line 1 / East-West Corridor)",
-    "city": "Ahmedabad",
-    "color": "#0000FF",
-    "operator": "GMRC",
-    "city_id": "ahmedabad",
-    "source": "osm+gmrc"
-  },
-  {
-    "id": "ahm-red",
-    "name": "Red Line (Line 2 / North-South Corridor)",
-    "city": "Ahmedabad",
-    "color": "#FF0000",
-    "operator": "GMRC",
-    "city_id": "ahmedabad",
-    "source": "osm+gmrc"
-  },
-  {
-    "id": "ahm-yellow",
-    "name": "Yellow Line (Line 3 / Motera Stadium - Mahatma Mandir)",
-    "city": "Ahmedabad",
-    "color": "#FFD700",
-    "operator": "GMRC",
-    "city_id": "ahmedabad",
-    "source": "osm+gmrc"
-  },
-  {
-    "id": "ahm-violet",
-    "name": "Violet Line (Line 4 / GNLU - GIFT City Spur)",
-    "city": "Ahmedabad",
-    "color": "#8A2BE2",
-    "operator": "GMRC",
-    "city_id": "ahmedabad",
-    "source": "osm+gmrc"
   }
 ]

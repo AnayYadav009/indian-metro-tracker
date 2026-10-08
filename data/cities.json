@@ -1,5 +1,99 @@
 [
   {
+    "id": "hyderabad",
+    "name": "Hyderabad",
+    "bbox": [
+      78.3,
+      17.3,
+      78.6,
+      17.55
+    ],
+    "operator": "LTMRHL",
+    "phases": [
+      "1",
+      "2"
+    ]
+  },
+  {
+    "id": "gurugram",
+    "name": "Gurugram",
+    "bbox": [
+      77.07,
+      28.41,
+      77.12,
+      28.52
+    ],
+    "operator": "Rapid Metro Gurgaon Ltd (RMGL)",
+    "phases": [
+      "1",
+      "2"
+    ],
+    "network_id": "rapid-metro-gurgaon"
+  },
+  {
+    "id": "navi-mumbai",
+    "name": "Navi Mumbai",
+    "bbox": [
+      73.02,
+      19.01,
+      73.11,
+      19.09
+    ],
+    "operator": "CIDCO",
+    "phases": [
+      "1"
+    ],
+    "network_id": "navi-mumbai-metro"
+  },
+  {
+    "id": "noida",
+    "name": "Noida",
+    "bbox": [
+      77.34,
+      28.44,
+      77.56,
+      28.6
+    ],
+    "operator": "NMRC",
+    "phases": [
+      "1",
+      "2"
+    ],
+    "network_id": "noida-metro"
+  },
+  {
+    "id": "chennai",
+    "name": "Chennai",
+    "bbox": [
+      80.05,
+      12.82,
+      80.35,
+      13.22
+    ],
+    "operator": "CMRL",
+    "phases": [
+      "1",
+      "1 Ext",
+      "2"
+    ]
+  },
+  {
+    "id": "pune",
+    "name": "Pune",
+    "bbox": [
+      73.7,
+      18.48,
+      73.93,
+      18.65
+    ],
+    "operator": "Maha Metro",
+    "phases": [
+      "1",
+      "1A",
+      "1B"
+    ]
+  },
+  {
     "id": "bengaluru",
     "name": "Bengaluru",
     "bbox": [
@@ -36,23 +130,6 @@
     ]
   },
   {
-    "id": "delhi",
-    "name": "Delhi",
-    "bbox": [
-      76.84,
-      28.4,
-      77.35,
-      28.88
-    ],
-    "operator": "DMRC",
-    "phases": [
-      "I",
-      "II",
-      "III",
-      "IV"
-    ]
-  },
-  {
     "id": "kolkata",
     "name": "Kolkata",
     "bbox": [
@@ -72,53 +149,6 @@
     ]
   },
   {
-    "id": "chennai",
-    "name": "Chennai",
-    "bbox": [
-      80.05,
-      12.82,
-      80.35,
-      13.22
-    ],
-    "operator": "CMRL",
-    "phases": [
-      "1",
-      "1 Ext",
-      "2"
-    ]
-  },
-  {
-    "id": "hyderabad",
-    "name": "Hyderabad",
-    "bbox": [
-      78.3,
-      17.3,
-      78.6,
-      17.55
-    ],
-    "operator": "LTMRHL",
-    "phases": [
-      "1",
-      "2"
-    ]
-  },
-  {
-    "id": "pune",
-    "name": "Pune",
-    "bbox": [
-      73.7,
-      18.48,
-      73.93,
-      18.65
-    ],
-    "operator": "Maha Metro",
-    "phases": [
-      "1",
-      "1A",
-      "1B"
-    ]
-  },
-  {
     "id": "ahmedabad",
     "name": "Ahmedabad",
     "bbox": [
@@ -133,6 +163,23 @@
       "2",
       "2A",
       "2B"
+    ]
+  },
+  {
+    "id": "delhi",
+    "name": "Delhi",
+    "bbox": [
+      76.84,
+      28.4,
+      77.35,
+      28.88
+    ],
+    "operator": "DMRC",
+    "phases": [
+      "I",
+      "II",
+      "III",
+      "IV"
     ]
   }
 ]
