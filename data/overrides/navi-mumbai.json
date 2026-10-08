@@ -1,0 +1,278 @@
+{
+  "city": {
+    "id": "navi-mumbai",
+    "name": "Navi Mumbai",
+    "bbox": [
+      73.02,
+      19.01,
+      73.11,
+      19.09
+    ],
+    "operator": "CIDCO",
+    "phases": [
+      "1"
+    ],
+    "network_id": "navi-mumbai-metro"
+  },
+  "lines": [
+    {
+      "id": "nmm-line-1",
+      "name": "Line 1",
+      "city": "Navi Mumbai",
+      "city_id": "navi-mumbai",
+      "color": "#77248b",
+      "operator": "Maha Metro",
+      "source": "osm+cidco",
+      "notes": "Owned by CIDCO; operated and maintained by Maha Metro under a 10-year contract signed in 2021. OSM tags operator as CIDCO creating a documented source conflict."
+    }
+  ],
+  "segments": [
+    {
+      "osmId": 16533436,
+      "segment_id": "nmm-line-1-seg-01",
+      "line_id": "nmm-line-1",
+      "line_name": "Line 1",
+      "phase": "1",
+      "status": "operational",
+      "gauge": "standard",
+      "inaugurated_on": "2023-11-17",
+      "expected_completion": null,
+      "color": "#77248b",
+      "references": [
+        "https://www.thehindu.com/news/cities/mumbai/navi-mumbai-metro-starts-services-from-today/article67543265.ece"
+      ]
+    }
+  ],
+  "dedupeRadiusM": 160,
+  "stationAliases": {
+    "Belapur Terminal": "CBD Belapur",
+    "Sector 7": "RBI Colony",
+    "CIDCO Science Park": "Belpada",
+    "Sector 11": "Kendriya Vihar",
+    "Sector 14": "Kharghar Village",
+    "Sector 34": "Amandoot",
+    "Panchanand": "Pethali Taloja"
+  },
+  "stationOverrides": {
+    "CBD Belapur": {
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2023-11-17",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/mumbai/navi-mumbai-metro-starts-services-from-today/article67543265.ece"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "nmm-cbd-belapur": {
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2023-11-17",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/mumbai/navi-mumbai-metro-starts-services-from-today/article67543265.ece"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "RBI Colony": {
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2023-11-17",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/mumbai/navi-mumbai-metro-starts-services-from-today/article67543265.ece"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "nmm-rbi-colony": {
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2023-11-17",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/mumbai/navi-mumbai-metro-starts-services-from-today/article67543265.ece"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Belpada": {
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2023-11-17",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/mumbai/navi-mumbai-metro-starts-services-from-today/article67543265.ece"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "nmm-belpada": {
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2023-11-17",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/mumbai/navi-mumbai-metro-starts-services-from-today/article67543265.ece"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Utsav Chowk": {
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2023-11-17",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/mumbai/navi-mumbai-metro-starts-services-from-today/article67543265.ece"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "nmm-utsav-chowk": {
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2023-11-17",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/mumbai/navi-mumbai-metro-starts-services-from-today/article67543265.ece"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Kendriya Vihar": {
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2023-11-17",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/mumbai/navi-mumbai-metro-starts-services-from-today/article67543265.ece"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "nmm-kendriya-vihar": {
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2023-11-17",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/mumbai/navi-mumbai-metro-starts-services-from-today/article67543265.ece"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Kharghar Village": {
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2023-11-17",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/mumbai/navi-mumbai-metro-starts-services-from-today/article67543265.ece"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "nmm-kharghar-village": {
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2023-11-17",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/mumbai/navi-mumbai-metro-starts-services-from-today/article67543265.ece"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Central Park": {
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2023-11-17",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/mumbai/navi-mumbai-metro-starts-services-from-today/article67543265.ece"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "nmm-central-park": {
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2023-11-17",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/mumbai/navi-mumbai-metro-starts-services-from-today/article67543265.ece"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Pethpada": {
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2023-11-17",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/mumbai/navi-mumbai-metro-starts-services-from-today/article67543265.ece"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "nmm-pethpada": {
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2023-11-17",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/mumbai/navi-mumbai-metro-starts-services-from-today/article67543265.ece"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Amandoot": {
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2023-11-17",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/mumbai/navi-mumbai-metro-starts-services-from-today/article67543265.ece"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "nmm-amandoot": {
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2023-11-17",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/mumbai/navi-mumbai-metro-starts-services-from-today/article67543265.ece"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Pethali Taloja": {
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2023-11-17",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/mumbai/navi-mumbai-metro-starts-services-from-today/article67543265.ece"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "nmm-pethali-taloja": {
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2023-11-17",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/mumbai/navi-mumbai-metro-starts-services-from-today/article67543265.ece"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Pendhar": {
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2023-11-17",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/mumbai/navi-mumbai-metro-starts-services-from-today/article67543265.ece"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "nmm-pendhar": {
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2023-11-17",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/mumbai/navi-mumbai-metro-starts-services-from-today/article67543265.ece"
+      ],
+      "last_verified": "2026-10-08"
+    }
+  }
+}
