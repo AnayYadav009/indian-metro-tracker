@@ -1,0 +1,139 @@
+{
+  "city": {
+    "id": "ahmedabad",
+    "name": "Ahmedabad",
+    "bbox": [
+      72.45,
+      22.95,
+      72.72,
+      23.32
+    ],
+    "operator": "GMRC",
+    "phases": [
+      "1",
+      "2",
+      "2A",
+      "2B"
+    ]
+  },
+  "lines": [
+    {
+      "id": "ahm-blue",
+      "name": "Blue Line (Line 1 / East-West Corridor)",
+      "city": "Ahmedabad",
+      "color": "#0000FF",
+      "operator": "GMRC",
+      "city_id": "ahmedabad",
+      "source": "osm+gmrc"
+    },
+    {
+      "id": "ahm-red",
+      "name": "Red Line (Line 2 / North-South Corridor)",
+      "city": "Ahmedabad",
+      "color": "#FF0000",
+      "operator": "GMRC",
+      "city_id": "ahmedabad",
+      "source": "osm+gmrc"
+    },
+    {
+      "id": "ahm-yellow",
+      "name": "Yellow Line (Line 3 / Motera Stadium - Mahatma Mandir)",
+      "city": "Ahmedabad",
+      "color": "#FFD700",
+      "operator": "GMRC",
+      "city_id": "ahmedabad",
+      "source": "osm+gmrc"
+    },
+    {
+      "id": "ahm-violet",
+      "name": "Violet Line (Line 4 / GNLU - GIFT City Spur)",
+      "city": "Ahmedabad",
+      "color": "#8A2BE2",
+      "operator": "GMRC",
+      "city_id": "ahmedabad",
+      "source": "osm+gmrc"
+    }
+  ],
+  "segments": [
+    {
+      "osmId": 8312433,
+      "segment_id": "ahm-blue-seg-01",
+      "line_id": "ahm-blue",
+      "line_name": "Blue Line (Thaltej Gam - Vastral Gam)",
+      "phase": "1",
+      "status": "operational",
+      "gauge": "standard",
+      "inaugurated_on": "2019-03-04",
+      "expected_completion": null,
+      "color": "#0000FF",
+      "references": [
+        "https://www.gujaratmetrorail.com/projects/project-overview/"
+      ],
+      "city_id": "ahmedabad"
+    },
+    {
+      "osmId": 8312443,
+      "segment_id": "ahm-red-seg-01",
+      "line_id": "ahm-red",
+      "line_name": "Red Line (APMC - Motera Stadium)",
+      "phase": "1",
+      "status": "operational",
+      "gauge": "standard",
+      "inaugurated_on": "2022-09-30",
+      "expected_completion": null,
+      "color": "#FF0000",
+      "references": [
+        "https://www.gujaratmetrorail.com/projects/project-overview/"
+      ],
+      "city_id": "ahmedabad"
+    },
+    {
+      "osmId": 18391195,
+      "segment_id": "ahm-yellow-seg-01",
+      "line_id": "ahm-yellow",
+      "line_name": "Yellow Line (Motera Stadium - Mahatma Mandir)",
+      "phase": "2",
+      "status": "operational",
+      "gauge": "standard",
+      "inaugurated_on": "2024-09-16",
+      "expected_completion": null,
+      "color": "#FFD700",
+      "references": [
+        "https://www.gujaratmetrorail.com/projects/project-overview/"
+      ],
+      "city_id": "ahmedabad"
+    },
+    {
+      "osmId": 18084556,
+      "segment_id": "ahm-violet-seg-01",
+      "line_id": "ahm-violet",
+      "line_name": "Violet Line (GNLU - GIFT City)",
+      "phase": "2",
+      "status": "operational",
+      "gauge": "standard",
+      "inaugurated_on": "2024-09-16",
+      "expected_completion": null,
+      "color": "#8A2BE2",
+      "references": [
+        "https://www.gujaratmetrorail.com/projects/project-overview/"
+      ],
+      "city_id": "ahmedabad"
+    }
+  ],
+  "interchangeStationNames": [
+    "Old High Court",
+    "Motera Stadium",
+    "GNLU"
+  ],
+  "dedupeRadiusM": 400,
+  "stationAliases": {
+    "Shahpur Station": "Shahpur",
+    "Gujarat University Station": "Gujarat University",
+    "Kalupur Railway Station": "Kalupur Railway Station",
+    "Nirant Cross Roads": "Nirant Cross Road",
+    "Commerce Six Roads": "Commerce Six Road",
+    "Stadium": "SP Stadium",
+    "PDPU": "PDEU"
+  },
+  "selfIntersectionExemptions": []
+}

@@ -340,5 +340,41 @@
     "operator": "Pune IT City Metro Rail Limited",
     "city_id": "pune",
     "source": "osm+pmrda"
+  },
+  {
+    "id": "ahm-blue",
+    "name": "Blue Line (Line 1 / East-West Corridor)",
+    "city": "Ahmedabad",
+    "color": "#0000FF",
+    "operator": "GMRC",
+    "city_id": "ahmedabad",
+    "source": "osm+gmrc"
+  },
+  {
+    "id": "ahm-red",
+    "name": "Red Line (Line 2 / North-South Corridor)",
+    "city": "Ahmedabad",
+    "color": "#FF0000",
+    "operator": "GMRC",
+    "city_id": "ahmedabad",
+    "source": "osm+gmrc"
+  },
+  {
+    "id": "ahm-yellow",
+    "name": "Yellow Line (Line 3 / Motera Stadium - Mahatma Mandir)",
+    "city": "Ahmedabad",
+    "color": "#FFD700",
+    "operator": "GMRC",
+    "city_id": "ahmedabad",
+    "source": "osm+gmrc"
+  },
+  {
+    "id": "ahm-violet",
+    "name": "Violet Line (Line 4 / GNLU - GIFT City Spur)",
+    "city": "Ahmedabad",
+    "color": "#8A2BE2",
+    "operator": "GMRC",
+    "city_id": "ahmedabad",
+    "source": "osm+gmrc"
   }
 ]

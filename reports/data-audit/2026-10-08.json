@@ -119,9 +119,53 @@
         "osm+maha_metro": 2,
         "osm+pmrda": 1
       }
+    },
+    {
+      "city_id": "ahmedabad",
+      "city_name": "Ahmedabad",
+      "lines": 4,
+      "segments": 4,
+      "stations": 53,
+      "segmentSources": {
+        "osm": 4
+      },
+      "stationSources": {
+        "osm": 53
+      },
+      "lineSources": {
+        "osm+gmrc": 4
+      }
     }
   ],
   "findings": [
+    {
+      "city_id": "ahmedabad",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "ahm-blue",
+      "message": "Operational length: computed 19.79 km vs reference 21.16 km (6.5%)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "ahm-red",
+      "message": "Operational length: computed 16.68 km vs reference 18.87 km (11.6%)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "ahm-violet",
+      "message": "Operational length: computed 4.43 km vs reference 5.42 km (18.3%)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "last-verified-distribution",
+      "severity": "info",
+      "subject": "ahmedabad",
+      "message": "last_verified distribution: missing: 57"
+    },
     {
       "city_id": "bengaluru",
       "rule": "station-far-from-all-segments",

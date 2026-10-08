@@ -117,5 +117,22 @@
       "1A",
       "1B"
     ]
+  },
+  {
+    "id": "ahmedabad",
+    "name": "Ahmedabad",
+    "bbox": [
+      72.45,
+      22.95,
+      72.72,
+      23.32
+    ],
+    "operator": "GMRC",
+    "phases": [
+      "1",
+      "2",
+      "2A",
+      "2B"
+    ]
   }
 ]

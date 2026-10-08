@@ -17907,6 +17907,1493 @@
         "last_verified": null,
         "retrieved_at": "2026-10-08"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.56225,
+          23.05643
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-vijay-nagar",
+        "name": "Vijay Nagar",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.59218,
+          23.08562
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-sabarmati",
+        "name": "Sabarmati",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.59667,
+          23.09679
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-motera-stadium",
+        "name": "Motera Stadium",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-red",
+          "ahm-yellow"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": true,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.64745,
+          23.15448
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-gnlu",
+        "name": "GNLU",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-violet",
+          "ahm-yellow"
+        ],
+        "status": "operational",
+        "phase": "2",
+        "is_interchange": true,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.57415,
+          23.06772
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-ranip",
+        "name": "Ranip",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.61824,
+          23.0107
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-apparel-park",
+        "name": "Apparel Park",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.6284,
+          23.00789
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-amraiwadi",
+        "name": "Amraiwadi",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.63563,
+          23.00546
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-rabari-colony",
+        "name": "Rabari Colony",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.64772,
+          23.00354
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-vastral",
+        "name": "Vastral",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.65855,
+          22.99998
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-nirant-cross-road",
+        "name": "Nirant Cross Road",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.66749,
+          22.99721
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-vastral-gam",
+        "name": "Vastral Gam",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.60706,
+          23.01546
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-kankaria-east",
+        "name": "Kankaria East",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.60321,
+          23.0247
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-kalupur-railway",
+        "name": "Kalupur Railway",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.5868,
+          23.0288
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-gheekanta",
+        "name": "Gheekanta",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.58103,
+          23.03925
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-shahpur",
+        "name": "Shahpur",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.56706,
+          23.0376
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-old-high-court",
+        "name": "Old High Court",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-blue",
+          "ahm-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": true,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.56164,
+          23.03989
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-sp-stadium",
+        "name": "SP Stadium",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.55309,
+          23.04072
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-commerce-six-road",
+        "name": "Commerce Six Road",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.54353,
+          23.04489
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-gujarat-university",
+        "name": "Gujarat University",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.53488,
+          23.04593
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-gurukul-road",
+        "name": "Gurukul Road",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.52451,
+          23.04818
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-doordarshan-kendra",
+        "name": "Doordarshan Kendra",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.51601,
+          23.04978
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-thaltej",
+        "name": "Thaltej",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.53709,
+          22.9978
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-apmc",
+        "name": "APMC",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.56882,
+          23.02717
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-gandhigram",
+        "name": "Gandhigram",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.56589,
+          23.0677
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-vadaj",
+        "name": "Vadaj",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.56493,
+          23.04591
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-usmanpura",
+        "name": "Usmanpura",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.59327,
+          23.07512
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-aec",
+        "name": "AEC",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.56233,
+          23.01855
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-paldi",
+        "name": "Paldi",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.54924,
+          23.01365
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-shreyas",
+        "name": "Shreyas",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.53676,
+          23.00977
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-rajiv-nagar",
+        "name": "Rajiv Nagar",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.53347,
+          23.00553
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-jivraj-park",
+        "name": "Jivraj Park",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.65941,
+          23.22891
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-juna-sachivalaya",
+        "name": "Juna Sachivalaya",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-yellow"
+        ],
+        "status": "operational",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.64831,
+          23.16639
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-raysan",
+        "name": "Raysan",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-yellow"
+        ],
+        "status": "operational",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.50701,
+          23.05023
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-thaltej-gam",
+        "name": "Thaltej Gam",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.60838,
+          23.11421
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-vishwakarma-college",
+        "name": "Vishwakarma College",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-yellow"
+        ],
+        "status": "operational",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.68552,
+          23.15337
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-gift-city",
+        "name": "GIFT City",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-violet"
+        ],
+        "status": "operational",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.6502,
+          23.21149
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-sector-10a",
+        "name": "Sector-10A",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-yellow"
+        ],
+        "status": "operational",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.64312,
+          23.20491
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-sector-1",
+        "name": "Sector-1",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-yellow"
+        ],
+        "status": "operational",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.63969,
+          23.19226
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-infocity",
+        "name": "Infocity",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-yellow"
+        ],
+        "status": "operational",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.64331,
+          23.18593
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-dholakuva-circle",
+        "name": "Dholakuva Circle",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-yellow"
+        ],
+        "status": "operational",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.64726,
+          23.17908
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-randesan",
+        "name": "Randesan",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-yellow"
+        ],
+        "status": "operational",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.63103,
+          23.13226
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-koba-circle",
+        "name": "Koba Circle",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-yellow"
+        ],
+        "status": "operational",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.62209,
+          23.12515
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-narmada-canal",
+        "name": "Narmada Canal",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-yellow"
+        ],
+        "status": "operational",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.61578,
+          23.12014
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-tapovan-circle",
+        "name": "Tapovan Circle",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-yellow"
+        ],
+        "status": "operational",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.60211,
+          23.10312
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-koteshwar-road",
+        "name": "Koteshwar Road",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-yellow"
+        ],
+        "status": "operational",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.66125,
+          23.15495
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-pdeu",
+        "name": "PDEU",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-violet"
+        ],
+        "status": "operational",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.64388,
+          23.14762
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-koba-gam",
+        "name": "Koba Gam",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-yellow"
+        ],
+        "status": "operational",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.63858,
+          23.142
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-juna-koba",
+        "name": "Juna Koba",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-yellow"
+        ],
+        "status": "operational",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.65873,
+          23.21507
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-sachivalaya",
+        "name": "Sachivalaya",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-yellow"
+        ],
+        "status": "operational",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.66418,
+          23.22368
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-akshardham",
+        "name": "Akshardham",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-yellow"
+        ],
+        "status": "operational",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.65017,
+          23.23388
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-sector-16",
+        "name": "Sector-16",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-yellow"
+        ],
+        "status": "operational",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.64148,
+          23.23851
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-sector-24",
+        "name": "Sector-24",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-yellow"
+        ],
+        "status": "operational",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.63387,
+          23.23394
+        ]
+      },
+      "properties": {
+        "station_id": "ahmedabad-mahatma-mandir",
+        "name": "Mahatma Mandir",
+        "city_id": "ahmedabad",
+        "city": "Ahmedabad",
+        "line_ids": [
+          "ahm-yellow"
+        ],
+        "status": "operational",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-08"
+      }
     }
   ]
 }
