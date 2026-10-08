@@ -1,0 +1,281 @@
+{
+  "city": {
+    "id": "noida",
+    "name": "Noida",
+    "bbox": [
+      77.34,
+      28.44,
+      77.56,
+      28.6
+    ],
+    "operator": "NMRC",
+    "phases": [
+      "1",
+      "2"
+    ],
+    "network_id": "noida-metro"
+  },
+  "lines": [
+    {
+      "id": "noi-aqua",
+      "name": "Aqua Line",
+      "city": "Noida",
+      "city_id": "noida",
+      "color": "#00CED1",
+      "operator": "NMRC",
+      "source": "osm+nmrc"
+    }
+  ],
+  "segments": [
+    {
+      "osmId": 9268569,
+      "segment_id": "noi-aqua-seg-01",
+      "line_id": "noi-aqua",
+      "line_name": "Aqua Line",
+      "phase": "1",
+      "status": "operational",
+      "gauge": "standard",
+      "inaugurated_on": "2019-01-25",
+      "expected_completion": null,
+      "color": "#00CED1",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+      ]
+    }
+  ],
+  "interchangeStationNames": [
+    "Noida Sector 51"
+  ],
+  "dedupeRadiusM": 160,
+  "stationAliases": {
+    "Rainbow Metro Station": "Noida Sector 50",
+    "Depot Station": "Depot"
+  },
+  "stationOverrides": {
+    "noi-noida-sector-51": {
+      "is_interchange": true,
+      "layout": "elevated",
+      "last_verified": "2026-10-08",
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2019-01-25",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+      ]
+    },
+    "noi-rainbow": {
+      "layout": "elevated",
+      "last_verified": "2026-10-08",
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2019-01-25",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+      ]
+    },
+    "noi-noida-sector-50": {
+      "layout": "elevated",
+      "last_verified": "2026-10-08",
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2019-01-25",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+      ]
+    },
+    "noi-noida-sector-76": {
+      "layout": "elevated",
+      "last_verified": "2026-10-08",
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2019-01-25",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+      ]
+    },
+    "noi-noida-sector-101": {
+      "layout": "elevated",
+      "last_verified": "2026-10-08",
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2019-01-25",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+      ]
+    },
+    "noi-noida-sector-81": {
+      "layout": "elevated",
+      "last_verified": "2026-10-08",
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2019-01-25",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+      ]
+    },
+    "noi-nsez": {
+      "layout": "elevated",
+      "last_verified": "2026-10-08",
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2019-01-25",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+      ]
+    },
+    "noi-noida-sector-83": {
+      "layout": "elevated",
+      "last_verified": "2026-10-08",
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2019-01-25",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+      ]
+    },
+    "noi-noida-sector-137": {
+      "layout": "elevated",
+      "last_verified": "2026-10-08",
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2019-01-25",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+      ]
+    },
+    "noi-noida-sector-142": {
+      "layout": "elevated",
+      "last_verified": "2026-10-08",
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2019-01-25",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+      ]
+    },
+    "noi-noida-sector-143": {
+      "layout": "elevated",
+      "last_verified": "2026-10-08",
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2019-01-25",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+      ]
+    },
+    "noi-noida-sector-144": {
+      "layout": "elevated",
+      "last_verified": "2026-10-08",
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2019-01-25",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+      ]
+    },
+    "noi-noida-sector-145": {
+      "layout": "elevated",
+      "last_verified": "2026-10-08",
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2019-01-25",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+      ]
+    },
+    "noi-noida-sector-146": {
+      "layout": "elevated",
+      "last_verified": "2026-10-08",
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2019-01-25",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+      ]
+    },
+    "noi-noida-sector-147": {
+      "layout": "elevated",
+      "last_verified": "2026-10-08",
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2019-01-25",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+      ]
+    },
+    "noi-noida-sector-148": {
+      "layout": "elevated",
+      "last_verified": "2026-10-08",
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2019-01-25",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+      ]
+    },
+    "noi-knowledge-park-ii": {
+      "layout": "elevated",
+      "last_verified": "2026-10-08",
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2019-01-25",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+      ]
+    },
+    "noi-pari-chowk": {
+      "layout": "elevated",
+      "last_verified": "2026-10-08",
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2019-01-25",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+      ]
+    },
+    "noi-alpha-1": {
+      "layout": "elevated",
+      "last_verified": "2026-10-08",
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2019-01-25",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+      ]
+    },
+    "noi-delta-1": {
+      "layout": "elevated",
+      "last_verified": "2026-10-08",
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2019-01-25",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+      ]
+    },
+    "noi-gnida-office": {
+      "layout": "elevated",
+      "last_verified": "2026-10-08",
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2019-01-25",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+      ]
+    },
+    "noi-depot": {
+      "layout": null,
+      "last_verified": "2026-10-08",
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2019-01-25",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+      ]
+    }
+  },
+  "out_of_scope_station_ids": [
+    "del-noida-sector-44",
+    "del-noida-office"
+  ]
+}
