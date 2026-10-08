@@ -1,0 +1,194 @@
+{
+  "city_id": "hyderabad",
+  "compiled_on": "2026-10-07",
+  "lines": [
+    {
+      "line_id": "hyd-red",
+      "official_name": "Red Line (Corridor I)",
+      "operator": "LTMRHL",
+      "topology": "linear",
+      "operational_stations": 27,
+      "operational_length_km": 29.21,
+      "planned_length_km": 29.21,
+      "terminals": [
+        "Miyapur",
+        "LB Nagar"
+      ],
+      "status": "operational",
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "Miyapur - Ameerpet",
+          "phase": null,
+          "opened_on": "2017-11-29",
+          "stations_added": 11,
+          "confidence": "sourced",
+          "source": {
+            "title": "Hyderabad Metro Phase 1 Inauguration",
+            "url": "https://hmrl.co.in",
+            "retrieved_at": "2026-10-07",
+            "kind": "official"
+          }
+        },
+        {
+          "stage": "Ameerpet - LB Nagar",
+          "phase": null,
+          "opened_on": "2018-09-24",
+          "stations_added": 16,
+          "confidence": "sourced",
+          "source": {
+            "title": "Ameerpet to LB Nagar stretch inaugurated",
+            "url": "https://hmrl.co.in",
+            "retrieved_at": "2026-10-07",
+            "kind": "official"
+          }
+        }
+      ],
+      "construction": [],
+      "notes": "Red Line (Corridor I) runs from Miyapur to LB Nagar with 27 stations."
+    },
+    {
+      "line_id": "hyd-blue",
+      "official_name": "Blue Line (Corridor III)",
+      "operator": "LTMRHL",
+      "topology": "linear",
+      "operational_stations": 23,
+      "operational_length_km": 27,
+      "planned_length_km": 27,
+      "terminals": [
+        "Nagole",
+        "Raidurg"
+      ],
+      "status": "operational",
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "Nagole - Ameerpet",
+          "phase": null,
+          "opened_on": "2017-11-29",
+          "stations_added": 14,
+          "confidence": "sourced",
+          "source": {
+            "title": "Nagole to Ameerpet stretch commissioned",
+            "url": "https://hmrl.co.in",
+            "retrieved_at": "2026-10-07",
+            "kind": "official"
+          }
+        },
+        {
+          "stage": "Ameerpet - HITEC City (via Madhura Nagar, Yousufguda, Road No. 5 Jubilee Hills, Durgam Cheruvu)",
+          "phase": null,
+          "opened_on": "2019-03-20",
+          "stations_added": 5,
+          "confidence": "sourced",
+          "source": {
+            "title": "Ameerpet to HITEC City metro opening",
+            "url": "https://hmrl.co.in",
+            "retrieved_at": "2026-10-07",
+            "kind": "official"
+          }
+        },
+        {
+          "stage": "Peddamma Gudi station opening",
+          "phase": null,
+          "opened_on": "2019-03-30",
+          "stations_added": 1,
+          "confidence": "sourced",
+          "source": {
+            "title": "Peddamma Gudi station opens to public",
+            "url": "https://ltmetro.com",
+            "retrieved_at": "2026-10-07",
+            "kind": "official"
+          }
+        },
+        {
+          "stage": "Madhapur station opening",
+          "phase": null,
+          "opened_on": "2019-04-13",
+          "stations_added": 1,
+          "confidence": "sourced",
+          "source": {
+            "title": "Madhapur station opens to public",
+            "url": "https://ltmetro.com",
+            "retrieved_at": "2026-10-07",
+            "kind": "official"
+          }
+        },
+        {
+          "stage": "Jubilee Hills Check Post station opening",
+          "phase": null,
+          "opened_on": "2019-05-18",
+          "stations_added": 1,
+          "confidence": "sourced",
+          "source": {
+            "title": "Jubilee Hills Check Post station opens to public",
+            "url": "https://ltmetro.com",
+            "retrieved_at": "2026-10-07",
+            "kind": "official"
+          }
+        },
+        {
+          "stage": "HITEC City - Raidurg extension",
+          "phase": null,
+          "opened_on": "2019-11-29",
+          "stations_added": 1,
+          "confidence": "sourced",
+          "source": {
+            "title": "HITEC City to Raidurg metro line opened",
+            "url": "https://hmrl.co.in",
+            "retrieved_at": "2026-10-07",
+            "kind": "official"
+          }
+        }
+      ],
+      "construction": [],
+      "notes": "Blue Line (Corridor III) runs from Nagole to Raidurg with 23 stations."
+    },
+    {
+      "line_id": "hyd-green",
+      "official_name": "Green Line (Corridor II)",
+      "operator": "LTMRHL",
+      "topology": "linear",
+      "operational_stations": 9,
+      "operational_length_km": 9.6,
+      "planned_length_km": 16.6,
+      "terminals": [
+        "JBS Parade Ground",
+        "MG Bus Station"
+      ],
+      "status": "operational",
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "JBS Parade Ground - MG Bus Station",
+          "phase": null,
+          "opened_on": "2020-02-07",
+          "stations_added": 9,
+          "confidence": "sourced",
+          "source": {
+            "title": "JBS Parade Ground to MGBS Green Line commissioning",
+            "url": "https://hmrl.co.in",
+            "retrieved_at": "2026-10-07",
+            "kind": "official"
+          }
+        }
+      ],
+      "construction": [
+        {
+          "stretch": "MG Bus Station - Chandrayangutta (via Falaknuma)",
+          "phase": "2",
+          "expected_completion": null,
+          "stations": 5,
+          "notes": "Foundation stone laid on March 8, 2024 for 5.5 km stretch to Falaknuma and 1.5 km extension to Chandrayangutta.",
+          "source": {
+            "title": "Foundation stone laid for Old City Metro",
+            "url": "https://hmrl.co.in",
+            "retrieved_at": "2026-10-07",
+            "kind": "official"
+          }
+        }
+      ],
+      "notes": "Green Line (Corridor II) currently operates from JBS Parade Ground to MG Bus Station with 9 stations. Extension to Chandrayangutta via Falaknuma is under pre-construction/land acquisition."
+    }
+  ]
+}

@@ -286,5 +286,32 @@
     "operator": "CMRL",
     "city_id": "chennai",
     "source": "cmrl"
+  },
+  {
+    "id": "hyd-red",
+    "name": "Red Line (Corridor I)",
+    "city": "Hyderabad",
+    "color": "#D84A4E",
+    "operator": "LTMRHL",
+    "city_id": "hyderabad",
+    "source": "osm+ltmrhl"
+  },
+  {
+    "id": "hyd-blue",
+    "name": "Blue Line (Corridor III)",
+    "city": "Hyderabad",
+    "color": "#0081BF",
+    "operator": "LTMRHL",
+    "city_id": "hyderabad",
+    "source": "osm+ltmrhl"
+  },
+  {
+    "id": "hyd-green",
+    "name": "Green Line (Corridor II)",
+    "city": "Hyderabad",
+    "color": "#008D42",
+    "operator": "LTMRHL",
+    "city_id": "hyderabad",
+    "source": "osm+ltmrhl"
   }
 ]

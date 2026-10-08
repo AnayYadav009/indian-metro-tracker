@@ -1,0 +1,892 @@
+{
+  "accepted_warnings": [
+    {
+      "city_id": "bengaluru",
+      "rule": "consecutive-segment-gap",
+      "subject": "blr-planned-seg-01|blr-purple-seg-01",
+      "reason": "Accepted for this M8 baseline: branch/disjoint or OSM relation split requires future topology ordering review, no audit error remains."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-length",
+      "subject": "blr-green",
+      "reason": "Accepted for this M8 baseline: computed OSM geometry and published corridor length differ beyond warning tolerance; retain as tracked reference variance."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-length",
+      "subject": "blr-yellow",
+      "reason": "Accepted for this M8 baseline: computed OSM geometry and published corridor length differ beyond warning tolerance; retain as tracked reference variance."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-phase-date",
+      "subject": "blr-green-seg-01",
+      "reason": "Accepted for this M8 baseline: reference opening stage dates are intentionally unverified and need later official-stage reconciliation."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-phase-date",
+      "subject": "blr-green-seg-01",
+      "reason": "Accepted for this M8 baseline: reference opening stage dates are intentionally unverified and need later official-stage reconciliation."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-phase-date",
+      "subject": "blr-purple-seg-01",
+      "reason": "Accepted for this M8 baseline: reference opening stage dates are intentionally unverified and need later official-stage reconciliation."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-phase-date",
+      "subject": "blr-purple-seg-01",
+      "reason": "Accepted for this M8 baseline: reference opening stage dates are intentionally unverified and need later official-stage reconciliation."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-station-count",
+      "subject": "blr-green",
+      "reason": "Accepted for this M8 baseline: active OSM-derived station membership differs from unverified reference totals; needs later official station-list reconciliation."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-station-count",
+      "subject": "blr-pink",
+      "reason": "Accepted for this M8 baseline: active OSM-derived station membership differs from unverified reference totals; needs later official station-list reconciliation."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-terminal-mismatch",
+      "subject": "blr-blue",
+      "reason": "Accepted for this M8 baseline: terminal names differ between OSM-derived active station names and unverified reference naming; needs alias/reference cleanup."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-terminal-mismatch",
+      "subject": "blr-blue",
+      "reason": "Accepted for this M8 baseline: terminal names differ between OSM-derived active station names and unverified reference naming; needs alias/reference cleanup."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-terminal-mismatch",
+      "subject": "blr-pink",
+      "reason": "Accepted for this M8 baseline: terminal names differ between OSM-derived active station names and unverified reference naming; needs alias/reference cleanup."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-terminal-mismatch",
+      "subject": "blr-pink",
+      "reason": "Accepted for this M8 baseline: terminal names differ between OSM-derived active station names and unverified reference naming; needs alias/reference cleanup."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-terminal-mismatch",
+      "subject": "blr-yellow",
+      "reason": "Accepted for this M8 baseline: terminal names differ between OSM-derived active station names and unverified reference naming; needs alias/reference cleanup."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "interchange-consistency",
+      "subject": "blr-central-silk-board",
+      "reason": "Accepted for this M8 baseline: interchange flag is sourced from declared interchange names while the paired station/line merge needs later cluster modeling."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "interchange-consistency",
+      "subject": "blr-jayadeva-hospital",
+      "reason": "Accepted for this M8 baseline: interchange flag is sourced from declared interchange names while the paired station/line merge needs later cluster modeling."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-no-reference",
+      "subject": "blr-green-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-no-reference",
+      "subject": "blr-purple-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "segment-end-far-from-station",
+      "subject": "blr-green-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "segment-end-far-from-station",
+      "subject": "blr-green-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "segment-end-far-from-station",
+      "subject": "blr-pink-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "segment-end-far-from-station",
+      "subject": "blr-pink-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "segment-end-far-from-station",
+      "subject": "blr-planned-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "segment-end-far-from-station",
+      "subject": "blr-planned-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "segment-self-intersecting",
+      "subject": "blr-green-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM relation ordering/branch geometry trips the simple self-intersection heuristic; no blocking geometry error remains."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "segment-self-intersecting",
+      "subject": "blr-purple-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM relation ordering/branch geometry trips the simple self-intersection heuristic; no blocking geometry error remains."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "station-far-from-nearest-segment",
+      "subject": "blr-mahatma-gandhi-road",
+      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "ground-truth-length",
+      "subject": "che-blue",
+      "reason": "Accepted for this M8 baseline: computed OSM geometry and published corridor length differ beyond warning tolerance; retain as tracked reference variance."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "ground-truth-length",
+      "subject": "che-green",
+      "reason": "Accepted for this M8 baseline: computed OSM geometry and published corridor length differ beyond warning tolerance; retain as tracked reference variance."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "segment-end-far-from-station",
+      "subject": "che-corridor-4-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "segment-end-far-from-station",
+      "subject": "che-green-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "station-far-from-nearest-segment",
+      "subject": "chennai-vadapalani",
+      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "consecutive-segment-gap",
+      "subject": "del-blue-seg-01|del-blue-seg-02",
+      "reason": "Accepted for this M8 baseline: branch/disjoint or OSM relation split requires future topology ordering review, no audit error remains."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "consecutive-segment-gap",
+      "subject": "del-green-seg-01|del-green-seg-02",
+      "reason": "Accepted for this M8 baseline: branch/disjoint or OSM relation split requires future topology ordering review, no audit error remains."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "consecutive-segment-gap",
+      "subject": "del-magenta-seg-01|del-magenta-seg-02",
+      "reason": "Accepted for this M8 baseline: branch/disjoint or OSM relation split requires future topology ordering review, no audit error remains."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "coords-city-bbox",
+      "subject": "del-red-seg-01",
+      "reason": "Accepted for this M8 baseline: Delhi NCR operational corridor extends just outside the current city bbox margin; bbox/network scope needs the deferred city_id/network cleanup."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "coords-city-bbox",
+      "subject": "del-violet-seg-01",
+      "reason": "Accepted for this M8 baseline: Delhi NCR operational corridor extends just outside the current city bbox margin; bbox/network scope needs the deferred city_id/network cleanup."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-length",
+      "subject": "del-airport",
+      "reason": "Accepted for this M8 baseline: computed OSM geometry and published corridor length differ beyond warning tolerance; retain as tracked reference variance."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-length",
+      "subject": "del-green",
+      "reason": "Accepted for this M8 baseline: computed OSM geometry and published corridor length differ beyond warning tolerance; retain as tracked reference variance."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-length",
+      "subject": "del-grey",
+      "reason": "Accepted for this M8 baseline: computed OSM geometry and published corridor length differ beyond warning tolerance; retain as tracked reference variance."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-length",
+      "subject": "del-magenta",
+      "reason": "Accepted for this M8 baseline: computed OSM geometry and published corridor length differ beyond warning tolerance; retain as tracked reference variance."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-length",
+      "subject": "del-pink",
+      "reason": "Accepted for this M8 baseline: computed OSM geometry and published corridor length differ beyond warning tolerance; retain as tracked reference variance."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-length",
+      "subject": "del-red",
+      "reason": "Accepted for this M8 baseline: computed OSM geometry and published corridor length differ beyond warning tolerance; retain as tracked reference variance."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-length",
+      "subject": "del-violet",
+      "reason": "Accepted for this M8 baseline: computed OSM geometry and published corridor length differ beyond warning tolerance; retain as tracked reference variance."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-station-count",
+      "subject": "del-airport",
+      "reason": "Accepted for this M8 baseline: active OSM-derived station membership differs from unverified reference totals; needs later official station-list reconciliation."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-station-count",
+      "subject": "del-blue",
+      "reason": "Accepted for this M8 baseline: active OSM-derived station membership differs from unverified reference totals; needs later official station-list reconciliation."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-station-count",
+      "subject": "del-magenta",
+      "reason": "Accepted for this M8 baseline: active OSM-derived station membership differs from unverified reference totals; needs later official station-list reconciliation."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-station-count",
+      "subject": "del-red",
+      "reason": "Accepted for this M8 baseline: active OSM-derived station membership differs from unverified reference totals; needs later official station-list reconciliation."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-station-count",
+      "subject": "del-violet",
+      "reason": "Accepted for this M8 baseline: active OSM-derived station membership differs from unverified reference totals; needs later official station-list reconciliation."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-station-count",
+      "subject": "del-yellow",
+      "reason": "Accepted for this M8 baseline: active OSM-derived station membership differs from unverified reference totals; needs later official station-list reconciliation."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-terminal-mismatch",
+      "subject": "del-blue",
+      "reason": "Accepted for this M8 baseline: terminal names differ between OSM-derived active station names and unverified reference naming; needs alias/reference cleanup."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-terminal-mismatch",
+      "subject": "del-grey",
+      "reason": "Accepted for this M8 baseline: terminal names differ between OSM-derived active station names and unverified reference naming; needs alias/reference cleanup."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-terminal-mismatch",
+      "subject": "del-red",
+      "reason": "Accepted for this M8 baseline: terminal names differ between OSM-derived active station names and unverified reference naming; needs alias/reference cleanup."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-terminal-mismatch",
+      "subject": "del-violet",
+      "reason": "Accepted for this M8 baseline: terminal names differ between OSM-derived active station names and unverified reference naming; needs alias/reference cleanup."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "interchange-consistency",
+      "subject": "del-kalkaji-mandir",
+      "reason": "Accepted for this M8 baseline: interchange flag is sourced from declared interchange names while the paired station/line merge needs later cluster modeling."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "interchange-consistency",
+      "subject": "del-netaji-subhash-place",
+      "reason": "Accepted for this M8 baseline: interchange flag is sourced from declared interchange names while the paired station/line merge needs later cluster modeling."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "interchange-consistency",
+      "subject": "del-yamuna-bank",
+      "reason": "Accepted for this M8 baseline: interchange flag is sourced from declared interchange names while the paired station/line merge needs later cluster modeling."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "subject": "del-airport-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "subject": "del-blue-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "subject": "del-blue-seg-02",
+      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "subject": "del-green-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "subject": "del-green-seg-02",
+      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "subject": "del-grey-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "subject": "del-magenta-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "subject": "del-pink-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "subject": "del-red-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "subject": "del-violet-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "subject": "del-yellow-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "segment-end-far-from-station",
+      "subject": "del-blue-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "segment-end-far-from-station",
+      "subject": "del-green-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "segment-end-far-from-station",
+      "subject": "del-pink-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "segment-end-far-from-station",
+      "subject": "del-red-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "segment-end-far-from-station",
+      "subject": "del-violet-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "segment-end-far-from-station",
+      "subject": "del-yellow-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "segment-self-intersecting",
+      "subject": "del-grey-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM relation ordering/branch geometry trips the simple self-intersection heuristic; no blocking geometry error remains."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "segment-self-intersecting",
+      "subject": "del-magenta-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM relation ordering/branch geometry trips the simple self-intersection heuristic; no blocking geometry error remains."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "segment-self-intersecting",
+      "subject": "del-pink-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM relation ordering/branch geometry trips the simple self-intersection heuristic; no blocking geometry error remains."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "segment-self-intersecting",
+      "subject": "del-yellow-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM relation ordering/branch geometry trips the simple self-intersection heuristic; no blocking geometry error remains."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "subject": "del-aerocity",
+      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "subject": "del-andrews-ganj",
+      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "subject": "del-azadpur",
+      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "subject": "del-dilli-haat-ina",
+      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "subject": "del-domestic-airport",
+      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "subject": "del-hauz-khas",
+      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "subject": "del-inderlok",
+      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "subject": "del-karkarduma",
+      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "subject": "del-kirti-nagar",
+      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "subject": "del-madhuban-chowk",
+      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "subject": "del-mayur-vihar-i",
+      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "subject": "del-new-delhi",
+      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "subject": "del-punjabi-bagh-west",
+      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "subject": "del-rajouri-garden",
+      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "subject": "del-saket",
+      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "subject": "del-welcome",
+      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "ground-truth-length",
+      "subject": "kol-green",
+      "reason": "Accepted for this M8 baseline: computed OSM geometry and published corridor length differ beyond warning tolerance; retain as tracked reference variance."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "ground-truth-length",
+      "subject": "kol-purple",
+      "reason": "Accepted for this M8 baseline: computed OSM geometry and published corridor length differ beyond warning tolerance; retain as tracked reference variance."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "ground-truth-length",
+      "subject": "kol-yellow",
+      "reason": "Accepted for this M8 baseline: computed OSM geometry and published corridor length differ beyond warning tolerance; retain as tracked reference variance."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "segment-end-far-from-station",
+      "subject": "kol-green-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "segment-end-far-from-station",
+      "subject": "kol-orange-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "segment-end-far-from-station",
+      "subject": "kol-orange-seg-02",
+      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "segment-end-far-from-station",
+      "subject": "kol-purple-seg-02",
+      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "segment-end-far-from-station",
+      "subject": "kol-purple-seg-02",
+      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "segment-end-far-from-station",
+      "subject": "kol-yellow-seg-02",
+      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "station-far-from-nearest-segment",
+      "subject": "kolkata-kavi-subhash",
+      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "consecutive-segment-gap",
+      "subject": "mum-line-4-seg-01|mum-planned-seg-01",
+      "reason": "Accepted for this M8 baseline: branch/disjoint or OSM relation split requires future topology ordering review, no audit error remains."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-length",
+      "subject": "mum-line-2a",
+      "reason": "Accepted for this M8 baseline: computed OSM geometry and published corridor length differ beyond warning tolerance; retain as tracked reference variance."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-length",
+      "subject": "mum-line-2b",
+      "reason": "Accepted for this M8 baseline: computed OSM geometry and published corridor length differ beyond warning tolerance; retain as tracked reference variance."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-length",
+      "subject": "mum-line-7",
+      "reason": "Accepted for this M8 baseline: computed OSM geometry and published corridor length differ beyond warning tolerance; retain as tracked reference variance."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-length",
+      "subject": "mum-line-9",
+      "reason": "Accepted for this M8 baseline: computed OSM geometry and published corridor length differ beyond warning tolerance; retain as tracked reference variance."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-station-count",
+      "subject": "mum-line-1",
+      "reason": "Accepted for this M8 baseline: active OSM-derived station membership differs from unverified reference totals; needs later official station-list reconciliation."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-station-count",
+      "subject": "mum-line-2a",
+      "reason": "Accepted for this M8 baseline: active OSM-derived station membership differs from unverified reference totals; needs later official station-list reconciliation."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-station-count",
+      "subject": "mum-line-4",
+      "reason": "Accepted for this M8 baseline: active OSM-derived station membership differs from unverified reference totals; needs later official station-list reconciliation."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-station-count",
+      "subject": "mum-line-7",
+      "reason": "Accepted for this M8 baseline: active OSM-derived station membership differs from unverified reference totals; needs later official station-list reconciliation."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-station-count",
+      "subject": "mum-line-9",
+      "reason": "Accepted for this M8 baseline: active OSM-derived station membership differs from unverified reference totals; needs later official station-list reconciliation."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-terminal-mismatch",
+      "subject": "mum-line-1",
+      "reason": "Accepted for this M8 baseline: terminal names differ between OSM-derived active station names and unverified reference naming; needs alias/reference cleanup."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-terminal-mismatch",
+      "subject": "mum-line-1",
+      "reason": "Accepted for this M8 baseline: terminal names differ between OSM-derived active station names and unverified reference naming; needs alias/reference cleanup."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-terminal-mismatch",
+      "subject": "mum-line-2a",
+      "reason": "Accepted for this M8 baseline: terminal names differ between OSM-derived active station names and unverified reference naming; needs alias/reference cleanup."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-terminal-mismatch",
+      "subject": "mum-line-2a",
+      "reason": "Accepted for this M8 baseline: terminal names differ between OSM-derived active station names and unverified reference naming; needs alias/reference cleanup."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-terminal-mismatch",
+      "subject": "mum-line-3",
+      "reason": "Accepted for this M8 baseline: terminal names differ between OSM-derived active station names and unverified reference naming; needs alias/reference cleanup."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-terminal-mismatch",
+      "subject": "mum-line-4",
+      "reason": "Accepted for this M8 baseline: terminal names differ between OSM-derived active station names and unverified reference naming; needs alias/reference cleanup."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-terminal-mismatch",
+      "subject": "mum-line-4",
+      "reason": "Accepted for this M8 baseline: terminal names differ between OSM-derived active station names and unverified reference naming; needs alias/reference cleanup."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-terminal-mismatch",
+      "subject": "mum-line-7",
+      "reason": "Accepted for this M8 baseline: terminal names differ between OSM-derived active station names and unverified reference naming; needs alias/reference cleanup."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-terminal-mismatch",
+      "subject": "mum-line-9",
+      "reason": "Accepted for this M8 baseline: terminal names differ between OSM-derived active station names and unverified reference naming; needs alias/reference cleanup."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "interchange-consistency",
+      "subject": "mum-chhatrapati-shivaji-maharaj-terminus",
+      "reason": "Accepted for this M8 baseline: interchange flag is sourced from declared interchange names while the paired station/line merge needs later cluster modeling."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "interchange-consistency",
+      "subject": "mum-dadar",
+      "reason": "Accepted for this M8 baseline: interchange flag is sourced from declared interchange names while the paired station/line merge needs later cluster modeling."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "interchange-consistency",
+      "subject": "mum-gundavali",
+      "reason": "Accepted for this M8 baseline: interchange flag is sourced from declared interchange names while the paired station/line merge needs later cluster modeling."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-no-reference",
+      "subject": "mum-line-1-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-no-reference",
+      "subject": "mum-line-2a-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-no-reference",
+      "subject": "mum-line-3-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "segment-end-far-from-station",
+      "subject": "mum-line-1-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "segment-end-far-from-station",
+      "subject": "mum-line-1-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "segment-end-far-from-station",
+      "subject": "mum-line-3-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "segment-end-far-from-station",
+      "subject": "mum-line-3-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "segment-end-far-from-station",
+      "subject": "mum-line-4-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "segment-end-far-from-station",
+      "subject": "mum-line-4-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "segment-end-far-from-station",
+      "subject": "mum-planned-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "segment-end-far-from-station",
+      "subject": "mum-planned-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "segment-self-intersecting",
+      "subject": "mum-line-4-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM relation ordering/branch geometry trips the simple self-intersection heuristic; no blocking geometry error remains."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "segment-self-intersecting",
+      "subject": "mum-line-7-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM relation ordering/branch geometry trips the simple self-intersection heuristic; no blocking geometry error remains."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-far-from-nearest-segment",
+      "subject": "mum-andheri-west",
+      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-far-from-nearest-segment",
+      "subject": "mum-chembur",
+      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-far-from-nearest-segment",
+      "subject": "mum-dahisar-east-line-2",
+      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-far-from-nearest-segment",
+      "subject": "mum-dahisar-east-line-7",
+      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-far-from-nearest-segment",
+      "subject": "mum-dahisar-east-line-7",
+      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-far-from-nearest-segment",
+      "subject": "mum-dahisar-east-line-9",
+      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-far-from-nearest-segment",
+      "subject": "mum-miragaon",
+      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "ground-truth-length",
+      "subject": "hyd-green",
+      "reason": "Computed OSM LineString geometry is 9.12 km vs official operational corridor length of 9.60 km (5.0% variance within acceptable OSM alignment tolerances)."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "ground-truth-length",
+      "subject": "hyd-red",
+      "reason": "Computed OSM LineString geometry is 28.09 km vs official operational corridor length of 29.21 km (3.8% variance within acceptable OSM alignment tolerances)."
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-07",
+  "date": "2026-10-08",
   "summaries": [
     {
       "city_id": "bengaluru",
@@ -91,13 +91,13 @@
       "city_name": "Hyderabad",
       "lines": 3,
       "segments": 3,
-      "stations": 58,
+      "stations": 57,
       "segmentSources": {
         "osm": 2,
         "manual": 1
       },
       "stationSources": {
-        "osm": 58
+        "osm": 57
       },
       "lineSources": {
         "osm+ltmrhl": 3
@@ -1283,27 +1283,6 @@
     },
     {
       "city_id": "hyderabad",
-      "rule": "ground-truth-station-count",
-      "severity": "error",
-      "subject": "hyd-blue",
-      "message": "Operational station count: data has 24, reference has 23"
-    },
-    {
-      "city_id": "hyderabad",
-      "rule": "ground-truth-station-count",
-      "severity": "error",
-      "subject": "hyd-green",
-      "message": "Operational station count: data has 10, reference has 9"
-    },
-    {
-      "city_id": "hyderabad",
-      "rule": "duplicate-station-name",
-      "severity": "warn",
-      "subject": "hyderabad-parade-ground|hyderabad-parade-ground-2",
-      "message": "Duplicate normalized station name 'parade ground': [hyderabad-parade-ground, hyderabad-parade-ground-2]"
-    },
-    {
-      "city_id": "hyderabad",
       "rule": "ground-truth-length",
       "severity": "warn",
       "subject": "hyd-green",
@@ -1318,24 +1297,10 @@
     },
     {
       "city_id": "hyderabad",
-      "rule": "segment-self-intersecting",
-      "severity": "warn",
-      "subject": "hyd-green-seg-01",
-      "message": "Segment is self-intersecting"
-    },
-    {
-      "city_id": "hyderabad",
-      "rule": "station-far-from-nearest-segment",
-      "severity": "warn",
-      "subject": "hyderabad-parade-ground-2",
-      "message": "Station is 151 m from nearest segment of line 'hyd-blue' (threshold: 75 m)"
-    },
-    {
-      "city_id": "hyderabad",
       "rule": "last-verified-distribution",
       "severity": "info",
       "subject": "hyderabad",
-      "message": "last_verified distribution: 2026-10-07: 1; missing: 60"
+      "message": "last_verified distribution: 2026-10-07: 1; missing: 59"
     },
     {
       "city_id": "hyderabad",

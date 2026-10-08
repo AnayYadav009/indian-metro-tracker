@@ -86,5 +86,20 @@
       "1 Ext",
       "2"
     ]
+  },
+  {
+    "id": "hyderabad",
+    "name": "Hyderabad",
+    "bbox": [
+      78.3,
+      17.3,
+      78.6,
+      17.55
+    ],
+    "operator": "LTMRHL",
+    "phases": [
+      "1",
+      "2"
+    ]
   }
 ]

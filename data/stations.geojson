@@ -15496,6 +15496,1604 @@
         "last_verified": null,
         "retrieved_at": "2026-10-07"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4995,
+          17.43383
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-secunderabad-west",
+        "name": "Secunderabad West",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-green"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.45693,
+          17.43757
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-begumpet",
+        "name": "Begumpet",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.40836,
+          17.43064
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-peddamma-gudi",
+        "name": "Peddamma Gudi",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.38312,
+          17.44899
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-hitec-city",
+        "name": "HITEC City",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.43911,
+          17.43695
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-madhura-nagar",
+        "name": "Madhura Nagar",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.40041,
+          17.43725
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-madhapur",
+        "name": "Madhapur",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.56021,
+          17.40006
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-uppal",
+        "name": "Uppal",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.49747,
+          17.44317
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-parade-ground",
+        "name": "Parade Ground",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.50543,
+          17.43571
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-secunderabad-east",
+        "name": "Secunderabad East",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.51956,
+          17.4355
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-mettuguda",
+        "name": "Mettuguda",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.55423,
+          17.40738
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-stadium",
+        "name": "Stadium",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3772,
+          17.44218
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-raidurg",
+        "name": "Raidurg",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4446,
+          17.43533
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-ameerpet",
+        "name": "Ameerpet",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-blue",
+          "hyd-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": true,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.52843,
+          17.42827
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-tarnaka",
+        "name": "Tarnaka",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.41368,
+          17.42821
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-jubilee-hills-check-post",
+        "name": "Jubilee Hills Check Post",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.41178,
+          17.48493
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-kukatpally",
+        "name": "Kukatpally",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.53619,
+          17.36831
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-chaitanyapuri",
+        "name": "Chaitanyapuri",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.50318,
+          17.37345
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-new-market",
+        "name": "New Market",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.43359,
+          17.45707
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-erragadda",
+        "name": "Erragadda",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.48162,
+          17.38212
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-osmania-medical-college",
+        "name": "Osmania Medical College",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.43009,
+          17.46404
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-bharat-nagar",
+        "name": "Bharat Nagar",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4939,
+          17.37721
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-malakpet",
+        "name": "Malakpet",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.47088,
+          17.39799
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-assembly",
+        "name": "Assembly",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.47334,
+          17.38583
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-gandhi-bhavan",
+        "name": "Gandhi Bhavan",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.54396,
+          17.36186
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-victoria-memorial",
+        "name": "Victoria Memorial",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.52572,
+          17.36856
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-dilsukhnagar",
+        "name": "Dilsukhnagar",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4221,
+          17.47676
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-balanagar",
+        "name": "Balanagar",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.45635,
+          17.42023
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-errum-manzil",
+        "name": "Errum Manzil",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.44163,
+          17.44171
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-sr-nagar",
+        "name": "SR Nagar",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.47016,
+          17.39222
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-nampally",
+        "name": "Nampally",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.48621,
+          17.37981
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-mg-bus-station",
+        "name": "MG Bus Station",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-red",
+          "hyd-green"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": true,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.45131,
+          17.42845
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-punjagutta",
+        "name": "Punjagutta",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.43857,
+          17.44702
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-esi-hospital",
+        "name": "ESI Hospital",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.54794,
+          17.34985
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-lb-nagar",
+        "name": "LB Nagar",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.37302,
+          17.49656
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-miyapur",
+        "name": "Miyapur",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.38887,
+          17.49867
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-jntu-college",
+        "name": "JNTU College",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.42612,
+          17.47189
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-moosapet",
+        "name": "Moosapet",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.42321,
+          17.43007
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-road-no-5-jubilee-hills",
+        "name": "Road No 5 Jubilee Hills",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.42734,
+          17.43511
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-yousufguda",
+        "name": "Yousufguda",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.46095,
+          17.41116
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-khairatabad",
+        "name": "Khairatabad",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.46532,
+          17.40364
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-lakdi-ka-pul",
+        "name": "Lakdi Ka Pul",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.55882,
+          17.39077
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-nagole",
+        "name": "Nagole",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.38757,
+          17.44295
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-durgam-cheruvu",
+        "name": "Durgam Cheruvu",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.51196,
+          17.37109
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-musarambagh",
+        "name": "Musarambagh",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.40178,
+          17.49382
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-kphb-colony",
+        "name": "KPHB Colony",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.54633,
+          17.41483
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-ngri",
+        "name": "NGRI",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.54055,
+          17.42018
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-habsiguda",
+        "name": "Habsiguda",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.48624,
+          17.44347
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-paradise",
+        "name": "Paradise",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4764,
+          17.44361
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-rasoolpura",
+        "name": "Rasoolpura",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.46587,
+          17.44489
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-prakash-nagar",
+        "name": "Prakash Nagar",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.49648,
+          17.44882
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-jbs-parade-ground",
+        "name": "JBS Parade Ground",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-green"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4968,
+          17.40703
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-rtc-cross-roads",
+        "name": "RTC Cross Roads",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-green"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.48402,
+          17.38445
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-sultan-bazar",
+        "name": "Sultan Bazar",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-green"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.48996,
+          17.39437
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-narayanaguda",
+        "name": "Narayanaguda",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-green"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4949,
+          17.40036
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-chikkadpally",
+        "name": "Chikkadpally",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-green"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4995,
+          17.41787
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-musheerabad",
+        "name": "Musheerabad",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-green"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.50196,
+          17.42552
+        ]
+      },
+      "properties": {
+        "station_id": "hyderabad-gandhi-hospital",
+        "name": "Gandhi Hospital",
+        "city_id": "hyderabad",
+        "city": "Hyderabad",
+        "line_ids": [
+          "hyd-green"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "layout": "elevated",
+        "source": "osm",
+        "last_verified": null,
+        "retrieved_at": "2026-10-07"
+      }
     }
   ]
 }

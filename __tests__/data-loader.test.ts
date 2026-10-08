@@ -93,22 +93,22 @@ describe("Metro Data Loader & Dataset Invariants", () => {
         cities: [
           ...dataset.cities,
           {
-            id: "hyderabad",
-            name: "Hyderabad",
-            bbox: [78.2, 17.2, 78.6, 17.6] as [number, number, number, number],
-            operator: "HMRL",
+            id: "lucknow",
+            name: "Lucknow",
+            bbox: [80.8, 26.7, 81.1, 27.0] as [number, number, number, number],
+            operator: "UPMRC",
             phases: ["Phase 1", "Phase 2"],
           },
         ],
         lines: [
           ...dataset.lines,
           {
-            id: "hyd-red",
+            id: "lko-red",
             name: "Red Line",
-            city_id: "hyderabad",
-            city: "Hyderabad",
+            city_id: "lucknow",
+            city: "Lucknow",
             color: "#ED1C24",
-            operator: "HMRL",
+            operator: "UPMRC",
             source: "mock",
           },
         ],
@@ -121,22 +121,22 @@ describe("Metro Data Loader & Dataset Invariants", () => {
               geometry: {
                 type: "LineString",
                 coordinates: [
-                  [78.45, 17.38],
-                  [78.48, 17.43],
+                  [80.9, 26.8],
+                  [80.95, 26.85],
                 ],
               },
               properties: {
-                segment_id: "hyd-red-seg-01",
-                line_id: "hyd-red",
+                segment_id: "lko-red-seg-01",
+                line_id: "lko-red",
                 line_name: "Red Line",
-                city_id: "hyderabad",
-                city: "Hyderabad",
-                operator: "HMRL",
+                city_id: "lucknow",
+                city: "Lucknow",
+                operator: "UPMRC",
                 status: "operational",
                 phase: "Phase 1",
                 length_km: 8.5,
                 gauge: "standard",
-                inaugurated_on: "2017-11-28",
+                inaugurated_on: "2017-09-05",
                 expected_completion: null,
                 stations_count: 7,
                 color: "#ED1C24",
@@ -151,10 +151,10 @@ describe("Metro Data Loader & Dataset Invariants", () => {
 
       const result = validateMetroDataset(mockRawData);
       expect(result.valid).toBe(true);
-      expect(result.dataset?.cities.some((c) => c.id === "hyderabad")).toBe(true);
+      expect(result.dataset?.cities.some((c) => c.id === "lucknow")).toBe(true);
       expect(
         result.dataset?.segments.features.some(
-          (s) => s.properties.segment_id === "hyd-red-seg-01"
+          (s) => s.properties.segment_id === "lko-red-seg-01"
         )
       ).toBe(true);
     });
