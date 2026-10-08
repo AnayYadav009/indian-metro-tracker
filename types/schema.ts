@@ -20,7 +20,10 @@ export const CitySchema = z.object({
   bbox: BoundingBoxSchema,
   operator: z.string().min(1),
   phases: z.array(z.string().min(1)).min(1),
-  tier: z.union([z.literal(1), z.literal(2)]).default(1).optional(),
+  tier: z
+    .union([z.literal(1), z.literal(2)])
+    .default(1)
+    .optional(),
   network_id: z.string().min(1).optional(),
   retrieved_at: z
     .string()
@@ -34,7 +37,9 @@ export const LineSchema = z.object({
   name: z.string().min(1),
   city_id: z.string().min(1),
   city: z.string().min(1),
-  color: z.string().regex(/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/, "Invalid hex color"),
+  color: z
+    .string()
+    .regex(/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/, "Invalid hex color"),
   operator: z.string().min(1),
   source: z.string().min(1, "source is required"),
   retrieved_at: z
@@ -66,10 +71,16 @@ export const SegmentPropertiesSchema = z
       .regex(/^(\d{4}-\d{2}|\d{4})$/, "Format must be YYYY-MM or YYYY")
       .nullable(),
     stations_count: z.number().int().nonnegative(),
-    color: z.string().regex(/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/, "Invalid hex color"),
+    color: z
+      .string()
+      .regex(/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/, "Invalid hex color"),
     source: z.string().min(1),
     references: z
-      .array(z.string().regex(/^https?:\/\//, "Reference must be a valid http or https URL"))
+      .array(
+        z
+          .string()
+          .regex(/^https?:\/\//, "Reference must be a valid http or https URL")
+      )
       .default([]),
     last_verified: z
       .string()
@@ -80,14 +91,18 @@ export const SegmentPropertiesSchema = z
       .regex(/^\d{4}-\d{2}-\d{2}$/, "Format must be YYYY-MM-DD")
       .optional(),
     completion_unconfirmed: z.boolean().default(false).optional(),
-    geometry_quality: z.enum(["exact", "schematic"]).default("exact").optional(),
+    geometry_quality: z
+      .enum(["exact", "schematic"])
+      .default("exact")
+      .optional(),
   })
   .superRefine((data, ctx) => {
     if (data.status === "operational") {
       if (data.geometry_quality === "schematic") {
         ctx.addIssue({
           code: z.ZodIssueCode.custom,
-          message: "Operational segment must not have geometry_quality: 'schematic'",
+          message:
+            "Operational segment must not have geometry_quality: 'schematic'",
           path: ["geometry_quality"],
         });
       }
@@ -101,7 +116,8 @@ export const SegmentPropertiesSchema = z
       if (data.expected_completion !== null) {
         ctx.addIssue({
           code: z.ZodIssueCode.custom,
-          message: "expected_completion must be null when status is 'operational'",
+          message:
+            "expected_completion must be null when status is 'operational'",
           path: ["expected_completion"],
         });
       }
@@ -109,7 +125,8 @@ export const SegmentPropertiesSchema = z
       if (!data.expected_completion && !data.completion_unconfirmed) {
         ctx.addIssue({
           code: z.ZodIssueCode.custom,
-          message: "expected_completion is required when status is 'construction' unless completion_unconfirmed is true",
+          message:
+            "expected_completion is required when status is 'construction' unless completion_unconfirmed is true",
           path: ["expected_completion"],
         });
       }
@@ -153,7 +170,7 @@ export const SegmentFeatureSchema = z.object({
       .array(
         z.tuple([
           z.number().min(-180).max(180), // lng
-          z.number().min(-90).max(90),   // lat
+          z.number().min(-90).max(90), // lat
         ])
       )
       .min(2, "LineString must have at least 2 coordinate points"),
@@ -166,7 +183,9 @@ export const SegmentFeatureCollectionSchema = z.object({
   type: z.literal("FeatureCollection"),
   features: z.array(SegmentFeatureSchema),
 });
-export type SegmentFeatureCollection = z.infer<typeof SegmentFeatureCollectionSchema>;
+export type SegmentFeatureCollection = z.infer<
+  typeof SegmentFeatureCollectionSchema
+>;
 
 export const StationPropertiesSchema = z
   .object({
@@ -187,7 +206,8 @@ export const StationPropertiesSchema = z
       .string()
       .regex(/^(\d{4}-\d{2}|\d{4})$/, "Format must be YYYY-MM or YYYY")
       .nullable(),
-    layout: LayoutSchema,
+    layout: LayoutSchema.nullable(),
+    layout_source: z.enum(["operator", "osm-tag", "unverified"]).optional(),
     source: z.string().min(1, "source is required"),
     last_verified: z
       .string()
@@ -204,7 +224,8 @@ export const StationPropertiesSchema = z
       if (data.expected_completion !== null) {
         ctx.addIssue({
           code: z.ZodIssueCode.custom,
-          message: "expected_completion must be null when status is 'operational'",
+          message:
+            "expected_completion must be null when status is 'operational'",
           path: ["expected_completion"],
         });
       }
@@ -212,7 +233,8 @@ export const StationPropertiesSchema = z
       if (!data.expected_completion && !data.completion_unconfirmed) {
         ctx.addIssue({
           code: z.ZodIssueCode.custom,
-          message: "expected_completion is required when status is 'construction' unless completion_unconfirmed is true",
+          message:
+            "expected_completion is required when status is 'construction' unless completion_unconfirmed is true",
           path: ["expected_completion"],
         });
       }
@@ -241,7 +263,7 @@ export const StationFeatureSchema = z.object({
     type: z.literal("Point"),
     coordinates: z.tuple([
       z.number().min(-180).max(180), // lng
-      z.number().min(-90).max(90),   // lat
+      z.number().min(-90).max(90), // lat
     ]),
   }),
   properties: StationPropertiesSchema,
@@ -252,4 +274,6 @@ export const StationFeatureCollectionSchema = z.object({
   type: z.literal("FeatureCollection"),
   features: z.array(StationFeatureSchema),
 });
-export type StationFeatureCollection = z.infer<typeof StationFeatureCollectionSchema>;
+export type StationFeatureCollection = z.infer<
+  typeof StationFeatureCollectionSchema
+>;

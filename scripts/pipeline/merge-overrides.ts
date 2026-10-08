@@ -6,7 +6,12 @@ import {
   haversineDistanceKm,
   haversineDistanceM,
 } from "../../lib/geo";
-import { slugify, type NormalizedCityData, type NormalizedSegment, type NormalizedStation } from "./normalize";
+import {
+  slugify,
+  type NormalizedCityData,
+  type NormalizedSegment,
+  type NormalizedStation,
+} from "./normalize";
 import type { SegmentFeature, StationFeature } from "../../types/metro";
 
 export interface CityOverrideData {
@@ -56,14 +61,14 @@ export interface CityOverrideData {
       opened_on?: string | null;
       expected_completion?: string | null;
       is_interchange?: boolean;
-      layout?: "underground" | "elevated" | "at-grade";
+      layout?: "underground" | "elevated" | "at-grade" | null;
       last_verified?: string;
+      coordinates?: [number, number];
     }
   >;
   out_of_scope_station_ids?: string[];
   out_of_scope_line_ids?: string[];
 }
-
 
 export function mergeCityOverrides(
   normalized: NormalizedCityData,
@@ -81,7 +86,9 @@ export function mergeCityOverrides(
 
   // Map lines by line_id for operator lookup
   const lineById = new Map<string, { operator: string; name: string }>();
-  overrides.lines.forEach((l) => lineById.set(l.id, { operator: l.operator, name: l.name }));
+  overrides.lines.forEach((l) =>
+    lineById.set(l.id, { operator: l.operator, name: l.name })
+  );
 
   // 1. First pass: Collect initial segment geometry candidates
   interface IntermediateSegment {
@@ -106,7 +113,8 @@ export function mergeCityOverrides(
       isOsmSourced = false;
     }
 
-    const geometryQuality: "exact" | "schematic" = segOverride.geometry_quality || "exact";
+    const geometryQuality: "exact" | "schematic" =
+      segOverride.geometry_quality || "exact";
 
     intermediateSegments.push({
       segOverride,
@@ -154,7 +162,13 @@ export function mergeCityOverrides(
           ? "blr"
           : overrides.city.id === "mumbai"
             ? "mum"
-            : overrides.city.id;
+            : overrides.city.id === "gurugram"
+              ? "gur"
+              : overrides.city.id === "noida"
+                ? "noi"
+                : overrides.city.id === "navi-mumbai"
+                  ? "nmm"
+                  : overrides.city.id;
     const baseSlug = `${prefix}-${slugify(resolvedName)}`;
     let stationId = baseSlug;
 
@@ -177,10 +191,13 @@ export function mergeCityOverrides(
         s.baseName.toLowerCase() === resolvedName.toLowerCase() ||
         s.baseName.toLowerCase() === rawName.toLowerCase();
       const aliasMatch =
-        aliasMap.get(s.baseName.toLowerCase())?.toLowerCase() === resolvedName.toLowerCase();
+        aliasMap.get(s.baseName.toLowerCase())?.toLowerCase() ===
+        resolvedName.toLowerCase();
       const sharedInterchangeTag = Boolean(
-        (station.tags?.interchange === "yes" || station.tags?.public_transport === "stop_area") &&
-          (s.tags?.interchange === "yes" || s.tags?.public_transport === "stop_area")
+        (station.tags?.interchange === "yes" ||
+          station.tags?.public_transport === "stop_area") &&
+        (s.tags?.interchange === "yes" ||
+          s.tags?.public_transport === "stop_area")
       );
 
       return sameName || aliasMatch || sharedInterchangeTag;
@@ -199,6 +216,9 @@ export function mergeCityOverrides(
     let counter = 1;
     while (seenStationIds.has(stationId)) {
       stationId = `${baseSlug}-${++counter}`;
+    }
+    if (outOfScopeList.has(stationId)) {
+      continue;
     }
     seenStationIds.add(stationId);
 
@@ -223,7 +243,8 @@ export function mergeCityOverrides(
     assignedLineIds: string[];
     assignedPhase: string;
     assignedStatus: "operational" | "construction" | "planned";
-    layout: "underground" | "elevated" | "at-grade";
+    layout: "underground" | "elevated" | "at-grade" | null;
+    layoutSource: "operator" | "osm-tag" | "unverified";
     openedOn: string | null;
     expectedCompletion: string | null;
     lastVerified: string | null;
@@ -232,11 +253,14 @@ export function mergeCityOverrides(
   for (const st of deduplicatedStations) {
     const lineIdsSet = new Set<string>();
     let assignedPhase = overrides.city.phases[0];
-    let assignedStatus: "operational" | "construction" | "planned" = "operational";
+    let assignedStatus: "operational" | "construction" | "planned" =
+      "operational";
 
     // Tier 1: OSM route relation membership
     for (const relRef of st.lineRefs) {
-      const segMatch = overrides.segments.find((s) => s.osmId === Number(relRef));
+      const segMatch = overrides.segments.find(
+        (s) => s.osmId === Number(relRef)
+      );
       if (segMatch) {
         lineIdsSet.add(segMatch.line_id);
       }
@@ -271,18 +295,36 @@ export function mergeCityOverrides(
 
     if (st.status && st.status !== "operational") {
       assignedStatus = st.status;
-    } else if (st.tags?.railway === "construction" || st.tags?.proposed || st.tags?.railway === "proposed") {
-      assignedStatus = st.tags.railway === "construction" ? "construction" : "planned";
+    } else if (
+      st.tags?.railway === "construction" ||
+      st.tags?.proposed ||
+      st.tags?.railway === "proposed"
+    ) {
+      assignedStatus =
+        st.tags.railway === "construction" ? "construction" : "planned";
     }
 
     // Layout
     const tags = st.tags || {};
-    const isUnderground =
+    let layout: "underground" | "elevated" | "at-grade" | null = null;
+    let layoutSource: "operator" | "osm-tag" | "unverified" = "unverified";
+
+    if (
       tags.tunnel === "yes" ||
       tags.location === "underground" ||
       tags.layer === "-1" ||
-      tags.layer === "-2";
-    const layout = isUnderground ? "underground" : "elevated";
+      tags.layer === "-2"
+    ) {
+      layout = "underground";
+      layoutSource = "osm-tag";
+    } else if (
+      tags.bridge === "yes" ||
+      tags.layer === "1" ||
+      tags.layer === "2"
+    ) {
+      layout = "elevated";
+      layoutSource = "osm-tag";
+    }
 
     // Dates & verification
     let openedOn: string | null = null;
@@ -307,10 +349,24 @@ export function mergeCityOverrides(
         override.line_ids.forEach((id) => lineIdsSet.add(id));
       }
       if (override.phase) assignedPhase = override.phase;
-      if (override.status) assignedStatus = override.status;
+      if (override.status) {
+        assignedStatus = override.status;
+        if (
+          assignedStatus === "operational" &&
+          override.expected_completion === undefined
+        ) {
+          expectedCompletion = null;
+        }
+      }
       if (override.opened_on !== undefined) openedOn = override.opened_on;
-      if (override.expected_completion !== undefined) expectedCompletion = override.expected_completion;
+      if (override.expected_completion !== undefined)
+        expectedCompletion = override.expected_completion;
+      if (override.layout !== undefined) {
+        layout = override.layout;
+        layoutSource = override.layout ? "operator" : "unverified";
+      }
       if (override.last_verified) lastVerified = override.last_verified;
+      if (override.coordinates) st.coords = override.coordinates;
     }
 
     stationsWithLines.push({
@@ -319,6 +375,7 @@ export function mergeCityOverrides(
       assignedPhase,
       assignedStatus,
       layout,
+      layoutSource,
       openedOn,
       expectedCompletion,
       lastVerified,
@@ -367,7 +424,9 @@ export function mergeCityOverrides(
     const coords = iseg.coords;
 
     if (!coords || coords.length < 2) {
-      console.warn(`⚠️ Segment ${segOverride.segment_id} has no valid coordinates. Skipping.`);
+      console.warn(
+        `⚠️ Segment ${segOverride.segment_id} has no valid coordinates. Skipping.`
+      );
       continue;
     }
 
@@ -435,9 +494,13 @@ export function mergeCityOverrides(
         phase: segOverride.phase,
         length_km: lengthKm,
         gauge: segOverride.gauge,
-        inaugurated_on: segOverride.status === "operational" ? segOverride.inaugurated_on : null,
+        inaugurated_on:
+          segOverride.status === "operational"
+            ? segOverride.inaugurated_on
+            : null,
         expected_completion:
-          segOverride.status === "construction" || segOverride.status === "planned"
+          segOverride.status === "construction" ||
+          segOverride.status === "planned"
             ? segOverride.expected_completion
             : null,
         stations_count: stationsCount,
@@ -484,6 +547,7 @@ export function mergeCityOverrides(
         opened_on: sw.openedOn,
         expected_completion: sw.expectedCompletion,
         layout: sw.layout,
+        layout_source: sw.layoutSource,
         source: "osm",
         last_verified: sw.lastVerified,
         retrieved_at: retrievedAt,

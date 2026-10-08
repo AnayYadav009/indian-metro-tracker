@@ -197,7 +197,9 @@ function isSelfIntersecting(coords: [number, number][]): boolean {
     for (let j = i + 2; j < coords.length - 1; j++) {
       // Skip adjacent segments
       if (j === i + 1) continue;
-      if (segmentsIntersect(coords[i], coords[i + 1], coords[j], coords[j + 1])) {
+      if (
+        segmentsIntersect(coords[i], coords[i + 1], coords[j], coords[j + 1])
+      ) {
         return true;
       }
     }
@@ -271,9 +273,10 @@ export function runAudit(
   }
 ): AuditResult {
   const cfg = AUDIT_THRESHOLDS;
-  const today =
-    options?.currentDate || new Date().toISOString().slice(0, 10);
-  const selfIntersectExempt = new Set(options?.selfIntersectionExemptions || []);
+  const today = options?.currentDate || new Date().toISOString().slice(0, 10);
+  const selfIntersectExempt = new Set(
+    options?.selfIntersectionExemptions || []
+  );
   const intentionalBreaks = new Set(options?.intentionalBreaks || []);
   const outOfScopeStations = options?.outOfScopeStations || {};
   const outOfScopeLineIds = new Set(options?.outOfScopeLineIds || []);
@@ -454,27 +457,51 @@ export function runAudit(
   const allIds = new Map<string, string>(); // id → entity type
   for (const c of cities) {
     if (allIds.has(c.id)) {
-      add(c.id, "id-unique", "error", c.id, `Duplicate ID '${c.id}' (city vs ${allIds.get(c.id)})`);
+      add(
+        c.id,
+        "id-unique",
+        "error",
+        c.id,
+        `Duplicate ID '${c.id}' (city vs ${allIds.get(c.id)})`
+      );
     }
     allIds.set(c.id, "city");
   }
   for (const l of lines) {
     if (allIds.has(l.id)) {
-      add(l.city_id, "id-unique", "error", l.id, `Duplicate ID '${l.id}' (line vs ${allIds.get(l.id)})`);
+      add(
+        l.city_id,
+        "id-unique",
+        "error",
+        l.id,
+        `Duplicate ID '${l.id}' (line vs ${allIds.get(l.id)})`
+      );
     }
     allIds.set(l.id, "line");
   }
   for (const seg of segments.features) {
     const sid = seg.properties.segment_id;
     if (allIds.has(sid)) {
-      add(seg.properties.city_id, "id-unique", "error", sid, `Duplicate ID '${sid}' (segment vs ${allIds.get(sid)})`);
+      add(
+        seg.properties.city_id,
+        "id-unique",
+        "error",
+        sid,
+        `Duplicate ID '${sid}' (segment vs ${allIds.get(sid)})`
+      );
     }
     allIds.set(sid, "segment");
   }
   for (const st of stations.features) {
     const sid = st.properties.station_id;
     if (allIds.has(sid)) {
-      add(st.properties.city_id, "id-unique", "error", sid, `Duplicate ID '${sid}' (station vs ${allIds.get(sid)})`);
+      add(
+        st.properties.city_id,
+        "id-unique",
+        "error",
+        sid,
+        `Duplicate ID '${sid}' (station vs ${allIds.get(sid)})`
+      );
     }
     allIds.set(sid, "station");
   }
@@ -482,26 +509,56 @@ export function runAudit(
   // A2: Foreign keys
   for (const l of lines) {
     if (!cityById.has(l.city_id)) {
-      add(l.city_id, "fk-resolve", "error", l.id, `Line '${l.id}' references unknown city_id '${l.city_id}'`);
+      add(
+        l.city_id,
+        "fk-resolve",
+        "error",
+        l.id,
+        `Line '${l.id}' references unknown city_id '${l.city_id}'`
+      );
     }
   }
   for (const seg of segments.features) {
     const p = seg.properties;
     if (!cityById.has(p.city_id)) {
-      add(p.city_id, "fk-resolve", "error", p.segment_id, `Segment references unknown city_id '${p.city_id}'`);
+      add(
+        p.city_id,
+        "fk-resolve",
+        "error",
+        p.segment_id,
+        `Segment references unknown city_id '${p.city_id}'`
+      );
     }
     if (!lineById.has(p.line_id)) {
-      add(p.city_id, "fk-resolve", "error", p.segment_id, `Segment references unknown line_id '${p.line_id}'`);
+      add(
+        p.city_id,
+        "fk-resolve",
+        "error",
+        p.segment_id,
+        `Segment references unknown line_id '${p.line_id}'`
+      );
     }
   }
   for (const st of stations.features) {
     const p = st.properties;
     if (!cityById.has(p.city_id)) {
-      add(p.city_id, "fk-resolve", "error", p.station_id, `Station references unknown city_id '${p.city_id}'`);
+      add(
+        p.city_id,
+        "fk-resolve",
+        "error",
+        p.station_id,
+        `Station references unknown city_id '${p.city_id}'`
+      );
     }
     for (const lineId of p.line_ids) {
       if (!lineById.has(lineId)) {
-        add(p.city_id, "fk-resolve", "error", p.station_id, `Station references unknown line_id '${lineId}'`);
+        add(
+          p.city_id,
+          "fk-resolve",
+          "error",
+          p.station_id,
+          `Station references unknown line_id '${lineId}'`
+        );
       }
     }
   }
@@ -516,8 +573,13 @@ export function runAudit(
         lat < cfg.indiaEnvelope.minLat ||
         lat > cfg.indiaEnvelope.maxLat
       ) {
-        add(p.city_id, "coords-india-envelope", "error", p.segment_id,
-          `Coordinate [${lng}, ${lat}] outside India envelope`);
+        add(
+          p.city_id,
+          "coords-india-envelope",
+          "error",
+          p.segment_id,
+          `Coordinate [${lng}, ${lat}] outside India envelope`
+        );
         break; // one finding per segment
       }
     }
@@ -531,8 +593,13 @@ export function runAudit(
       lat < cfg.indiaEnvelope.minLat ||
       lat > cfg.indiaEnvelope.maxLat
     ) {
-      add(p.city_id, "coords-india-envelope", "error", p.station_id,
-        `Coordinate [${lng}, ${lat}] outside India envelope`);
+      add(
+        p.city_id,
+        "coords-india-envelope",
+        "error",
+        p.station_id,
+        `Coordinate [${lng}, ${lat}] outside India envelope`
+      );
     }
   }
 
@@ -549,8 +616,13 @@ export function runAudit(
         lat < cMinLat - cfg.bboxMarginDeg ||
         lat > cMaxLat + cfg.bboxMarginDeg
       ) {
-        add(p.city_id, "coords-city-bbox", "warn", p.segment_id,
-          `Coordinate [${lng}, ${lat}] outside city bbox [${city.bbox.join(", ")}] ±${cfg.bboxMarginDeg}°`);
+        add(
+          p.city_id,
+          "coords-city-bbox",
+          "warn",
+          p.segment_id,
+          `Coordinate [${lng}, ${lat}] outside city bbox [${city.bbox.join(", ")}] ±${cfg.bboxMarginDeg}°`
+        );
         break; // one finding per segment
       }
     }
@@ -567,8 +639,13 @@ export function runAudit(
       lat < cMinLat - cfg.bboxMarginDeg ||
       lat > cMaxLat + cfg.bboxMarginDeg
     ) {
-      add(p.city_id, "coords-city-bbox", "warn", p.station_id,
-        `Coordinate [${lng}, ${lat}] outside city bbox [${city.bbox.join(", ")}] ±${cfg.bboxMarginDeg}°`);
+      add(
+        p.city_id,
+        "coords-city-bbox",
+        "warn",
+        p.station_id,
+        `Coordinate [${lng}, ${lat}] outside city bbox [${city.bbox.join(", ")}] ±${cfg.bboxMarginDeg}°`
+      );
     }
   }
 
@@ -577,7 +654,13 @@ export function runAudit(
     if (outOfScopeLineIds.has(ln.id)) continue; // explicitly declared as having no geometry yet
     const segs = segmentsByLineId.get(ln.id);
     if (!segs || segs.length === 0) {
-      add(ln.city_id, "line-no-segments", "error", ln.id, `Line has no segments`);
+      add(
+        ln.city_id,
+        "line-no-segments",
+        "error",
+        ln.id,
+        `Line has no segments`
+      );
     }
   }
   // Segment whose line does not exist (already covered in fk-resolve above)
@@ -604,12 +687,28 @@ export function runAudit(
         if (d < minDistAnyLineSeg) minDistAnyLineSeg = d;
       }
 
-      if (lineSegs.length > 0 && minDistThisLine > cfg.stationFarFromAllSegmentsM) {
-        add(p.city_id, "station-far-from-all-segments", "error", p.station_id,
-          `Station is ${Math.round(minDistThisLine)} m from nearest segment of line '${lineId}' (threshold: ${cfg.stationFarFromAllSegmentsM} m)`);
-      } else if (lineSegs.length > 0 && minDistThisLine > cfg.stationFarFromNearestSegmentM) {
-        add(p.city_id, "station-far-from-nearest-segment", "warn", p.station_id,
-          `Station is ${Math.round(minDistThisLine)} m from nearest segment of line '${lineId}' (threshold: ${cfg.stationFarFromNearestSegmentM} m)`);
+      if (
+        lineSegs.length > 0 &&
+        minDistThisLine > cfg.stationFarFromAllSegmentsM
+      ) {
+        add(
+          p.city_id,
+          "station-far-from-all-segments",
+          "error",
+          p.station_id,
+          `Station is ${Math.round(minDistThisLine)} m from nearest segment of line '${lineId}' (threshold: ${cfg.stationFarFromAllSegmentsM} m)`
+        );
+      } else if (
+        lineSegs.length > 0 &&
+        minDistThisLine > cfg.stationFarFromNearestSegmentM
+      ) {
+        add(
+          p.city_id,
+          "station-far-from-nearest-segment",
+          "warn",
+          p.station_id,
+          `Station is ${Math.round(minDistThisLine)} m from nearest segment of line '${lineId}' (threshold: ${cfg.stationFarFromNearestSegmentM} m)`
+        );
       }
     }
 
@@ -620,8 +719,13 @@ export function runAudit(
         (lid) => (segmentsByLineId.get(lid) || []).length > 0
       );
       if (!hasAnySegments && p.line_ids.length > 0) {
-        add(p.city_id, "station-orphan", "error", p.station_id,
-          `Station has no nearby segments (all its lines have no segments)`);
+        add(
+          p.city_id,
+          "station-orphan",
+          "error",
+          p.station_id,
+          `Station has no nearby segments (all its lines have no segments)`
+        );
       }
     }
   }
@@ -636,18 +740,25 @@ export function runAudit(
     if (lineStations.length === 0) continue;
 
     for (const label of ["start", "end"] as const) {
-      const endCoord = label === "start" ? coords[0] : coords[coords.length - 1];
+      const endCoord =
+        label === "start" ? coords[0] : coords[coords.length - 1];
       let minDist = Infinity;
       for (const st of lineStations) {
-        const d = haversineDistanceKm(
-          endCoord,
-          st.geometry.coordinates as [number, number]
-        ) * 1000;
+        const d =
+          haversineDistanceKm(
+            endCoord,
+            st.geometry.coordinates as [number, number]
+          ) * 1000;
         if (d < minDist) minDist = d;
       }
       if (minDist > cfg.segmentEndFarFromStationM) {
-        add(p.city_id, "segment-end-far-from-station", "warn", p.segment_id,
-          `Segment ${label} is ${Math.round(minDist)} m from nearest station of line '${p.line_id}' (threshold: ${cfg.segmentEndFarFromStationM} m)`);
+        add(
+          p.city_id,
+          "segment-end-far-from-station",
+          "warn",
+          p.segment_id,
+          `Segment ${label} is ${Math.round(minDist)} m from nearest station of line '${p.line_id}' (threshold: ${cfg.segmentEndFarFromStationM} m)`
+        );
       }
     }
   }
@@ -690,10 +801,17 @@ export function runAudit(
           // Check if this pair is marked as an intentional break
           const breakKey = `${sorted[i].properties.segment_id}|${sorted[j].properties.segment_id}`;
           const breakKeyRev = `${sorted[j].properties.segment_id}|${sorted[i].properties.segment_id}`;
-          if (!intentionalBreaks.has(breakKey) && !intentionalBreaks.has(breakKeyRev)) {
-            add(cityId, "consecutive-segment-gap", "warn",
+          if (
+            !intentionalBreaks.has(breakKey) &&
+            !intentionalBreaks.has(breakKeyRev)
+          ) {
+            add(
+              cityId,
+              "consecutive-segment-gap",
+              "warn",
               `${sorted[i].properties.segment_id}|${sorted[j].properties.segment_id}`,
-              `Segments of line '${lineId}' have nearest endpoint gap of ${Math.round(minDist)} m (threshold: ${cfg.consecutiveSegmentGapM} m)`);
+              `Segments of line '${lineId}' have nearest endpoint gap of ${Math.round(minDist)} m (threshold: ${cfg.consecutiveSegmentGapM} m)`
+            );
           }
         }
       }
@@ -721,7 +839,10 @@ export function runAudit(
 
         const lengthAKm = calculateLineStringLengthKm(coordsA);
         const lengthAM = lengthAKm * 1000;
-        const numSamples = Math.max(2, Math.ceil(lengthAM / cfg.overlapSampleIntervalM));
+        const numSamples = Math.max(
+          2,
+          Math.ceil(lengthAM / cfg.overlapSampleIntervalM)
+        );
 
         let closeCount = 0;
         for (let s = 0; s <= numSamples; s++) {
@@ -733,9 +854,13 @@ export function runAudit(
 
         const sharedM = (closeCount / (numSamples + 1)) * lengthAM;
         if (sharedM > cfg.overlapMinSharedM) {
-          add(cityId, "segment-overlap", "error",
+          add(
+            cityId,
+            "segment-overlap",
+            "error",
             `${segA.properties.segment_id}|${segB.properties.segment_id}`,
-            `Segments overlap for ~${Math.round(sharedM)} m (threshold: ${cfg.overlapMinSharedM} m)`);
+            `Segments overlap for ~${Math.round(sharedM)} m (threshold: ${cfg.overlapMinSharedM} m)`
+          );
         }
       }
     }
@@ -748,17 +873,35 @@ export function runAudit(
 
     const lengthKm = calculateLineStringLengthKm(coords);
     if (lengthKm === 0 || coords.length < 2) {
-      add(p.city_id, "segment-zero-length", "error", p.segment_id,
-        `Segment has zero length`);
+      add(
+        p.city_id,
+        "segment-zero-length",
+        "error",
+        p.segment_id,
+        `Segment has zero length`
+      );
     }
 
     if (coords.length >= 4 && isSelfIntersecting(coords)) {
-      if (selfIntersectExempt.has(p.segment_id) || selfIntersectExempt.has(p.line_id)) {
-        add(p.city_id, "segment-self-intersecting", "info", p.segment_id,
-          `Segment is self-intersecting (exempted — loop line)`);
+      if (
+        selfIntersectExempt.has(p.segment_id) ||
+        selfIntersectExempt.has(p.line_id)
+      ) {
+        add(
+          p.city_id,
+          "segment-self-intersecting",
+          "info",
+          p.segment_id,
+          `Segment is self-intersecting (exempted — loop line)`
+        );
       } else {
-        add(p.city_id, "segment-self-intersecting", "warn", p.segment_id,
-          `Segment is self-intersecting`);
+        add(
+          p.city_id,
+          "segment-self-intersecting",
+          "warn",
+          p.segment_id,
+          `Segment is self-intersecting`
+        );
       }
     }
   }
@@ -777,11 +920,21 @@ export function runAudit(
     const diff = Math.abs(computedKm - officialKm) / officialKm;
 
     if (diff > cfg.lengthMismatchErrorPct) {
-      add(p.city_id, "length-mismatch", "error", p.segment_id,
-        `Computed length ${computedKm.toFixed(2)} km vs official ${officialKm} km (${(diff * 100).toFixed(1)}%, threshold: ${(cfg.lengthMismatchErrorPct * 100)}%)`);
+      add(
+        p.city_id,
+        "length-mismatch",
+        "error",
+        p.segment_id,
+        `Computed length ${computedKm.toFixed(2)} km vs official ${officialKm} km (${(diff * 100).toFixed(1)}%, threshold: ${cfg.lengthMismatchErrorPct * 100}%)`
+      );
     } else if (diff > cfg.lengthMismatchWarnPct) {
-      add(p.city_id, "length-mismatch", "warn", p.segment_id,
-        `Computed length ${computedKm.toFixed(2)} km vs official ${officialKm} km (${(diff * 100).toFixed(1)}%, threshold: ${(cfg.lengthMismatchWarnPct * 100)}%)`);
+      add(
+        p.city_id,
+        "length-mismatch",
+        "warn",
+        p.segment_id,
+        `Computed length ${computedKm.toFixed(2)} km vs official ${officialKm} km (${(diff * 100).toFixed(1)}%, threshold: ${cfg.lengthMismatchWarnPct * 100}%)`
+      );
     }
   }
 
@@ -789,8 +942,13 @@ export function runAudit(
   for (const seg of segments.features) {
     const p = seg.properties;
     if (p.status === "operational" && p.geometry_quality === "schematic") {
-      add(p.city_id, "segment-schematic-operational", "error", p.segment_id,
-        `Operational segment has geometry_quality: 'schematic' (operational segments must not be schematic)`);
+      add(
+        p.city_id,
+        "segment-schematic-operational",
+        "error",
+        p.segment_id,
+        `Operational segment has geometry_quality: 'schematic' (operational segments must not be schematic)`
+      );
     }
   }
 
@@ -821,21 +979,43 @@ export function runAudit(
     if (
       p.status === "operational" &&
       (stationSegStatuses.has("operational") ||
-        (stationSegStatuses.has("operational") && stationSegStatuses.has("construction")))
+        (stationSegStatuses.has("operational") &&
+          stationSegStatuses.has("construction")))
     ) {
       // OK
-    } else if (p.status === "operational" && !stationSegStatuses.has("operational")) {
+    } else if (
+      p.status === "operational" &&
+      !stationSegStatuses.has("operational")
+    ) {
       // Station is operational but no operational segments nearby
-      add(p.city_id, "station-status-mismatch", "error", p.station_id,
-        `Station status is 'operational' but nearby segments are: [${[...stationSegStatuses].sort().join(", ")}]`);
-    } else if (p.status === "construction" && !stationSegStatuses.has("construction")) {
+      add(
+        p.city_id,
+        "station-status-mismatch",
+        "error",
+        p.station_id,
+        `Station status is 'operational' but nearby segments are: [${[...stationSegStatuses].sort().join(", ")}]`
+      );
+    } else if (
+      p.status === "construction" &&
+      !stationSegStatuses.has("construction")
+    ) {
       if (!stationSegStatuses.has("operational")) {
-        add(p.city_id, "station-status-mismatch", "error", p.station_id,
-          `Station status is 'construction' but nearby segments are: [${[...stationSegStatuses].sort().join(", ")}]`);
+        add(
+          p.city_id,
+          "station-status-mismatch",
+          "error",
+          p.station_id,
+          `Station status is 'construction' but nearby segments are: [${[...stationSegStatuses].sort().join(", ")}]`
+        );
       }
     } else if (p.status === "planned" && !stationSegStatuses.has("planned")) {
-      add(p.city_id, "station-status-mismatch", "error", p.station_id,
-        `Station status is 'planned' but nearby segments are: [${[...stationSegStatuses].sort().join(", ")}]`);
+      add(
+        p.city_id,
+        "station-status-mismatch",
+        "error",
+        p.station_id,
+        `Station status is 'planned' but nearby segments are: [${[...stationSegStatuses].sort().join(", ")}]`
+      );
     }
   }
 
@@ -858,8 +1038,13 @@ export function runAudit(
     }
 
     if (segPhases.size > 0 && !segPhases.has(p.phase)) {
-      add(p.city_id, "station-phase-mismatch", "error", p.station_id,
-        `Station phase '${p.phase}' not among nearby segment phases: [${[...segPhases].sort().join(", ")}]`);
+      add(
+        p.city_id,
+        "station-phase-mismatch",
+        "error",
+        p.station_id,
+        `Station phase '${p.phase}' not among nearby segment phases: [${[...segPhases].sort().join(", ")}]`
+      );
     }
   }
 
@@ -878,8 +1063,13 @@ export function runAudit(
         );
         if (dist < cfg.stationFarFromAllSegmentsM) {
           if (p.opened_on < seg.properties.inaugurated_on) {
-            add(p.city_id, "station-opened-before-segment", "warn", p.station_id,
-              `Station opened_on '${p.opened_on}' is before segment '${seg.properties.segment_id}' inaugurated_on '${seg.properties.inaugurated_on}'`);
+            add(
+              p.city_id,
+              "station-opened-before-segment",
+              "warn",
+              p.station_id,
+              `Station opened_on '${p.opened_on}' is before segment '${seg.properties.segment_id}' inaugurated_on '${seg.properties.inaugurated_on}'`
+            );
           }
         }
       }
@@ -890,12 +1080,25 @@ export function runAudit(
   for (const seg of segments.features) {
     const p = seg.properties;
     if (p.status === "operational" && !p.inaugurated_on) {
-      add(p.city_id, "segment-date-consistency", "error", p.segment_id,
-        `Operational segment has null inaugurated_on`);
+      add(
+        p.city_id,
+        "segment-date-consistency",
+        "error",
+        p.segment_id,
+        `Operational segment has null inaugurated_on`
+      );
     }
-    if ((p.status === "construction" || p.status === "planned") && p.inaugurated_on) {
-      add(p.city_id, "segment-date-consistency", "error", p.segment_id,
-        `${p.status} segment has inaugurated_on '${p.inaugurated_on}' (should be null)`);
+    if (
+      (p.status === "construction" || p.status === "planned") &&
+      p.inaugurated_on
+    ) {
+      add(
+        p.city_id,
+        "segment-date-consistency",
+        "error",
+        p.segment_id,
+        `${p.status} segment has inaugurated_on '${p.inaugurated_on}' (should be null)`
+      );
     }
   }
 
@@ -917,8 +1120,13 @@ export function runAudit(
     }
 
     if (p.stations_count !== nearbyCount) {
-      add(p.city_id, "stations-count-mismatch", "error", p.segment_id,
-        `stations_count is ${p.stations_count} but ${nearbyCount} stations are near this segment`);
+      add(
+        p.city_id,
+        "stations-count-mismatch",
+        "error",
+        p.segment_id,
+        `stations_count is ${p.stations_count} but ${nearbyCount} stations are near this segment`
+      );
     }
   }
 
@@ -926,12 +1134,22 @@ export function runAudit(
   for (const st of stations.features) {
     const p = st.properties;
     if (p.is_interchange && p.line_ids.length <= 1) {
-      add(p.city_id, "interchange-consistency", "warn", p.station_id,
-        `is_interchange is true but station is on only ${p.line_ids.length} line(s)`);
+      add(
+        p.city_id,
+        "interchange-consistency",
+        "warn",
+        p.station_id,
+        `is_interchange is true but station is on only ${p.line_ids.length} line(s)`
+      );
     }
     if (!p.is_interchange && p.line_ids.length > 1) {
-      add(p.city_id, "interchange-consistency", "warn", p.station_id,
-        `is_interchange is false but station is on ${p.line_ids.length} lines`);
+      add(
+        p.city_id,
+        "interchange-consistency",
+        "warn",
+        p.station_id,
+        `is_interchange is false but station is on ${p.line_ids.length} lines`
+      );
     }
   }
 
@@ -940,16 +1158,26 @@ export function runAudit(
     const p = seg.properties;
     const city = cityById.get(p.city_id);
     if (city && !city.phases.includes(p.phase)) {
-      add(p.city_id, "phase-invalid", "error", p.segment_id,
-        `Phase '${p.phase}' not in city phases [${city.phases.join(", ")}]`);
+      add(
+        p.city_id,
+        "phase-invalid",
+        "error",
+        p.segment_id,
+        `Phase '${p.phase}' not in city phases [${city.phases.join(", ")}]`
+      );
     }
   }
   for (const st of stations.features) {
     const p = st.properties;
     const city = cityById.get(p.city_id);
     if (city && !city.phases.includes(p.phase)) {
-      add(p.city_id, "phase-invalid", "error", p.station_id,
-        `Phase '${p.phase}' not in city phases [${city.phases.join(", ")}]`);
+      add(
+        p.city_id,
+        "phase-invalid",
+        "error",
+        p.station_id,
+        `Phase '${p.phase}' not in city phases [${city.phases.join(", ")}]`
+      );
     }
   }
 
@@ -958,8 +1186,13 @@ export function runAudit(
     const p = seg.properties;
     const line = lineById.get(p.line_id);
     if (line && p.operator !== line.operator) {
-      add(p.city_id, "segment-operator-mismatch", "error", p.segment_id,
-        `Segment operator '${p.operator}' differs from line operator '${line.operator}'`);
+      add(
+        p.city_id,
+        "segment-operator-mismatch",
+        "error",
+        p.segment_id,
+        `Segment operator '${p.operator}' differs from line operator '${line.operator}'`
+      );
     }
   }
 
@@ -975,9 +1208,13 @@ export function runAudit(
     }
     for (const [norm, ids] of nameMap.entries()) {
       if (ids.length > 1) {
-        add(city.id, "duplicate-station-name", "warn",
+        add(
+          city.id,
+          "duplicate-station-name",
+          "warn",
           ids.sort().join("|"),
-          `Duplicate normalized station name '${norm}': [${ids.sort().join(", ")}]`);
+          `Duplicate normalized station name '${norm}': [${ids.sort().join(", ")}]`
+        );
       }
     }
   }
@@ -1008,8 +1245,13 @@ export function runAudit(
     }
 
     if (issues.length > 0) {
-      add(p.city_id, "station-name-quality", "warn", p.station_id,
-        `Station name '${name}': ${issues.join(", ")}`);
+      add(
+        p.city_id,
+        "station-name-quality",
+        "warn",
+        p.station_id,
+        `Station name '${name}': ${issues.join(", ")}`
+      );
     }
   }
 
@@ -1025,9 +1267,13 @@ export function runAudit(
     }
     for (const [color, ids] of colorMap.entries()) {
       if (ids.length > 1) {
-        add(city.id, "duplicate-line-color", "warn",
+        add(
+          city.id,
+          "duplicate-line-color",
+          "warn",
           ids.sort().join("|"),
-          `Lines share colour ${color}: [${ids.sort().join(", ")}]`);
+          `Lines share colour ${color}: [${ids.sort().join(", ")}]`
+        );
       }
     }
   }
@@ -1046,12 +1292,18 @@ export function runAudit(
       // YYYY-MM format
       const [year, month] = p.expected_completion.split("-");
       const lastDay = new Date(Number(year), Number(month), 0).getDate();
-      isPast = `${p.expected_completion}-${String(lastDay).padStart(2, "0")}` < today;
+      isPast =
+        `${p.expected_completion}-${String(lastDay).padStart(2, "0")}` < today;
     }
 
     if (isPast) {
-      add(p.city_id, "stale-expected-completion", "warn", p.segment_id,
-        `expected_completion '${p.expected_completion}' is in the past without completion_unconfirmed`);
+      add(
+        p.city_id,
+        "stale-expected-completion",
+        "warn",
+        p.segment_id,
+        `expected_completion '${p.expected_completion}' is in the past without completion_unconfirmed`
+      );
     }
   }
 
@@ -1063,30 +1315,58 @@ export function runAudit(
   for (const seg of segments.features) {
     const p = seg.properties;
     if (p.source.toLowerCase().includes("manual") && !p.last_verified) {
-      add(p.city_id, "stale-last-verified", "warn", p.segment_id,
-        `Manual segment has no last_verified date`);
+      add(
+        p.city_id,
+        "stale-last-verified",
+        "warn",
+        p.segment_id,
+        `Manual segment has no last_verified date`
+      );
     } else if (p.last_verified && p.last_verified < staleDateStr) {
-      add(p.city_id, "stale-last-verified", "warn", p.segment_id,
-        `last_verified '${p.last_verified}' is older than ${cfg.staleVerifiedMonths} months`);
+      add(
+        p.city_id,
+        "stale-last-verified",
+        "warn",
+        p.segment_id,
+        `last_verified '${p.last_verified}' is older than ${cfg.staleVerifiedMonths} months`
+      );
     }
   }
   for (const st of stations.features) {
     const p = st.properties;
     if (p.source.toLowerCase().includes("manual") && !p.last_verified) {
-      add(p.city_id, "stale-last-verified", "warn", p.station_id,
-        `Manual station has no last_verified date`);
+      add(
+        p.city_id,
+        "stale-last-verified",
+        "warn",
+        p.station_id,
+        `Manual station has no last_verified date`
+      );
     } else if (p.last_verified && p.last_verified < staleDateStr) {
-      add(p.city_id, "stale-last-verified", "warn", p.station_id,
-        `last_verified '${p.last_verified}' is older than ${cfg.staleVerifiedMonths} months`);
+      add(
+        p.city_id,
+        "stale-last-verified",
+        "warn",
+        p.station_id,
+        `last_verified '${p.last_verified}' is older than ${cfg.staleVerifiedMonths} months`
+      );
     }
   }
 
   // C14: Operational record with no reference
   for (const seg of segments.features) {
     const p = seg.properties;
-    if (p.status === "operational" && (!p.references || p.references.length === 0)) {
-      add(p.city_id, "operational-no-reference", "warn", p.segment_id,
-        `Operational segment has no references`);
+    if (
+      p.status === "operational" &&
+      (!p.references || p.references.length === 0)
+    ) {
+      add(
+        p.city_id,
+        "operational-no-reference",
+        "warn",
+        p.segment_id,
+        `Operational segment has no references`
+      );
     }
   }
 
@@ -1095,19 +1375,44 @@ export function runAudit(
     const p = st.properties;
     const cityExcluded = outOfScopeStations[p.city_id] || [];
     if (cityExcluded.includes(p.station_id)) {
-      add(p.city_id, "out-of-scope-station", "error", p.station_id,
-        `Station '${p.station_id}' (${p.name}) is marked out of scope but is present in active data`);
+      add(
+        p.city_id,
+        "out-of-scope-station",
+        "error",
+        p.station_id,
+        `Station '${p.station_id}' (${p.name}) is marked out of scope but is present in active data`
+      );
+    }
+  }
+
+  // C16: Layout unverified or suspect default
+  for (const st of stations.features) {
+    const p = st.properties;
+    if (p.layout === null || p.layout_source === "unverified") {
+      add(
+        p.city_id,
+        "layout/suspect-default-elevated",
+        "warn",
+        p.station_id,
+        `Station has unverified layout (requires operator station list verification)`
+      );
     }
   }
 
   // ── D. Ground truth comparison ───────────────────────────────────────────
 
-  const refDir = options?.referenceDir || path.resolve(process.cwd(), "data/reference");
+  const refDir =
+    options?.referenceDir || path.resolve(process.cwd(), "data/reference");
   for (const city of cities) {
     const refPath = path.join(refDir, `${city.id}.json`);
     if (!fs.existsSync(refPath)) {
-      add(city.id, "ground-truth-missing", "info", city.id,
-        `No reference file found at ${path.basename(refPath)}`);
+      add(
+        city.id,
+        "ground-truth-missing",
+        "info",
+        city.id,
+        `No reference file found at ${path.basename(refPath)}`
+      );
       continue;
     }
 
@@ -1115,8 +1420,13 @@ export function runAudit(
     try {
       refData = JSON.parse(fs.readFileSync(refPath, "utf-8"));
     } catch {
-      add(city.id, "ground-truth-parse-error", "error", city.id,
-        `Failed to parse reference file ${path.basename(refPath)}`);
+      add(
+        city.id,
+        "ground-truth-parse-error",
+        "error",
+        city.id,
+        `Failed to parse reference file ${path.basename(refPath)}`
+      );
       continue;
     }
 
@@ -1130,8 +1440,13 @@ export function runAudit(
 
       // D4: Line missing from data
       if (!lineById.has(refLine.line_id)) {
-        add(city.id, "ground-truth-line-missing", "error", refLine.line_id,
-          `Line '${refLine.line_id}' in reference but not in data`);
+        add(
+          city.id,
+          "ground-truth-line-missing",
+          "error",
+          refLine.line_id,
+          `Line '${refLine.line_id}' in reference but not in data`
+        );
         continue;
       }
 
@@ -1141,38 +1456,67 @@ export function runAudit(
         const isUnverified = refLine.confidence === "unverified";
         const sev: Severity = isUnverified ? "warn" : "error";
         const label = isUnverified ? " (unverified reference)" : "";
-        add(city.id, "line-operator-matches-reference", sev, refLine.line_id,
-          `Line operator: data has '${dataLine.operator}', reference has '${refLine.operator}'${label}`);
+        add(
+          city.id,
+          "line-operator-matches-reference",
+          sev,
+          refLine.line_id,
+          `Line operator: data has '${dataLine.operator}', reference has '${refLine.operator}'${label}`
+        );
       }
 
       // D1: Operational station count per line
       if (refLine.operational_stations != null) {
-        const lineStations = (stationsByLineId.get(refLine.line_id) || [])
-          .filter((s) => s.properties.status === "operational");
+        const lineStations = (
+          stationsByLineId.get(refLine.line_id) || []
+        ).filter((s) => s.properties.status === "operational");
         if (lineStations.length !== refLine.operational_stations) {
           const isUnverified = refLine.confidence === "unverified";
           const sev: Severity = isUnverified ? "warn" : "error";
           const label = isUnverified ? " (unverified reference)" : "";
-          add(city.id, "ground-truth-station-count", sev, refLine.line_id,
-            `Operational station count: data has ${lineStations.length}, reference has ${refLine.operational_stations}${label}`);
+          add(
+            city.id,
+            "ground-truth-station-count",
+            sev,
+            refLine.line_id,
+            `Operational station count: data has ${lineStations.length}, reference has ${refLine.operational_stations}${label}`
+          );
         }
       }
 
       // Reference topology check: loops have no terminals; loop_with_branch, linear, and branched must declare terminals
       if (refLine.topology === "loop") {
         if (refLine.terminals && refLine.terminals.length > 0) {
-          add(city.id, "reference-self-check", "error", refLine.line_id,
-            `Line '${refLine.line_id}' has topology 'loop' and must have empty terminals`);
+          add(
+            city.id,
+            "reference-self-check",
+            "error",
+            refLine.line_id,
+            `Line '${refLine.line_id}' has topology 'loop' and must have empty terminals`
+          );
         }
       } else if (refLine.topology === "loop_with_branch") {
         if (!refLine.terminals || refLine.terminals.length === 0) {
-          add(city.id, "reference-self-check", "error", refLine.line_id,
-            `Line '${refLine.line_id}' with topology 'loop_with_branch' must declare branch terminal station(s)`);
+          add(
+            city.id,
+            "reference-self-check",
+            "error",
+            refLine.line_id,
+            `Line '${refLine.line_id}' with topology 'loop_with_branch' must declare branch terminal station(s)`
+          );
         }
-      } else if (refLine.operational_stations && refLine.operational_stations > 0) {
+      } else if (
+        refLine.operational_stations &&
+        refLine.operational_stations > 0
+      ) {
         if (!refLine.terminals || refLine.terminals.length === 0) {
-          add(city.id, "reference-self-check", "error", refLine.line_id,
-            `Operational line '${refLine.line_id}' with topology '${refLine.topology || "linear"}' must declare terminal stations`);
+          add(
+            city.id,
+            "reference-self-check",
+            "error",
+            refLine.line_id,
+            `Operational line '${refLine.line_id}' with topology '${refLine.topology || "linear"}' must declare terminal stations`
+          );
         }
       }
 
@@ -1187,8 +1531,13 @@ export function runAudit(
             const isUnverified = refLine.confidence === "unverified";
             const sev: Severity = isUnverified ? "warn" : "error";
             const label = isUnverified ? " (unverified reference)" : "";
-            add(city.id, "ground-truth-terminal-mismatch", sev, refLine.line_id,
-              `Terminal '${terminal}' from reference not found in data station names${label}`);
+            add(
+              city.id,
+              "ground-truth-terminal-mismatch",
+              sev,
+              refLine.line_id,
+              `Terminal '${terminal}' from reference not found in data station names${label}`
+            );
           }
         }
       }
@@ -1212,29 +1561,59 @@ export function runAudit(
             }
             lastDate = op.opened_on;
           }
-          if (op.source?.kind && !["official", "government", "news"].includes(op.source.kind)) {
-            add(city.id, "reference-self-check", "error", refLine.line_id,
-              `Opening stage '${op.stage}' has invalid source kind '${op.source.kind}'`);
+          if (
+            op.source?.kind &&
+            !["official", "government", "news"].includes(op.source.kind)
+          ) {
+            add(
+              city.id,
+              "reference-self-check",
+              "error",
+              refLine.line_id,
+              `Opening stage '${op.stage}' has invalid source kind '${op.source.kind}'`
+            );
           }
         }
 
         if (!dateOrderValid) {
-          add(city.id, "reference-self-check", "error", refLine.line_id,
-            `Openings for line '${refLine.line_id}' are not in chronological order`);
+          add(
+            city.id,
+            "reference-self-check",
+            "error",
+            refLine.line_id,
+            `Openings for line '${refLine.line_id}' are not in chronological order`
+          );
         }
 
         // Compare stage sums only when every stage has a non-null count; otherwise compare line totals
-        if (allStagesHaveCounts && refLine.operational_stations != null && runningTotal !== refLine.operational_stations) {
-          add(city.id, "reference-self-check", "error", refLine.line_id,
-            `Reference self-check: sum of stations_added (${runningTotal}) does not match operational_stations (${refLine.operational_stations})`);
+        if (
+          allStagesHaveCounts &&
+          refLine.operational_stations != null &&
+          runningTotal !== refLine.operational_stations
+        ) {
+          add(
+            city.id,
+            "reference-self-check",
+            "error",
+            refLine.line_id,
+            `Reference self-check: sum of stations_added (${runningTotal}) does not match operational_stations (${refLine.operational_stations})`
+          );
         }
       }
 
       if (refLine.construction && refLine.construction.length > 0) {
         for (const con of refLine.construction) {
-          if (con.source?.kind && !["official", "government", "news"].includes(con.source.kind)) {
-            add(city.id, "reference-self-check", "error", refLine.line_id,
-              `Construction stretch '${con.stretch}' has invalid source kind '${con.source.kind}'`);
+          if (
+            con.source?.kind &&
+            !["official", "government", "news"].includes(con.source.kind)
+          ) {
+            add(
+              city.id,
+              "reference-self-check",
+              "error",
+              refLine.line_id,
+              `Construction stretch '${con.stretch}' has invalid source kind '${con.source.kind}'`
+            );
           }
         }
       }
@@ -1252,11 +1631,18 @@ export function runAudit(
               seg.properties.inaugurated_on &&
               seg.properties.inaugurated_on !== refOpening.opened_on
             ) {
-              const isUnverified = refOpening.confidence === "unverified" || refLine.confidence === "unverified";
+              const isUnverified =
+                refOpening.confidence === "unverified" ||
+                refLine.confidence === "unverified";
               const sev: Severity = isUnverified ? "warn" : "error";
               const label = isUnverified ? " (unverified reference)" : "";
-              add(city.id, "ground-truth-phase-date", sev, seg.properties.segment_id,
-                `Phase '${refOpening.phase}' opened_on: data has '${seg.properties.inaugurated_on}', reference has '${refOpening.opened_on}'${label}`);
+              add(
+                city.id,
+                "ground-truth-phase-date",
+                sev,
+                seg.properties.segment_id,
+                `Phase '${refOpening.phase}' opened_on: data has '${seg.properties.inaugurated_on}', reference has '${refOpening.opened_on}'${label}`
+              );
             }
           }
         }
@@ -1277,15 +1663,18 @@ export function runAudit(
             ),
           0
         );
-        const diff =
-          Math.abs(totalKm - refLengthKm) /
-          refLengthKm;
+        const diff = Math.abs(totalKm - refLengthKm) / refLengthKm;
         if (diff > cfg.groundTruthLengthWarnPct) {
           const isUnverified = refLine.confidence === "unverified";
           const sev: Severity = isUnverified ? "warn" : "warn";
           const label = isUnverified ? " (unverified reference)" : "";
-          add(city.id, "ground-truth-length", sev, refLine.line_id,
-            `Operational length: computed ${totalKm.toFixed(2)} km vs reference ${refLengthKm} km (${(diff * 100).toFixed(1)}%)${label}`);
+          add(
+            city.id,
+            "ground-truth-length",
+            sev,
+            refLine.line_id,
+            `Operational length: computed ${totalKm.toFixed(2)} km vs reference ${refLengthKm} km (${(diff * 100).toFixed(1)}%)${label}`
+          );
         }
       }
     }
@@ -1293,8 +1682,13 @@ export function runAudit(
     // D4 reverse: Line missing from reference
     for (const dataLine of cityLines) {
       if (!refData.lines.find((rl) => rl.line_id === dataLine.id)) {
-        add(city.id, "ground-truth-line-missing", "error", dataLine.id,
-          `Line '${dataLine.id}' in data but not in reference`);
+        add(
+          city.id,
+          "ground-truth-line-missing",
+          "error",
+          dataLine.id,
+          `Line '${dataLine.id}' in data but not in reference`
+        );
       }
     }
   }
@@ -1305,7 +1699,7 @@ export function runAudit(
     const citySegs = segments.features.filter(
       (s) => s.properties.city_id === city.id
     );
-    const cityStns = (stationsByCityId.get(city.id) || []);
+    const cityStns = stationsByCityId.get(city.id) || [];
 
     const dateCounts = new Map<string, number>();
     for (const seg of citySegs) {
@@ -1322,8 +1716,13 @@ export function runAudit(
       .map(([date, count]) => `${date}: ${count}`)
       .join("; ");
 
-    add(city.id, "last-verified-distribution", "info", city.id,
-      `last_verified distribution: ${distribution}`);
+    add(
+      city.id,
+      "last-verified-distribution",
+      "info",
+      city.id,
+      `last_verified distribution: ${distribution}`
+    );
   }
 
   // ── Sort deterministically ───────────────────────────────────────────────
@@ -1350,4 +1749,3 @@ export {
   formatMarkdownReport,
   formatJsonReport,
 } from "./audit-formatters";
-

@@ -61,7 +61,18 @@ export function PhaseBadge({ phase }: { phase: string }) {
   );
 }
 
-export function LayoutBadge({ layout }: { layout: Layout }) {
+export function LayoutBadge({ layout }: { layout: Layout | null }) {
+  if (!layout) {
+    return (
+      <span
+        data-testid="layout-badge"
+        className="inline-flex items-center rounded-md border border-slate-700 bg-slate-800/80 px-2 py-0.5 text-xs font-medium text-slate-400"
+      >
+        Unverified
+      </span>
+    );
+  }
+
   const current = LAYOUT_DEFINITIONS[layout] || LAYOUT_DEFINITIONS.elevated;
 
   return (
