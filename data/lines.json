@@ -313,5 +313,32 @@
     "operator": "LTMRHL",
     "city_id": "hyderabad",
     "source": "osm+ltmrhl"
+  },
+  {
+    "id": "pun-purple",
+    "name": "Purple Line (Line 1)",
+    "city": "Pune",
+    "color": "#800080",
+    "operator": "Maha Metro",
+    "city_id": "pune",
+    "source": "osm+maha_metro"
+  },
+  {
+    "id": "pun-aqua",
+    "name": "Aqua Line (Line 2)",
+    "city": "Pune",
+    "color": "#00FFFF",
+    "operator": "Maha Metro",
+    "city_id": "pune",
+    "source": "osm+maha_metro"
+  },
+  {
+    "id": "pun-line-3",
+    "name": "Line 3 (Puneri Metro)",
+    "city": "Pune",
+    "color": "#FF69B4",
+    "operator": "Pune IT City Metro Rail Limited",
+    "city_id": "pune",
+    "source": "osm+pmrda"
   }
 ]

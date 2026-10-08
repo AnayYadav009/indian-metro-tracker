@@ -102,6 +102,23 @@
       "lineSources": {
         "osm+ltmrhl": 3
       }
+    },
+    {
+      "city_id": "pune",
+      "city_name": "Pune",
+      "lines": 3,
+      "segments": 2,
+      "stations": 29,
+      "segmentSources": {
+        "osm": 2
+      },
+      "stationSources": {
+        "osm": 29
+      },
+      "lineSources": {
+        "osm+maha_metro": 2,
+        "osm+pmrda": 1
+      }
     }
   ],
   "findings": [
@@ -1847,6 +1864,41 @@
       "severity": "info",
       "subject": "mumbai",
       "message": "last_verified distribution: 2026-10-06: 1; missing: 97"
+    },
+    {
+      "city_id": "pune",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "pun-aqua",
+      "message": "Operational length: computed 34.48 km vs reference 14.67 km (135.0%)"
+    },
+    {
+      "city_id": "pune",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "pun-purple",
+      "message": "Operational length: computed 36.82 km vs reference 16.59 km (122.0%)"
+    },
+    {
+      "city_id": "pune",
+      "rule": "last-verified-distribution",
+      "severity": "info",
+      "subject": "pune",
+      "message": "last_verified distribution: missing: 31"
+    },
+    {
+      "city_id": "pune",
+      "rule": "segment-self-intersecting",
+      "severity": "info",
+      "subject": "pun-aqua-seg-01",
+      "message": "Segment is self-intersecting (exempted — loop line)"
+    },
+    {
+      "city_id": "pune",
+      "rule": "segment-self-intersecting",
+      "severity": "info",
+      "subject": "pun-purple-seg-01",
+      "message": "Segment is self-intersecting (exempted — loop line)"
     }
   ]
 }
