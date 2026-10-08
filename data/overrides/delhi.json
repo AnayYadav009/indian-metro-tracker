@@ -97,15 +97,6 @@
       "operator": "DMRC",
       "city_id": "delhi",
       "source": "osm+dmrc"
-    },
-    {
-      "id": "del-silver",
-      "name": "Silver Line (Golden)",
-      "city": "Delhi",
-      "color": "#A0A0A0",
-      "operator": "DMRC",
-      "city_id": "delhi",
-      "source": "osm+dmrc"
     }
   ],
   "segments": [
@@ -289,9 +280,394 @@
   ],
   "dedupeRadiusM": 350,
   "stationAliases": {
-    "Ramakrishna Ashram Marg": "R K Ashram Marg"
+    "Ramakrishna Ashram Marg": "R K Ashram Marg",
+    "Seva Teerth": "Udyog Bhawan"
   },
   "out_of_scope_line_ids": [
     "del-silver"
-  ]
+  ],
+  "out_of_scope_station_ids": [
+    "del-belvedere-towers",
+    "del-cyber-city",
+    "del-moulsari-avenue",
+    "del-phase-3",
+    "del-dlf-phase-2",
+    "del-sikanderpur-rmrg",
+    "del-dlf-phase-1",
+    "del-sector-42-43",
+    "del-sector-53-54",
+    "del-sector-54-chowk",
+    "del-sector-5556",
+    "Belvedere Towers",
+    "Cyber City",
+    "Moulsari Avenue",
+    "Phase 3",
+    "DLF Phase 2",
+    "Sikanderpur RMRG",
+    "DLF Phase 1",
+    "Sector 42-43",
+    "Sector 53-54",
+    "Sector 54 Chowk",
+    "Sector 55–56",
+    "del-noida-sector-44",
+    "del-noida-office",
+    "Noida Sector 44",
+    "Noida Office",
+    "del-new-delhi-airport-express-terminal",
+    "New Delhi Airport Express Terminal",
+    "del-kirti-nagar-2",
+    "del-ajmal-khan-park",
+    "del-ambedkar-nagar",
+    "del-anaj-mandi",
+    "del-anandamayee-marg",
+    "del-ashok-vihar",
+    "del-barwala",
+    "del-bawana",
+    "del-bawana-ind-area-i",
+    "del-bawana-ind-area-ii",
+    "del-bawana-jj-colony",
+    "del-daya-basti",
+    "del-derawal-nagar",
+    "del-district-court",
+    "del-dwarka-sector-28",
+    "del-ghanta-gharsabji-manti",
+    "del-greater-kailash-2",
+    "del-indra-gandhi-stadium",
+    "del-keshavpur",
+    "del-kishangarh",
+    "del-lado-sarai",
+    "del-lnjp-hospital",
+    "del-loni-border",
+    "del-mahipalpur",
+    "del-mangolpuri",
+    "del-mashoodpur",
+    "del-meerabagh",
+    "del-mehrauli",
+    "del-nabi-karim",
+    "del-narela",
+    "del-new-sanoth-colony",
+    "del-paschim-vihar",
+    "del-pushpanjali",
+    "del-puth-khurd",
+    "del-rajpura",
+    "del-sadar-bazar",
+    "del-saket-d-block",
+    "del-saket-g-block",
+    "del-sanoth",
+    "del-sarai-rohilla",
+    "del-sector-25-rohini",
+    "del-sector-26-rohini",
+    "del-sector-31-rohini",
+    "del-sector-32-rohini",
+    "del-sector-36-rohini",
+    "del-sector-37-rohini",
+    "del-sheikh-sarai",
+    "del-tigri",
+    "del-tughlakabad-railway-colony",
+    "del-vasantkunj-sector-d",
+    "del-west-enclave"
+  ],
+  "stationOverrides": {
+    "Azadpur": {
+      "status": "operational",
+      "layout": "elevated",
+      "references": [
+        "https://www.delhimetrorail.com/network_map"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Haiderpur Badli Mor": {
+      "status": "operational",
+      "layout": "elevated",
+      "references": [
+        "https://www.delhimetrorail.com/network_map"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Saket": {
+      "status": "operational",
+      "layout": "underground",
+      "references": [
+        "https://www.delhimetrorail.com/network_map"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Udyog Bhawan": {
+      "status": "operational",
+      "layout": "underground",
+      "references": [
+        "https://www.delhimetrorail.com/network_map"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "GTB Nagar": {
+      "layout": "underground",
+      "references": [
+        "https://www.delhimetrorail.com/network_map"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Vishwa Vidyalaya": {
+      "layout": "underground",
+      "references": [
+        "https://www.delhimetrorail.com/network_map"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Vidhan Sabha": {
+      "layout": "underground",
+      "references": [
+        "https://www.delhimetrorail.com/network_map"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Civil Lines": {
+      "layout": "underground",
+      "references": [
+        "https://www.delhimetrorail.com/network_map"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Kashmere Gate": {
+      "layout": "underground",
+      "references": [
+        "https://www.delhimetrorail.com/network_map"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Chandni Chowk": {
+      "layout": "underground",
+      "references": [
+        "https://www.delhimetrorail.com/network_map"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Chawri Bazaar": {
+      "layout": "underground",
+      "references": [
+        "https://www.delhimetrorail.com/network_map"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "New Delhi": {
+      "layout": "underground",
+      "references": [
+        "https://www.delhimetrorail.com/network_map"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Rajiv Chowk": {
+      "layout": "underground",
+      "references": [
+        "https://www.delhimetrorail.com/network_map"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Patel Chowk": {
+      "layout": "underground",
+      "references": [
+        "https://www.delhimetrorail.com/network_map"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Central Secretariat": {
+      "layout": "underground",
+      "references": [
+        "https://www.delhimetrorail.com/network_map"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Lok Kalyan Marg": {
+      "layout": "underground",
+      "references": [
+        "https://www.delhimetrorail.com/network_map"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Jor Bagh": {
+      "layout": "underground",
+      "references": [
+        "https://www.delhimetrorail.com/network_map"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Dilli Haat - INA": {
+      "layout": "underground",
+      "references": [
+        "https://www.delhimetrorail.com/network_map"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "A.I.I.M.S.": {
+      "layout": "underground",
+      "references": [
+        "https://www.delhimetrorail.com/network_map"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Green Park": {
+      "layout": "underground",
+      "references": [
+        "https://www.delhimetrorail.com/network_map"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Hauz Khas": {
+      "layout": "underground",
+      "references": [
+        "https://www.delhimetrorail.com/network_map"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Malviya Nagar": {
+      "layout": "underground",
+      "references": [
+        "https://www.delhimetrorail.com/network_map"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Lal Quila": {
+      "layout": "underground",
+      "references": [
+        "https://www.delhimetrorail.com/network_map"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Jama Masjid": {
+      "layout": "underground",
+      "references": [
+        "https://www.delhimetrorail.com/network_map"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Delhi Gate": {
+      "layout": "underground",
+      "coordinates": [
+        77.24078,
+        28.63922
+      ],
+      "references": [
+        "https://www.delhimetrorail.com/network_map"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "ITO": {
+      "layout": "underground",
+      "references": [
+        "https://www.delhimetrorail.com/network_map"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Mandi House": {
+      "layout": "underground",
+      "references": [
+        "https://www.delhimetrorail.com/network_map"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Janpath": {
+      "layout": "underground",
+      "references": [
+        "https://www.delhimetrorail.com/network_map"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Khan Market": {
+      "layout": "underground",
+      "references": [
+        "https://www.delhimetrorail.com/network_map"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Jawaharlal Nehru Stadium": {
+      "layout": "underground",
+      "references": [
+        "https://www.delhimetrorail.com/network_map"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Jangpura": {
+      "layout": "underground",
+      "references": [
+        "https://www.delhimetrorail.com/network_map"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Shivaji Stadium": {
+      "layout": "underground",
+      "references": [
+        "https://www.delhimetrorail.com/network_map"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Dhaula Kuan": {
+      "layout": "underground",
+      "references": [
+        "https://www.delhimetrorail.com/network_map"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Delhi Aerocity": {
+      "layout": "underground",
+      "references": [
+        "https://www.delhimetrorail.com/network_map"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Airport (T-3)": {
+      "layout": "underground",
+      "references": [
+        "https://www.delhimetrorail.com/network_map"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Yashobhoomi Dwarka Sector 25": {
+      "layout": "underground",
+      "references": [
+        "https://www.delhimetrorail.com/network_map"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Barakhamba Road": {
+      "layout": "underground",
+      "references": [
+        "https://www.delhimetrorail.com/network_map"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "R K Ashram Marg": {
+      "layout": "underground",
+      "references": [
+        "https://www.delhimetrorail.com/network_map"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Ramakrishna Ashram Marg": {
+      "layout": "underground",
+      "references": [
+        "https://www.delhimetrorail.com/network_map"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Indraprastha": {
+      "coordinates": [
+        77.24955,
+        28.6206
+      ]
+    },
+    "Najafgarh": {
+      "layout": "underground",
+      "references": [
+        "https://www.delhimetrorail.com/network_map"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Dhansa Bus Stand": {
+      "layout": "underground",
+      "references": [
+        "https://www.delhimetrorail.com/network_map"
+      ],
+      "last_verified": "2026-10-08"
+    }
+  }
 }

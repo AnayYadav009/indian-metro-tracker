@@ -149,21 +149,21 @@
       "openings": [
         {
           "stage": "Phase 1 (Aarey JVLR - BKC)",
-          "phase": null,
+          "phase": "1",
           "opened_on": "2024-10-07",
           "stations_added": 10,
           "confidence": "unverified"
         },
         {
           "stage": "Phase 2A (BKC - Acharya Atre Chowk / Worli)",
-          "phase": null,
+          "phase": "2A",
           "opened_on": "2025-05-10",
           "stations_added": 6,
           "confidence": "unverified"
         },
         {
           "stage": "Phase 2B / Final stretch (Acharya Atre Chowk - Cuffe Parade)",
-          "phase": null,
+          "phase": "2B",
           "opened_on": "2025-10-09",
           "stations_added": 11,
           "confidence": "unverified"

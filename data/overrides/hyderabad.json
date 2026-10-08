@@ -972,19 +972,493 @@
       "line_ids": [
         "hyd-red"
       ],
-      "is_interchange": false
+      "is_interchange": false,
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
     },
     "hyderabad-parade-ground": {
       "line_ids": [
         "hyd-blue"
       ],
-      "is_interchange": false
+      "is_interchange": false,
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
     },
     "hyderabad-jbs-parade-ground": {
       "line_ids": [
         "hyd-green"
       ],
-      "is_interchange": false
+      "is_interchange": false,
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Secunderabad West": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Begumpet": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Peddamma Gudi": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "HITEC City": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Madhura Nagar": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Madhapur": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Uppal": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Parade Ground": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Secunderabad East": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Mettuguda": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Stadium": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Raidurg": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Ameerpet": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Tarnaka": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Jubilee Hills Check Post": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Kukatpally": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Chaitanyapuri": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "New Market": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Erragadda": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Osmania Medical College": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Bharat Nagar": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Malakpet": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Assembly": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Gandhi Bhavan": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Victoria Memorial": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Dilsukhnagar": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Balanagar": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Errum Manzil": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "SR Nagar": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Nampally": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "MG Bus Station": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Punjagutta": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "ESI Hospital": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "LB Nagar": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Miyapur": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "JNTU College": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Moosapet": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Road No 5 Jubilee Hills": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Yousufguda": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Khairatabad": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Lakdi Ka Pul": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Nagole": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Durgam Cheruvu": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Musarambagh": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "KPHB Colony": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "NGRI": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Habsiguda": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Paradise": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Rasoolpura": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Prakash Nagar": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "JBS Parade Ground": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "RTC Cross Roads": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Sultan Bazar": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Narayanaguda": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Chikkadpally": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Musheerabad": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Gandhi Hospital": {
+      "layout": "elevated",
+      "references": [
+        "https://hmrl.co.in",
+        "https://ltmetro.com"
+      ],
+      "last_verified": "2026-10-08"
     }
   }
 }

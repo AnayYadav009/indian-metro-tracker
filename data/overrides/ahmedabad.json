@@ -135,5 +135,35 @@
     "Stadium": "SP Stadium",
     "PDPU": "PDEU"
   },
-  "selfIntersectionExemptions": []
+  "selfIntersectionExemptions": [],
+  "stationOverrides": {
+    "Kankaria East": {
+      "layout": "underground",
+      "references": [
+        "https://www.gujaratmetrorail.com/"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Kalupur Railway": {
+      "layout": "underground",
+      "references": [
+        "https://www.gujaratmetrorail.com/"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Gheekanta": {
+      "layout": "underground",
+      "references": [
+        "https://www.gujaratmetrorail.com/"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Shahpur": {
+      "layout": "underground",
+      "references": [
+        "https://www.gujaratmetrorail.com/"
+      ],
+      "last_verified": "2026-10-08"
+    }
+  }
 }

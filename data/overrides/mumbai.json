@@ -71,6 +71,15 @@
       "operator": "MMRDA",
       "city_id": "mumbai",
       "source": "osm+mmrda"
+    },
+    {
+      "id": "mum-line-9",
+      "name": "Line 9 (Red Line Ext)",
+      "city": "Mumbai",
+      "color": "#D32F2F",
+      "operator": "MMMOCL",
+      "city_id": "mumbai",
+      "source": "osm+mmrda"
     }
   ],
   "segments": [
@@ -114,19 +123,6 @@
       "city_id": "mumbai"
     },
     {
-      "osmId": 7898597,
-      "segment_id": "mum-line-3-seg-01",
-      "line_id": "mum-line-3",
-      "line_name": "Line 3 Aqua (Aarey JVLR - BKC)",
-      "phase": "3",
-      "status": "operational",
-      "gauge": "standard",
-      "inaugurated_on": "2024-10-07",
-      "expected_completion": null,
-      "color": "#00A3E0",
-      "city_id": "mumbai"
-    },
-    {
       "osmId": 7898732,
       "segment_id": "mum-line-4-seg-01",
       "line_id": "mum-line-4",
@@ -138,7 +134,9 @@
       "expected_completion": null,
       "completion_unconfirmed": true,
       "color": "#00B140",
-      "references": ["https://mmrda.maharashtra.gov.in/"],
+      "references": [
+        "https://mmrda.maharashtra.gov.in/"
+      ],
       "city_id": "mumbai"
     },
     {
@@ -153,7 +151,9 @@
       "expected_completion": null,
       "completion_unconfirmed": true,
       "color": "#FFC72C",
-      "references": ["https://mmrda.maharashtra.gov.in/"],
+      "references": [
+        "https://mmrda.maharashtra.gov.in/"
+      ],
       "city_id": "mumbai"
     },
     {
@@ -167,7 +167,9 @@
       "expected_completion": null,
       "completion_unconfirmed": true,
       "color": "#00B140",
-      "references": ["https://mmrda.maharashtra.gov.in/"],
+      "references": [
+        "https://mmrda.maharashtra.gov.in/"
+      ],
       "last_verified": "2026-10-06",
       "coordinates": [
         [
@@ -182,6 +184,1199 @@
           72.9582,
           19.3145
         ]
+      ],
+      "city_id": "mumbai"
+    },
+    {
+      "segment_id": "mum-line-3-seg-01",
+      "line_id": "mum-line-3",
+      "line_name": "Line 3 Aqua (Aarey JVLR - BKC)",
+      "phase": "1",
+      "status": "operational",
+      "gauge": "standard",
+      "inaugurated_on": "2024-10-07",
+      "expected_completion": null,
+      "color": "#00A3E0",
+      "city_id": "mumbai",
+      "references": [
+        "https://mmrcl.com",
+        "https://www.thehindu.com"
+      ],
+      "coordinates": [
+        [
+          72.8842,
+          19.13105
+        ],
+        [
+          72.87907,
+          19.13165
+        ],
+        [
+          72.87878,
+          19.13165
+        ],
+        [
+          72.87856,
+          19.13163
+        ],
+        [
+          72.87835,
+          19.13159
+        ],
+        [
+          72.87816,
+          19.13153
+        ],
+        [
+          72.87788,
+          19.13143
+        ],
+        [
+          72.87769,
+          19.13133
+        ],
+        [
+          72.87743,
+          19.13115
+        ],
+        [
+          72.87719,
+          19.13094
+        ],
+        [
+          72.87704,
+          19.13078
+        ],
+        [
+          72.87445,
+          19.12693
+        ],
+        [
+          72.87327,
+          19.12529
+        ],
+        [
+          72.87291,
+          19.12479
+        ],
+        [
+          72.8725,
+          19.12431
+        ],
+        [
+          72.87152,
+          19.12303
+        ],
+        [
+          72.87077,
+          19.1221
+        ],
+        [
+          72.87068,
+          19.1217
+        ],
+        [
+          72.87061,
+          19.121
+        ],
+        [
+          72.87038,
+          19.11964
+        ],
+        [
+          72.87037,
+          19.11944
+        ],
+        [
+          72.87044,
+          19.11913
+        ],
+        [
+          72.8705,
+          19.11899
+        ],
+        [
+          72.8706,
+          19.11882
+        ],
+        [
+          72.87069,
+          19.1187
+        ],
+        [
+          72.87113,
+          19.11832
+        ],
+        [
+          72.87174,
+          19.118
+        ],
+        [
+          72.87232,
+          19.11777
+        ],
+        [
+          72.87276,
+          19.11765
+        ],
+        [
+          72.87327,
+          19.11751
+        ],
+        [
+          72.87421,
+          19.11729
+        ],
+        [
+          72.87462,
+          19.11719
+        ],
+        [
+          72.87507,
+          19.11709
+        ],
+        [
+          72.87586,
+          19.11687
+        ],
+        [
+          72.87645,
+          19.11662
+        ],
+        [
+          72.87677,
+          19.11636
+        ],
+        [
+          72.87709,
+          19.11594
+        ],
+        [
+          72.87735,
+          19.11536
+        ],
+        [
+          72.87744,
+          19.11487
+        ],
+        [
+          72.87752,
+          19.11346
+        ],
+        [
+          72.87756,
+          19.11304
+        ],
+        [
+          72.87767,
+          19.11258
+        ],
+        [
+          72.8778,
+          19.1122
+        ],
+        [
+          72.87813,
+          19.1114
+        ],
+        [
+          72.87833,
+          19.11097
+        ],
+        [
+          72.87842,
+          19.11053
+        ],
+        [
+          72.87852,
+          19.10988
+        ],
+        [
+          72.87854,
+          19.10975
+        ],
+        [
+          72.87861,
+          19.10907
+        ],
+        [
+          72.87869,
+          19.10828
+        ],
+        [
+          72.87872,
+          19.10743
+        ],
+        [
+          72.87871,
+          19.10695
+        ],
+        [
+          72.87864,
+          19.10648
+        ],
+        [
+          72.87855,
+          19.10605
+        ],
+        [
+          72.87829,
+          19.10506
+        ],
+        [
+          72.87813,
+          19.10453
+        ],
+        [
+          72.87765,
+          19.10364
+        ],
+        [
+          72.87743,
+          19.10333
+        ],
+        [
+          72.87733,
+          19.10315
+        ],
+        [
+          72.87698,
+          19.10269
+        ],
+        [
+          72.87691,
+          19.10262
+        ],
+        [
+          72.87683,
+          19.10255
+        ],
+        [
+          72.87676,
+          19.10249
+        ],
+        [
+          72.87667,
+          19.10244
+        ],
+        [
+          72.87658,
+          19.10239
+        ],
+        [
+          72.87649,
+          19.10234
+        ],
+        [
+          72.87639,
+          19.1023
+        ],
+        [
+          72.87629,
+          19.10226
+        ],
+        [
+          72.87619,
+          19.10223
+        ],
+        [
+          72.87608,
+          19.10221
+        ],
+        [
+          72.87597,
+          19.1022
+        ],
+        [
+          72.87367,
+          19.10216
+        ],
+        [
+          72.87179,
+          19.10213
+        ],
+        [
+          72.87162,
+          19.10213
+        ],
+        [
+          72.87136,
+          19.10213
+        ],
+        [
+          72.87127,
+          19.10213
+        ],
+        [
+          72.87124,
+          19.10213
+        ],
+        [
+          72.86683,
+          19.10209
+        ],
+        [
+          72.86544,
+          19.10206
+        ],
+        [
+          72.86471,
+          19.10206
+        ],
+        [
+          72.86401,
+          19.10204
+        ],
+        [
+          72.86333,
+          19.10207
+        ],
+        [
+          72.86287,
+          19.10207
+        ],
+        [
+          72.86198,
+          19.1019
+        ],
+        [
+          72.85938,
+          19.10092
+        ],
+        [
+          72.85786,
+          19.10011
+        ],
+        [
+          72.85732,
+          19.10001
+        ],
+        [
+          72.85683,
+          19.0997
+        ],
+        [
+          72.85658,
+          19.09944
+        ],
+        [
+          72.85639,
+          19.09902
+        ],
+        [
+          72.85639,
+          19.09879
+        ],
+        [
+          72.85659,
+          19.09795
+        ],
+        [
+          72.85713,
+          19.09666
+        ],
+        [
+          72.85718,
+          19.09616
+        ],
+        [
+          72.85714,
+          19.09587
+        ],
+        [
+          72.857,
+          19.09554
+        ],
+        [
+          72.85625,
+          19.09501
+        ],
+        [
+          72.85308,
+          19.09362
+        ],
+        [
+          72.85255,
+          19.09339
+        ],
+        [
+          72.85146,
+          19.09296
+        ],
+        [
+          72.85023,
+          19.09239
+        ],
+        [
+          72.84899,
+          19.09139
+        ],
+        [
+          72.84788,
+          19.08941
+        ],
+        [
+          72.84786,
+          19.08937
+        ],
+        [
+          72.84708,
+          19.08737
+        ],
+        [
+          72.84697,
+          19.08676
+        ],
+        [
+          72.84707,
+          19.08471
+        ],
+        [
+          72.84709,
+          19.08416
+        ],
+        [
+          72.84716,
+          19.08276
+        ],
+        [
+          72.84717,
+          19.07997
+        ],
+        [
+          72.84714,
+          19.07874
+        ],
+        [
+          72.84712,
+          19.07776
+        ],
+        [
+          72.84705,
+          19.07486
+        ],
+        [
+          72.84744,
+          19.07341
+        ],
+        [
+          72.84984,
+          19.06931
+        ],
+        [
+          72.8506,
+          19.06793
+        ],
+        [
+          72.85214,
+          19.06503
+        ],
+        [
+          72.85382,
+          19.06216
+        ],
+        [
+          72.85496,
+          19.06023
+        ]
+      ],
+      "last_verified": "2026-10-08"
+    },
+    {
+      "segment_id": "mum-line-3-seg-02",
+      "line_id": "mum-line-3",
+      "line_name": "Line 3 Aqua (BKC - Acharya Atre Chowk)",
+      "phase": "2A",
+      "status": "operational",
+      "gauge": "standard",
+      "inaugurated_on": "2025-05-10",
+      "expected_completion": null,
+      "color": "#00A3E0",
+      "city_id": "mumbai",
+      "references": [
+        "https://mmrcl.com",
+        "https://www.thehindu.com"
+      ],
+      "coordinates": [
+        [
+          72.85496,
+          19.06023
+        ],
+        [
+          72.85609,
+          19.05833
+        ],
+        [
+          72.85658,
+          19.05665
+        ],
+        [
+          72.85653,
+          19.05443
+        ],
+        [
+          72.85601,
+          19.0521
+        ],
+        [
+          72.85505,
+          19.05043
+        ],
+        [
+          72.85456,
+          19.0494
+        ],
+        [
+          72.85391,
+          19.0486
+        ],
+        [
+          72.85224,
+          19.04714
+        ],
+        [
+          72.85148,
+          19.04668
+        ],
+        [
+          72.85111,
+          19.04654
+        ],
+        [
+          72.85007,
+          19.04632
+        ],
+        [
+          72.84942,
+          19.04615
+        ],
+        [
+          72.84658,
+          19.0455
+        ],
+        [
+          72.8452,
+          19.04527
+        ],
+        [
+          72.84389,
+          19.0451
+        ],
+        [
+          72.84304,
+          19.04472
+        ],
+        [
+          72.84231,
+          19.04383
+        ],
+        [
+          72.8417,
+          19.0425
+        ],
+        [
+          72.84149,
+          19.04086
+        ],
+        [
+          72.84154,
+          19.03986
+        ],
+        [
+          72.84181,
+          19.03903
+        ],
+        [
+          72.84204,
+          19.03832
+        ],
+        [
+          72.84225,
+          19.03733
+        ],
+        [
+          72.84237,
+          19.03611
+        ],
+        [
+          72.84233,
+          19.03468
+        ],
+        [
+          72.84218,
+          19.03227
+        ],
+        [
+          72.84195,
+          19.03109
+        ],
+        [
+          72.84152,
+          19.02914
+        ],
+        [
+          72.84077,
+          19.02562
+        ],
+        [
+          72.8405,
+          19.02509
+        ],
+        [
+          72.83905,
+          19.02335
+        ],
+        [
+          72.83841,
+          19.02263
+        ],
+        [
+          72.83756,
+          19.02155
+        ],
+        [
+          72.83659,
+          19.02004
+        ],
+        [
+          72.83608,
+          19.01898
+        ],
+        [
+          72.83523,
+          19.01719
+        ],
+        [
+          72.83444,
+          19.01609
+        ],
+        [
+          72.83372,
+          19.01566
+        ],
+        [
+          72.83259,
+          19.01549
+        ],
+        [
+          72.83133,
+          19.01576
+        ],
+        [
+          72.83056,
+          19.01596
+        ],
+        [
+          72.8293,
+          19.0163
+        ],
+        [
+          72.82859,
+          19.0163
+        ],
+        [
+          72.82805,
+          19.01599
+        ],
+        [
+          72.82723,
+          19.01539
+        ],
+        [
+          72.82564,
+          19.01434
+        ],
+        [
+          72.82399,
+          19.01324
+        ],
+        [
+          72.82348,
+          19.01292
+        ],
+        [
+          72.82213,
+          19.01223
+        ],
+        [
+          72.82141,
+          19.01173
+        ],
+        [
+          72.82083,
+          19.01119
+        ],
+        [
+          72.82036,
+          19.01048
+        ],
+        [
+          72.81977,
+          19.00943
+        ],
+        [
+          72.81929,
+          19.0086
+        ],
+        [
+          72.81853,
+          19.00727
+        ],
+        [
+          72.81676,
+          19.00443
+        ],
+        [
+          72.8166,
+          19.00417
+        ],
+        [
+          72.81629,
+          19.00369
+        ],
+        [
+          72.81606,
+          19.0031
+        ],
+        [
+          72.81606,
+          19.00305
+        ],
+        [
+          72.81605,
+          19.00258
+        ],
+        [
+          72.81657,
+          19.00041
+        ],
+        [
+          72.81774,
+          18.99783
+        ]
+      ],
+      "last_verified": "2026-10-08"
+    },
+    {
+      "segment_id": "mum-line-3-seg-03",
+      "line_id": "mum-line-3",
+      "line_name": "Line 3 Aqua (Acharya Atre Chowk - Cuffe Parade)",
+      "phase": "2B",
+      "status": "operational",
+      "gauge": "standard",
+      "inaugurated_on": "2025-10-09",
+      "expected_completion": null,
+      "color": "#00A3E0",
+      "city_id": "mumbai",
+      "references": [
+        "https://mmrcl.com",
+        "https://www.thehindu.com"
+      ],
+      "coordinates": [
+        [
+          72.81774,
+          18.99783
+        ],
+        [
+          72.8179,
+          18.99753
+        ],
+        [
+          72.81941,
+          18.99477
+        ],
+        [
+          72.82138,
+          18.9909
+        ],
+        [
+          72.8239,
+          18.98625
+        ],
+        [
+          72.8247,
+          18.98465
+        ],
+        [
+          72.82561,
+          18.98307
+        ],
+        [
+          72.82624,
+          18.98209
+        ],
+        [
+          72.82658,
+          18.98148
+        ],
+        [
+          72.8266,
+          18.98137
+        ],
+        [
+          72.82663,
+          18.98114
+        ],
+        [
+          72.82653,
+          18.98086
+        ],
+        [
+          72.82598,
+          18.98013
+        ],
+        [
+          72.82542,
+          18.97945
+        ],
+        [
+          72.82429,
+          18.97824
+        ],
+        [
+          72.82417,
+          18.97757
+        ],
+        [
+          72.82388,
+          18.9765
+        ],
+        [
+          72.82344,
+          18.97537
+        ],
+        [
+          72.82272,
+          18.97383
+        ],
+        [
+          72.82196,
+          18.97219
+        ],
+        [
+          72.82155,
+          18.97081
+        ],
+        [
+          72.82148,
+          18.97057
+        ],
+        [
+          72.8212,
+          18.96998
+        ],
+        [
+          72.82047,
+          18.96824
+        ],
+        [
+          72.81954,
+          18.96653
+        ],
+        [
+          72.81948,
+          18.96641
+        ],
+        [
+          72.81903,
+          18.96569
+        ],
+        [
+          72.81872,
+          18.96496
+        ],
+        [
+          72.81832,
+          18.96394
+        ],
+        [
+          72.81807,
+          18.96321
+        ],
+        [
+          72.81771,
+          18.96232
+        ],
+        [
+          72.81757,
+          18.96192
+        ],
+        [
+          72.81748,
+          18.9616
+        ],
+        [
+          72.81737,
+          18.96096
+        ],
+        [
+          72.81731,
+          18.96015
+        ],
+        [
+          72.8173,
+          18.96003
+        ],
+        [
+          72.81731,
+          18.95992
+        ],
+        [
+          72.81734,
+          18.95965
+        ],
+        [
+          72.81734,
+          18.95948
+        ],
+        [
+          72.81736,
+          18.95932
+        ],
+        [
+          72.81737,
+          18.95923
+        ],
+        [
+          72.81736,
+          18.95901
+        ],
+        [
+          72.81745,
+          18.95784
+        ],
+        [
+          72.8178,
+          18.95657
+        ],
+        [
+          72.81861,
+          18.95532
+        ],
+        [
+          72.82113,
+          18.95327
+        ],
+        [
+          72.82195,
+          18.95242
+        ],
+        [
+          72.82224,
+          18.95213
+        ],
+        [
+          72.82251,
+          18.95183
+        ],
+        [
+          72.82347,
+          18.95093
+        ],
+        [
+          72.8246,
+          18.94973
+        ],
+        [
+          72.82538,
+          18.94886
+        ],
+        [
+          72.82625,
+          18.94791
+        ],
+        [
+          72.82652,
+          18.9476
+        ],
+        [
+          72.82673,
+          18.94726
+        ],
+        [
+          72.8272,
+          18.94635
+        ],
+        [
+          72.82765,
+          18.94559
+        ],
+        [
+          72.82868,
+          18.94392
+        ],
+        [
+          72.82905,
+          18.94352
+        ],
+        [
+          72.83022,
+          18.94218
+        ],
+        [
+          72.83086,
+          18.94162
+        ],
+        [
+          72.8319,
+          18.94087
+        ],
+        [
+          72.83376,
+          18.93956
+        ],
+        [
+          72.83424,
+          18.93909
+        ],
+        [
+          72.83444,
+          18.93867
+        ],
+        [
+          72.83448,
+          18.93832
+        ],
+        [
+          72.83429,
+          18.93754
+        ],
+        [
+          72.83385,
+          18.93622
+        ],
+        [
+          72.83381,
+          18.93614
+        ],
+        [
+          72.8333,
+          18.93524
+        ],
+        [
+          72.83252,
+          18.93417
+        ],
+        [
+          72.83182,
+          18.9332
+        ],
+        [
+          72.83148,
+          18.93284
+        ],
+        [
+          72.83119,
+          18.93267
+        ],
+        [
+          72.8308,
+          18.93259
+        ],
+        [
+          72.83,
+          18.93268
+        ],
+        [
+          72.82882,
+          18.93285
+        ],
+        [
+          72.82838,
+          18.93277
+        ],
+        [
+          72.82806,
+          18.93254
+        ],
+        [
+          72.82769,
+          18.93227
+        ],
+        [
+          72.82696,
+          18.93148
+        ],
+        [
+          72.82554,
+          18.92973
+        ],
+        [
+          72.8255,
+          18.92967
+        ],
+        [
+          72.82548,
+          18.92965
+        ],
+        [
+          72.82513,
+          18.92923
+        ],
+        [
+          72.82476,
+          18.92824
+        ],
+        [
+          72.82487,
+          18.92733
+        ],
+        [
+          72.82526,
+          18.9255
+        ],
+        [
+          72.82555,
+          18.92481
+        ],
+        [
+          72.82641,
+          18.92293
+        ],
+        [
+          72.82649,
+          18.9218
+        ],
+        [
+          72.82589,
+          18.91951
+        ],
+        [
+          72.82554,
+          18.91887
+        ],
+        [
+          72.82452,
+          18.91763
+        ],
+        [
+          72.82315,
+          18.91636
+        ],
+        [
+          72.82075,
+          18.91354
+        ],
+        [
+          72.81894,
+          18.91145
+        ]
+      ],
+      "last_verified": "2026-10-08"
+    },
+    {
+      "osmId": 20403865,
+      "segment_id": "mum-line-9-seg-01",
+      "line_id": "mum-line-9",
+      "line_name": "Line 9 (Dahisar East - Kashigaon)",
+      "phase": "1",
+      "status": "operational",
+      "gauge": "standard",
+      "inaugurated_on": "2026-04-07",
+      "expected_completion": null,
+      "color": "#D32F2F",
+      "references": [
+        "https://mmrda.maharashtra.gov.in/"
       ],
       "city_id": "mumbai"
     }
@@ -202,6 +1397,368 @@
     "Dongripada": {
       "status": "construction",
       "expected_completion": "2028"
+    },
+    "Aarey JVLR": {
+      "layout": "at-grade",
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2024-10-07",
+      "last_verified": "2026-10-08",
+      "references": [
+        "https://mmrda.maharashtra.gov.in"
+      ]
+    },
+    "SEEPZ": {
+      "layout": "underground",
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2024-10-07",
+      "last_verified": "2026-10-08",
+      "references": [
+        "https://mmrda.maharashtra.gov.in"
+      ]
+    },
+    "MIDC - Andheri": {
+      "layout": "underground",
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2024-10-07",
+      "last_verified": "2026-10-08",
+      "references": [
+        "https://mmrda.maharashtra.gov.in"
+      ]
+    },
+    "Marol Naka": {
+      "layout": "underground",
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2024-10-07",
+      "last_verified": "2026-10-08",
+      "references": [
+        "https://mmrda.maharashtra.gov.in"
+      ]
+    },
+    "Chhatrapati Shivaji Maharaj International Airport - T2": {
+      "layout": "underground",
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2024-10-07",
+      "last_verified": "2026-10-08",
+      "references": [
+        "https://mmrda.maharashtra.gov.in"
+      ]
+    },
+    "Sahar Road": {
+      "layout": "underground",
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2024-10-07",
+      "last_verified": "2026-10-08",
+      "references": [
+        "https://mmrda.maharashtra.gov.in"
+      ]
+    },
+    "Chhatrapati Shivaji Maharaj International Airport - T1": {
+      "layout": "underground",
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2024-10-07",
+      "last_verified": "2026-10-08",
+      "references": [
+        "https://mmrda.maharashtra.gov.in"
+      ]
+    },
+    "Santacruz": {
+      "layout": "underground",
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2024-10-07",
+      "last_verified": "2026-10-08",
+      "references": [
+        "https://mmrda.maharashtra.gov.in"
+      ]
+    },
+    "Vidyanagari": {
+      "layout": "underground",
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2024-10-07",
+      "last_verified": "2026-10-08",
+      "references": [
+        "https://mmrda.maharashtra.gov.in"
+      ]
+    },
+    "Bandra Kurla Complex": {
+      "layout": "underground",
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2024-10-07",
+      "last_verified": "2026-10-08",
+      "references": [
+        "https://mmrda.maharashtra.gov.in"
+      ]
+    },
+    "Dharavi": {
+      "layout": "underground",
+      "phase": "2A",
+      "status": "operational",
+      "opened_on": "2025-05-10",
+      "last_verified": "2026-10-08",
+      "references": [
+        "https://mmrda.maharashtra.gov.in"
+      ]
+    },
+    "Shitala Devi Mandir": {
+      "layout": "underground",
+      "phase": "2A",
+      "status": "operational",
+      "opened_on": "2025-05-10",
+      "last_verified": "2026-10-08",
+      "references": [
+        "https://mmrda.maharashtra.gov.in"
+      ]
+    },
+    "Dadar": {
+      "layout": "underground",
+      "phase": "2A",
+      "status": "operational",
+      "opened_on": "2025-05-10",
+      "last_verified": "2026-10-08",
+      "references": [
+        "https://mmrda.maharashtra.gov.in"
+      ]
+    },
+    "Siddhivinayak Temple": {
+      "layout": "underground",
+      "phase": "2A",
+      "status": "operational",
+      "opened_on": "2025-05-10",
+      "last_verified": "2026-10-08",
+      "references": [
+        "https://mmrda.maharashtra.gov.in"
+      ]
+    },
+    "Worli": {
+      "layout": "underground",
+      "phase": "2A",
+      "status": "operational",
+      "opened_on": "2025-05-10",
+      "last_verified": "2026-10-08",
+      "references": [
+        "https://mmrda.maharashtra.gov.in"
+      ]
+    },
+    "Acharya Atre Chowk": {
+      "layout": "underground",
+      "phase": "2A",
+      "status": "operational",
+      "opened_on": "2025-05-10",
+      "last_verified": "2026-10-08",
+      "references": [
+        "https://mmrda.maharashtra.gov.in"
+      ]
+    },
+    "Science Museum": {
+      "layout": "underground",
+      "phase": "2B",
+      "status": "operational",
+      "opened_on": "2025-10-09",
+      "last_verified": "2026-10-08",
+      "references": [
+        "https://mmrda.maharashtra.gov.in"
+      ]
+    },
+    "Mahalaxmi": {
+      "layout": "underground",
+      "phase": "2B",
+      "status": "operational",
+      "opened_on": "2025-10-09",
+      "last_verified": "2026-10-08",
+      "references": [
+        "https://mmrda.maharashtra.gov.in"
+      ]
+    },
+    "Mumbai Central": {
+      "layout": "underground",
+      "phase": "2B",
+      "status": "operational",
+      "opened_on": "2025-10-09",
+      "last_verified": "2026-10-08",
+      "references": [
+        "https://mmrda.maharashtra.gov.in"
+      ]
+    },
+    "Grant Road": {
+      "layout": "underground",
+      "phase": "2B",
+      "status": "operational",
+      "opened_on": "2025-10-09",
+      "last_verified": "2026-10-08",
+      "references": [
+        "https://mmrda.maharashtra.gov.in"
+      ]
+    },
+    "Girgaon": {
+      "layout": "underground",
+      "phase": "2B",
+      "status": "operational",
+      "opened_on": "2025-10-09",
+      "last_verified": "2026-10-08",
+      "references": [
+        "https://mmrda.maharashtra.gov.in"
+      ]
+    },
+    "Kalbadevi": {
+      "layout": "underground",
+      "phase": "2B",
+      "status": "operational",
+      "opened_on": "2025-10-09",
+      "last_verified": "2026-10-08",
+      "references": [
+        "https://mmrda.maharashtra.gov.in"
+      ]
+    },
+    "Chhatrapati Shivaji Maharaj Terminus": {
+      "layout": "underground",
+      "phase": "2B",
+      "status": "operational",
+      "opened_on": "2025-10-09",
+      "last_verified": "2026-10-08",
+      "references": [
+        "https://mmrda.maharashtra.gov.in"
+      ]
+    },
+    "Hutatma Chowk": {
+      "layout": "underground",
+      "phase": "2B",
+      "status": "operational",
+      "opened_on": "2025-10-09",
+      "last_verified": "2026-10-08",
+      "references": [
+        "https://mmrda.maharashtra.gov.in"
+      ]
+    },
+    "Churchgate": {
+      "layout": "underground",
+      "phase": "2B",
+      "status": "operational",
+      "opened_on": "2025-10-09",
+      "last_verified": "2026-10-08",
+      "references": [
+        "https://mmrda.maharashtra.gov.in"
+      ]
+    },
+    "Vidhan Bhavan": {
+      "layout": "underground",
+      "phase": "2B",
+      "status": "operational",
+      "opened_on": "2025-10-09",
+      "last_verified": "2026-10-08",
+      "references": [
+        "https://mmrda.maharashtra.gov.in"
+      ]
+    },
+    "Cuffe Parade": {
+      "layout": "underground",
+      "phase": "2B",
+      "status": "operational",
+      "opened_on": "2025-10-09",
+      "last_verified": "2026-10-08",
+      "references": [
+        "https://mmrda.maharashtra.gov.in"
+      ]
+    },
+    "Dahisar East": {
+      "status": "operational",
+      "opened_on": "2022-04-02",
+      "layout": "elevated",
+      "references": [
+        "https://mmrda.maharashtra.gov.in"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Pandurang Wadi": {
+      "status": "operational",
+      "opened_on": "2026-04-07",
+      "phase": "1",
+      "layout": "elevated",
+      "line_ids": [
+        "mum-line-9"
+      ],
+      "references": [
+        "https://mmrda.maharashtra.gov.in"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Miragaon": {
+      "status": "operational",
+      "opened_on": "2026-04-07",
+      "phase": "1",
+      "layout": "elevated",
+      "line_ids": [
+        "mum-line-9"
+      ],
+      "references": [
+        "https://mmrda.maharashtra.gov.in"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Kashigaon": {
+      "status": "operational",
+      "opened_on": "2026-04-07",
+      "phase": "1",
+      "layout": "elevated",
+      "line_ids": [
+        "mum-line-9"
+      ],
+      "references": [
+        "https://mmrda.maharashtra.gov.in"
+      ],
+      "last_verified": "2026-10-08"
     }
+  },
+  "out_of_scope_station_ids": [
+    "mum-cbd-belapur",
+    "mum-rbi-colony",
+    "CBD Belapur",
+    "RBI Colony",
+    "Airport Colony",
+    "mum-airport-colony",
+    "mum-subhash-chandra-bose-ground",
+    "Subhash Chandra Bose Ground",
+    "mum-azad-nagar-bus-stop",
+    "Azad Nagar Bus Stop",
+    "mum-dr-kashinath-ghanekar-natyagruha",
+    "Dr. Kashinath Ghanekar Natyagruha",
+    "mum-ghandi-nagar",
+    "Ghandi Nagar",
+    "mum-lokmanya-nagar-bus-depot",
+    "Lokmanya Nagar Bus Depot",
+    "mum-manpada",
+    "Manpada",
+    "mum-neelkanth-terminal",
+    "Neelkanth Terminal",
+    "mum-patlipada",
+    "Patlipada",
+    "mum-shivai-nagar",
+    "Shivai Nagar",
+    "mum-vijay-nagari",
+    "Vijay Nagari",
+    "mum-waghbil",
+    "Waghbil",
+    "mum-wagle-circle",
+    "Wagle Circle",
+    "mum-waterfront",
+    "Waterfront",
+    "mum-shahid-bhagat-singh-garden",
+    "Shahid Bhagat Singh Garden"
+  ],
+  "stationAliases": {
+    "Science Centre": "Science Museum",
+    "Jagannath Shankar Sheth Metro": "Mumbai Central",
+    "Bandra Colony": "Vidyanagari",
+    "SBI-Dadar Metro": "Dadar",
+    "Dahisar (East) [Line 9]": "Dahisar East",
+    "Dahisar (East)": "Dahisar East"
   }
-}
+}

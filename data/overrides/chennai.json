@@ -103,12 +103,46 @@
       "status": "construction",
       "gauge": "standard",
       "inaugurated_on": null,
-      "expected_completion": "2026",
+      "expected_completion": "2026-12",
       "color": "#FFD100",
       "references": [
         "https://chennaimetrorail.org",
         "https://pib.gov.in/PressReleasePage.aspx?PRID=2061557"
       ]
+    },
+    {
+      "osmId": 12824257,
+      "segment_id": "che-corridor-3-seg-01",
+      "line_id": "che-corridor-3",
+      "line_name": "Purple Line (Madhavaram - SIPCOT)",
+      "phase": "2",
+      "status": "construction",
+      "gauge": "standard",
+      "inaugurated_on": null,
+      "expected_completion": "2027",
+      "color": "#702082",
+      "references": [
+        "https://chennaimetrorail.org",
+        "https://pib.gov.in/PressReleasePage.aspx?PRID=2061557"
+      ],
+      "city_id": "chennai"
+    },
+    {
+      "osmId": 12828618,
+      "segment_id": "che-corridor-5-seg-01",
+      "line_id": "che-corridor-5",
+      "line_name": "Red Line (Madhavaram - Sholinganallur)",
+      "phase": "2",
+      "status": "construction",
+      "gauge": "standard",
+      "inaugurated_on": null,
+      "expected_completion": "2027",
+      "color": "#ED1C24",
+      "references": [
+        "https://chennaimetrorail.org",
+        "https://pib.gov.in/PressReleasePage.aspx?PRID=2061557"
+      ],
+      "city_id": "chennai"
     }
   ],
   "interchangeStationNames": [
@@ -128,7 +162,304 @@
     "Egmore Metro": "Egmore",
     "St. Thomas Mount Metro": "St. Thomas Mount"
   },
-  "stationOverrides": {},
+  "stationOverrides": {
+    "Sir Theagaraya College": {
+      "layout": "underground",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Washermanpet": {
+      "layout": "underground",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Mannadi": {
+      "layout": "underground",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "High Court": {
+      "layout": "underground",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Chennai Central": {
+      "layout": "underground",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Government Estate": {
+      "layout": "underground",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "LIC": {
+      "layout": "underground",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Thousand Lights": {
+      "layout": "underground",
+      "line_ids": [
+        "che-blue"
+      ],
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "AG-DMS": {
+      "layout": "underground",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Teynampet": {
+      "layout": "underground",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Nandanam": {
+      "layout": "underground",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Saidapet": {
+      "layout": "underground",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Egmore": {
+      "layout": "underground",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Nehru Park": {
+      "layout": "underground",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Kilpauk": {
+      "layout": "underground",
+      "line_ids": [
+        "che-green"
+      ],
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Pachaiyappa's College": {
+      "layout": "underground",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Shenoy Nagar": {
+      "layout": "underground",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Anna Nagar East": {
+      "layout": "underground",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Anna Nagar Tower": {
+      "layout": "underground",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Thirumangalam": {
+      "layout": "underground",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Wimco Nagar Depot": {
+      "layout": "at-grade",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Wimco Nagar": {
+      "layout": "elevated",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Thiruvottiyur Theradi": {
+      "layout": "elevated",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Thiruvottriyur": {
+      "layout": "elevated",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Kaladipet": {
+      "layout": "elevated",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Tollgate": {
+      "layout": "elevated",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "New Washermanpet": {
+      "layout": "elevated",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Tondiarpet": {
+      "layout": "elevated",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Little Mount": {
+      "layout": "elevated",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Guindy": {
+      "layout": "elevated",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Alandur": {
+      "layout": "elevated",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Nanganallur Road": {
+      "layout": "elevated",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Meenambakkam": {
+      "layout": "elevated",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Chennai International Airport": {
+      "layout": "elevated",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Koyambedu": {
+      "layout": "elevated",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "CMBT": {
+      "layout": "elevated",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Arumbakkam": {
+      "layout": "elevated",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Vadapalani": {
+      "layout": "elevated",
+      "line_ids": [
+        "che-green"
+      ],
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Ashok Nagar": {
+      "layout": "elevated",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Ekkattuthangal": {
+      "layout": "elevated",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "St. Thomas Mount": {
+      "layout": "elevated",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    }
+  },
   "out_of_scope_station_ids": [
     "Porur Junction",
     "Poonamallee Bypass",
@@ -184,6 +515,7 @@
   ],
   "selfIntersectionExemptions": [
     "che-blue-seg-01",
-    "che-green-seg-01"
+    "che-green-seg-01",
+    "che-corridor-5-seg-01"
   ]
 }
