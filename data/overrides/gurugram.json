@@ -1,0 +1,955 @@
+{
+  "city": {
+    "id": "gurugram",
+    "name": "Gurugram",
+    "bbox": [
+      77.07,
+      28.41,
+      77.12,
+      28.52
+    ],
+    "operator": "Rapid Metro Gurgaon Ltd (RMGL)",
+    "phases": [
+      "1",
+      "2"
+    ],
+    "network_id": "rapid-metro-gurgaon"
+  },
+  "lines": [
+    {
+      "id": "gur-rapid",
+      "name": "Rapid Metro",
+      "city": "Gurugram",
+      "city_id": "gurugram",
+      "color": "#94a3b8",
+      "operator": "Rapid Metro Gurgaon Ltd (RMGL)",
+      "source": "osm+rmgl",
+      "notes": "Built by Rapid Metro Gurgaon Ltd (RMGL); operations taken over by DMRC on 2019-10-22."
+    }
+  ],
+  "selfIntersectionExemptions": [
+    "gur-rapid-seg-01"
+  ],
+  "segments": [
+    {
+      "segment_id": "gur-rapid-seg-01",
+      "line_id": "gur-rapid",
+      "line_name": "Rapid Metro",
+      "phase": "1",
+      "status": "operational",
+      "gauge": "standard",
+      "inaugurated_on": "2013-11-14",
+      "expected_completion": null,
+      "color": "#94a3b8",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/rapid-metro-rail-gurgaon-opens-to-public/article5350992.ece"
+      ],
+      "coordinates": [
+        [
+          77.09442,
+          28.480999
+        ],
+        [
+          77.09462,
+          28.48177
+        ],
+        [
+          77.094698,
+          28.482069
+        ],
+        [
+          77.094826,
+          28.482527
+        ],
+        [
+          77.094859,
+          28.482705
+        ],
+        [
+          77.095071,
+          28.484065
+        ],
+        [
+          77.095214,
+          28.485049
+        ],
+        [
+          77.095231,
+          28.485548
+        ],
+        [
+          77.095214,
+          28.485049
+        ],
+        [
+          77.093246,
+          28.487371
+        ],
+        [
+          77.094398,
+          28.486655
+        ],
+        [
+          77.094706,
+          28.486441
+        ],
+        [
+          77.094923,
+          28.486252
+        ],
+        [
+          77.095043,
+          28.486108
+        ],
+        [
+          77.095134,
+          28.485924
+        ],
+        [
+          77.095206,
+          28.485718
+        ],
+        [
+          77.095231,
+          28.485548
+        ],
+        [
+          77.092482,
+          28.487823
+        ],
+        [
+          77.092972,
+          28.487541
+        ],
+        [
+          77.093246,
+          28.487371
+        ],
+        [
+          77.091795,
+          28.488233
+        ],
+        [
+          77.092192,
+          28.487989
+        ],
+        [
+          77.092482,
+          28.487823
+        ],
+        [
+          77.091924,
+          28.488308
+        ],
+        [
+          77.091747,
+          28.488486
+        ],
+        [
+          77.091638,
+          28.488677
+        ],
+        [
+          77.09153,
+          28.488891
+        ],
+        [
+          77.091476,
+          28.489197
+        ],
+        [
+          77.091491,
+          28.489424
+        ],
+        [
+          77.091539,
+          28.489687
+        ],
+        [
+          77.091562,
+          28.489753
+        ],
+        [
+          77.091672,
+          28.490006
+        ],
+        [
+          77.092003,
+          28.490638
+        ],
+        [
+          77.092909,
+          28.492348
+        ],
+        [
+          77.093385,
+          28.493102
+        ],
+        [
+          77.093661,
+          28.493568
+        ],
+        [
+          77.09393,
+          28.493996
+        ],
+        [
+          77.094916,
+          28.495566
+        ],
+        [
+          77.095448,
+          28.496439
+        ],
+        [
+          77.095654,
+          28.496742
+        ],
+        [
+          77.096155,
+          28.497595
+        ],
+        [
+          77.096402,
+          28.498021
+        ],
+        [
+          77.096577,
+          28.49837
+        ],
+        [
+          77.096663,
+          28.498622
+        ],
+        [
+          77.096687,
+          28.49889
+        ],
+        [
+          77.096632,
+          28.499191
+        ],
+        [
+          77.09655,
+          28.499373
+        ],
+        [
+          77.096475,
+          28.499492
+        ],
+        [
+          77.096418,
+          28.499554
+        ],
+        [
+          77.096159,
+          28.499829
+        ],
+        [
+          77.095729,
+          28.500102
+        ],
+        [
+          77.095413,
+          28.500296
+        ],
+        [
+          77.094631,
+          28.500778
+        ],
+        [
+          77.09395,
+          28.50119
+        ],
+        [
+          77.093806,
+          28.501278
+        ],
+        [
+          77.093505,
+          28.501387
+        ],
+        [
+          77.093267,
+          28.501441
+        ],
+        [
+          77.092899,
+          28.501449
+        ],
+        [
+          77.09264,
+          28.501401
+        ],
+        [
+          77.092403,
+          28.501337
+        ],
+        [
+          77.092354,
+          28.501323
+        ],
+        [
+          77.092141,
+          28.501211
+        ],
+        [
+          77.091943,
+          28.501048
+        ],
+        [
+          77.091247,
+          28.500324
+        ],
+        [
+          77.090578,
+          28.499602
+        ],
+        [
+          77.089623,
+          28.498573
+        ],
+        [
+          77.089579,
+          28.498521
+        ],
+        [
+          77.08916,
+          28.498061
+        ],
+        [
+          77.087,
+          28.495832
+        ],
+        [
+          77.086799,
+          28.495606
+        ],
+        [
+          77.086683,
+          28.495407
+        ],
+        [
+          77.086601,
+          28.495135
+        ],
+        [
+          77.086575,
+          28.494855
+        ],
+        [
+          77.086592,
+          28.494697
+        ],
+        [
+          77.086657,
+          28.494492
+        ],
+        [
+          77.086864,
+          28.494121
+        ],
+        [
+          77.08705,
+          28.493837
+        ],
+        [
+          77.087543,
+          28.49325
+        ],
+        [
+          77.087727,
+          28.493007
+        ],
+        [
+          77.087821,
+          28.492846
+        ],
+        [
+          77.087898,
+          28.492665
+        ],
+        [
+          77.087987,
+          28.492366
+        ],
+        [
+          77.088132,
+          28.491702
+        ],
+        [
+          77.088263,
+          28.491166
+        ],
+        [
+          77.088383,
+          28.490745
+        ],
+        [
+          77.088491,
+          28.490536
+        ],
+        [
+          77.088683,
+          28.49026
+        ],
+        [
+          77.088949,
+          28.490006
+        ],
+        [
+          77.089674,
+          28.489555
+        ],
+        [
+          77.090526,
+          28.489
+        ],
+        [
+          77.09137,
+          28.488481
+        ],
+        [
+          77.091795,
+          28.488233
+        ],
+        [
+          77.092537,
+          28.487881
+        ],
+        [
+          77.092226,
+          28.488081
+        ],
+        [
+          77.091924,
+          28.488308
+        ],
+        [
+          77.093279,
+          28.487404
+        ],
+        [
+          77.093006,
+          28.48758
+        ],
+        [
+          77.092537,
+          28.487881
+        ],
+        [
+          77.095281,
+          28.48556
+        ],
+        [
+          77.095252,
+          28.485723
+        ],
+        [
+          77.09518,
+          28.485944
+        ],
+        [
+          77.095084,
+          28.486127
+        ],
+        [
+          77.094964,
+          28.486272
+        ],
+        [
+          77.094737,
+          28.486466
+        ],
+        [
+          77.094414,
+          28.486676
+        ],
+        [
+          77.093279,
+          28.487404
+        ],
+        [
+          77.095256,
+          28.485039
+        ],
+        [
+          77.095258,
+          28.485053
+        ],
+        [
+          77.095281,
+          28.48556
+        ],
+        [
+          77.095214,
+          28.485049
+        ],
+        [
+          77.095071,
+          28.484065
+        ],
+        [
+          77.094859,
+          28.482705
+        ],
+        [
+          77.094826,
+          28.482527
+        ],
+        [
+          77.094698,
+          28.482069
+        ],
+        [
+          77.09462,
+          28.48177
+        ],
+        [
+          77.09442,
+          28.480999
+        ]
+      ],
+      "last_verified": "2026-10-08"
+    },
+    {
+      "segment_id": "gur-rapid-seg-02",
+      "line_id": "gur-rapid",
+      "line_name": "Rapid Metro",
+      "phase": "2",
+      "status": "operational",
+      "gauge": "standard",
+      "inaugurated_on": "2017-03-31",
+      "expected_completion": null,
+      "color": "#94a3b8",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/after-hurdles-rapid-metros-phase-ii-opens/article17752674.ece"
+      ],
+      "coordinates": [
+        [
+          77.09442,
+          28.480999
+        ],
+        [
+          77.09426,
+          28.480458
+        ],
+        [
+          77.093941,
+          28.479344
+        ],
+        [
+          77.093835,
+          28.478853
+        ],
+        [
+          77.093807,
+          28.478155
+        ],
+        [
+          77.093922,
+          28.472815
+        ],
+        [
+          77.093937,
+          28.471426
+        ],
+        [
+          77.09393,
+          28.470965
+        ],
+        [
+          77.093938,
+          28.47042
+        ],
+        [
+          77.094001,
+          28.469863
+        ],
+        [
+          77.094092,
+          28.469281
+        ],
+        [
+          77.094537,
+          28.466848
+        ],
+        [
+          77.095142,
+          28.46359
+        ],
+        [
+          77.095399,
+          28.462643
+        ],
+        [
+          77.09552,
+          28.462145
+        ],
+        [
+          77.096073,
+          28.460264
+        ],
+        [
+          77.096929,
+          28.457423
+        ],
+        [
+          77.097135,
+          28.456694
+        ],
+        [
+          77.097503,
+          28.455385
+        ],
+        [
+          77.098071,
+          28.453399
+        ],
+        [
+          77.098697,
+          28.451606
+        ],
+        [
+          77.10003,
+          28.44777
+        ],
+        [
+          77.100441,
+          28.446379
+        ],
+        [
+          77.10054,
+          28.446043
+        ],
+        [
+          77.101211,
+          28.443752
+        ],
+        [
+          77.101421,
+          28.44316
+        ],
+        [
+          77.102289,
+          28.440841
+        ],
+        [
+          77.103527,
+          28.437499
+        ],
+        [
+          77.103859,
+          28.436382
+        ],
+        [
+          77.10481,
+          28.432964
+        ],
+        [
+          77.105049,
+          28.432074
+        ],
+        [
+          77.105085,
+          28.431937
+        ],
+        [
+          77.105144,
+          28.431645
+        ],
+        [
+          77.105172,
+          28.431465
+        ],
+        [
+          77.105194,
+          28.431288
+        ],
+        [
+          77.105214,
+          28.431048
+        ],
+        [
+          77.105221,
+          28.430823
+        ],
+        [
+          77.105219,
+          28.430573
+        ],
+        [
+          77.105211,
+          28.430138
+        ],
+        [
+          77.105192,
+          28.429178
+        ],
+        [
+          77.105171,
+          28.427353
+        ],
+        [
+          77.105121,
+          28.424671
+        ],
+        [
+          77.105103,
+          28.4239
+        ],
+        [
+          77.105099,
+          28.423712
+        ],
+        [
+          77.105089,
+          28.423299
+        ]
+      ],
+      "last_verified": "2026-10-08"
+    }
+  ],
+  "interchangeStationNames": [
+    "Sikanderpur"
+  ],
+  "dedupeRadiusM": 160,
+  "stationAliases": {
+    "Sikanderpur RMRG": "Sikanderpur",
+    "Sector 55–56": "Sector 55-56"
+  },
+  "stationOverrides": {
+    "gur-sikanderpur": {
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2013-11-14",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/rapid-metro-rail-gurgaon-opens-to-public/article5350992.ece"
+      ],
+      "last_verified": "2026-10-08",
+      "is_interchange": true
+    },
+    "Sikanderpur": {
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2013-11-14",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/rapid-metro-rail-gurgaon-opens-to-public/article5350992.ece"
+      ],
+      "last_verified": "2026-10-08",
+      "is_interchange": true
+    },
+    "gur-dlf-phase-2": {
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2013-11-14",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/rapid-metro-rail-gurgaon-opens-to-public/article5350992.ece"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "DLF Phase 2": {
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2013-11-14",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/rapid-metro-rail-gurgaon-opens-to-public/article5350992.ece"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "gur-belvedere-towers": {
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2013-11-14",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/rapid-metro-rail-gurgaon-opens-to-public/article5350992.ece"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Belvedere Towers": {
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2013-11-14",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/rapid-metro-rail-gurgaon-opens-to-public/article5350992.ece"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "gur-cyber-city": {
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2013-11-14",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/rapid-metro-rail-gurgaon-opens-to-public/article5350992.ece"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Cyber City": {
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2013-11-14",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/rapid-metro-rail-gurgaon-opens-to-public/article5350992.ece"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "gur-moulsari-avenue": {
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2013-11-14",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/rapid-metro-rail-gurgaon-opens-to-public/article5350992.ece"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Moulsari Avenue": {
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2013-11-14",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/rapid-metro-rail-gurgaon-opens-to-public/article5350992.ece"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "gur-phase-3": {
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2013-11-14",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/rapid-metro-rail-gurgaon-opens-to-public/article5350992.ece"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Phase 3": {
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2013-11-14",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/rapid-metro-rail-gurgaon-opens-to-public/article5350992.ece"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "gur-dlf-phase-1": {
+      "status": "operational",
+      "phase": "2",
+      "opened_on": "2017-03-31",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/after-hurdles-rapid-metros-phase-ii-opens/article17752674.ece"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "DLF Phase 1": {
+      "status": "operational",
+      "phase": "2",
+      "opened_on": "2017-03-31",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/after-hurdles-rapid-metros-phase-ii-opens/article17752674.ece"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "gur-sector-42-43": {
+      "status": "operational",
+      "phase": "2",
+      "opened_on": "2017-03-31",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/after-hurdles-rapid-metros-phase-ii-opens/article17752674.ece"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Sector 42-43": {
+      "status": "operational",
+      "phase": "2",
+      "opened_on": "2017-03-31",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/after-hurdles-rapid-metros-phase-ii-opens/article17752674.ece"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "gur-sector-53-54": {
+      "status": "operational",
+      "phase": "2",
+      "opened_on": "2017-03-31",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/after-hurdles-rapid-metros-phase-ii-opens/article17752674.ece"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Sector 53-54": {
+      "status": "operational",
+      "phase": "2",
+      "opened_on": "2017-03-31",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/after-hurdles-rapid-metros-phase-ii-opens/article17752674.ece"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "gur-sector-54-chowk": {
+      "status": "operational",
+      "phase": "2",
+      "opened_on": "2017-03-31",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/after-hurdles-rapid-metros-phase-ii-opens/article17752674.ece"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Sector 54 Chowk": {
+      "status": "operational",
+      "phase": "2",
+      "opened_on": "2017-03-31",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/after-hurdles-rapid-metros-phase-ii-opens/article17752674.ece"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "gur-sector-55-56": {
+      "status": "operational",
+      "phase": "2",
+      "opened_on": "2017-03-31",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/after-hurdles-rapid-metros-phase-ii-opens/article17752674.ece"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Sector 55-56": {
+      "status": "operational",
+      "phase": "2",
+      "opened_on": "2017-03-31",
+      "layout": "elevated",
+      "references": [
+        "https://www.thehindu.com/news/cities/Delhi/after-hurdles-rapid-metros-phase-ii-opens/article17752674.ece"
+      ],
+      "last_verified": "2026-10-08"
+    }
+  },
+  "out_of_scope_station_ids": [
+    "M G Road",
+    "Guru Dronacharya",
+    "IFFCO Chowk",
+    "Millennium City Centre Gurugram",
+    "gur-m-g-road",
+    "gur-guru-dronacharya",
+    "gur-iffco-chowk",
+    "gur-millennium-city-centre-gurugram"
+  ]
+}

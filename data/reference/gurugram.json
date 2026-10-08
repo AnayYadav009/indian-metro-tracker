@@ -1,0 +1,47 @@
+{
+  "city_id": "gurugram",
+  "compiled_on": "2026-10-08",
+  "lines": [
+    {
+      "line_id": "gur-rapid",
+      "official_name": "Rapid Metro",
+      "operator": "Rapid Metro Gurgaon Ltd (RMGL)",
+      "topology": "linear",
+      "operational_stations": 11,
+      "official_length_km": 11.7,
+      "terminals": [
+        "Sector 55-56",
+        "Cyber City"
+      ],
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "Phase 1 (Sikanderpur to Cyber City)",
+          "phase": "1",
+          "opened_on": "2013-11-14",
+          "stations_added": 6,
+          "source": {
+            "title": "Rapid Metro Rail Gurgaon opens to public",
+            "url": "https://www.thehindu.com/news/cities/Delhi/rapid-metro-rail-gurgaon-opens-to-public/article5350992.ece",
+            "retrieved_at": "2026-10-08",
+            "kind": "news"
+          }
+        },
+        {
+          "stage": "Phase 2 (Sikanderpur to Sector 55-56)",
+          "phase": "2",
+          "opened_on": "2017-03-31",
+          "stations_added": 5,
+          "source": {
+            "title": "After hurdles, Rapid Metro's Phase-II opens",
+            "url": "https://www.thehindu.com/news/cities/Delhi/after-hurdles-rapid-metros-phase-ii-opens/article17752674.ece",
+            "retrieved_at": "2026-10-08",
+            "kind": "news"
+          }
+        }
+      ],
+      "construction": [],
+      "notes": "11.7 km operational elevated network connecting Cyber City and Golf Course Road. Built by Rapid Metro Gurgaon Ltd (RMGL); operations taken over by DMRC on 2019-10-22."
+    }
+  ]
+}
