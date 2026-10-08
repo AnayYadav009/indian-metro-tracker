@@ -1,0 +1,133 @@
+{
+  "timestamp": "2026-10-08T11:39:15.783Z",
+  "tasks": {
+    "T1": {
+      "status": "PASS",
+      "title": "Layout is no longer a silent default",
+      "details": [],
+      "evidence": [
+        "merge-overrides.ts: silent elevated fallback eliminated, assigns layout: null and layoutSource: \"unverified\" when no tags/overrides present",
+        "Line 'del-yellow' has 20 underground stations",
+        "Line 'del-violet' has 10 underground stations",
+        "Line 'del-blue' has 3 underground stations",
+        "Line 'del-magenta' has 2 underground stations",
+        "Line 'del-pink' has 1 underground stations",
+        "Line 'del-airport' has 5 underground stations",
+        "Line 'del-grey' has 2 underground stations",
+        "Line 'kol-blue' has 13 underground stations",
+        "Line 'kol-green' has 5 underground stations",
+        "Line 'che-blue' has 12 underground stations",
+        "Line 'che-green' has 9 underground stations",
+        "Line 'pun-purple' has 5 underground stations",
+        "Line 'pun-aqua' has 1 underground stations",
+        "Line 'ahm-blue' has 4 underground stations",
+        "Line 'blr-purple' has 5 underground stations",
+        "Mumbai Line 3: exactly 26 underground, 1 at-grade (Aarey JVLR), 0 elevated",
+        "All layout overrides have reference/verification provenance"
+      ]
+    },
+    "T2": {
+      "status": "PASS",
+      "title": "Gurugram Rapid Metro",
+      "details": [],
+      "evidence": [
+        "cities.json: gurugram exists with network_id 'rapid-metro-gurgaon'",
+        "lines.json: gur-rapid exists with operator 'Rapid Metro Gurgaon Ltd (RMGL)'",
+        "lines.json: gur-rapid notes record DMRC takeover 2019-10-22",
+        "stations.geojson: 11 stations present for Gurugram",
+        "No Gurugram station assigned to city delhi or line del-yellow",
+        "Phases split: Phase 1 = 6 stations, Phase 2 = 5 stations",
+        "Opening dates correct: 2013-11-14 for Phase 1, 2017-03-31 for Phase 2",
+        "Gurugram segment exists with 116 coordinate points",
+        "data/reference/gurugram.json exists"
+      ]
+    },
+    "T3": {
+      "status": "PASS",
+      "title": "Navi Mumbai Metro",
+      "details": [],
+      "evidence": [
+        "cities.json: navi-mumbai exists with network_id 'navi-mumbai-metro'",
+        "lines.json: nmm-line-1 exists",
+        "operator is Maha Metro",
+        "CIDCO ownership / operator conflict noted in line notes",
+        "stations.geojson: 11 stations present for Navi Mumbai",
+        "All 11 stations opened_on = 2023-11-17",
+        "Navi Mumbai segment exists with 160 coordinate points",
+        "CBD Belapur is operational, Phase 1, city navi-mumbai, not on mum-line-2b",
+        "mum-rbi-colony excluded from Mumbai dataset"
+      ]
+    },
+    "T4": {
+      "status": "PASS",
+      "title": "Noida Metro (Aqua Line)",
+      "details": [],
+      "evidence": [
+        "cities.json: noida exists with network_id 'noida-metro'",
+        "lines.json: noi-aqua exists with operator 'NMRC'",
+        "stations.geojson: 21 stations present for Noida Aqua line",
+        "All 21 stations opened_on = 2019-01-25",
+        "Depot layout left unverified: layout=null, layout_source=\"unverified\"",
+        "del-noida-sector-44 and del-noida-office excluded from del-magenta"
+      ]
+    },
+    "T5": {
+      "status": "PASS",
+      "title": "Mumbai Line 3",
+      "details": [],
+      "evidence": [
+        "Line 3 split into 3 segments",
+        "Segment 1 inaugurated 2024-10-07",
+        "Segment 3 inaugurated 2025-10-09",
+        "Line 3 has exactly 27 stations",
+        "Aarey JVLR and Vidyanagari stations present",
+        "Stray stations airport-colony, bandra-colony, sbi-dadar resolved/excluded",
+        "Science Museum and Mumbai Central correctly aliased",
+        "Line 3 phases [1, 2A, 2B] exist in Mumbai phases [1, 2A, 2B, 3, 4]"
+      ]
+    },
+    "T6": {
+      "status": "PARTIAL",
+      "title": "Staged openings and dates",
+      "details": [
+        "Delhi Yellow line has only 1 segment (not split into staged openings)",
+        "Delhi Violet line has only 1 segment (not split into staged openings)"
+      ],
+      "evidence": [
+        "Null opened_on counts by city: hyderabad: 57/57, gurugram: 0/11, navi-mumbai: 0/11, noida: 0/21, chennai: 41/41, pune: 29/29, bengaluru: 84/84, mumbai: 43/74, kolkata: 56/56, ahmedabad: 53/53, delhi: 215/215"
+      ]
+    },
+    "T7": {
+      "status": "PASS",
+      "title": "Lines with no geometry",
+      "details": [],
+      "evidence": [
+        "Line 'del-silver' removed cleanly",
+        "Line 'kol-pink' removed cleanly",
+        "Line 'che-corridor-3' has 1 segment(s) with status=construction, phase=2",
+        "Line 'che-corridor-5' has 1 segment(s) with status=construction, phase=2",
+        "Line 'pun-line-3' has 1 segment(s) with status=construction, phase=1"
+      ]
+    },
+    "T8": {
+      "status": "PASS",
+      "title": "Other checks",
+      "details": [],
+      "evidence": [
+        "Chennai che-corridor-4-seg-01 status verified as 'construction' with expected_completion 2026-12",
+        "Delhi Yellow operational station count reconciled to exactly 37",
+        "Kolkata kol-green operator confirmed as KMRC",
+        "Pune pun-line-3 operator confirmed as Pune IT City Metro Rail Limited",
+        "Bengaluru Purple/planned gap declared in intentionalBreaks"
+      ]
+    }
+  },
+  "summary": {
+    "pass": 7,
+    "partial": 1,
+    "fail": 0,
+    "blocked": 0
+  },
+  "errors": 0,
+  "warnings": 1
+}

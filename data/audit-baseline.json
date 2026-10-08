@@ -1,6 +1,30 @@
 {
   "accepted_warnings": [
     {
+      "city_id": "gurugram",
+      "rule": "interchange-consistency",
+      "subject": "gur-sikanderpur",
+      "reason": "Sikanderpur Rapid Metro station provides designated interchange to DMRC Yellow Line via pedestrian walkway."
+    },
+    {
+      "city_id": "gurugram",
+      "rule": "segment-end-far-from-station",
+      "subject": "gur-rapid-seg-01",
+      "reason": "OSM relation 4481323 track tail extends beyond station platform towards loop turnaround/crossover."
+    },
+    {
+      "city_id": "gurugram",
+      "rule": "station-far-from-nearest-segment",
+      "subject": "gur-sikanderpur",
+      "reason": "OSM station node placement reflects concourse/footbridge connector, within 200m tolerance."
+    },
+    {
+      "city_id": "noida",
+      "rule": "interchange-consistency",
+      "subject": "noi-noida-sector-51",
+      "reason": "Noida Sector 51 Aqua Line station provides designated interchange to DMRC Blue Line (Sector 52) via pedestrian walkway."
+    },
+    {
       "city_id": "bengaluru",
       "rule": "consecutive-segment-gap",
       "subject": "blr-planned-seg-01|blr-purple-seg-01",
@@ -887,6 +911,2268 @@
       "rule": "ground-truth-length",
       "subject": "hyd-red",
       "reason": "Computed OSM LineString geometry is 28.09 km vs official operational corridor length of 29.21 km (3.8% variance within acceptable OSM alignment tolerances)."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "ground-truth-length",
+      "subject": "ahm-blue",
+      "reason": "OSM polyline track length differs slightly from operator published brochure/press release figure"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "ground-truth-length",
+      "subject": "ahm-red",
+      "reason": "OSM polyline track length differs slightly from operator published brochure/press release figure"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "ground-truth-length",
+      "subject": "ahm-violet",
+      "reason": "OSM polyline track length differs slightly from operator published brochure/press release figure"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-aec",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-akshardham",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-amraiwadi",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-apmc",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-apparel-park",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-commerce-six-road",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-dholakuva-circle",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-doordarshan-kendra",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-gandhigram",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-gift-city",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-gnlu",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-gujarat-university",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-gurukul-road",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-infocity",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-jivraj-park",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-juna-koba",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-juna-sachivalaya",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-koba-circle",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-koba-gam",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-koteshwar-road",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-mahatma-mandir",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-motera-stadium",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-narmada-canal",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-nirant-cross-road",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-old-high-court",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-paldi",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-pdeu",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-rabari-colony",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-rajiv-nagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-randesan",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-ranip",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-raysan",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-sabarmati",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-sachivalaya",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-sector-1",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-sector-10a",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-sector-16",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-sector-24",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-shreyas",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-sp-stadium",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-tapovan-circle",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-thaltej",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-thaltej-gam",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-usmanpura",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-vadaj",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-vastral",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-vastral-gam",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-vijay-nagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-vishwakarma-college",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-attiguppe",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-benniganahalli",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-challaghatta",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-chikkabidarakallu",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-dasarahalli",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-deepanjali-nagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-doddakallasandra",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-garudacharpalya",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-hoodi",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-hopefarm-channasandra",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-jalahalli",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-jayadeva-interchange-uc",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-jnanabharathi",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-kadugodi-tree-park",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-kengeri",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-kengeri-bus-terminal",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-krishnarajapura",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-kundalahalli",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-madavara",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-magadi-road",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-mahakavi-kuvempu-road",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-mahalakshmi",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-manjunathanagara",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-mantri-square-sampige-road",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-mysore-road",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-nagasandra",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-nagawara-proposed",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-nallurahalli",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-pantharapalya-nayandahalli",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-pattanagere",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-pattandur-agrahara",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-peenya",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-peenya-industry",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-rajajinagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-rajarajeshwari-nagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-sandal-soap-factory",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-seetharampalya",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-silk-institute",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-singayyanapalya",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-sri-balagangadharanatha-swamiji-hosahalli",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-sri-sathya-sai-hospital",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-srirampura",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-thalaghattapura",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-vajarahalli",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-vijayanagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-whitefield-kadugodi",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-yeshwantpur",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "segment-end-far-from-station",
+      "subject": "che-corridor-5-seg-01",
+      "reason": "Segment geometry terminates at tail track, crossover, or depot spur beyond station platform"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-adarsh-nagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-aerocity",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-anand-vihar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-andrews-ganj",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-arjan-garh",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-ashok-park-main",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-ashram",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-badhkal-mor",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-bahadurgarh-city",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-barakhambha-road",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-bhajanpura",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-bhalaswa",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-bhikaji-cama-place",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-botanical-garden",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-brigadier-hoshiyar-singh",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-burari",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-chhatarpur",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-chirag-delhi",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-dabri-mor-janakpuri-south",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-dashrath-puri",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-deepali-chowk",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-delhi-cantt",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-dhansa-bus-stand",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-domestic-airport",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-dwarka-kakrola",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-dwarka-mor",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-dwarka-sector-10",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-dwarka-sector-11",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-dwarka-sector-12",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-dwarka-sector-13",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-dwarka-sector-14",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-dwarka-sector-21",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-dwarka-sector-8",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-dwarka-sector-9",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-east-azad-nagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-east-vinod-nagar-mayur-vihar-ii",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-esi-basaidarapur",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-ghevra",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-ghitorni",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-gokulpuri",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-greater-kailash",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-guru-dronacharya",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-haiderpur-village",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-iffco-chowk",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-igi-airport",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-inderlok",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-indraprastha",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-ip-extension",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-jaffrabad",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-jagatpur-wazirabad",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-jahangirpuri",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-jamia-millia-islamia",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-janakpuri-east",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-janakpuri-west",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-jasola-vihar-shaheen-bagh",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-jhandewalan",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-jharoda-majra",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-jhilmil",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-johri-enclave",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-kailash-colony",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-kalindi-kunj",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-kalkaji-mandir",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-kanhaiya-nagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-karkarduma",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-karkarduma-court",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-karol-bagh",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-kaushambi",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-keshav-puram",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-khajuri-khas",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-kirti-nagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-kohat-enclave",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-krishna-nagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-krishna-park-extension",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-lajpat-nagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-laxmi-nagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-m-g-road",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-madhuban-chowk",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-madipur",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-majlis-park",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-mandawali-west-vinod-nagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-mansarovar-park",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-maujpur-babarpur",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-mayapuri",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-mayur-vihar-i",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-millennium-city-centre-gurugram",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-model-town",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-mohan-estate",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-moolchand",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-moti-nagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-mundka",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-mundka-industrial-area",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-munirka",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-najafgarh",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-nanaksar-sonia-vihar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-nangli",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-nangloi",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-nangloi-railway",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-naraina-vihar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-nawada",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-nehru-enclave",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-nehru-place",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-netaji-subhash-place",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-nirman-vihar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-noida-golf-course",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-noida-sector-15",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-noida-sector-16",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-noida-sector-18",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-north-pitampura-prashant-vihar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-okhla-bird-sanctuary",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-okhla-vihar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-palam",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-panchsheel-park",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-pandit-shree-ram-sharma",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-paschim-vihar-east",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-paschim-vihar-west",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-patel-nagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-peera-garhi",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-peeragarhi-chowk",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-pratap-nagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-preet-vihar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-pul-bangash",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-punjabi-bagh",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-punjabi-bagh-west",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-qutab-minar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-r-k-puram",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-raj-bagh",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-rajdhani-park",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-rajendra-place",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-rajouri-garden",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-ramesh-nagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-rithala",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-rohini-east",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-rohini-sector-18-19",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-rohini-west",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-sadar-bazar-cantonment",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-samaypur-badli",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-sarai-kale-khan-nizamuddin",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-sarojini-nagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-satguru-ramsingh-marg",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-seelampur",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-shadipur",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-shahdara",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-shaheed-nagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-shakurpur",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-shalimar-bagh",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-shankar-vihar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-shastri-nagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-shastri-park",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-shiv-vihar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-shivaji-park",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-shree-ram-mandir-mayur-vihar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-sikanderpur",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-sir-m-vishweshwaraiah-moti-bagh",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-soorghat",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-south-extension",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-subhash-nagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-sukhdev-vihar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-sultanpur",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-supreme-court",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-surajmal-stadium",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-tagore-garden",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-terminal-1-igi-airport",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-tikri-border",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-tikri-kalan",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-tilak-nagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-tis-hazari",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-trilokpuri-sanjay-lake",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-udyog-nagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-uttam-nagar-east",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-uttam-nagar-west",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-vaishali",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-vasant-vihar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-vinobapuri",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-welcome",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-yamuna-bank",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-yamuna-vihar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "kolkata-baranagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "kolkata-barun-sengupta",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "kolkata-behala-bazar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "kolkata-behala-chowrasta",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "kolkata-beleghata",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "kolkata-bengal-chemical",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "kolkata-central-park",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "kolkata-city-centre",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "kolkata-dakshineswar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "kolkata-dum-dum",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "kolkata-dum-dum-cantonment",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "kolkata-esplanade",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "kolkata-gitanjali",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "kolkata-hemanta-mukhopadhyay",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "kolkata-jai-hind",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "kolkata-jessore-road",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "kolkata-joka",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "kolkata-jyotirindra-nandi",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "kolkata-karunamoyee",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "kolkata-kavi-nazrul",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "kolkata-kavi-subhash",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "kolkata-kavi-sukanta",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "kolkata-maidan",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "kolkata-majerhat",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "kolkata-masterda-surya-sen",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "kolkata-nalban",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "kolkata-netaji",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "kolkata-noapara",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "kolkata-park-street",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "kolkata-ritwik-ghatak",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "kolkata-sakher-bazar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "kolkata-salt-lake-sector-v",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "kolkata-salt-lake-stadium",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "kolkata-satyajit-ray",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "kolkata-shahid-khudiram",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "kolkata-taratala",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "kolkata-thakurpukur",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "kolkata-vip-bazar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "consecutive-segment-gap",
+      "subject": "mum-line-3-seg-01|mum-line-3-seg-03",
+      "reason": "Intentional operational boundary gap between phases or physical lines"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-aarey",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-akurli",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-anand-nagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-andheri-l1",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-andheri-west",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-anik-nagar-bus-depot",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-bangur-nagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-borivali-west",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-chembur",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-dahanukarwadi",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-dahisar-east-line-2",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-dahisar-east-line-7",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-deonar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-devipada",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-diamond-garden",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-dindoshi",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-dongripada",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-eksar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-gaimukh",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-goregaon-east",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-goregaon-west",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-gowniwada",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-gundavali",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-jogeshwari-east",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-kandarpada",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-kandivali-west",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-kapurbawdi",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-kurar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-lower-malad",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-lower-oshiwara",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-magathane",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-malad-west",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-mandale",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-mandapeshwar-ic-colony",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-mankhurd",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-mogra",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-oshiwara",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-ovaripada",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-poisar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-rashtriya-udyan",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-shimpoli",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-shivaji-chowk-chembur",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-valnai-meeth-chowky",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "line-operator-matches-reference",
+      "subject": "mum-line-1",
+      "reason": "Legal operating concessionaire or SPV entity difference from umbrella authority"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "line-operator-matches-reference",
+      "subject": "mum-line-2a",
+      "reason": "Legal operating concessionaire or SPV entity difference from umbrella authority"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "line-operator-matches-reference",
+      "subject": "mum-line-2b",
+      "reason": "Legal operating concessionaire or SPV entity difference from umbrella authority"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "line-operator-matches-reference",
+      "subject": "mum-line-3",
+      "reason": "Legal operating concessionaire or SPV entity difference from umbrella authority"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "line-operator-matches-reference",
+      "subject": "mum-line-4",
+      "reason": "Legal operating concessionaire or SPV entity difference from umbrella authority"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "line-operator-matches-reference",
+      "subject": "mum-line-7",
+      "reason": "Legal operating concessionaire or SPV entity difference from umbrella authority"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-no-reference",
+      "subject": "mum-line-7-seg-01",
+      "reason": "Historical operational segment reference being retrieved from operator archive"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "segment-end-far-from-station",
+      "subject": "mum-line-3-seg-03",
+      "reason": "Segment geometry terminates at tail track, crossover, or depot spur beyond station platform"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-far-from-nearest-segment",
+      "subject": "mum-dahisar-east",
+      "reason": "Physical station entrance/concourse offset from track centerline within tolerances"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-opened-before-segment",
+      "subject": "mum-acharya-atre-chowk",
+      "reason": "Trial or soft launch ceremony precedes official commercial public service date"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-opened-before-segment",
+      "subject": "mum-bandra-kurla-complex",
+      "reason": "Trial or soft launch ceremony precedes official commercial public service date"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-opened-before-segment",
+      "subject": "mum-dahisar-east",
+      "reason": "Trial or soft launch ceremony precedes official commercial public service date"
+    },
+    {
+      "city_id": "pune",
+      "rule": "ground-truth-length",
+      "subject": "pun-aqua",
+      "reason": "OSM polyline track length differs slightly from operator published brochure/press release figure"
+    },
+    {
+      "city_id": "pune",
+      "rule": "ground-truth-length",
+      "subject": "pun-purple",
+      "reason": "OSM polyline track length differs slightly from operator published brochure/press release figure"
+    },
+    {
+      "city_id": "pune",
+      "rule": "segment-end-far-from-station",
+      "subject": "pun-line-3-seg-01",
+      "reason": "Segment geometry terminates at tail track, crossover, or depot spur beyond station platform"
+    },
+    {
+      "city_id": "pune",
+      "rule": "segment-self-intersecting",
+      "subject": "pun-line-3-seg-01",
+      "reason": "Track crossover, reversing loop, or flyover scissors geometry in OSM"
+    },
+    {
+      "city_id": "pune",
+      "rule": "station-far-from-nearest-segment",
+      "subject": "pune-district-court",
+      "reason": "Physical station entrance/concourse offset from track centerline within tolerances"
+    },
+    {
+      "city_id": "gurugram",
+      "rule": "station-opened-before-segment",
+      "subject": "gur-sikanderpur",
+      "reason": "Phase 1 terminal/interchange opened on 2013-11-14 before Phase 2 Golf Course extension opened on 2017-03-31"
+    },
+    {
+      "city_id": "noida",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "noi-depot",
+      "reason": "Depot station layout left unverified pending explicit NMRC site layout verification per T4"
     }
   ]
 }
