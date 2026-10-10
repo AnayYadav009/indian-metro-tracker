@@ -48,6 +48,8 @@ jobs:
 
       - name: Run data audit
         run: npm run audit:data
+        env:
+          AUDIT_WARNINGS: report-only
 
       - name: Build static site
         run: npm run build

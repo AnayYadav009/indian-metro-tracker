@@ -108,7 +108,7 @@ npm run test:e2e
 npm run audit:data
 ```
 
-The audit intentionally fails for uncorrected errors and un-baselined warnings; baselines must not be used to hide data problems. Current audit status is reported in the latest dated report under [`reports/data-audit/`](reports/data-audit/).
+The local audit intentionally fails for uncorrected errors and un-baselined warnings; baselines must not be used to hide data problems. CI runs the same audit in warning report-only mode, so un-baselined warnings remain visible in the generated report while errors still fail the quality gate. Current audit status is reported in the latest dated report under [`reports/data-audit/`](reports/data-audit/).
 
 ## Screenshots and attribution
 
