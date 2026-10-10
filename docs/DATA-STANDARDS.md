@@ -35,7 +35,10 @@ Rules
 | `official_length_km` | Optional. Operator's published length, for cross-checking only. |
 | `stations_count` | Number of distinct stations (after deduplication) assigned to this segment. Never a default or estimate. |
 | `layout` | `underground`, `elevated` or `at-grade`, as stated by the operator. |
-| `is_interchange` | `true` only when the official operator explicitly designates the station as an interchange. Physically separate stations linked by a pedestrian connector count only if the operator lists them as an interchange. Must match `line_ids.length > 1`. |
+| `is_interchange` | `true` only for transfers between two or more metro lines in this dataset. Connections to suburban rail, Indian Railways or monorail are not metro interchanges and go in an optional `other_connections` list with a reference. Must match `line_ids.length > 1`. |
+| `other_connections` | Optional array of non-metro connections (suburban rail, monorail, regional rail) with reference details. |
+| `effective opening date` | Derived rule: a station's effective opening date is `opened_on ?? inaugurated_on` (from its segment). This is derived at runtime and never stored as a separate duplicate field. |
+| `geometry_quality` | `"surveyed"` (or `"exact"`) \| `"schematic"`. Construction and planned stretches without sourced geometry get schematic connectors built from ordered stations (`"schematic"`). Operational geometry is never schematic. |
 | `source` | `osm`, `manual` or `osm+<operator>`; `mock` only in mock data. |
 | `retrieved_at` | Date the raw OSM data was fetched (machine date). |
 | `last_verified` | Date a human or agent last checked this record against an official source. Never set automatically by the pipeline. |
