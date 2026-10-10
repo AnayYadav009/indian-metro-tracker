@@ -1,10 +1,10 @@
-# Contributing Data to Indian Metro Network Tracker
+# Data contribution guide
 
 Thank you for contributing to the Indian Metro Network Tracker! This document outlines how data corrections are handled, how to report errors, and how to submit code/data changes.
 
 ---
 
-## 1. Reporting an Issue (Quickest Way)
+## 1. Reporting an issue
 
 If you spot an error while browsing the map (e.g. an incorrect station name, opening date, line alignment, or status):
 
@@ -16,7 +16,7 @@ If you spot an error while browsing the map (e.g. an incorrect station name, ope
 
 ---
 
-## 2. Direct Data Contributions (Submitting a Pull Request)
+## 2. Direct data contributions
 
 If you would like to submit a data correction yourself, follow the workflow below.
 
@@ -98,7 +98,7 @@ Every value sourced outside OpenStreetMap (OSM) must adhere to our [Data Standar
 
 ---
 
-## 5. Local Verification Workflow
+## 5. Local verification workflow
 
 After editing an override file in `data/overrides/`:
 
@@ -119,4 +119,14 @@ After editing an override file in `data/overrides/`:
    ```bash
    npm test
    ```
-5. Submit your Pull Request detailing the changes made and the official sources consulted.
+5. Run `npm run lint`, `npm run typecheck`, `npm test`, and relevant Playwright checks.
+6. Submit a pull request detailing the changes, generated-data rebuild, audit result, and sources.
+
+## 6. Geometry and current code conventions
+
+- Use `lib/station-style.ts` for station marker geometry and colours.
+- Use `lib/filter-utils.ts` for shared station and segment visibility rules.
+- `exact` is reserved for surveyed or construction-stage geometry supported by evidence.
+- `schematic` is used for explicitly labelled station-derived or hand-drawn alignments where exact route geometry is unavailable.
+- Preserve the `del-silver` URL/search alias for old Silver Line links.
+- Never hand-edit generated data. Fix overrides or pipeline rules, rebuild, and audit.

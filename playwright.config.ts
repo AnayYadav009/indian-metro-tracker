@@ -1,5 +1,7 @@
 import { defineConfig, devices } from "@playwright/test";
 
+const useStaticExport = process.env.PLAYWRIGHT_STATIC_EXPORT === "true";
+
 export default defineConfig({
   testDir: "./e2e",
   fullyParallel: true,
@@ -24,7 +26,7 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: "npm run dev",
+    command: useStaticExport ? "npm start" : "npm run dev",
     url: "http://localhost:3000",
     reuseExistingServer: !process.env.CI,
   },

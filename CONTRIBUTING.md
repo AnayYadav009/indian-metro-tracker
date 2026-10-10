@@ -15,7 +15,7 @@ Thank you for contributing to the Indian Metro Network Tracker. Please adhere to
 ## 2. Code Quality & Conventions
 
 - **Centralized Constants & Symbology**:
-  - Reference status colors, line dash patterns, and badges from `lib/metro-styles.ts`. Never hardcode ad-hoc status color hex values or dynamic class interpolations that risk Tailwind purging.
+  - Reference station marker geometry and colours from `lib/station-style.ts`, shared visibility rules from `lib/filter-utils.ts`, and status definitions from `lib/metro-styles.ts`. Never hardcode ad-hoc status color hex values or dynamic class interpolations that risk Tailwind purging.
   - Keep map zoom thresholds and MapLibre configurations centralized in `lib/map-config.ts`.
 - **Imports & Types**:
   - Canonical type definitions reside in `types/schema.ts` (Zod schemas and inferred types) and `types/metro.ts` (convenience interfaces).
@@ -46,4 +46,4 @@ npm run validate:data
 npm run audit:data
 ```
 
-Ensure all 182+ tests pass, linting completes with 0 errors, and no regressions are introduced into the data audit report.
+Ensure the full unit suite passes, linting completes with 0 errors, and no regressions are introduced into the data audit report. UI changes require e2e checks against both the development server and static export.

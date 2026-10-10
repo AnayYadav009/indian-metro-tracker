@@ -4,15 +4,16 @@ import { mergeCityOverrides, type CityOverrideData } from "@/scripts/pipeline/me
 import type { NormalizedCityData } from "@/scripts/pipeline/normalize";
 
 describe("Station Deduplication Regression & Rule Tests", () => {
-  it("proves same-name pairs at 207, 212.3, 215, 231, and 280.1 m merge in Delhi dataset", () => {
+  it("proves same-name pairs at the known dedupe distances merge in Delhi dataset", () => {
     const report = generateDedupeReport("delhi");
     const merged = report.mergedNodes;
 
-    // 1. Delhi Gate: 207.0 m
+    // Delhi Gate has a newer OSM duplicate in the refreshed relation-member
+    // response; it now merges at 3 m instead of the previous 207 m pair.
     const delhiGate = merged.find((m) => m.droppedOsmId === 7282286733);
     expect(delhiGate).toBeDefined();
-    expect(delhiGate?.distanceMetres).toBe(207);
-    expect(delhiGate?.mergedIntoOsmId).toBe(5215706753);
+    expect(delhiGate?.distanceMetres).toBe(3);
+    expect(delhiGate?.mergedIntoOsmId).toBe(2837165876);
 
     // 2. Chirag Delhi: 212.3 m
     const chiragDelhi = merged.find((m) => m.droppedOsmId === 5215706132);

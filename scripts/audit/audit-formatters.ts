@@ -1,4 +1,4 @@
-import type { Finding, BaselineFile, AuditResult, Severity } from "./audit-engine";
+import type { Finding, BaselineFile, AuditResult } from "./audit-engine";
 
 /**
  * Separates findings into baselined and unbaselined sets based on baseline definitions.

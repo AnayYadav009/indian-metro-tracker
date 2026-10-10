@@ -1,4 +1,7 @@
 import type { LayerProps } from "react-map-gl/maplibre";
+import type { Status } from "@/types/schema";
+import { STATION_STYLE, stationStrokeExpression } from "@/lib/station-style";
+import { buildVisibilityExpression } from "@/lib/filter-utils";
 
 /**
  * Layer IDs that receive pointer events (click, hover).
@@ -24,6 +27,13 @@ export const LINE_WIDTH_ZOOM_EXPRESSION: unknown[] = [
   4,
   14,
   6,
+];
+
+const FUTURE_LINE_WIDTH_EXPRESSION: unknown[] = [
+  "case",
+  ["==", ["get", "geometry_quality"], "schematic"],
+  2,
+  4,
 ];
 
 /**
@@ -61,7 +71,7 @@ export const constructionLineLayer: LayerProps = {
   },
   paint: {
     "line-color": ["get", "color"],
-    "line-width": LINE_WIDTH_ZOOM_EXPRESSION as any,
+    "line-width": FUTURE_LINE_WIDTH_EXPRESSION as any,
     "line-dasharray": [4, 2],
     "line-opacity": 0.9,
   },
@@ -129,29 +139,19 @@ export const stationCircleLayer: LayerProps = {
   minzoom: 8,
   paint: {
     "circle-radius": [
-      "interpolate",
-      ["linear"],
-      ["zoom"],
-      8,
-      ["case", ["get", "is_interchange"], 4.5, 3],
-      13,
-      ["case", ["get", "is_interchange"], 7.5, 5],
+      "case",
+      ["get", "is_interchange"],
+      STATION_STYLE.radius.interchange,
+      STATION_STYLE.radius.standard,
     ],
-    "circle-color": "#ffffff",
+    "circle-color": STATION_STYLE.fill,
     "circle-stroke-width": [
       "case",
       ["get", "is_interchange"],
-      2.5,
-      1.5,
+      STATION_STYLE.strokeWidth.interchange,
+      STATION_STYLE.strokeWidth.standard,
     ],
-    "circle-stroke-color": [
-      "case",
-      ["==", ["get", "status"], "operational"],
-      "#0f172a", // slate-900
-      ["==", ["get", "status"], "construction"],
-      "#f59e0b", // amber-500
-      "#8b5cf6", // violet-500
-    ],
+    "circle-stroke-color": stationStrokeExpression() as any,
   },
 };
 
@@ -168,32 +168,10 @@ export const interchangeStationLayer: LayerProps = {
   minzoom: 8,
   filter: ["==", ["get", "is_interchange"], true],
   paint: {
-    "circle-radius": [
-      "interpolate",
-      ["linear"],
-      ["zoom"],
-      8,
-      6,
-      13,
-      10,
-    ],
-    "circle-color": "#ffffff",
-    "circle-stroke-width": [
-      "case",
-      ["==", ["get", "status"], "operational"],
-      3,
-      ["==", ["get", "status"], "construction"],
-      3,
-      2.5,
-    ],
-    "circle-stroke-color": [
-      "case",
-      ["==", ["get", "status"], "operational"],
-      "#0f172a", // slate-900
-      ["==", ["get", "status"], "construction"],
-      "#f59e0b", // amber-500
-      "#8b5cf6", // violet-500 (planned)
-    ],
+    "circle-radius": STATION_STYLE.radius.interchange,
+    "circle-color": STATION_STYLE.fill,
+    "circle-stroke-width": STATION_STYLE.strokeWidth.interchange,
+    "circle-stroke-color": stationStrokeExpression() as any,
     "circle-opacity": 1,
   },
 };
@@ -245,6 +223,17 @@ export const stationLabelsLayer: LayerProps = {
   },
 };
 
+export function withVisibility<T extends LayerProps>(layer: T, visible: boolean): T {
+  const layout = "layout" in layer ? layer.layout : undefined;
+  return {
+    ...layer,
+    layout: {
+      ...layout,
+      visibility: visible ? "visible" : "none",
+    },
+  } as T;
+}
+
 /**
  * Strongly typed helper to apply dynamic runtime filter expressions to MapLibre LayerProps without casting.
  */
@@ -261,7 +250,7 @@ export function withFilter<T extends LayerProps>(layer: T, filter?: unknown): T 
  */
 export function buildStatusFilter(
   status: "operational" | "construction" | "planned",
-  selectedStatuses: string[],
+  selectedStatuses: Status[],
   selectedCityId: string | null,
   selectedPhases: string[],
   selectedYear: number | null = null,
@@ -271,83 +260,31 @@ export function buildStatusFilter(
     return ["==", ["get", "status"], "__NONE__"];
   }
 
-  // If year filtering is active and status is construction/planned,
-  // hide if includeFuture is false
-  if (selectedYear !== null && (status === "construction" || status === "planned")) {
-    if (!includeFuture) {
-      return ["==", ["get", "status"], "__NONE__"];
-    }
-  }
-
-  const conditions: unknown[] = ["all", ["==", ["get", "status"], status]];
-
-  if (selectedCityId) {
-    conditions.push(["==", ["get", "city_id"], selectedCityId]);
-  }
-
-  if (selectedPhases.length > 0) {
-    conditions.push(["in", ["get", "phase"], ["literal", selectedPhases]]);
-  }
-
-  // Timeline constraint for operational segments:
-  // Show if inaugurated_on is defined and inaugurated_on <= `${selectedYear}-12-31`
-  // (Or if undated operational record, show so undated records are not silently dropped)
-  if (selectedYear !== null && status === "operational") {
-    const yearThreshold = `${selectedYear}-12-31`;
-    conditions.push([
-      "any",
-      ["!", ["has", "inaugurated_on"]],
-      ["==", ["get", "inaugurated_on"], null],
-      ["<=", ["to-string", ["get", "inaugurated_on"]], yearThreshold],
-    ]);
-  }
-
-  return conditions;
+  return buildVisibilityExpression(status, {
+    year: selectedYear,
+    includeFuture,
+    cityId: selectedCityId,
+    phases: selectedPhases,
+  });
 }
 
 /**
  * Builds WebGL filter condition for the station points layer based on store state and timeline scrubber.
  */
 export function buildStationFilter(
-  selectedStatuses: string[],
+  selectedStatuses: Status[],
   selectedCityId: string | null,
   selectedPhases: string[],
   selectedYear: number | null = null,
   includeFuture: boolean = true
-): unknown[] | undefined {
-  const conditions: unknown[] = ["all"];
-
-  if (selectedStatuses.length < 3) {
-    conditions.push(["in", ["get", "status"], ["literal", selectedStatuses]]);
-  }
-
-  if (selectedCityId) {
-    conditions.push(["==", ["get", "city_id"], selectedCityId]);
-  }
-
-  if (selectedPhases.length > 0) {
-    conditions.push(["in", ["get", "phase"], ["literal", selectedPhases]]);
-  }
-
-  // Timeline filtering for stations:
-  if (selectedYear !== null) {
-    const yearThreshold = `${selectedYear}-12-31`;
-
-    if (!includeFuture) {
-      // Only operational stations allowed
-      conditions.push(["==", ["get", "status"], "operational"]);
-    }
-
-    // Operational stations must have opened_on <= yearThreshold (or be undated)
-    conditions.push([
-      "any",
-      ["!=", ["get", "status"], "operational"],
-      ["!", ["has", "opened_on"]],
-      ["==", ["get", "opened_on"], null],
-      ["<=", ["to-string", ["get", "opened_on"]], yearThreshold],
-    ]);
-  }
-
-  return conditions.length === 1 ? undefined : conditions;
+): unknown[] {
+  const filters = selectedStatuses.map((status) =>
+    buildVisibilityExpression(status, {
+      year: selectedYear,
+      includeFuture,
+      cityId: selectedCityId,
+      phases: selectedPhases,
+    })
+  );
+  return filters.length === 1 ? filters[0] : ["any", ...filters];
 }
-

@@ -21,6 +21,7 @@ export interface MetroStoreState {
   selectedStatuses: Status[];
   selectedPhases: string[];
   searchQuery: string;
+  showStations: boolean;
 
   // Interaction & selection state
   selectedFeature: SelectedFeature | null;
@@ -34,11 +35,23 @@ export interface MetroStoreState {
   setPhases: (phases: string[]) => void;
   setSearchQuery: (query: string) => void;
   resetFilters: () => void;
+  toggleStations: () => void;
+
+  // Timeline state
+  selectedYear: number | null;
+  isPlayingTimeline: boolean;
+  includeFuture: boolean;
 
   // Selection actions
   setSelectedFeature: (feature: SelectedFeature | null) => void;
   clearSelectedFeature: () => void;
   setHoveredFeature: (hovered: HoveredFeature | null) => void;
+
+  // Timeline actions
+  setSelectedYear: (year: number | null) => void;
+  setIsPlayingTimeline: (isPlaying: boolean) => void;
+  togglePlayTimeline: () => void;
+  setIncludeFuture: (include: boolean) => void;
 }
 
 const DEFAULT_STATUSES: Status[] = ["operational", "construction", "planned"];
@@ -48,8 +61,12 @@ export const useMetroStore = create<MetroStoreState>((set) => ({
   selectedStatuses: DEFAULT_STATUSES,
   selectedPhases: [],
   searchQuery: "",
+  showStations: true,
   selectedFeature: null,
   hoveredFeature: null,
+  selectedYear: null,
+  isPlayingTimeline: false,
+  includeFuture: true,
 
   setSelectedCity: (cityId) =>
     set((state) => {
@@ -105,6 +122,19 @@ export const useMetroStore = create<MetroStoreState>((set) => ({
       selectedStatuses: DEFAULT_STATUSES,
       selectedPhases: [],
       searchQuery: "",
+      selectedYear: null,
+      isPlayingTimeline: false,
+    }),
+
+  toggleStations: () =>
+    set((state) => {
+      const showStations = !state.showStations;
+      return {
+        showStations,
+        ...(showStations || state.selectedFeature?.type !== "station"
+          ? {}
+          : { selectedFeature: null }),
+      };
     }),
 
   setSelectedFeature: (feature) => set({ selectedFeature: feature }),
@@ -117,4 +147,13 @@ export const useMetroStore = create<MetroStoreState>((set) => ({
       if (state.hoveredFeature?.id === hovered?.id) return state;
       return { hoveredFeature: hovered };
     }),
+
+  setSelectedYear: (year) => set({ selectedYear: year }),
+
+  setIsPlayingTimeline: (isPlaying) => set({ isPlayingTimeline: isPlaying }),
+
+  togglePlayTimeline: () =>
+    set((state) => ({ isPlayingTimeline: !state.isPlayingTimeline })),
+
+  setIncludeFuture: (include) => set({ includeFuture: include }),
 }));

@@ -1,20 +1,5 @@
 [
   {
-    "id": "hyderabad",
-    "name": "Hyderabad",
-    "bbox": [
-      78.3,
-      17.3,
-      78.6,
-      17.55
-    ],
-    "operator": "LTMRHL",
-    "phases": [
-      "1",
-      "2"
-    ]
-  },
-  {
     "id": "gurugram",
     "name": "Gurugram",
     "bbox": [
@@ -44,22 +29,6 @@
       "1"
     ],
     "network_id": "navi-mumbai-metro"
-  },
-  {
-    "id": "noida",
-    "name": "Noida",
-    "bbox": [
-      77.34,
-      28.44,
-      77.56,
-      28.6
-    ],
-    "operator": "NMRC",
-    "phases": [
-      "1",
-      "2"
-    ],
-    "network_id": "noida-metro"
   },
   {
     "id": "chennai",
@@ -149,6 +118,38 @@
     ]
   },
   {
+    "id": "delhi",
+    "name": "Delhi",
+    "bbox": [
+      76.84,
+      28.4,
+      77.35,
+      28.88
+    ],
+    "operator": "DMRC",
+    "phases": [
+      "I",
+      "II",
+      "III",
+      "IV"
+    ]
+  },
+  {
+    "id": "hyderabad",
+    "name": "Hyderabad",
+    "bbox": [
+      78.3,
+      17.3,
+      78.6,
+      17.55
+    ],
+    "operator": "LTMRHL",
+    "phases": [
+      "1",
+      "2"
+    ]
+  },
+  {
     "id": "ahmedabad",
     "name": "Ahmedabad",
     "bbox": [
@@ -166,20 +167,19 @@
     ]
   },
   {
-    "id": "delhi",
-    "name": "Delhi",
+    "id": "noida",
+    "name": "Noida",
     "bbox": [
-      76.84,
-      28.4,
-      77.35,
-      28.88
+      77.34,
+      28.44,
+      77.56,
+      28.6
     ],
-    "operator": "DMRC",
+    "operator": "NMRC",
     "phases": [
-      "I",
-      "II",
-      "III",
-      "IV"
-    ]
+      "1",
+      "2"
+    ],
+    "network_id": "noida-metro"
   }
 ]

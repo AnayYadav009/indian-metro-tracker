@@ -42,6 +42,7 @@ export const LineSchema = z.object({
     .regex(/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/, "Invalid hex color"),
   operator: z.string().min(1),
   source: z.string().min(1, "source is required"),
+  aliases: z.array(z.string().min(1)).default([]).optional(),
   retrieved_at: z
     .string()
     .regex(/^\d{4}-\d{2}-\d{2}$/, "Format must be YYYY-MM-DD")
@@ -147,9 +148,7 @@ export const SegmentPropertiesSchema = z
       }
     }
 
-    const isNonMock = data.source.toLowerCase() !== "mock";
     const isManual = data.source.toLowerCase().includes("manual");
-    const isNotPureOsm = data.source.toLowerCase() !== "osm";
     const missingRefs = !data.references || data.references.length === 0;
 
     if (isManual && missingRefs) {
@@ -209,6 +208,13 @@ export const StationPropertiesSchema = z
     layout: LayoutSchema.nullable(),
     layout_source: z.enum(["operator", "osm-tag", "unverified"]).optional(),
     source: z.string().min(1, "source is required"),
+    references: z
+      .array(
+        z
+          .string()
+          .regex(/^https?:\/\//, "Reference must be a valid http or https URL")
+      )
+      .optional(),
     last_verified: z
       .string()
       .regex(/^\d{4}-\d{2}-\d{2}$/, "Format must be YYYY-MM-DD")
@@ -218,6 +224,7 @@ export const StationPropertiesSchema = z
       .regex(/^\d{4}-\d{2}-\d{2}$/, "Format must be YYYY-MM-DD")
       .optional(),
     completion_unconfirmed: z.boolean().default(false).optional(),
+    geometry_quality: z.enum(["exact", "schematic"]).default("exact").optional(),
     interchange_id: z.string().min(1).optional(),
   })
   .superRefine((data, ctx) => {

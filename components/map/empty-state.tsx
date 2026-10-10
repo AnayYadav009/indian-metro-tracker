@@ -20,7 +20,15 @@ export function EmptyFilterState() {
       ? dataset.cities.find((c) => c.id === selectedCityId)
       : null;
 
-    const criteria = { activeCity, selectedStatuses, selectedPhases, searchQuery };
+    const criteria = {
+      activeCity,
+      selectedStatuses,
+      selectedPhases,
+      searchQuery,
+      lineAliases: dataset.lines
+        .filter((line) => !selectedCityId || line.city_id === selectedCityId)
+        .flatMap((line) => line.aliases ?? []),
+    };
 
     return dataset.segments.features.some((f) =>
       matchesSegmentFilter(f.properties, criteria)

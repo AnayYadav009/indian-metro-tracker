@@ -1,812 +1,41 @@
 {
   "version": 0.6,
-  "generator": "OpenStreetMap API full relation 16533436",
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-10T09:37:21Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
   "elements": [
     {
       "type": "node",
-      "id": 1288925235,
-      "lat": 19.0317788,
-      "lon": 73.0583441,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 5,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 1288925238,
-      "lat": 19.0733629,
-      "lon": 73.0791845,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 7,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 1288925239,
-      "lat": 19.0375577,
-      "lon": 73.0653781,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 6,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 1288925241,
-      "lat": 19.0731014,
-      "lon": 73.0965541,
-      "timestamp": "2022-04-29T02:57:14Z",
-      "version": 7,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 1288925242,
-      "lat": 19.0227882,
-      "lon": 73.0496844,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 7,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 1288925243,
-      "lat": 19.0407924,
-      "lon": 73.0683225,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 6,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 1288925244,
-      "lat": 19.041355,
-      "lon": 73.0724423,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 6,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 1288925245,
-      "lat": 19.0378645,
-      "lon": 73.0631943,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 5,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 1288925246,
-      "lat": 19.0753898,
-      "lon": 73.0898039,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 9,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 1288925248,
-      "lat": 19.0269897,
-      "lon": 73.0569487,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 6,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 1288925249,
-      "lat": 19.0690751,
-      "lon": 73.0780441,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 6,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 1288925257,
-      "lat": 19.0709122,
-      "lon": 73.0784087,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 5,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 1288925259,
-      "lat": 19.0760841,
-      "lon": 73.0888579,
-      "timestamp": "2022-04-29T02:57:14Z",
-      "version": 8,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 1288925260,
-      "lat": 19.0749618,
-      "lon": 73.0860662,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 7,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 1288925263,
-      "lat": 19.075941,
-      "lon": 73.0873683,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 10,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 1288925265,
-      "lat": 19.037928,
-      "lon": 73.0659921,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 6,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 1288925268,
-      "lat": 19.0739177,
-      "lon": 73.0807458,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 7,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 1288925270,
-      "lat": 19.0734723,
-      "lon": 73.083779,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 7,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 1288925271,
-      "lat": 19.0304846,
-      "lon": 73.0577228,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 5,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 1288925272,
-      "lat": 19.0231738,
-      "lon": 73.0468241,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 7,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 1288925274,
-      "lat": 19.0527318,
-      "lon": 73.0758526,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 6,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 1288925275,
-      "lat": 19.0466136,
-      "lon": 73.0751547,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 6,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 1288925276,
-      "lat": 19.0444371,
-      "lon": 73.0747969,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 6,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 1288925277,
-      "lat": 19.0749292,
-      "lon": 73.0903316,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 8,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 1288925278,
-      "lat": 19.0736084,
-      "lon": 73.0794296,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 7,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 1288925279,
-      "lat": 19.0412834,
-      "lon": 73.0691733,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 6,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 1288925280,
-      "lat": 19.0411334,
-      "lon": 73.0687152,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 6,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 1288925281,
-      "lat": 19.0229916,
-      "lon": 73.0506298,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 7,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 1288925282,
-      "lat": 19.036275,
-      "lon": 73.0612509,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 5,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 1288925283,
-      "lat": 19.0739078,
-      "lon": 73.084702,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 7,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 1288925284,
-      "lat": 19.042044,
-      "lon": 73.0738706,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 6,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 1288925285,
-      "lat": 19.0375872,
-      "lon": 73.0623332,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 5,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 1288925286,
-      "lat": 19.0242618,
-      "lon": 73.0533806,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 6,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 1288925289,
-      "lat": 19.0225103,
-      "lon": 73.0435483,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 8,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 2143751574,
-      "lat": 19.0738909,
-      "lon": 73.0915886,
-      "timestamp": "2022-04-29T02:57:14Z",
-      "version": 6,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 2143751575,
-      "lat": 19.0740709,
-      "lon": 73.0913674,
-      "timestamp": "2022-04-29T02:57:14Z",
-      "version": 6,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 2143751576,
-      "lat": 19.0743572,
-      "lon": 73.0910151,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 7,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 2143751578,
-      "lat": 19.0733595,
-      "lon": 73.0959898,
-      "timestamp": "2022-04-29T02:57:14Z",
-      "version": 6,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 2143751579,
-      "lat": 19.0737751,
-      "lon": 73.091797,
-      "timestamp": "2022-04-29T02:57:14Z",
-      "version": 6,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 2143751580,
-      "lat": 19.0735806,
-      "lon": 73.0931575,
-      "timestamp": "2022-04-29T02:57:14Z",
-      "version": 8,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783,
+      "id": 1435294693,
+      "lat": 19.0164338,
+      "lon": 73.0806552,
       "tags": {
-        "railway": "switch"
+        "addr:city": "Navi Mumbai",
+        "addr:postcode": "410209",
+        "addr:street": "Mansarovar Station Road",
+        "alt_name": "Kamothe",
+        "internet_access": "yes",
+        "name": "Mansarovar",
+        "network": "Mumbai Suburban Railway Network",
+        "operator": "CR",
+        "platforms": "2",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "MANR",
+        "station": "light_rail",
+        "train": "yes",
+        "wheelchair": "limited",
+        "wikidata": "Q6751559",
+        "wikipedia": "en:Mansarovar railway station"
       }
-    },
-    {
-      "type": "node",
-      "id": 5411559498,
-      "lat": 19.0233054,
-      "lon": 73.044665,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 7,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5461505058,
-      "lat": 19.073598,
-      "lon": 73.0841519,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5461505059,
-      "lat": 19.0734455,
-      "lon": 73.0833729,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5461505060,
-      "lat": 19.0734886,
-      "lon": 73.0829883,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5461505061,
-      "lat": 19.0739455,
-      "lon": 73.0802284,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5461505062,
-      "lat": 19.0738343,
-      "lon": 73.0797839,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5461505063,
-      "lat": 19.0729568,
-      "lon": 73.0789889,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5461505064,
-      "lat": 19.0724938,
-      "lon": 73.0788515,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5461505065,
-      "lat": 19.0695384,
-      "lon": 73.0781188,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5461505066,
-      "lat": 19.0671511,
-      "lon": 73.0778026,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5461505067,
-      "lat": 19.0455415,
-      "lon": 73.0750606,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5461505068,
-      "lat": 19.0449893,
-      "lon": 73.0749699,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5461505069,
-      "lat": 19.042413,
-      "lon": 73.0740137,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5461505070,
-      "lat": 19.0417317,
-      "lon": 73.0736576,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5461505071,
-      "lat": 19.041478,
-      "lon": 73.0732965,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5461505072,
-      "lat": 19.0413705,
-      "lon": 73.0728532,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5461505073,
-      "lat": 19.0413193,
-      "lon": 73.0698759,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5461505074,
-      "lat": 19.0412428,
-      "lon": 73.0689915,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5461505075,
-      "lat": 19.041018,
-      "lon": 73.0685483,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5461505076,
-      "lat": 19.0376987,
-      "lon": 73.0657146,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5461505077,
-      "lat": 19.0375223,
-      "lon": 73.064919,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5461505078,
-      "lat": 19.0378409,
-      "lon": 73.0628384,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5461505079,
-      "lat": 19.0377377,
-      "lon": 73.0625736,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5461505080,
-      "lat": 19.0374672,
-      "lon": 73.0622019,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5461505081,
-      "lat": 19.0340356,
-      "lon": 73.0598617,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5461505082,
-      "lat": 19.0352472,
-      "lon": 73.0605306,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5461505083,
-      "lat": 19.0357935,
-      "lon": 73.0608658,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5461505084,
-      "lat": 19.0332348,
-      "lon": 73.0593329,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5461505085,
-      "lat": 19.0312403,
-      "lon": 73.0580298,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5461505086,
-      "lat": 19.0267809,
-      "lon": 73.0568551,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 5,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5461505087,
-      "lat": 19.0266206,
-      "lon": 73.0567532,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 5,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5461505088,
-      "lat": 19.0264459,
-      "lon": 73.0565846,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
     },
     {
       "type": "node",
       "id": 5461505089,
       "lat": 19.0252973,
       "lon": 73.0549245,
-      "timestamp": "2025-08-01T05:05:31Z",
-      "version": 9,
-      "changeset": 169798299,
-      "user": "RanChin",
-      "uid": 672953,
       "tags": {
         "name": "Belpada",
         "name:mr": "बेलपाडा",
@@ -817,465 +46,9 @@
     },
     {
       "type": "node",
-      "id": 5461505090,
-      "lat": 19.0228417,
-      "lon": 73.0501795,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5461505091,
-      "lat": 19.0229005,
-      "lon": 73.048722,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5461505092,
-      "lat": 19.0234401,
-      "lon": 73.0451358,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5461505093,
-      "lat": 19.0234134,
-      "lon": 73.0456195,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5461505094,
-      "lat": 19.0234066,
-      "lon": 73.0449424,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5461505095,
-      "lat": 19.0234509,
-      "lon": 73.0453536,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5461505096,
-      "lat": 19.0215665,
-      "lon": 73.0418972,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5461505098,
-      "lat": 19.0375206,
-      "lon": 73.0651672,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5461505099,
-      "lat": 19.0376127,
-      "lon": 73.0655423,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5461505100,
-      "lat": 19.0377933,
-      "lon": 73.0626978,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5461505101,
-      "lat": 19.0378677,
-      "lon": 73.0629785,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5461505102,
-      "lat": 19.0376753,
-      "lon": 73.0624509,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5461505103,
-      "lat": 19.0378307,
-      "lon": 73.0634262,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5461505104,
-      "lat": 19.0414064,
-      "lon": 73.0730749,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5461505105,
-      "lat": 19.041587,
-      "lon": 73.0734889,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5461505106,
-      "lat": 19.0418845,
-      "lon": 73.0737759,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5461505107,
-      "lat": 19.0447132,
-      "lon": 73.074899,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5461505108,
-      "lat": 19.0452654,
-      "lon": 73.0750184,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5461505109,
-      "lat": 19.0564372,
-      "lon": 73.0763698,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 5,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5461505110,
-      "lat": 19.0731605,
-      "lon": 73.079063,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5461505111,
-      "lat": 19.0732649,
-      "lon": 73.0791136,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5461505112,
-      "lat": 19.0734946,
-      "lon": 73.0792976,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5461505113,
-      "lat": 19.0737316,
-      "lon": 73.0795986,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5461505114,
-      "lat": 19.0739052,
-      "lon": 73.080002,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5461505115,
-      "lat": 19.0739501,
-      "lon": 73.080475,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5461505116,
-      "lat": 19.0734583,
-      "lon": 73.0831756,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5461505117,
-      "lat": 19.0734456,
-      "lon": 73.0835754,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5461505118,
-      "lat": 19.073528,
-      "lon": 73.0839794,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5461505119,
-      "lat": 19.0737299,
-      "lon": 73.08444,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5461505120,
-      "lat": 19.0760511,
-      "lon": 73.0875636,
-      "timestamp": "2022-04-29T02:57:14Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5461507521,
-      "lat": 19.0761067,
-      "lon": 73.0876861,
-      "timestamp": "2022-04-29T02:57:14Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5461507522,
-      "lat": 19.0761921,
-      "lon": 73.0879744,
-      "timestamp": "2022-04-29T02:57:14Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5461507523,
-      "lat": 19.0762135,
-      "lon": 73.0883229,
-      "timestamp": "2022-04-29T02:57:14Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5461507524,
-      "lat": 19.0762111,
-      "lon": 73.0881261,
-      "timestamp": "2022-04-29T02:57:14Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5461507525,
-      "lat": 19.075929,
-      "lon": 73.0891284,
-      "timestamp": "2022-04-29T02:57:14Z",
-      "version": 6,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5461507526,
-      "lat": 19.0751745,
-      "lon": 73.0900581,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 6,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5461507527,
-      "lat": 19.075738,
-      "lon": 73.0893853,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 6,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5461507528,
-      "lat": 19.0761769,
-      "lon": 73.088583,
-      "timestamp": "2022-04-29T02:57:14Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5461507529,
-      "lat": 19.0759991,
-      "lon": 73.0890276,
-      "timestamp": "2022-04-29T02:57:14Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5461507530,
-      "lat": 19.0736648,
-      "lon": 73.092153,
-      "timestamp": "2022-04-29T02:57:14Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5461507531,
-      "lat": 19.0732583,
-      "lon": 73.0962739,
-      "timestamp": "2022-04-29T02:57:14Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
       "id": 5501092417,
       "lat": 19.0230031,
       "lon": 73.0479468,
-      "timestamp": "2025-08-01T05:05:31Z",
-      "version": 11,
-      "changeset": 169798299,
-      "user": "RanChin",
-      "uid": 672953,
       "tags": {
         "name": "RBI Colony",
         "name:mr": "आर.बी.आय. कॉलनी",
@@ -1286,36 +59,9 @@
     },
     {
       "type": "node",
-      "id": 5501092419,
-      "lat": 19.0308692,
-      "lon": 73.0578748,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5501092420,
-      "lat": 19.0302972,
-      "lon": 73.0576698,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
       "id": 5501092821,
       "lat": 19.0326108,
       "lon": 73.0589404,
-      "timestamp": "2026-04-23T02:51:12Z",
-      "version": 11,
-      "changeset": 181697478,
-      "user": "contrapunctus",
-      "uid": 4685130,
       "tags": {
         "name": "Utsav Chowk",
         "name:en": "Utsav Chowk",
@@ -1331,11 +77,6 @@
       "id": 5501092822,
       "lat": 19.0376877,
       "lon": 73.0640937,
-      "timestamp": "2025-08-01T05:05:31Z",
-      "version": 10,
-      "changeset": 169798299,
-      "user": "RanChin",
-      "uid": 672953,
       "tags": {
         "name": "Kendriya Vihar",
         "name:mr": "केंद्रीय विहार",
@@ -1349,11 +90,6 @@
       "id": 5501092823,
       "lat": 19.0432267,
       "lon": 73.0743386,
-      "timestamp": "2025-08-01T05:05:31Z",
-      "version": 12,
-      "changeset": 169798299,
-      "user": "RanChin",
-      "uid": 672953,
       "tags": {
         "name": "Kharghar Village",
         "name:mr": "खारघर गाव",
@@ -1368,11 +104,6 @@
       "id": 5501092824,
       "lat": 19.0536797,
       "lon": 73.0759837,
-      "timestamp": "2023-10-21T03:05:00Z",
-      "version": 9,
-      "changeset": 142905164,
-      "user": "Vonter",
-      "uid": 3926189,
       "tags": {
         "name": "Central Park",
         "name:mr": "सेंट्रल पार्क",
@@ -1386,11 +117,6 @@
       "id": 5501092825,
       "lat": 19.063875,
       "lon": 73.0773484,
-      "timestamp": "2023-10-21T03:05:00Z",
-      "version": 9,
-      "changeset": 142905164,
-      "user": "Vonter",
-      "uid": 3926189,
       "tags": {
         "name": "Pethpada",
         "name:mr": "पेठपाडा",
@@ -1404,11 +130,6 @@
       "id": 5501092826,
       "lat": 19.0736878,
       "lon": 73.0818696,
-      "timestamp": "2023-10-21T03:05:00Z",
-      "version": 10,
-      "changeset": 142905164,
-      "user": "Vonter",
-      "uid": 3926189,
       "tags": {
         "name": "Sector 34",
         "name:mr": "सेक्टर 34",
@@ -1422,11 +143,6 @@
       "id": 5501092827,
       "lat": 19.074636,
       "lon": 73.0906723,
-      "timestamp": "2023-10-21T03:05:00Z",
-      "version": 11,
-      "changeset": 142905164,
-      "user": "Vonter",
-      "uid": 3926189,
       "tags": {
         "name": "Panchanand",
         "name:mr": "पंचानंद",
@@ -1440,11 +156,6 @@
       "id": 5501092830,
       "lat": 19.0722277,
       "lon": 73.0978588,
-      "timestamp": "2024-02-12T05:46:36Z",
-      "version": 11,
-      "changeset": 147352025,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783,
       "tags": {
         "name": "Pendhar",
         "name:mr": "पेंढार",
@@ -1455,378 +166,142 @@
     },
     {
       "type": "node",
-      "id": 5501092831,
-      "lat": 19.0736264,
-      "lon": 73.092559,
-      "timestamp": "2022-04-29T02:57:14Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5647469772,
-      "lat": 19.0756262,
-      "lon": 73.0895219,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 6,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5647469786,
-      "lat": 19.0734006,
-      "lon": 73.0955366,
-      "timestamp": "2022-04-29T02:57:14Z",
-      "version": 6,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5647469797,
-      "lat": 19.0737199,
-      "lon": 73.0919335,
-      "timestamp": "2022-04-29T02:57:14Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5669708920,
-      "lat": 19.0479184,
-      "lon": 73.0752783,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5669709421,
-      "lat": 19.0472635,
-      "lon": 73.0752097,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5669709422,
-      "lat": 19.0475859,
-      "lon": 73.0752399,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5669709423,
-      "lat": 19.0458446,
-      "lon": 73.0750924,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5707546985,
-      "lat": 19.0761517,
-      "lon": 73.0878195,
-      "timestamp": "2022-04-29T02:57:14Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5707546986,
-      "lat": 19.0761779,
-      "lon": 73.0879146,
-      "timestamp": "2022-04-29T02:57:14Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5707546987,
-      "lat": 19.0762022,
-      "lon": 73.0880375,
-      "timestamp": "2022-04-29T02:57:14Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5707546988,
-      "lat": 19.0762147,
-      "lon": 73.0882224,
-      "timestamp": "2022-04-29T02:57:14Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5707546989,
-      "lat": 19.0762048,
-      "lon": 73.0884462,
-      "timestamp": "2022-04-29T02:57:14Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5707546990,
-      "lat": 19.0761359,
-      "lon": 73.0887217,
-      "timestamp": "2022-04-29T02:57:14Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5707546991,
-      "lat": 19.0758369,
-      "lon": 73.0892589,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 6,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5740414501,
-      "lat": 19.0298173,
-      "lon": 73.0575505,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5740414503,
-      "lat": 19.027338,
-      "lon": 73.0570258,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5740414509,
-      "lat": 19.0413059,
-      "lon": 73.0693862,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5741240060,
-      "lat": 19.0232202,
-      "lon": 73.0445229,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 5745080124,
-      "lat": 19.0697439,
-      "lon": 73.0781511,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 4,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 5834344980,
-      "lat": 19.0209561,
-      "lon": 73.0407644,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 5,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
-    },
-    {
-      "type": "node",
-      "id": 6045572047,
-      "lat": 19.021519,
-      "lon": 73.0417866,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 6,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783,
+      "id": 5737097346,
+      "lat": 19.0746038,
+      "lon": 73.0906422,
       "tags": {
-        "railway": "switch"
+        "name": "Panchanand",
+        "name:mr": "पंचानंद",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
       }
     },
     {
       "type": "node",
-      "id": 7904575794,
-      "lat": 19.0727235,
-      "lon": 73.0971155,
-      "timestamp": "2022-04-29T02:57:14Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783,
+      "id": 5737097379,
+      "lat": 19.0736458,
+      "lon": 73.0818604,
       "tags": {
-        "railway": "switch"
+        "name": "Sector 34",
+        "name:mr": "सेक्टर 34",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
       }
     },
     {
       "type": "node",
-      "id": 7904575796,
-      "lat": 19.0219122,
-      "lon": 73.0424898,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783,
+      "id": 5737097397,
+      "lat": 19.0638698,
+      "lon": 73.0773935,
       "tags": {
-        "railway": "switch"
+        "name": "Pethpada",
+        "name:mr": "पेठपाडा",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
       }
     },
     {
       "type": "node",
-      "id": 7904575798,
-      "lat": 19.0216754,
-      "lon": 73.0420653,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 5,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783,
+      "id": 5737097400,
+      "lat": 19.0536741,
+      "lon": 73.0760287,
       "tags": {
-        "railway": "switch"
+        "name": "Central Park",
+        "name:mr": "सेंट्रल पार्क",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
       }
     },
     {
       "type": "node",
-      "id": 7904575801,
-      "lat": 19.0411941,
-      "lon": 73.0688439,
-      "timestamp": "2021-03-15T10:11:31Z",
-      "version": 3,
-      "changeset": 101037314,
-      "user": "w9ddVKFwXt7KqWmj",
-      "uid": 12093414
+      "id": 5737097412,
+      "lat": 19.0432122,
+      "lon": 73.0743813,
+      "tags": {
+        "name": "Khargar Village",
+        "name:mr": "खारघर गाव",
+        "network": "Navi Mumbai Metro",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
     },
     {
       "type": "node",
-      "id": 9701981512,
-      "lat": 19.0229454,
-      "lon": 73.0505207,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 1,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
+      "id": 5737097434,
+      "lat": 19.0376457,
+      "lon": 73.0640843,
+      "tags": {
+        "name": "Kendriya Vihar",
+        "name:mr": "केंद्रीय विहार",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
     },
     {
       "type": "node",
-      "id": 9701981513,
-      "lat": 19.022905,
-      "lon": 73.050409,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 1,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
+      "id": 5737097449,
+      "lat": 19.0325879,
+      "lon": 73.0589788,
+      "tags": {
+        "name": "Utsav Chowk",
+        "name:en": "Utsav Chowk",
+        "name:hi": "उत्सव चौक",
+        "name:mr": "उत्सव चौक",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
     },
     {
       "type": "node",
-      "id": 9701981514,
-      "lat": 19.0228703,
-      "lon": 73.0502952,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 1,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
+      "id": 5737097459,
+      "lat": 19.0252625,
+      "lon": 73.0549511,
+      "tags": {
+        "name": "Belpada",
+        "name:mr": "बेलपाडा",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
     },
     {
       "type": "node",
-      "id": 9701981515,
-      "lat": 19.0228183,
-      "lon": 73.0500572,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 1,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
+      "id": 5737097465,
+      "lat": 19.0229607,
+      "lon": 73.0479398,
+      "tags": {
+        "name": "RBI Colony",
+        "name:mr": "आर.बी.आय. कॉलनी",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
     },
     {
       "type": "node",
-      "id": 9701981516,
-      "lat": 19.0228015,
-      "lon": 73.0499336,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 1,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
+      "id": 5737097474,
+      "lat": 19.0721921,
+      "lon": 73.0978325,
+      "tags": {
+        "name": "Pendhar",
+        "name:mr": "पेंढार",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
     },
     {
       "type": "node",
-      "id": 9701992617,
-      "lat": 19.0227915,
-      "lon": 73.0498092,
-      "timestamp": "2022-04-29T03:07:19Z",
-      "version": 1,
-      "changeset": 120328394,
-      "user": "BharatRV5avB6N",
-      "uid": 13422783
-    },
-    {
-      "type": "node",
-      "id": 11278650147,
-      "lat": 19.0206636,
-      "lon": 73.0402367,
-      "timestamp": "2023-10-21T03:05:00Z",
-      "version": 2,
-      "changeset": 142905164,
-      "user": "Vonter",
-      "uid": 3926189,
+      "id": 11278650146,
+      "lat": 19.0205289,
+      "lon": 73.040306,
       "tags": {
         "name": "CBD Belapur",
         "name:mr": "सी बी डी बेलापूर",
@@ -1837,272 +312,2070 @@
     },
     {
       "type": "node",
-      "id": 11954356520,
-      "lat": 19.0231183,
-      "lon": 73.0471892,
-      "timestamp": "2024-06-03T18:49:06Z",
-      "version": 1,
-      "changeset": 152213242,
-      "user": "Kastenbrust",
-      "uid": 14593262
+      "id": 11278650147,
+      "lat": 19.0206636,
+      "lon": 73.0402367,
+      "tags": {
+        "name": "CBD Belapur",
+        "name:mr": "सी बी डी बेलापूर",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
     },
     {
       "type": "node",
-      "id": 11954356525,
-      "lat": 19.0231551,
-      "lon": 73.0444336,
-      "timestamp": "2024-06-03T18:49:06Z",
-      "version": 1,
-      "changeset": 152213242,
-      "user": "Kastenbrust",
-      "uid": 14593262
+      "id": 11335491947,
+      "lat": 19.0205999,
+      "lon": 73.0402663,
+      "tags": {
+        "name": "CBD Belapur",
+        "name:mr": "सी बी डी बेलापूर",
+        "network": "Navi Mumbai Metro",
+        "operator": "CIDCO",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11335491948,
+      "lat": 19.0229846,
+      "lon": 73.0479433,
+      "tags": {
+        "name": "RBI Colony",
+        "name:mr": "आर.बी.आय. कॉलनी",
+        "network": "Navi Mumbai Metro",
+        "operator": "CIDCO",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 14078180443,
+      "lat": 19.0722115,
+      "lon": 73.0978436,
+      "tags": {
+        "layer": "1",
+        "name": "Pendhar",
+        "name:mr": "पेंढार",
+        "operator": "CIDCO",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes"
+      }
     },
     {
       "type": "way",
-      "id": 113693640,
-      "timestamp": "2026-08-07T07:53:38Z",
-      "version": 37,
-      "changeset": 187070882,
-      "user": "Claudius Henrichs",
-      "uid": 18069,
+      "id": 538683349,
+      "bounds": {
+        "minlat": 19.009976,
+        "minlon": 73.094071,
+        "maxlat": 19.0746679,
+        "maxlon": 73.1207145
+      },
       "nodes": [
-        11278650147,
-        5834344980,
-        6045572047,
-        5461505096,
-        7904575798,
-        7904575796,
-        1288925289,
-        11954356525,
-        5741240060,
-        5411559498,
-        5461505094,
-        5461505092,
-        5461505095,
-        5461505093,
-        1288925272,
-        11954356520,
-        5501092417,
-        5461505091,
-        1288925242,
-        9701992617,
-        9701981516,
-        9701981515,
-        5461505090,
-        9701981514,
-        9701981513,
-        9701981512,
-        1288925281,
-        1288925286,
-        5461505089,
-        5461505088,
-        5461505087,
-        5461505086,
-        1288925248,
-        5740414503,
-        5740414501,
-        5501092420,
-        1288925271,
-        5501092419,
-        5461505085,
-        1288925235,
-        5501092821,
-        5461505084,
-        5461505081,
-        5461505082,
-        5461505083,
-        1288925282,
-        5461505080,
-        1288925285,
-        5461505102,
-        5461505079,
-        5461505100,
-        5461505078,
-        5461505101,
-        1288925245,
-        5461505103,
-        5501092822,
-        5461505077,
-        5461505098,
-        1288925239,
-        5461505099,
-        5461505076,
-        1288925265,
-        1288925243,
-        5461505075,
-        1288925280,
-        7904575801,
-        5461505074,
-        1288925279,
-        5740414509,
-        5461505073,
-        1288925244,
-        5461505072,
-        5461505104,
-        5461505071,
-        5461505105,
-        5461505070,
-        5461505106,
-        1288925284,
-        5461505069,
-        5501092823,
-        1288925276,
-        5461505107,
-        5461505068,
-        5461505108,
-        5461505067,
-        5669709423,
-        1288925275,
-        5669709421,
-        5669709422,
-        5669708920,
-        1288925274,
-        5501092824,
-        5461505109,
-        5501092825,
-        5461505066,
-        1288925249,
-        5461505065,
-        5745080124,
-        1288925257,
-        5461505064,
-        5461505063,
-        5461505110,
-        5461505111,
-        1288925238,
-        5461505112,
-        1288925278,
-        5461505113,
-        5461505062,
-        5461505114,
-        5461505061,
-        5461505115,
-        1288925268,
-        5501092826,
-        5461505060,
-        5461505116,
-        5461505059,
-        5461505117,
-        1288925270,
-        5461505118,
-        5461505058,
-        5461505119,
-        1288925283,
-        1288925260,
-        1288925263,
-        5461505120,
-        5461507521,
-        5707546985,
-        5707546986,
-        5461507522,
-        5707546987,
-        5461507524,
-        5707546988,
-        5461507523,
-        5707546989,
-        5461507528,
-        5707546990,
-        1288925259,
-        5461507529,
-        5461507525,
-        5707546991,
-        5461507527,
-        5647469772,
-        1288925246,
-        5461507526,
-        1288925277,
-        5501092827,
-        2143751576,
-        2143751575,
-        2143751574,
-        2143751579,
-        5647469797,
-        5461507530,
-        5501092831,
-        2143751580,
-        5647469786,
-        2143751578,
-        5461507531,
-        1288925241,
-        7904575794,
-        5501092830
+        11612694913,
+        7904575793,
+        7904575790,
+        5501092828,
+        5501092829,
+        5213726242,
+        5213726241,
+        5213726240,
+        5213726239,
+        5213726238,
+        5213726237,
+        5213726236,
+        5213726235,
+        5213726234,
+        5213726233,
+        5213726232,
+        5213726231,
+        5213726230,
+        5213726229,
+        5213726228,
+        5213726227,
+        5213726226,
+        5213726225,
+        5213726224,
+        5213726223,
+        5213726222,
+        5213726221,
+        5213722520,
+        5213722519,
+        5213722518,
+        5213722517,
+        5213722516,
+        9645724842,
+        5213722515,
+        5213722514,
+        5213722513,
+        5213722512,
+        5213722511,
+        5213722510,
+        5213722509,
+        5213722508,
+        5213722507,
+        5213722506,
+        5213722505,
+        5213722504,
+        5213722503,
+        5213722502,
+        5213722501,
+        5213722500,
+        5213722499,
+        5213722498,
+        5213722497,
+        5213722496,
+        5623803723,
+        5213722495,
+        5213722494,
+        5213722493,
+        5213722492,
+        5213722490,
+        5213722489,
+        5213722488,
+        5213722487,
+        5213722486,
+        5623803301,
+        5213722484,
+        5623803300,
+        5623803299,
+        5213722483,
+        5623803298,
+        5213722482,
+        5623803297,
+        5213722481,
+        5213722480,
+        5213722479,
+        5624447093,
+        5624447094,
+        5213722477,
+        5213722476,
+        5213722475,
+        5624447095,
+        5226284916,
+        5213722474,
+        5213722473,
+        5213722472,
+        5213722471,
+        5624447098,
+        5213722469,
+        5624447097,
+        5213722468,
+        5624447096,
+        5213722467,
+        5624447099,
+        5213722466,
+        5213722465,
+        5213722464,
+        5624447100,
+        5213722463,
+        5213722462,
+        5213722461,
+        5213722460,
+        5213722459,
+        5213722458,
+        5213722457,
+        5213722456
+      ],
+      "geometry": [
+        {
+          "lat": 19.0718968,
+          "lon": 73.0983463
+        },
+        {
+          "lat": 19.0718099,
+          "lon": 73.0984742
+        },
+        {
+          "lat": 19.0715703,
+          "lon": 73.0988311
+        },
+        {
+          "lat": 19.0705654,
+          "lon": 73.1003262
+        },
+        {
+          "lat": 19.0702726,
+          "lon": 73.1006342
+        },
+        {
+          "lat": 19.0692653,
+          "lon": 73.1014466
+        },
+        {
+          "lat": 19.0690844,
+          "lon": 73.1016099
+        },
+        {
+          "lat": 19.0689732,
+          "lon": 73.1018419
+        },
+        {
+          "lat": 19.0690016,
+          "lon": 73.1020323
+        },
+        {
+          "lat": 19.069124,
+          "lon": 73.102228
+        },
+        {
+          "lat": 19.0710094,
+          "lon": 73.1049826
+        },
+        {
+          "lat": 19.0725175,
+          "lon": 73.1073016
+        },
+        {
+          "lat": 19.074267,
+          "lon": 73.1102448
+        },
+        {
+          "lat": 19.0743672,
+          "lon": 73.1106002
+        },
+        {
+          "lat": 19.0744037,
+          "lon": 73.1111287
+        },
+        {
+          "lat": 19.074267,
+          "lon": 73.1116025
+        },
+        {
+          "lat": 19.074021,
+          "lon": 73.1122039
+        },
+        {
+          "lat": 19.0739572,
+          "lon": 73.1132335
+        },
+        {
+          "lat": 19.0739936,
+          "lon": 73.1142814
+        },
+        {
+          "lat": 19.0744857,
+          "lon": 73.1161858
+        },
+        {
+          "lat": 19.0746679,
+          "lon": 73.1166596
+        },
+        {
+          "lat": 19.0746588,
+          "lon": 73.117097
+        },
+        {
+          "lat": 19.0745039,
+          "lon": 73.1175162
+        },
+        {
+          "lat": 19.074349,
+          "lon": 73.1179535
+        },
+        {
+          "lat": 19.0742305,
+          "lon": 73.118072
+        },
+        {
+          "lat": 19.0740665,
+          "lon": 73.118154
+        },
+        {
+          "lat": 19.0738387,
+          "lon": 73.1181631
+        },
+        {
+          "lat": 19.0727908,
+          "lon": 73.1176437
+        },
+        {
+          "lat": 19.0725084,
+          "lon": 73.1175526
+        },
+        {
+          "lat": 19.0699661,
+          "lon": 73.1170059
+        },
+        {
+          "lat": 19.0697201,
+          "lon": 73.117015
+        },
+        {
+          "lat": 19.0695105,
+          "lon": 73.1171152
+        },
+        {
+          "lat": 19.0644703,
+          "lon": 73.1200613
+        },
+        {
+          "lat": 19.0637426,
+          "lon": 73.1204867
+        },
+        {
+          "lat": 19.0634419,
+          "lon": 73.1206507
+        },
+        {
+          "lat": 19.0631777,
+          "lon": 73.1207145
+        },
+        {
+          "lat": 19.0629772,
+          "lon": 73.120678
+        },
+        {
+          "lat": 19.0628041,
+          "lon": 73.1205322
+        },
+        {
+          "lat": 19.0625581,
+          "lon": 73.1200766
+        },
+        {
+          "lat": 19.0608906,
+          "lon": 73.1169148
+        },
+        {
+          "lat": 19.0594782,
+          "lon": 73.114245
+        },
+        {
+          "lat": 19.058157,
+          "lon": 73.1117938
+        },
+        {
+          "lat": 19.0577834,
+          "lon": 73.1110831
+        },
+        {
+          "lat": 19.0575282,
+          "lon": 73.1108188
+        },
+        {
+          "lat": 19.0567264,
+          "lon": 73.1103906
+        },
+        {
+          "lat": 19.0557605,
+          "lon": 73.1101446
+        },
+        {
+          "lat": 19.0536283,
+          "lon": 73.1097345
+        },
+        {
+          "lat": 19.0513321,
+          "lon": 73.1093974
+        },
+        {
+          "lat": 19.0492181,
+          "lon": 73.1090785
+        },
+        {
+          "lat": 19.0475688,
+          "lon": 73.1086957
+        },
+        {
+          "lat": 19.0463843,
+          "lon": 73.1083039
+        },
+        {
+          "lat": 19.045391,
+          "lon": 73.1078757
+        },
+        {
+          "lat": 19.0449992,
+          "lon": 73.1074838
+        },
+        {
+          "lat": 19.0448226,
+          "lon": 73.1072237
+        },
+        {
+          "lat": 19.0446927,
+          "lon": 73.1068959
+        },
+        {
+          "lat": 19.0444763,
+          "lon": 73.1053873
+        },
+        {
+          "lat": 19.0442894,
+          "lon": 73.1038255
+        },
+        {
+          "lat": 19.0442417,
+          "lon": 73.1034652
+        },
+        {
+          "lat": 19.0441473,
+          "lon": 73.1025315
+        },
+        {
+          "lat": 19.0440857,
+          "lon": 73.1023811
+        },
+        {
+          "lat": 19.0440083,
+          "lon": 73.1023014
+        },
+        {
+          "lat": 19.0438472,
+          "lon": 73.1022483
+        },
+        {
+          "lat": 19.0436493,
+          "lon": 73.1022423
+        },
+        {
+          "lat": 19.0414074,
+          "lon": 73.1022956
+        },
+        {
+          "lat": 19.0403555,
+          "lon": 73.1023006
+        },
+        {
+          "lat": 19.0393093,
+          "lon": 73.1022993
+        },
+        {
+          "lat": 19.0377645,
+          "lon": 73.1023467
+        },
+        {
+          "lat": 19.0369077,
+          "lon": 73.1023587
+        },
+        {
+          "lat": 19.0335004,
+          "lon": 73.1024451
+        },
+        {
+          "lat": 19.0331202,
+          "lon": 73.1024251
+        },
+        {
+          "lat": 19.0314702,
+          "lon": 73.1020449
+        },
+        {
+          "lat": 19.030142,
+          "lon": 73.1017405
+        },
+        {
+          "lat": 19.0284118,
+          "lon": 73.1013354
+        },
+        {
+          "lat": 19.0280236,
+          "lon": 73.1012933
+        },
+        {
+          "lat": 19.0262206,
+          "lon": 73.1012961
+        },
+        {
+          "lat": 19.0259587,
+          "lon": 73.1013256
+        },
+        {
+          "lat": 19.024142,
+          "lon": 73.1013321
+        },
+        {
+          "lat": 19.0232215,
+          "lon": 73.1011691
+        },
+        {
+          "lat": 19.022694,
+          "lon": 73.1007653
+        },
+        {
+          "lat": 19.0225941,
+          "lon": 73.1006595
+        },
+        {
+          "lat": 19.0225074,
+          "lon": 73.100535
+        },
+        {
+          "lat": 19.0224541,
+          "lon": 73.1003174
+        },
+        {
+          "lat": 19.0224833,
+          "lon": 73.1000599
+        },
+        {
+          "lat": 19.0225903,
+          "lon": 73.0997034
+        },
+        {
+          "lat": 19.0229457,
+          "lon": 73.0989955
+        },
+        {
+          "lat": 19.0229809,
+          "lon": 73.0987692
+        },
+        {
+          "lat": 19.02297,
+          "lon": 73.0985511
+        },
+        {
+          "lat": 19.0228678,
+          "lon": 73.0983174
+        },
+        {
+          "lat": 19.0227426,
+          "lon": 73.0981162
+        },
+        {
+          "lat": 19.0225332,
+          "lon": 73.0979463
+        },
+        {
+          "lat": 19.0222853,
+          "lon": 73.0978495
+        },
+        {
+          "lat": 19.0220576,
+          "lon": 73.0978177
+        },
+        {
+          "lat": 19.0218145,
+          "lon": 73.0978102
+        },
+        {
+          "lat": 19.021062,
+          "lon": 73.0978251
+        },
+        {
+          "lat": 19.0201387,
+          "lon": 73.0978744
+        },
+        {
+          "lat": 19.0199013,
+          "lon": 73.0977995
+        },
+        {
+          "lat": 19.0197408,
+          "lon": 73.0976839
+        },
+        {
+          "lat": 19.0190437,
+          "lon": 73.0971326
+        },
+        {
+          "lat": 19.0167475,
+          "lon": 73.0953512
+        },
+        {
+          "lat": 19.0151665,
+          "lon": 73.0941621
+        },
+        {
+          "lat": 19.0149342,
+          "lon": 73.094071
+        },
+        {
+          "lat": 19.0146608,
+          "lon": 73.0940755
+        },
+        {
+          "lat": 19.012319,
+          "lon": 73.0943808
+        },
+        {
+          "lat": 19.009976,
+          "lon": 73.0947978
+        }
       ],
       "tags": {
-        "bridge": "viaduct",
+        "bridge": "yes",
+        "construction": "subway",
+        "construction:railway": "subway",
         "electrified": "contact_line",
         "frequency": "50",
         "gauge": "1435",
         "layer": "2",
-        "name": "Navi Mumbai Metro Line 1",
-        "railway": "subway",
-        "start_date": "2023-11-17",
+        "name": "Navi Mumbai Metro Line 1 - Stage 2",
+        "railway": "construction",
+        "usage": "main",
+        "voltage": "25000"
+      }
+    },
+    {
+      "type": "way",
+      "id": 610015450,
+      "bounds": {
+        "minlat": 19.0099688,
+        "minlon": 73.0940249,
+        "maxlat": 19.0746243,
+        "maxlon": 73.1206676
+      },
+      "nodes": [
+        11612694914,
+        7904575791,
+        7904575792,
+        5777542088,
+        5777542087,
+        5777542085,
+        5777542084,
+        5777542083,
+        5777542082,
+        5777542081,
+        5777542080,
+        5777542079,
+        5777542078,
+        5777542077,
+        5777542076,
+        5777542075,
+        5777542074,
+        5777542073,
+        5777542072,
+        5777542071,
+        5777542070,
+        5777542069,
+        5777542068,
+        5777542067,
+        5777542066,
+        5777542065,
+        5777542064,
+        5777542063,
+        5777542062,
+        5777542061,
+        5777542060,
+        9645724843,
+        5777542059,
+        5777542058,
+        5777542057,
+        5777542056,
+        5777542055,
+        5777542054,
+        5777542053,
+        5777541852,
+        5777541851,
+        5777541850,
+        5777541849,
+        5777541848,
+        5777541847,
+        5777541846,
+        5777541845,
+        5777541844,
+        5777541843,
+        5777541842,
+        5777541841,
+        5777541840,
+        5777541839,
+        5777541838,
+        5777541837,
+        5777541836,
+        5777541835,
+        5777541834,
+        5777541833,
+        5777541832,
+        5777541831,
+        5777541830,
+        5777541829,
+        5777541828,
+        5777541827,
+        5777541826,
+        5777541825,
+        5777541824,
+        5777541823,
+        5777541822,
+        5777541821,
+        5777541820,
+        5777541819,
+        5777541818,
+        5777541817,
+        5777541816,
+        5777541815,
+        5777541814,
+        5777541813,
+        5777541812,
+        5777541811,
+        5777541810,
+        5777541809,
+        5777541808,
+        5777541807,
+        5777541806,
+        5777541805,
+        5777541804,
+        5777541803,
+        5777541802,
+        5777541801,
+        5777541800,
+        5777541799,
+        5777541798,
+        5777541797,
+        5777541796,
+        5777541795,
+        5777541794,
+        5777541793,
+        5777541792,
+        5777541791,
+        5777541790,
+        5777542089
+      ],
+      "geometry": [
+        {
+          "lat": 19.0718613,
+          "lon": 73.0983198
+        },
+        {
+          "lat": 19.0717715,
+          "lon": 73.098452
+        },
+        {
+          "lat": 19.0715074,
+          "lon": 73.0988454
+        },
+        {
+          "lat": 19.0705325,
+          "lon": 73.1002957
+        },
+        {
+          "lat": 19.0702447,
+          "lon": 73.1005989
+        },
+        {
+          "lat": 19.0690496,
+          "lon": 73.1015809
+        },
+        {
+          "lat": 19.0689281,
+          "lon": 73.1018344
+        },
+        {
+          "lat": 19.0689601,
+          "lon": 73.1020493
+        },
+        {
+          "lat": 19.0690881,
+          "lon": 73.1022539
+        },
+        {
+          "lat": 19.0709737,
+          "lon": 73.1050088
+        },
+        {
+          "lat": 19.0724812,
+          "lon": 73.1073269
+        },
+        {
+          "lat": 19.0742271,
+          "lon": 73.110264
+        },
+        {
+          "lat": 19.0743242,
+          "lon": 73.1106085
+        },
+        {
+          "lat": 19.0743598,
+          "lon": 73.1111235
+        },
+        {
+          "lat": 19.0742262,
+          "lon": 73.1115866
+        },
+        {
+          "lat": 19.0739781,
+          "lon": 73.1121929
+        },
+        {
+          "lat": 19.0739137,
+          "lon": 73.1132328
+        },
+        {
+          "lat": 19.0739504,
+          "lon": 73.1142884
+        },
+        {
+          "lat": 19.0744445,
+          "lon": 73.1162006
+        },
+        {
+          "lat": 19.0746243,
+          "lon": 73.1166681
+        },
+        {
+          "lat": 19.0746155,
+          "lon": 73.1170878
+        },
+        {
+          "lat": 19.0744633,
+          "lon": 73.1174998
+        },
+        {
+          "lat": 19.0743118,
+          "lon": 73.1179274
+        },
+        {
+          "lat": 19.0742057,
+          "lon": 73.1180336
+        },
+        {
+          "lat": 19.074056,
+          "lon": 73.1181084
+        },
+        {
+          "lat": 19.0738476,
+          "lon": 73.1181167
+        },
+        {
+          "lat": 19.0728064,
+          "lon": 73.1176007
+        },
+        {
+          "lat": 19.0725191,
+          "lon": 73.117508
+        },
+        {
+          "lat": 19.0699697,
+          "lon": 73.1169598
+        },
+        {
+          "lat": 19.06971,
+          "lon": 73.1169694
+        },
+        {
+          "lat": 19.069491,
+          "lon": 73.1170741
+        },
+        {
+          "lat": 19.06445,
+          "lon": 73.1200206
+        },
+        {
+          "lat": 19.0637221,
+          "lon": 73.1204461
+        },
+        {
+          "lat": 19.0634269,
+          "lon": 73.1206072
+        },
+        {
+          "lat": 19.0631765,
+          "lon": 73.1206676
+        },
+        {
+          "lat": 19.0629955,
+          "lon": 73.1206347
+        },
+        {
+          "lat": 19.0628377,
+          "lon": 73.1205017
+        },
+        {
+          "lat": 19.0625959,
+          "lon": 73.120054
+        },
+        {
+          "lat": 19.0609285,
+          "lon": 73.1168924
+        },
+        {
+          "lat": 19.059516,
+          "lon": 73.1142224
+        },
+        {
+          "lat": 19.0581949,
+          "lon": 73.1117712
+        },
+        {
+          "lat": 19.0578183,
+          "lon": 73.1110549
+        },
+        {
+          "lat": 19.0575538,
+          "lon": 73.110781
+        },
+        {
+          "lat": 19.0567415,
+          "lon": 73.1103471
+        },
+        {
+          "lat": 19.0557695,
+          "lon": 73.1100996
+        },
+        {
+          "lat": 19.0536352,
+          "lon": 73.1096891
+        },
+        {
+          "lat": 19.0513382,
+          "lon": 73.1093519
+        },
+        {
+          "lat": 19.0492258,
+          "lon": 73.1090332
+        },
+        {
+          "lat": 19.04758,
+          "lon": 73.1086512
+        },
+        {
+          "lat": 19.046399,
+          "lon": 73.1082606
+        },
+        {
+          "lat": 19.0454149,
+          "lon": 73.1078364
+        },
+        {
+          "lat": 19.0450321,
+          "lon": 73.1074534
+        },
+        {
+          "lat": 19.0448608,
+          "lon": 73.1072011
+        },
+        {
+          "lat": 19.0447349,
+          "lon": 73.1068834
+        },
+        {
+          "lat": 19.0445193,
+          "lon": 73.105381
+        },
+        {
+          "lat": 19.0443325,
+          "lon": 73.1038194
+        },
+        {
+          "lat": 19.0442848,
+          "lon": 73.1034596
+        },
+        {
+          "lat": 19.0441898,
+          "lon": 73.1025196
+        },
+        {
+          "lat": 19.0441222,
+          "lon": 73.1023545
+        },
+        {
+          "lat": 19.0440312,
+          "lon": 73.1022608
+        },
+        {
+          "lat": 19.0438544,
+          "lon": 73.1022025
+        },
+        {
+          "lat": 19.0436494,
+          "lon": 73.1021963
+        },
+        {
+          "lat": 19.0414068,
+          "lon": 73.1022496
+        },
+        {
+          "lat": 19.0403554,
+          "lon": 73.1022546
+        },
+        {
+          "lat": 19.0393087,
+          "lon": 73.1022533
+        },
+        {
+          "lat": 19.0377636,
+          "lon": 73.1023007
+        },
+        {
+          "lat": 19.0369069,
+          "lon": 73.1023127
+        },
+        {
+          "lat": 19.033501,
+          "lon": 73.1023991
+        },
+        {
+          "lat": 19.0331259,
+          "lon": 73.1023794
+        },
+        {
+          "lat": 19.0314794,
+          "lon": 73.102
+        },
+        {
+          "lat": 19.0301513,
+          "lon": 73.1016956
+        },
+        {
+          "lat": 19.0284187,
+          "lon": 73.1012899
+        },
+        {
+          "lat": 19.0280258,
+          "lon": 73.1012473
+        },
+        {
+          "lat": 19.0262183,
+          "lon": 73.1012501
+        },
+        {
+          "lat": 19.0259563,
+          "lon": 73.1012796
+        },
+        {
+          "lat": 19.0241455,
+          "lon": 73.1012861
+        },
+        {
+          "lat": 19.0232387,
+          "lon": 73.1011255
+        },
+        {
+          "lat": 19.0227223,
+          "lon": 73.1007302
+        },
+        {
+          "lat": 19.0226272,
+          "lon": 73.1006295
+        },
+        {
+          "lat": 19.0225474,
+          "lon": 73.1005149
+        },
+        {
+          "lat": 19.0224982,
+          "lon": 73.1003143
+        },
+        {
+          "lat": 19.022526,
+          "lon": 73.1000697
+        },
+        {
+          "lat": 19.0226305,
+          "lon": 73.0997213
+        },
+        {
+          "lat": 19.0229874,
+          "lon": 73.0990104
+        },
+        {
+          "lat": 19.0230246,
+          "lon": 73.0987717
+        },
+        {
+          "lat": 19.023013,
+          "lon": 73.0985398
+        },
+        {
+          "lat": 19.0229059,
+          "lon": 73.098295
+        },
+        {
+          "lat": 19.0227749,
+          "lon": 73.0980844
+        },
+        {
+          "lat": 19.0225544,
+          "lon": 73.0979056
+        },
+        {
+          "lat": 19.0222958,
+          "lon": 73.0978046
+        },
+        {
+          "lat": 19.0220611,
+          "lon": 73.0977718
+        },
+        {
+          "lat": 19.0218147,
+          "lon": 73.0977642
+        },
+        {
+          "lat": 19.0210605,
+          "lon": 73.0977791
+        },
+        {
+          "lat": 19.020144,
+          "lon": 73.0978281
+        },
+        {
+          "lat": 19.0199202,
+          "lon": 73.0977575
+        },
+        {
+          "lat": 19.0197661,
+          "lon": 73.0976465
+        },
+        {
+          "lat": 19.0190696,
+          "lon": 73.0970957
+        },
+        {
+          "lat": 19.016773,
+          "lon": 73.0953139
+        },
+        {
+          "lat": 19.015187,
+          "lon": 73.0941211
+        },
+        {
+          "lat": 19.0149417,
+          "lon": 73.0940249
+        },
+        {
+          "lat": 19.0146578,
+          "lon": 73.0940296
+        },
+        {
+          "lat": 19.0123127,
+          "lon": 73.0943353
+        },
+        {
+          "lat": 19.0099688,
+          "lon": 73.0947525
+        }
+      ],
+      "tags": {
+        "bridge": "yes",
+        "construction": "subway",
+        "construction:railway": "subway",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "2",
+        "name": "Navi Mumbai Metro Line 1 - Stage 2",
+        "railway": "construction",
+        "usage": "main",
+        "voltage": "25000"
+      }
+    },
+    {
+      "type": "way",
+      "id": 847101111,
+      "bounds": {
+        "minlat": 19.0715703,
+        "minlon": 73.098452,
+        "maxlat": 19.0717715,
+        "maxlon": 73.0988311
+      },
+      "nodes": [
+        7904575791,
+        9651483592,
+        7904575790
+      ],
+      "geometry": [
+        {
+          "lat": 19.0717715,
+          "lon": 73.098452
+        },
+        {
+          "lat": 19.071666,
+          "lon": 73.0986508
+        },
+        {
+          "lat": 19.0715703,
+          "lon": 73.0988311
+        }
+      ],
+      "tags": {
+        "bridge": "yes",
+        "construction": "subway",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "2",
+        "railway": "construction",
+        "service": "crossover",
+        "usage": "main",
+        "voltage": "25000"
+      }
+    },
+    {
+      "type": "way",
+      "id": 847101112,
+      "bounds": {
+        "minlat": 19.0715074,
+        "minlon": 73.0984742,
+        "maxlat": 19.0718099,
+        "maxlon": 73.0988454
+      },
+      "nodes": [
+        7904575793,
+        9651483592,
+        7904575792
+      ],
+      "geometry": [
+        {
+          "lat": 19.0718099,
+          "lon": 73.0984742
+        },
+        {
+          "lat": 19.071666,
+          "lon": 73.0986508
+        },
+        {
+          "lat": 19.0715074,
+          "lon": 73.0988454
+        }
+      ],
+      "tags": {
+        "bridge": "yes",
+        "construction": "subway",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "2",
+        "railway": "construction",
+        "service": "crossover",
         "usage": "main",
         "voltage": "25000"
       }
     },
     {
       "type": "relation",
+      "id": 16533435,
+      "bounds": {
+        "minlat": 19.0205289,
+        "minlon": 73.040306,
+        "maxlat": 19.0761718,
+        "maxlon": 73.0978325
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 5737097474,
+          "role": "stop",
+          "lat": 19.0721921,
+          "lon": 73.0978325
+        },
+        {
+          "type": "node",
+          "ref": 5737097346,
+          "role": "stop",
+          "lat": 19.0746038,
+          "lon": 73.0906422
+        },
+        {
+          "type": "node",
+          "ref": 5737097379,
+          "role": "stop",
+          "lat": 19.0736458,
+          "lon": 73.0818604
+        },
+        {
+          "type": "node",
+          "ref": 5737097397,
+          "role": "stop",
+          "lat": 19.0638698,
+          "lon": 73.0773935
+        },
+        {
+          "type": "node",
+          "ref": 5737097400,
+          "role": "stop",
+          "lat": 19.0536741,
+          "lon": 73.0760287
+        },
+        {
+          "type": "node",
+          "ref": 5737097412,
+          "role": "stop",
+          "lat": 19.0432122,
+          "lon": 73.0743813
+        },
+        {
+          "type": "node",
+          "ref": 5737097434,
+          "role": "stop",
+          "lat": 19.0376457,
+          "lon": 73.0640843
+        },
+        {
+          "type": "node",
+          "ref": 5737097449,
+          "role": "stop",
+          "lat": 19.0325879,
+          "lon": 73.0589788
+        },
+        {
+          "type": "node",
+          "ref": 5737097459,
+          "role": "stop",
+          "lat": 19.0252625,
+          "lon": 73.0549511
+        },
+        {
+          "type": "node",
+          "ref": 5737097465,
+          "role": "stop",
+          "lat": 19.0229607,
+          "lon": 73.0479398
+        },
+        {
+          "type": "node",
+          "ref": 11278650146,
+          "role": "stop",
+          "lat": 19.0205289,
+          "lon": 73.040306
+        },
+        {
+          "type": "way",
+          "ref": 604700479,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 19.0721921,
+              "lon": 73.0978325
+            },
+            {
+              "lat": 19.0728874,
+              "lon": 73.0967934
+            },
+            {
+              "lat": 19.0730661,
+              "lon": 73.0965281
+            },
+            {
+              "lat": 19.0732195,
+              "lon": 73.0962541
+            },
+            {
+              "lat": 19.0733177,
+              "lon": 73.0959784
+            },
+            {
+              "lat": 19.0733582,
+              "lon": 73.09553
+            },
+            {
+              "lat": 19.0733708,
+              "lon": 73.0953561
+            },
+            {
+              "lat": 19.0735378,
+              "lon": 73.0931537
+            },
+            {
+              "lat": 19.0735837,
+              "lon": 73.0925539
+            },
+            {
+              "lat": 19.0736227,
+              "lon": 73.0921435
+            },
+            {
+              "lat": 19.0736793,
+              "lon": 73.0919185
+            },
+            {
+              "lat": 19.0737367,
+              "lon": 73.0917763
+            },
+            {
+              "lat": 19.0738554,
+              "lon": 73.0915629
+            },
+            {
+              "lat": 19.0740378,
+              "lon": 73.0913384
+            },
+            {
+              "lat": 19.0743251,
+              "lon": 73.0909849
+            },
+            {
+              "lat": 19.0746038,
+              "lon": 73.0906422
+            },
+            {
+              "lat": 19.074898,
+              "lon": 73.0903003
+            },
+            {
+              "lat": 19.0751458,
+              "lon": 73.0900243
+            },
+            {
+              "lat": 19.075361,
+              "lon": 73.0897702
+            },
+            {
+              "lat": 19.0755949,
+              "lon": 73.0894908
+            },
+            {
+              "lat": 19.0757048,
+              "lon": 73.0893565
+            },
+            {
+              "lat": 19.0758031,
+              "lon": 73.0892308
+            },
+            {
+              "lat": 19.0758917,
+              "lon": 73.0891055
+            },
+            {
+              "lat": 19.0759621,
+              "lon": 73.0890046
+            },
+            {
+              "lat": 19.0760451,
+              "lon": 73.0888387
+            },
+            {
+              "lat": 19.0760954,
+              "lon": 73.0887064
+            },
+            {
+              "lat": 19.0761354,
+              "lon": 73.0885714
+            },
+            {
+              "lat": 19.0761627,
+              "lon": 73.0884374
+            },
+            {
+              "lat": 19.0761706,
+              "lon": 73.0883208
+            },
+            {
+              "lat": 19.0761718,
+              "lon": 73.088223
+            },
+            {
+              "lat": 19.0761682,
+              "lon": 73.0881294
+            },
+            {
+              "lat": 19.0761596,
+              "lon": 73.0880426
+            },
+            {
+              "lat": 19.0761505,
+              "lon": 73.0879856
+            },
+            {
+              "lat": 19.0761369,
+              "lon": 73.0879284
+            },
+            {
+              "lat": 19.0761122,
+              "lon": 73.0878374
+            },
+            {
+              "lat": 19.0760685,
+              "lon": 73.0877068
+            },
+            {
+              "lat": 19.0760148,
+              "lon": 73.087588
+            },
+            {
+              "lat": 19.0759069,
+              "lon": 73.0873959
+            },
+            {
+              "lat": 19.0749286,
+              "lon": 73.0860949
+            },
+            {
+              "lat": 19.0738725,
+              "lon": 73.0847278
+            },
+            {
+              "lat": 19.0736923,
+              "lon": 73.0844621
+            },
+            {
+              "lat": 19.0735589,
+              "lon": 73.0841708
+            },
+            {
+              "lat": 19.0734875,
+              "lon": 73.0839948
+            },
+            {
+              "lat": 19.0734302,
+              "lon": 73.0837886
+            },
+            {
+              "lat": 19.0734027,
+              "lon": 73.0835786
+            },
+            {
+              "lat": 19.0734027,
+              "lon": 73.0833713
+            },
+            {
+              "lat": 19.0734156,
+              "lon": 73.0831702
+            },
+            {
+              "lat": 19.0734466,
+              "lon": 73.0829791
+            },
+            {
+              "lat": 19.0736458,
+              "lon": 73.0818604
+            },
+            {
+              "lat": 19.0738752,
+              "lon": 73.0807389
+            },
+            {
+              "lat": 19.0739071,
+              "lon": 73.0804731
+            },
+            {
+              "lat": 19.0739027,
+              "lon": 73.0802331
+            },
+            {
+              "lat": 19.0738636,
+              "lon": 73.0800136
+            },
+            {
+              "lat": 19.0737951,
+              "lon": 73.079803
+            },
+            {
+              "lat": 19.073696,
+              "lon": 73.0796241
+            },
+            {
+              "lat": 19.0735755,
+              "lon": 73.0794588
+            },
+            {
+              "lat": 19.0734651,
+              "lon": 73.0793307
+            },
+            {
+              "lat": 19.0733372,
+              "lon": 73.0792209
+            },
+            {
+              "lat": 19.0732437,
+              "lon": 73.0791533
+            },
+            {
+              "lat": 19.0731445,
+              "lon": 73.0791052
+            },
+            {
+              "lat": 19.072944,
+              "lon": 73.0790323
+            },
+            {
+              "lat": 19.0724833,
+              "lon": 73.0788955
+            },
+            {
+              "lat": 19.0709032,
+              "lon": 73.0784531
+            },
+            {
+              "lat": 19.0697349,
+              "lon": 73.0781956
+            },
+            {
+              "lat": 19.0695316,
+              "lon": 73.0781637
+            },
+            {
+              "lat": 19.0690698,
+              "lon": 73.0780892
+            },
+            {
+              "lat": 19.0671456,
+              "lon": 73.0778476
+            },
+            {
+              "lat": 19.0638698,
+              "lon": 73.0773935
+            },
+            {
+              "lat": 19.0564318,
+              "lon": 73.0764148
+            },
+            {
+              "lat": 19.0536741,
+              "lon": 73.0760287
+            },
+            {
+              "lat": 19.0527265,
+              "lon": 73.0758977
+            },
+            {
+              "lat": 19.0479134,
+              "lon": 73.0753233
+            },
+            {
+              "lat": 19.0475817,
+              "lon": 73.075285
+            },
+            {
+              "lat": 19.0472599,
+              "lon": 73.075255
+            },
+            {
+              "lat": 19.0466102,
+              "lon": 73.0751999
+            },
+            {
+              "lat": 19.0458401,
+              "lon": 73.0751375
+            },
+            {
+              "lat": 19.0455365,
+              "lon": 73.0751057
+            },
+            {
+              "lat": 19.0452588,
+              "lon": 73.0750633
+            },
+            {
+              "lat": 19.0449807,
+              "lon": 73.0750144
+            },
+            {
+              "lat": 19.044701,
+              "lon": 73.0749426
+            },
+            {
+              "lat": 19.0444227,
+              "lon": 73.0748397
+            },
+            {
+              "lat": 19.0432122,
+              "lon": 73.0743813
+            },
+            {
+              "lat": 19.0423979,
+              "lon": 73.0740562
+            },
+            {
+              "lat": 19.0420256,
+              "lon": 73.0739118
+            },
+            {
+              "lat": 19.0418612,
+              "lon": 73.0738142
+            },
+            {
+              "lat": 19.0417028,
+              "lon": 73.0736915
+            },
+            {
+              "lat": 19.0415524,
+              "lon": 73.0735161
+            },
+            {
+              "lat": 19.0414388,
+              "lon": 73.0733157
+            },
+            {
+              "lat": 19.0413647,
+              "lon": 73.0730861
+            },
+            {
+              "lat": 19.0413276,
+              "lon": 73.072857
+            },
+            {
+              "lat": 19.0413121,
+              "lon": 73.0724431
+            },
+            {
+              "lat": 19.0412528,
+              "lon": 73.0703548
+            },
+            {
+              "lat": 19.0412765,
+              "lon": 73.069879
+            },
+            {
+              "lat": 19.0412661,
+              "lon": 73.0693837
+            },
+            {
+              "lat": 19.0412447,
+              "lon": 73.0691779
+            },
+            {
+              "lat": 19.0412011,
+              "lon": 73.0690026
+            },
+            {
+              "lat": 19.0411567,
+              "lon": 73.0688594
+            },
+            {
+              "lat": 19.0410953,
+              "lon": 73.0687377
+            },
+            {
+              "lat": 19.040987,
+              "lon": 73.0685799
+            },
+            {
+              "lat": 19.0407644,
+              "lon": 73.0683568
+            },
+            {
+              "lat": 19.0378984,
+              "lon": 73.0660253
+            },
+            {
+              "lat": 19.0376631,
+              "lon": 73.0657405
+            },
+            {
+              "lat": 19.0375733,
+              "lon": 73.0655606
+            },
+            {
+              "lat": 19.0375166,
+              "lon": 73.0653915
+            },
+            {
+              "lat": 19.0374774,
+              "lon": 73.0651719
+            },
+            {
+              "lat": 19.0374796,
+              "lon": 73.064913
+            },
+            {
+              "lat": 19.0376457,
+              "lon": 73.0640843
+            },
+            {
+              "lat": 19.0377883,
+              "lon": 73.0634187
+            },
+            {
+              "lat": 19.0378215,
+              "lon": 73.0631919
+            },
+            {
+              "lat": 19.0378248,
+              "lon": 73.0629837
+            },
+            {
+              "lat": 19.0377995,
+              "lon": 73.0628506
+            },
+            {
+              "lat": 19.0377536,
+              "lon": 73.0627152
+            },
+            {
+              "lat": 19.0376994,
+              "lon": 73.0625941
+            },
+            {
+              "lat": 19.0376393,
+              "lon": 73.0624759
+            },
+            {
+              "lat": 19.0375549,
+              "lon": 73.0623631
+            },
+            {
+              "lat": 19.0374384,
+              "lon": 73.0622356
+            },
+            {
+              "lat": 19.0362489,
+              "lon": 73.061287
+            },
+            {
+              "lat": 19.0357697,
+              "lon": 73.0609037
+            },
+            {
+              "lat": 19.0352269,
+              "lon": 73.0605706
+            },
+            {
+              "lat": 19.0340145,
+              "lon": 73.0599013
+            },
+            {
+              "lat": 19.0332118,
+              "lon": 73.0593713
+            },
+            {
+              "lat": 19.0325879,
+              "lon": 73.0589788
+            },
+            {
+              "lat": 19.0317588,
+              "lon": 73.0583842
+            },
+            {
+              "lat": 19.0312231,
+              "lon": 73.0580716
+            },
+            {
+              "lat": 19.0308531,
+              "lon": 73.0579169
+            },
+            {
+              "lat": 19.0304715,
+              "lon": 73.0577661
+            },
+            {
+              "lat": 19.0302874,
+              "lon": 73.057714
+            },
+            {
+              "lat": 19.0298033,
+              "lon": 73.0575924
+            },
+            {
+              "lat": 19.0273292,
+              "lon": 73.0570685
+            },
+            {
+              "lat": 19.0269765,
+              "lon": 73.056992
+            },
+            {
+              "lat": 19.0267594,
+              "lon": 73.0568947
+            },
+            {
+              "lat": 19.0265921,
+              "lon": 73.0567874
+            },
+            {
+              "lat": 19.0264125,
+              "lon": 73.0566134
+            },
+            {
+              "lat": 19.0252625,
+              "lon": 73.0549511
+            },
+            {
+              "lat": 19.024225,
+              "lon": 73.0534041
+            },
+            {
+              "lat": 19.0229522,
+              "lon": 73.0506481
+            },
+            {
+              "lat": 19.0229052,
+              "lon": 73.0505371
+            },
+            {
+              "lat": 19.022864,
+              "lon": 73.0504236
+            },
+            {
+              "lat": 19.0228288,
+              "lon": 73.0503078
+            },
+            {
+              "lat": 19.0227996,
+              "lon": 73.0501902
+            },
+            {
+              "lat": 19.0227756,
+              "lon": 73.0500652
+            },
+            {
+              "lat": 19.0227585,
+              "lon": 73.0499388
+            },
+            {
+              "lat": 19.0227483,
+              "lon": 73.0498117
+            },
+            {
+              "lat": 19.022745,
+              "lon": 73.0496841
+            },
+            {
+              "lat": 19.022858,
+              "lon": 73.0487157
+            },
+            {
+              "lat": 19.0229607,
+              "lon": 73.0479398
+            },
+            {
+              "lat": 19.0231315,
+              "lon": 73.046816
+            },
+            {
+              "lat": 19.0233712,
+              "lon": 73.0456111
+            },
+            {
+              "lat": 19.0234082,
+              "lon": 73.0453486
+            },
+            {
+              "lat": 19.023397,
+              "lon": 73.0451383
+            },
+            {
+              "lat": 19.0233652,
+              "lon": 73.0449558
+            },
+            {
+              "lat": 19.0232681,
+              "lon": 73.0446879
+            },
+            {
+              "lat": 19.023184,
+              "lon": 73.0445491
+            },
+            {
+              "lat": 19.0224745,
+              "lon": 73.0435735
+            },
+            {
+              "lat": 19.0218693,
+              "lon": 73.0425205
+            },
+            {
+              "lat": 19.0216359,
+              "lon": 73.0421091
+            },
+            {
+              "lat": 19.0211016,
+              "lon": 73.0413294
+            },
+            {
+              "lat": 19.0208211,
+              "lon": 73.0408519
+            },
+            {
+              "lat": 19.0205289,
+              "lon": 73.040306
+            }
+          ]
+        }
+      ],
+      "tags": {
+        "colour": "#77248B",
+        "from": "Pendhar",
+        "name": "Line 1 (Pendhar → CBD Belapur)",
+        "network": "Navi Mumbai Metro",
+        "network:wikidata": "Q4503146",
+        "operator": "CIDCO",
+        "public_transport:version": "2",
+        "ref": "N1",
+        "route": "subway",
+        "to": "CBD Belapur",
+        "type": "route",
+        "wikidata": "Q17068873",
+        "wikipedia": "en:Line 1 (Navi Mumbai Metro)"
+      }
+    },
+    {
+      "type": "relation",
       "id": 16533436,
-      "timestamp": "2026-08-07T07:53:38Z",
-      "version": 8,
-      "changeset": 187070882,
-      "user": "Claudius Henrichs",
-      "uid": 18069,
+      "bounds": {
+        "minlat": 19.0206636,
+        "minlon": 73.0402367,
+        "maxlat": 19.0762147,
+        "maxlon": 73.0978588
+      },
       "members": [
         {
           "type": "node",
           "ref": 11278650147,
-          "role": "stop"
+          "role": "stop",
+          "lat": 19.0206636,
+          "lon": 73.0402367
         },
         {
           "type": "node",
           "ref": 5501092417,
-          "role": "stop"
+          "role": "stop",
+          "lat": 19.0230031,
+          "lon": 73.0479468
         },
         {
           "type": "node",
           "ref": 5461505089,
-          "role": "stop"
+          "role": "stop",
+          "lat": 19.0252973,
+          "lon": 73.0549245
         },
         {
           "type": "node",
           "ref": 5501092821,
-          "role": "stop"
+          "role": "stop",
+          "lat": 19.0326108,
+          "lon": 73.0589404
         },
         {
           "type": "node",
           "ref": 5501092822,
-          "role": "stop"
+          "role": "stop",
+          "lat": 19.0376877,
+          "lon": 73.0640937
         },
         {
           "type": "node",
           "ref": 5501092823,
-          "role": "stop"
+          "role": "stop",
+          "lat": 19.0432267,
+          "lon": 73.0743386
         },
         {
           "type": "node",
           "ref": 5501092824,
-          "role": "stop"
+          "role": "stop",
+          "lat": 19.0536797,
+          "lon": 73.0759837
         },
         {
           "type": "node",
           "ref": 5501092825,
-          "role": "stop"
+          "role": "stop",
+          "lat": 19.063875,
+          "lon": 73.0773484
         },
         {
           "type": "node",
           "ref": 5501092826,
-          "role": "stop"
+          "role": "stop",
+          "lat": 19.0736878,
+          "lon": 73.0818696
         },
         {
           "type": "node",
           "ref": 5501092827,
-          "role": "stop"
+          "role": "stop",
+          "lat": 19.074636,
+          "lon": 73.0906723
         },
         {
           "type": "node",
           "ref": 5501092830,
-          "role": "stop"
+          "role": "stop",
+          "lat": 19.0722277,
+          "lon": 73.0978588
         },
         {
           "type": "way",

@@ -2,10 +2,10 @@
 
 Use for every Tier 1 city (M10) and every Tier 2 city (M15). One city per PR. Do not batch cities into one PR.
 
-Before starting: M8 is complete and `docs/DATA_STANDARDS.md` and `docs/DATA_AUDIT.md` have been read.
+Before starting: M8 is complete and `docs/DATA-STANDARDS.md` and `docs/DATA_AUDIT.md` have been read.
 
 ## Step 0: Scope check
-Confirm from official sources that the city has a metro that is operational, under construction, or an officially sanctioned project. Confirm which systems are in scope under `DATA_STANDARDS.md` section 1. List the operators involved.
+Confirm from official sources that the city has a metro that is operational, under construction, or an officially sanctioned project. Confirm which systems are in scope under `docs/DATA-STANDARDS.md` section 1. List the operators involved.
 
 ## Step 1: Reference file (before any build)
 Create `data/reference/<city>.json` in the format from `DATA_AUDIT.md`: lines, official names, operators, terminals, operational station counts, phase opening dates, and under-construction or planned stretches with expected dates. Every value gets a source URL.

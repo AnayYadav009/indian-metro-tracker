@@ -7,6 +7,9 @@ describe("useMetroStore Zustand State Management", () => {
     useMetroStore.getState().resetFilters();
     useMetroStore.getState().clearSelectedFeature();
     useMetroStore.getState().setHoveredFeature(null);
+    if (!useMetroStore.getState().showStations) {
+      useMetroStore.getState().toggleStations();
+    }
   });
 
   it("initializes with default filter values", () => {
@@ -21,6 +24,32 @@ describe("useMetroStore Zustand State Management", () => {
     expect(state.searchQuery).toBe("");
     expect(state.selectedFeature).toBeNull();
     expect(state.hoveredFeature).toBeNull();
+    expect(state.showStations).toBe(true);
+  });
+
+  it("hides stations and clears a selected station without changing filters", () => {
+    const station = {
+      station_id: "stn",
+      name: "Station",
+      city_id: "delhi",
+      city: "Delhi",
+      line_ids: ["line"],
+      status: "operational" as const,
+      phase: "I",
+      is_interchange: false,
+      opened_on: null,
+      expected_completion: null,
+      layout: null,
+      source: "osm",
+      last_verified: null,
+    };
+    useMetroStore.getState().setSelectedFeature({ type: "station", data: station });
+    useMetroStore.getState().toggleStations();
+
+    expect(useMetroStore.getState().showStations).toBe(false);
+    expect(useMetroStore.getState().selectedFeature).toBeNull();
+    useMetroStore.getState().resetFilters();
+    expect(useMetroStore.getState().showStations).toBe(false);
   });
 
   it("updates selectedCityId and clears selectedPhases", () => {

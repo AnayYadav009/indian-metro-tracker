@@ -38,7 +38,7 @@ Rules
 | `is_interchange` | `true` only for transfers between two or more metro lines in this dataset. Connections to suburban rail, Indian Railways or monorail are not metro interchanges and go in an optional `other_connections` list with a reference. Must match `line_ids.length > 1`. |
 | `other_connections` | Optional array of non-metro connections (suburban rail, monorail, regional rail) with reference details. |
 | `effective opening date` | Derived rule: a station's effective opening date is `opened_on ?? inaugurated_on` (from its segment). This is derived at runtime and never stored as a separate duplicate field. |
-| `geometry_quality` | `"surveyed"` (or `"exact"`) \| `"schematic"`. Construction and planned stretches without sourced geometry get schematic connectors built from ordered stations (`"schematic"`). Operational geometry is never schematic. |
+| `geometry_quality` | `"exact"` \| `"schematic"` in the current schema. Exact is reserved for surveyed or construction-stage geometry; construction and planned stretches without sourced geometry use schematic connectors built from ordered stations. A future `"approximate"` value would require an additive schema and renderer change before use. Operational geometry is never schematic. |
 | `source` | `osm`, `manual` or `osm+<operator>`; `mock` only in mock data. |
 | `retrieved_at` | Date the raw OSM data was fetched (machine date). |
 | `last_verified` | Date a human or agent last checked this record against an official source. Never set automatically by the pipeline. |

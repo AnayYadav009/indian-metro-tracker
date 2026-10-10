@@ -1,32 +1,5 @@
 [
   {
-    "id": "hyd-red",
-    "name": "Red Line (Corridor I)",
-    "city": "Hyderabad",
-    "color": "#D84A4E",
-    "operator": "LTMRHL",
-    "city_id": "hyderabad",
-    "source": "osm+ltmrhl"
-  },
-  {
-    "id": "hyd-blue",
-    "name": "Blue Line (Corridor III)",
-    "city": "Hyderabad",
-    "color": "#0081BF",
-    "operator": "LTMRHL",
-    "city_id": "hyderabad",
-    "source": "osm+ltmrhl"
-  },
-  {
-    "id": "hyd-green",
-    "name": "Green Line (Corridor II)",
-    "city": "Hyderabad",
-    "color": "#008D42",
-    "operator": "LTMRHL",
-    "city_id": "hyderabad",
-    "source": "osm+ltmrhl"
-  },
-  {
     "id": "gur-rapid",
     "name": "Rapid Metro",
     "city": "Gurugram",
@@ -45,15 +18,6 @@
     "operator": "Maha Metro",
     "source": "osm+cidco",
     "notes": "Owned by CIDCO; operated and maintained by Maha Metro under a 10-year contract signed in 2021. OSM tags operator as CIDCO creating a documented source conflict."
-  },
-  {
-    "id": "noi-aqua",
-    "name": "Aqua Line",
-    "city": "Noida",
-    "city_id": "noida",
-    "color": "#00CED1",
-    "operator": "NMRC",
-    "source": "osm+nmrc"
   },
   {
     "id": "che-blue",
@@ -281,42 +245,6 @@
     "source": "osm+mtp"
   },
   {
-    "id": "ahm-blue",
-    "name": "Blue Line (Line 1 / East-West Corridor)",
-    "city": "Ahmedabad",
-    "color": "#0000FF",
-    "operator": "GMRC",
-    "city_id": "ahmedabad",
-    "source": "osm+gmrc"
-  },
-  {
-    "id": "ahm-red",
-    "name": "Red Line (Line 2 / North-South Corridor)",
-    "city": "Ahmedabad",
-    "color": "#FF0000",
-    "operator": "GMRC",
-    "city_id": "ahmedabad",
-    "source": "osm+gmrc"
-  },
-  {
-    "id": "ahm-yellow",
-    "name": "Yellow Line (Line 3 / Motera Stadium - Mahatma Mandir)",
-    "city": "Ahmedabad",
-    "color": "#FFD700",
-    "operator": "GMRC",
-    "city_id": "ahmedabad",
-    "source": "osm+gmrc"
-  },
-  {
-    "id": "ahm-violet",
-    "name": "Violet Line (Line 4 / GNLU - GIFT City Spur)",
-    "city": "Ahmedabad",
-    "color": "#8A2BE2",
-    "operator": "GMRC",
-    "city_id": "ahmedabad",
-    "source": "osm+gmrc"
-  },
-  {
     "id": "del-red",
     "name": "Red Line",
     "city": "Delhi",
@@ -396,5 +324,90 @@
     "operator": "DMRC",
     "city_id": "delhi",
     "source": "osm+dmrc"
+  },
+  {
+    "id": "del-golden",
+    "name": "Golden Line",
+    "city": "Delhi",
+    "color": "#B8860B",
+    "operator": "DMRC",
+    "city_id": "delhi",
+    "source": "dmrc+news",
+    "aliases": [
+      "Silver Line",
+      "Gold Line"
+    ]
+  },
+  {
+    "id": "hyd-red",
+    "name": "Red Line (Corridor I)",
+    "city": "Hyderabad",
+    "color": "#D84A4E",
+    "operator": "LTMRHL",
+    "city_id": "hyderabad",
+    "source": "osm+ltmrhl"
+  },
+  {
+    "id": "hyd-blue",
+    "name": "Blue Line (Corridor III)",
+    "city": "Hyderabad",
+    "color": "#0081BF",
+    "operator": "LTMRHL",
+    "city_id": "hyderabad",
+    "source": "osm+ltmrhl"
+  },
+  {
+    "id": "hyd-green",
+    "name": "Green Line (Corridor II)",
+    "city": "Hyderabad",
+    "color": "#008D42",
+    "operator": "LTMRHL",
+    "city_id": "hyderabad",
+    "source": "osm+ltmrhl"
+  },
+  {
+    "id": "ahm-blue",
+    "name": "Blue Line (Line 1 / East-West Corridor)",
+    "city": "Ahmedabad",
+    "color": "#0000FF",
+    "operator": "GMRC",
+    "city_id": "ahmedabad",
+    "source": "osm+gmrc"
+  },
+  {
+    "id": "ahm-red",
+    "name": "Red Line (Line 2 / North-South Corridor)",
+    "city": "Ahmedabad",
+    "color": "#FF0000",
+    "operator": "GMRC",
+    "city_id": "ahmedabad",
+    "source": "osm+gmrc"
+  },
+  {
+    "id": "ahm-yellow",
+    "name": "Yellow Line (Line 3 / Motera Stadium - Mahatma Mandir)",
+    "city": "Ahmedabad",
+    "color": "#FFD700",
+    "operator": "GMRC",
+    "city_id": "ahmedabad",
+    "source": "osm+gmrc"
+  },
+  {
+    "id": "ahm-violet",
+    "name": "Violet Line (Line 4 / GNLU - GIFT City Spur)",
+    "city": "Ahmedabad",
+    "color": "#8A2BE2",
+    "operator": "GMRC",
+    "city_id": "ahmedabad",
+    "source": "osm+gmrc"
+  },
+  {
+    "id": "noi-aqua",
+    "name": "Aqua Line",
+    "city": "Noida",
+    "city_id": "noida",
+    "color": "#00CED1",
+    "operator": "NMRC",
+    "source": "osm+nmrc"
   }
 ]

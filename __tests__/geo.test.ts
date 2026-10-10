@@ -10,9 +10,6 @@ import {
 
 describe("pointToSegmentDistanceM", () => {
   // Delhi area coordinates (~28.6°N, 77.2°E)
-  const lat = 28.6;
-  const cosLat = Math.cos((lat * Math.PI) / 180);
-
   it("returns 0 when point is on the segment start", () => {
     const p: [number, number] = [77.2, 28.6];
     const a: [number, number] = [77.2, 28.6];

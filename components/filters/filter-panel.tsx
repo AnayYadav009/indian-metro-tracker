@@ -70,7 +70,7 @@ export function FilterPanel() {
 
       {/* Collapsible content */}
       {!isCollapsed && (
-        <div className="mt-3 flex flex-col gap-4 text-xs">
+        <div className="mt-3 flex flex-col gap-4 text-xs max-h-[340px] sm:max-h-[calc(100vh-8rem)] overflow-y-auto pr-1">
           {/* Search box */}
           <div className="relative">
             <Search className="absolute left-2.5 top-2.5 h-3.5 w-3.5 text-slate-400" />

@@ -2,7 +2,7 @@
 
 M1 to M7 are in `docs/MILESTONES.MD`. This file continues from there.
 
-Read before starting any milestone: `docs/BLUEPRINT.md`, `docs/DATA_STANDARDS.md`, `docs/DATA_AUDIT.md`, `docs/CITY_ONBOARDING.md`, `.agents/rules/project.md`.
+Read before starting any milestone: `docs/BLUEPRINT.md`, `docs/DATA-STANDARDS.md`, `docs/DATA_AUDIT.md`, `docs/CITY_ONBOARDING.md`, `.agents/rules/project.md`.
 
 ## Working rules (apply to every milestone)
 
@@ -16,19 +16,19 @@ Read before starting any milestone: `docs/BLUEPRINT.md`, `docs/DATA_STANDARDS.md
 
 ## Overview
 
-| # | Milestone | Scope change |
-|---|---|---|
-| M8 | Data audit and repair | Build `audit:data`, audit all existing cities, fix inconsistencies at the source |
-| M9 | Data foundation v2 | Additive schema changes, geo helpers, size budget, export e2e in CI |
-| M10 | Tier 1 completion | Onboard Chennai, Hyderabad, Kolkata (and any Tier 1 city M8 finds still mock or incomplete), one city per PR |
-| M11 | Report-an-error button | Prefilled GitHub issue from line and station panels |
-| M12 | Interchange highlighting | Derived interchange clusters, distinct map marker, connecting-line chips |
-| M13 | Timeline slider | Year scrubber using existing `inaugurated_on` and `opened_on` |
-| M14 | Stats and comparison | Static `/compare/` page |
-| M15 | Tier 2 onboarding | Batches A to C, same runbook as Tier 1 |
-| M16 | Nearest station | Client-side geolocation lookup |
-| M17 | City pages and SEO | `/city/[id]/` static pages, sitemap, metadata |
-| M18 | Route finder | Client-side graph search with transfers |
+| # | Milestone | Scope change | Status |
+|---|---|---|---|
+| M8 | Data audit and repair | Build `audit:data`, audit all existing cities, fix inconsistencies at the source | In progress: one audit error remains |
+| M9 | Data foundation v2 | Additive schema changes, geo helpers, size budget, export e2e in CI | In progress: size budget gate remains |
+| M10 | Tier 1 completion | Onboard Chennai, Hyderabad, Kolkata (and any Tier 1 city M8 finds still mock or incomplete), one city per PR | In progress: audit gate remains |
+| M11 | Report-an-error button | Prefilled GitHub issue from line and station panels | Complete |
+| M12 | Interchange highlighting | Derived interchange clusters, distinct map marker, connecting-line chips | Complete |
+| M13 | Timeline slider | Year scrubber using existing `inaugurated_on` and `opened_on` | Complete |
+| M14 | Stats and comparison | Static `/compare/` page | Not started |
+| M15 | Tier 2 onboarding | Batches A to C, same runbook as Tier 1 | In progress: data exists, acceptance gate remains |
+| M16 | Nearest station | Client-side geolocation lookup | Not started |
+| M17 | City pages and SEO | `/city/[id]/` static pages, sitemap, metadata | Not started |
+| M18 | Route finder | Client-side graph search with transfers | Not started |
 
 **Gate:** M11 and later do not start until M10 is complete and every Tier 1 city has zero audit errors.
 
@@ -51,7 +51,7 @@ Tier 1 = Delhi, Bengaluru, Mumbai, Chennai, Kolkata, Hyderabad.
    - `last_verified` is set from a hardcoded date for OSM-sourced records. Introduce `retrieved_at` (machine fetch date, from the raw cache) and keep `last_verified` for human or agent verification against an official source only.
    - Station-to-segment proximity looks at vertices only. Use point-to-segment distance.
    - Remove `maps.mail.ru` from the Overpass mirror list.
-   - Phase labels: apply the convention in `DATA_STANDARDS.md` and migrate.
+   - Phase labels: apply the convention in `docs/DATA-STANDARDS.md` and migrate.
 6. **Repair data in the overrides files**, rebuild with the pipeline, re-run the audit. Every changed value has a source URL in `references`.
 7. **Final report** and `data/audit-baseline.json` (accepted warnings, each with a one-line reason).
 

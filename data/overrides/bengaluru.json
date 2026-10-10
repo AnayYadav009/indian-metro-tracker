@@ -76,6 +76,9 @@
       "inaugurated_on": "2011-10-20",
       "expected_completion": null,
       "color": "#800080",
+      "endpoint_station_ids": [
+        "blr-whitefield-kadugodi"
+      ],
       "city_id": "bengaluru"
     },
     {
