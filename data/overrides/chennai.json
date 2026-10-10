@@ -92,6 +92,9 @@
       "color": "#009A44",
       "references": [
         "https://chennaimetrorail.org"
+      ],
+      "endpoint_station_ids": [
+        "chennai-chennai-central"
       ]
     },
     {

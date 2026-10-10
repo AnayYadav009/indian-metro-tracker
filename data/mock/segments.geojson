@@ -76,9 +76,9 @@
         ]
       },
       "properties": {
-        "segment_id": "del-silver-seg-01",
-        "line_id": "del-silver",
-        "line_name": "Silver Line",
+        "segment_id": "del-golden-seg-01",
+        "line_id": "del-golden",
+        "line_name": "Golden Line",
         "city_id": "delhi",
         "city": "Delhi",
         "operator": "DMRC",
@@ -89,7 +89,7 @@
         "inaugurated_on": null,
         "expected_completion": "2026-12",
         "stations_count": 15,
-        "color": "#A0A0A0",
+        "color": "#B8860B",
         "source": "mock",
         "last_verified": "2026-10-05",
         "retrieved_at": "2026-10-07"

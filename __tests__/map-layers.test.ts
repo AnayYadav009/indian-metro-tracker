@@ -5,7 +5,9 @@ import {
   plannedLineLayer,
   stationCircleLayer,
   stationLabelsLayer,
+  withVisibility,
 } from "@/components/map/map-layers";
+import { STATION_STYLE } from "@/lib/station-style";
 
 describe("MapLibre Layer Specifications", () => {
   describe("Line status visual discrimination without relying on color", () => {
@@ -62,6 +64,16 @@ describe("MapLibre Layer Specifications", () => {
       expect(layer.source).toBe("metro-stations");
       expect(layer.paint?.["circle-radius"]).toBeDefined();
       expect(layer.paint?.["circle-stroke-width"]).toBeDefined();
+      expect(JSON.stringify(layer.paint?.["circle-stroke-width"])).toContain(
+        STATION_STYLE.strokeWidth.interchange.toString()
+      );
+      expect(layer.paint?.["circle-color"]).toBe(STATION_STYLE.fill);
+    });
+
+    it("applies MapLibre visibility without changing the source", () => {
+      const hidden = withVisibility(stationLabelsLayer, false) as Record<string, any>;
+      expect(hidden.layout?.visibility).toBe("none");
+      expect(hidden.source).toBe("metro-stations");
     });
 
     it("configures stationLabelsLayer as symbol layer with zoom threshold", () => {

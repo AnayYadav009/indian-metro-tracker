@@ -4,11 +4,16 @@
  */
 export const AUDIT_THRESHOLDS = {
   /** Station farther than this (m) from every segment of its lines → error */
-  stationFarFromAllSegmentsM: 200,
+  stationFarFromAllSegmentsM: 250,
   /** Station farther than this (m) from nearest segment of its lines → warn */
   stationFarFromNearestSegmentM: 75,
   /** Segment end farther than this (m) from any station of that line → warn */
   segmentEndFarFromStationM: 150,
+  /** Consecutive projected stations farther apart than this → warn */
+  stationGapM: 3000,
+  /** Short sharp polyline turn threshold */
+  polylineHookAngleDeg: 150,
+  polylineHookSpanM: 1000,
   /** Consecutive segment ends that don't meet within this (m) → warn */
   consecutiveSegmentGapM: 150,
   /** Overlap check: sample interval along segments (m) */

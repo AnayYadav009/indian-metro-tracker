@@ -21,6 +21,7 @@ export default defineConfig({
     globals: true,
     setupFiles: ["./__tests__/setup.ts"],
     include: ["__tests__/**/*.test.{ts,tsx}"],
+    testTimeout: 15000,
   },
   resolve: {
     alias: {

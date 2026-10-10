@@ -5,6 +5,7 @@ import { ChevronDown, ChevronUp, Layers } from "lucide-react";
 import { useMetroStore } from "@/store/use-metro-store";
 import { getMetroData } from "@/lib/data";
 import { BASEMAP_CONFIG } from "@/lib/map-config";
+import { STATION_STYLE } from "@/lib/station-style";
 
 interface MapLegendProps {
   className?: string;
@@ -119,6 +120,9 @@ export function MapLegend({ className = "" }: MapLegendProps) {
                 </div>
                 <span className="text-[10px] font-mono text-slate-400">Dotted</span>
               </div>
+              <div className="mt-1 text-[10px] text-slate-400">
+                Thin future routes are schematic, not surveyed alignments.
+              </div>
             </div>
           </div>
 
@@ -132,8 +136,16 @@ export function MapLegend({ className = "" }: MapLegendProps) {
                 data-testid="legend-station-interchange"
                 className="flex items-center gap-2"
               >
-                <div className="flex h-4 w-4 items-center justify-center rounded-full border-2 border-amber-400 bg-white shadow">
-                  <div className="h-1.5 w-1.5 rounded-full bg-slate-900" />
+                <div
+                  className="flex items-center justify-center rounded-full shadow"
+                  style={{
+                    width: `${STATION_STYLE.radius.interchange * 2}px`,
+                    height: `${STATION_STYLE.radius.interchange * 2}px`,
+                    backgroundColor: STATION_STYLE.fill,
+                    border: `${STATION_STYLE.strokeWidth.interchange}px solid ${STATION_STYLE.stroke.operational}`,
+                  }}
+                >
+                  <span className="sr-only">No inner dot</span>
                 </div>
                 <span>Interchange</span>
               </div>
@@ -142,9 +154,41 @@ export function MapLegend({ className = "" }: MapLegendProps) {
                 data-testid="legend-station-standard"
                 className="flex items-center gap-2"
               >
-                <div className="flex h-3 w-3 items-center justify-center rounded-full border border-slate-400 bg-white" />
-                <span>Standard Station</span>
+                <div
+                  className="flex items-center justify-center rounded-full"
+                  style={{
+                    width: `${STATION_STYLE.radius.standard * 2}px`,
+                    height: `${STATION_STYLE.radius.standard * 2}px`,
+                    backgroundColor: STATION_STYLE.fill,
+                    border: `${STATION_STYLE.strokeWidth.standard}px solid ${STATION_STYLE.stroke.operational}`,
+                  }}
+                />
+                <span>Standard</span>
               </div>
+            </div>
+            <div className="mt-2 flex gap-3 text-[10px]">
+              <span className="flex items-center gap-1">
+                <i
+                  className="rounded-full bg-white"
+                  style={{
+                    width: `${STATION_STYLE.radius.standard * 2}px`,
+                    height: `${STATION_STYLE.radius.standard * 2}px`,
+                    border: `${STATION_STYLE.strokeWidth.standard}px solid ${STATION_STYLE.stroke.construction}`,
+                  }}
+                />
+                Construction
+              </span>
+              <span className="flex items-center gap-1">
+                <i
+                  className="rounded-full bg-white"
+                  style={{
+                    width: `${STATION_STYLE.radius.standard * 2}px`,
+                    height: `${STATION_STYLE.radius.standard * 2}px`,
+                    border: `${STATION_STYLE.strokeWidth.standard}px solid ${STATION_STYLE.stroke.planned}`,
+                  }}
+                />
+                Planned
+              </span>
             </div>
           </div>
 

@@ -42,16 +42,59 @@
         "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
       ]
     }
+    ,
+    {
+      "osmId": 538930428,
+      "segment_id": "noi-aqua-seg-02",
+      "line_id": "noi-aqua",
+      "line_name": "Aqua Line Extension (Botanical Garden - Sector 142)",
+      "phase": "2",
+      "status": "construction",
+      "gauge": "standard",
+      "inaugurated_on": null,
+      "expected_completion": "2030",
+      "color": "#00CED1",
+      "references": [
+        "https://ddnews.gov.in",
+        "https://www.openstreetmap.org/way/538930428"
+      ],
+      "city_id": "noida"
+    }
   ],
   "interchangeStationNames": [
     "Noida Sector 51"
   ],
   "dedupeRadiusM": 160,
   "stationAliases": {
+    "Rainbow": "Noida Sector 50",
     "Rainbow Metro Station": "Noida Sector 50",
     "Depot Station": "Depot"
   },
+  "additionalStations": [
+    {
+      "osmId": 5777613685,
+      "name": "Knowledge Park",
+      "coordinates": [
+        77.500335,
+        28.457031
+      ],
+      "lineRefs": [
+        "noi-aqua"
+      ],
+      "status": "operational"
+    }
+  ],
   "stationOverrides": {
+    "noi-knowledge-park": {
+      "layout": "elevated",
+      "last_verified": "2026-10-10",
+      "status": "operational",
+      "phase": "1",
+      "opened_on": "2019-01-25",
+      "references": [
+        "https://www.nmrcnoida.com/"
+      ]
+    },
     "noi-noida-sector-51": {
       "is_interchange": true,
       "layout": "elevated",
@@ -276,6 +319,12 @@
   },
   "out_of_scope_station_ids": [
     "del-noida-sector-44",
-    "del-noida-office"
+    "del-noida-office",
+    "noi-noida-city-centre",
+    "noi-noida-sector-34",
+    "noi-noida-sector-52",
+    "noi-noida-sector-61",
+    "noi-junpat-village",
+    "noi-noida-golf-course"
   ]
 }

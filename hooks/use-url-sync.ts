@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { useMetroStore, type SelectedFeature } from "@/store/use-metro-store";
+import { useMetroStore } from "@/store/use-metro-store";
 import { getSegmentById, getStationById } from "@/lib/data";
 import type { Status } from "@/types/schema";
 
@@ -14,13 +14,17 @@ export function useUrlSync() {
   const selectedStatuses = useMetroStore((state) => state.selectedStatuses);
   const selectedPhases = useMetroStore((state) => state.selectedPhases);
   const selectedFeature = useMetroStore((state) => state.selectedFeature);
+  const selectedYear = useMetroStore((state) => state.selectedYear);
+  const showStations = useMetroStore((state) => state.showStations);
 
   const setSelectedCity = useMetroStore((state) => state.setSelectedCity);
   const setStatuses = useMetroStore((state) => state.setStatuses);
   const setPhases = useMetroStore((state) => state.setPhases);
   const setSelectedFeature = useMetroStore((state) => state.setSelectedFeature);
+  const toggleStations = useMetroStore((state) => state.toggleStations);
 
   const isInitialized = useRef(false);
+  const isHydrated = useRef(false);
 
   // 1. Initial hydration from URL on mount
   useEffect(() => {
@@ -77,14 +81,35 @@ export function useUrlSync() {
           }
         }
       }
+      // Hydrate year: ?year=2015
+      const yearParam = params.get("year");
+      if (yearParam) {
+        const yr = parseInt(yearParam, 10);
+        if (!Number.isNaN(yr) && yr >= 1984) {
+          useMetroStore.getState().setSelectedYear(yr);
+        }
+      }
+      if (
+        params.get("stations") === "0" &&
+        useMetroStore.getState().showStations
+      ) {
+        toggleStations();
+      }
+      isHydrated.current = true;
     } catch (err) {
       console.warn("Failed to parse URL search parameters:", err);
+      isHydrated.current = true;
     }
-  }, [setSelectedCity, setStatuses, setPhases, setSelectedFeature]);
+  }, [setSelectedCity, setStatuses, setPhases, setSelectedFeature, toggleStations]);
 
   // 2. Sync state updates back to URL
   useEffect(() => {
-    if (typeof window === "undefined" || !isInitialized.current) return;
+    if (
+      typeof window === "undefined" ||
+      !isInitialized.current ||
+      !isHydrated.current
+    )
+      return;
 
     try {
       const params = new URLSearchParams();
@@ -109,6 +134,14 @@ export function useUrlSync() {
         }
       }
 
+      if (selectedYear !== null) {
+        params.set("year", selectedYear.toString());
+      }
+
+      if (!showStations) {
+        params.set("stations", "0");
+      }
+
       const queryString = params.toString();
       const newUrl = queryString ? `${window.location.pathname}?${queryString}` : window.location.pathname;
 
@@ -116,5 +149,12 @@ export function useUrlSync() {
     } catch (err) {
       console.warn("Failed to update URL search parameters:", err);
     }
-  }, [selectedCityId, selectedStatuses, selectedPhases, selectedFeature]);
+  }, [
+    selectedCityId,
+    selectedStatuses,
+    selectedPhases,
+    selectedFeature,
+    selectedYear,
+    showStations,
+  ]);
 }

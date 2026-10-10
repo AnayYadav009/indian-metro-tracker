@@ -23,7 +23,7 @@ import {
   haversineDistanceKm,
   calculateLineStringLengthKm,
   pointToPolylineDistanceM,
-  pointToSegmentDistanceM,
+  nearestPointOnPolyline,
 } from "../../lib/geo";
 import { AUDIT_THRESHOLDS } from "./audit-config";
 
@@ -202,9 +202,50 @@ function isSelfIntersecting(coords: [number, number][]): boolean {
       ) {
         return true;
       }
+
     }
   }
   return false;
+}
+
+function hasRepeatedCoordinates(coords: [number, number][]): boolean {
+  const seen = new Set<string>();
+  for (const coord of coords) {
+    const key = `${coord[0]},${coord[1]}`;
+    if (seen.has(key)) return true;
+    seen.add(key);
+  }
+  return false;
+}
+
+function shortSharpTurns(
+  coords: [number, number][],
+  angleThreshold: number,
+  spanM: number
+): number {
+  let count = 0;
+  for (let i = 1; i < coords.length - 1; i++) {
+    const a = coords[i - 1];
+    const b = coords[i];
+    const c = coords[i + 1];
+    const ux = b[0] - a[0];
+    const uy = b[1] - a[1];
+    const vx = c[0] - b[0];
+    const vy = c[1] - b[1];
+    const denominator = Math.hypot(ux, uy) * Math.hypot(vx, vy);
+    if (denominator === 0) continue;
+    const angle =
+      (Math.acos(
+        Math.max(-1, Math.min(1, (ux * vx + uy * vy) / denominator))
+      ) *
+        180) /
+      Math.PI;
+    const span =
+      haversineDistanceKm(a, b) * 1000 +
+      haversineDistanceKm(b, c) * 1000;
+    if (angle > angleThreshold && span < spanM) count++;
+  }
+  return count;
 }
 
 function cross(
@@ -541,6 +582,27 @@ export function runAudit(
   }
   for (const st of stations.features) {
     const p = st.properties;
+    if (p.status !== "operational" && (!p.references || p.references.length === 0)) {
+      add(
+        p.city_id,
+        "future-record-no-reference",
+        "warn",
+        p.station_id,
+        `Future station has no source reference`
+      );
+    }
+    if (
+      p.status !== "operational" &&
+      (!p.expected_completion || p.completion_unconfirmed)
+    ) {
+      add(
+        p.city_id,
+        "future-date-unconfirmed",
+        "warn",
+        p.station_id,
+        `Future station has no verified expected completion date`
+      );
+    }
     if (!cityById.has(p.city_id)) {
       add(
         p.city_id,
@@ -733,6 +795,27 @@ export function runAudit(
   // B4: Segment end far from any station of that line
   for (const seg of segments.features) {
     const p = seg.properties;
+    if (
+      p.status !== "operational" &&
+      (!p.expected_completion || p.completion_unconfirmed)
+    ) {
+      add(
+        p.city_id,
+        "future-date-unconfirmed",
+        "warn",
+        p.segment_id,
+        `Future segment has no verified expected completion date`
+      );
+    }
+    if (p.status !== "operational" && p.references.length === 0) {
+      add(
+        p.city_id,
+        "future-record-no-reference",
+        "error",
+        p.segment_id,
+        `Future segment has no source reference`
+      );
+    }
     const coords = seg.geometry.coordinates as [number, number][];
     if (coords.length < 2) continue;
 
@@ -828,6 +911,12 @@ export function runAudit(
       for (let j = i + 1; j < lineSegs.length; j++) {
         const segA = lineSegs[i];
         const segB = lineSegs[j];
+        if (
+          segA.properties.geometry_quality === "schematic" ||
+          segB.properties.geometry_quality === "schematic"
+        ) {
+          continue;
+        }
         const coordsA = segA.geometry.coordinates as [number, number][];
         const coordsB = segB.geometry.coordinates as [number, number][];
 
@@ -903,6 +992,92 @@ export function runAudit(
           `Segment is self-intersecting`
         );
       }
+    }
+  }
+
+  // C2 geometry rules: station spacing, hooks, and segments outside the city bbox.
+  for (const [lineId, lineStations] of stationsByLineId.entries()) {
+    const lineSegments = segmentsByLineId.get(lineId) || [];
+    const ordered = [...lineStations]
+      .map((station) => {
+        let best = {
+          segmentOrder: Number.POSITIVE_INFINITY,
+          position: Number.POSITIVE_INFINITY,
+          distanceM: Number.POSITIVE_INFINITY,
+        };
+        lineSegments.forEach((segment, segmentOrder) => {
+          const projection = nearestPointOnPolyline(
+            station.geometry.coordinates as [number, number],
+            segment.geometry.coordinates as [number, number][]
+          );
+          if (projection.distanceM < best.distanceM) {
+            best = {
+              segmentOrder,
+              position: projection.segmentIndex + projection.t,
+              distanceM: projection.distanceM,
+            };
+          }
+        });
+        return { station, ...best };
+      })
+      .sort(
+        (a, b) =>
+          a.segmentOrder - b.segmentOrder || a.position - b.position
+      )
+      .map(({ station }) => station);
+    for (let i = 1; i < ordered.length; i++) {
+      const gap = haversineDistanceKm(
+        ordered[i - 1].geometry.coordinates as [number, number],
+        ordered[i].geometry.coordinates as [number, number]
+      ) * 1000;
+      if (gap > cfg.stationGapM) {
+        add(
+          ordered[i].properties.city_id,
+          "station-gap",
+          "warn",
+          `${lineId}|${ordered[i - 1].properties.station_id}|${ordered[i].properties.station_id}`,
+          `Stations are ${Math.round(gap)} m apart (threshold: ${cfg.stationGapM} m)`
+        );
+      }
+    }
+  }
+
+  for (const seg of segments.features) {
+    const p = seg.properties;
+    const coords = seg.geometry.coordinates as [number, number][];
+    const hooks = shortSharpTurns(
+      coords,
+      cfg.polylineHookAngleDeg,
+      cfg.polylineHookSpanM
+    );
+    if (hooks > 0 || hasRepeatedCoordinates(coords)) {
+      add(
+        p.city_id,
+        "polyline-hook",
+        "warn",
+        p.segment_id,
+        `Segment contains ${hooks} short sharp turn(s)${hasRepeatedCoordinates(coords) ? " or repeated coordinates" : ""}`
+      );
+    }
+
+    const city = cityById.get(p.city_id);
+    const bbox = city?.bbox;
+    if (!bbox) continue;
+    const outside = coords.some(
+      ([lng, lat]) =>
+        lng < bbox[0] ||
+        lng > bbox[2] ||
+        lat < bbox[1] ||
+        lat > bbox[3]
+    );
+    if (outside) {
+      add(
+        p.city_id,
+        "station-outside-bbox-on-segment",
+        "info",
+        p.segment_id,
+        `Segment has geometry outside the city bbox`
+      );
     }
   }
 
@@ -1149,6 +1324,25 @@ export function runAudit(
         "warn",
         p.station_id,
         `is_interchange is false but station is on ${p.line_ids.length} lines`
+      );
+    }
+    // M12: is_interchange must agree with cluster membership (interchange_id)
+    if (p.is_interchange && !p.interchange_id) {
+      add(
+        p.city_id,
+        "interchange-cluster-consistency",
+        "error",
+        p.station_id,
+        `is_interchange is true but interchange_id cluster is missing`
+      );
+    }
+    if (!p.is_interchange && p.interchange_id) {
+      add(
+        p.city_id,
+        "interchange-cluster-consistency",
+        "error",
+        p.station_id,
+        `interchange_id '${p.interchange_id}' is defined but is_interchange is false`
       );
     }
   }
@@ -1431,7 +1625,6 @@ export function runAudit(
     }
 
     const cityLines = linesByCityId.get(city.id) || [];
-    const cityLineIds = new Set(cityLines.map((l) => l.id));
 
     for (const refLine of refData.lines) {
       if (options?.outOfScopeLineIds?.includes(refLine.line_id)) {
@@ -1533,7 +1726,7 @@ export function runAudit(
             const label = isUnverified ? " (unverified reference)" : "";
             add(
               city.id,
-              "ground-truth-terminal-mismatch",
+              "reference-station-missing",
               sev,
               refLine.line_id,
               `Terminal '${terminal}' from reference not found in data station names${label}`

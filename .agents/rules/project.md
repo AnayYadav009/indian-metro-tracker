@@ -5,7 +5,7 @@ Always-on rules for every agent session. If you have an older version of this fi
 ## Read first (in this order)
 1. `docs/BLUEPRINT.md`
 2. `docs/MILESTONES.MD` (M1 to M7, complete) and `docs/MILESTONES-v2.md` (M8 onward, current)
-3. `docs/DATA_STANDARDS.md`
+3. `docs/DATA-STANDARDS.md`
 4. `docs/DATA_AUDIT.md`
 5. `docs/CITY_ONBOARDING.md` (when touching city data)
 
@@ -24,6 +24,7 @@ Always-on rules for every agent session. If you have an older version of this fi
 - Do not add a dependency without asking. Currently avoided: chart libraries, Turf, image libraries.
 - Adding a city must need data files only, no code changes.
 - No `localStorage` or `sessionStorage` use unless the owner approves it for a specific feature.
+- Station marker geometry and colours belong in `lib/station-style.ts`; shared station/segment visibility rules belong in `lib/filter-utils.ts`.
 
 ## Data rules
 - Never invent real-world facts. Unknown values stay `null` and produce an audit warning.
@@ -31,8 +32,10 @@ Always-on rules for every agent session. If you have an older version of this fi
 - Every value that comes from outside OSM needs a URL in `references` and a `last_verified` date.
 - `last_verified` means checked against an official source. The pipeline must not set it automatically. `retrieved_at` is the machine fetch date.
 - Operator belongs to the line; segments inherit it.
+- `geometry_quality` is evidence-based: use `exact` for surveyed/construction-stage geometry and `schematic` for hand-drawn or station-derived alignments.
+- Keep backward-compatible `del-silver` URL/search aliases for the Golden Line.
 - A city must pass `validate:data` and `audit:data` with zero errors before merging.
-- Follow the source hierarchy in `DATA_STANDARDS.md`. Wikipedia is never a sole source.
+- Follow the source hierarchy in `docs/DATA-STANDARDS.md`. Wikipedia is never a sole source.
 
 ## Testing
 - Every new rule or pipeline fix gets a unit test with a small fixture.

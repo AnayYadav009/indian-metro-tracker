@@ -10,6 +10,7 @@ import { MockBanner } from "@/components/ui/mock-banner";
 import { NetworkStats } from "@/components/filters/network-stats";
 import { EmptyFilterState } from "@/components/map/empty-state";
 import { OsmAttribution } from "@/components/map/osm-attribution";
+import { TimelineSlider } from "@/components/timeline/timeline-slider";
 import { BASEMAP_CONFIG } from "@/lib/map-config";
 import { getDatasetMetadataSummary } from "@/lib/data";
 
@@ -48,11 +49,11 @@ export default function HomePage() {
         <div className="flex items-center gap-2">
           <span
             data-testid="data-last-updated"
-            className="hidden items-center rounded-full border border-slate-700 bg-slate-800 px-2.5 py-0.5 text-xs font-medium text-slate-300 md:inline-flex"
+            className="inline-flex items-center rounded-full border border-slate-700 bg-slate-800 px-2 py-0.5 text-[11px] font-medium text-slate-300 md:px-2.5 md:text-xs"
           >
             {metadataSummary.badgeLabel}
           </span>
-          <span className="hidden items-center rounded-full border border-slate-700 bg-slate-800 px-2.5 py-0.5 text-xs font-medium text-slate-300 sm:inline-flex">
+          <span className="inline-flex items-center rounded-full border border-slate-700 bg-slate-800 px-2 py-0.5 text-[10px] sm:text-xs font-medium text-slate-300">
             {BASEMAP_CONFIG.name}
           </span>
         </div>
@@ -66,6 +67,7 @@ export default function HomePage() {
         <FilterPanel />
         <MetadataPanel />
         <EmptyFilterState />
+        <TimelineSlider />
         <MapCanvas className="h-full w-full" />
 
         {/* Bottom-right unified container: Legend stacked above Attribution */}

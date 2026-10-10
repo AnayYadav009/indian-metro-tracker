@@ -73,7 +73,7 @@
         "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
-          "del-silver"
+          "del-golden"
         ],
         "status": "construction",
         "phase": "IV",

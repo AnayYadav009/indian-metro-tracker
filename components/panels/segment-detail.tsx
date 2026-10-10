@@ -1,6 +1,7 @@
 import React from "react";
 import type { SegmentProperties } from "@/types/schema";
 import { StatusBadge, PhaseBadge } from "./badge-indicators";
+import { ReportIssueButton } from "./report-issue-button";
 
 interface SegmentDetailProps {
   segment: SegmentProperties;
@@ -30,6 +31,14 @@ export function SegmentDetail({ segment }: SegmentDetailProps) {
       <div className="flex flex-wrap items-center gap-2">
         <StatusBadge status={segment.status} />
         <PhaseBadge phase={segment.phase} />
+        {segment.geometry_quality === "schematic" && (
+          <span
+            data-testid="schematic-route-note"
+            className="rounded-full border border-violet-500/30 bg-violet-500/10 px-2 py-1 text-[10px] font-medium text-violet-300"
+          >
+            Schematic route
+          </span>
+        )}
       </div>
 
       {/* Detailed properties grid */}
@@ -91,6 +100,9 @@ export function SegmentDetail({ segment }: SegmentDetailProps) {
           </ul>
         </div>
       )}
+
+      {/* Report an Issue Button */}
+      <ReportIssueButton target={{ type: "segment", data: segment }} />
 
       {/* Provenance footer */}
       <div className="flex items-center justify-between border-t border-slate-800/80 pt-3 text-[11px] text-slate-400">

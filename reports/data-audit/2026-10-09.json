@@ -1,0 +1,3907 @@
+{
+  "date": "2026-10-09",
+  "summaries": [
+    {
+      "city_id": "hyderabad",
+      "city_name": "Hyderabad",
+      "lines": 3,
+      "segments": 3,
+      "stations": 57,
+      "segmentSources": {
+        "osm": 2,
+        "manual": 1
+      },
+      "stationSources": {
+        "osm": 57
+      },
+      "lineSources": {
+        "osm+ltmrhl": 3
+      }
+    },
+    {
+      "city_id": "gurugram",
+      "city_name": "Gurugram",
+      "lines": 1,
+      "segments": 2,
+      "stations": 11,
+      "segmentSources": {
+        "manual": 2
+      },
+      "stationSources": {
+        "osm": 11
+      },
+      "lineSources": {
+        "osm+rmgl": 1
+      }
+    },
+    {
+      "city_id": "navi-mumbai",
+      "city_name": "Navi Mumbai",
+      "lines": 1,
+      "segments": 1,
+      "stations": 11,
+      "segmentSources": {
+        "osm": 1
+      },
+      "stationSources": {
+        "osm": 11
+      },
+      "lineSources": {
+        "osm+cidco": 1
+      }
+    },
+    {
+      "city_id": "noida",
+      "city_name": "Noida",
+      "lines": 1,
+      "segments": 1,
+      "stations": 21,
+      "segmentSources": {
+        "osm": 1
+      },
+      "stationSources": {
+        "osm": 21
+      },
+      "lineSources": {
+        "osm+nmrc": 1
+      }
+    },
+    {
+      "city_id": "chennai",
+      "city_name": "Chennai",
+      "lines": 5,
+      "segments": 5,
+      "stations": 41,
+      "segmentSources": {
+        "osm": 5
+      },
+      "stationSources": {
+        "osm": 41
+      },
+      "lineSources": {
+        "osm+cmrl": 2,
+        "cmrl": 3
+      }
+    },
+    {
+      "city_id": "pune",
+      "city_name": "Pune",
+      "lines": 3,
+      "segments": 3,
+      "stations": 29,
+      "segmentSources": {
+        "osm": 2,
+        "manual": 1
+      },
+      "stationSources": {
+        "osm": 29
+      },
+      "lineSources": {
+        "osm+maha_metro": 2,
+        "osm+pmrda": 1
+      }
+    },
+    {
+      "city_id": "bengaluru",
+      "city_name": "Bengaluru",
+      "lines": 5,
+      "segments": 6,
+      "stations": 84,
+      "segmentSources": {
+        "osm": 3,
+        "manual": 3
+      },
+      "stationSources": {
+        "osm": 84
+      },
+      "lineSources": {
+        "osm+bmrcl": 5
+      }
+    },
+    {
+      "city_id": "mumbai",
+      "city_name": "Mumbai",
+      "lines": 7,
+      "segments": 10,
+      "stations": 74,
+      "segmentSources": {
+        "osm": 6,
+        "manual": 4
+      },
+      "stationSources": {
+        "osm": 74
+      },
+      "lineSources": {
+        "osm+mmrda": 7
+      }
+    },
+    {
+      "city_id": "kolkata",
+      "city_name": "Kolkata",
+      "lines": 5,
+      "segments": 8,
+      "stations": 56,
+      "segmentSources": {
+        "osm": 8
+      },
+      "stationSources": {
+        "osm": 56
+      },
+      "lineSources": {
+        "osm+mtp": 4,
+        "osm+kmrc": 1
+      }
+    },
+    {
+      "city_id": "ahmedabad",
+      "city_name": "Ahmedabad",
+      "lines": 4,
+      "segments": 4,
+      "stations": 53,
+      "segmentSources": {
+        "osm": 4
+      },
+      "stationSources": {
+        "osm": 53
+      },
+      "lineSources": {
+        "osm+gmrc": 4
+      }
+    },
+    {
+      "city_id": "delhi",
+      "city_name": "Delhi",
+      "lines": 9,
+      "segments": 12,
+      "stations": 215,
+      "segmentSources": {
+        "osm": 12
+      },
+      "stationSources": {
+        "osm": 215
+      },
+      "lineSources": {
+        "osm+dmrc": 9
+      }
+    }
+  ],
+  "findings": [
+    {
+      "city_id": "ahmedabad",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "ahm-blue",
+      "message": "Operational length: computed 19.79 km vs reference 21.16 km (6.5%)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "ahm-red",
+      "message": "Operational length: computed 16.68 km vs reference 18.87 km (11.6%)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "ahm-violet",
+      "message": "Operational length: computed 4.43 km vs reference 5.42 km (18.3%)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-aec",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-akshardham",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-amraiwadi",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-apmc",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-apparel-park",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-commerce-six-road",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-dholakuva-circle",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-doordarshan-kendra",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-gandhigram",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-gift-city",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-gnlu",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-gujarat-university",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-gurukul-road",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-infocity",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-jivraj-park",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-juna-koba",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-juna-sachivalaya",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-koba-circle",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-koba-gam",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-koteshwar-road",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-mahatma-mandir",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-motera-stadium",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-narmada-canal",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-nirant-cross-road",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-old-high-court",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-paldi",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-pdeu",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-rabari-colony",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-rajiv-nagar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-randesan",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-ranip",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-raysan",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-sabarmati",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-sachivalaya",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-sector-1",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-sector-10a",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-sector-16",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-sector-24",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-shreyas",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-sp-stadium",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-tapovan-circle",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-thaltej",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-thaltej-gam",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-usmanpura",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-vadaj",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-vastral",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-vastral-gam",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-vijay-nagar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "ahmedabad-vishwakarma-college",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "last-verified-distribution",
+      "severity": "info",
+      "subject": "ahmedabad",
+      "message": "last_verified distribution: 2026-10-08: 4; missing: 53"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "blr-green",
+      "message": "Operational length: computed 35.22 km vs reference 33.46 km (5.3%) (unverified reference)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "blr-yellow",
+      "message": "Operational length: computed 18.10 km vs reference 19.15 km (5.5%) (unverified reference)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-phase-date",
+      "severity": "warn",
+      "subject": "blr-green-seg-01",
+      "message": "Phase '1' opened_on: data has '2014-03-01', reference has '2015-05-01' (unverified reference)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-phase-date",
+      "severity": "warn",
+      "subject": "blr-green-seg-01",
+      "message": "Phase '1' opened_on: data has '2014-03-01', reference has '2017-06-18' (unverified reference)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-phase-date",
+      "severity": "warn",
+      "subject": "blr-purple-seg-01",
+      "message": "Phase '1' opened_on: data has '2011-10-20', reference has '2015-11-16' (unverified reference)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-phase-date",
+      "severity": "warn",
+      "subject": "blr-purple-seg-01",
+      "message": "Phase '1' opened_on: data has '2011-10-20', reference has '2016-04-30' (unverified reference)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-station-count",
+      "severity": "warn",
+      "subject": "blr-green",
+      "message": "Operational station count: data has 31, reference has 32 (unverified reference)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-station-count",
+      "severity": "warn",
+      "subject": "blr-pink",
+      "message": "Operational station count: data has 1, reference has 0 (unverified reference)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-terminal-mismatch",
+      "severity": "warn",
+      "subject": "blr-blue",
+      "message": "Terminal 'Central Silk Board' from reference not found in data station names (unverified reference)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-terminal-mismatch",
+      "severity": "warn",
+      "subject": "blr-blue",
+      "message": "Terminal 'KIAL Terminals' from reference not found in data station names (unverified reference)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-terminal-mismatch",
+      "severity": "warn",
+      "subject": "blr-pink",
+      "message": "Terminal 'Kalena Agrahara' from reference not found in data station names (unverified reference)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-terminal-mismatch",
+      "severity": "warn",
+      "subject": "blr-pink",
+      "message": "Terminal 'Nagawara' from reference not found in data station names (unverified reference)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-terminal-mismatch",
+      "severity": "warn",
+      "subject": "blr-yellow",
+      "message": "Terminal 'Bommasandra' from reference not found in data station names (unverified reference)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "interchange-consistency",
+      "severity": "warn",
+      "subject": "blr-central-silk-board",
+      "message": "is_interchange is true but station is on only 1 line(s)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "interchange-consistency",
+      "severity": "warn",
+      "subject": "blr-jayadeva-hospital",
+      "message": "is_interchange is true but station is on only 1 line(s)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-attiguppe",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-benniganahalli",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-challaghatta",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-chikkabidarakallu",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-dasarahalli",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-deepanjali-nagar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-doddakallasandra",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-garudacharpalya",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-hoodi",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-hopefarm-channasandra",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-jalahalli",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-jayadeva-interchange-uc",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-jnanabharathi",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-kadugodi-tree-park",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-kengeri",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-kengeri-bus-terminal",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-krishnarajapura",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-kundalahalli",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-madavara",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-magadi-road",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-mahakavi-kuvempu-road",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-mahalakshmi",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-manjunathanagara",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-mantri-square-sampige-road",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-mysore-road",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-nagasandra",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-nagawara-proposed",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-nallurahalli",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-pantharapalya-nayandahalli",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-pattanagere",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-pattandur-agrahara",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-peenya",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-peenya-industry",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-rajajinagar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-rajarajeshwari-nagar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-sandal-soap-factory",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-seetharampalya",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-silk-institute",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-singayyanapalya",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-sri-balagangadharanatha-swamiji-hosahalli",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-sri-sathya-sai-hospital",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-srirampura",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-thalaghattapura",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-vajarahalli",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-vijayanagar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-whitefield-kadugodi",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "blr-yeshwantpur",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-no-reference",
+      "severity": "warn",
+      "subject": "blr-green-seg-01",
+      "message": "Operational segment has no references"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-no-reference",
+      "severity": "warn",
+      "subject": "blr-purple-seg-01",
+      "message": "Operational segment has no references"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "blr-green-seg-01",
+      "message": "Segment start is 608 m from nearest station of line 'blr-green' (threshold: 150 m)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "blr-green-seg-01",
+      "message": "Segment end is 363 m from nearest station of line 'blr-green' (threshold: 150 m)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "blr-pink-seg-01",
+      "message": "Segment start is 11835 m from nearest station of line 'blr-pink' (threshold: 150 m)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "blr-planned-seg-01",
+      "message": "Segment start is 907 m from nearest station of line 'blr-purple' (threshold: 150 m)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "blr-planned-seg-01",
+      "message": "Segment end is 8974 m from nearest station of line 'blr-purple' (threshold: 150 m)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "segment-self-intersecting",
+      "severity": "warn",
+      "subject": "blr-green-seg-01",
+      "message": "Segment is self-intersecting"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "segment-self-intersecting",
+      "severity": "warn",
+      "subject": "blr-purple-seg-01",
+      "message": "Segment is self-intersecting"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "blr-mahatma-gandhi-road",
+      "message": "Station is 115 m from nearest segment of line 'blr-pink' (threshold: 75 m)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "last-verified-distribution",
+      "severity": "info",
+      "subject": "bengaluru",
+      "message": "last_verified distribution: 2026-10-06: 3; 2026-10-08: 5; missing: 82"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "che-blue",
+      "message": "Operational length: computed 31.61 km vs reference 32.65 km (3.2%)"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "che-green",
+      "message": "Operational length: computed 23.98 km vs reference 21.96 km (9.2%)"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "che-corridor-5-seg-01",
+      "message": "Segment start is 10354 m from nearest station of line 'che-corridor-5' (threshold: 150 m)"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "che-corridor-5-seg-01",
+      "message": "Segment end is 11048 m from nearest station of line 'che-corridor-5' (threshold: 150 m)"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "che-green-seg-01",
+      "message": "Segment end is 209 m from nearest station of line 'che-green' (threshold: 150 m)"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "last-verified-distribution",
+      "severity": "info",
+      "subject": "chennai",
+      "message": "last_verified distribution: 2026-10-08: 41; missing: 5"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "segment-self-intersecting",
+      "severity": "info",
+      "subject": "che-blue-seg-01",
+      "message": "Segment is self-intersecting (exempted — loop line)"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "segment-self-intersecting",
+      "severity": "info",
+      "subject": "che-corridor-5-seg-01",
+      "message": "Segment is self-intersecting (exempted — loop line)"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "segment-self-intersecting",
+      "severity": "info",
+      "subject": "che-green-seg-01",
+      "message": "Segment is self-intersecting (exempted — loop line)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "consecutive-segment-gap",
+      "severity": "warn",
+      "subject": "del-blue-seg-01|del-blue-seg-02",
+      "message": "Segments of line 'del-blue' have nearest endpoint gap of 4217 m (threshold: 150 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "consecutive-segment-gap",
+      "severity": "warn",
+      "subject": "del-green-seg-01|del-green-seg-02",
+      "message": "Segments of line 'del-green' have nearest endpoint gap of 1358 m (threshold: 150 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "consecutive-segment-gap",
+      "severity": "warn",
+      "subject": "del-magenta-seg-01|del-magenta-seg-02",
+      "message": "Segments of line 'del-magenta' have nearest endpoint gap of 6499 m (threshold: 150 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "coords-city-bbox",
+      "severity": "warn",
+      "subject": "del-red-seg-01",
+      "message": "Coordinate [77.40029, 28.67507] outside city bbox [76.84, 28.4, 77.35, 28.88] ±0.05°"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "coords-city-bbox",
+      "severity": "warn",
+      "subject": "del-violet-seg-01",
+      "message": "Coordinate [77.31653, 28.34999] outside city bbox [76.84, 28.4, 77.35, 28.88] ±0.05°"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "del-airport",
+      "message": "Operational length: computed 23.72 km vs reference 24.69 km (3.9%) (unverified reference)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "del-green",
+      "message": "Operational length: computed 27.85 km vs reference 28.79 km (3.3%) (unverified reference)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "del-grey",
+      "message": "Operational length: computed 6.03 km vs reference 5.19 km (16.3%) (unverified reference)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "del-magenta",
+      "message": "Operational length: computed 39.89 km vs reference 50.18 km (20.5%) (unverified reference)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "del-pink",
+      "message": "Operational length: computed 75.17 km vs reference 71.55 km (5.1%) (unverified reference)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "del-red",
+      "message": "Operational length: computed 33.37 km vs reference 34.55 km (3.4%) (unverified reference)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "del-violet",
+      "message": "Operational length: computed 44.86 km vs reference 46.34 km (3.2%) (unverified reference)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-station-count",
+      "severity": "warn",
+      "subject": "del-blue",
+      "message": "Operational station count: data has 46, reference has 58 (unverified reference)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-station-count",
+      "severity": "warn",
+      "subject": "del-magenta",
+      "message": "Operational station count: data has 27, reference has 33 (unverified reference)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-station-count",
+      "severity": "warn",
+      "subject": "del-red",
+      "message": "Operational station count: data has 22, reference has 29 (unverified reference)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-station-count",
+      "severity": "warn",
+      "subject": "del-violet",
+      "message": "Operational station count: data has 17, reference has 34 (unverified reference)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-terminal-mismatch",
+      "severity": "warn",
+      "subject": "del-blue",
+      "message": "Terminal 'Noida Electronic City' from reference not found in data station names (unverified reference)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-terminal-mismatch",
+      "severity": "warn",
+      "subject": "del-grey",
+      "message": "Terminal 'Dwarka' from reference not found in data station names (unverified reference)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-terminal-mismatch",
+      "severity": "warn",
+      "subject": "del-red",
+      "message": "Terminal 'Shaheed Sthal' from reference not found in data station names (unverified reference)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-terminal-mismatch",
+      "severity": "warn",
+      "subject": "del-violet",
+      "message": "Terminal 'Raja Nahar Singh' from reference not found in data station names (unverified reference)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "interchange-consistency",
+      "severity": "warn",
+      "subject": "del-kalkaji-mandir",
+      "message": "is_interchange is true but station is on only 1 line(s)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "interchange-consistency",
+      "severity": "warn",
+      "subject": "del-netaji-subhash-place",
+      "message": "is_interchange is true but station is on only 1 line(s)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "interchange-consistency",
+      "severity": "warn",
+      "subject": "del-yamuna-bank",
+      "message": "is_interchange is true but station is on only 1 line(s)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-adarsh-nagar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-aerocity",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-anand-vihar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-andrews-ganj",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-arjan-garh",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-ashok-park-main",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-ashram",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-badhkal-mor",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-bahadurgarh-city",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-barakhambha-road",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-bhajanpura",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-bhalaswa",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-bhikaji-cama-place",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-botanical-garden",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-brigadier-hoshiyar-singh",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-burari",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-chhatarpur",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-chirag-delhi",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-dabri-mor-janakpuri-south",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-dashrath-puri",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-deepali-chowk",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-delhi-cantt",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-domestic-airport",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-dwarka-kakrola",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-dwarka-mor",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-dwarka-sector-10",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-dwarka-sector-11",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-dwarka-sector-12",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-dwarka-sector-13",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-dwarka-sector-14",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-dwarka-sector-21",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-dwarka-sector-8",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-dwarka-sector-9",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-east-azad-nagar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-east-vinod-nagar-mayur-vihar-ii",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-esi-basaidarapur",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-ghevra",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-ghitorni",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-gokulpuri",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-greater-kailash",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-guru-dronacharya",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-haiderpur-village",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-iffco-chowk",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-igi-airport",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-inderlok",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-indraprastha",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-ip-extension",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-jaffrabad",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-jagatpur-wazirabad",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-jahangirpuri",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-jamia-millia-islamia",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-janakpuri-east",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-janakpuri-west",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-jasola-vihar-shaheen-bagh",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-jhandewalan",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-jharoda-majra",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-jhilmil",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-johri-enclave",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-kailash-colony",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-kalindi-kunj",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-kalkaji-mandir",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-kanhaiya-nagar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-karkarduma",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-karkarduma-court",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-karol-bagh",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-kaushambi",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-keshav-puram",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-khajuri-khas",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-kirti-nagar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-kohat-enclave",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-krishna-nagar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-krishna-park-extension",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-lajpat-nagar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-laxmi-nagar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-m-g-road",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-madhuban-chowk",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-madipur",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-majlis-park",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-mandawali-west-vinod-nagar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-mansarovar-park",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-maujpur-babarpur",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-mayapuri",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-mayur-vihar-i",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-millennium-city-centre-gurugram",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-model-town",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-mohan-estate",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-moolchand",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-moti-nagar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-mundka",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-mundka-industrial-area",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-munirka",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-nanaksar-sonia-vihar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-nangli",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-nangloi",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-nangloi-railway",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-naraina-vihar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-nawada",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-nehru-enclave",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-nehru-place",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-netaji-subhash-place",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-nirman-vihar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-noida-golf-course",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-noida-sector-15",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-noida-sector-16",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-noida-sector-18",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-north-pitampura-prashant-vihar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-okhla-bird-sanctuary",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-okhla-vihar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-palam",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-panchsheel-park",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-pandit-shree-ram-sharma",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-paschim-vihar-east",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-paschim-vihar-west",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-patel-nagar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-peera-garhi",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-peeragarhi-chowk",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-pratap-nagar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-preet-vihar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-pul-bangash",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-punjabi-bagh",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-punjabi-bagh-west",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-qutab-minar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-r-k-puram",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-raj-bagh",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-rajdhani-park",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-rajendra-place",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-rajouri-garden",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-ramesh-nagar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-rithala",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-rohini-east",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-rohini-sector-18-19",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-rohini-west",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-sadar-bazar-cantonment",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-samaypur-badli",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-sarai-kale-khan-nizamuddin",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-sarojini-nagar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-satguru-ramsingh-marg",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-seelampur",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-shadipur",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-shahdara",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-shaheed-nagar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-shakurpur",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-shalimar-bagh",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-shankar-vihar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-shastri-nagar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-shastri-park",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-shiv-vihar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-shivaji-park",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-shree-ram-mandir-mayur-vihar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-sikanderpur",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-sir-m-vishweshwaraiah-moti-bagh",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-soorghat",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-south-extension",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-subhash-nagar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-sukhdev-vihar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-sultanpur",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-supreme-court",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-surajmal-stadium",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-tagore-garden",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-terminal-1-igi-airport",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-tikri-border",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-tikri-kalan",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-tilak-nagar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-tis-hazari",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-trilokpuri-sanjay-lake",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-udyog-nagar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-uttam-nagar-east",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-uttam-nagar-west",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-vaishali",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-vasant-vihar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-vinobapuri",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-welcome",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-yamuna-bank",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-yamuna-vihar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "severity": "warn",
+      "subject": "del-airport-seg-01",
+      "message": "Operational segment has no references"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "severity": "warn",
+      "subject": "del-blue-seg-01",
+      "message": "Operational segment has no references"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "severity": "warn",
+      "subject": "del-blue-seg-02",
+      "message": "Operational segment has no references"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "severity": "warn",
+      "subject": "del-green-seg-01",
+      "message": "Operational segment has no references"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "severity": "warn",
+      "subject": "del-green-seg-02",
+      "message": "Operational segment has no references"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "severity": "warn",
+      "subject": "del-grey-seg-01",
+      "message": "Operational segment has no references"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "severity": "warn",
+      "subject": "del-magenta-seg-01",
+      "message": "Operational segment has no references"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "severity": "warn",
+      "subject": "del-pink-seg-01",
+      "message": "Operational segment has no references"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "severity": "warn",
+      "subject": "del-red-seg-01",
+      "message": "Operational segment has no references"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "severity": "warn",
+      "subject": "del-violet-seg-01",
+      "message": "Operational segment has no references"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "severity": "warn",
+      "subject": "del-yellow-seg-01",
+      "message": "Operational segment has no references"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "del-blue-seg-01",
+      "message": "Segment start is 4206 m from nearest station of line 'del-blue' (threshold: 150 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "del-green-seg-01",
+      "message": "Segment start is 159 m from nearest station of line 'del-green' (threshold: 150 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "del-pink-seg-01",
+      "message": "Segment end is 234 m from nearest station of line 'del-pink' (threshold: 150 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "del-red-seg-01",
+      "message": "Segment end is 6726 m from nearest station of line 'del-red' (threshold: 150 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "del-violet-seg-01",
+      "message": "Segment end is 9215 m from nearest station of line 'del-violet' (threshold: 150 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "del-yellow-seg-01",
+      "message": "Segment start is 446 m from nearest station of line 'del-yellow' (threshold: 150 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "segment-self-intersecting",
+      "severity": "warn",
+      "subject": "del-grey-seg-01",
+      "message": "Segment is self-intersecting"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "segment-self-intersecting",
+      "severity": "warn",
+      "subject": "del-magenta-seg-01",
+      "message": "Segment is self-intersecting"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "segment-self-intersecting",
+      "severity": "warn",
+      "subject": "del-pink-seg-01",
+      "message": "Segment is self-intersecting"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "segment-self-intersecting",
+      "severity": "warn",
+      "subject": "del-yellow-seg-01",
+      "message": "Segment is self-intersecting"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "del-aerocity",
+      "message": "Station is 88 m from nearest segment of line 'del-airport' (threshold: 75 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "del-andrews-ganj",
+      "message": "Station is 198 m from nearest segment of line 'del-violet' (threshold: 75 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "del-azadpur",
+      "message": "Station is 77 m from nearest segment of line 'del-yellow' (threshold: 75 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "del-dilli-haat-ina",
+      "message": "Station is 158 m from nearest segment of line 'del-yellow' (threshold: 75 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "del-domestic-airport",
+      "message": "Station is 138 m from nearest segment of line 'del-magenta' (threshold: 75 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "del-hauz-khas",
+      "message": "Station is 124 m from nearest segment of line 'del-magenta' (threshold: 75 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "del-inderlok",
+      "message": "Station is 159 m from nearest segment of line 'del-green' (threshold: 75 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "del-karkarduma",
+      "message": "Station is 89 m from nearest segment of line 'del-blue' (threshold: 75 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "del-kirti-nagar",
+      "message": "Station is 129 m from nearest segment of line 'del-green' (threshold: 75 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "del-madhuban-chowk",
+      "message": "Station is 168 m from nearest segment of line 'del-magenta' (threshold: 75 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "del-mayur-vihar-i",
+      "message": "Station is 110 m from nearest segment of line 'del-blue' (threshold: 75 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "del-new-delhi",
+      "message": "Station is 116 m from nearest segment of line 'del-airport' (threshold: 75 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "del-punjabi-bagh-west",
+      "message": "Station is 154 m from nearest segment of line 'del-green' (threshold: 75 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "del-rajouri-garden",
+      "message": "Station is 131 m from nearest segment of line 'del-blue' (threshold: 75 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "del-saket",
+      "message": "Station is 108 m from nearest segment of line 'del-yellow' (threshold: 75 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "del-welcome",
+      "message": "Station is 85 m from nearest segment of line 'del-pink' (threshold: 75 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "last-verified-distribution",
+      "severity": "info",
+      "subject": "delhi",
+      "message": "last_verified distribution: 2026-10-08: 37; missing: 190"
+    },
+    {
+      "city_id": "gurugram",
+      "rule": "interchange-consistency",
+      "severity": "warn",
+      "subject": "gur-sikanderpur",
+      "message": "is_interchange is true but station is on only 1 line(s)"
+    },
+    {
+      "city_id": "gurugram",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "gur-sikanderpur",
+      "message": "Station is 142 m from nearest segment of line 'gur-rapid' (threshold: 75 m)"
+    },
+    {
+      "city_id": "gurugram",
+      "rule": "station-opened-before-segment",
+      "severity": "warn",
+      "subject": "gur-sikanderpur",
+      "message": "Station opened_on '2013-11-14' is before segment 'gur-rapid-seg-02' inaugurated_on '2017-03-31'"
+    },
+    {
+      "city_id": "gurugram",
+      "rule": "last-verified-distribution",
+      "severity": "info",
+      "subject": "gurugram",
+      "message": "last_verified distribution: 2026-10-08: 13"
+    },
+    {
+      "city_id": "gurugram",
+      "rule": "segment-self-intersecting",
+      "severity": "info",
+      "subject": "gur-rapid-seg-01",
+      "message": "Segment is self-intersecting (exempted — loop line)"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "hyd-green",
+      "message": "Operational length: computed 9.12 km vs reference 9.6 km (5.0%)"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "hyd-red",
+      "message": "Operational length: computed 28.09 km vs reference 29.21 km (3.8%)"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "last-verified-distribution",
+      "severity": "info",
+      "subject": "hyderabad",
+      "message": "last_verified distribution: 2026-10-07: 1; 2026-10-08: 57; missing: 2"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "segment-self-intersecting",
+      "severity": "info",
+      "subject": "hyd-red-seg-01",
+      "message": "Segment is self-intersecting (exempted — loop line)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "kol-green",
+      "message": "Operational length: computed 18.21 km vs reference 16.55 km (10.0%)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "kol-purple",
+      "message": "Operational length: computed 7.99 km vs reference 7.75 km (3.1%)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "kol-yellow",
+      "message": "Operational length: computed 6.41 km vs reference 6.77 km (5.3%)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "kolkata-baranagar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "kolkata-barun-sengupta",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "kolkata-behala-bazar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "kolkata-behala-chowrasta",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "kolkata-beleghata",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "kolkata-bengal-chemical",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "kolkata-central-park",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "kolkata-city-centre",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "kolkata-dakshineswar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "kolkata-dum-dum",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "kolkata-dum-dum-cantonment",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "kolkata-esplanade",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "kolkata-gitanjali",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "kolkata-hemanta-mukhopadhyay",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "kolkata-jai-hind",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "kolkata-jessore-road",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "kolkata-joka",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "kolkata-jyotirindra-nandi",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "kolkata-karunamoyee",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "kolkata-kavi-nazrul",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "kolkata-kavi-subhash",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "kolkata-kavi-sukanta",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "kolkata-maidan",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "kolkata-majerhat",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "kolkata-masterda-surya-sen",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "kolkata-nalban",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "kolkata-netaji",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "kolkata-noapara",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "kolkata-park-street",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "kolkata-ritwik-ghatak",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "kolkata-sakher-bazar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "kolkata-salt-lake-sector-v",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "kolkata-salt-lake-stadium",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "kolkata-satyajit-ray",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "kolkata-shahid-khudiram",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "kolkata-taratala",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "kolkata-thakurpukur",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "kolkata-vip-bazar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "kol-green-seg-01",
+      "message": "Segment end is 197 m from nearest station of line 'kol-green' (threshold: 150 m)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "kol-orange-seg-01",
+      "message": "Segment start is 221 m from nearest station of line 'kol-orange' (threshold: 150 m)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "kol-orange-seg-02",
+      "message": "Segment end is 8476 m from nearest station of line 'kol-orange' (threshold: 150 m)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "kol-purple-seg-02",
+      "message": "Segment start is 978 m from nearest station of line 'kol-purple' (threshold: 150 m)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "kol-purple-seg-02",
+      "message": "Segment end is 5663 m from nearest station of line 'kol-purple' (threshold: 150 m)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "kol-yellow-seg-02",
+      "message": "Segment start is 9846 m from nearest station of line 'kol-yellow' (threshold: 150 m)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "kolkata-kavi-subhash",
+      "message": "Station is 85 m from nearest segment of line 'kol-orange' (threshold: 75 m)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "last-verified-distribution",
+      "severity": "info",
+      "subject": "kolkata",
+      "message": "last_verified distribution: 2026-10-08: 18; missing: 46"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "segment-self-intersecting",
+      "severity": "info",
+      "subject": "kol-green-seg-01",
+      "message": "Segment is self-intersecting (exempted — loop line)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "consecutive-segment-gap",
+      "severity": "warn",
+      "subject": "mum-line-3-seg-01|mum-line-3-seg-03",
+      "message": "Segments of line 'mum-line-3' have nearest endpoint gap of 7966 m (threshold: 150 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "consecutive-segment-gap",
+      "severity": "warn",
+      "subject": "mum-line-4-seg-01|mum-planned-seg-01",
+      "message": "Segments of line 'mum-line-4' have nearest endpoint gap of 1228 m (threshold: 150 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "mum-line-2a",
+      "message": "Operational length: computed 17.76 km vs reference 18.6 km (4.5%) (unverified reference)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "mum-line-2b",
+      "message": "Operational length: computed 0.00 km vs reference 5.5 km (100.0%) (unverified reference)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "mum-line-7",
+      "message": "Operational length: computed 28.97 km vs reference 16.5 km (75.6%) (unverified reference)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "mum-line-9",
+      "message": "Operational length: computed 3.57 km vs reference 4.97 km (28.2%) (unverified reference)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-station-count",
+      "severity": "warn",
+      "subject": "mum-line-1",
+      "message": "Operational station count: data has 3, reference has 12 (unverified reference)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-station-count",
+      "severity": "warn",
+      "subject": "mum-line-2a",
+      "message": "Operational station count: data has 19, reference has 17 (unverified reference)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-station-count",
+      "severity": "warn",
+      "subject": "mum-line-7",
+      "message": "Operational station count: data has 16, reference has 14 (unverified reference)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-station-count",
+      "severity": "warn",
+      "subject": "mum-line-9",
+      "message": "Operational station count: data has 6, reference has 4 (unverified reference)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-terminal-mismatch",
+      "severity": "warn",
+      "subject": "mum-line-1",
+      "message": "Terminal 'Versova' from reference not found in data station names (unverified reference)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-terminal-mismatch",
+      "severity": "warn",
+      "subject": "mum-line-1",
+      "message": "Terminal 'Ghatkopar' from reference not found in data station names (unverified reference)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-terminal-mismatch",
+      "severity": "warn",
+      "subject": "mum-line-2a",
+      "message": "Terminal 'Andheri West' from reference not found in data station names (unverified reference)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-terminal-mismatch",
+      "severity": "warn",
+      "subject": "mum-line-4",
+      "message": "Terminal 'Bhakti Park Wadala' from reference not found in data station names (unverified reference)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-terminal-mismatch",
+      "severity": "warn",
+      "subject": "mum-line-4",
+      "message": "Terminal 'Kasarvadavali' from reference not found in data station names (unverified reference)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "interchange-consistency",
+      "severity": "warn",
+      "subject": "mum-chhatrapati-shivaji-maharaj-terminus",
+      "message": "is_interchange is true but station is on only 1 line(s)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "interchange-consistency",
+      "severity": "warn",
+      "subject": "mum-dadar",
+      "message": "is_interchange is true but station is on only 1 line(s)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "interchange-consistency",
+      "severity": "warn",
+      "subject": "mum-gundavali",
+      "message": "is_interchange is true but station is on only 1 line(s)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-aarey",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-akurli",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-anand-nagar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-andheri-l1",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-andheri-west",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-anik-nagar-bus-depot",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-bangur-nagar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-borivali-west",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-chembur",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-dahanukarwadi",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-dahisar-east-line-2",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-dahisar-east-line-7",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-deonar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-devipada",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-diamond-garden",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-dindoshi",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-dongripada",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-eksar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-gaimukh",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-goregaon-east",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-goregaon-west",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-gowniwada",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-gundavali",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-jogeshwari-east",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-kandarpada",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-kandivali-west",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-kapurbawdi",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-kurar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-lower-malad",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-lower-oshiwara",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-magathane",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-malad-west",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-mandale",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-mandapeshwar-ic-colony",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-mankhurd",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-mogra",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-oshiwara",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-ovaripada",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-poisar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-rashtriya-udyan",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-shimpoli",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-shivaji-chowk-chembur",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "mum-valnai-meeth-chowky",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "line-operator-matches-reference",
+      "severity": "warn",
+      "subject": "mum-line-1",
+      "message": "Line operator: data has 'MMRDA', reference has 'MMOPL' (unverified reference)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "line-operator-matches-reference",
+      "severity": "warn",
+      "subject": "mum-line-2a",
+      "message": "Line operator: data has 'MMRDA', reference has 'MMMOCL' (unverified reference)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "line-operator-matches-reference",
+      "severity": "warn",
+      "subject": "mum-line-2b",
+      "message": "Line operator: data has 'MMRDA', reference has 'MMMOCL' (unverified reference)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "line-operator-matches-reference",
+      "severity": "warn",
+      "subject": "mum-line-3",
+      "message": "Line operator: data has 'MMRDA', reference has 'MMRCL' (unverified reference)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "line-operator-matches-reference",
+      "severity": "warn",
+      "subject": "mum-line-4",
+      "message": "Line operator: data has 'MMRDA', reference has 'MMMOCL' (unverified reference)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "line-operator-matches-reference",
+      "severity": "warn",
+      "subject": "mum-line-7",
+      "message": "Line operator: data has 'MMRDA', reference has 'MMMOCL' (unverified reference)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-no-reference",
+      "severity": "warn",
+      "subject": "mum-line-1-seg-01",
+      "message": "Operational segment has no references"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-no-reference",
+      "severity": "warn",
+      "subject": "mum-line-2a-seg-01",
+      "message": "Operational segment has no references"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-no-reference",
+      "severity": "warn",
+      "subject": "mum-line-7-seg-01",
+      "message": "Operational segment has no references"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "mum-line-1-seg-01",
+      "message": "Segment start is 1377 m from nearest station of line 'mum-line-1' (threshold: 150 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "mum-line-1-seg-01",
+      "message": "Segment end is 3973 m from nearest station of line 'mum-line-1' (threshold: 150 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "mum-line-3-seg-03",
+      "message": "Segment end is 301 m from nearest station of line 'mum-line-3' (threshold: 150 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "mum-line-4-seg-01",
+      "message": "Segment start is 362 m from nearest station of line 'mum-line-4' (threshold: 150 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "mum-line-4-seg-01",
+      "message": "Segment end is 343 m from nearest station of line 'mum-line-4' (threshold: 150 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "mum-planned-seg-01",
+      "message": "Segment start is 1375 m from nearest station of line 'mum-line-4' (threshold: 150 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "mum-planned-seg-01",
+      "message": "Segment end is 3551 m from nearest station of line 'mum-line-4' (threshold: 150 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "segment-self-intersecting",
+      "severity": "warn",
+      "subject": "mum-line-4-seg-01",
+      "message": "Segment is self-intersecting"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "segment-self-intersecting",
+      "severity": "warn",
+      "subject": "mum-line-7-seg-01",
+      "message": "Segment is self-intersecting"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "mum-andheri-west",
+      "message": "Station is 118 m from nearest segment of line 'mum-line-1' (threshold: 75 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "mum-chembur",
+      "message": "Station is 154 m from nearest segment of line 'mum-line-4' (threshold: 75 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "mum-dahisar-east",
+      "message": "Station is 97 m from nearest segment of line 'mum-line-7' (threshold: 75 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "mum-dahisar-east-line-2",
+      "message": "Station is 142 m from nearest segment of line 'mum-line-7' (threshold: 75 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "mum-dahisar-east-line-7",
+      "message": "Station is 120 m from nearest segment of line 'mum-line-2a' (threshold: 75 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "mum-dahisar-east-line-7",
+      "message": "Station is 79 m from nearest segment of line 'mum-line-9' (threshold: 75 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-opened-before-segment",
+      "severity": "warn",
+      "subject": "mum-acharya-atre-chowk",
+      "message": "Station opened_on '2025-05-10' is before segment 'mum-line-3-seg-03' inaugurated_on '2025-10-09'"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-opened-before-segment",
+      "severity": "warn",
+      "subject": "mum-bandra-kurla-complex",
+      "message": "Station opened_on '2024-10-07' is before segment 'mum-line-3-seg-02' inaugurated_on '2025-05-10'"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-opened-before-segment",
+      "severity": "warn",
+      "subject": "mum-dahisar-east",
+      "message": "Station opened_on '2022-04-02' is before segment 'mum-line-9-seg-01' inaugurated_on '2026-04-07'"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "last-verified-distribution",
+      "severity": "info",
+      "subject": "mumbai",
+      "message": "last_verified distribution: 2026-10-06: 1; 2026-10-08: 34; missing: 49"
+    },
+    {
+      "city_id": "navi-mumbai",
+      "rule": "last-verified-distribution",
+      "severity": "info",
+      "subject": "navi-mumbai",
+      "message": "last_verified distribution: 2026-10-08: 11; missing: 1"
+    },
+    {
+      "city_id": "noida",
+      "rule": "interchange-consistency",
+      "severity": "warn",
+      "subject": "noi-noida-sector-51",
+      "message": "is_interchange is true but station is on only 1 line(s)"
+    },
+    {
+      "city_id": "noida",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "noi-depot",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "noida",
+      "rule": "last-verified-distribution",
+      "severity": "info",
+      "subject": "noida",
+      "message": "last_verified distribution: 2026-10-08: 21; missing: 1"
+    },
+    {
+      "city_id": "pune",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "pun-aqua",
+      "message": "Operational length: computed 34.48 km vs reference 14.67 km (135.0%)"
+    },
+    {
+      "city_id": "pune",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "pun-purple",
+      "message": "Operational length: computed 36.82 km vs reference 16.59 km (122.0%)"
+    },
+    {
+      "city_id": "pune",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "pun-line-3-seg-01",
+      "message": "Segment start is 7877 m from nearest station of line 'pun-line-3' (threshold: 150 m)"
+    },
+    {
+      "city_id": "pune",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "pun-line-3-seg-01",
+      "message": "Segment end is 973 m from nearest station of line 'pun-line-3' (threshold: 150 m)"
+    },
+    {
+      "city_id": "pune",
+      "rule": "segment-self-intersecting",
+      "severity": "warn",
+      "subject": "pun-line-3-seg-01",
+      "message": "Segment is self-intersecting"
+    },
+    {
+      "city_id": "pune",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "pune-district-court",
+      "message": "Station is 160 m from nearest segment of line 'pun-line-3' (threshold: 75 m)"
+    },
+    {
+      "city_id": "pune",
+      "rule": "last-verified-distribution",
+      "severity": "info",
+      "subject": "pune",
+      "message": "last_verified distribution: 2026-10-08: 30; missing: 2"
+    },
+    {
+      "city_id": "pune",
+      "rule": "segment-self-intersecting",
+      "severity": "info",
+      "subject": "pun-aqua-seg-01",
+      "message": "Segment is self-intersecting (exempted — loop line)"
+    },
+    {
+      "city_id": "pune",
+      "rule": "segment-self-intersecting",
+      "severity": "info",
+      "subject": "pun-purple-seg-01",
+      "message": "Segment is self-intersecting (exempted — loop line)"
+    }
+  ]
+}
