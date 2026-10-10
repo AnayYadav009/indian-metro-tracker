@@ -4,6 +4,7 @@ import type { LayerProps } from "react-map-gl/maplibre";
  * Layer IDs that receive pointer events (click, hover).
  */
 export const INTERACTIVE_LAYER_IDS = [
+  "interchange-points",
   "station-points",
   "operational-lines",
   "construction-lines",
@@ -155,6 +156,49 @@ export const stationCircleLayer: LayerProps = {
 };
 
 /**
+ * 4a. Interchange Station Layer:
+ * Larger white-filled ring with prominent border, rendered above plain station dots.
+ * Only visible for stations where is_interchange=true.
+ * Uses a shape-distinct marker (double ring) that does not depend on line colour.
+ */
+export const interchangeStationLayer: LayerProps = {
+  id: "interchange-points",
+  type: "circle",
+  source: "metro-stations",
+  minzoom: 8,
+  filter: ["==", ["get", "is_interchange"], true],
+  paint: {
+    "circle-radius": [
+      "interpolate",
+      ["linear"],
+      ["zoom"],
+      8,
+      6,
+      13,
+      10,
+    ],
+    "circle-color": "#ffffff",
+    "circle-stroke-width": [
+      "case",
+      ["==", ["get", "status"], "operational"],
+      3,
+      ["==", ["get", "status"], "construction"],
+      3,
+      2.5,
+    ],
+    "circle-stroke-color": [
+      "case",
+      ["==", ["get", "status"], "operational"],
+      "#0f172a", // slate-900
+      ["==", ["get", "status"], "construction"],
+      "#f59e0b", // amber-500
+      "#8b5cf6", // violet-500 (planned)
+    ],
+    "circle-opacity": 1,
+  },
+};
+
+/**
  * Selection Highlight Layer for Stations:
  * Outer glowing ring around the currently selected station.
  */
@@ -213,17 +257,28 @@ export function withFilter<T extends LayerProps>(layer: T, filter?: unknown): T 
 }
 
 /**
- * Builds WebGL filter condition for a segment status layer based on store state.
+ * Builds WebGL filter condition for a segment status layer based on store state and timeline scrubber.
  */
 export function buildStatusFilter(
   status: "operational" | "construction" | "planned",
   selectedStatuses: string[],
   selectedCityId: string | null,
-  selectedPhases: string[]
+  selectedPhases: string[],
+  selectedYear: number | null = null,
+  includeFuture: boolean = true
 ): unknown[] {
   if (!selectedStatuses.includes(status)) {
     return ["==", ["get", "status"], "__NONE__"];
   }
+
+  // If year filtering is active and status is construction/planned,
+  // hide if includeFuture is false
+  if (selectedYear !== null && (status === "construction" || status === "planned")) {
+    if (!includeFuture) {
+      return ["==", ["get", "status"], "__NONE__"];
+    }
+  }
+
   const conditions: unknown[] = ["all", ["==", ["get", "status"], status]];
 
   if (selectedCityId) {
@@ -234,16 +289,31 @@ export function buildStatusFilter(
     conditions.push(["in", ["get", "phase"], ["literal", selectedPhases]]);
   }
 
+  // Timeline constraint for operational segments:
+  // Show if inaugurated_on is defined and inaugurated_on <= `${selectedYear}-12-31`
+  // (Or if undated operational record, show so undated records are not silently dropped)
+  if (selectedYear !== null && status === "operational") {
+    const yearThreshold = `${selectedYear}-12-31`;
+    conditions.push([
+      "any",
+      ["!", ["has", "inaugurated_on"]],
+      ["==", ["get", "inaugurated_on"], null],
+      ["<=", ["to-string", ["get", "inaugurated_on"]], yearThreshold],
+    ]);
+  }
+
   return conditions;
 }
 
 /**
- * Builds WebGL filter condition for the station points layer based on store state.
+ * Builds WebGL filter condition for the station points layer based on store state and timeline scrubber.
  */
 export function buildStationFilter(
   selectedStatuses: string[],
   selectedCityId: string | null,
-  selectedPhases: string[]
+  selectedPhases: string[],
+  selectedYear: number | null = null,
+  includeFuture: boolean = true
 ): unknown[] | undefined {
   const conditions: unknown[] = ["all"];
 
@@ -257,6 +327,25 @@ export function buildStationFilter(
 
   if (selectedPhases.length > 0) {
     conditions.push(["in", ["get", "phase"], ["literal", selectedPhases]]);
+  }
+
+  // Timeline filtering for stations:
+  if (selectedYear !== null) {
+    const yearThreshold = `${selectedYear}-12-31`;
+
+    if (!includeFuture) {
+      // Only operational stations allowed
+      conditions.push(["==", ["get", "status"], "operational"]);
+    }
+
+    // Operational stations must have opened_on <= yearThreshold (or be undated)
+    conditions.push([
+      "any",
+      ["!=", ["get", "status"], "operational"],
+      ["!", ["has", "opened_on"]],
+      ["==", ["get", "opened_on"], null],
+      ["<=", ["to-string", ["get", "opened_on"]], yearThreshold],
+    ]);
   }
 
   return conditions.length === 1 ? undefined : conditions;

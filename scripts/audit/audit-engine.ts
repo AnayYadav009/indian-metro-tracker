@@ -1151,6 +1151,25 @@ export function runAudit(
         `is_interchange is false but station is on ${p.line_ids.length} lines`
       );
     }
+    // M12: is_interchange must agree with cluster membership (interchange_id)
+    if (p.is_interchange && !p.interchange_id) {
+      add(
+        p.city_id,
+        "interchange-cluster-consistency",
+        "error",
+        p.station_id,
+        `is_interchange is true but interchange_id cluster is missing`
+      );
+    }
+    if (!p.is_interchange && p.interchange_id) {
+      add(
+        p.city_id,
+        "interchange-cluster-consistency",
+        "error",
+        p.station_id,
+        `interchange_id '${p.interchange_id}' is defined but is_interchange is false`
+      );
+    }
   }
 
   // C7: Phase label not in city's phases

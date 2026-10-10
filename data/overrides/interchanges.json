@@ -1,0 +1,9 @@
+{
+  "_comment": [
+    "Manual corrections for interchange clusters. Keyed by station_id.",
+    "To MERGE: set two station_ids to the same interchange_id string.",
+    "To SPLIT (remove from auto cluster): set interchange_id to null.",
+    "If a station is not listed here, auto-derivation applies.",
+    "Auto rule: is_interchange=true → interchange_id = station_id of cluster representative."
+  ]
+}

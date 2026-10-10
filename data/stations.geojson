@@ -376,7 +376,8 @@
         "layout_source": "operator",
         "source": "osm",
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-07"
+        "retrieved_at": "2026-10-07",
+        "interchange_id": "hyderabad-ameerpet"
       }
     },
     {
@@ -899,7 +900,8 @@
         "layout_source": "operator",
         "source": "osm",
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-07"
+        "retrieved_at": "2026-10-07",
+        "interchange_id": "hyderabad-mg-bus-station"
       }
     },
     {
@@ -1682,7 +1684,8 @@
         "layout_source": "operator",
         "source": "osm",
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-08"
+        "retrieved_at": "2026-10-08",
+        "interchange_id": "gur-sikanderpur"
       }
     },
     {
@@ -2900,7 +2903,8 @@
         "layout_source": "operator",
         "source": "osm",
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-08"
+        "retrieved_at": "2026-10-08",
+        "interchange_id": "noi-noida-sector-51"
       }
     },
     {
@@ -3162,7 +3166,8 @@
         "layout_source": "operator",
         "source": "osm",
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-07"
+        "retrieved_at": "2026-10-07",
+        "interchange_id": "chennai-koyambedu"
       }
     },
     {
@@ -3251,7 +3256,8 @@
         "layout_source": "operator",
         "source": "osm",
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-07"
+        "retrieved_at": "2026-10-07",
+        "interchange_id": "chennai-alandur"
       }
     },
     {
@@ -3281,7 +3287,8 @@
         "layout_source": "operator",
         "source": "osm",
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-07"
+        "retrieved_at": "2026-10-07",
+        "interchange_id": "chennai-st-thomas-mount"
       }
     },
     {
@@ -3543,7 +3550,8 @@
         "layout_source": "operator",
         "source": "osm",
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-07"
+        "retrieved_at": "2026-10-07",
+        "interchange_id": "chennai-chennai-central"
       }
     },
     {
@@ -4473,7 +4481,8 @@
         "layout_source": "operator",
         "source": "osm",
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-08"
+        "retrieved_at": "2026-10-08",
+        "interchange_id": "pune-district-court"
       }
     },
     {
@@ -5082,7 +5091,8 @@
         "layout_source": "osm-tag",
         "source": "osm",
         "last_verified": null,
-        "retrieved_at": "2026-10-06"
+        "retrieved_at": "2026-10-06",
+        "interchange_id": "blr-jayadeva-hospital"
       }
     },
     {
@@ -5749,7 +5759,8 @@
         "layout_source": "osm-tag",
         "source": "osm",
         "last_verified": null,
-        "retrieved_at": "2026-10-06"
+        "retrieved_at": "2026-10-06",
+        "interchange_id": "blr-central-silk-board"
       }
     },
     {
@@ -6069,7 +6080,8 @@
         "layout_source": "osm-tag",
         "source": "osm",
         "last_verified": null,
-        "retrieved_at": "2026-10-06"
+        "retrieved_at": "2026-10-06",
+        "interchange_id": "blr-mahatma-gandhi-road"
       }
     },
     {
@@ -6186,7 +6198,8 @@
         "layout_source": "operator",
         "source": "osm",
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-06"
+        "retrieved_at": "2026-10-06",
+        "interchange_id": "blr-nadaprabhu-kempegowda-majestic"
       }
     },
     {
@@ -6709,7 +6722,8 @@
         "layout_source": "osm-tag",
         "source": "osm",
         "last_verified": null,
-        "retrieved_at": "2026-10-06"
+        "retrieved_at": "2026-10-06",
+        "interchange_id": "blr-rashtreeya-vidyalaya-road"
       }
     },
     {
@@ -7406,7 +7420,8 @@
         "layout_source": "unverified",
         "source": "osm",
         "last_verified": null,
-        "retrieved_at": "2026-10-08"
+        "retrieved_at": "2026-10-08",
+        "interchange_id": "mum-chembur"
       }
     },
     {
@@ -7813,7 +7828,8 @@
         "layout_source": "operator",
         "source": "osm",
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-08"
+        "retrieved_at": "2026-10-08",
+        "interchange_id": "mum-marol-naka"
       }
     },
     {
@@ -7989,7 +8005,8 @@
         "layout_source": "unverified",
         "source": "osm",
         "last_verified": null,
-        "retrieved_at": "2026-10-08"
+        "retrieved_at": "2026-10-08",
+        "interchange_id": "mum-dahisar-east-line-7"
       }
     },
     {
@@ -8020,7 +8037,8 @@
         "layout_source": "unverified",
         "source": "osm",
         "last_verified": null,
-        "retrieved_at": "2026-10-08"
+        "retrieved_at": "2026-10-08",
+        "interchange_id": "mum-dahisar-east-line-2"
       }
     },
     {
@@ -8310,7 +8328,8 @@
         "layout_source": "unverified",
         "source": "osm",
         "last_verified": null,
-        "retrieved_at": "2026-10-08"
+        "retrieved_at": "2026-10-08",
+        "interchange_id": "mum-gundavali"
       }
     },
     {
@@ -8427,7 +8446,8 @@
         "layout_source": "unverified",
         "source": "osm",
         "last_verified": null,
-        "retrieved_at": "2026-10-08"
+        "retrieved_at": "2026-10-08",
+        "interchange_id": "mum-andheri-west"
       }
     },
     {
@@ -8775,7 +8795,8 @@
         "layout_source": "operator",
         "source": "osm",
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-08"
+        "retrieved_at": "2026-10-08",
+        "interchange_id": "mum-dadar"
       }
     },
     {
@@ -9152,7 +9173,8 @@
         "layout_source": "operator",
         "source": "osm",
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-08"
+        "retrieved_at": "2026-10-08",
+        "interchange_id": "mum-chhatrapati-shivaji-maharaj-terminus"
       }
     },
     {
@@ -9415,7 +9437,8 @@
         "layout_source": "operator",
         "source": "osm",
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-08"
+        "retrieved_at": "2026-10-08",
+        "interchange_id": "mum-dahisar-east"
       }
     },
     {
@@ -9677,7 +9700,8 @@
         "layout_source": "unverified",
         "source": "osm",
         "last_verified": null,
-        "retrieved_at": "2026-10-07"
+        "retrieved_at": "2026-10-07",
+        "interchange_id": "kolkata-kavi-subhash"
       }
     },
     {
@@ -9997,7 +10021,8 @@
         "layout_source": "unverified",
         "source": "osm",
         "last_verified": null,
-        "retrieved_at": "2026-10-07"
+        "retrieved_at": "2026-10-07",
+        "interchange_id": "kolkata-esplanade"
       }
     },
     {
@@ -10172,7 +10197,8 @@
         "layout_source": "unverified",
         "source": "osm",
         "last_verified": null,
-        "retrieved_at": "2026-10-07"
+        "retrieved_at": "2026-10-07",
+        "interchange_id": "kolkata-noapara"
       }
     },
     {
@@ -11246,7 +11272,8 @@
         "layout_source": "unverified",
         "source": "osm",
         "last_verified": null,
-        "retrieved_at": "2026-10-08"
+        "retrieved_at": "2026-10-08",
+        "interchange_id": "ahmedabad-motera-stadium"
       }
     },
     {
@@ -11276,7 +11303,8 @@
         "layout_source": "unverified",
         "source": "osm",
         "last_verified": null,
-        "retrieved_at": "2026-10-08"
+        "retrieved_at": "2026-10-08",
+        "interchange_id": "ahmedabad-gnlu"
       }
     },
     {
@@ -11625,7 +11653,8 @@
         "layout_source": "unverified",
         "source": "osm",
         "last_verified": null,
-        "retrieved_at": "2026-10-08"
+        "retrieved_at": "2026-10-08",
+        "interchange_id": "ahmedabad-old-high-court"
       }
     },
     {
@@ -12874,7 +12903,8 @@
         "layout_source": "operator",
         "source": "osm",
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-08"
+        "retrieved_at": "2026-10-08",
+        "interchange_id": "del-kashmere-gate"
       }
     },
     {
@@ -12962,7 +12992,8 @@
         "layout_source": "unverified",
         "source": "osm",
         "last_verified": null,
-        "retrieved_at": "2026-10-08"
+        "retrieved_at": "2026-10-08",
+        "interchange_id": "del-kirti-nagar"
       }
     },
     {
@@ -13108,7 +13139,8 @@
         "layout_source": "operator",
         "source": "osm",
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-08"
+        "retrieved_at": "2026-10-08",
+        "interchange_id": "del-hauz-khas"
       }
     },
     {
@@ -13167,7 +13199,8 @@
         "layout_source": "operator",
         "source": "osm",
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-08"
+        "retrieved_at": "2026-10-08",
+        "interchange_id": "del-new-delhi"
       }
     },
     {
@@ -13284,7 +13317,8 @@
         "layout_source": "unverified",
         "source": "osm",
         "last_verified": null,
-        "retrieved_at": "2026-10-08"
+        "retrieved_at": "2026-10-08",
+        "interchange_id": "del-welcome"
       }
     },
     {
@@ -13401,7 +13435,8 @@
         "layout_source": "unverified",
         "source": "osm",
         "last_verified": null,
-        "retrieved_at": "2026-10-08"
+        "retrieved_at": "2026-10-08",
+        "interchange_id": "del-inderlok"
       }
     },
     {
@@ -13488,7 +13523,8 @@
         "layout_source": "unverified",
         "source": "osm",
         "last_verified": null,
-        "retrieved_at": "2026-10-08"
+        "retrieved_at": "2026-10-08",
+        "interchange_id": "del-netaji-subhash-place"
       }
     },
     {
@@ -13518,7 +13554,8 @@
         "layout_source": "unverified",
         "source": "osm",
         "last_verified": null,
-        "retrieved_at": "2026-10-08"
+        "retrieved_at": "2026-10-08",
+        "interchange_id": "del-madhuban-chowk"
       }
     },
     {
@@ -13634,7 +13671,8 @@
         "layout_source": "unverified",
         "source": "osm",
         "last_verified": null,
-        "retrieved_at": "2026-10-08"
+        "retrieved_at": "2026-10-08",
+        "interchange_id": "del-kalkaji-mandir"
       }
     },
     {
@@ -13983,7 +14021,8 @@
         "layout_source": "unverified",
         "source": "osm",
         "last_verified": null,
-        "retrieved_at": "2026-10-08"
+        "retrieved_at": "2026-10-08",
+        "interchange_id": "del-janakpuri-west"
       }
     },
     {
@@ -14216,7 +14255,8 @@
         "layout_source": "unverified",
         "source": "osm",
         "last_verified": null,
-        "retrieved_at": "2026-10-08"
+        "retrieved_at": "2026-10-08",
+        "interchange_id": "del-botanical-garden"
       }
     },
     {
@@ -14304,7 +14344,8 @@
         "layout_source": "unverified",
         "source": "osm",
         "last_verified": null,
-        "retrieved_at": "2026-10-08"
+        "retrieved_at": "2026-10-08",
+        "interchange_id": "del-anand-vihar"
       }
     },
     {
@@ -14334,7 +14375,8 @@
         "layout_source": "unverified",
         "source": "osm",
         "last_verified": null,
-        "retrieved_at": "2026-10-08"
+        "retrieved_at": "2026-10-08",
+        "interchange_id": "del-karkarduma"
       }
     },
     {
@@ -14625,7 +14667,8 @@
         "layout_source": "unverified",
         "source": "osm",
         "last_verified": null,
-        "retrieved_at": "2026-10-08"
+        "retrieved_at": "2026-10-08",
+        "interchange_id": "del-lajpat-nagar"
       }
     },
     {
@@ -15177,7 +15220,8 @@
         "layout_source": "operator",
         "source": "osm",
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-08"
+        "retrieved_at": "2026-10-08",
+        "interchange_id": "del-haiderpur-badli-mor"
       }
     },
     {
@@ -15207,7 +15251,8 @@
         "layout_source": "operator",
         "source": "osm",
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-08"
+        "retrieved_at": "2026-10-08",
+        "interchange_id": "del-central-secretariat"
       }
     },
     {
@@ -15527,7 +15572,8 @@
         "layout_source": "unverified",
         "source": "osm",
         "last_verified": null,
-        "retrieved_at": "2026-10-08"
+        "retrieved_at": "2026-10-08",
+        "interchange_id": "del-majlis-park"
       }
     },
     {
@@ -15586,7 +15632,8 @@
         "layout_source": "unverified",
         "source": "osm",
         "last_verified": null,
-        "retrieved_at": "2026-10-08"
+        "retrieved_at": "2026-10-08",
+        "interchange_id": "del-mayur-vihar-i"
       }
     },
     {
@@ -15819,7 +15866,8 @@
         "layout_source": "operator",
         "source": "osm",
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-08"
+        "retrieved_at": "2026-10-08",
+        "interchange_id": "del-dilli-haat-ina"
       }
     },
     {
@@ -15907,7 +15955,8 @@
         "layout_source": "unverified",
         "source": "osm",
         "last_verified": null,
-        "retrieved_at": "2026-10-08"
+        "retrieved_at": "2026-10-08",
+        "interchange_id": "del-rajouri-garden"
       }
     },
     {
@@ -16053,7 +16102,8 @@
         "layout_source": "unverified",
         "source": "osm",
         "last_verified": null,
-        "retrieved_at": "2026-10-08"
+        "retrieved_at": "2026-10-08",
+        "interchange_id": "del-punjabi-bagh-west"
       }
     },
     {
@@ -16720,7 +16770,8 @@
         "layout_source": "unverified",
         "source": "osm",
         "last_verified": null,
-        "retrieved_at": "2026-10-08"
+        "retrieved_at": "2026-10-08",
+        "interchange_id": "del-yamuna-bank"
       }
     },
     {
@@ -16953,7 +17004,8 @@
         "layout_source": "operator",
         "source": "osm",
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-08"
+        "retrieved_at": "2026-10-08",
+        "interchange_id": "del-rajiv-chowk"
       }
     },
     {
@@ -17012,7 +17064,8 @@
         "layout_source": "operator",
         "source": "osm",
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-08"
+        "retrieved_at": "2026-10-08",
+        "interchange_id": "del-mandi-house"
       }
     },
     {
@@ -17158,7 +17211,8 @@
         "layout_source": "unverified",
         "source": "osm",
         "last_verified": null,
-        "retrieved_at": "2026-10-08"
+        "retrieved_at": "2026-10-08",
+        "interchange_id": "del-dwarka-sector-21"
       }
     },
     {
@@ -17304,7 +17358,8 @@
         "layout_source": "unverified",
         "source": "osm",
         "last_verified": null,
-        "retrieved_at": "2026-10-08"
+        "retrieved_at": "2026-10-08",
+        "interchange_id": "del-dwarka-kakrola"
       }
     },
     {

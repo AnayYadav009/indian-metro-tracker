@@ -70,10 +70,23 @@ export interface CityOverrideData {
   out_of_scope_line_ids?: string[];
 }
 
+/**
+ * Shape of a single entry in data/overrides/interchanges.json.
+ * - interchange_id: string → assign this station to the named cluster (merge)
+ * - interchange_id: null → remove from any auto-derived cluster (split)
+ */
+export interface InterchangeCorrection {
+  interchange_id: string | null;
+}
+
+/** Map of station_id → correction read from data/overrides/interchanges.json. */
+export type InterchangeCorrectionsMap = Record<string, InterchangeCorrection>;
+
 export function mergeCityOverrides(
   normalized: NormalizedCityData,
   overrides: CityOverrideData,
-  retrievedAt?: string
+  retrievedAt?: string,
+  interchangeCorrections: InterchangeCorrectionsMap = {}
 ): {
   segments: SegmentFeature[];
   stations: StationFeature[];
@@ -524,6 +537,24 @@ export function mergeCityOverrides(
       interchangeSet.has(sw.st.name.toLowerCase()) ||
       sw.assignedLineIds.length > 1;
 
+    // Derive interchange_id:
+    // Auto: any interchange station is its own cluster representative (station_id).
+    // Manual correction can override to merge (same id) or split (null).
+    let interchangeId: string | undefined = undefined;
+    if (isInterchange) {
+      interchangeId = sw.st.id;
+    }
+    const correction = interchangeCorrections[sw.st.id];
+    if (correction !== undefined) {
+      if (correction.interchange_id === null) {
+        // Forced split — remove interchange_id even if auto assigned
+        interchangeId = undefined;
+      } else {
+        // Forced merge — use the specified cluster id
+        interchangeId = correction.interchange_id;
+      }
+    }
+
     const truncatedStationCoords: [number, number] = [
       Number(sw.st.coords[0].toFixed(5)),
       Number(sw.st.coords[1].toFixed(5)),
@@ -551,6 +582,7 @@ export function mergeCityOverrides(
         source: "osm",
         last_verified: sw.lastVerified,
         retrieved_at: retrievedAt,
+        ...(interchangeId !== undefined ? { interchange_id: interchangeId } : {}),
       },
     });
   }

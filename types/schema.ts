@@ -218,6 +218,7 @@ export const StationPropertiesSchema = z
       .regex(/^\d{4}-\d{2}-\d{2}$/, "Format must be YYYY-MM-DD")
       .optional(),
     completion_unconfirmed: z.boolean().default(false).optional(),
+    interchange_id: z.string().min(1).optional(),
   })
   .superRefine((data, ctx) => {
     if (data.status === "operational") {

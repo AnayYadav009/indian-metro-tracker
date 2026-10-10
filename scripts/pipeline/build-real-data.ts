@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fetchOverpassDataForCity } from "./fetch-overpass";
 import { normalizeOverpassCity } from "./normalize";
-import { mergeCityOverrides, type CityOverrideData } from "./merge-overrides";
+import { mergeCityOverrides, type CityOverrideData, type InterchangeCorrectionsMap } from "./merge-overrides";
 import { validateMetroDataset } from "../../lib/data-validator";
 import { atomicWriteFiles } from "../lib/atomic-write";
 import type { City, Line, SegmentFeature, StationFeature } from "../../types/metro";
@@ -44,9 +44,21 @@ export async function buildCityData(cityId: string, forceFetch = false): Promise
     }
   }
 
-  // 3. Merge Overrides
+  // 3. Merge Overrides (load interchange corrections once)
   console.log(`🔗 Merging official metadata & overrides for ${cityId}...`);
-  const { segments, stations } = mergeCityOverrides(normalized, overrides, retrievedAt);
+  const interchangesPath = path.join(DATA_DIR, "overrides", "interchanges.json");
+  let interchangeCorrections: InterchangeCorrectionsMap = {};
+  if (fs.existsSync(interchangesPath)) {
+    try {
+      const raw = JSON.parse(fs.readFileSync(interchangesPath, "utf-8"));
+      // Strip the _comment key (metadata), keep only station_id keyed entries
+      const { _comment: _ignored, ...corrections } = raw;
+      interchangeCorrections = corrections as InterchangeCorrectionsMap;
+    } catch {
+      console.warn(`⚠️  Could not parse interchanges.json — skipping corrections`);
+    }
+  }
+  const { segments, stations } = mergeCityOverrides(normalized, overrides, retrievedAt, interchangeCorrections);
   console.log(`   Generated ${segments.length} validated segments and ${stations.length} stations.`);
 
   // 4. Validate isolated city dataset
