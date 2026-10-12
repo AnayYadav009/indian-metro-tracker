@@ -119,10 +119,38 @@ function main() {
   console.log(`🔵 Info: ${totalInfo}`);
 
   // Apply baseline and determine exit code
-  const { unbaselined } = applyBaseline(result.findings, baseline);
+  const {
+    unbaselined,
+    accepted,
+    unreviewed,
+    knownDefects,
+    staleAccepted,
+    staleUnreviewed,
+    staleKnownDefects,
+  } = applyBaseline(result.findings, baseline);
+
   const unbaselinedErrors = unbaselined.filter((f) => f.severity === "error").length;
   const unbaselinedWarns = unbaselined.filter((f) => f.severity === "warn").length;
   const warningsReportOnly = process.env.AUDIT_WARNINGS === "report-only";
+
+  console.log(`✅ Accepted warnings (reviewed): ${accepted.length}`);
+  console.log(`📋 Unreviewed warnings (awaiting city review): ${unreviewed.length}`);
+  console.log(`🚨 Known walkthrough defects tracked: ${knownDefects.length}`);
+
+  const totalStale = staleAccepted.length + staleUnreviewed.length + staleKnownDefects.length;
+  if (totalStale > 0) {
+    console.log("");
+    console.log(`⚠️ Warning: Found ${totalStale} stale baseline entry/entries that match no active finding:`);
+    for (const s of staleAccepted) {
+      console.log(`   • [stale accepted] ${s.city_id} | ${s.rule} | ${s.subject}`);
+    }
+    for (const s of staleUnreviewed) {
+      console.log(`   • [stale unreviewed] ${s.city_id} | ${s.rule} | ${s.subject}`);
+    }
+    for (const s of staleKnownDefects) {
+      console.log(`   • [stale defect ${s.finding_id}] ${s.city_id} | ${s.rule} | ${s.subject}`);
+    }
+  }
 
   if (unbaselinedErrors > 0 || (unbaselinedWarns > 0 && !warningsReportOnly)) {
     console.log("");
@@ -136,7 +164,7 @@ function main() {
     process.exit(0);
   } else {
     console.log("");
-    console.log("✅ All checks pass (no errors, all warnings baselined).");
+    console.log("✅ All checks pass (no errors, all warnings baselined or tracked).");
     process.exit(0);
   }
 }

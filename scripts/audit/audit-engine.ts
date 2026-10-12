@@ -46,8 +46,20 @@ export interface BaselineEntry {
   reason: string;
 }
 
+export interface KnownDefectEntry {
+  finding_id: string;
+  target_milestone: string;
+  city_id: string;
+  rule: string;
+  subject: string;
+  note: string;
+}
+
 export interface BaselineFile {
   accepted_warnings: BaselineEntry[];
+  unreviewed_warnings?: BaselineEntry[];
+  pending_rules?: string[];
+  known_defects?: KnownDefectEntry[];
 }
 
 export interface SourceCounts {

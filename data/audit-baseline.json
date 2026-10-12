@@ -1,916 +1,769 @@
 {
-  "accepted_warnings": [
+  "pending_rules": [
+    "segment-parallel-duplicate",
+    "segment-hairpin",
+    "segment-sparse-vertices",
+    "city-km-vs-reference",
+    "line-terminal-missing",
+    "reference-construction-stretch-missing",
+    "orphan-future-station",
+    "future-segment-no-stations",
+    "cross-network-interchange",
+    "verified-without-official-source",
+    "operational-station-no-opened-on"
+  ],
+  "known_defects": [
     {
-      "city_id": "gurugram",
-      "rule": "interchange-consistency",
-      "subject": "gur-sikanderpur",
-      "reason": "Sikanderpur Rapid Metro station provides designated interchange to DMRC Yellow Line via pedestrian walkway."
+      "finding_id": "F-13",
+      "target_milestone": "M10.2",
+      "city_id": "bengaluru",
+      "rule": "ground-truth-station-count",
+      "subject": "blr-pink",
+      "note": "Pink Line has only 2 stations in data"
     },
     {
-      "city_id": "gurugram",
-      "rule": "segment-end-far-from-station",
-      "subject": "gur-rapid-seg-01",
-      "reason": "OSM relation 4481323 track tail extends beyond station platform towards loop turnaround/crossover."
+      "finding_id": "F-14",
+      "target_milestone": "M10.2",
+      "city_id": "bengaluru",
+      "rule": "reference-station-missing",
+      "subject": "blr-blue",
+      "note": "Reference terminals Central Silk Board and KIAL Terminals missing in data"
     },
     {
-      "city_id": "gurugram",
+      "finding_id": "F-14",
+      "target_milestone": "M10.2",
+      "city_id": "bengaluru",
+      "rule": "reference-station-missing",
+      "subject": "blr-blue",
+      "note": "Reference terminals Central Silk Board and KIAL Terminals missing in data"
+    },
+    {
+      "finding_id": "F-13",
+      "target_milestone": "M10.2",
+      "city_id": "bengaluru",
+      "rule": "reference-station-missing",
+      "subject": "blr-pink",
+      "note": "Reference terminals Kalena Agrahara and Nagawara missing in data"
+    },
+    {
+      "finding_id": "F-13",
+      "target_milestone": "M10.2",
+      "city_id": "bengaluru",
+      "rule": "reference-station-missing",
+      "subject": "blr-pink",
+      "note": "Reference terminals Kalena Agrahara and Nagawara missing in data"
+    },
+    {
+      "finding_id": "F-01",
+      "target_milestone": "M10.2",
+      "city_id": "delhi",
+      "rule": "ground-truth-length",
+      "subject": "del-blue",
+      "note": "Computed length 55.68 km differs from 65.35 km reference"
+    },
+    {
+      "finding_id": "F-01",
+      "target_milestone": "M10.2",
+      "city_id": "delhi",
+      "rule": "ground-truth-station-count",
+      "subject": "del-blue",
+      "note": "Operational station count differs from reference"
+    },
+    {
+      "finding_id": "F-01",
+      "target_milestone": "M10.2",
+      "city_id": "delhi",
+      "rule": "reference-station-missing",
+      "subject": "del-blue",
+      "note": "Reference terminal Noida Electronic City missing in data"
+    },
+    {
+      "finding_id": "F-10",
+      "target_milestone": "M10.2",
+      "city_id": "mumbai",
+      "rule": "ground-truth-station-count",
+      "subject": "mum-line-4",
+      "note": "Line 4 station count mismatch against reference"
+    },
+    {
+      "finding_id": "F-10",
+      "target_milestone": "M10.1",
+      "city_id": "mumbai",
+      "rule": "polyline-hook",
+      "subject": "mum-line-4-seg-01",
+      "note": "Line 4 has 2 short sharp turns (out-of-phase traces)"
+    },
+    {
+      "finding_id": "F-10",
+      "target_milestone": "M10.2",
+      "city_id": "mumbai",
+      "rule": "reference-station-missing",
+      "subject": "mum-line-4",
+      "note": "Reference terminals Bhakti Park Wadala and Kasarvadavali missing in data"
+    },
+    {
+      "finding_id": "F-10",
+      "target_milestone": "M10.2",
+      "city_id": "mumbai",
+      "rule": "reference-station-missing",
+      "subject": "mum-line-4",
+      "note": "Reference terminals Bhakti Park Wadala and Kasarvadavali missing in data"
+    },
+    {
+      "finding_id": "F-11",
+      "target_milestone": "M10.2",
+      "city_id": "mumbai",
       "rule": "station-far-from-nearest-segment",
-      "subject": "gur-sikanderpur",
-      "reason": "OSM station node placement reflects concourse/footbridge connector, within 200m tolerance."
+      "subject": "mum-d-n-nagar",
+      "note": "Station is 128 m from nearest segment with thin connector"
     },
     {
-      "city_id": "noida",
-      "rule": "interchange-consistency",
-      "subject": "noi-noida-sector-51",
-      "reason": "Noida Sector 51 Aqua Line station provides designated interchange to DMRC Blue Line (Sector 52) via pedestrian walkway."
+      "finding_id": "F-11",
+      "target_milestone": "M10.2",
+      "city_id": "mumbai",
+      "rule": "station-far-from-nearest-segment",
+      "subject": "mum-eeh",
+      "note": "Station is 85 m from nearest segment with thin connector"
     },
     {
-      "city_id": "bengaluru",
-      "rule": "consecutive-segment-gap",
-      "subject": "blr-planned-seg-01|blr-purple-seg-01",
-      "reason": "Accepted for this M8 baseline: branch/disjoint or OSM relation split requires future topology ordering review, no audit error remains."
+      "finding_id": "F-11",
+      "target_milestone": "M10.2",
+      "city_id": "mumbai",
+      "rule": "station-far-from-nearest-segment",
+      "subject": "mum-marol-naka",
+      "note": "Station is 148 m from nearest segment with thin connector"
     },
     {
-      "city_id": "bengaluru",
-      "rule": "ground-truth-length",
-      "subject": "blr-green",
-      "reason": "Accepted for this M8 baseline: computed OSM geometry and published corridor length differ beyond warning tolerance; retain as tracked reference variance."
+      "finding_id": "F-06",
+      "target_milestone": "M10.1",
+      "city_id": "pune",
+      "rule": "polyline-hook",
+      "subject": "pun-line-3-seg-01",
+      "note": "Line 3 has hook near Mhalunge and ends abruptly"
     },
+    {
+      "finding_id": "F-07",
+      "target_milestone": "M10.1",
+      "city_id": "pune",
+      "rule": "polyline-hook",
+      "subject": "pun-purple-seg-01",
+      "note": "Line 1 trace has sharp turn along parallel corridor"
+    }
+  ],
+  "unreviewed_warnings": [
     {
       "city_id": "bengaluru",
       "rule": "ground-truth-length",
       "subject": "blr-yellow",
-      "reason": "Accepted for this M8 baseline: computed OSM geometry and published corridor length differ beyond warning tolerance; retain as tracked reference variance."
-    },
-    {
-      "city_id": "bengaluru",
-      "rule": "ground-truth-phase-date",
-      "subject": "blr-green-seg-01",
-      "reason": "Accepted for this M8 baseline: reference opening stage dates are intentionally unverified and need later official-stage reconciliation."
-    },
-    {
-      "city_id": "bengaluru",
-      "rule": "ground-truth-phase-date",
-      "subject": "blr-green-seg-01",
-      "reason": "Accepted for this M8 baseline: reference opening stage dates are intentionally unverified and need later official-stage reconciliation."
-    },
-    {
-      "city_id": "bengaluru",
-      "rule": "ground-truth-phase-date",
-      "subject": "blr-purple-seg-01",
-      "reason": "Accepted for this M8 baseline: reference opening stage dates are intentionally unverified and need later official-stage reconciliation."
-    },
-    {
-      "city_id": "bengaluru",
-      "rule": "ground-truth-phase-date",
-      "subject": "blr-purple-seg-01",
-      "reason": "Accepted for this M8 baseline: reference opening stage dates are intentionally unverified and need later official-stage reconciliation."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "bengaluru",
       "rule": "ground-truth-station-count",
-      "subject": "blr-green",
-      "reason": "Accepted for this M8 baseline: active OSM-derived station membership differs from unverified reference totals; needs later official station-list reconciliation."
-    },
-    {
-      "city_id": "bengaluru",
-      "rule": "ground-truth-station-count",
-      "subject": "blr-pink",
-      "reason": "Accepted for this M8 baseline: active OSM-derived station membership differs from unverified reference totals; needs later official station-list reconciliation."
-    },
-    {
-      "city_id": "bengaluru",
-      "rule": "ground-truth-terminal-mismatch",
-      "subject": "blr-blue",
-      "reason": "Accepted for this M8 baseline: terminal names differ between OSM-derived active station names and unverified reference naming; needs alias/reference cleanup."
-    },
-    {
-      "city_id": "bengaluru",
-      "rule": "ground-truth-terminal-mismatch",
-      "subject": "blr-blue",
-      "reason": "Accepted for this M8 baseline: terminal names differ between OSM-derived active station names and unverified reference naming; needs alias/reference cleanup."
-    },
-    {
-      "city_id": "bengaluru",
-      "rule": "ground-truth-terminal-mismatch",
-      "subject": "blr-pink",
-      "reason": "Accepted for this M8 baseline: terminal names differ between OSM-derived active station names and unverified reference naming; needs alias/reference cleanup."
-    },
-    {
-      "city_id": "bengaluru",
-      "rule": "ground-truth-terminal-mismatch",
-      "subject": "blr-pink",
-      "reason": "Accepted for this M8 baseline: terminal names differ between OSM-derived active station names and unverified reference naming; needs alias/reference cleanup."
-    },
-    {
-      "city_id": "bengaluru",
-      "rule": "ground-truth-terminal-mismatch",
-      "subject": "blr-yellow",
-      "reason": "Accepted for this M8 baseline: terminal names differ between OSM-derived active station names and unverified reference naming; needs alias/reference cleanup."
+      "subject": "blr-purple",
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "bengaluru",
       "rule": "interchange-consistency",
       "subject": "blr-central-silk-board",
-      "reason": "Accepted for this M8 baseline: interchange flag is sourced from declared interchange names while the paired station/line merge needs later cluster modeling."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "bengaluru",
       "rule": "interchange-consistency",
       "subject": "blr-jayadeva-hospital",
-      "reason": "Accepted for this M8 baseline: interchange flag is sourced from declared interchange names while the paired station/line merge needs later cluster modeling."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "bengaluru",
-      "rule": "operational-no-reference",
-      "subject": "blr-green-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
-    },
-    {
-      "city_id": "bengaluru",
-      "rule": "operational-no-reference",
-      "subject": "blr-purple-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
-    },
-    {
-      "city_id": "bengaluru",
-      "rule": "segment-end-far-from-station",
-      "subject": "blr-green-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
-    },
-    {
-      "city_id": "bengaluru",
-      "rule": "segment-end-far-from-station",
-      "subject": "blr-green-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
-    },
-    {
-      "city_id": "bengaluru",
-      "rule": "segment-end-far-from-station",
-      "subject": "blr-pink-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
-    },
-    {
-      "city_id": "bengaluru",
-      "rule": "segment-end-far-from-station",
-      "subject": "blr-pink-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
+      "rule": "reference-station-missing",
+      "subject": "blr-yellow",
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "bengaluru",
       "rule": "segment-end-far-from-station",
       "subject": "blr-planned-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
-    },
-    {
-      "city_id": "bengaluru",
-      "rule": "segment-end-far-from-station",
-      "subject": "blr-planned-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
-    },
-    {
-      "city_id": "bengaluru",
-      "rule": "segment-self-intersecting",
-      "subject": "blr-green-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM relation ordering/branch geometry trips the simple self-intersection heuristic; no blocking geometry error remains."
-    },
-    {
-      "city_id": "bengaluru",
-      "rule": "segment-self-intersecting",
-      "subject": "blr-purple-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM relation ordering/branch geometry trips the simple self-intersection heuristic; no blocking geometry error remains."
-    },
-    {
-      "city_id": "bengaluru",
-      "rule": "station-far-from-nearest-segment",
-      "subject": "blr-mahatma-gandhi-road",
-      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "chennai",
       "rule": "ground-truth-length",
       "subject": "che-blue",
-      "reason": "Accepted for this M8 baseline: computed OSM geometry and published corridor length differ beyond warning tolerance; retain as tracked reference variance."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "chennai",
       "rule": "ground-truth-length",
       "subject": "che-green",
-      "reason": "Accepted for this M8 baseline: computed OSM geometry and published corridor length differ beyond warning tolerance; retain as tracked reference variance."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "chennai",
-      "rule": "segment-end-far-from-station",
-      "subject": "che-corridor-4-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
-    },
-    {
-      "city_id": "chennai",
-      "rule": "segment-end-far-from-station",
-      "subject": "che-green-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
-    },
-    {
-      "city_id": "chennai",
-      "rule": "station-far-from-nearest-segment",
-      "subject": "chennai-vadapalani",
-      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+      "rule": "polyline-hook",
+      "subject": "che-blue-seg-01",
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "delhi",
       "rule": "consecutive-segment-gap",
       "subject": "del-blue-seg-01|del-blue-seg-02",
-      "reason": "Accepted for this M8 baseline: branch/disjoint or OSM relation split requires future topology ordering review, no audit error remains."
+      "reason": "not yet reviewed, triaged per city in M10.2"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "consecutive-segment-gap",
+      "subject": "del-golden-branch-01|del-golden-seg-01",
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "delhi",
       "rule": "consecutive-segment-gap",
       "subject": "del-green-seg-01|del-green-seg-02",
-      "reason": "Accepted for this M8 baseline: branch/disjoint or OSM relation split requires future topology ordering review, no audit error remains."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "delhi",
       "rule": "consecutive-segment-gap",
       "subject": "del-magenta-seg-01|del-magenta-seg-02",
-      "reason": "Accepted for this M8 baseline: branch/disjoint or OSM relation split requires future topology ordering review, no audit error remains."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "delhi",
-      "rule": "coords-city-bbox",
-      "subject": "del-red-seg-01",
-      "reason": "Accepted for this M8 baseline: Delhi NCR operational corridor extends just outside the current city bbox margin; bbox/network scope needs the deferred city_id/network cleanup."
+      "rule": "consecutive-segment-gap",
+      "subject": "del-magenta-seg-01|del-magenta-seg-03",
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "delhi",
-      "rule": "coords-city-bbox",
-      "subject": "del-violet-seg-01",
-      "reason": "Accepted for this M8 baseline: Delhi NCR operational corridor extends just outside the current city bbox margin; bbox/network scope needs the deferred city_id/network cleanup."
+      "rule": "consecutive-segment-gap",
+      "subject": "del-magenta-seg-02|del-magenta-seg-03",
+      "reason": "not yet reviewed, triaged per city in M10.2"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "consecutive-segment-gap",
+      "subject": "del-red-seg-01|del-red-seg-02",
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "delhi",
       "rule": "ground-truth-length",
       "subject": "del-airport",
-      "reason": "Accepted for this M8 baseline: computed OSM geometry and published corridor length differ beyond warning tolerance; retain as tracked reference variance."
-    },
-    {
-      "city_id": "delhi",
-      "rule": "ground-truth-length",
-      "subject": "del-green",
-      "reason": "Accepted for this M8 baseline: computed OSM geometry and published corridor length differ beyond warning tolerance; retain as tracked reference variance."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "delhi",
       "rule": "ground-truth-length",
       "subject": "del-grey",
-      "reason": "Accepted for this M8 baseline: computed OSM geometry and published corridor length differ beyond warning tolerance; retain as tracked reference variance."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "delhi",
       "rule": "ground-truth-length",
       "subject": "del-magenta",
-      "reason": "Accepted for this M8 baseline: computed OSM geometry and published corridor length differ beyond warning tolerance; retain as tracked reference variance."
-    },
-    {
-      "city_id": "delhi",
-      "rule": "ground-truth-length",
-      "subject": "del-pink",
-      "reason": "Accepted for this M8 baseline: computed OSM geometry and published corridor length differ beyond warning tolerance; retain as tracked reference variance."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "delhi",
       "rule": "ground-truth-length",
       "subject": "del-red",
-      "reason": "Accepted for this M8 baseline: computed OSM geometry and published corridor length differ beyond warning tolerance; retain as tracked reference variance."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "delhi",
       "rule": "ground-truth-length",
       "subject": "del-violet",
-      "reason": "Accepted for this M8 baseline: computed OSM geometry and published corridor length differ beyond warning tolerance; retain as tracked reference variance."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "delhi",
-      "rule": "ground-truth-station-count",
-      "subject": "del-airport",
-      "reason": "Accepted for this M8 baseline: active OSM-derived station membership differs from unverified reference totals; needs later official station-list reconciliation."
-    },
-    {
-      "city_id": "delhi",
-      "rule": "ground-truth-station-count",
-      "subject": "del-blue",
-      "reason": "Accepted for this M8 baseline: active OSM-derived station membership differs from unverified reference totals; needs later official station-list reconciliation."
-    },
-    {
-      "city_id": "delhi",
-      "rule": "ground-truth-station-count",
-      "subject": "del-magenta",
-      "reason": "Accepted for this M8 baseline: active OSM-derived station membership differs from unverified reference totals; needs later official station-list reconciliation."
-    },
-    {
-      "city_id": "delhi",
-      "rule": "ground-truth-station-count",
-      "subject": "del-red",
-      "reason": "Accepted for this M8 baseline: active OSM-derived station membership differs from unverified reference totals; needs later official station-list reconciliation."
-    },
-    {
-      "city_id": "delhi",
-      "rule": "ground-truth-station-count",
-      "subject": "del-violet",
-      "reason": "Accepted for this M8 baseline: active OSM-derived station membership differs from unverified reference totals; needs later official station-list reconciliation."
-    },
-    {
-      "city_id": "delhi",
-      "rule": "ground-truth-station-count",
+      "rule": "ground-truth-length",
       "subject": "del-yellow",
-      "reason": "Accepted for this M8 baseline: active OSM-derived station membership differs from unverified reference totals; needs later official station-list reconciliation."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "delhi",
-      "rule": "ground-truth-terminal-mismatch",
-      "subject": "del-blue",
-      "reason": "Accepted for this M8 baseline: terminal names differ between OSM-derived active station names and unverified reference naming; needs alias/reference cleanup."
+      "rule": "ground-truth-station-count",
+      "subject": "del-golden",
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "delhi",
-      "rule": "ground-truth-terminal-mismatch",
-      "subject": "del-grey",
-      "reason": "Accepted for this M8 baseline: terminal names differ between OSM-derived active station names and unverified reference naming; needs alias/reference cleanup."
+      "rule": "ground-truth-station-count",
+      "subject": "del-green",
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "delhi",
-      "rule": "ground-truth-terminal-mismatch",
+      "rule": "ground-truth-station-count",
+      "subject": "del-magenta",
+      "reason": "not yet reviewed, triaged per city in M10.2"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-station-count",
       "subject": "del-red",
-      "reason": "Accepted for this M8 baseline: terminal names differ between OSM-derived active station names and unverified reference naming; needs alias/reference cleanup."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "delhi",
-      "rule": "ground-truth-terminal-mismatch",
+      "rule": "ground-truth-station-count",
       "subject": "del-violet",
-      "reason": "Accepted for this M8 baseline: terminal names differ between OSM-derived active station names and unverified reference naming; needs alias/reference cleanup."
-    },
-    {
-      "city_id": "delhi",
-      "rule": "interchange-consistency",
-      "subject": "del-kalkaji-mandir",
-      "reason": "Accepted for this M8 baseline: interchange flag is sourced from declared interchange names while the paired station/line merge needs later cluster modeling."
-    },
-    {
-      "city_id": "delhi",
-      "rule": "interchange-consistency",
-      "subject": "del-netaji-subhash-place",
-      "reason": "Accepted for this M8 baseline: interchange flag is sourced from declared interchange names while the paired station/line merge needs later cluster modeling."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "delhi",
       "rule": "interchange-consistency",
       "subject": "del-yamuna-bank",
-      "reason": "Accepted for this M8 baseline: interchange flag is sourced from declared interchange names while the paired station/line merge needs later cluster modeling."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "delhi",
-      "rule": "operational-no-reference",
-      "subject": "del-airport-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
-    },
-    {
-      "city_id": "delhi",
-      "rule": "operational-no-reference",
-      "subject": "del-blue-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
-    },
-    {
-      "city_id": "delhi",
-      "rule": "operational-no-reference",
-      "subject": "del-blue-seg-02",
-      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
-    },
-    {
-      "city_id": "delhi",
-      "rule": "operational-no-reference",
-      "subject": "del-green-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
-    },
-    {
-      "city_id": "delhi",
-      "rule": "operational-no-reference",
-      "subject": "del-green-seg-02",
-      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
-    },
-    {
-      "city_id": "delhi",
-      "rule": "operational-no-reference",
+      "rule": "polyline-hook",
       "subject": "del-grey-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "delhi",
-      "rule": "operational-no-reference",
-      "subject": "del-magenta-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
+      "rule": "reference-station-missing",
+      "subject": "del-golden",
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "delhi",
-      "rule": "operational-no-reference",
-      "subject": "del-pink-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
+      "rule": "reference-station-missing",
+      "subject": "del-grey",
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "delhi",
-      "rule": "operational-no-reference",
-      "subject": "del-red-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
+      "rule": "reference-station-missing",
+      "subject": "del-red",
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "delhi",
-      "rule": "operational-no-reference",
-      "subject": "del-violet-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
-    },
-    {
-      "city_id": "delhi",
-      "rule": "operational-no-reference",
-      "subject": "del-yellow-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
+      "rule": "reference-station-missing",
+      "subject": "del-violet",
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "delhi",
       "rule": "segment-end-far-from-station",
-      "subject": "del-blue-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
+      "subject": "del-red-seg-02",
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "delhi",
       "rule": "segment-end-far-from-station",
-      "subject": "del-green-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
-    },
-    {
-      "city_id": "delhi",
-      "rule": "segment-end-far-from-station",
-      "subject": "del-pink-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
-    },
-    {
-      "city_id": "delhi",
-      "rule": "segment-end-far-from-station",
-      "subject": "del-red-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
-    },
-    {
-      "city_id": "delhi",
-      "rule": "segment-end-far-from-station",
-      "subject": "del-violet-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
-    },
-    {
-      "city_id": "delhi",
-      "rule": "segment-end-far-from-station",
-      "subject": "del-yellow-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
-    },
-    {
-      "city_id": "delhi",
-      "rule": "segment-self-intersecting",
-      "subject": "del-grey-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM relation ordering/branch geometry trips the simple self-intersection heuristic; no blocking geometry error remains."
-    },
-    {
-      "city_id": "delhi",
-      "rule": "segment-self-intersecting",
-      "subject": "del-magenta-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM relation ordering/branch geometry trips the simple self-intersection heuristic; no blocking geometry error remains."
-    },
-    {
-      "city_id": "delhi",
-      "rule": "segment-self-intersecting",
-      "subject": "del-pink-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM relation ordering/branch geometry trips the simple self-intersection heuristic; no blocking geometry error remains."
-    },
-    {
-      "city_id": "delhi",
-      "rule": "segment-self-intersecting",
-      "subject": "del-yellow-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM relation ordering/branch geometry trips the simple self-intersection heuristic; no blocking geometry error remains."
+      "subject": "del-red-seg-02",
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "delhi",
       "rule": "station-far-from-nearest-segment",
       "subject": "del-aerocity",
-      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "delhi",
       "rule": "station-far-from-nearest-segment",
       "subject": "del-andrews-ganj",
-      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "delhi",
       "rule": "station-far-from-nearest-segment",
       "subject": "del-azadpur",
-      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+      "reason": "not yet reviewed, triaged per city in M10.2"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "subject": "del-delhi-gate",
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "delhi",
       "rule": "station-far-from-nearest-segment",
       "subject": "del-dilli-haat-ina",
-      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "delhi",
       "rule": "station-far-from-nearest-segment",
       "subject": "del-domestic-airport",
-      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+      "reason": "not yet reviewed, triaged per city in M10.2"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "subject": "del-dwarka-kakrola",
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "delhi",
       "rule": "station-far-from-nearest-segment",
       "subject": "del-hauz-khas",
-      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "delhi",
       "rule": "station-far-from-nearest-segment",
-      "subject": "del-inderlok",
-      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+      "subject": "del-kalkaji-mandir",
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "delhi",
       "rule": "station-far-from-nearest-segment",
       "subject": "del-karkarduma",
-      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
-    },
-    {
-      "city_id": "delhi",
-      "rule": "station-far-from-nearest-segment",
-      "subject": "del-kirti-nagar",
-      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "delhi",
       "rule": "station-far-from-nearest-segment",
       "subject": "del-madhuban-chowk",
-      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "delhi",
       "rule": "station-far-from-nearest-segment",
       "subject": "del-mayur-vihar-i",
-      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+      "reason": "not yet reviewed, triaged per city in M10.2"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "subject": "del-netaji-subhash-place",
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "delhi",
       "rule": "station-far-from-nearest-segment",
       "subject": "del-new-delhi",
-      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "delhi",
       "rule": "station-far-from-nearest-segment",
       "subject": "del-punjabi-bagh-west",
-      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
-    },
-    {
-      "city_id": "delhi",
-      "rule": "station-far-from-nearest-segment",
-      "subject": "del-rajouri-garden",
-      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
-    },
-    {
-      "city_id": "delhi",
-      "rule": "station-far-from-nearest-segment",
-      "subject": "del-saket",
-      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "delhi",
       "rule": "station-far-from-nearest-segment",
       "subject": "del-welcome",
-      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
-      "city_id": "kolkata",
-      "rule": "ground-truth-length",
-      "subject": "kol-green",
-      "reason": "Accepted for this M8 baseline: computed OSM geometry and published corridor length differ beyond warning tolerance; retain as tracked reference variance."
+      "city_id": "gurugram",
+      "rule": "polyline-hook",
+      "subject": "gur-rapid-seg-01",
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
-      "city_id": "kolkata",
-      "rule": "ground-truth-length",
-      "subject": "kol-purple",
-      "reason": "Accepted for this M8 baseline: computed OSM geometry and published corridor length differ beyond warning tolerance; retain as tracked reference variance."
+      "city_id": "hyderabad",
+      "rule": "consecutive-segment-gap",
+      "subject": "hyd-green-seg-01|hyd-green-seg-02",
+      "reason": "not yet reviewed, triaged per city in M10.2"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "segment-end-far-from-station",
+      "subject": "hyd-green-seg-02",
+      "reason": "not yet reviewed, triaged per city in M10.2"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "segment-end-far-from-station",
+      "subject": "hyd-green-seg-02",
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "kolkata",
       "rule": "ground-truth-length",
       "subject": "kol-yellow",
-      "reason": "Accepted for this M8 baseline: computed OSM geometry and published corridor length differ beyond warning tolerance; retain as tracked reference variance."
-    },
-    {
-      "city_id": "kolkata",
-      "rule": "segment-end-far-from-station",
-      "subject": "kol-green-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
-    },
-    {
-      "city_id": "kolkata",
-      "rule": "segment-end-far-from-station",
-      "subject": "kol-orange-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
-    },
-    {
-      "city_id": "kolkata",
-      "rule": "segment-end-far-from-station",
-      "subject": "kol-orange-seg-02",
-      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "kolkata",
       "rule": "segment-end-far-from-station",
       "subject": "kol-purple-seg-02",
-      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "kolkata",
       "rule": "segment-end-far-from-station",
       "subject": "kol-purple-seg-02",
-      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "kolkata",
       "rule": "segment-end-far-from-station",
       "subject": "kol-yellow-seg-02",
-      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
-      "city_id": "kolkata",
-      "rule": "station-far-from-nearest-segment",
-      "subject": "kolkata-kavi-subhash",
-      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+      "city_id": "mumbai",
+      "rule": "consecutive-segment-gap",
+      "subject": "mum-line-1-schematic-01|mum-line-1-seg-01",
+      "reason": "not yet reviewed, triaged per city in M10.2"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "consecutive-segment-gap",
+      "subject": "mum-line-3-schematic-01|mum-line-3-schematic-02",
+      "reason": "not yet reviewed, triaged per city in M10.2"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "consecutive-segment-gap",
+      "subject": "mum-line-3-schematic-01|mum-line-3-seg-01",
+      "reason": "not yet reviewed, triaged per city in M10.2"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "consecutive-segment-gap",
+      "subject": "mum-line-3-schematic-01|mum-line-3-seg-02",
+      "reason": "not yet reviewed, triaged per city in M10.2"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "consecutive-segment-gap",
+      "subject": "mum-line-3-schematic-01|mum-line-3-seg-03",
+      "reason": "not yet reviewed, triaged per city in M10.2"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "consecutive-segment-gap",
+      "subject": "mum-line-3-schematic-02|mum-line-3-seg-01",
+      "reason": "not yet reviewed, triaged per city in M10.2"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "consecutive-segment-gap",
+      "subject": "mum-line-3-schematic-02|mum-line-3-seg-02",
+      "reason": "not yet reviewed, triaged per city in M10.2"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "consecutive-segment-gap",
+      "subject": "mum-line-3-schematic-02|mum-line-3-seg-03",
+      "reason": "not yet reviewed, triaged per city in M10.2"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "consecutive-segment-gap",
+      "subject": "mum-line-4-schematic-01|mum-line-4-schematic-02",
+      "reason": "not yet reviewed, triaged per city in M10.2"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "consecutive-segment-gap",
+      "subject": "mum-line-4-schematic-01|mum-line-4-seg-01",
+      "reason": "not yet reviewed, triaged per city in M10.2"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "consecutive-segment-gap",
+      "subject": "mum-line-4-schematic-01|mum-planned-seg-01",
+      "reason": "not yet reviewed, triaged per city in M10.2"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "consecutive-segment-gap",
+      "subject": "mum-line-4-schematic-02|mum-line-4-seg-01",
+      "reason": "not yet reviewed, triaged per city in M10.2"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "consecutive-segment-gap",
+      "subject": "mum-line-4-schematic-02|mum-planned-seg-01",
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "mumbai",
       "rule": "consecutive-segment-gap",
       "subject": "mum-line-4-seg-01|mum-planned-seg-01",
-      "reason": "Accepted for this M8 baseline: branch/disjoint or OSM relation split requires future topology ordering review, no audit error remains."
+      "reason": "not yet reviewed, triaged per city in M10.2"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "consecutive-segment-gap",
+      "subject": "mum-line-9-schematic-01|mum-line-9-seg-01",
+      "reason": "not yet reviewed, triaged per city in M10.2"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "ground-truth-length",
+      "subject": "mum-line-1",
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "mumbai",
       "rule": "ground-truth-length",
       "subject": "mum-line-2a",
-      "reason": "Accepted for this M8 baseline: computed OSM geometry and published corridor length differ beyond warning tolerance; retain as tracked reference variance."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "mumbai",
       "rule": "ground-truth-length",
       "subject": "mum-line-2b",
-      "reason": "Accepted for this M8 baseline: computed OSM geometry and published corridor length differ beyond warning tolerance; retain as tracked reference variance."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "mumbai",
       "rule": "ground-truth-length",
       "subject": "mum-line-7",
-      "reason": "Accepted for this M8 baseline: computed OSM geometry and published corridor length differ beyond warning tolerance; retain as tracked reference variance."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "mumbai",
       "rule": "ground-truth-length",
       "subject": "mum-line-9",
-      "reason": "Accepted for this M8 baseline: computed OSM geometry and published corridor length differ beyond warning tolerance; retain as tracked reference variance."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "mumbai",
       "rule": "ground-truth-station-count",
       "subject": "mum-line-1",
-      "reason": "Accepted for this M8 baseline: active OSM-derived station membership differs from unverified reference totals; needs later official station-list reconciliation."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "mumbai",
       "rule": "ground-truth-station-count",
       "subject": "mum-line-2a",
-      "reason": "Accepted for this M8 baseline: active OSM-derived station membership differs from unverified reference totals; needs later official station-list reconciliation."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "mumbai",
       "rule": "ground-truth-station-count",
-      "subject": "mum-line-4",
-      "reason": "Accepted for this M8 baseline: active OSM-derived station membership differs from unverified reference totals; needs later official station-list reconciliation."
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "ground-truth-station-count",
-      "subject": "mum-line-7",
-      "reason": "Accepted for this M8 baseline: active OSM-derived station membership differs from unverified reference totals; needs later official station-list reconciliation."
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "ground-truth-station-count",
-      "subject": "mum-line-9",
-      "reason": "Accepted for this M8 baseline: active OSM-derived station membership differs from unverified reference totals; needs later official station-list reconciliation."
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "ground-truth-terminal-mismatch",
-      "subject": "mum-line-1",
-      "reason": "Accepted for this M8 baseline: terminal names differ between OSM-derived active station names and unverified reference naming; needs alias/reference cleanup."
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "ground-truth-terminal-mismatch",
-      "subject": "mum-line-1",
-      "reason": "Accepted for this M8 baseline: terminal names differ between OSM-derived active station names and unverified reference naming; needs alias/reference cleanup."
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "ground-truth-terminal-mismatch",
-      "subject": "mum-line-2a",
-      "reason": "Accepted for this M8 baseline: terminal names differ between OSM-derived active station names and unverified reference naming; needs alias/reference cleanup."
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "ground-truth-terminal-mismatch",
-      "subject": "mum-line-2a",
-      "reason": "Accepted for this M8 baseline: terminal names differ between OSM-derived active station names and unverified reference naming; needs alias/reference cleanup."
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "ground-truth-terminal-mismatch",
       "subject": "mum-line-3",
-      "reason": "Accepted for this M8 baseline: terminal names differ between OSM-derived active station names and unverified reference naming; needs alias/reference cleanup."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "mumbai",
-      "rule": "ground-truth-terminal-mismatch",
-      "subject": "mum-line-4",
-      "reason": "Accepted for this M8 baseline: terminal names differ between OSM-derived active station names and unverified reference naming; needs alias/reference cleanup."
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "ground-truth-terminal-mismatch",
-      "subject": "mum-line-4",
-      "reason": "Accepted for this M8 baseline: terminal names differ between OSM-derived active station names and unverified reference naming; needs alias/reference cleanup."
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "ground-truth-terminal-mismatch",
+      "rule": "ground-truth-station-count",
       "subject": "mum-line-7",
-      "reason": "Accepted for this M8 baseline: terminal names differ between OSM-derived active station names and unverified reference naming; needs alias/reference cleanup."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "mumbai",
-      "rule": "ground-truth-terminal-mismatch",
+      "rule": "ground-truth-station-count",
       "subject": "mum-line-9",
-      "reason": "Accepted for this M8 baseline: terminal names differ between OSM-derived active station names and unverified reference naming; needs alias/reference cleanup."
+      "reason": "not yet reviewed, triaged per city in M10.2"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "interchange-consistency",
+      "subject": "mum-andheri",
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "mumbai",
       "rule": "interchange-consistency",
       "subject": "mum-chhatrapati-shivaji-maharaj-terminus",
-      "reason": "Accepted for this M8 baseline: interchange flag is sourced from declared interchange names while the paired station/line merge needs later cluster modeling."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "mumbai",
       "rule": "interchange-consistency",
       "subject": "mum-dadar",
-      "reason": "Accepted for this M8 baseline: interchange flag is sourced from declared interchange names while the paired station/line merge needs later cluster modeling."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "mumbai",
-      "rule": "interchange-consistency",
-      "subject": "mum-gundavali",
-      "reason": "Accepted for this M8 baseline: interchange flag is sourced from declared interchange names while the paired station/line merge needs later cluster modeling."
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "operational-no-reference",
-      "subject": "mum-line-1-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "operational-no-reference",
-      "subject": "mum-line-2a-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "operational-no-reference",
-      "subject": "mum-line-3-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "segment-end-far-from-station",
-      "subject": "mum-line-1-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "segment-end-far-from-station",
-      "subject": "mum-line-1-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "segment-end-far-from-station",
-      "subject": "mum-line-3-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "segment-end-far-from-station",
-      "subject": "mum-line-3-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "segment-end-far-from-station",
-      "subject": "mum-line-4-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "segment-end-far-from-station",
-      "subject": "mum-line-4-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "segment-end-far-from-station",
-      "subject": "mum-planned-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "segment-end-far-from-station",
-      "subject": "mum-planned-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM relation endpoint does not terminate within audit threshold of a station; geometry remains tracked for later manual review."
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "segment-self-intersecting",
-      "subject": "mum-line-4-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM relation ordering/branch geometry trips the simple self-intersection heuristic; no blocking geometry error remains."
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "segment-self-intersecting",
+      "rule": "polyline-hook",
       "subject": "mum-line-7-seg-01",
-      "reason": "Accepted for this M8 baseline: OSM relation ordering/branch geometry trips the simple self-intersection heuristic; no blocking geometry error remains."
+      "reason": "not yet reviewed, triaged per city in M10.2"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "reference-station-missing",
+      "subject": "mum-line-2a",
+      "reason": "not yet reviewed, triaged per city in M10.2"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "segment-end-far-from-station",
+      "subject": "mum-planned-seg-01",
+      "reason": "not yet reviewed, triaged per city in M10.2"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "segment-end-far-from-station",
+      "subject": "mum-planned-seg-01",
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "mumbai",
       "rule": "station-far-from-nearest-segment",
       "subject": "mum-andheri-west",
-      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "station-far-from-nearest-segment",
-      "subject": "mum-chembur",
-      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "mumbai",
       "rule": "station-far-from-nearest-segment",
       "subject": "mum-dahisar-east-line-2",
-      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "mumbai",
       "rule": "station-far-from-nearest-segment",
       "subject": "mum-dahisar-east-line-7",
-      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "mumbai",
       "rule": "station-far-from-nearest-segment",
       "subject": "mum-dahisar-east-line-7",
-      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "mumbai",
       "rule": "station-far-from-nearest-segment",
-      "subject": "mum-dahisar-east-line-9",
-      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+      "subject": "mum-goregaon-east",
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
       "city_id": "mumbai",
       "rule": "station-far-from-nearest-segment",
-      "subject": "mum-miragaon",
-      "reason": "Accepted for this M8 baseline: station is near its assigned line but outside the strict 75 m warning threshold; retained for later coordinate refinement."
+      "subject": "mum-gundavali",
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
-      "city_id": "hyderabad",
-      "rule": "ground-truth-length",
-      "subject": "hyd-green",
-      "reason": "Computed OSM LineString geometry is 9.12 km vs official operational corridor length of 9.60 km (5.0% variance within acceptable OSM alignment tolerances)."
+      "city_id": "mumbai",
+      "rule": "station-far-from-nearest-segment",
+      "subject": "mum-jogeshwari-east",
+      "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
-      "city_id": "hyderabad",
-      "rule": "ground-truth-length",
-      "subject": "hyd-red",
-      "reason": "Computed OSM LineString geometry is 28.09 km vs official operational corridor length of 29.21 km (3.8% variance within acceptable OSM alignment tolerances)."
+      "city_id": "mumbai",
+      "rule": "station-far-from-nearest-segment",
+      "subject": "mum-western-express-highway-eastbound",
+      "reason": "not yet reviewed, triaged per city in M10.2"
+    },
+    {
+      "city_id": "noida",
+      "rule": "consecutive-segment-gap",
+      "subject": "noi-aqua-seg-01|noi-aqua-seg-02",
+      "reason": "not yet reviewed, triaged per city in M10.2"
+    }
+  ],
+  "accepted_warnings": [
+    {
+      "city_id": "ahmedabad",
+      "rule": "future-date-unconfirmed",
+      "subject": "ahmedabad-sabarmati-railway",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "future-record-no-reference",
+      "subject": "ahmedabad-sabarmati-railway",
+      "reason": "Future segment or station pending deep-link reference citation"
     },
     {
       "city_id": "ahmedabad",
@@ -1131,6 +984,12 @@
     {
       "city_id": "ahmedabad",
       "rule": "layout/suspect-default-elevated",
+      "subject": "ahmedabad-sabarmati-railway",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "layout/suspect-default-elevated",
       "subject": "ahmedabad-sachivalaya",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
@@ -1226,8 +1085,80 @@
     },
     {
       "city_id": "bengaluru",
+      "rule": "future-date-unconfirmed",
+      "subject": "blr-blue-seg-01",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "future-date-unconfirmed",
+      "subject": "blr-jayadeva-interchange-uc",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "future-date-unconfirmed",
+      "subject": "blr-pink-seg-01",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "future-date-unconfirmed",
+      "subject": "blr-planned-seg-01",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "future-record-no-reference",
+      "subject": "blr-jayadeva-interchange-uc",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "future-record-no-reference",
+      "subject": "blr-nagawara-proposed",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-phase-date",
+      "subject": "blr-green-seg-01",
+      "reason": "Accepted for this M8 baseline: reference opening stage dates are intentionally unverified and need later official-stage reconciliation."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-phase-date",
+      "subject": "blr-green-seg-01",
+      "reason": "Accepted for this M8 baseline: reference opening stage dates are intentionally unverified and need later official-stage reconciliation."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-phase-date",
+      "subject": "blr-purple-seg-01",
+      "reason": "Accepted for this M8 baseline: reference opening stage dates are intentionally unverified and need later official-stage reconciliation."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-phase-date",
+      "subject": "blr-purple-seg-01",
+      "reason": "Accepted for this M8 baseline: reference opening stage dates are intentionally unverified and need later official-stage reconciliation."
+    },
+    {
+      "city_id": "bengaluru",
       "rule": "layout/suspect-default-elevated",
       "subject": "blr-attiguppe",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-baiyappanahalli",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-banashankari",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -1240,6 +1171,12 @@
       "city_id": "bengaluru",
       "rule": "layout/suspect-default-elevated",
       "subject": "blr-challaghatta",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-chickpete",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -1275,6 +1212,18 @@
     {
       "city_id": "bengaluru",
       "rule": "layout/suspect-default-elevated",
+      "subject": "blr-goraguntepalya",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-halasuru",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
       "subject": "blr-hoodi",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
@@ -1287,13 +1236,31 @@
     {
       "city_id": "bengaluru",
       "rule": "layout/suspect-default-elevated",
+      "subject": "blr-indiranagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
       "subject": "blr-jalahalli",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
       "city_id": "bengaluru",
       "rule": "layout/suspect-default-elevated",
+      "subject": "blr-jaya-prakash-nagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
       "subject": "blr-jayadeva-interchange-uc",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-jayanagar",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -1323,13 +1290,37 @@
     {
       "city_id": "bengaluru",
       "rule": "layout/suspect-default-elevated",
+      "subject": "blr-konanakunte-cross",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-krishna-rajendra-market",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
       "subject": "blr-krishnarajapura",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
       "city_id": "bengaluru",
       "rule": "layout/suspect-default-elevated",
+      "subject": "blr-kudlu-gate",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
       "subject": "blr-kundalahalli",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-lalbagh",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -1354,6 +1345,12 @@
       "city_id": "bengaluru",
       "rule": "layout/suspect-default-elevated",
       "subject": "blr-mahalakshmi",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-mahatma-gandhi-road",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -1395,6 +1392,12 @@
     {
       "city_id": "bengaluru",
       "rule": "layout/suspect-default-elevated",
+      "subject": "blr-national-college",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
       "subject": "blr-pantharapalya-nayandahalli",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
@@ -1425,13 +1428,13 @@
     {
       "city_id": "bengaluru",
       "rule": "layout/suspect-default-elevated",
-      "subject": "blr-rajajinagar",
+      "subject": "blr-rajarajeshwari-nagar",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
       "city_id": "bengaluru",
       "rule": "layout/suspect-default-elevated",
-      "subject": "blr-rajarajeshwari-nagar",
+      "subject": "blr-rashtreeya-vidyalaya-road",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -1461,7 +1464,19 @@
     {
       "city_id": "bengaluru",
       "rule": "layout/suspect-default-elevated",
+      "subject": "blr-south-end-circle",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
       "subject": "blr-sri-balagangadharanatha-swamiji-hosahalli",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-sri-balagangadharanatha-swamiji-stn-hosahalli",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -1479,7 +1494,19 @@
     {
       "city_id": "bengaluru",
       "rule": "layout/suspect-default-elevated",
+      "subject": "blr-swami-vivekananda-road",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
       "subject": "blr-thalaghattapura",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-trinity",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -1497,7 +1524,19 @@
     {
       "city_id": "bengaluru",
       "rule": "layout/suspect-default-elevated",
+      "subject": "blr-vijayanagara",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
       "subject": "blr-whitefield-kadugodi",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "blr-yelachenahalli",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -1507,10 +1546,172 @@
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
+      "city_id": "bengaluru",
+      "rule": "operational-no-reference",
+      "subject": "blr-green-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-no-reference",
+      "subject": "blr-purple-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "station-gap",
+      "subject": "blr-pink|blr-mahatma-gandhi-road|blr-nagawara-proposed",
+      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "station-gap",
+      "subject": "blr-purple|blr-challaghatta|blr-vijayanagar",
+      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
+    },
+    {
       "city_id": "chennai",
-      "rule": "segment-end-far-from-station",
-      "subject": "che-corridor-5-seg-01",
-      "reason": "Segment geometry terminates at tail track, crossover, or depot spur beyond station platform"
+      "rule": "station-gap",
+      "subject": "che-corridor-5|chennai-koyambedu|chennai-alandur",
+      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "future-date-unconfirmed",
+      "subject": "del-aerocity",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "future-date-unconfirmed",
+      "subject": "del-andrews-ganj",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "future-date-unconfirmed",
+      "subject": "del-bhalaswa",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "future-date-unconfirmed",
+      "subject": "del-deepali-chowk",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "future-date-unconfirmed",
+      "subject": "del-domestic-airport",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "future-date-unconfirmed",
+      "subject": "del-golden-branch-01",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "future-date-unconfirmed",
+      "subject": "del-golden-seg-01",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "future-date-unconfirmed",
+      "subject": "del-haiderpur-village",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "future-date-unconfirmed",
+      "subject": "del-indraprastha",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "future-date-unconfirmed",
+      "subject": "del-magenta-seg-02",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "future-date-unconfirmed",
+      "subject": "del-magenta-seg-03",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "future-date-unconfirmed",
+      "subject": "del-north-pitampura-prashant-vihar",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "future-date-unconfirmed",
+      "subject": "del-peeragarhi-chowk",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "future-date-unconfirmed",
+      "subject": "del-red-seg-02",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "future-record-no-reference",
+      "subject": "del-aerocity",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "future-record-no-reference",
+      "subject": "del-andrews-ganj",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "future-record-no-reference",
+      "subject": "del-bhalaswa",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "future-record-no-reference",
+      "subject": "del-deepali-chowk",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "future-record-no-reference",
+      "subject": "del-domestic-airport",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "future-record-no-reference",
+      "subject": "del-haiderpur-village",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "future-record-no-reference",
+      "subject": "del-indraprastha",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "future-record-no-reference",
+      "subject": "del-north-pitampura-prashant-vihar",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "future-record-no-reference",
+      "subject": "del-peeragarhi-chowk",
+      "reason": "Future segment or station pending deep-link reference citation"
     },
     {
       "city_id": "delhi",
@@ -1522,6 +1723,12 @@
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
       "subject": "del-aerocity",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-akshardham",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -1552,6 +1759,12 @@
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
       "subject": "del-ashram",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-badarpur-border",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -1647,13 +1860,19 @@
     {
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
-      "subject": "del-dhansa-bus-stand",
+      "subject": "del-dilshad-garden",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
       "subject": "del-domestic-airport",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-durgabai-deshmukh-south-campus",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -1785,6 +2004,12 @@
     {
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
+      "subject": "del-iit-delhi",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
       "subject": "del-inderlok",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
@@ -1834,6 +2059,12 @@
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
       "subject": "del-janakpuri-west",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-jasola-apollo",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -2013,6 +2244,12 @@
     {
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
+      "subject": "del-mayur-vihar-extension",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
       "subject": "del-mayur-vihar-i",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
@@ -2062,12 +2299,6 @@
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
       "subject": "del-munirka",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "layout/suspect-default-elevated",
-      "subject": "del-najafgarh",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -2127,6 +2358,12 @@
     {
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
+      "subject": "del-new-ashok-nagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
       "subject": "del-nirman-vihar",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
@@ -2169,7 +2406,19 @@
     {
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
+      "subject": "del-okhla-nsic",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
       "subject": "del-okhla-vihar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-old-faridabad",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -2212,6 +2461,12 @@
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
       "subject": "del-peera-garhi",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-peeragarhi",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -2332,6 +2587,12 @@
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
       "subject": "del-sarai-kale-khan-nizamuddin",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-sarita-vihar",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -2517,6 +2778,18 @@
     {
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
+      "subject": "del-tughlakabad",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-tughlkabad",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
       "subject": "del-udyog-nagar",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
@@ -2567,6 +2840,228 @@
       "rule": "layout/suspect-default-elevated",
       "subject": "del-yamuna-vihar",
       "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "subject": "del-airport-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "subject": "del-blue-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "subject": "del-blue-seg-02",
+      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "subject": "del-green-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "subject": "del-green-seg-02",
+      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "subject": "del-grey-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "subject": "del-magenta-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "subject": "del-pink-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "subject": "del-red-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "subject": "del-violet-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-no-reference",
+      "subject": "del-yellow-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-gap",
+      "subject": "del-airport|del-aerocity|del-dhaula-kuan",
+      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-gap",
+      "subject": "del-airport|del-dhaula-kuan|del-shivaji-stadium",
+      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-gap",
+      "subject": "del-airport|del-igi-airport|del-delhi-aerocity",
+      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-gap",
+      "subject": "del-blue|del-akshardham|del-supreme-court",
+      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-gap",
+      "subject": "del-blue|del-dwarka-sector-21|del-yamuna-bank",
+      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-gap",
+      "subject": "del-golden|del-terminal-1-igi-airport|del-chirag-delhi",
+      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-gap",
+      "subject": "del-green|del-brigadier-hoshiyar-singh|del-kirti-nagar",
+      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-gap",
+      "subject": "del-grey|del-dwarka-kakrola|del-najafgarh",
+      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-gap",
+      "subject": "del-magenta|del-deepali-chowk|del-indraprastha",
+      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-gap",
+      "subject": "del-magenta|del-krishna-park-extension|del-majlis-park",
+      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-gap",
+      "subject": "del-magenta|del-new-delhi|del-inderlok",
+      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-gap",
+      "subject": "del-magenta|del-sadar-bazar-cantonment|del-palam",
+      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-gap",
+      "subject": "del-pink|del-durgabai-deshmukh-south-campus|del-delhi-cantt",
+      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-gap",
+      "subject": "del-pink|del-mayur-vihar-i|del-sarai-kale-khan-nizamuddin",
+      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-gap",
+      "subject": "del-pink|del-shiv-vihar|del-jaffrabad",
+      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-gap",
+      "subject": "del-violet|del-badarpur-border|del-badhkal-mor",
+      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
+    },
+    {
+      "city_id": "gurugram",
+      "rule": "interchange-consistency",
+      "subject": "gur-sikanderpur",
+      "reason": "Sikanderpur Rapid Metro station provides designated interchange to DMRC Yellow Line via pedestrian walkway."
+    },
+    {
+      "city_id": "gurugram",
+      "rule": "station-opened-before-segment",
+      "subject": "gur-sikanderpur",
+      "reason": "Phase 1 terminal/interchange opened on 2013-11-14 before Phase 2 Golf Course extension opened on 2017-03-31"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "future-date-unconfirmed",
+      "subject": "hyd-green-seg-02",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "ground-truth-length",
+      "subject": "hyd-green",
+      "reason": "Computed OSM LineString geometry is 9.12 km vs official operational corridor length of 9.60 km (5.0% variance within acceptable OSM alignment tolerances)."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "ground-truth-length",
+      "subject": "hyd-red",
+      "reason": "Computed OSM LineString geometry is 28.09 km vs official operational corridor length of 29.21 km (3.8% variance within acceptable OSM alignment tolerances)."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "future-date-unconfirmed",
+      "subject": "kol-yellow-seg-02",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "future-date-unconfirmed",
+      "subject": "kolkata-mothers-wax-museum",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "future-date-unconfirmed",
+      "subject": "kolkata-nalban",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "future-record-no-reference",
+      "subject": "kolkata-mothers-wax-museum",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "future-record-no-reference",
+      "subject": "kolkata-nalban",
+      "reason": "Future segment or station pending deep-link reference citation"
     },
     {
       "city_id": "kolkata",
@@ -2721,6 +3216,12 @@
     {
       "city_id": "kolkata",
       "rule": "layout/suspect-default-elevated",
+      "subject": "kolkata-mothers-wax-museum",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "layout/suspect-default-elevated",
       "subject": "kolkata-nalban",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
@@ -2769,7 +3270,7 @@
     {
       "city_id": "kolkata",
       "rule": "layout/suspect-default-elevated",
-      "subject": "kolkata-satyajit-ray",
+      "subject": "kolkata-satyajit-roy",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -2797,6 +3298,24 @@
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
+      "city_id": "kolkata",
+      "rule": "station-gap",
+      "subject": "kol-orange|kolkata-beleghata|kolkata-nalban",
+      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "station-gap",
+      "subject": "kol-orange|kolkata-nalban|kolkata-mothers-wax-museum",
+      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "station-name-quality",
+      "subject": "kolkata-mothers-wax-museum",
+      "reason": "Acronym or title-case formatting distinction"
+    },
+    {
       "city_id": "mumbai",
       "rule": "consecutive-segment-gap",
       "subject": "mum-line-3-seg-01|mum-line-3-seg-03",
@@ -2804,8 +3323,446 @@
     },
     {
       "city_id": "mumbai",
+      "rule": "future-date-unconfirmed",
+      "subject": "mum-anik-nagar-bus-depot",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-date-unconfirmed",
+      "subject": "mum-bhakti-park",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-date-unconfirmed",
+      "subject": "mum-chembur",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-date-unconfirmed",
+      "subject": "mum-csia-t1",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-date-unconfirmed",
+      "subject": "mum-deonar",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-date-unconfirmed",
+      "subject": "mum-diamond-garden",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-date-unconfirmed",
+      "subject": "mum-eeh",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-date-unconfirmed",
+      "subject": "mum-esic-nagar",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-date-unconfirmed",
+      "subject": "mum-gaimukh",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-date-unconfirmed",
+      "subject": "mum-gowniwada",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-date-unconfirmed",
+      "subject": "mum-ilfs",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-date-unconfirmed",
+      "subject": "mum-indira-nagar",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-date-unconfirmed",
+      "subject": "mum-kapurbawdi",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-date-unconfirmed",
+      "subject": "mum-khira-nagar",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-date-unconfirmed",
+      "subject": "mum-kurla",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-date-unconfirmed",
+      "subject": "mum-kurla-terminal",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-date-unconfirmed",
+      "subject": "mum-line-1-schematic-01",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-date-unconfirmed",
+      "subject": "mum-line-2b-seg-01",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-date-unconfirmed",
+      "subject": "mum-line-3-schematic-01",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-date-unconfirmed",
+      "subject": "mum-line-3-schematic-02",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-date-unconfirmed",
+      "subject": "mum-line-4-schematic-01",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-date-unconfirmed",
+      "subject": "mum-line-4-schematic-02",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-date-unconfirmed",
+      "subject": "mum-line-4-seg-01",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-date-unconfirmed",
+      "subject": "mum-line-9-schematic-01",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-date-unconfirmed",
+      "subject": "mum-mandale",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-date-unconfirmed",
+      "subject": "mum-mankhurd",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-date-unconfirmed",
+      "subject": "mum-meditya-nagar",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-date-unconfirmed",
+      "subject": "mum-mmrda",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-date-unconfirmed",
+      "subject": "mum-mtnl",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-date-unconfirmed",
+      "subject": "mum-nanavati-hospital",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-date-unconfirmed",
+      "subject": "mum-national-college",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-date-unconfirmed",
+      "subject": "mum-planned-seg-01",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-date-unconfirmed",
+      "subject": "mum-prem-nagar",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-date-unconfirmed",
+      "subject": "mum-sai-baba-nagar",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-date-unconfirmed",
+      "subject": "mum-saraswat-nagar",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-date-unconfirmed",
+      "subject": "mum-sg-barve-marg",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-date-unconfirmed",
+      "subject": "mum-shaheed-bhagat-singh-garden",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-date-unconfirmed",
+      "subject": "mum-shivaji-chowk-chembur",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-date-unconfirmed",
+      "subject": "mum-suman-nagar",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-date-unconfirmed",
+      "subject": "mum-wadala-tt",
+      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-record-no-reference",
+      "subject": "mum-anik-nagar-bus-depot",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-record-no-reference",
+      "subject": "mum-bhakti-park",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-record-no-reference",
+      "subject": "mum-chembur",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-record-no-reference",
+      "subject": "mum-csia-t1",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-record-no-reference",
+      "subject": "mum-deonar",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-record-no-reference",
+      "subject": "mum-diamond-garden",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-record-no-reference",
+      "subject": "mum-dongripada",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-record-no-reference",
+      "subject": "mum-eeh",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-record-no-reference",
+      "subject": "mum-esic-nagar",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-record-no-reference",
+      "subject": "mum-gaimukh",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-record-no-reference",
+      "subject": "mum-gowniwada",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-record-no-reference",
+      "subject": "mum-ilfs",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-record-no-reference",
+      "subject": "mum-indira-nagar",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-record-no-reference",
+      "subject": "mum-kapurbawdi",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-record-no-reference",
+      "subject": "mum-khira-nagar",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-record-no-reference",
+      "subject": "mum-kurla",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-record-no-reference",
+      "subject": "mum-kurla-terminal",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-record-no-reference",
+      "subject": "mum-mandale",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-record-no-reference",
+      "subject": "mum-mankhurd",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-record-no-reference",
+      "subject": "mum-meditya-nagar",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-record-no-reference",
+      "subject": "mum-mmrda",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-record-no-reference",
+      "subject": "mum-mtnl",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-record-no-reference",
+      "subject": "mum-nanavati-hospital",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-record-no-reference",
+      "subject": "mum-national-college",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-record-no-reference",
+      "subject": "mum-prem-nagar",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-record-no-reference",
+      "subject": "mum-sai-baba-nagar",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-record-no-reference",
+      "subject": "mum-saraswat-nagar",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-record-no-reference",
+      "subject": "mum-sg-barve-marg",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-record-no-reference",
+      "subject": "mum-shaheed-bhagat-singh-garden",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-record-no-reference",
+      "subject": "mum-shivaji-chowk-chembur",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-record-no-reference",
+      "subject": "mum-suman-nagar",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "future-record-no-reference",
+      "subject": "mum-wadala-tt",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
+      "city_id": "mumbai",
       "rule": "layout/suspect-default-elevated",
       "subject": "mum-aarey",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-airport-road",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -2818,6 +3775,12 @@
       "city_id": "mumbai",
       "rule": "layout/suspect-default-elevated",
       "subject": "mum-anand-nagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-andheri",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -2841,7 +3804,31 @@
     {
       "city_id": "mumbai",
       "rule": "layout/suspect-default-elevated",
+      "subject": "mum-asalpha",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-azad-nagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-bandra-kurla-complex-bkc",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
       "subject": "mum-bangur-nagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-bhakti-park",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -2853,7 +3840,37 @@
     {
       "city_id": "mumbai",
       "rule": "layout/suspect-default-elevated",
+      "subject": "mum-chakala-jb-nagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
       "subject": "mum-chembur",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-csia-t1",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-csmia-domestic",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-csmia-international-t2",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-d-n-nagar",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -2907,13 +3924,31 @@
     {
       "city_id": "mumbai",
       "rule": "layout/suspect-default-elevated",
+      "subject": "mum-eeh",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
       "subject": "mum-eksar",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
       "city_id": "mumbai",
       "rule": "layout/suspect-default-elevated",
+      "subject": "mum-esic-nagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
       "subject": "mum-gaimukh",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-ghatkopar",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -2943,6 +3978,24 @@
     {
       "city_id": "mumbai",
       "rule": "layout/suspect-default-elevated",
+      "subject": "mum-ilfs",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-indira-nagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-jagruti-nagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
       "subject": "mum-jogeshwari-east",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
@@ -2967,7 +4020,25 @@
     {
       "city_id": "mumbai",
       "rule": "layout/suspect-default-elevated",
+      "subject": "mum-khira-nagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
       "subject": "mum-kurar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-kurla",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-kurla-terminal",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -2991,7 +4062,19 @@
     {
       "city_id": "mumbai",
       "rule": "layout/suspect-default-elevated",
+      "subject": "mum-mahindra-mahindra",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
       "subject": "mum-malad-west",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-malad-west-2",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -3015,7 +4098,37 @@
     {
       "city_id": "mumbai",
       "rule": "layout/suspect-default-elevated",
+      "subject": "mum-meditya-nagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-mmrda",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
       "subject": "mum-mogra",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-mtnl",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-nanavati-hospital",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-national-college",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -3039,7 +4152,49 @@
     {
       "city_id": "mumbai",
       "rule": "layout/suspect-default-elevated",
+      "subject": "mum-prem-nagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
       "subject": "mum-rashtriya-udyan",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-rushi-sankul",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-sai-baba-nagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-saki-naka",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-saraswat-nagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-sg-barve-marg",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-shaheed-bhagat-singh-garden",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -3057,7 +4212,37 @@
     {
       "city_id": "mumbai",
       "rule": "layout/suspect-default-elevated",
+      "subject": "mum-suman-nagar",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
       "subject": "mum-valnai-meeth-chowky",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-versova",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-wadala-tt",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-western-express-highway-eastbound",
+      "reason": "Outdoor station layout unverified pending operator published structural list"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-western-express-highway-westbound",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -3099,20 +4284,98 @@
     {
       "city_id": "mumbai",
       "rule": "operational-no-reference",
-      "subject": "mum-line-7-seg-01",
-      "reason": "Historical operational segment reference being retrieved from operator archive"
+      "subject": "mum-line-1-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
     },
     {
       "city_id": "mumbai",
-      "rule": "segment-end-far-from-station",
-      "subject": "mum-line-3-seg-03",
-      "reason": "Segment geometry terminates at tail track, crossover, or depot spur beyond station platform"
+      "rule": "operational-no-reference",
+      "subject": "mum-line-2a-seg-01",
+      "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-no-reference",
+      "subject": "mum-line-7-seg-01",
+      "reason": "Historical operational segment reference being retrieved from operator archive"
     },
     {
       "city_id": "mumbai",
       "rule": "station-far-from-nearest-segment",
       "subject": "mum-dahisar-east",
       "reason": "Physical station entrance/concourse offset from track centerline within tolerances"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-gap",
+      "subject": "mum-line-1|mum-ghatkopar|mum-esic-nagar",
+      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-gap",
+      "subject": "mum-line-3|mum-csia-t1|mum-mmrda",
+      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-gap",
+      "subject": "mum-line-3|mum-cuffe-parade|mum-national-college",
+      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-gap",
+      "subject": "mum-line-3|mum-ilfs|mum-nanavati-hospital",
+      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-gap",
+      "subject": "mum-line-3|mum-khira-nagar|mum-ilfs",
+      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-gap",
+      "subject": "mum-line-4|mum-bhakti-park|mum-mtnl",
+      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-gap",
+      "subject": "mum-line-4|mum-dongripada|mum-eeh",
+      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-gap",
+      "subject": "mum-line-4|mum-ghatkopar|mum-dongripada",
+      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-gap",
+      "subject": "mum-line-4|mum-gowniwada|mum-kapurbawdi",
+      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-gap",
+      "subject": "mum-line-4|mum-kapurbawdi|mum-ghatkopar",
+      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-gap",
+      "subject": "mum-line-9|mum-kashigaon|mum-shaheed-bhagat-singh-garden",
+      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-name-quality",
+      "subject": "mum-csia-t1",
+      "reason": "Acronym or title-case formatting distinction"
     },
     {
       "city_id": "mumbai",
@@ -3133,6 +4396,36 @@
       "reason": "Trial or soft launch ceremony precedes official commercial public service date"
     },
     {
+      "city_id": "noida",
+      "rule": "interchange-consistency",
+      "subject": "noi-noida-sector-51",
+      "reason": "Noida Sector 51 Aqua Line station provides designated interchange to DMRC Blue Line (Sector 52) via pedestrian walkway."
+    },
+    {
+      "city_id": "noida",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "noi-depot",
+      "reason": "Depot station layout left unverified pending explicit NMRC site layout verification per T4"
+    },
+    {
+      "city_id": "noida",
+      "rule": "station-gap",
+      "subject": "noi-aqua|noi-depot|noi-noida-sector-137",
+      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
+    },
+    {
+      "city_id": "noida",
+      "rule": "station-gap",
+      "subject": "noi-aqua|noi-noida-sector-83|noi-noida-sector-143",
+      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
+    },
+    {
+      "city_id": "pune",
+      "rule": "future-record-no-reference",
+      "subject": "pune-range-hill",
+      "reason": "Future segment or station pending deep-link reference citation"
+    },
+    {
       "city_id": "pune",
       "rule": "ground-truth-length",
       "subject": "pun-aqua",
@@ -3146,15 +4439,9 @@
     },
     {
       "city_id": "pune",
-      "rule": "segment-end-far-from-station",
-      "subject": "pun-line-3-seg-01",
-      "reason": "Segment geometry terminates at tail track, crossover, or depot spur beyond station platform"
-    },
-    {
-      "city_id": "pune",
-      "rule": "segment-self-intersecting",
-      "subject": "pun-line-3-seg-01",
-      "reason": "Track crossover, reversing loop, or flyover scissors geometry in OSM"
+      "rule": "station-far-from-nearest-segment",
+      "subject": "pune-district-court",
+      "reason": "Physical station entrance/concourse offset from track centerline within tolerances"
     },
     {
       "city_id": "pune",
@@ -3163,16 +4450,28 @@
       "reason": "Physical station entrance/concourse offset from track centerline within tolerances"
     },
     {
-      "city_id": "gurugram",
-      "rule": "station-opened-before-segment",
-      "subject": "gur-sikanderpur",
-      "reason": "Phase 1 terminal/interchange opened on 2013-11-14 before Phase 2 Golf Course extension opened on 2017-03-31"
+      "city_id": "pune",
+      "rule": "station-gap",
+      "subject": "pun-aqua|pune-vanaz|pune-district-court",
+      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
     },
     {
-      "city_id": "noida",
-      "rule": "layout/suspect-default-elevated",
-      "subject": "noi-depot",
-      "reason": "Depot station layout left unverified pending explicit NMRC site layout verification per T4"
+      "city_id": "pune",
+      "rule": "station-gap",
+      "subject": "pun-purple|pune-khadki|pune-shivaji-nagar",
+      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
+    },
+    {
+      "city_id": "pune",
+      "rule": "station-gap",
+      "subject": "pun-purple|pune-pcmc|pune-bopodi",
+      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
+    },
+    {
+      "city_id": "pune",
+      "rule": "station-gap",
+      "subject": "pun-purple|pune-range-hill|pune-dapodi",
+      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
     }
   ]
 }

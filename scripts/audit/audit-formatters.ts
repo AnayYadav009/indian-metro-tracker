@@ -1,33 +1,86 @@
-import type { Finding, BaselineFile, AuditResult } from "./audit-engine";
+import type {
+  Finding,
+  BaselineFile,
+  AuditResult,
+  BaselineEntry,
+  KnownDefectEntry,
+} from "./audit-engine";
+
+export interface ApplyBaselineResult {
+  unbaselined: Finding[];
+  accepted: Finding[];
+  unreviewed: Finding[];
+  knownDefects: Finding[];
+  staleAccepted: BaselineEntry[];
+  staleUnreviewed: BaselineEntry[];
+  staleKnownDefects: KnownDefectEntry[];
+}
 
 /**
- * Separates findings into baselined and unbaselined sets based on baseline definitions.
+ * Separates findings into accepted, unreviewed, known defects, and unbaselined sets.
+ * Also tracks stale baseline entries that match no active finding.
  */
 export function applyBaseline(
   findings: Finding[],
   baseline: BaselineFile
-): { unbaselined: Finding[]; baselined: Finding[] } {
-  const baselineSet = new Set(
-    baseline.accepted_warnings.map(
-      (e) => `${e.city_id}|${e.rule}|${e.subject}`
-    )
-  );
+): ApplyBaselineResult {
+  const acceptedList = baseline.accepted_warnings || [];
+  const unreviewedList = baseline.unreviewed_warnings || [];
+  const knownDefectsList = baseline.known_defects || [];
+
+  const acceptedKeys = new Set(acceptedList.map((e) => `${e.city_id}|${e.rule}|${e.subject}`));
+  const unreviewedKeys = new Set(unreviewedList.map((e) => `${e.city_id}|${e.rule}|${e.subject}`));
+  const knownDefectKeys = new Set(knownDefectsList.map((d) => `${d.city_id}|${d.rule}|${d.subject}`));
+
+  const matchedAcceptedKeys = new Set<string>();
+  const matchedUnreviewedKeys = new Set<string>();
+  const matchedKnownDefectKeys = new Set<string>();
 
   const unbaselined: Finding[] = [];
-  const baselined: Finding[] = [];
+  const accepted: Finding[] = [];
+  const unreviewed: Finding[] = [];
+  const knownDefects: Finding[] = [];
 
   for (const f of findings) {
-    if (
-      f.severity === "warn" &&
-      baselineSet.has(`${f.city_id}|${f.rule}|${f.subject}`)
-    ) {
-      baselined.push(f);
+    if (f.severity !== "warn") {
+      unbaselined.push(f);
+      continue;
+    }
+
+    const key = `${f.city_id}|${f.rule}|${f.subject}`;
+    if (knownDefectKeys.has(key)) {
+      knownDefects.push(f);
+      matchedKnownDefectKeys.add(key);
+    } else if (acceptedKeys.has(key)) {
+      accepted.push(f);
+      matchedAcceptedKeys.add(key);
+    } else if (unreviewedKeys.has(key)) {
+      unreviewed.push(f);
+      matchedUnreviewedKeys.add(key);
     } else {
       unbaselined.push(f);
     }
   }
 
-  return { unbaselined, baselined };
+  const staleAccepted = acceptedList.filter(
+    (e) => !matchedAcceptedKeys.has(`${e.city_id}|${e.rule}|${e.subject}`)
+  );
+  const staleUnreviewed = unreviewedList.filter(
+    (e) => !matchedUnreviewedKeys.has(`${e.city_id}|${e.rule}|${e.subject}`)
+  );
+  const staleKnownDefects = knownDefectsList.filter(
+    (d) => !matchedKnownDefectKeys.has(`${d.city_id}|${d.rule}|${d.subject}`)
+  );
+
+  return {
+    unbaselined,
+    accepted,
+    unreviewed,
+    knownDefects,
+    staleAccepted,
+    staleUnreviewed,
+    staleKnownDefects,
+  };
 }
 
 /**
@@ -131,9 +184,37 @@ export function formatMarkdownReport(result: AuditResult, baseline?: BaselineFil
   lines.push("");
 
   if (baseline) {
-    const { baselined } = applyBaseline(result.findings, baseline);
-    if (baselined.length > 0) {
-      lines.push(`- **Baselined warnings:** ${baselined.length}`);
+    const { accepted, unreviewed, knownDefects, staleAccepted, staleUnreviewed, staleKnownDefects } =
+      applyBaseline(result.findings, baseline);
+
+    lines.push(`- **Accepted warnings (reviewed):** ${accepted.length}`);
+    lines.push(`- **Unreviewed warnings (awaiting city review):** ${unreviewed.length}`);
+    lines.push(`- **Known defects tracked (active backlog):** ${knownDefects.length}`);
+    lines.push("");
+
+    const totalStale = staleAccepted.length + staleUnreviewed.length + staleKnownDefects.length;
+    if (totalStale > 0) {
+      lines.push(`⚠️ **Stale baseline entries (${totalStale}):**`);
+      for (const s of staleAccepted) {
+        lines.push(`  - [accepted] \`${s.city_id}\` \`${s.rule}\` \`${s.subject}\``);
+      }
+      for (const s of staleUnreviewed) {
+        lines.push(`  - [unreviewed] \`${s.city_id}\` \`${s.rule}\` \`${s.subject}\``);
+      }
+      for (const s of staleKnownDefects) {
+        lines.push(`  - [known_defect ${s.finding_id}] \`${s.city_id}\` \`${s.rule}\` \`${s.subject}\``);
+      }
+      lines.push("");
+    }
+
+    if (knownDefects.length > 0) {
+      lines.push("### 🚨 Known Defects Tracked (Active Backlog)");
+      lines.push("");
+      lines.push("| Finding ID | Target | City | Rule | Subject | Note |");
+      lines.push("|---|---|---|---|---|---|");
+      for (const kd of baseline.known_defects || []) {
+        lines.push(`| ${kd.finding_id} | ${kd.target_milestone} | \`${kd.city_id}\` | \`${kd.rule}\` | \`${kd.subject}\` | ${kd.note} |`);
+      }
       lines.push("");
     }
   }

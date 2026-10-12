@@ -478,25 +478,79 @@ describe("Audit Engine", () => {
   });
 
   describe("Baseline", () => {
-    it("filters baselined warnings", () => {
+    it("filters accepted, unreviewed, and known_defects warnings and tracks stale entries", () => {
       const findings: Finding[] = [
         { city_id: "a", rule: "r1", severity: "warn", subject: "s1", message: "m1" },
         { city_id: "a", rule: "r2", severity: "warn", subject: "s2", message: "m2" },
-        { city_id: "a", rule: "r3", severity: "error", subject: "s3", message: "m3" },
+        { city_id: "a", rule: "r3", severity: "warn", subject: "s3", message: "m3" },
+        { city_id: "a", rule: "r4", severity: "warn", subject: "s4", message: "m4" },
+        { city_id: "a", rule: "r5", severity: "error", subject: "s5", message: "m5" },
       ];
       const baseline: BaselineFile = {
         accepted_warnings: [
-          { city_id: "a", rule: "r1", subject: "s1", reason: "known" },
+          { city_id: "a", rule: "r1", subject: "s1", reason: "reviewed" },
+          { city_id: "a", rule: "r_stale", subject: "s_stale", reason: "old accepted" },
+        ],
+        unreviewed_warnings: [
+          { city_id: "a", rule: "r2", subject: "s2", reason: "not yet reviewed, triaged per city in M10.2" },
+          { city_id: "a", rule: "r_stale_unreviewed", subject: "s_stale2", reason: "old unreviewed" },
+        ],
+        known_defects: [
+          {
+            finding_id: "F-01",
+            target_milestone: "M10.2",
+            city_id: "a",
+            rule: "r3",
+            subject: "s3",
+            note: "Active defect",
+          },
+          {
+            finding_id: "F-99",
+            target_milestone: "M10.1",
+            city_id: "a",
+            rule: "r_stale_defect",
+            subject: "s_stale3",
+            note: "Resolved defect",
+          },
         ],
       };
-      const { unbaselined, baselined } = applyBaseline(findings, baseline);
-      expect(baselined.length).toBe(1);
+
+      const {
+        unbaselined,
+        accepted,
+        unreviewed,
+        knownDefects,
+        staleAccepted,
+        staleUnreviewed,
+        staleKnownDefects,
+      } = applyBaseline(findings, baseline);
+
+      expect(accepted.length).toBe(1);
+      expect(accepted[0].subject).toBe("s1");
+
+      expect(unreviewed.length).toBe(1);
+      expect(unreviewed[0].subject).toBe("s2");
+
+      expect(knownDefects.length).toBe(1);
+      expect(knownDefects[0].subject).toBe("s3");
+
+      // r4 is unbaselined; r5 is an error and stays unbaselined
       expect(unbaselined.length).toBe(2);
-      // Errors are never baselined
-      expect(unbaselined.some((f) => f.rule === "r3")).toBe(true);
+      expect(unbaselined.some((f) => f.rule === "r4")).toBe(true);
+      expect(unbaselined.some((f) => f.rule === "r5")).toBe(true);
+
+      // Stale entries detection
+      expect(staleAccepted.length).toBe(1);
+      expect(staleAccepted[0].rule).toBe("r_stale");
+
+      expect(staleUnreviewed.length).toBe(1);
+      expect(staleUnreviewed[0].rule).toBe("r_stale_unreviewed");
+
+      expect(staleKnownDefects.length).toBe(1);
+      expect(staleKnownDefects[0].rule).toBe("r_stale_defect");
     });
 
-    it("does not baseline errors", () => {
+    it("does not baseline errors even if registered in accepted or defect lists", () => {
       const findings: Finding[] = [
         { city_id: "a", rule: "r1", severity: "error", subject: "s1", message: "m1" },
       ];
@@ -505,8 +559,10 @@ describe("Audit Engine", () => {
           { city_id: "a", rule: "r1", subject: "s1", reason: "known" },
         ],
       };
-      const { unbaselined } = applyBaseline(findings, baseline);
+      const { unbaselined, accepted } = applyBaseline(findings, baseline);
+      expect(accepted.length).toBe(0);
       expect(unbaselined.length).toBe(1);
+      expect(unbaselined[0].severity).toBe("error");
     });
   });
 
