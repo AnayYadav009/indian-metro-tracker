@@ -51,6 +51,7 @@ Check at zoom levels covering the whole city, a district, and station level:
 - City filter, status filter, phase filter and search all work for this city.
 - Panels show the right operator, dates, phase and references.
 - Compare against the operator's official map and note any difference.
+- Run docs/VISUAL_QA.md on desktop and mobile and attach the screenshots and the ticked checklist to the PR. Also confirm the city bounding box (and any Overpass query area) covers the operator's whole network, including sections that run into neighbouring cities. If it does not, widen it before fetching, otherwise line ends are silently clipped.
 
 ## Step 6: PR checklist
 - [ ] Reference file with sources, approved by owner

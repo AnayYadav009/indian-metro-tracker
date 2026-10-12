@@ -68,6 +68,26 @@ Compare each city against `data/reference/<city>.json`.
 | Total operational length differs from reference by more than 3% | warn |
 | Reference file self-check: sum of stations_added across openings equals operational_stations, openings in date order, valid topology (loop has no terminals), and source kind ("official" | "government" | "news") | error |
 
+*Note:* A reference line with `topology: "branched"` must list every branch terminal, and a reference with `confidence: "unverified"` downgrades its errors to warnings. Unverified references must be resolved before a city counts as passing the gate.
+
+### E. Blind-spot rules (added 2026-10-12)
+
+These rules close gaps found in the walkthrough review. They are introduced in report-only mode: each rule id is listed under `pendingRules` in `data/audit-baseline.json`, appears in the report with its severity, and does not fail CI until the milestone named below switches it to enforcing and removes it from `pendingRules`. Thresholds are defaults, tunable per city in overrides.
+
+| Rule id | Check | Severity | Enforced in |
+|---|---|---|---|
+| `segment-parallel-duplicate` | Two traces of the same line within about 60 m of each other for more than about 300 m (twin tracks). Complements the overlap-based duplicate rule in section B. | error | M10.1 |
+| `segment-hairpin` | Turn sharper than about 150 degrees within about 300 m, including spikes that double back without self-intersecting. | error | M10.1 |
+| `segment-sparse-vertices` | Leg longer than about 1 km in a segment not marked `schematic`. | warn | M10.1 |
+| `city-km-vs-reference` | City operational km differs from the reference by more than 10 percent. Each line counted once. (The 3 percent warning in section D stays.) | error | M10.1 |
+| `line-terminal-missing` | Every reference terminal, including each branch terminal, needs a station within about 300 m of a segment end of that line. | error | M10.2 |
+| `reference-construction-stretch-missing` | Every `construction[]` stretch in the reference needs a data segment with matching status whose ends are within about 300 m of the stretch ends. | error | M10.2 |
+| `orphan-future-station` | Construction and planned stations also pass the orphan and 75 m checks. | error | M10.2 |
+| `future-segment-no-stations` | Construction or planned segment with no stations, unless `stations_not_published` is set in overrides with a reference. | warn | M10.3 |
+| `cross-network-interchange` | Stations of different cities or networks within about 250 m, or with the same normalized name, share an `interchange_id` or appear in `data/overrides/interchanges.json`. | error | M10.3 |
+| `verified-without-official-source` | `last_verified` present while the only references are OSM or none. | error | M10.3 |
+| `operational-station-no-opened-on` | Operational station with null `opened_on`. | warn | M10.3 |
+
 ## Reference file format (`data/reference/<city>.json`)
 
 Created from official sources before any build or fix.
@@ -130,6 +150,7 @@ Every number or date must have a source object with deep-link URL, title, and re
 4. Record the source URL in `references` for every data value changed.
 5. Repeat until there are zero errors and every warning is fixed or baselined.
 6. Spot check: 10 random stations per city compared by hand against the operator's map; list them in the report.
+7. Run the `docs/VISUAL_QA.md` checklist and attach the evidence to the PR. A clean audit alone does not close a city.
 
 ## Baseline file (`data/audit-baseline.json`)
 

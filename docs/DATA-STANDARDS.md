@@ -41,7 +41,7 @@ Rules
 | `geometry_quality` | `"exact"` \| `"schematic"` in the current schema. Exact is reserved for surveyed or construction-stage geometry; construction and planned stretches without sourced geometry use schematic connectors built from ordered stations. A future `"approximate"` value would require an additive schema and renderer change before use. Operational geometry is never schematic. |
 | `source` | `osm`, `manual` or `osm+<operator>`; `mock` only in mock data. |
 | `retrieved_at` | Date the raw OSM data was fetched (machine date). |
-| `last_verified` | Date a human or agent last checked this record against an official source. Never set automatically by the pipeline. |
+| `last_verified` | Date a human or agent last checked this record against an official source. Never set automatically by the pipeline. `last_verified` requires an official or government reference. OSM-only records carry `retrieved_at` only. |
 
 ## 4. Operators and Lines
 
@@ -58,13 +58,28 @@ Rules
 - IDs are unique across the whole dataset, not just within a city.
 - Station name: the official English name as on the operator's map, in title case, without a "Metro Station" suffix and without line qualifiers like "(Blue Line)". Alternative names and spellings go in `stationAliases` in the overrides file.
 
-## 6. Staleness
+## 6. Geometry Conventions
+
+- One centreline per line. Where OSM has one way per direction, the pipeline merges them (method decided in M10.1 and recorded here).
+- `geometry_quality: exact` is only for surveyed or construction-stage geometry. Anything drawn from station positions or by hand is `schematic`, and the legend note that future routes are schematic stays visible.
+- Spikes that double back are removed in the pipeline unless listed as intentional in overrides.
+
+## 7. Staleness
 
 - A `construction` segment whose `expected_completion` is in the past gets a warning until the date is updated or `completion_unconfirmed` is set with a reference.
 - Re-verify each city's `last_verified` at least when its status data changes; the audit reports records older than 12 months.
 
-## 7. Never
+## 8. Never
 
 - Fill an unknown with a default or a "reasonable" value.
 - Edit generated files in `data/` by hand.
 - Add a data point without recording where it came from.
+
+## 9. Cross-network interchanges and ownership
+
+- Stations belong to the network of the line that serves them, wherever they are located.
+- Cross-network interchanges are linked with a shared `interchange_id` (final model decided in M10.3 and recorded here).
+
+## 10. Future Segments
+
+- A construction or planned segment may have no published stations. Mark it `stations_not_published` in overrides with a reference and show "Stations not yet published" in the UI; never display an invented count.
