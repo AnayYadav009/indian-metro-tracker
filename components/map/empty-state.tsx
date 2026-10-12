@@ -4,7 +4,7 @@ import React, { useMemo } from "react";
 import { AlertCircle, RotateCcw } from "lucide-react";
 import { useMetroStore } from "@/store/use-metro-store";
 import { getMetroData } from "@/lib/data";
-import { matchesSegmentFilter } from "@/lib/filter-utils";
+import { matchesSegmentFilter, buildFilterCriteria } from "@/lib/filter-utils";
 
 export function EmptyFilterState() {
   const selectedCityId = useMetroStore((state) => state.selectedCityId);
@@ -16,19 +16,13 @@ export function EmptyFilterState() {
   const dataset = useMemo(() => getMetroData(), []);
 
   const hasMatches = useMemo(() => {
-    const activeCity = selectedCityId
-      ? dataset.cities.find((c) => c.id === selectedCityId)
-      : null;
-
-    const criteria = {
-      activeCity,
+    const criteria = buildFilterCriteria(
+      dataset,
+      selectedCityId,
       selectedStatuses,
       selectedPhases,
-      searchQuery,
-      lineAliases: dataset.lines
-        .filter((line) => !selectedCityId || line.city_id === selectedCityId)
-        .flatMap((line) => line.aliases ?? []),
-    };
+      searchQuery
+    );
 
     return dataset.segments.features.some((f) =>
       matchesSegmentFilter(f.properties, criteria)

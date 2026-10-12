@@ -167,28 +167,24 @@ export function MapLegend({ className = "" }: MapLegendProps) {
               </div>
             </div>
             <div className="mt-2 flex gap-3 text-[10px]">
-              <span className="flex items-center gap-1">
-                <i
-                  className="rounded-full bg-white"
-                  style={{
-                    width: `${STATION_STYLE.radius.standard * 2}px`,
-                    height: `${STATION_STYLE.radius.standard * 2}px`,
-                    border: `${STATION_STYLE.strokeWidth.standard}px solid ${STATION_STYLE.stroke.construction}`,
-                  }}
-                />
-                Construction
-              </span>
-              <span className="flex items-center gap-1">
-                <i
-                  className="rounded-full bg-white"
-                  style={{
-                    width: `${STATION_STYLE.radius.standard * 2}px`,
-                    height: `${STATION_STYLE.radius.standard * 2}px`,
-                    border: `${STATION_STYLE.strokeWidth.standard}px solid ${STATION_STYLE.stroke.planned}`,
-                  }}
-                />
-                Planned
-              </span>
+              {(
+                [
+                  { label: "Construction", strokeColor: STATION_STYLE.stroke.construction },
+                  { label: "Planned", strokeColor: STATION_STYLE.stroke.planned },
+                ] as const
+              ).map(({ label, strokeColor }) => (
+                <span key={label} className="flex items-center gap-1">
+                  <i
+                    className="rounded-full bg-white"
+                    style={{
+                      width: `${STATION_STYLE.radius.standard * 2}px`,
+                      height: `${STATION_STYLE.radius.standard * 2}px`,
+                      border: `${STATION_STYLE.strokeWidth.standard}px solid ${strokeColor}`,
+                    }}
+                  />
+                  {label}
+                </span>
+              ))}
             </div>
           </div>
 

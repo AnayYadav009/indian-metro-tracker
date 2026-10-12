@@ -126,6 +126,23 @@ export function getLines(cityId?: string): Line[] {
   return lines.filter((l) => l.city_id === targetCity.id);
 }
 
+/** Shared predicate for city/status/phase filter options used by getSegments and getStations. */
+function matchesBaseFilterOptions(
+  props: { city_id: string; status: string; phase: string },
+  options: { cityId?: string; status?: string; phase?: string }
+): boolean {
+  if (options.cityId && props.city_id.toLowerCase() !== options.cityId.toLowerCase()) {
+    return false;
+  }
+  if (options.status && props.status !== options.status) {
+    return false;
+  }
+  if (options.phase && props.phase !== options.phase) {
+    return false;
+  }
+  return true;
+}
+
 /**
  * Get segments with optional filter parameters.
  */
@@ -134,15 +151,7 @@ export function getSegments(options: SegmentFilterOptions = {}): SegmentFeature[
 
   return segments.features.filter((feature) => {
     const props = feature.properties;
-    if (options.cityId && props.city_id.toLowerCase() !== options.cityId.toLowerCase()) {
-      return false;
-    }
-    if (options.status && props.status !== options.status) {
-      return false;
-    }
-    if (options.phase && props.phase !== options.phase) {
-      return false;
-    }
+    if (!matchesBaseFilterOptions(props, options)) return false;
     if (options.lineId && props.line_id !== options.lineId) {
       return false;
     }
@@ -158,15 +167,7 @@ export function getStations(options: StationFilterOptions = {}): StationFeature[
 
   return stations.features.filter((feature) => {
     const props = feature.properties;
-    if (options.cityId && props.city_id.toLowerCase() !== options.cityId.toLowerCase()) {
-      return false;
-    }
-    if (options.status && props.status !== options.status) {
-      return false;
-    }
-    if (options.phase && props.phase !== options.phase) {
-      return false;
-    }
+    if (!matchesBaseFilterOptions(props, options)) return false;
     if (options.lineId && !props.line_ids.includes(options.lineId)) {
       return false;
     }
