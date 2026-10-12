@@ -140,17 +140,33 @@
       "rule": "polyline-hook",
       "subject": "pun-line-3-seg-01",
       "note": "Line 3 has hook near Mhalunge and ends abruptly"
-    },
-    {
-      "finding_id": "F-07",
-      "target_milestone": "M10.1",
-      "city_id": "pune",
-      "rule": "polyline-hook",
-      "subject": "pun-purple-seg-01",
-      "note": "Line 1 trace has sharp turn along parallel corridor"
     }
   ],
   "unreviewed_warnings": [
+    {
+      "city_id": "delhi",
+      "rule": "segment-self-intersecting",
+      "subject": "del-grey-seg-01",
+      "reason": "not yet reviewed, triaged per city in M10.2"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "segment-self-intersecting",
+      "subject": "mum-line-4-seg-01",
+      "reason": "not yet reviewed, triaged per city in M10.2"
+    },
+    {
+      "city_id": "pune",
+      "rule": "segment-self-intersecting",
+      "subject": "pun-line-3-seg-01",
+      "reason": "not yet reviewed, triaged per city in M10.2"
+    },
+    {
+      "city_id": "pune",
+      "rule": "segment-end-far-from-station",
+      "subject": "pun-line-3-seg-01",
+      "reason": "not yet reviewed, triaged per city in M10.2"
+    },
     {
       "city_id": "bengaluru",
       "rule": "ground-truth-length",
@@ -197,12 +213,6 @@
       "city_id": "chennai",
       "rule": "ground-truth-length",
       "subject": "che-green",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "chennai",
-      "rule": "polyline-hook",
-      "subject": "che-blue-seg-01",
       "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
@@ -675,12 +685,6 @@
     },
     {
       "city_id": "mumbai",
-      "rule": "polyline-hook",
-      "subject": "mum-line-7-seg-01",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "mumbai",
       "rule": "reference-station-missing",
       "subject": "mum-line-2a",
       "reason": "not yet reviewed, triaged per city in M10.2"
@@ -724,19 +728,7 @@
     {
       "city_id": "mumbai",
       "rule": "station-far-from-nearest-segment",
-      "subject": "mum-goregaon-east",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "station-far-from-nearest-segment",
       "subject": "mum-gundavali",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "station-far-from-nearest-segment",
-      "subject": "mum-jogeshwari-east",
       "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
@@ -749,6 +741,12 @@
       "city_id": "noida",
       "rule": "consecutive-segment-gap",
       "subject": "noi-aqua-seg-01|noi-aqua-seg-02",
+      "reason": "not yet reviewed, triaged per city in M10.2"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "polyline-hook",
+      "subject": "che-corridor-5-seg-01",
       "reason": "not yet reviewed, triaged per city in M10.2"
     }
   ],
@@ -1567,12 +1565,6 @@
       "city_id": "bengaluru",
       "rule": "station-gap",
       "subject": "blr-purple|blr-challaghatta|blr-vijayanagar",
-      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
-    },
-    {
-      "city_id": "chennai",
-      "rule": "station-gap",
-      "subject": "che-corridor-5|chennai-koyambedu|chennai-alandur",
       "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
     },
     {
@@ -4427,18 +4419,6 @@
     },
     {
       "city_id": "pune",
-      "rule": "ground-truth-length",
-      "subject": "pun-aqua",
-      "reason": "OSM polyline track length differs slightly from operator published brochure/press release figure"
-    },
-    {
-      "city_id": "pune",
-      "rule": "ground-truth-length",
-      "subject": "pun-purple",
-      "reason": "OSM polyline track length differs slightly from operator published brochure/press release figure"
-    },
-    {
-      "city_id": "pune",
       "rule": "station-far-from-nearest-segment",
       "subject": "pune-district-court",
       "reason": "Physical station entrance/concourse offset from track centerline within tolerances"
@@ -4448,30 +4428,6 @@
       "rule": "station-far-from-nearest-segment",
       "subject": "pune-district-court",
       "reason": "Physical station entrance/concourse offset from track centerline within tolerances"
-    },
-    {
-      "city_id": "pune",
-      "rule": "station-gap",
-      "subject": "pun-aqua|pune-vanaz|pune-district-court",
-      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
-    },
-    {
-      "city_id": "pune",
-      "rule": "station-gap",
-      "subject": "pun-purple|pune-khadki|pune-shivaji-nagar",
-      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
-    },
-    {
-      "city_id": "pune",
-      "rule": "station-gap",
-      "subject": "pun-purple|pune-pcmc|pune-bopodi",
-      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
-    },
-    {
-      "city_id": "pune",
-      "rule": "station-gap",
-      "subject": "pun-purple|pune-range-hill|pune-dapodi",
-      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
     }
   ]
 }

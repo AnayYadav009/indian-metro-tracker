@@ -128,7 +128,13 @@ export function normalizeOverpassCity(cityId: string, rawData: any): NormalizedC
               st.lineRefs.push(rel.id.toString());
             }
           }
-        } else if (m.type === "way" && m.geometry && Array.isArray(m.geometry) && m.geometry.length > 0) {
+        } else if (
+          m.type === "way" &&
+          m.geometry &&
+          Array.isArray(m.geometry) &&
+          m.geometry.length > 0 &&
+          (!m.role || m.role === "" || m.role === "route")
+        ) {
           const wayCoords: [number, number][] = m.geometry.map((pt: any) => [
             Number(Number(pt.lon).toFixed(6)),
             Number(Number(pt.lat).toFixed(6)),

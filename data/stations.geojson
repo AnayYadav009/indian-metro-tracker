@@ -947,12 +947,11 @@
         "city_id": "chennai",
         "city": "Chennai",
         "line_ids": [
-          "che-green",
-          "che-corridor-5"
+          "che-green"
         ],
         "status": "operational",
         "phase": "1",
-        "is_interchange": true,
+        "is_interchange": false,
         "opened_on": null,
         "expected_completion": null,
         "completion_unconfirmed": false,
@@ -961,8 +960,7 @@
         "source": "osm",
         "references": [],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-10",
-        "interchange_id": "chennai-koyambedu"
+        "retrieved_at": "2026-10-10"
       }
     },
     {
@@ -1043,8 +1041,7 @@
         "city": "Chennai",
         "line_ids": [
           "che-blue",
-          "che-green",
-          "che-corridor-5"
+          "che-green"
         ],
         "status": "operational",
         "phase": "1",
@@ -1076,12 +1073,11 @@
         "city_id": "chennai",
         "city": "Chennai",
         "line_ids": [
-          "che-green",
-          "che-corridor-5"
+          "che-green"
         ],
         "status": "operational",
         "phase": "1",
-        "is_interchange": true,
+        "is_interchange": false,
         "opened_on": null,
         "expected_completion": null,
         "completion_unconfirmed": false,
@@ -1090,8 +1086,7 @@
         "source": "osm",
         "references": [],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-10",
-        "interchange_id": "chennai-st-thomas-mount"
+        "retrieved_at": "2026-10-10"
       }
     },
     {

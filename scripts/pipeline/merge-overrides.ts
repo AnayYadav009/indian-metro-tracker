@@ -54,6 +54,47 @@ function removeShortSelfIntersectionSpur(coords: Coordinate[]): Coordinate[] {
   return coords;
 }
 
+function removeHairpinSpurs(
+  coords: Coordinate[],
+  maxSpanM = 300,
+  minAngleDeg = 150
+): Coordinate[] {
+  let modified = true;
+  let cur = [...coords];
+  while (modified) {
+    modified = false;
+    for (let i = 1; i < cur.length - 1; i++) {
+      const prev = cur[i - 1];
+      const p = cur[i];
+      const next = cur[i + 1];
+      const d1 = haversineDistanceM(prev, p);
+      const d2 = haversineDistanceM(p, next);
+      if (d1 + d2 > maxSpanM) continue;
+
+      const v1x = p[0] - prev[0];
+      const v1y = p[1] - prev[1];
+      const v2x = next[0] - p[0];
+      const v2y = next[1] - p[1];
+      const dot = v1x * v2x + v1y * v2y;
+      const mag1 = Math.hypot(v1x, v1y);
+      const mag2 = Math.hypot(v2x, v2y);
+      if (mag1 === 0 || mag2 === 0) {
+        cur.splice(i, 1);
+        modified = true;
+        break;
+      }
+      const cosVal = Math.max(-1, Math.min(1, dot / (mag1 * mag2)));
+      const deg = (Math.acos(cosVal) * 180) / Math.PI;
+      if (deg >= minAngleDeg) {
+        cur.splice(i, 1);
+        modified = true;
+        break;
+      }
+    }
+  }
+  return cur;
+}
+
 export interface CityOverrideData {
   city: {
     id: string;
@@ -179,13 +220,13 @@ export function mergeCityOverrides(
     let coords: [number, number][] | undefined;
     let isOsmSourced = false;
 
-    if (segOverride.osmId && normalizedSegsByOsmId.has(segOverride.osmId)) {
+    if (segOverride.coordinates && segOverride.coordinates.length >= 2) {
+      coords = segOverride.coordinates;
+      isOsmSourced = false;
+    } else if (segOverride.osmId && normalizedSegsByOsmId.has(segOverride.osmId)) {
       const normSeg = normalizedSegsByOsmId.get(segOverride.osmId)!;
       coords = normSeg.coordinates;
       isOsmSourced = true;
-    } else if (segOverride.coordinates && segOverride.coordinates.length >= 2) {
-      coords = segOverride.coordinates;
-      isOsmSourced = false;
     }
 
     const geometryQuality: "exact" | "schematic" =
@@ -600,8 +641,10 @@ export function mergeCityOverrides(
   for (const iseg of intermediateSegments) {
     if (iseg.coords) {
       iseg.coords = removeAdjacentDuplicateCoords(
-        removeShortSelfIntersectionSpur(
-          removeAdjacentDuplicateCoords(iseg.coords)
+        removeHairpinSpurs(
+          removeShortSelfIntersectionSpur(
+            removeAdjacentDuplicateCoords(iseg.coords)
+          )
         )
       );
     }

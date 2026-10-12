@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 import { mergeCityOverrides, type CityOverrideData } from "@/scripts/pipeline/merge-overrides";
+import { normalizeOverpassCity, type NormalizedCityData } from "@/scripts/pipeline/normalize";
 import { runAudit } from "@/scripts/audit/audit-engine";
-import type { NormalizedCityData } from "@/scripts/pipeline/normalize";
 import type { City, Line } from "@/types/metro";
 
 describe("Step C Pipeline Code & Rules", () => {
@@ -492,4 +492,103 @@ describe("Step C Pipeline Code & Rules", () => {
     expect(outOfScopeFinding?.severity).toBe("error");
     expect(outOfScopeFinding?.message).toContain("marked out of scope");
   });
+
+  it("10. Requirement: twin-track ways merge into a single centreline in relation normalization", () => {
+    const rawRelationData = {
+      elements: [
+        {
+          type: "relation",
+          id: 999999,
+          tags: {
+            route: "subway",
+            name: "Test Metro Line",
+            operator: "Test Metro Operator",
+          },
+          members: [
+            // Direction 1 track: A -> B
+            {
+              type: "way",
+              ref: 101,
+              role: "",
+              geometry: [
+                { lat: 18.50, lon: 73.80 },
+                { lat: 18.55, lon: 73.82 },
+              ],
+            },
+            // Direction 2 track (side-by-side, ~20m apart)
+            {
+              type: "way",
+              ref: 102,
+              role: "platform", // platform way should be filtered out
+              geometry: [
+                { lat: 18.5001, lon: 73.8001 },
+                { lat: 18.5501, lon: 73.8201 },
+              ],
+            },
+            // Contiguous continuation of Direction 1 track: B -> C
+            {
+              type: "way",
+              ref: 103,
+              role: "",
+              geometry: [
+                { lat: 18.55, lon: 73.82 },
+                { lat: 18.60, lon: 73.84 },
+              ],
+            },
+          ],
+        },
+      ],
+    };
+
+    const normalized = normalizeOverpassCity("testcity", rawRelationData);
+
+    // Platform way (ref 102) should be excluded, leaving a single continuous centreline (101 + 103)
+    expect(normalized.segments.length).toBe(1);
+    const seg = normalized.segments[0];
+    expect(seg.coordinates.length).toBe(3); // [73.80, 18.50] -> [73.82, 18.55] -> [73.84, 18.60]
+    expect(seg.coordinates[0]).toEqual([73.80, 18.50]);
+    expect(seg.coordinates[2]).toEqual([73.84, 18.60]);
+  });
+
+  it("11. Requirement: hairpin spurs and backtracking spikes are pruned from segment polylines", () => {
+    const overrides: CityOverrideData = {
+      ...baseCityOverride,
+      segments: [
+        {
+          segment_id: "test-hairpin-seg",
+          line_id: "test-line-1",
+          line_name: "Line 1",
+          phase: "Phase 1",
+          status: "operational",
+          gauge: "standard",
+          inaugurated_on: "2024-01-01",
+          expected_completion: null,
+          color: "#FF0000",
+          stations_count: 2,
+          // Segment with a 180-degree backtracking spike at vertex 1: (0,0) -> (0, 0.001) -> (0,0) -> (0.01, 0)
+          coordinates: [
+            [77.10, 28.10],
+            [77.10, 28.101], // spike vertex ~111m away
+            [77.10, 28.10],
+            [77.12, 28.10],
+          ],
+          last_verified: "2026-10-01",
+        },
+      ],
+    };
+
+    const result = mergeCityOverrides(
+      { cityId: "testcity", cityName: "Test City", segments: [], stations: [] },
+      overrides
+    );
+
+    expect(result.segments.length).toBe(1);
+    const coords = result.segments[0].geometry.coordinates;
+    // Backtracking spike removed, leaving clean path
+    expect(coords.length).toBe(2);
+    expect(coords[0]).toEqual([77.10, 28.10]);
+    expect(coords[1]).toEqual([77.12, 28.10]);
+  });
 });
+
+
