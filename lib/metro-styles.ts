@@ -76,3 +76,5 @@ export const LAYOUT_DEFINITIONS: Record<Layout, LayoutMeta> = {
     badgeClass: "border-slate-500/30 bg-slate-500/10 text-slate-400",
   },
 } as const;
+
+export const DEFAULT_LINE_FALLBACK_COLOR = "#94a3b8";
