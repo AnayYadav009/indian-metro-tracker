@@ -32,7 +32,7 @@
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10",
-        "interchange_id": "gur-sikanderpur"
+        "interchange_id": "int-sikanderpur"
       }
     },
     {
@@ -14555,7 +14555,7 @@
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10",
-        "interchange_id": "noi-noida-sector-51"
+        "interchange_id": "int-noida-sec51-52"
       }
     },
     {
@@ -15811,16 +15811,19 @@
         ],
         "status": "operational",
         "phase": "I",
-        "is_interchange": false,
-        "opened_on": null,
+        "is_interchange": true,
+        "opened_on": "2010-06-21",
         "expected_completion": null,
         "completion_unconfirmed": false,
         "layout": null,
         "layout_source": "unverified",
         "source": "osm",
-        "references": [],
-        "last_verified": null,
-        "retrieved_at": "2026-10-13"
+        "references": [
+          "https://www.delhimetrorail.com/corporate"
+        ],
+        "last_verified": "2026-10-13",
+        "retrieved_at": "2026-10-13",
+        "interchange_id": "int-sikanderpur"
       }
     },
     {
@@ -20473,7 +20476,7 @@
         ],
         "status": "operational",
         "phase": "I",
-        "is_interchange": false,
+        "is_interchange": true,
         "opened_on": null,
         "expected_completion": null,
         "completion_unconfirmed": false,
@@ -20482,7 +20485,8 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-13"
+        "retrieved_at": "2026-10-13",
+        "interchange_id": "int-noida-sec51-52"
       }
     },
     {

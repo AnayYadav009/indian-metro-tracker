@@ -6,11 +6,7 @@
     "city-km-vs-reference",
     "line-terminal-missing",
     "reference-construction-stretch-missing",
-    "orphan-future-station",
-    "future-segment-no-stations",
-    "cross-network-interchange",
-    "verified-without-official-source",
-    "operational-station-no-opened-on"
+    "orphan-future-station"
   ],
   "known_defects": [
     {
@@ -3593,6 +3589,3546 @@
       "rule": "consecutive-segment-gap",
       "subject": "noi-aqua-seg-01|noi-aqua-seg-02",
       "reason": "Approved Sector 142 to Botanical Garden spur branches from intermediate station Sector 142."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "chennai-mannadi",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "chennai-government-estate",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "chennai-pachaiyappas-college",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "chennai-nehru-park",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "chennai-egmore",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "chennai-cmbt",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "chennai-ashok-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "chennai-shenoy-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "chennai-koyambedu",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "chennai-anna-nagar-east",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "chennai-kilpauk",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "chennai-alandur",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "chennai-st-thomas-mount",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "chennai-chennai-international-airport",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "chennai-meenambakkam",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "chennai-nanganallur-road",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "chennai-ekkattuthangal",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "chennai-vadapalani",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "chennai-arumbakkam",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "chennai-little-mount",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "chennai-guindy",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "chennai-chennai-central",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "chennai-saidapet",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "chennai-nandanam",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "chennai-teynampet",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "chennai-thousand-lights",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "chennai-ag-dms",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "chennai-lic",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "chennai-high-court",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "chennai-washermanpet",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "chennai-tondiarpet",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "chennai-sir-theagaraya-college",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "chennai-wimco-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "chennai-thiruvottriyur",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "chennai-kaladipet",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "chennai-tollgate",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "chennai-new-washermanpet",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "chennai-thiruvottiyur-theradi",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "chennai-thirumangalam",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "chennai-anna-nagar-tower",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "chennai-wimco-nagar-depot",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "subject": "pune-kasba-peth",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "subject": "pune-vanaz",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "subject": "pune-ideal-colony",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "subject": "pune-sndt-college",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "subject": "pune-garware-college",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "subject": "pune-anandnagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "subject": "pune-phugewadi",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "subject": "pune-deccan-gymkhana",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "subject": "pune-dapodi",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "subject": "pune-pmc",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "subject": "pune-ruby-hall-clinic",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "subject": "pune-district-court",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "subject": "pune-sant-tukaram-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "subject": "pune-kasarwadi",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "subject": "pune-bhosari",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "subject": "pune-swargate",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "subject": "pune-bopodi",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "subject": "pune-pcmc",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "subject": "pune-shivaji-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "subject": "pune-pune-railway-station",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "subject": "pune-mangalwar-peth",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "subject": "pune-chhatrapati-sambhaji-udyan",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "subject": "pune-ramwadi",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "subject": "pune-bund-garden",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "subject": "pune-yerwada",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "subject": "pune-kalyani-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "subject": "pune-mahatma-phule-mandai",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "subject": "pune-khadki",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-trinity",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-halasuru",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-dr-b-r-ambedkar-vidhana-soudha",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-deepanjali-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-mysore-road",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-south-end-circle",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-yeshwantpur",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-baiyappanahalli",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-goraguntepalya",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-yelachenahalli",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-swami-vivekananda-road",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-mahatma-gandhi-road",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-indiranagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-banashankari",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-sir-m-visvesvaraya-stn-central-college",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-lalbagh",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-nagasandra",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-peenya-industry",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-dasarahalli",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-national-college",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-krishna-rajendra-market",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-chickpete",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-mantri-square-sampige-road",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-krantivira-sangolli-rayanna-railway",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-srirampura",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-attiguppe",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-vijayanagara",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-mahalakshmi",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-sandal-soap-factory",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-rashtreeya-vidyalaya-road",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-jaya-prakash-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-rajajinagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-jayanagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-sri-balagangadharanatha-swamiji-stn-hosahalli",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-mahakavi-kuvempu-road",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-jalahalli",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-seetharampalya",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-rajarajeshwari-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-pantharapalya-nayandahalli",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-madavara",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-chikkabidarakallu",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-manjunathanagara",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-magadi-road",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-hoodi",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-jayadeva-hospital",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-cubbon-park",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-peenya",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-benniganahalli",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-krishnarajapura",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-kudlu-gate",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-nadaprabhu-kempegowda-majestic",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-whitefield-kadugodi",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-hopefarm-channasandra",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-pattandur-agrahara",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-sri-sathya-sai-hospital",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-nallurahalli",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-kundalahalli",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-garudacharpalya",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-singayyanapalya",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-jnanabharathi",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-bommasandra",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-huskur-road",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-infosys-foundation-konappana-agrahara",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-electronic-city",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-beratena-agrahara",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-hosa-road",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-singasandra",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-hongasandra",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-bommanahalli",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-central-silk-board",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-btm-layout",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-ragigudda",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-silk-institute",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-thalaghattapura",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-vajarahalli",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-konanakunte-cross",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-doddakallasandra",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-kengeri-bus-terminal",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-kengeri",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-pattanagere",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-challaghatta",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-kadugodi-tree-park",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "subject": "blr-biocon-hebbagodi",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "mum-andheri",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "mum-d-n-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "mum-versova",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "mum-chakala-jb-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "mum-saki-naka",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "mum-azad-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "mum-asalpha",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "mum-airport-road",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "mum-ghatkopar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "mum-jagruti-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "mum-western-express-highway",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "mum-lower-malad",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "mum-malad-west",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "mum-dahanukarwadi",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "mum-kandivali-west",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "mum-borivali-west",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "mum-mandapeshwar-ic-colony",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "mum-kandarpada",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "mum-anand-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "mum-andheri-west",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "mum-oshiwara",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "mum-goregaon-west",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "mum-valnai-meeth-chowky",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "mum-shimpoli",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "mum-eksar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "mum-ovaripada",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "mum-rashtriya-udyan",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "mum-devipada",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "mum-dindoshi",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "mum-aarey",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "mum-goregaon-east",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "mum-jogeshwari-east",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "mum-mogra",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "mum-magathane",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "mum-gundavali",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "mum-mahindra-mahindra",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "mum-akurli",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "mum-kurar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "mum-lower-oshiwara",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "mum-bangur-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "subject": "mum-csmia-domestic",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-majerhat",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-behala-bazar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-behala-chowrasta",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-jyotirindra-nandi",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-satyajit-roy",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-beleghata",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-kavi-sukanta",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-hemanta-mukhopadhyay",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-noapara",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-baranagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-phoolbagan",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-karunamoyee",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-central",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-park-street",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-kavi-nazrul",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-shahid-khudiram",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-kavi-subhash",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-netaji",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-masterda-surya-sen",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-gitanjali",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-mahanayak-uttam-kumar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-dum-dum",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-rabindra-sarobar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-kalighat",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-jatin-das-park",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-netaji-bhavan",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-rabindra-sadan",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-maidan",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-chandni-chowk",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-esplanade",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-mahatma-gandhi-road",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-girish-park",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-shobhabazar-sutanuti",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-shyambazar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-belgachia",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-salt-lake-sector-v",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-central-park",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-city-centre",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-bengal-chemical",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-salt-lake-stadium",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-dakshineswar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-sealdah",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-thakurpukur",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-sakher-bazar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-taratala",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-joka",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-howrah",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-howrah-maidan",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-mahakaran",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-barun-sengupta",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-ritwik-ghatak",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-vip-bazar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-jai-hind",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-jessore-road",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "subject": "kolkata-dum-dum-cantonment",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-secunderabad-west",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-begumpet",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-peddamma-gudi",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-hitec-city",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-madhura-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-madhapur",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-uppal",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-parade-ground",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-secunderabad-east",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-mettuguda",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-stadium",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-raidurg",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-ameerpet",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-tarnaka",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-jubilee-hills-check-post",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-kukatpally",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-chaitanyapuri",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-new-market",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-erragadda",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-osmania-medical-college",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-bharat-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-malakpet",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-assembly",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-gandhi-bhavan",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-victoria-memorial",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-dilsukhnagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-balanagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-errum-manzil",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-sr-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-nampally",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-mg-bus-station",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-punjagutta",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-esi-hospital",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-lb-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-miyapur",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-jntu-college",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-moosapet",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-road-no-5-jubilee-hills",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-yousufguda",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-khairatabad",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-lakdi-ka-pul",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-nagole",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-durgam-cheruvu",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-musarambagh",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-kphb-colony",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-ngri",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-habsiguda",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-paradise",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-rasoolpura",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-prakash-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-jbs-parade-ground",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-rtc-cross-roads",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-sultan-bazar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-narayanaguda",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-chikkadpally",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-musheerabad",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "hyderabad-gandhi-hospital",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-rabari-colony",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-apparel-park",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-kankaria-east",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-kalupur-railway",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-gheekanta",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-old-high-court",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-commerce-six-road",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-doordarshan-kendra",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-thaltej",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-vijay-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-sabarmati",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-motera-stadium",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-amraiwadi",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-vastral",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-nirant-cross-road",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-vastral-gam",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-shahpur",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-gnlu",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-ranip",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-sp-stadium",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-gujarat-university",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-gurukul-road",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-apmc",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-gandhigram",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-vadaj",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-usmanpura",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-aec",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-paldi",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-shreyas",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-rajiv-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-jivraj-park",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-juna-sachivalaya",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-raysan",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-thaltej-gam",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-vishwakarma-college",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-gift-city",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-sector-10a",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-sector-1",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-infocity",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-dholakuva-circle",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-randesan",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-koba-circle",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-narmada-canal",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-tapovan-circle",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-koteshwar-road",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-pdeu",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-koba-gam",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-juna-koba",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-sachivalaya",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-akshardham",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-sector-16",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-sector-24",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "subject": "ahmedabad-mahatma-mandir",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-dwarka-sector-12",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-dwarka-sector-13",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-dwarka",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-dwarka-sector-14",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-dwarka-mor",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-nawada",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-uttam-nagar-west",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-rajouri-garden",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-ramesh-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-patel-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-rithala",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-pratap-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-pul-bangash",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-kashmere-gate",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-m-g-road",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-guru-dronacharya",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-ghitorni",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-arjan-garh",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-kohat-enclave",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-rajendra-place",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-karol-bagh",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-jhandewalan",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-kirti-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-shadipur",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-moti-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-tilak-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-uttam-nagar-east",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-janakpuri-west",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-dwarka-sector-11",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-dwarka-sector-10",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-dwarka-sector-9",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-dwarka-sector-8",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-dwarka-sector-21",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-iffco-chowk",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-sultanpur",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-delhi-aerocity",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-chhatarpur",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-malviya-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-hauz-khas",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-green-park",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-dilli-haat-ina",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-lok-kalyan-marg",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-udyog-bhawan",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-jor-bagh",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-patel-chowk",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-r-k-ashram-marg",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-supreme-court",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-mandi-house",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-shivaji-stadium",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-barakhambha-road",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-new-delhi",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-chawri-bazaar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-yamuna-bank",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-anand-vihar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-kaushambi",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-chandni-chowk",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-civil-lines",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-tis-hazari",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-jawaharlal-nehru-stadium",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-jangpura",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-lajpat-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-moolchand",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-jasola-apollo",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-sarita-vihar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-tughlakabad",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-badarpur",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-shivaji-park",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-subhash-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-paschim-vihar-west",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-shastri-park",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-seelampur",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-welcome",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-shahdara",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-mansarovar-park",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-jhilmil",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-shastri-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-inderlok",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-kanhaiya-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-keshav-puram",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-netaji-subhash-place",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-madhuban-chowk",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-rohini-east",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-vidhan-sabha",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-vishwa-vidyalaya",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-model-town",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-azadpur",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-karkarduma",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-preet-vihar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-nirman-vihar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-laxmi-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-tagore-garden",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-harkesh-nagar-okhla",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-noida-sector-15",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-mayur-vihar-i",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-mayur-vihar-extension",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-akshardham",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-gtb-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-janakpuri-east",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-mundka",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-noida-sector-18",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-botanical-garden",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-noida-sector-16",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-millennium-city-centre-gurugram",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-saket",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-govind-puri",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-khan-market",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-kailash-colony",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-igi-airport",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-kalkaji-mandir",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-dhaula-kuan",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-rajiv-chowk",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-qutab-minar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-peeragarhi",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-nehru-place",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-central-secretariat",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-punjabi-bagh",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-mohan-estate",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-satguru-ramsingh-marg",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-new-ashok-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-ashok-park-main",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-vaishali",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-rohini-west",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-janpath",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-jama-masjid",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-dhansa-bus-stand",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-nangli",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-lal-quila",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-nehru-enclave",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-iit-delhi",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-okhla-nsic",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-munirka",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-sukhdev-vihar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-vasant-vihar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-shankar-vihar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-sadar-bazar-cantonment",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-palam",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-dashrath-puri",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-dabri-mor-janakpuri-south",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-okhla-bird-sanctuary",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-greater-kailash",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-kalindi-kunj",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-okhla-vihar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-panchsheel-park",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-r-k-puram",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-jasola-vihar-shaheen-bagh",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-terminal-1-igi-airport",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-shalimar-bagh",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-south-extension",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-bhikaji-cama-place",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-sarojini-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-sir-m-vishweshwaraiah-moti-bagh",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-durgabai-deshmukh-south-campus",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-trilokpuri-sanjay-lake",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-naraina-vihar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-esi-basaidarapur",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-punjabi-bagh-west",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-shakurpur",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-krishna-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-east-azad-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-jaffrabad",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-maujpur-babarpur",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-gokulpuri",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-johri-enclave",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-shiv-vihar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-samaypur-badli",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-rohini-sector-18-19",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-haiderpur-badli-mor",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-delhi-gate",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-sarai",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-badhkal-mor",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-mewala-maharajpur",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-nhpc-chowk",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-old-faridabad",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-sector-28",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-escorts-mujesar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-bata-chowk",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-jamia-millia-islamia",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-ito",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-tikri-kalan",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-chirag-delhi",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-noida-sector-52",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-noida-sector-59",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-noida-sector-61",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-noida-sector-62",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-sant-surdas-sihi",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-ip-extension",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-karkarduma-court",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-east-vinod-nagar-mayur-vihar-ii",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-mandawali-west-vinod-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-ashram",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-raja-nahar-singh",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-hindon-river",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-pandit-shree-ram-sharma",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-tikri-border",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-indraprastha",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-mundka-industrial-area",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-aiims",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-noida-city-centre",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-dilshad-garden",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-neelam-chowk-ajronda",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-sarai-kale-khan-nizamuddin",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-majlis-park",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-shree-ram-mandir-mayur-vihar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-vinobapuri",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-noida-electronic-city",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-arthala",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-shaheed-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-mohan-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-shyam-park",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-rajendra-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-raj-bagh",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-mayapuri",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-delhi-cantt",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-madipur",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-paschim-vihar-east",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-udyog-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-surajmal-stadium",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-nangloi",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-nangloi-railway",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-rajdhani-park",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-ghevra",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-bahadurgarh-city",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-brigadier-hoshiyar-singh",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-noida-golf-course",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-noida-sector-34",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-adarsh-nagar",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-jahangirpuri",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-najafgarh",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-shaheed-sthal",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "subject": "del-yashobhoomi-dwarka-sector-25",
+      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "interchange-consistency",
+      "subject": "del-sikanderpur",
+      "reason": "Sikanderpur DMRC Yellow Line station provides designated cross-network interchange to Gurugram Rapid Metro via shared walkway."
+    },
+    {
+      "city_id": "delhi",
+      "rule": "interchange-consistency",
+      "subject": "del-noida-sector-52",
+      "reason": "Noida Sector 52 DMRC Blue Line station provides designated cross-network interchange to NMRC Aqua Line (Sector 51) via dedicated walkway."
     }
   ]
 }

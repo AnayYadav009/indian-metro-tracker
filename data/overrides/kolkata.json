@@ -127,6 +127,7 @@
       "inaugurated_on": null,
       "expected_completion": "2028",
       "color": "#702082",
+      "stations_not_published": true,
       "references": [
         "https://mtp.indianrailways.gov.in"
       ]

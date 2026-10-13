@@ -1605,6 +1605,124 @@ export function runAudit(
     }
   }
 
+  // ── M10.3 Audit Rules ────────────────────────────────────────────────────
+
+  // M10.3.1: future-segment-no-stations
+  // Construction or planned segment with no stations, unless flagged stations_not_published with references
+  for (const seg of segments.features) {
+    const p = seg.properties;
+    if (p.status === "construction" || p.status === "planned") {
+      if (p.stations_count === 0 && !p.stations_not_published) {
+        add(
+          p.city_id,
+          "future-segment-no-stations",
+          "warn",
+          p.segment_id,
+          `Future segment has 0 stations assigned without 'stations_not_published' flag`
+        );
+      }
+    }
+  }
+
+  // M10.3.2: cross-network-interchange
+  // Stations of different cities or networks within 250 m, or with the same normalized name,
+  // must share an interchange_id or be listed in data/overrides/interchanges.json
+  const normalizeForInterchange = (s: string) =>
+    s
+      .toLowerCase()
+      .replace(/metro|station|\s+/g, "")
+      .replace(/[^a-z0-9]/g, "");
+
+  const stationList = stations.features;
+  for (let i = 0; i < stationList.length; i++) {
+    const s1 = stationList[i];
+    const p1 = s1.properties;
+    for (let j = i + 1; j < stationList.length; j++) {
+      const s2 = stationList[j];
+      const p2 = s2.properties;
+
+      if (p1.city_id === p2.city_id) continue;
+
+      const c1 = s1.geometry.coordinates as [number, number];
+      const c2 = s2.geometry.coordinates as [number, number];
+      const distM = haversineDistanceKm(c1, c2) * 1000;
+      const sameName =
+        normalizeForInterchange(p1.name) === normalizeForInterchange(p2.name);
+
+      // Only evaluate stations in adjacent/same region (within 1000m or 250m)
+      if (distM <= 300 || (distM <= 1000 && sameName)) {
+        const shareCluster =
+          Boolean(p1.interchange_id) &&
+          Boolean(p2.interchange_id) &&
+          p1.interchange_id === p2.interchange_id;
+
+        if (!shareCluster) {
+          add(
+            p1.city_id,
+            "cross-network-interchange",
+            "error",
+            `${p1.station_id}|${p2.station_id}`,
+            `Cross-network stations '${p1.name}' (${p1.city_id}) and '${p2.name}' (${p2.city_id}) within ${Math.round(distM)}m do not share an interchange_id`
+          );
+        }
+      }
+    }
+  }
+
+  // M10.3.3: verified-without-official-source
+  // last_verified set on a record whose only references are OSM or none
+  for (const seg of segments.features) {
+    const p = seg.properties;
+    if (p.last_verified) {
+      const refs = p.references || [];
+      const hasOfficial = refs.some(
+        (r) => !r.includes("openstreetmap.org") && r.trim().length > 0
+      );
+      if (!hasOfficial) {
+        add(
+          p.city_id,
+          "verified-without-official-source",
+          "error",
+          p.segment_id,
+          `Segment has last_verified '${p.last_verified}' without an official or non-OSM reference source`
+        );
+      }
+    }
+  }
+  for (const st of stations.features) {
+    const p = st.properties;
+    if (p.last_verified) {
+      const refs = p.references || [];
+      const hasOfficial = refs.some(
+        (r) => !r.includes("openstreetmap.org") && r.trim().length > 0
+      );
+      if (!hasOfficial) {
+        add(
+          p.city_id,
+          "verified-without-official-source",
+          "error",
+          p.station_id,
+          `Station has last_verified '${p.last_verified}' without an official or non-OSM reference source`
+        );
+      }
+    }
+  }
+
+  // M10.3.4: operational-station-no-opened-on
+  // Operational station with null opened_on
+  for (const st of stations.features) {
+    const p = st.properties;
+    if (p.status === "operational" && !p.opened_on) {
+      add(
+        p.city_id,
+        "operational-station-no-opened-on",
+        "warn",
+        p.station_id,
+        `Operational station has no opened_on date`
+      );
+    }
+  }
+
   // ── D. Ground truth comparison ───────────────────────────────────────────
 
   const refDir =

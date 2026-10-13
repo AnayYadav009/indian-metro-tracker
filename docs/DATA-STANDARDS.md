@@ -78,8 +78,12 @@ Rules
 ## 9. Cross-network interchanges and ownership
 
 - Stations belong to the network of the line that serves them, wherever they are located.
-- Cross-network interchanges are linked with a shared `interchange_id` (final model decided in M10.3 and recorded here).
+- Cross-network interchanges are modeled using a shared `interchange_id` across city records (decided in M10.3: Option A). Each network retains its own station record (e.g., `del-sikanderpur` in Delhi and `gur-sikanderpur` in Gurugram, or `del-noida-sector-52` and `noi-noida-sector-51`), maintaining exact operator and city boundary integrity, while mapping to a common cluster ID in `data/overrides/interchanges.json`. UI components resolve connected lines from all stations sharing that cluster ID.
 
 ## 10. Future Segments
 
-- A construction or planned segment may have no published stations. Mark it `stations_not_published` in overrides with a reference and show "Stations not yet published" in the UI; never display an invented count.
+- A construction or planned segment may have no published stations. Mark it `stations_not_published: true` in overrides with an official reference and show "Stations not yet published" in the UI; never display an invented count.
+
+## 11. Line Ordering and Topological Sequence
+
+- `ordered_station_ids` in `LineSchema`: pulled forward into M10.3 (decided in M10.3: Option A) as an additive optional field. It defines the authoritative sequence of station IDs along a line from start terminal to end terminal. Used for route calculation, topology integrity, and unambiguous stage mapping.

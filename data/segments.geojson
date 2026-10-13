@@ -339,6 +339,7 @@
         "expected_completion": null,
         "stations_count": 6,
         "color": "#94a3b8",
+        "stations_not_published": false,
         "source": "manual",
         "references": [
           "https://www.thehindu.com/news/cities/Delhi/rapid-metro-rail-gurgaon-opens-to-public/article5350992.ece"
@@ -550,6 +551,7 @@
         "expected_completion": null,
         "stations_count": 6,
         "color": "#94a3b8",
+        "stations_not_published": false,
         "source": "manual",
         "references": [
           "https://www.thehindu.com/news/cities/Delhi/after-hurdles-rapid-metros-phase-ii-opens/article17752674.ece"
@@ -1221,6 +1223,7 @@
         "expected_completion": null,
         "stations_count": 11,
         "color": "#77248b",
+        "stations_not_published": false,
         "source": "osm",
         "references": [
           "https://www.thehindu.com/news/cities/mumbai/navi-mumbai-metro-starts-services-from-today/article67543265.ece"
@@ -3021,6 +3024,7 @@
         "expected_completion": null,
         "stations_count": 26,
         "color": "#0072CE",
+        "stations_not_published": false,
         "source": "osm",
         "references": [
           "https://chennaimetrorail.org",
@@ -4810,6 +4814,7 @@
         "expected_completion": null,
         "stations_count": 17,
         "color": "#009A44",
+        "stations_not_published": false,
         "source": "osm",
         "references": [
           "https://chennaimetrorail.org"
@@ -5354,6 +5359,7 @@
         "expected_completion": "2026-12",
         "stations_count": 0,
         "color": "#FFD100",
+        "stations_not_published": true,
         "source": "osm",
         "references": [
           "https://chennaimetrorail.org",
@@ -5455,6 +5461,7 @@
         "expected_completion": "2027",
         "stations_count": 0,
         "color": "#ED1C24",
+        "stations_not_published": true,
         "source": "osm",
         "references": [
           "https://chennaimetrorail.org",
@@ -6204,6 +6211,7 @@
         "expected_completion": null,
         "stations_count": 14,
         "color": "#800080",
+        "stations_not_published": false,
         "source": "osm",
         "references": [
           "https://www.punemetrorail.org"
@@ -7660,6 +7668,7 @@
         "expected_completion": null,
         "stations_count": 16,
         "color": "#00FFFF",
+        "stations_not_published": false,
         "source": "osm",
         "references": [
           "https://www.punemetrorail.org"
@@ -9624,6 +9633,7 @@
         "expected_completion": "2026-12",
         "stations_count": 1,
         "color": "#FF69B4",
+        "stations_not_published": false,
         "source": "manual",
         "references": [
           "https://www.punemetrorail.org",
@@ -13024,6 +13034,7 @@
         "expected_completion": null,
         "stations_count": 37,
         "color": "#800080",
+        "stations_not_published": false,
         "source": "osm",
         "references": [],
         "completion_unconfirmed": false,
@@ -14882,6 +14893,7 @@
         "expected_completion": null,
         "stations_count": 32,
         "color": "#009933",
+        "stations_not_published": false,
         "source": "osm",
         "references": [],
         "completion_unconfirmed": false,
@@ -15692,6 +15704,7 @@
         "expected_completion": null,
         "stations_count": 17,
         "color": "#FFCC00",
+        "stations_not_published": false,
         "source": "osm",
         "references": [
           "https://english.bmrc.co.in/"
@@ -17968,6 +17981,7 @@
         "expected_completion": null,
         "stations_count": 4,
         "color": "#1E90FF",
+        "stations_not_published": false,
         "source": "manual",
         "references": [
           "https://english.bmrc.co.in/"
@@ -19071,6 +19085,7 @@
         "expected_completion": null,
         "stations_count": 4,
         "color": "#FF69B4",
+        "stations_not_published": false,
         "source": "manual",
         "references": [
           "https://english.bmrc.co.in/"
@@ -19114,6 +19129,7 @@
         "expected_completion": null,
         "stations_count": 0,
         "color": "#800080",
+        "stations_not_published": true,
         "source": "manual",
         "references": [
           "https://english.bmrc.co.in/"
@@ -20017,6 +20033,7 @@
         "expected_completion": null,
         "stations_count": 12,
         "color": "#0072CE",
+        "stations_not_published": false,
         "source": "osm",
         "references": [],
         "completion_unconfirmed": false,
@@ -21087,6 +21104,7 @@
         "expected_completion": null,
         "stations_count": 17,
         "color": "#FFD700",
+        "stations_not_published": false,
         "source": "osm",
         "references": [],
         "completion_unconfirmed": false,
@@ -21637,6 +21655,7 @@
         "expected_completion": null,
         "stations_count": 14,
         "color": "#ED1C24",
+        "stations_not_published": false,
         "source": "osm",
         "references": [],
         "completion_unconfirmed": false,
@@ -23195,6 +23214,7 @@
         "expected_completion": null,
         "stations_count": 8,
         "color": "#00B140",
+        "stations_not_published": false,
         "source": "manual",
         "references": [
           "https://mmrda.maharashtra.gov.in/"
@@ -23518,6 +23538,7 @@
         "expected_completion": null,
         "stations_count": 6,
         "color": "#FFC72C",
+        "stations_not_published": false,
         "source": "osm",
         "references": [
           "https://mmrda.maharashtra.gov.in/"
@@ -23562,6 +23583,7 @@
         "expected_completion": null,
         "stations_count": 0,
         "color": "#00B140",
+        "stations_not_published": true,
         "source": "manual",
         "references": [
           "https://mmrda.maharashtra.gov.in/"
@@ -24069,6 +24091,7 @@
         "expected_completion": null,
         "stations_count": 10,
         "color": "#00A3E0",
+        "stations_not_published": false,
         "source": "manual",
         "references": [
           "https://mmrcl.com",
@@ -24357,6 +24380,7 @@
         "expected_completion": null,
         "stations_count": 7,
         "color": "#00A3E0",
+        "stations_not_published": false,
         "source": "manual",
         "references": [
           "https://mmrcl.com",
@@ -24773,6 +24797,7 @@
         "expected_completion": null,
         "stations_count": 12,
         "color": "#00A3E0",
+        "stations_not_published": false,
         "source": "manual",
         "references": [
           "https://mmrcl.com",
@@ -25021,6 +25046,7 @@
         "expected_completion": null,
         "stations_count": 4,
         "color": "#D32F2F",
+        "stations_not_published": false,
         "source": "osm",
         "references": [
           "https://mmrda.maharashtra.gov.in/"
@@ -25065,6 +25091,7 @@
         "expected_completion": null,
         "stations_count": 3,
         "color": "#D32F2F",
+        "stations_not_published": false,
         "source": "manual",
         "references": [
           "https://mmrda.maharashtra.gov.in/"
@@ -26520,6 +26547,7 @@
         "expected_completion": null,
         "stations_count": 26,
         "color": "#0072CE",
+        "stations_not_published": false,
         "source": "osm",
         "references": [
           "https://mtp.indianrailways.gov.in",
@@ -27129,6 +27157,7 @@
         "expected_completion": null,
         "stations_count": 12,
         "color": "#009A44",
+        "stations_not_published": false,
         "source": "osm",
         "references": [
           "https://www.kmrc.in",
@@ -27548,6 +27577,7 @@
         "expected_completion": null,
         "stations_count": 7,
         "color": "#702082",
+        "stations_not_published": false,
         "source": "osm",
         "references": [
           "https://pib.gov.in/PressReleasePage.aspx?PRID=1887680",
@@ -27669,6 +27699,7 @@
         "expected_completion": "2028",
         "stations_count": 0,
         "color": "#702082",
+        "stations_not_published": true,
         "source": "osm",
         "references": [
           "https://mtp.indianrailways.gov.in"
@@ -28389,6 +28420,7 @@
         "expected_completion": null,
         "stations_count": 4,
         "color": "#FFD100",
+        "stations_not_published": false,
         "source": "osm",
         "references": [
           "https://pib.gov.in/PressReleasePage.aspx?PRID=2159869"
@@ -28817,6 +28849,7 @@
         "expected_completion": null,
         "stations_count": 1,
         "color": "#FFD100",
+        "stations_not_published": false,
         "source": "osm",
         "references": [
           "https://mtp.indianrailways.gov.in"
@@ -29269,6 +29302,7 @@
         "expected_completion": null,
         "stations_count": 9,
         "color": "#FF8200",
+        "stations_not_published": false,
         "source": "osm",
         "references": [
           "https://pib.gov.in/PressReleasePage.aspx?PRID=2011707",
@@ -29838,6 +29872,7 @@
         "expected_completion": "2027",
         "stations_count": 3,
         "color": "#FF8200",
+        "stations_not_published": false,
         "source": "osm",
         "references": [
           "https://mtp.indianrailways.gov.in"
@@ -30118,6 +30153,7 @@
         "expected_completion": null,
         "stations_count": 0,
         "color": "#008D42",
+        "stations_not_published": true,
         "source": "osm",
         "references": [
           "https://hmrl.co.in",
@@ -32087,6 +32123,7 @@
         "expected_completion": null,
         "stations_count": 27,
         "color": "#D84A4E",
+        "stations_not_published": false,
         "source": "osm",
         "references": [
           "https://hmrl.co.in",
@@ -34168,6 +34205,7 @@
         "expected_completion": null,
         "stations_count": 23,
         "color": "#0081BF",
+        "stations_not_published": false,
         "source": "osm",
         "references": [
           "https://hmrl.co.in",
@@ -35017,6 +35055,7 @@
         "expected_completion": null,
         "stations_count": 9,
         "color": "#008D42",
+        "stations_not_published": false,
         "source": "manual",
         "references": [
           "https://hmrl.co.in",
@@ -36333,6 +36372,7 @@
         "expected_completion": null,
         "stations_count": 18,
         "color": "#0000FF",
+        "stations_not_published": false,
         "source": "osm",
         "references": [
           "https://www.gujaratmetrorail.com/projects/project-overview/"
@@ -37165,6 +37205,7 @@
         "expected_completion": null,
         "stations_count": 15,
         "color": "#FF0000",
+        "stations_not_published": false,
         "source": "osm",
         "references": [
           "https://www.gujaratmetrorail.com/projects/project-overview/"
@@ -37961,6 +38002,7 @@
         "expected_completion": null,
         "stations_count": 21,
         "color": "#FFD700",
+        "stations_not_published": false,
         "source": "osm",
         "references": [
           "https://www.gujaratmetrorail.com/projects/project-overview/"
@@ -38161,6 +38203,7 @@
         "expected_completion": null,
         "stations_count": 3,
         "color": "#8A2BE2",
+        "stations_not_published": false,
         "source": "osm",
         "references": [
           "https://www.gujaratmetrorail.com/projects/project-overview/"
@@ -39201,6 +39244,7 @@
         "expected_completion": null,
         "stations_count": 21,
         "color": "#00CED1",
+        "stations_not_published": false,
         "source": "osm",
         "references": [
           "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
@@ -39245,6 +39289,7 @@
         "expected_completion": "2030",
         "stations_count": 2,
         "color": "#00CED1",
+        "stations_not_published": false,
         "source": "osm",
         "references": [
           "https://ddnews.gov.in",
@@ -40346,6 +40391,7 @@
         "expected_completion": null,
         "stations_count": 30,
         "color": "#FF4040",
+        "stations_not_published": false,
         "source": "osm",
         "references": [],
         "completion_unconfirmed": false,
@@ -41760,6 +41806,7 @@
         "expected_completion": null,
         "stations_count": 37,
         "color": "#FFD700",
+        "stations_not_published": false,
         "source": "osm",
         "references": [],
         "completion_unconfirmed": false,
@@ -43814,6 +43861,7 @@
         "expected_completion": null,
         "stations_count": 50,
         "color": "#0070BB",
+        "stations_not_published": false,
         "source": "osm",
         "references": [],
         "completion_unconfirmed": false,
@@ -44240,6 +44288,7 @@
         "expected_completion": null,
         "stations_count": 8,
         "color": "#0070BB",
+        "stations_not_published": false,
         "source": "osm",
         "references": [],
         "completion_unconfirmed": false,
@@ -44818,6 +44867,7 @@
         "expected_completion": null,
         "stations_count": 23,
         "color": "#008000",
+        "stations_not_published": false,
         "source": "osm",
         "references": [],
         "completion_unconfirmed": false,
@@ -45016,6 +45066,7 @@
         "expected_completion": null,
         "stations_count": 3,
         "color": "#008000",
+        "stations_not_published": false,
         "source": "osm",
         "references": [],
         "completion_unconfirmed": false,
@@ -46558,6 +46609,7 @@
         "expected_completion": null,
         "stations_count": 35,
         "color": "#553592",
+        "stations_not_published": false,
         "source": "osm",
         "references": [],
         "completion_unconfirmed": false,
@@ -47180,6 +47232,7 @@
         "expected_completion": null,
         "stations_count": 8,
         "color": "#FF8C00",
+        "stations_not_published": false,
         "source": "osm",
         "references": [],
         "completion_unconfirmed": false,
@@ -50150,6 +50203,7 @@
         "expected_completion": null,
         "stations_count": 38,
         "color": "#FC8EAC",
+        "stations_not_published": false,
         "source": "osm",
         "references": [],
         "completion_unconfirmed": false,
@@ -51140,6 +51194,7 @@
         "expected_completion": null,
         "stations_count": 26,
         "color": "#CC338B",
+        "stations_not_published": false,
         "source": "osm",
         "references": [],
         "completion_unconfirmed": false,
@@ -51350,6 +51405,7 @@
         "expected_completion": null,
         "stations_count": 4,
         "color": "#838996",
+        "stations_not_published": false,
         "source": "osm",
         "references": [],
         "completion_unconfirmed": false,
@@ -51792,6 +51848,7 @@
         "expected_completion": null,
         "stations_count": 0,
         "color": "#FF4040",
+        "stations_not_published": true,
         "source": "osm",
         "references": [
           "https://delhimetrorail.com/",
@@ -52149,6 +52206,7 @@
         "expected_completion": null,
         "stations_count": 4,
         "color": "#CC338B",
+        "stations_not_published": false,
         "source": "osm",
         "references": [
           "https://delhimetrorail.com/",
@@ -52406,6 +52464,7 @@
         "expected_completion": null,
         "stations_count": 0,
         "color": "#CC338B",
+        "stations_not_published": true,
         "source": "osm",
         "references": [
           "https://delhimetrorail.com/",
@@ -52487,6 +52546,7 @@
         "expected_completion": null,
         "stations_count": 3,
         "color": "#B8860B",
+        "stations_not_published": false,
         "source": "osm",
         "references": [
           "https://delhimetrorail.com/",
@@ -52741,6 +52801,7 @@
         "expected_completion": null,
         "stations_count": 1,
         "color": "#B8860B",
+        "stations_not_published": false,
         "source": "osm",
         "references": [
           "https://delhimetrorail.com/",

@@ -131,6 +131,7 @@ export interface CityOverrideData {
     last_verified?: string;
     geometry_quality?: "exact" | "schematic";
     endpoint_station_ids?: string[];
+    stations_not_published?: boolean;
   }>;
   interchangeStationNames?: string[];
   dedupeRadiusM?: number;
@@ -742,6 +743,7 @@ export function mergeCityOverrides(
             : null,
         stations_count: stationsCount,
         color: segOverride.color,
+        stations_not_published: segOverride.stations_not_published || false,
         source: segmentSource,
         references: segOverride.references || [],
         completion_unconfirmed: segOverride.completion_unconfirmed || false,
@@ -756,7 +758,7 @@ export function mergeCityOverrides(
   const stationFeatures: StationFeature[] = [];
 
   for (const sw of stationsWithLines) {
-    const isInterchange =
+    let isInterchange =
       interchangeSet.has(sw.st.rawName.toLowerCase()) ||
       interchangeSet.has(sw.st.name.toLowerCase()) ||
       sw.assignedLineIds.length > 1;
@@ -773,9 +775,11 @@ export function mergeCityOverrides(
       if (correction.interchange_id === null) {
         // Forced split — remove interchange_id even if auto assigned
         interchangeId = undefined;
+        isInterchange = false;
       } else {
         // Forced merge — use the specified cluster id
         interchangeId = correction.interchange_id;
+        isInterchange = true;
       }
     }
 

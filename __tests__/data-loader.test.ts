@@ -213,4 +213,48 @@ describe("Metro Data Loader & Dataset Invariants", () => {
       expect(station?.properties.name).toBe("Rajiv Chowk");
     });
   });
+
+  describe("M10.3 Provenance & Metadata Integrity", () => {
+    it("ensures no record carries last_verified without an official or non-OSM reference", () => {
+      const dataset = getMetroData();
+      for (const st of dataset.stations.features) {
+        if (st.properties.last_verified) {
+          const refs = st.properties.references || [];
+          const hasOfficial = refs.some(
+            (r) => !r.includes("openstreetmap.org") && r.trim().length > 0
+          );
+          expect(
+            hasOfficial,
+            `Station ${st.properties.station_id} has last_verified without official reference`
+          ).toBe(true);
+        }
+      }
+
+      for (const seg of dataset.segments.features) {
+        if (seg.properties.last_verified) {
+          const refs = seg.properties.references || [];
+          const hasOfficial = refs.some(
+            (r) => !r.includes("openstreetmap.org") && r.trim().length > 0
+          );
+          expect(
+            hasOfficial,
+            `Segment ${seg.properties.segment_id} has last_verified without official reference`
+          ).toBe(true);
+        }
+      }
+    });
+
+    it("ensures mergeCityOverrides never injects last_verified automatically for OSM-only stations", () => {
+      const dataset = getMetroData();
+      // Find OSM-only stations (no explicit override last_verified)
+      const osmStations = dataset.stations.features.filter(
+        (st) => (!st.properties.references || st.properties.references.length === 0)
+      );
+      expect(osmStations.length).toBeGreaterThan(0);
+      for (const st of osmStations) {
+        expect(st.properties.last_verified).toBeNull();
+      }
+    });
+  });
 });
+
