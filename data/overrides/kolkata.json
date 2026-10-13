@@ -235,7 +235,8 @@
     "Bimanbandar": "Jai Hind",
     "Kolkata Airport": "Jai Hind",
     "Airport": "Jai Hind",
-    "Netaji Subhash Chandra Bose International Airport": "Jai Hind"
+    "Netaji Subhash Chandra Bose International Airport": "Jai Hind",
+    "mothers wax museum": "Mother's Wax Museum"
   },
   "stationOverrides": {
     "kolkata-park-street": {
@@ -243,14 +244,24 @@
         "kol-blue"
       ],
       "status": "operational",
-      "phase": "1"
+      "phase": "1",
+      "layout": "underground",
+      "references": [
+        "https://mtp.indianrailways.gov.in"
+      ],
+      "last_verified": "2026-10-08"
     },
     "kolkata-maidan": {
       "line_ids": [
         "kol-blue"
       ],
       "status": "operational",
-      "phase": "1"
+      "phase": "1",
+      "layout": "underground",
+      "references": [
+        "https://mtp.indianrailways.gov.in"
+      ],
+      "last_verified": "2026-10-08"
     },
     "kolkata-esplanade": {
       "line_ids": [
@@ -258,7 +269,12 @@
         "kol-green"
       ],
       "status": "operational",
-      "phase": "1"
+      "phase": "1",
+      "layout": "underground",
+      "references": [
+        "https://mtp.indianrailways.gov.in"
+      ],
+      "last_verified": "2026-10-08"
     },
     "kolkata-salt-lake-sector-v": {
       "line_ids": [
@@ -279,7 +295,24 @@
         "kol-orange"
       ],
       "status": "construction",
-      "phase": "6"
+      "phase": "6",
+      "references": [
+        "https://mtp.indianrailways.gov.in"
+      ],
+      "last_verified": "2026-10-13",
+      "expected_completion": "2026-12"
+    },
+    "kolkata-mothers-wax-museum": {
+      "line_ids": [
+        "kol-orange"
+      ],
+      "status": "construction",
+      "phase": "6",
+      "references": [
+        "https://mtp.indianrailways.gov.in"
+      ],
+      "last_verified": "2026-10-13",
+      "expected_completion": "2027"
     },
     "Belgachia": {
       "layout": "underground",
@@ -324,27 +357,6 @@
       "last_verified": "2026-10-08"
     },
     "Chandni Chowk": {
-      "layout": "underground",
-      "references": [
-        "https://mtp.indianrailways.gov.in"
-      ],
-      "last_verified": "2026-10-08"
-    },
-    "Esplanade": {
-      "layout": "underground",
-      "references": [
-        "https://mtp.indianrailways.gov.in"
-      ],
-      "last_verified": "2026-10-08"
-    },
-    "Park Street": {
-      "layout": "underground",
-      "references": [
-        "https://mtp.indianrailways.gov.in"
-      ],
-      "last_verified": "2026-10-08"
-    },
-    "Maidan": {
       "layout": "underground",
       "references": [
         "https://mtp.indianrailways.gov.in"

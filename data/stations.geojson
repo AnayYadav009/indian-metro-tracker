@@ -8591,7 +8591,7 @@
       },
       "properties": {
         "station_id": "kolkata-mothers-wax-museum",
-        "name": "mothers wax museum",
+        "name": "Mother's Wax Museum",
         "city_id": "kolkata",
         "city": "Kolkata",
         "line_ids": [
@@ -8601,13 +8601,15 @@
         "phase": "6",
         "is_interchange": false,
         "opened_on": null,
-        "expected_completion": null,
-        "completion_unconfirmed": true,
+        "expected_completion": "2027",
+        "completion_unconfirmed": false,
         "layout": null,
         "layout_source": "unverified",
         "source": "osm",
-        "references": [],
-        "last_verified": null,
+        "references": [
+          "https://mtp.indianrailways.gov.in"
+        ],
+        "last_verified": "2026-10-13",
         "retrieved_at": "2026-10-10"
       }
     },
@@ -9043,11 +9045,13 @@
         "opened_on": null,
         "expected_completion": null,
         "completion_unconfirmed": false,
-        "layout": null,
-        "layout_source": "unverified",
+        "layout": "underground",
+        "layout_source": "operator",
         "source": "osm",
-        "references": [],
-        "last_verified": null,
+        "references": [
+          "https://mtp.indianrailways.gov.in"
+        ],
+        "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
     },
@@ -9491,11 +9495,13 @@
         "opened_on": null,
         "expected_completion": null,
         "completion_unconfirmed": false,
-        "layout": null,
-        "layout_source": "unverified",
+        "layout": "underground",
+        "layout_source": "operator",
         "source": "osm",
-        "references": [],
-        "last_verified": null,
+        "references": [
+          "https://mtp.indianrailways.gov.in"
+        ],
+        "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
     },
@@ -9556,11 +9562,13 @@
         "opened_on": null,
         "expected_completion": null,
         "completion_unconfirmed": false,
-        "layout": null,
-        "layout_source": "unverified",
+        "layout": "underground",
+        "layout_source": "operator",
         "source": "osm",
-        "references": [],
-        "last_verified": null,
+        "references": [
+          "https://mtp.indianrailways.gov.in"
+        ],
+        "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10",
         "interchange_id": "kolkata-esplanade"
       }
@@ -9782,13 +9790,15 @@
         "phase": "6",
         "is_interchange": false,
         "opened_on": null,
-        "expected_completion": null,
-        "completion_unconfirmed": true,
+        "expected_completion": "2026-12",
+        "completion_unconfirmed": false,
         "layout": null,
         "layout_source": "unverified",
         "source": "osm",
-        "references": [],
-        "last_verified": null,
+        "references": [
+          "https://mtp.indianrailways.gov.in"
+        ],
+        "last_verified": "2026-10-13",
         "retrieved_at": "2026-10-10"
       }
     },

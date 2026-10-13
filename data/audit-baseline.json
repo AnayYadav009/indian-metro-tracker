@@ -270,30 +270,6 @@
       "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
-      "city_id": "kolkata",
-      "rule": "ground-truth-length",
-      "subject": "kol-yellow",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "kolkata",
-      "rule": "segment-end-far-from-station",
-      "subject": "kol-purple-seg-02",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "kolkata",
-      "rule": "segment-end-far-from-station",
-      "subject": "kol-purple-seg-02",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "kolkata",
-      "rule": "segment-end-far-from-station",
-      "subject": "kol-yellow-seg-02",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
       "city_id": "mumbai",
       "rule": "consecutive-segment-gap",
       "subject": "mum-line-4-seg-01|mum-planned-seg-01",
@@ -2764,283 +2740,259 @@
       "city_id": "kolkata",
       "rule": "future-date-unconfirmed",
       "subject": "kol-yellow-seg-02",
-      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
+      "reason": "Yellow Line Barasat extension completion unconfirmed per Metro Railway Kolkata"
     },
     {
       "city_id": "kolkata",
-      "rule": "future-date-unconfirmed",
-      "subject": "kolkata-mothers-wax-museum",
-      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
-    },
-    {
-      "city_id": "kolkata",
-      "rule": "future-date-unconfirmed",
-      "subject": "kolkata-nalban",
-      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
-    },
-    {
-      "city_id": "kolkata",
-      "rule": "future-record-no-reference",
-      "subject": "kolkata-mothers-wax-museum",
-      "reason": "Future segment or station pending deep-link reference citation"
-    },
-    {
-      "city_id": "kolkata",
-      "rule": "future-record-no-reference",
-      "subject": "kolkata-nalban",
-      "reason": "Future segment or station pending deep-link reference citation"
+      "rule": "ground-truth-length",
+      "subject": "kol-yellow",
+      "reason": "Noapara-Jai Hind operational corridor computed 6.41 km vs 6.77 km reference (within 5.3% variance)"
     },
     {
       "city_id": "kolkata",
       "rule": "layout/suspect-default-elevated",
       "subject": "kolkata-baranagar",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
+      "reason": "Station layout pending physical verification against official station list"
     },
     {
       "city_id": "kolkata",
       "rule": "layout/suspect-default-elevated",
       "subject": "kolkata-barun-sengupta",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
+      "reason": "Station layout pending physical verification against official station list"
     },
     {
       "city_id": "kolkata",
       "rule": "layout/suspect-default-elevated",
       "subject": "kolkata-behala-bazar",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
+      "reason": "Station layout pending physical verification against official station list"
     },
     {
       "city_id": "kolkata",
       "rule": "layout/suspect-default-elevated",
       "subject": "kolkata-behala-chowrasta",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
+      "reason": "Station layout pending physical verification against official station list"
     },
     {
       "city_id": "kolkata",
       "rule": "layout/suspect-default-elevated",
       "subject": "kolkata-beleghata",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
+      "reason": "Station layout pending physical verification against official station list"
     },
     {
       "city_id": "kolkata",
       "rule": "layout/suspect-default-elevated",
       "subject": "kolkata-bengal-chemical",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
+      "reason": "Station layout pending physical verification against official station list"
     },
     {
       "city_id": "kolkata",
       "rule": "layout/suspect-default-elevated",
       "subject": "kolkata-central-park",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
+      "reason": "Station layout pending physical verification against official station list"
     },
     {
       "city_id": "kolkata",
       "rule": "layout/suspect-default-elevated",
       "subject": "kolkata-city-centre",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
+      "reason": "Station layout pending physical verification against official station list"
     },
     {
       "city_id": "kolkata",
       "rule": "layout/suspect-default-elevated",
       "subject": "kolkata-dakshineswar",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
+      "reason": "Station layout pending physical verification against official station list"
     },
     {
       "city_id": "kolkata",
       "rule": "layout/suspect-default-elevated",
       "subject": "kolkata-dum-dum",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
+      "reason": "Station layout pending physical verification against official station list"
     },
     {
       "city_id": "kolkata",
       "rule": "layout/suspect-default-elevated",
       "subject": "kolkata-dum-dum-cantonment",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "kolkata",
-      "rule": "layout/suspect-default-elevated",
-      "subject": "kolkata-esplanade",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
+      "reason": "Station layout pending physical verification against official station list"
     },
     {
       "city_id": "kolkata",
       "rule": "layout/suspect-default-elevated",
       "subject": "kolkata-gitanjali",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
+      "reason": "Station layout pending physical verification against official station list"
     },
     {
       "city_id": "kolkata",
       "rule": "layout/suspect-default-elevated",
       "subject": "kolkata-hemanta-mukhopadhyay",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
+      "reason": "Station layout pending physical verification against official station list"
     },
     {
       "city_id": "kolkata",
       "rule": "layout/suspect-default-elevated",
       "subject": "kolkata-jai-hind",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
+      "reason": "Station layout pending physical verification against official station list"
     },
     {
       "city_id": "kolkata",
       "rule": "layout/suspect-default-elevated",
       "subject": "kolkata-jessore-road",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
+      "reason": "Station layout pending physical verification against official station list"
     },
     {
       "city_id": "kolkata",
       "rule": "layout/suspect-default-elevated",
       "subject": "kolkata-joka",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
+      "reason": "Station layout pending physical verification against official station list"
     },
     {
       "city_id": "kolkata",
       "rule": "layout/suspect-default-elevated",
       "subject": "kolkata-jyotirindra-nandi",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
+      "reason": "Station layout pending physical verification against official station list"
     },
     {
       "city_id": "kolkata",
       "rule": "layout/suspect-default-elevated",
       "subject": "kolkata-karunamoyee",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
+      "reason": "Station layout pending physical verification against official station list"
     },
     {
       "city_id": "kolkata",
       "rule": "layout/suspect-default-elevated",
       "subject": "kolkata-kavi-nazrul",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
+      "reason": "Station layout pending physical verification against official station list"
     },
     {
       "city_id": "kolkata",
       "rule": "layout/suspect-default-elevated",
       "subject": "kolkata-kavi-subhash",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
+      "reason": "Station layout pending physical verification against official station list"
     },
     {
       "city_id": "kolkata",
       "rule": "layout/suspect-default-elevated",
       "subject": "kolkata-kavi-sukanta",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "kolkata",
-      "rule": "layout/suspect-default-elevated",
-      "subject": "kolkata-maidan",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
+      "reason": "Station layout pending physical verification against official station list"
     },
     {
       "city_id": "kolkata",
       "rule": "layout/suspect-default-elevated",
       "subject": "kolkata-majerhat",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
+      "reason": "Station layout pending physical verification against official station list"
     },
     {
       "city_id": "kolkata",
       "rule": "layout/suspect-default-elevated",
       "subject": "kolkata-masterda-surya-sen",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
+      "reason": "Station layout pending physical verification against official station list"
     },
     {
       "city_id": "kolkata",
       "rule": "layout/suspect-default-elevated",
       "subject": "kolkata-mothers-wax-museum",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
+      "reason": "Station layout pending physical verification against official station list"
     },
     {
       "city_id": "kolkata",
       "rule": "layout/suspect-default-elevated",
       "subject": "kolkata-nalban",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
+      "reason": "Station layout pending physical verification against official station list"
     },
     {
       "city_id": "kolkata",
       "rule": "layout/suspect-default-elevated",
       "subject": "kolkata-netaji",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
+      "reason": "Station layout pending physical verification against official station list"
     },
     {
       "city_id": "kolkata",
       "rule": "layout/suspect-default-elevated",
       "subject": "kolkata-noapara",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "kolkata",
-      "rule": "layout/suspect-default-elevated",
-      "subject": "kolkata-park-street",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
+      "reason": "Station layout pending physical verification against official station list"
     },
     {
       "city_id": "kolkata",
       "rule": "layout/suspect-default-elevated",
       "subject": "kolkata-ritwik-ghatak",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
+      "reason": "Station layout pending physical verification against official station list"
     },
     {
       "city_id": "kolkata",
       "rule": "layout/suspect-default-elevated",
       "subject": "kolkata-sakher-bazar",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
+      "reason": "Station layout pending physical verification against official station list"
     },
     {
       "city_id": "kolkata",
       "rule": "layout/suspect-default-elevated",
       "subject": "kolkata-salt-lake-sector-v",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
+      "reason": "Station layout pending physical verification against official station list"
     },
     {
       "city_id": "kolkata",
       "rule": "layout/suspect-default-elevated",
       "subject": "kolkata-salt-lake-stadium",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
+      "reason": "Station layout pending physical verification against official station list"
     },
     {
       "city_id": "kolkata",
       "rule": "layout/suspect-default-elevated",
       "subject": "kolkata-satyajit-roy",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
+      "reason": "Station layout pending physical verification against official station list"
     },
     {
       "city_id": "kolkata",
       "rule": "layout/suspect-default-elevated",
       "subject": "kolkata-shahid-khudiram",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
+      "reason": "Station layout pending physical verification against official station list"
     },
     {
       "city_id": "kolkata",
       "rule": "layout/suspect-default-elevated",
       "subject": "kolkata-taratala",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
+      "reason": "Station layout pending physical verification against official station list"
     },
     {
       "city_id": "kolkata",
       "rule": "layout/suspect-default-elevated",
       "subject": "kolkata-thakurpukur",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
+      "reason": "Station layout pending physical verification against official station list"
     },
     {
       "city_id": "kolkata",
       "rule": "layout/suspect-default-elevated",
       "subject": "kolkata-vip-bazar",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
+      "reason": "Station layout pending physical verification against official station list"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "segment-end-far-from-station",
+      "subject": "kol-purple-seg-02",
+      "reason": "Under-construction/planned terminus terminal gap pending intermediate station survey"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "segment-end-far-from-station",
+      "subject": "kol-purple-seg-02",
+      "reason": "Under-construction/planned terminus terminal gap pending intermediate station survey"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "segment-end-far-from-station",
+      "subject": "kol-yellow-seg-02",
+      "reason": "Under-construction/planned terminus terminal gap pending intermediate station survey"
     },
     {
       "city_id": "kolkata",
       "rule": "station-gap",
       "subject": "kol-orange|kolkata-beleghata|kolkata-nalban",
-      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
+      "reason": "Under-construction corridor station gap awaiting intermediate station survey"
     },
     {
       "city_id": "kolkata",
       "rule": "station-gap",
       "subject": "kol-orange|kolkata-nalban|kolkata-mothers-wax-museum",
-      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
-    },
-    {
-      "city_id": "kolkata",
-      "rule": "station-name-quality",
-      "subject": "kolkata-mothers-wax-museum",
-      "reason": "Acronym or title-case formatting distinction"
+      "reason": "Under-construction corridor station gap awaiting intermediate station survey"
     },
     {
       "city_id": "mumbai",

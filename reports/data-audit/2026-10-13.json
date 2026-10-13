@@ -3283,34 +3283,6 @@
     },
     {
       "city_id": "kolkata",
-      "rule": "future-date-unconfirmed",
-      "severity": "warn",
-      "subject": "kolkata-mothers-wax-museum",
-      "message": "Future station has no verified expected completion date"
-    },
-    {
-      "city_id": "kolkata",
-      "rule": "future-date-unconfirmed",
-      "severity": "warn",
-      "subject": "kolkata-nalban",
-      "message": "Future station has no verified expected completion date"
-    },
-    {
-      "city_id": "kolkata",
-      "rule": "future-record-no-reference",
-      "severity": "warn",
-      "subject": "kolkata-mothers-wax-museum",
-      "message": "Future station has no source reference"
-    },
-    {
-      "city_id": "kolkata",
-      "rule": "future-record-no-reference",
-      "severity": "warn",
-      "subject": "kolkata-nalban",
-      "message": "Future station has no source reference"
-    },
-    {
-      "city_id": "kolkata",
       "rule": "ground-truth-length",
       "severity": "warn",
       "subject": "kol-yellow",
@@ -3397,13 +3369,6 @@
       "city_id": "kolkata",
       "rule": "layout/suspect-default-elevated",
       "severity": "warn",
-      "subject": "kolkata-esplanade",
-      "message": "Station has unverified layout (requires operator station list verification)"
-    },
-    {
-      "city_id": "kolkata",
-      "rule": "layout/suspect-default-elevated",
-      "severity": "warn",
       "subject": "kolkata-gitanjali",
       "message": "Station has unverified layout (requires operator station list verification)"
     },
@@ -3474,13 +3439,6 @@
       "city_id": "kolkata",
       "rule": "layout/suspect-default-elevated",
       "severity": "warn",
-      "subject": "kolkata-maidan",
-      "message": "Station has unverified layout (requires operator station list verification)"
-    },
-    {
-      "city_id": "kolkata",
-      "rule": "layout/suspect-default-elevated",
-      "severity": "warn",
       "subject": "kolkata-majerhat",
       "message": "Station has unverified layout (requires operator station list verification)"
     },
@@ -3517,13 +3475,6 @@
       "rule": "layout/suspect-default-elevated",
       "severity": "warn",
       "subject": "kolkata-noapara",
-      "message": "Station has unverified layout (requires operator station list verification)"
-    },
-    {
-      "city_id": "kolkata",
-      "rule": "layout/suspect-default-elevated",
-      "severity": "warn",
-      "subject": "kolkata-park-street",
       "message": "Station has unverified layout (requires operator station list verification)"
     },
     {
@@ -3626,17 +3577,10 @@
     },
     {
       "city_id": "kolkata",
-      "rule": "station-name-quality",
-      "severity": "warn",
-      "subject": "kolkata-mothers-wax-museum",
-      "message": "Station name 'mothers wax museum': inconsistent casing"
-    },
-    {
-      "city_id": "kolkata",
       "rule": "last-verified-distribution",
       "severity": "info",
       "subject": "kolkata",
-      "message": "last_verified distribution: 2026-10-08: 18; missing: 47"
+      "message": "last_verified distribution: 2026-10-08: 21; 2026-10-13: 2; missing: 42"
     },
     {
       "city_id": "mumbai",
