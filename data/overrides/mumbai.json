@@ -1718,6 +1718,7 @@
       "expected_completion": null,
       "completion_unconfirmed": true,
       "color": "#00B140",
+      "stations_not_published": true,
       "references": [
         "https://mmrda.maharashtra.gov.in/"
       ],

@@ -50,7 +50,7 @@ function makeSegment(overrides?: Partial<Record<string, unknown>>) {
     stations_count: 2,
     color: "#FF0000",
     source: "osm",
-    references: [],
+    references: ["https://tcrl.org/official"],
     last_verified: "2026-01-01",
     completion_unconfirmed: false,
     ...overrides,
@@ -82,6 +82,7 @@ function makeStation(overrides?: Partial<Record<string, unknown>>) {
     expected_completion: null,
     layout: "elevated",
     source: "osm",
+    references: ["https://tcrl.org/official"],
     last_verified: "2026-01-01",
     ...overrides,
   };

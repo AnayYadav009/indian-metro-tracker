@@ -43,6 +43,7 @@ export const LineSchema = z.object({
   operator: z.string().min(1),
   source: z.string().min(1, "source is required"),
   aliases: z.array(z.string().min(1)).default([]).optional(),
+  ordered_station_ids: z.array(z.string().min(1)).optional(),
   retrieved_at: z
     .string()
     .regex(/^\d{4}-\d{2}-\d{2}$/, "Format must be YYYY-MM-DD")
@@ -96,6 +97,7 @@ export const SegmentPropertiesSchema = z
       .enum(["exact", "schematic"])
       .default("exact")
       .optional(),
+    stations_not_published: z.boolean().default(false).optional(),
   })
   .superRefine((data, ctx) => {
     if (data.status === "operational") {

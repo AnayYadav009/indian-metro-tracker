@@ -3489,6 +3489,7 @@
       "expected_completion": null,
       "completion_unconfirmed": true,
       "color": "#800080",
+      "stations_not_published": true,
       "references": [
         "https://english.bmrc.co.in/"
       ],

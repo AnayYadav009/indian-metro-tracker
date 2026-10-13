@@ -574,6 +574,377 @@
     },
     {
       "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-aec",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-akshardham",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-amraiwadi",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-apmc",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-apparel-park",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-commerce-six-road",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-dholakuva-circle",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-doordarshan-kendra",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-gandhigram",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-gheekanta",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-gift-city",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-gnlu",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-gujarat-university",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-gurukul-road",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-infocity",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-jivraj-park",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-juna-koba",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-juna-sachivalaya",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-kalupur-railway",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-kankaria-east",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-koba-circle",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-koba-gam",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-koteshwar-road",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-mahatma-mandir",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-motera-stadium",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-narmada-canal",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-nirant-cross-road",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-old-high-court",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-paldi",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-pdeu",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-rabari-colony",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-rajiv-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-randesan",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-ranip",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-raysan",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-sabarmati",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-sachivalaya",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-sector-1",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-sector-10a",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-sector-16",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-sector-24",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-shahpur",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-shreyas",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-sp-stadium",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-tapovan-circle",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-thaltej",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-thaltej-gam",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-usmanpura",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-vadaj",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-vastral",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-vastral-gam",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-vijay-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "ahmedabad-vishwakarma-college",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "ahmedabad",
       "rule": "last-verified-distribution",
       "severity": "info",
       "subject": "ahmedabad",
@@ -1085,6 +1456,587 @@
     },
     {
       "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-attiguppe",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-baiyappanahalli",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-banashankari",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-benniganahalli",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-beratena-agrahara",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-biocon-hebbagodi",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-bommanahalli",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-bommasandra",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-btm-layout",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-central-silk-board",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-challaghatta",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-chickpete",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-chikkabidarakallu",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-cubbon-park",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-dasarahalli",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-deepanjali-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-doddakallasandra",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-dr-b-r-ambedkar-vidhana-soudha",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-electronic-city",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-garudacharpalya",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-goraguntepalya",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-halasuru",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-hongasandra",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-hoodi",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-hopefarm-channasandra",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-hosa-road",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-huskur-road",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-indiranagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-infosys-foundation-konappana-agrahara",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-jalahalli",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-jaya-prakash-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-jayadeva-hospital",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-jayanagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-jnanabharathi",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-kadugodi-tree-park",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-kengeri",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-kengeri-bus-terminal",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-konanakunte-cross",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-krantivira-sangolli-rayanna-railway",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-krishna-rajendra-market",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-krishnarajapura",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-kudlu-gate",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-kundalahalli",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-lalbagh",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-madavara",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-magadi-road",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-mahakavi-kuvempu-road",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-mahalakshmi",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-mahatma-gandhi-road",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-manjunathanagara",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-mantri-square-sampige-road",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-mysore-road",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-nadaprabhu-kempegowda-majestic",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-nagasandra",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-nallurahalli",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-national-college",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-pantharapalya-nayandahalli",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-pattanagere",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-pattandur-agrahara",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-peenya",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-peenya-industry",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-ragigudda",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-rajajinagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-rajarajeshwari-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-rashtreeya-vidyalaya-road",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-sandal-soap-factory",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-seetharampalya",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-silk-institute",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-singasandra",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-singayyanapalya",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-sir-m-visvesvaraya-stn-central-college",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-south-end-circle",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-sri-balagangadharanatha-swamiji-stn-hosahalli",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-sri-sathya-sai-hospital",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-srirampura",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-swami-vivekananda-road",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-thalaghattapura",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-trinity",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-vajarahalli",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-vijayanagara",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-whitefield-kadugodi",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-yelachenahalli",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "blr-yeshwantpur",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "bengaluru",
       "rule": "segment-end-far-from-station",
       "severity": "warn",
       "subject": "blr-planned-seg-01",
@@ -1152,6 +2104,293 @@
       "severity": "warn",
       "subject": "che-green",
       "message": "Operational length: computed 21.13 km vs reference 21.96 km (3.8%)"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "chennai-ag-dms",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "chennai-alandur",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "chennai-anna-nagar-east",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "chennai-anna-nagar-tower",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "chennai-arumbakkam",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "chennai-ashok-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "chennai-chennai-central",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "chennai-chennai-international-airport",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "chennai-cmbt",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "chennai-egmore",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "chennai-ekkattuthangal",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "chennai-government-estate",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "chennai-guindy",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "chennai-high-court",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "chennai-kaladipet",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "chennai-kilpauk",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "chennai-koyambedu",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "chennai-lic",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "chennai-little-mount",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "chennai-mannadi",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "chennai-meenambakkam",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "chennai-nandanam",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "chennai-nanganallur-road",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "chennai-nehru-park",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "chennai-new-washermanpet",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "chennai-pachaiyappas-college",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "chennai-saidapet",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "chennai-shenoy-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "chennai-sir-theagaraya-college",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "chennai-st-thomas-mount",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "chennai-teynampet",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "chennai-thirumangalam",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "chennai-thiruvottiyur-theradi",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "chennai-thiruvottriyur",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "chennai-thousand-lights",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "chennai-tollgate",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "chennai-tondiarpet",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "chennai-vadapalani",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "chennai-washermanpet",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "chennai-wimco-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "chennai-wimco-nagar-depot",
+      "message": "Operational station has no opened_on date"
     },
     {
       "city_id": "chennai",
@@ -1432,6 +2671,20 @@
       "severity": "warn",
       "subject": "del-yellow",
       "message": "Operational length: computed 47.39 km vs reference 49.02 km (3.3%)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "interchange-consistency",
+      "severity": "warn",
+      "subject": "del-noida-sector-52",
+      "message": "is_interchange is true but station is on only 1 line(s)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "interchange-consistency",
+      "severity": "warn",
+      "subject": "del-sikanderpur",
+      "message": "is_interchange is true but station is on only 1 line(s)"
     },
     {
       "city_id": "delhi",
@@ -2933,6 +4186,1616 @@
     },
     {
       "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-adarsh-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-aiims",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-akshardham",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-anand-vihar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-arjan-garh",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-arthala",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-ashok-park-main",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-ashram",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-azadpur",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-badarpur",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-badhkal-mor",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-bahadurgarh-city",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-barakhambha-road",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-bata-chowk",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-bhikaji-cama-place",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-botanical-garden",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-brigadier-hoshiyar-singh",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-central-secretariat",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-chandni-chowk",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-chawri-bazaar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-chhatarpur",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-chirag-delhi",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-civil-lines",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-dabri-mor-janakpuri-south",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-dashrath-puri",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-delhi-aerocity",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-delhi-cantt",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-delhi-gate",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-dhansa-bus-stand",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-dhaula-kuan",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-dilli-haat-ina",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-dilshad-garden",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-durgabai-deshmukh-south-campus",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-dwarka",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-dwarka-mor",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-dwarka-sector-10",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-dwarka-sector-11",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-dwarka-sector-12",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-dwarka-sector-13",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-dwarka-sector-14",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-dwarka-sector-21",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-dwarka-sector-8",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-dwarka-sector-9",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-east-azad-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-east-vinod-nagar-mayur-vihar-ii",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-escorts-mujesar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-esi-basaidarapur",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-ghevra",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-ghitorni",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-gokulpuri",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-govind-puri",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-greater-kailash",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-green-park",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-gtb-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-guru-dronacharya",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-haiderpur-badli-mor",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-harkesh-nagar-okhla",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-hauz-khas",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-hindon-river",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-iffco-chowk",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-igi-airport",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-iit-delhi",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-inderlok",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-indraprastha",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-ip-extension",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-ito",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-jaffrabad",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-jahangirpuri",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-jama-masjid",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-jamia-millia-islamia",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-janakpuri-east",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-janakpuri-west",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-jangpura",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-janpath",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-jasola-apollo",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-jasola-vihar-shaheen-bagh",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-jawaharlal-nehru-stadium",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-jhandewalan",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-jhilmil",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-johri-enclave",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-jor-bagh",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-kailash-colony",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-kalindi-kunj",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-kalkaji-mandir",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-kanhaiya-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-karkarduma",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-karkarduma-court",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-karol-bagh",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-kashmere-gate",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-kaushambi",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-keshav-puram",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-khan-market",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-kirti-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-kohat-enclave",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-krishna-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-lajpat-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-lal-quila",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-laxmi-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-lok-kalyan-marg",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-m-g-road",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-madhuban-chowk",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-madipur",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-majlis-park",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-malviya-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-mandawali-west-vinod-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-mandi-house",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-mansarovar-park",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-maujpur-babarpur",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-mayapuri",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-mayur-vihar-extension",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-mayur-vihar-i",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-mewala-maharajpur",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-millennium-city-centre-gurugram",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-model-town",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-mohan-estate",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-mohan-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-moolchand",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-moti-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-mundka",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-mundka-industrial-area",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-munirka",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-najafgarh",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-nangli",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-nangloi",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-nangloi-railway",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-naraina-vihar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-nawada",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-neelam-chowk-ajronda",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-nehru-enclave",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-nehru-place",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-netaji-subhash-place",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-new-ashok-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-new-delhi",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-nhpc-chowk",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-nirman-vihar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-noida-city-centre",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-noida-electronic-city",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-noida-golf-course",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-noida-sector-15",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-noida-sector-16",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-noida-sector-18",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-noida-sector-34",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-noida-sector-52",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-noida-sector-59",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-noida-sector-61",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-noida-sector-62",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-okhla-bird-sanctuary",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-okhla-nsic",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-okhla-vihar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-old-faridabad",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-palam",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-panchsheel-park",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-pandit-shree-ram-sharma",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-paschim-vihar-east",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-paschim-vihar-west",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-patel-chowk",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-patel-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-peeragarhi",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-pratap-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-preet-vihar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-pul-bangash",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-punjabi-bagh",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-punjabi-bagh-west",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-qutab-minar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-r-k-ashram-marg",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-r-k-puram",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-raj-bagh",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-raja-nahar-singh",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-rajdhani-park",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-rajendra-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-rajendra-place",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-rajiv-chowk",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-rajouri-garden",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-ramesh-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-rithala",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-rohini-east",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-rohini-sector-18-19",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-rohini-west",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-sadar-bazar-cantonment",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-saket",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-samaypur-badli",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-sant-surdas-sihi",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-sarai",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-sarai-kale-khan-nizamuddin",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-sarita-vihar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-sarojini-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-satguru-ramsingh-marg",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-sector-28",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-seelampur",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-shadipur",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-shahdara",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-shaheed-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-shaheed-sthal",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-shakurpur",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-shalimar-bagh",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-shankar-vihar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-shastri-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-shastri-park",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-shiv-vihar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-shivaji-park",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-shivaji-stadium",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-shree-ram-mandir-mayur-vihar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-shyam-park",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-sir-m-vishweshwaraiah-moti-bagh",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-south-extension",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-subhash-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-sukhdev-vihar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-sultanpur",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-supreme-court",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-surajmal-stadium",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-tagore-garden",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-terminal-1-igi-airport",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-tikri-border",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-tikri-kalan",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-tilak-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-tis-hazari",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-trilokpuri-sanjay-lake",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-tughlakabad",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-udyog-bhawan",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-udyog-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-uttam-nagar-east",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-uttam-nagar-west",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-vaishali",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-vasant-vihar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-vidhan-sabha",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-vinobapuri",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-vishwa-vidyalaya",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-welcome",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-yamuna-bank",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "del-yashobhoomi-dwarka-sector-25",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "delhi",
       "rule": "polyline-hook",
       "severity": "warn",
       "subject": "del-grey-seg-01",
@@ -3188,7 +6051,7 @@
       "rule": "last-verified-distribution",
       "severity": "info",
       "subject": "delhi",
-      "message": "last_verified distribution: 2026-10-08: 38; 2026-10-10: 2; missing: 216"
+      "message": "last_verified distribution: 2026-10-08: 38; 2026-10-10: 2; 2026-10-13: 1; missing: 215"
     },
     {
       "city_id": "gurugram",
@@ -3252,6 +6115,405 @@
       "severity": "warn",
       "subject": "hyd-red",
       "message": "Operational length: computed 28.02 km vs reference 29.21 km (4.1%)"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-ameerpet",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-assembly",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-balanagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-begumpet",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-bharat-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-chaitanyapuri",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-chikkadpally",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-dilsukhnagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-durgam-cheruvu",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-erragadda",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-errum-manzil",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-esi-hospital",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-gandhi-bhavan",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-gandhi-hospital",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-habsiguda",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-hitec-city",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-jbs-parade-ground",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-jntu-college",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-jubilee-hills-check-post",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-khairatabad",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-kphb-colony",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-kukatpally",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-lakdi-ka-pul",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-lb-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-madhapur",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-madhura-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-malakpet",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-mettuguda",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-mg-bus-station",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-miyapur",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-moosapet",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-musarambagh",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-musheerabad",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-nagole",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-nampally",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-narayanaguda",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-new-market",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-ngri",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-osmania-medical-college",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-parade-ground",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-paradise",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-peddamma-gudi",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-prakash-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-punjagutta",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-raidurg",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-rasoolpura",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-road-no-5-jubilee-hills",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-rtc-cross-roads",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-secunderabad-east",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-secunderabad-west",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-sr-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-stadium",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-sultan-bazar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-tarnaka",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-uppal",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-victoria-memorial",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "hyderabad-yousufguda",
+      "message": "Operational station has no opened_on date"
     },
     {
       "city_id": "hyderabad",
@@ -3539,6 +6801,391 @@
       "severity": "warn",
       "subject": "kolkata-vip-bazar",
       "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-baranagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-barun-sengupta",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-behala-bazar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-behala-chowrasta",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-beleghata",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-belgachia",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-bengal-chemical",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-central",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-central-park",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-chandni-chowk",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-city-centre",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-dakshineswar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-dum-dum",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-dum-dum-cantonment",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-esplanade",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-girish-park",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-gitanjali",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-hemanta-mukhopadhyay",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-howrah",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-howrah-maidan",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-jai-hind",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-jatin-das-park",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-jessore-road",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-joka",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-jyotirindra-nandi",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-kalighat",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-karunamoyee",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-kavi-nazrul",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-kavi-subhash",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-kavi-sukanta",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-mahakaran",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-mahanayak-uttam-kumar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-mahatma-gandhi-road",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-maidan",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-majerhat",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-masterda-surya-sen",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-netaji",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-netaji-bhavan",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-noapara",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-park-street",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-phoolbagan",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-rabindra-sadan",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-rabindra-sarobar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-ritwik-ghatak",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-sakher-bazar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-salt-lake-sector-v",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-salt-lake-stadium",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-satyajit-roy",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-sealdah",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-shahid-khudiram",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-shobhabazar-sutanuti",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-shyambazar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-taratala",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-thakurpukur",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "kolkata-vip-bazar",
+      "message": "Operational station has no opened_on date"
     },
     {
       "city_id": "kolkata",
@@ -4291,6 +7938,293 @@
     },
     {
       "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "mum-aarey",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "mum-airport-road",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "mum-akurli",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "mum-anand-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "mum-andheri",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "mum-andheri-west",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "mum-asalpha",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "mum-azad-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "mum-bangur-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "mum-borivali-west",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "mum-chakala-jb-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "mum-csmia-domestic",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "mum-d-n-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "mum-dahanukarwadi",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "mum-devipada",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "mum-dindoshi",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "mum-eksar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "mum-ghatkopar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "mum-goregaon-east",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "mum-goregaon-west",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "mum-gundavali",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "mum-jagruti-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "mum-jogeshwari-east",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "mum-kandarpada",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "mum-kandivali-west",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "mum-kurar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "mum-lower-malad",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "mum-lower-oshiwara",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "mum-magathane",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "mum-mahindra-mahindra",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "mum-malad-west",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "mum-mandapeshwar-ic-colony",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "mum-mogra",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "mum-oshiwara",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "mum-ovaripada",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "mum-rashtriya-udyan",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "mum-saki-naka",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "mum-shimpoli",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "mum-valnai-meeth-chowky",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "mum-versova",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "mum-western-express-highway",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "mumbai",
       "rule": "segment-end-far-from-station",
       "severity": "warn",
       "subject": "mum-planned-seg-01",
@@ -4421,6 +8355,202 @@
       "severity": "info",
       "subject": "noida",
       "message": "last_verified distribution: 2026-10-08: 20; 2026-10-10: 1; missing: 2"
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "pune-anandnagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "pune-bhosari",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "pune-bopodi",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "pune-bund-garden",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "pune-chhatrapati-sambhaji-udyan",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "pune-dapodi",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "pune-deccan-gymkhana",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "pune-district-court",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "pune-garware-college",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "pune-ideal-colony",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "pune-kalyani-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "pune-kasarwadi",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "pune-kasba-peth",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "pune-khadki",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "pune-mahatma-phule-mandai",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "pune-mangalwar-peth",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "pune-pcmc",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "pune-phugewadi",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "pune-pmc",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "pune-pune-railway-station",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "pune-ramwadi",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "pune-ruby-hall-clinic",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "pune-sant-tukaram-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "pune-shivaji-nagar",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "pune-sndt-college",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "pune-swargate",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "pune-vanaz",
+      "message": "Operational station has no opened_on date"
+    },
+    {
+      "city_id": "pune",
+      "rule": "operational-station-no-opened-on",
+      "severity": "warn",
+      "subject": "pune-yerwada",
+      "message": "Operational station has no opened_on date"
     },
     {
       "city_id": "pune",

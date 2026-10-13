@@ -272,6 +272,7 @@
       "completion_unconfirmed": true,
       "color": "#FF4040",
       "city_id": "delhi",
+      "stations_not_published": true,
       "references": [
         "https://delhimetrorail.com/",
         "https://www.openstreetmap.org/way/538930430"
@@ -308,6 +309,7 @@
       "completion_unconfirmed": true,
       "color": "#CC338B",
       "city_id": "delhi",
+      "stations_not_published": true,
       "references": [
         "https://delhimetrorail.com/",
         "https://www.openstreetmap.org/way/538930433"
@@ -891,6 +893,11 @@
       ],
       "is_interchange": true,
       "status": "operational",
+      "opened_on": "2010-06-21",
+      "references": [
+        "https://www.delhimetrorail.com/corporate"
+      ],
+      "last_verified": "2026-10-13",
       "coordinates": [
         77.09278,
         28.48194

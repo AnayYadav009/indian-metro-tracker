@@ -108,6 +108,7 @@
       "inaugurated_on": null,
       "expected_completion": "2026-12",
       "color": "#FFD100",
+      "stations_not_published": true,
       "references": [
         "https://chennaimetrorail.org",
         "https://pib.gov.in/PressReleasePage.aspx?PRID=2061557"
@@ -141,6 +142,7 @@
       "inaugurated_on": null,
       "expected_completion": "2027",
       "color": "#ED1C24",
+      "stations_not_published": true,
       "references": [
         "https://chennaimetrorail.org",
         "https://pib.gov.in/PressReleasePage.aspx?PRID=2061557"

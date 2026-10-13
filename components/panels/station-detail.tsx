@@ -23,8 +23,22 @@ export function StationDetail({ station, coordinates }: StationDetailProps) {
   const setSelectedFeature = useMetroStore((s) => s.setSelectedFeature);
 
   // Map line_ids to full line info (names and colors)
+  // For cross-network or clustered interchanges, aggregate lines from all stations sharing interchange_id
   const connectedLines = useMemo(() => {
-    return station.line_ids.map((lineId) => {
+    let allLineIds = station.line_ids;
+    if (station.interchange_id) {
+      const clusterLineIds = new Set<string>(station.line_ids);
+      for (const st of dataset.stations.features) {
+        if (st.properties.interchange_id === station.interchange_id) {
+          for (const lid of st.properties.line_ids) {
+            clusterLineIds.add(lid);
+          }
+        }
+      }
+      allLineIds = Array.from(clusterLineIds);
+    }
+
+    return allLineIds.map((lineId) => {
       const line = dataset.lines.find((l) => l.id === lineId);
       return {
         id: lineId,
@@ -32,7 +46,7 @@ export function StationDetail({ station, coordinates }: StationDetailProps) {
         color: line?.color || DEFAULT_LINE_FALLBACK_COLOR,
       };
     });
-  }, [station.line_ids, dataset.lines]);
+  }, [station.line_ids, station.interchange_id, dataset.stations, dataset.lines]);
 
   /** Clicking a line chip selects the first operational segment of that line */
   const handleLineChipClick = useCallback(
