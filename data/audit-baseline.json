@@ -14,46 +14,6 @@
   ],
   "known_defects": [
     {
-      "finding_id": "F-13",
-      "target_milestone": "M10.2",
-      "city_id": "bengaluru",
-      "rule": "ground-truth-station-count",
-      "subject": "blr-pink",
-      "note": "Pink Line has only 2 stations in data"
-    },
-    {
-      "finding_id": "F-14",
-      "target_milestone": "M10.2",
-      "city_id": "bengaluru",
-      "rule": "reference-station-missing",
-      "subject": "blr-blue",
-      "note": "Reference terminals Central Silk Board and KIAL Terminals missing in data"
-    },
-    {
-      "finding_id": "F-14",
-      "target_milestone": "M10.2",
-      "city_id": "bengaluru",
-      "rule": "reference-station-missing",
-      "subject": "blr-blue",
-      "note": "Reference terminals Central Silk Board and KIAL Terminals missing in data"
-    },
-    {
-      "finding_id": "F-13",
-      "target_milestone": "M10.2",
-      "city_id": "bengaluru",
-      "rule": "reference-station-missing",
-      "subject": "blr-pink",
-      "note": "Reference terminals Kalena Agrahara and Nagawara missing in data"
-    },
-    {
-      "finding_id": "F-13",
-      "target_milestone": "M10.2",
-      "city_id": "bengaluru",
-      "rule": "reference-station-missing",
-      "subject": "blr-pink",
-      "note": "Reference terminals Kalena Agrahara and Nagawara missing in data"
-    },
-    {
       "finding_id": "F-06",
       "target_milestone": "M10.1",
       "city_id": "pune",
@@ -84,30 +44,6 @@
     {
       "city_id": "bengaluru",
       "rule": "ground-truth-length",
-      "subject": "blr-yellow",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "bengaluru",
-      "rule": "ground-truth-station-count",
-      "subject": "blr-purple",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "bengaluru",
-      "rule": "interchange-consistency",
-      "subject": "blr-central-silk-board",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "bengaluru",
-      "rule": "interchange-consistency",
-      "subject": "blr-jayadeva-hospital",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "bengaluru",
-      "rule": "reference-station-missing",
       "subject": "blr-yellow",
       "reason": "not yet reviewed, triaged per city in M10.2"
     },
@@ -1080,36 +1016,6 @@
     },
     {
       "city_id": "bengaluru",
-      "rule": "future-record-no-reference",
-      "subject": "blr-nagawara-proposed",
-      "reason": "Future segment or station pending deep-link reference citation"
-    },
-    {
-      "city_id": "bengaluru",
-      "rule": "ground-truth-phase-date",
-      "subject": "blr-green-seg-01",
-      "reason": "Accepted for this M8 baseline: reference opening stage dates are intentionally unverified and need later official-stage reconciliation."
-    },
-    {
-      "city_id": "bengaluru",
-      "rule": "ground-truth-phase-date",
-      "subject": "blr-green-seg-01",
-      "reason": "Accepted for this M8 baseline: reference opening stage dates are intentionally unverified and need later official-stage reconciliation."
-    },
-    {
-      "city_id": "bengaluru",
-      "rule": "ground-truth-phase-date",
-      "subject": "blr-purple-seg-01",
-      "reason": "Accepted for this M8 baseline: reference opening stage dates are intentionally unverified and need later official-stage reconciliation."
-    },
-    {
-      "city_id": "bengaluru",
-      "rule": "ground-truth-phase-date",
-      "subject": "blr-purple-seg-01",
-      "reason": "Accepted for this M8 baseline: reference opening stage dates are intentionally unverified and need later official-stage reconciliation."
-    },
-    {
-      "city_id": "bengaluru",
       "rule": "layout/suspect-default-elevated",
       "subject": "blr-attiguppe",
       "reason": "Outdoor station layout unverified pending operator published structural list"
@@ -1345,12 +1251,6 @@
     {
       "city_id": "bengaluru",
       "rule": "layout/suspect-default-elevated",
-      "subject": "blr-nagawara-proposed",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "bengaluru",
-      "rule": "layout/suspect-default-elevated",
       "subject": "blr-nallurahalli",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
@@ -1435,12 +1335,6 @@
     {
       "city_id": "bengaluru",
       "rule": "layout/suspect-default-elevated",
-      "subject": "blr-sri-balagangadharanatha-swamiji-hosahalli",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "bengaluru",
-      "rule": "layout/suspect-default-elevated",
       "subject": "blr-sri-balagangadharanatha-swamiji-stn-hosahalli",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
@@ -1483,12 +1377,6 @@
     {
       "city_id": "bengaluru",
       "rule": "layout/suspect-default-elevated",
-      "subject": "blr-vijayanagar",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "bengaluru",
-      "rule": "layout/suspect-default-elevated",
       "subject": "blr-vijayanagara",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
@@ -1525,14 +1413,26 @@
     {
       "city_id": "bengaluru",
       "rule": "station-gap",
-      "subject": "blr-pink|blr-mahatma-gandhi-road|blr-nagawara-proposed",
-      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
+      "subject": "blr-blue|blr-benniganahalli|blr-kial-terminals",
+      "reason": "Intermediate stations under construction pending surveyed route tagging"
     },
     {
       "city_id": "bengaluru",
       "rule": "station-gap",
-      "subject": "blr-purple|blr-challaghatta|blr-vijayanagar",
-      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
+      "subject": "blr-blue|blr-central-silk-board|blr-krishnarajapura",
+      "reason": "Intermediate stations under construction pending surveyed route tagging"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "station-gap",
+      "subject": "blr-pink|blr-jayadeva-interchange-uc|blr-nagawara",
+      "reason": "Intermediate stations under construction pending surveyed route tagging"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "station-gap",
+      "subject": "blr-pink|blr-kalena-agrahara|blr-jayadeva-hospital",
+      "reason": "Intermediate stations under construction pending surveyed route tagging"
     },
     {
       "city_id": "delhi",

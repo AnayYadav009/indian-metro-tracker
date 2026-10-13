@@ -154,7 +154,10 @@ function main() {
 
   if (unbaselinedErrors > 0 || (unbaselinedWarns > 0 && !warningsReportOnly)) {
     console.log("");
-    console.log(`❌ ${unbaselinedErrors} errors and ${unbaselinedWarns} un-baselined warnings remain.`);
+    console.log(`❌ ${unbaselinedErrors} errors and ${unbaselinedWarns} un-baselined warnings remain:`);
+    for (const u of unbaselined) {
+      console.log(`   • [${u.severity}] ${u.city_id} | ${u.rule} | ${u.subject} | ${u.message}`);
+    }
     process.exit(1);
   } else if (warningsReportOnly && unbaselinedWarns > 0) {
     console.log("");

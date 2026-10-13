@@ -139,6 +139,9 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
   // Pan/zoom map when city selection changes
   useEffect(() => {
     if (!mapRef.current) return;
+    if (typeof window !== "undefined") {
+      (window as any)._mapLibreInstance = mapRef.current.getMap();
+    }
 
     if (selectedCityId) {
       const targetCity = dataset.cities.find((c) => c.id === selectedCityId);

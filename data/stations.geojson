@@ -3403,22 +3403,22 @@
         "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
-          "blr-purple",
-          "blr-pink"
+          "blr-purple"
         ],
         "status": "operational",
         "phase": "1",
-        "is_interchange": true,
+        "is_interchange": false,
         "opened_on": null,
         "expected_completion": null,
         "completion_unconfirmed": false,
         "layout": null,
         "layout_source": "unverified",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://english.bmrc.co.in/ProjectOverview"
+        ],
         "last_verified": null,
-        "retrieved_at": "2026-10-10",
-        "interchange_id": "blr-mahatma-gandhi-road"
+        "retrieved_at": "2026-10-10"
       }
     },
     {
@@ -4367,8 +4367,8 @@
         ]
       },
       "properties": {
-        "station_id": "blr-nagawara-proposed",
-        "name": "Nagawara (Proposed)",
+        "station_id": "blr-nagawara",
+        "name": "Nagawara",
         "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
@@ -4378,12 +4378,14 @@
         "phase": "2",
         "is_interchange": false,
         "opened_on": null,
-        "expected_completion": "2026-12",
+        "expected_completion": "2027-03",
         "completion_unconfirmed": false,
-        "layout": null,
-        "layout_source": "unverified",
+        "layout": "underground",
+        "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://english.bmrc.co.in/FileUploads/0091bf_Phase2.pdf"
+        ],
         "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
@@ -4465,7 +4467,8 @@
         "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
-          "blr-yellow"
+          "blr-yellow",
+          "blr-pink"
         ],
         "status": "operational",
         "phase": "2",
@@ -4561,11 +4564,12 @@
         "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
-          "blr-purple"
+          "blr-purple",
+          "blr-blue"
         ],
         "status": "operational",
         "phase": "1",
-        "is_interchange": false,
+        "is_interchange": true,
         "opened_on": null,
         "expected_completion": null,
         "completion_unconfirmed": false,
@@ -4574,7 +4578,8 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-10"
+        "retrieved_at": "2026-10-10",
+        "interchange_id": "blr-benniganahalli"
       }
     },
     {
@@ -4592,11 +4597,12 @@
         "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
-          "blr-purple"
+          "blr-purple",
+          "blr-blue"
         ],
         "status": "operational",
         "phase": "1",
-        "is_interchange": false,
+        "is_interchange": true,
         "opened_on": null,
         "expected_completion": null,
         "completion_unconfirmed": false,
@@ -4605,7 +4611,8 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-10"
+        "retrieved_at": "2026-10-10",
+        "interchange_id": "blr-krishnarajapura"
       }
     },
     {
@@ -4958,44 +4965,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          77.53739,
-          12.97095
-        ]
-      },
-      "properties": {
-        "station_id": "blr-vijayanagar",
-        "name": "Vijayanagar",
-        "city_id": "bengaluru",
-        "city": "Bengaluru",
-        "line_ids": [
-          "blr-purple"
-        ],
-        "status": "operational",
-        "phase": "1",
-        "is_interchange": false,
-        "opened_on": null,
-        "expected_completion": null,
-        "completion_unconfirmed": false,
-        "layout": null,
-        "layout_source": "unverified",
-        "source": "osm",
-        "references": [],
-        "last_verified": null,
-        "retrieved_at": "2026-10-10"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           77.68834,
           12.81939
         ]
       },
       "properties": {
-        "station_id": "blr-delta-electronics-bommasandra",
-        "name": "Delta Electronics Bommasandra",
+        "station_id": "blr-bommasandra",
+        "name": "Bommasandra",
         "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
@@ -5278,7 +5254,8 @@
         "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
-          "blr-yellow"
+          "blr-yellow",
+          "blr-blue"
         ],
         "status": "operational",
         "phase": "2",
@@ -5289,7 +5266,9 @@
         "layout": "elevated",
         "layout_source": "osm-tag",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://english.bmrc.co.in/FileUploads/0091bf_Phase2.pdf"
+        ],
         "last_verified": null,
         "retrieved_at": "2026-10-10",
         "interchange_id": "blr-central-silk-board"
@@ -5455,37 +5434,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          77.54562,
-          12.97429
-        ]
-      },
-      "properties": {
-        "station_id": "blr-sri-balagangadharanatha-swamiji-hosahalli",
-        "name": "Sri Balagangadharanatha Swamiji, Hosahalli",
-        "city_id": "bengaluru",
-        "city": "Bengaluru",
-        "line_ids": [
-          "blr-purple"
-        ],
-        "status": "operational",
-        "phase": "1",
-        "is_interchange": false,
-        "opened_on": null,
-        "expected_completion": null,
-        "completion_unconfirmed": false,
-        "layout": null,
-        "layout_source": "unverified",
-        "source": "osm",
-        "references": [],
-        "last_verified": null,
-        "retrieved_at": "2026-10-10"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           77.56266,
           12.88899
         ]
@@ -5620,11 +5568,12 @@
         "city_id": "bengaluru",
         "city": "Bengaluru",
         "line_ids": [
-          "blr-yellow"
+          "blr-yellow",
+          "blr-pink"
         ],
         "status": "construction",
         "phase": "2",
-        "is_interchange": false,
+        "is_interchange": true,
         "opened_on": null,
         "expected_completion": null,
         "completion_unconfirmed": true,
@@ -5633,7 +5582,8 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-10"
+        "retrieved_at": "2026-10-10",
+        "interchange_id": "blr-jayadeva-interchange-uc"
       }
     },
     {
@@ -5756,6 +5706,72 @@
         "layout_source": "osm-tag",
         "source": "osm",
         "references": [],
+        "last_verified": null,
+        "retrieved_at": "2026-10-10"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.59201,
+          12.86663
+        ]
+      },
+      "properties": {
+        "station_id": "blr-kalena-agrahara",
+        "name": "Kalena Agrahara",
+        "city_id": "bengaluru",
+        "city": "Bengaluru",
+        "line_ids": [
+          "blr-pink"
+        ],
+        "status": "construction",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2026-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://english.bmrc.co.in/FileUploads/0091bf_Phase2.pdf"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-10"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.71334,
+          13.19814
+        ]
+      },
+      "properties": {
+        "station_id": "blr-kial-terminals",
+        "name": "KIAL Terminals",
+        "city_id": "bengaluru",
+        "city": "Bengaluru",
+        "line_ids": [
+          "blr-blue"
+        ],
+        "status": "construction",
+        "phase": "2B",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2028-03",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://english.bmrc.co.in/FileUploads/0091bf_Phase2.pdf"
+        ],
         "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
