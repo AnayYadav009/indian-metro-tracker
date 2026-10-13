@@ -2,7 +2,7 @@
   "version": 0.6,
   "generator": "Overpass API 0.7.62.11 87bfad18",
   "osm3s": {
-    "timestamp_osm_base": "2026-10-10T08:59:30Z",
+    "timestamp_osm_base": "2026-10-12T21:41:49Z",
     "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
   },
   "elements": [
@@ -245,6 +245,7 @@
         "operator": "Delhi Metro Rail Corporation Limited",
         "public_transport": "station",
         "railway": "station",
+        "ref": "PBGH",
         "station": "subway",
         "subway": "yes",
         "wikidata": "Q7259157",
@@ -358,6 +359,7 @@
         "operator": "Delhi Metro Rail Corporation Limited",
         "public_transport": "station",
         "railway": "station",
+        "ref": "KE",
         "station": "subway",
         "subway": "yes",
         "wikidata": "Q6425927",
@@ -1125,6 +1127,7 @@
         "operator": "Delhi Metro Rail Corporation Limited",
         "public_transport": "station",
         "railway": "station",
+        "ref": "TZI",
         "station": "subway",
         "subway": "yes",
         "website": "https://www.delhimetrorail.com/",
@@ -1248,6 +1251,25 @@
         "subway": "yes",
         "wikidata": "Q7851651",
         "wikipedia": "en:Tughlakabad Station metro station"
+      }
+    },
+    {
+      "type": "node",
+      "id": 562722447,
+      "lat": 28.4931698,
+      "lon": 77.3030239,
+      "tags": {
+        "name": "Badarpur",
+        "name:hi": "बदरपुर",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes",
+        "wikidata": "Q4840629",
+        "wikimedia_commons": "Category:Badarpur Border metro station",
+        "wikipedia": "en:Badarpur Border metro station"
       }
     },
     {
@@ -1555,6 +1577,7 @@
         "operator": "Delhi Metro Rail Corporation Limited",
         "public_transport": "station",
         "railway": "station",
+        "ref": "PTP",
         "station": "subway",
         "subway": "yes",
         "wheelchair": "yes",
@@ -1577,6 +1600,7 @@
         "operator": "Delhi Metro Rail Corporation Limited",
         "public_transport": "station",
         "railway": "station",
+        "ref": "RHE",
         "station": "subway",
         "subway": "yes",
         "wheelchair": "limited",
@@ -1730,6 +1754,23 @@
         "railway": "stop",
         "subway": "yes",
         "wikidata": "Q11316094"
+      }
+    },
+    {
+      "type": "node",
+      "id": 856302882,
+      "lat": 28.5432816,
+      "lon": 77.2756683,
+      "tags": {
+        "name": "Harkesh Nagar Okhla",
+        "name:hi": "हरकेश नगर",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "ref": "OKA",
+        "subway": "yes"
       }
     },
     {
@@ -1949,6 +1990,22 @@
         "public_transport": "stop_position",
         "railway": "stop",
         "ref": "SAKT",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 927873461,
+      "lat": 28.5443766,
+      "lon": 77.264266,
+      "tags": {
+        "name": "Govind Puri",
+        "name:hi": "गोविंद पुरी",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "public_transport": "stop_position",
+        "railway": "stop",
         "subway": "yes"
       }
     },
@@ -2260,6 +2317,7 @@
         "operator": "Delhi Metro Rail Corporation Limited",
         "public_transport": "station",
         "railway": "station",
+        "ref": "SRSM",
         "station": "subway",
         "subway": "yes",
         "wikidata": "Q7426116",
@@ -2616,6 +2674,21 @@
     },
     {
       "type": "node",
+      "id": 2832938174,
+      "lat": 28.5460369,
+      "lon": 77.251518,
+      "tags": {
+        "name": "Nehru Enclave",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
       "id": 2832938176,
       "lat": 28.5470025,
       "lon": 77.1945149,
@@ -2792,6 +2865,7 @@
         "operator": "Delhi Metro Rail Corporation Limited",
         "public_transport": "station",
         "railway": "station",
+        "ref": "DSHP",
         "station": "subway",
         "subway": "yes",
         "wikidata": "Q28169938",
@@ -3573,6 +3647,25 @@
     },
     {
       "type": "node",
+      "id": 2837194690,
+      "lat": 28.4779698,
+      "lon": 77.3049182,
+      "tags": {
+        "name": "Sarai",
+        "name:hi": "सराय",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "ref": "SAI",
+        "subway": "yes",
+        "wikidata": "Q20967689",
+        "wikipedia": "en:Sarai metro station"
+      }
+    },
+    {
+      "type": "node",
       "id": 2837246576,
       "lat": 28.4227144,
       "lon": 77.3103769,
@@ -3589,12 +3682,81 @@
     },
     {
       "type": "node",
+      "id": 2837246577,
+      "lat": 28.4486201,
+      "lon": 77.308095,
+      "tags": {
+        "name": "Mewala Maharajpur",
+        "name:hi": "मेवला महाराजपुर",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2837246578,
+      "lat": 28.4577786,
+      "lon": 77.3073933,
+      "tags": {
+        "name": "N.H.P.C. Chowk",
+        "name:hi": "एनएचपीसी चौक",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes",
+        "wikidata": "Q20967667",
+        "wikipedia": "en:NHPC Chowk metro station"
+      }
+    },
+    {
+      "type": "node",
       "id": 2837246579,
       "lat": 28.4108364,
       "lon": 77.3114622,
       "tags": {
         "name": "Old Faridabad",
         "name:hi": "फ़रीदाबाद ओल्ड",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2837246580,
+      "lat": 28.4381599,
+      "lon": 77.309063,
+      "tags": {
+        "name": "Sector 28",
+        "name:hi": "सेक्टर 28",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes",
+        "wheelchair": "limited",
+        "wikidata": "Q20967695",
+        "wikipedia": "en:Sector 28 metro station"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2837246581,
+      "lat": 28.3702344,
+      "lon": 77.3149203,
+      "tags": {
+        "name": "Escorts Mujesar",
+        "name:hi": "एस्कॉर्ट्स मुजेसर",
         "network": "Delhi Metro",
         "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
         "operator": "Delhi Metro Rail Corporation Limited",
@@ -3657,6 +3819,22 @@
         "railway": "station",
         "ref": "SUL",
         "station": "subway",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3284150025,
+      "lat": 28.3858361,
+      "lon": 77.313462,
+      "tags": {
+        "name": "Bata Chowk",
+        "name:hi": "बाटा चौक",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "public_transport": "stop_position",
+        "railway": "stop",
         "subway": "yes"
       }
     },
@@ -3800,6 +3978,167 @@
     },
     {
       "type": "node",
+      "id": 4165777365,
+      "lat": 28.4942558,
+      "lon": 77.4223772,
+      "tags": {
+        "name": "Noida Sector 143",
+        "name:fa": "نویدا - بخش ۱۴۳",
+        "name:hi": "नोएडा सेक्टर 1४३",
+        "network": "Noida Metro",
+        "operator": "NR",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q39049217",
+        "wikipedia": "en:Noida Sector 143 metro station"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4165778734,
+      "lat": 28.4862877,
+      "lon": 77.433077,
+      "tags": {
+        "name": "Noida Sector 144",
+        "name:fa": "نویدا - بخش ۱۴۴",
+        "name:hi": "नोएडा सेक्टर १४४",
+        "network": "Noida Metro",
+        "operator": "NR",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q39049222",
+        "wikipedia": "en:Noida Sector 144 metro station"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4267878879,
+      "lat": 28.5867819,
+      "lon": 77.3727745,
+      "tags": {
+        "name": "Noida Sector 52",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "platforms": "2",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4267878880,
+      "lat": 28.606529,
+      "lon": 77.3726424,
+      "tags": {
+        "name": "Noida Sector 59",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "platforms": "2",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4267878881,
+      "lat": 28.5975859,
+      "lon": 77.3722303,
+      "tags": {
+        "name": "Noida Sector 61",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "platforms": "2",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4267878882,
+      "lat": 28.6169878,
+      "lon": 77.3735554,
+      "tags": {
+        "name": "Noida Sector 62",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "platforms": "2",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4267913896,
+      "lat": 28.5222688,
+      "lon": 77.3964456,
+      "tags": {
+        "name": "Noida Sector 83",
+        "name:fa": "نویدا - بخش ۸۳",
+        "name:hi": "नोएडा सेक्टर ८३",
+        "network": "Noida Metro",
+        "operator": "NR",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q39049211",
+        "wikipedia": "en:Noida Sector 83 metro station"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4267913913,
+      "lat": 28.5107689,
+      "lon": 77.4036068,
+      "tags": {
+        "name": "Noida Sector 137",
+        "name:fa": "نویدا - بخش ۱۳۷",
+        "name:hi": "नोएडा सेक्टर १३७",
+        "network": "Noida Metro",
+        "operator": "NR",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q39049212",
+        "wikipedia": "en:Noida Sector 137 metro station"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4335296791,
+      "lat": 28.3546513,
+      "lon": 77.3162264,
+      "tags": {
+        "alt_name": "NCB Colony (Good Year)",
+        "name": "Sant Surdas (Sihi)",
+        "name:hi": "संत सूरदास - सिही (एनसीबी कॉलोनी - गुड ईयर)",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
       "id": 4676900918,
       "lat": 28.6319032,
       "lon": 77.310718,
@@ -3902,6 +4241,40 @@
     },
     {
       "type": "node",
+      "id": 4678405308,
+      "lat": 28.340005,
+      "lon": 77.3164791,
+      "tags": {
+        "name": "Raja Nahar Singh",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4678434990,
+      "lat": 28.4789957,
+      "lon": 77.44241,
+      "tags": {
+        "name": "Noida Sector 145",
+        "name:fa": "نویدا - بخش ۱۴۵",
+        "name:hi": "नोएडा सेक्टर १४५",
+        "network": "Noida Metro",
+        "operator": "NR",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q60685643",
+        "wikipedia": "en:Noida Sector 145 metro station"
+      }
+    },
+    {
+      "type": "node",
       "id": 4789904280,
       "lat": 28.4714259,
       "lon": 77.0939371,
@@ -3914,6 +4287,142 @@
         "public_transport": "stop_position",
         "railway": "stop",
         "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4849443432,
+      "lat": 28.5324041,
+      "lon": 77.3947544,
+      "tags": {
+        "name": "NSEZ",
+        "name:fa": "ان اس ای زی",
+        "name:hi": "एन॰एस॰ई॰ज़ेड॰",
+        "network": "Noida Metro",
+        "operator": "NR",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q60685637",
+        "wikipedia": "en:NSEZ metro station"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4950920120,
+      "lat": 28.5560481,
+      "lon": 77.3849489,
+      "tags": {
+        "name": "Noida Sector 101",
+        "name:fa": "نویدا - بخش ۱۰۱",
+        "name:hi": "नोएडा सेक्टर १०१",
+        "network": "Noida Metro",
+        "operator": "NR",
+        "platforms": "2",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q39049206",
+        "wikipedia": "en:Noida Sector 101 metro station"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4950923221,
+      "lat": 28.5743612,
+      "lon": 77.3782577,
+      "tags": {
+        "alt_name": "Noida Sector 50",
+        "name": "Rainbow Metro Station",
+        "name:hi": "नोएडा सेक्टर ५०",
+        "network": "NMRC",
+        "platforms": "2",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4950923222,
+      "lat": 28.5857189,
+      "lon": 77.3752593,
+      "tags": {
+        "name": "Noida Sector 51",
+        "name:fa": "نویدا - بخش ۵۱",
+        "name:hi": "नोएडा सेक्टर ५१",
+        "network": "Noida Metro",
+        "operator": "NR",
+        "platforms": "2",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q61445024",
+        "wikipedia": "en:Noida Sector 51 metro station"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4950923223,
+      "lat": 28.5653305,
+      "lon": 77.3796581,
+      "tags": {
+        "name": "Noida Sector 76",
+        "name:fa": "نویدا - بخش ۷۶",
+        "name:hi": "नोएडा सेक्टर 76",
+        "network": "Noida Metro",
+        "operator": "NR",
+        "platforms": "2",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q39049201",
+        "wikipedia": "en:Noida Sector 76 metro station"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4950923224,
+      "lat": 28.5492993,
+      "lon": 77.3899489,
+      "tags": {
+        "name": "Noida Sector 81",
+        "name:fa": "نویدا - بخش ۸۱",
+        "name:hi": "नोएडा सेक्टर ८१",
+        "network": "Noida Metro",
+        "operator": "NR",
+        "platforms": "2",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q39049205",
+        "wikipedia": "en:Noida Sector 81 metro station"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4951104873,
+      "lat": 28.6734288,
+      "lon": 77.4065374,
+      "tags": {
+        "name": "Hindon River",
+        "name:fa": "رودخانه هندن",
+        "name:hi": "हिंडन रिवर",
+        "name:ru": "Река Хиндон",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q29467145",
+        "wikipedia": "en:Hindon River metro station"
       }
     },
     {
@@ -4057,6 +4566,31 @@
         "name": "Loni Border",
         "network": "DMRC",
         "railway": "construction"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5215706221,
+      "lat": 28.678319,
+      "lon": 77.3818702,
+      "tags": {
+        "construction": "station",
+        "name": "Ghaziabad",
+        "network": "DMRC",
+        "railway": "construction"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5215706233,
+      "lat": 28.4988486,
+      "lon": 77.4127843,
+      "tags": {
+        "name": "Noida Sector the Noida Metro Rail Corporation (NMRC) has submitted a Detailed Project Report (DPR) to the Noida and Greater Noida authorities for approval.142",
+        "operator": "NMRC",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
       }
     },
     {
@@ -6315,6 +6849,226 @@
     },
     {
       "type": "node",
+      "id": 5777613343,
+      "lat": 28.5743471,
+      "lon": 77.3782123,
+      "tags": {
+        "alt_name": "Noida Sector 50",
+        "name": "Rainbow Metro Station",
+        "name:hi": "नोएडा सेक्टर ५०",
+        "network": "NMRC",
+        "platforms": "2",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5777613345,
+      "lat": 28.5653301,
+      "lon": 77.3796268,
+      "tags": {
+        "name": "Noida Sector 76",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5777613556,
+      "lat": 28.5560412,
+      "lon": 77.3849173,
+      "tags": {
+        "name": "Noida Sector 101",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5777613567,
+      "lat": 28.549288,
+      "lon": 77.3899106,
+      "tags": {
+        "name": "Noida Sector 81",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5777613583,
+      "lat": 28.5324104,
+      "lon": 77.3947219,
+      "tags": {
+        "name": "NSEZ",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5777613593,
+      "lat": 28.5222584,
+      "lon": 77.3964141,
+      "tags": {
+        "name": "Noida Sector 83",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5777613604,
+      "lat": 28.5107596,
+      "lon": 77.4035768,
+      "tags": {
+        "name": "Noida Sector 137",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5777613618,
+      "lat": 28.4989702,
+      "lon": 77.4128457,
+      "tags": {
+        "name": "Noida Sector 142",
+        "operator": "NMRC",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5777613624,
+      "lat": 28.4942406,
+      "lon": 77.4223517,
+      "tags": {
+        "name": "Noida Sector 143",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5777613630,
+      "lat": 28.4862727,
+      "lon": 77.4330482,
+      "tags": {
+        "name": "Noida Sector 144",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5777613636,
+      "lat": 28.4789843,
+      "lon": 77.4423795,
+      "tags": {
+        "name": "Noida Sector 145",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5777613716,
+      "lat": 28.6169832,
+      "lon": 77.3736218,
+      "tags": {
+        "name": "Noida Sector 62",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "platforms": "2",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5777613718,
+      "lat": 28.6065246,
+      "lon": 77.3727211,
+      "tags": {
+        "name": "Noida Sector 59",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "platforms": "2",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5777613720,
+      "lat": 28.5975791,
+      "lon": 77.372309,
+      "tags": {
+        "name": "Noida Sector 61",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "platforms": "2",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5777613736,
+      "lat": 28.5867347,
+      "lon": 77.3728019,
+      "tags": {
+        "name": "Noida Sector 52",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "platforms": "2",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5777613746,
+      "lat": 28.5747852,
+      "lon": 77.3562496,
+      "tags": {
+        "name": "Noida City Centre",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
       "id": 5777613864,
       "lat": 28.5639195,
       "lon": 77.3343678,
@@ -6879,6 +7633,56 @@
     },
     {
       "type": "node",
+      "id": 5777629565,
+      "lat": 28.3702309,
+      "lon": 77.3148637,
+      "tags": {
+        "name": "Escorts Mujesar",
+        "name:hi": "एस्कॉर्ट्स मुजेसर",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5777629574,
+      "lat": 28.3858324,
+      "lon": 77.3134055,
+      "tags": {
+        "name": "Bata Chowk",
+        "name:hi": "बाटा चौक",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5777629577,
+      "lat": 28.397488,
+      "lon": 77.3123744,
+      "tags": {
+        "name": "Neelam Chowk Ajronda",
+        "name:hi": "नीलम चौक अज्रोंडा",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes",
+        "wikidata": "Q20967666",
+        "wikipedia": "en:Neelam Chowk Ajronda metro station"
+      }
+    },
+    {
+      "type": "node",
       "id": 5777629582,
       "lat": 28.4107557,
       "lon": 77.3114171,
@@ -6907,6 +7711,97 @@
         "public_transport": "stop_position",
         "railway": "stop",
         "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5777629591,
+      "lat": 28.4381561,
+      "lon": 77.3090065,
+      "tags": {
+        "name": "Sector 28",
+        "name:hi": "सेक्टर 28",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes",
+        "wheelchair": "limited",
+        "wikidata": "Q20967695",
+        "wikipedia": "en:Sector 28 metro station"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5777629596,
+      "lat": 28.4486165,
+      "lon": 77.3080384,
+      "tags": {
+        "name": "Mewala Maharajpur",
+        "name:hi": "मेवला महाराजपुर",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5777629599,
+      "lat": 28.4577748,
+      "lon": 77.3073368,
+      "tags": {
+        "name": "N.H.P.C. Chowk",
+        "name:hi": "एनएचपीसी चौक",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes",
+        "wikidata": "Q20967667",
+        "wikipedia": "en:NHPC Chowk metro station"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5777629611,
+      "lat": 28.4779661,
+      "lon": 77.3048616,
+      "tags": {
+        "name": "Sarai",
+        "name:hi": "सराय",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "ref": "SAI",
+        "subway": "yes",
+        "wikidata": "Q20967689",
+        "wikipedia": "en:Sarai metro station"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5777629619,
+      "lat": 28.4931601,
+      "lon": 77.3029683,
+      "tags": {
+        "name": "Badarpur",
+        "name:hi": "बदरपुर",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes",
+        "wikidata": "Q4840629",
+        "wikimedia_commons": "Category:Badarpur Border metro station",
+        "wikipedia": "en:Badarpur Border metro station"
       }
     },
     {
@@ -6943,6 +7838,39 @@
         "subway": "yes",
         "wikidata": "Q6893528",
         "wikipedia": "en:Mohan Estate metro station"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5777629785,
+      "lat": 28.5432385,
+      "lon": 77.2756968,
+      "tags": {
+        "name": "Harkesh Nagar Okhla",
+        "name:hi": "हरकेश नगर",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "ref": "OKA",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5777629803,
+      "lat": 28.5443601,
+      "lon": 77.2642125,
+      "tags": {
+        "name": "Govind Puri",
+        "name:hi": "गोविंद पुरी",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
       }
     },
     {
@@ -7506,6 +8434,21 @@
     },
     {
       "type": "node",
+      "id": 5777631212,
+      "lat": 28.5460775,
+      "lon": 77.2514948,
+      "tags": {
+        "name": "Nehru Enclave",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
       "id": 5777631214,
       "lat": 28.5419199,
       "lon": 77.2384358,
@@ -7873,6 +8816,7 @@
         "operator": "Delhi Metro Rail Corporation Limited",
         "public_transport": "station",
         "railway": "station",
+        "ref": "SVVR",
         "station": "subway",
         "subway": "yes"
       }
@@ -8391,6 +9335,58 @@
     },
     {
       "type": "node",
+      "id": 6325711755,
+      "lat": 28.6282598,
+      "lon": 77.3750964,
+      "tags": {
+        "name": "Noida Electronic City",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6325711756,
+      "lat": 28.6282618,
+      "lon": 77.3750443,
+      "tags": {
+        "name": "Noida Electronic City",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6397652315,
+      "lat": 28.676999,
+      "lon": 77.3918919,
+      "tags": {
+        "name": "Arthala",
+        "name:fa": "آرتالا",
+        "name:hi": "अर्थला",
+        "name:ru": "Артала",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "ATHA",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q29467143",
+        "wikipedia": "en:Arthala metro station"
+      }
+    },
+    {
+      "type": "node",
       "id": 6397652316,
       "lat": 28.6766619,
       "lon": 77.3339154,
@@ -8409,6 +9405,72 @@
         "subway": "yes",
         "wikidata": "Q29025782",
         "wikipedia": "en:Shahid Nagar metro station"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6397652318,
+      "lat": 28.6785372,
+      "lon": 77.3840026,
+      "tags": {
+        "name": "Mohan Nagar",
+        "name:fa": "موهن نگر",
+        "name:hi": "मोहन नगर",
+        "name:ru": "Мохан-Нагар",
+        "name:ur": "موہن نگر",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q29025805",
+        "wikipedia": "en:Mohan Nagar metro station"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6397652319,
+      "lat": 28.6782281,
+      "lon": 77.3706454,
+      "tags": {
+        "name": "Shyam Park",
+        "name:fa": "شیام پارک",
+        "name:hi": "श्याम पार्क",
+        "name:ru": "Шьям Парк",
+        "name:ur": "شیام پارک",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q29025803",
+        "wikipedia": "en:Shyam Park metro station"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6397652320,
+      "lat": 28.6776112,
+      "lon": 77.3581426,
+      "tags": {
+        "name": "Rajendra Nagar",
+        "name:fa": "سرگرد موهیت شارما راجندرا نگر",
+        "name:hi": "राजेंद्र नगर",
+        "name:ru": "Майор Мохит Шарма Раджендра Нагар",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "official_name": "Major Mohit Sharma Rajendra Nagar",
+        "official_name:hi": "मेजर मोहित शर्मा राजेंद्र नगर",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes"
       }
     },
     {
@@ -8647,6 +9709,7 @@
         "operator": "Delhi Metro Rail Corporation Limited",
         "public_transport": "station",
         "railway": "station",
+        "ref": "SOEN",
         "station": "subway",
         "subway": "yes",
         "wikidata": "Q28172660",
@@ -8668,6 +9731,7 @@
         "operator": "Delhi Metro Rail Corporation Limited",
         "public_transport": "station",
         "railway": "station",
+        "ref": "MYPI",
         "station": "subway",
         "subway": "yes",
         "wikidata": "Q28172745",
@@ -8796,6 +9860,7 @@
         "operator": "Delhi Metro Rail Corporation Limited",
         "public_transport": "station",
         "railway": "station",
+        "ref": "INA",
         "station": "subway",
         "subway": "yes",
         "wikidata": "Q17055892",
@@ -8888,6 +9953,7 @@
         "public_transport": "station",
         "public_transport:version": "2",
         "railway": "station",
+        "ref": "DLIC",
         "station": "subway",
         "subway": "yes",
         "wikidata": "Q28172737",
@@ -9110,6 +10176,7 @@
         "operator": "Delhi Metro Rail Corporation Limited",
         "public_transport": "station",
         "railway": "station",
+        "ref": "SHVP",
         "station": "subway",
         "subway": "yes",
         "wikidata": "Q7499286",
@@ -9132,6 +10199,7 @@
         "operator": "Delhi Metro Rail Corporation Limited",
         "public_transport": "station",
         "railway": "station",
+        "ref": "MAPR",
         "station": "subway",
         "subway": "yes",
         "wikidata": "Q6727807",
@@ -9200,6 +10268,7 @@
         "operator": "Delhi Metro Rail Corporation Limited",
         "public_transport": "station",
         "railway": "station",
+        "ref": "UNRG",
         "station": "subway",
         "subway": "yes",
         "wikidata": "Q7877393",
@@ -9221,6 +10290,7 @@
         "operator": "Delhi Metro Rail Corporation Limited",
         "public_transport": "station",
         "railway": "station",
+        "ref": "SMSM",
         "station": "subway",
         "subway": "yes",
         "wikidata": "Q7645348",
@@ -9244,6 +10314,7 @@
         "operator": "Delhi Metro Rail Corporation Limited",
         "public_transport": "station",
         "railway": "station",
+        "ref": "NNOI",
         "station": "subway",
         "subway": "yes",
         "wikidata": "Q6963528",
@@ -9289,6 +10360,7 @@
         "operator": "Delhi Metro Rail Corporation Limited",
         "public_transport": "station",
         "railway": "station",
+        "ref": "RDPK",
         "station": "subway",
         "subway": "yes",
         "wikidata": "Q7285915",
@@ -9332,6 +10404,7 @@
         "operator": "Delhi Metro Rail Corporation Limited",
         "public_transport": "station",
         "railway": "station",
+        "ref": "MIAA",
         "station": "subway",
         "subway": "yes",
         "wikidata": "Q30591459",
@@ -9353,6 +10426,7 @@
         "operator": "Delhi Metro Rail Corporation Limited",
         "public_transport": "station",
         "railway": "station",
+        "ref": "GHEM",
         "station": "subway",
         "subway": "yes",
         "wikidata": "Q30591460",
@@ -9374,6 +10448,7 @@
         "operator": "Delhi Metro Rail Corporation Limited",
         "public_transport": "station",
         "railway": "station",
+        "ref": "TKLM",
         "station": "subway",
         "subway": "yes",
         "wikidata": "Q30591461",
@@ -9395,6 +10470,7 @@
         "operator": "Delhi Metro Rail Corporation Limited",
         "public_transport": "station",
         "railway": "station",
+        "ref": "TKBR",
         "station": "subway",
         "subway": "yes",
         "wikidata": "Q30591462",
@@ -9463,6 +10539,7 @@
         "operator": "Delhi Metro Rail Corporation Limited",
         "public_transport": "station",
         "railway": "station",
+        "ref": "CIPK",
         "station": "subway",
         "subway": "yes",
         "wikidata": "Q29025631",
@@ -9560,6 +10637,30 @@
         "subway": "yes",
         "wikidata": "Q7005382",
         "wikipedia": "en:New Ashok Nagar metro station"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6537260850,
+      "lat": 28.5747334,
+      "lon": 77.3561638,
+      "tags": {
+        "alt_name": "Wave City Center Noida;Noida Sector 32",
+        "name": "Noida City Centre",
+        "name:fa": "مرکز شهر نویدا",
+        "name:hi": "नोएडा सिटी सेंटर",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "platforms": "2",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "NCC",
+        "station": "subway",
+        "subway": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q4207094",
+        "wikipedia": "en:Noida City Centre metro station"
       }
     },
     {
@@ -10010,6 +11111,134 @@
     },
     {
       "type": "node",
+      "id": 6539894863,
+      "lat": 28.6169861,
+      "lon": 77.3735885,
+      "tags": {
+        "name": "Noida Sector 62",
+        "name:fa": "نویدا - بخش ۶۲",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "platforms": "2",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "SSTN",
+        "station": "subway",
+        "subway": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q55625349",
+        "wikipedia": "en:Noida Sector 62 metro station"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6539894864,
+      "lat": 28.6065279,
+      "lon": 77.3726828,
+      "tags": {
+        "name": "Noida Sector 59",
+        "name:fa": "نویدا - بخش ۵۹",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "platforms": "2",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6539894865,
+      "lat": 28.5975854,
+      "lon": 77.3722663,
+      "tags": {
+        "name": "Noida Sector 61",
+        "name:fa": "نویدا - بخش ۶۱",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "platforms": "2",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q28169401",
+        "wikipedia": "en:Noida Sector 61 metro station"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6539894866,
+      "lat": 28.5868739,
+      "lon": 77.3730237,
+      "tags": {
+        "name": "Noida Sector 52",
+        "name:fa": "نویدا - بخش ۵۲",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "platforms": "2",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q28169402",
+        "wikipedia": "en:Noida Sector 52 metro station"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6539894867,
+      "lat": 28.5802538,
+      "lon": 77.3634917,
+      "tags": {
+        "name": "Noida Sector 34",
+        "name:fa": "نویدا - بخش ۳۴",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "platforms": "2",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "233",
+        "station": "subway",
+        "subway": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q28169403",
+        "wikipedia": "en:Noida Sector 34 metro station"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6539894868,
+      "lat": 28.6282627,
+      "lon": 77.3750033,
+      "tags": {
+        "name": "Noida Electronic City",
+        "name:fa": "شهر الکترونیکی نویدا",
+        "name:hi": "नोएडा इलेक्ट्रॉनिक सिटी",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "platforms": "2",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "NECC",
+        "station": "subway",
+        "subway": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q39049185",
+        "wikipedia": "en:Noida Electronic City metro station"
+      }
+    },
+    {
+      "type": "node",
       "id": 6541854249,
       "lat": 28.6295839,
       "lon": 77.078085,
@@ -10064,6 +11293,7 @@
         "operator": "Delhi Metro Rail Corporation Limited",
         "public_transport": "station",
         "railway": "station",
+        "ref": "UNW",
         "station": "subway",
         "subway": "yes",
         "wikidata": "Q11288937",
@@ -10085,6 +11315,7 @@
         "operator": "Delhi Metro Rail Corporation Limited",
         "public_transport": "station",
         "railway": "station",
+        "ref": "NWD",
         "station": "subway",
         "subway": "yes",
         "wikidata": "Q6982809",
@@ -10496,6 +11727,7 @@
         "operator": "Delhi Metro Rail Corporation Limited",
         "public_transport": "station",
         "railway": "station",
+        "ref": "AHNR",
         "station": "subway",
         "subway": "yes",
         "type": "public_transport",
@@ -10519,6 +11751,7 @@
         "operator": "Delhi Metro Rail Corporation Limited",
         "public_transport": "station",
         "railway": "station",
+        "ref": "JGPI",
         "station": "subway",
         "subway": "yes",
         "wikidata": "Q862598",
@@ -10754,6 +11987,7 @@
         "operator": "Delhi Metro Rail Corporation Limited",
         "public_transport": "station",
         "railway": "station",
+        "ref": "JPE",
         "station": "subway",
         "subway": "yes",
         "wikidata": "Q11309886",
@@ -10850,6 +12084,7 @@
         "payment:electronic_purses": "yes",
         "public_transport": "station",
         "railway": "station",
+        "ref": "GE",
         "station": "subway",
         "subway": "yes",
         "wikidata": "Q5620352",
@@ -10872,6 +12107,7 @@
         "operator": "Delhi Metro Rail Corporation Limited",
         "public_transport": "station",
         "railway": "station",
+        "ref": "MDTW",
         "station": "subway",
         "subway": "yes",
         "wikidata": "Q6888294",
@@ -11108,6 +12344,7 @@
         "payment:electronic_purses": "yes",
         "public_transport": "station",
         "railway": "station",
+        "ref": "HCC",
         "station": "subway",
         "subway": "yes",
         "wheelchair": "yes",
@@ -11334,6 +12571,7 @@
         "operator": "Delhi Metro Rail Corporation Limited",
         "public_transport": "station",
         "railway": "station",
+        "ref": "LKM",
         "station": "subway",
         "subway": "yes",
         "wikidata": "Q7278893",
@@ -11415,6 +12653,7 @@
         "payment:electronic_purses": "yes",
         "public_transport": "station",
         "railway": "station",
+        "ref": "GTNI",
         "station": "subway",
         "subway": "yes",
         "wikidata": "Q271195",
@@ -11441,6 +12680,7 @@
         "payment:electronic_purses": "yes",
         "public_transport": "station",
         "railway": "station",
+        "ref": "AJG",
         "station": "subway",
         "subway": "yes",
         "wheelchair": "yes",
@@ -11598,6 +12838,17 @@
         "railway": "stop",
         "ref": "DSE",
         "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7944688533,
+      "lat": 28.6056728,
+      "lon": 77.4296303,
+      "tags": {
+        "construction": "station",
+        "name": "Greater Noida Sector 4 Station",
+        "railway": "construction"
       }
     },
     {
@@ -11808,6 +13059,24 @@
     },
     {
       "type": "node",
+      "id": 8575372986,
+      "lat": 28.3974884,
+      "lon": 77.3124347,
+      "tags": {
+        "name": "Neelam Chowk Ajronda",
+        "name:hi": "नीलम चौक अज्रोंडा",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes",
+        "wikidata": "Q20967666",
+        "wikipedia": "en:Neelam Chowk Ajronda metro station"
+      }
+    },
+    {
+      "type": "node",
       "id": 9066465094,
       "lat": 28.6786018,
       "lon": 77.1022154,
@@ -11821,6 +13090,7 @@
         "operator": "Delhi Metro Rail Corporation Limited",
         "public_transport": "station",
         "railway": "station",
+        "ref": "PVW",
         "station": "subway",
         "subway": "yes",
         "wikidata": "Q7141809"
@@ -11840,6 +13110,29 @@
         "railway": "stop",
         "ref": "NFGH",
         "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9144051094,
+      "lat": 28.6706449,
+      "lon": 77.4154736,
+      "tags": {
+        "alt_name": "New Bus Adda metro station",
+        "name": "Shaheed Sthal",
+        "name:fa": "شهید ستال",
+        "name:hi": "शहीद स्थल न्यू बस अड्डा",
+        "name:ru": "Шахид Стал",
+        "name:ur": "شہید ستھل",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q29467146",
+        "wikipedia": "en:Shaheed Sthal metro station"
       }
     },
     {
@@ -12027,6 +13320,38 @@
     },
     {
       "type": "node",
+      "id": 9546632109,
+      "lat": 28.3400016,
+      "lon": 77.3164221,
+      "tags": {
+        "name": "Raja Nahar Singh",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9546649924,
+      "lat": 28.3546479,
+      "lon": 77.3161694,
+      "tags": {
+        "alt_name": "NCB Colony (Good Year)",
+        "name": "Sant Surdas (Sihi)",
+        "name:hi": "संत सूरदास - सिही (एनसीबी कॉलोनी - गुड ईयर)",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
       "id": 9552724758,
       "lat": 28.4227134,
       "lon": 77.3103481,
@@ -12050,6 +13375,29 @@
     },
     {
       "type": "node",
+      "id": 9565595809,
+      "lat": 28.340002,
+      "lon": 77.3164509,
+      "tags": {
+        "alt_name": "Ballabhgarh",
+        "name": "Raja Nahar Singh",
+        "name:fa": "راجا ناهر سینگ",
+        "name:hi": "राजा नाहर सिंह (बल्लभगढ़)",
+        "name:ru": "Раджа Нахар Сингх",
+        "network": "Delhi Metro",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2023/06/23)",
+        "operator": "Delhi Metro Rail Corporation Limited",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "BVHM",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q27962771",
+        "wikipedia": "en:Raja Nahar Singh metro station"
+      }
+    },
+    {
+      "type": "node",
       "id": 9584236504,
       "lat": 28.5644044,
       "lon": 77.2342555,
@@ -12063,6 +13411,7 @@
         "operator": "Delhi Metro Rail Corporation Limited",
         "public_transport": "station",
         "railway": "station",
+        "ref": "MLCD",
         "station": "subway",
         "subway": "yes",
         "wikidata": "Q6907367",
@@ -12086,6 +13435,7 @@
         "operator": "Delhi Metro Rail Corporation Limited",
         "public_transport": "station",
         "railway": "station",
+        "ref": "JGPA",
         "station": "subway",
         "subway": "yes",
         "wheelchair": "yes",
@@ -12110,6 +13460,7 @@
         "operator:wikidata": "Q1029339",
         "public_transport": "station",
         "railway": "station",
+        "ref": "JLNS",
         "station": "subway",
         "subway": "yes",
         "wikidata": "Q6165993",
@@ -12631,6 +13982,173 @@
     },
     {
       "type": "node",
+      "id": 10074648933,
+      "lat": 28.5743583,
+      "lon": 77.3782348,
+      "tags": {
+        "alt_name": "Noida Sector 50",
+        "name": "Rainbow Metro Station",
+        "name:fa": "نویدا - بخش ۵۰",
+        "name:hi": "नोएडा सेक्टर ५०",
+        "network": "Noida Metro",
+        "operator": "NR",
+        "platforms": "2",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wheelchair": "limited",
+        "wikidata": "Q59155432",
+        "wikipedia": "en:Rainbow metro station"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10074914474,
+      "lat": 28.4790219,
+      "lon": 77.4424232,
+      "tags": {
+        "name": "Noida Sector 145",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10074914475,
+      "lat": 28.4863132,
+      "lon": 77.4330884,
+      "tags": {
+        "name": "Noida Sector 144",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10074914476,
+      "lat": 28.4942812,
+      "lon": 77.4223917,
+      "tags": {
+        "name": "Noida Sector 143",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10074914477,
+      "lat": 28.4990137,
+      "lon": 77.412868,
+      "tags": {
+        "name": "Noida Sector 142",
+        "operator": "NMRC",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10074914478,
+      "lat": 28.5107876,
+      "lon": 77.4036289,
+      "tags": {
+        "name": "Noida Sector 137",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10074914479,
+      "lat": 28.5222947,
+      "lon": 77.3964592,
+      "tags": {
+        "name": "Noida Sector 83",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10074914480,
+      "lat": 28.5324158,
+      "lon": 77.3947827,
+      "tags": {
+        "name": "NSEZ",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10074914481,
+      "lat": 28.5493098,
+      "lon": 77.3899644,
+      "tags": {
+        "name": "Noida Sector 81",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10074914482,
+      "lat": 28.5560682,
+      "lon": 77.3849701,
+      "tags": {
+        "name": "Noida Sector 101",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10074914483,
+      "lat": 28.5653399,
+      "lon": 77.3796863,
+      "tags": {
+        "name": "Noida Sector 76",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10074914484,
+      "lat": 28.5857254,
+      "lon": 77.3752792,
+      "tags": {
+        "name": "Noida Sector 51",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10074914485,
+      "lat": 28.5857163,
+      "lon": 77.3752397,
+      "tags": {
+        "name": "Noida Sector 51",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
       "id": 10314380321,
       "lat": 28.6364592,
       "lon": 77.2868145,
@@ -12782,6 +14300,51 @@
     },
     {
       "type": "node",
+      "id": 11293189742,
+      "lat": 28.6725546,
+      "lon": 77.4137315,
+      "tags": {
+        "internet_access": "wlan",
+        "layer": "2",
+        "name": "Ghaziabad",
+        "name:hi": "ग़ाज़ियाबाद",
+        "name:ru": "Газиабад",
+        "network": "RapidX",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2024/05/18)",
+        "operator": "National Capital Region Transport Corporation",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "A04",
+        "station": "subway",
+        "subway": "yes",
+        "train": "yes",
+        "wikidata": "Q118125061",
+        "wikipedia": "en:Ghaziabad RRTS station"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11294005967,
+      "lat": 28.6995434,
+      "lon": 77.4457502,
+      "tags": {
+        "internet_access": "wlan",
+        "name": "Guldhar",
+        "name:hi": "गुलधर",
+        "name:ru": "Гулдхар",
+        "network": "RapidX",
+        "note": "Contributors are requested to not edit the \"network\" and the \"operator\" tags. (2024/05/18)",
+        "operator": "National Capital Region Transport Corporation",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "A05",
+        "station": "subway",
+        "subway": "yes",
+        "train": "yes"
+      }
+    },
+    {
+      "type": "node",
       "id": 11697541590,
       "lat": 28.4958117,
       "lon": 77.302347,
@@ -12874,6 +14437,51 @@
         "subway": "yes",
         "wikidata": "Q17026075",
         "wikipedia": "en:Cyber City metro station"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13447021562,
+      "lat": 28.4991296,
+      "lon": 77.4129374,
+      "tags": {
+        "name": "Noida Sector 142",
+        "operator": "NMRC",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13450364921,
+      "lat": 28.6007345,
+      "lon": 77.3832359,
+      "tags": {
+        "name": "Noida Sector 70",
+        "network": "Aqua Line",
+        "operator": "NMRC",
+        "proposed:railway": "station",
+        "public_transport": "station",
+        "railway": "proposed",
+        "station": "subway",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13450364928,
+      "lat": 28.5975718,
+      "lon": 77.3724805,
+      "tags": {
+        "name": "Noida Sector 61",
+        "network": "Aqua Line",
+        "operator": "NMRC",
+        "proposed:railway": "station",
+        "public_transport": "station",
+        "railway": "proposed",
+        "station": "subway",
+        "subway": "yes"
       }
     },
     {
@@ -15453,6 +17061,341 @@
     },
     {
       "type": "way",
+      "id": 538930429,
+      "bounds": {
+        "minlat": 28.5473984,
+        "minlon": 77.3723917,
+        "maxlat": 28.6072158,
+        "maxlon": 77.490921
+      },
+      "nodes": [
+        5777613329,
+        13450364944,
+        13450364943,
+        13450364942,
+        13450364941,
+        13450364940,
+        13450364949,
+        13450364939,
+        13450364938,
+        13450364937,
+        13450364936,
+        13450364935,
+        13450364934,
+        13450364933,
+        13450364932,
+        13450364931,
+        13450364930,
+        13450364929,
+        13450364927,
+        13450364923,
+        13450364924,
+        13450364926,
+        13450364925,
+        13450364922,
+        13450364920,
+        13450364919,
+        13450364915,
+        13450364916,
+        13450364917,
+        13450364918,
+        13450364914,
+        13450364913,
+        13450364912,
+        13450364911,
+        13450364910,
+        13450364909,
+        7944688534,
+        5215706338,
+        5215706337,
+        5215706336,
+        5215706335,
+        5215706334,
+        5215706333,
+        5215706332,
+        5215706331,
+        5215706330,
+        5215706329,
+        5215706328,
+        5215706327,
+        5215706326,
+        5215706325,
+        5215706324,
+        5215706323,
+        5215706322,
+        5215706321,
+        5215706320,
+        5215706319,
+        5215706318,
+        5215706317,
+        5215706316,
+        5215706314
+      ],
+      "geometry": [
+        {
+          "lat": 28.5881747,
+          "lon": 77.3750494
+        },
+        {
+          "lat": 28.5891477,
+          "lon": 77.3752236
+        },
+        {
+          "lat": 28.589442,
+          "lon": 77.3752558
+        },
+        {
+          "lat": 28.589674,
+          "lon": 77.3752585
+        },
+        {
+          "lat": 28.5900061,
+          "lon": 77.3752156
+        },
+        {
+          "lat": 28.5902628,
+          "lon": 77.3751646
+        },
+        {
+          "lat": 28.5904818,
+          "lon": 77.3750908
+        },
+        {
+          "lat": 28.5906962,
+          "lon": 77.3749929
+        },
+        {
+          "lat": 28.5909482,
+          "lon": 77.3748454
+        },
+        {
+          "lat": 28.591256,
+          "lon": 77.3746238
+        },
+        {
+          "lat": 28.5917902,
+          "lon": 77.3741464
+        },
+        {
+          "lat": 28.5922702,
+          "lon": 77.3737688
+        },
+        {
+          "lat": 28.5926062,
+          "lon": 77.3735315
+        },
+        {
+          "lat": 28.592985,
+          "lon": 77.3733236
+        },
+        {
+          "lat": 28.5933372,
+          "lon": 77.373191
+        },
+        {
+          "lat": 28.5953205,
+          "lon": 77.3725473
+        },
+        {
+          "lat": 28.5959655,
+          "lon": 77.3724362
+        },
+        {
+          "lat": 28.5967864,
+          "lon": 77.3723917
+        },
+        {
+          "lat": 28.5988676,
+          "lon": 77.3724996
+        },
+        {
+          "lat": 28.6000801,
+          "lon": 77.3725684
+        },
+        {
+          "lat": 28.6004093,
+          "lon": 77.3726403
+        },
+        {
+          "lat": 28.6007281,
+          "lon": 77.3728607
+        },
+        {
+          "lat": 28.6009082,
+          "lon": 77.3733002
+        },
+        {
+          "lat": 28.6009717,
+          "lon": 77.3737381
+        },
+        {
+          "lat": 28.6007606,
+          "lon": 77.3793871
+        },
+        {
+          "lat": 28.6007675,
+          "lon": 77.3838544
+        },
+        {
+          "lat": 28.600822,
+          "lon": 77.3884103
+        },
+        {
+          "lat": 28.6007591,
+          "lon": 77.3886979
+        },
+        {
+          "lat": 28.6006462,
+          "lon": 77.3889619
+        },
+        {
+          "lat": 28.6004553,
+          "lon": 77.3890995
+        },
+        {
+          "lat": 28.6002409,
+          "lon": 77.3891566
+        },
+        {
+          "lat": 28.597216,
+          "lon": 77.3888974
+        },
+        {
+          "lat": 28.5952564,
+          "lon": 77.3887351
+        },
+        {
+          "lat": 28.5950159,
+          "lon": 77.3888345
+        },
+        {
+          "lat": 28.5948538,
+          "lon": 77.3890614
+        },
+        {
+          "lat": 28.5947867,
+          "lon": 77.3892983
+        },
+        {
+          "lat": 28.5948236,
+          "lon": 77.3895835
+        },
+        {
+          "lat": 28.596901,
+          "lon": 77.3977053
+        },
+        {
+          "lat": 28.598769,
+          "lon": 77.4052409
+        },
+        {
+          "lat": 28.601047,
+          "lon": 77.4142982
+        },
+        {
+          "lat": 28.6032521,
+          "lon": 77.4228635
+        },
+        {
+          "lat": 28.6045004,
+          "lon": 77.4273193
+        },
+        {
+          "lat": 28.6061041,
+          "lon": 77.4342079
+        },
+        {
+          "lat": 28.60707,
+          "lon": 77.4382901
+        },
+        {
+          "lat": 28.6072158,
+          "lon": 77.43942
+        },
+        {
+          "lat": 28.60707,
+          "lon": 77.4411695
+        },
+        {
+          "lat": 28.6065233,
+          "lon": 77.4433017
+        },
+        {
+          "lat": 28.6056668,
+          "lon": 77.445598
+        },
+        {
+          "lat": 28.6042453,
+          "lon": 77.4478031
+        },
+        {
+          "lat": 28.6008921,
+          "lon": 77.4517212
+        },
+        {
+          "lat": 28.5978487,
+          "lon": 77.4548193
+        },
+        {
+          "lat": 28.59568,
+          "lon": 77.4566964
+        },
+        {
+          "lat": 28.5927095,
+          "lon": 77.4589561
+        },
+        {
+          "lat": 28.589174,
+          "lon": 77.4609608
+        },
+        {
+          "lat": 28.5820302,
+          "lon": 77.4647332
+        },
+        {
+          "lat": 28.5767635,
+          "lon": 77.4676126
+        },
+        {
+          "lat": 28.572007,
+          "lon": 77.4702186
+        },
+        {
+          "lat": 28.5706767,
+          "lon": 77.4713303
+        },
+        {
+          "lat": 28.5654646,
+          "lon": 77.4758134
+        },
+        {
+          "lat": 28.5557148,
+          "lon": 77.4839595
+        },
+        {
+          "lat": 28.5473984,
+          "lon": 77.490921
+        }
+      ],
+      "tags": {
+        "bridge": "viaduct",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "2",
+        "name": "Aqua Line - Extension Sector 51 to Knowledge Park V",
+        "proposed": "subway",
+        "proposed:railway": "subway",
+        "railway": "proposed",
+        "subway": "yes",
+        "tracks": "2",
+        "type": "Elivated",
+        "usage": "main",
+        "voltage": "25000"
+      }
+    },
+    {
+      "type": "way",
       "id": 538930430,
       "bounds": {
         "minlat": 28.7253188,
@@ -17677,6 +19620,105 @@
         "tunnel": "yes",
         "usage": "main",
         "voltage": "750"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1466105434,
+      "bounds": {
+        "minlat": 28.4980876,
+        "minlon": 77.4111898,
+        "maxlat": 28.4994862,
+        "maxlon": 77.4150366
+      },
+      "nodes": [
+        10965600179,
+        5215706233,
+        13447021538,
+        10965600186
+      ],
+      "geometry": [
+        {
+          "lat": 28.4994862,
+          "lon": 77.4111898
+        },
+        {
+          "lat": 28.4988486,
+          "lon": 77.4127843
+        },
+        {
+          "lat": 28.498578,
+          "lon": 77.413477
+        },
+        {
+          "lat": 28.4980876,
+          "lon": 77.4150366
+        }
+      ],
+      "tags": {
+        "bridge": "viaduct",
+        "electrified": "yes",
+        "frequency": "50",
+        "gauge": "1676",
+        "layer": "2",
+        "name": "Botanical Garden to Noida Sector 142 (Route-2)",
+        "proposed": "subway",
+        "proposed:railway": "subway",
+        "railway": "proposed",
+        "usage": "branch",
+        "voltage": "25000"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1466105436,
+      "bounds": {
+        "minlat": 28.4997728,
+        "minlon": 77.4066507,
+        "maxlat": 28.5004755,
+        "maxlon": 77.4104704
+      },
+      "nodes": [
+        5215706236,
+        13447021546,
+        13447021537,
+        5215706235,
+        5215706234
+      ],
+      "geometry": [
+        {
+          "lat": 28.5004755,
+          "lon": 77.4066507
+        },
+        {
+          "lat": 28.5003921,
+          "lon": 77.4069914
+        },
+        {
+          "lat": 28.5000201,
+          "lon": 77.4097296
+        },
+        {
+          "lat": 28.4999512,
+          "lon": 77.4100081
+        },
+        {
+          "lat": 28.4997728,
+          "lon": 77.4104704
+        }
+      ],
+      "tags": {
+        "bridge": "viaduct",
+        "electrified": "yes",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "2",
+        "name": "Botanical Garden to Noida Sector 142 (Route-2)",
+        "proposed": "subway",
+        "proposed:railway": "subway",
+        "railway": "proposed",
+        "usage": "branch",
+        "voltage": "25000"
       }
     },
     {
@@ -53585,6 +55627,2699 @@
         "type": "route",
         "wikidata": "Q19893471",
         "wikipedia": "en:Magenta Line (Delhi Metro)"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 9268568,
+      "bounds": {
+        "minlat": 28.4445818,
+        "minlon": 77.3752397,
+        "maxlat": 28.5857163,
+        "maxlon": 77.5440143
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 5777613712,
+          "role": "stop",
+          "lat": 28.488985,
+          "lon": 77.5440143
+        },
+        {
+          "type": "node",
+          "ref": 5777613710,
+          "role": "stop",
+          "lat": 28.4846562,
+          "lon": 77.5365134
+        },
+        {
+          "type": "node",
+          "ref": 5777613706,
+          "role": "stop",
+          "lat": 28.4784458,
+          "lon": 77.5257269
+        },
+        {
+          "type": "node",
+          "ref": 5777613702,
+          "role": "stop",
+          "lat": 28.471005,
+          "lon": 77.5127411
+        },
+        {
+          "type": "node",
+          "ref": 5777613688,
+          "role": "stop",
+          "lat": 28.4633782,
+          "lon": 77.5083695
+        },
+        {
+          "type": "node",
+          "ref": 5777613685,
+          "role": "stop",
+          "lat": 28.4570311,
+          "lon": 77.5003351
+        },
+        {
+          "type": "node",
+          "ref": 5777613662,
+          "role": "stop",
+          "lat": 28.4480499,
+          "lon": 77.4765713
+        },
+        {
+          "type": "node",
+          "ref": 5777613652,
+          "role": "stop",
+          "lat": 28.4592936,
+          "lon": 77.4661547
+        },
+        {
+          "type": "node",
+          "ref": 5777613645,
+          "role": "stop",
+          "lat": 28.468821,
+          "lon": 77.4551517
+        },
+        {
+          "type": "node",
+          "ref": 5777613636,
+          "role": "stop",
+          "lat": 28.4789843,
+          "lon": 77.4423795
+        },
+        {
+          "type": "node",
+          "ref": 5777613630,
+          "role": "stop",
+          "lat": 28.4862727,
+          "lon": 77.4330482
+        },
+        {
+          "type": "node",
+          "ref": 5777613624,
+          "role": "stop",
+          "lat": 28.4942406,
+          "lon": 77.4223517
+        },
+        {
+          "type": "node",
+          "ref": 5777613618,
+          "role": "stop",
+          "lat": 28.4989702,
+          "lon": 77.4128457
+        },
+        {
+          "type": "node",
+          "ref": 5777613604,
+          "role": "stop",
+          "lat": 28.5107596,
+          "lon": 77.4035768
+        },
+        {
+          "type": "node",
+          "ref": 5777613593,
+          "role": "stop",
+          "lat": 28.5222584,
+          "lon": 77.3964141
+        },
+        {
+          "type": "node",
+          "ref": 5777613583,
+          "role": "stop",
+          "lat": 28.5324104,
+          "lon": 77.3947219
+        },
+        {
+          "type": "node",
+          "ref": 5777613567,
+          "role": "stop",
+          "lat": 28.549288,
+          "lon": 77.3899106
+        },
+        {
+          "type": "node",
+          "ref": 5777613556,
+          "role": "stop",
+          "lat": 28.5560412,
+          "lon": 77.3849173
+        },
+        {
+          "type": "node",
+          "ref": 5777613345,
+          "role": "stop",
+          "lat": 28.5653301,
+          "lon": 77.3796268
+        },
+        {
+          "type": "node",
+          "ref": 5777613343,
+          "role": "stop",
+          "lat": 28.5743471,
+          "lon": 77.3782123
+        },
+        {
+          "type": "node",
+          "ref": 10074914485,
+          "role": "stop",
+          "lat": 28.5857163,
+          "lon": 77.3752397
+        },
+        {
+          "type": "way",
+          "ref": 1183338335,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.488985,
+              "lon": 77.5440143
+            },
+            {
+              "lat": 28.4878659,
+              "lon": 77.5420794
+            },
+            {
+              "lat": 28.4876554,
+              "lon": 77.5417103
+            },
+            {
+              "lat": 28.4846562,
+              "lon": 77.5365134
+            },
+            {
+              "lat": 28.4784458,
+              "lon": 77.5257269
+            },
+            {
+              "lat": 28.471005,
+              "lon": 77.5127411
+            },
+            {
+              "lat": 28.4694599,
+              "lon": 77.5100777
+            },
+            {
+              "lat": 28.4693124,
+              "lon": 77.5098807
+            },
+            {
+              "lat": 28.4691559,
+              "lon": 77.5097216
+            },
+            {
+              "lat": 28.4690515,
+              "lon": 77.5096279
+            },
+            {
+              "lat": 28.4689482,
+              "lon": 77.5095523
+            },
+            {
+              "lat": 28.4688426,
+              "lon": 77.5094802
+            },
+            {
+              "lat": 28.4687275,
+              "lon": 77.5094241
+            },
+            {
+              "lat": 28.4685087,
+              "lon": 77.5093382
+            },
+            {
+              "lat": 28.4683231,
+              "lon": 77.5093026
+            },
+            {
+              "lat": 28.4681478,
+              "lon": 77.5092933
+            },
+            {
+              "lat": 28.4678766,
+              "lon": 77.5093161
+            },
+            {
+              "lat": 28.467622,
+              "lon": 77.5093898
+            },
+            {
+              "lat": 28.4674086,
+              "lon": 77.5094904
+            },
+            {
+              "lat": 28.4672207,
+              "lon": 77.5096119
+            },
+            {
+              "lat": 28.4667393,
+              "lon": 77.5100408
+            },
+            {
+              "lat": 28.4665279,
+              "lon": 77.5101958
+            },
+            {
+              "lat": 28.4662544,
+              "lon": 77.51033
+            },
+            {
+              "lat": 28.4660219,
+              "lon": 77.510394
+            },
+            {
+              "lat": 28.4658265,
+              "lon": 77.5104198
+            },
+            {
+              "lat": 28.4655971,
+              "lon": 77.5104153
+            },
+            {
+              "lat": 28.4653832,
+              "lon": 77.5103903
+            },
+            {
+              "lat": 28.4652264,
+              "lon": 77.5103416
+            },
+            {
+              "lat": 28.4650471,
+              "lon": 77.5102575
+            },
+            {
+              "lat": 28.4648743,
+              "lon": 77.5101638
+            },
+            {
+              "lat": 28.4646617,
+              "lon": 77.509996
+            },
+            {
+              "lat": 28.4644519,
+              "lon": 77.5097683
+            },
+            {
+              "lat": 28.4638498,
+              "lon": 77.5089847
+            },
+            {
+              "lat": 28.4633782,
+              "lon": 77.5083695
+            },
+            {
+              "lat": 28.4626772,
+              "lon": 77.5074859
+            },
+            {
+              "lat": 28.4608532,
+              "lon": 77.5052525
+            },
+            {
+              "lat": 28.4585316,
+              "lon": 77.5022603
+            },
+            {
+              "lat": 28.4570311,
+              "lon": 77.5003351
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 1183338336,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.4570311,
+              "lon": 77.5003351
+            },
+            {
+              "lat": 28.456452,
+              "lon": 77.4995829
+            },
+            {
+              "lat": 28.4551576,
+              "lon": 77.4977083
+            },
+            {
+              "lat": 28.4533813,
+              "lon": 77.4954572
+            },
+            {
+              "lat": 28.4525356,
+              "lon": 77.4941593
+            },
+            {
+              "lat": 28.4521839,
+              "lon": 77.4936735
+            },
+            {
+              "lat": 28.4518099,
+              "lon": 77.4931866
+            },
+            {
+              "lat": 28.4514127,
+              "lon": 77.4926924
+            },
+            {
+              "lat": 28.450757,
+              "lon": 77.4919787
+            },
+            {
+              "lat": 28.4499118,
+              "lon": 77.4911558
+            },
+            {
+              "lat": 28.4494583,
+              "lon": 77.4906897
+            },
+            {
+              "lat": 28.4474534,
+              "lon": 77.4882779
+            },
+            {
+              "lat": 28.446596,
+              "lon": 77.4871228
+            },
+            {
+              "lat": 28.4456088,
+              "lon": 77.4857396
+            },
+            {
+              "lat": 28.4453865,
+              "lon": 77.4853738
+            },
+            {
+              "lat": 28.4451846,
+              "lon": 77.4849786
+            },
+            {
+              "lat": 28.4449886,
+              "lon": 77.4845173
+            },
+            {
+              "lat": 28.4448128,
+              "lon": 77.4839886
+            },
+            {
+              "lat": 28.4446987,
+              "lon": 77.4834861
+            },
+            {
+              "lat": 28.4446171,
+              "lon": 77.4828906
+            },
+            {
+              "lat": 28.4445818,
+              "lon": 77.4823412
+            },
+            {
+              "lat": 28.4445947,
+              "lon": 77.4818383
+            },
+            {
+              "lat": 28.444632,
+              "lon": 77.4814466
+            },
+            {
+              "lat": 28.4447092,
+              "lon": 77.4809789
+            },
+            {
+              "lat": 28.444801,
+              "lon": 77.4805794
+            },
+            {
+              "lat": 28.4449091,
+              "lon": 77.4802386
+            },
+            {
+              "lat": 28.445022,
+              "lon": 77.4799219
+            },
+            {
+              "lat": 28.4451851,
+              "lon": 77.4795127
+            },
+            {
+              "lat": 28.4454501,
+              "lon": 77.4790248
+            },
+            {
+              "lat": 28.4459057,
+              "lon": 77.4783599
+            },
+            {
+              "lat": 28.4464607,
+              "lon": 77.4777792
+            },
+            {
+              "lat": 28.4468931,
+              "lon": 77.4774145
+            },
+            {
+              "lat": 28.4480499,
+              "lon": 77.4765713
+            },
+            {
+              "lat": 28.450132,
+              "lon": 77.4750133
+            },
+            {
+              "lat": 28.4509186,
+              "lon": 77.4744212
+            },
+            {
+              "lat": 28.4520703,
+              "lon": 77.473473
+            },
+            {
+              "lat": 28.4527794,
+              "lon": 77.472854
+            },
+            {
+              "lat": 28.4536795,
+              "lon": 77.4721948
+            },
+            {
+              "lat": 28.4542479,
+              "lon": 77.4716769
+            },
+            {
+              "lat": 28.4547554,
+              "lon": 77.4711932
+            },
+            {
+              "lat": 28.4552401,
+              "lon": 77.4707141
+            },
+            {
+              "lat": 28.4557509,
+              "lon": 77.4701792
+            },
+            {
+              "lat": 28.456277,
+              "lon": 77.4696075
+            },
+            {
+              "lat": 28.4569028,
+              "lon": 77.4688874
+            },
+            {
+              "lat": 28.4580758,
+              "lon": 77.4674674
+            },
+            {
+              "lat": 28.4589423,
+              "lon": 77.4665402
+            },
+            {
+              "lat": 28.4592936,
+              "lon": 77.4661547
+            },
+            {
+              "lat": 28.4598753,
+              "lon": 77.4655385
+            },
+            {
+              "lat": 28.4605447,
+              "lon": 77.4648035
+            },
+            {
+              "lat": 28.4611327,
+              "lon": 77.4641608
+            },
+            {
+              "lat": 28.4618631,
+              "lon": 77.4633063
+            },
+            {
+              "lat": 28.4634652,
+              "lon": 77.4614189
+            },
+            {
+              "lat": 28.4639537,
+              "lon": 77.4609152
+            },
+            {
+              "lat": 28.4654751,
+              "lon": 77.4595567
+            },
+            {
+              "lat": 28.4661005,
+              "lon": 77.4589738
+            },
+            {
+              "lat": 28.4666883,
+              "lon": 77.4582998
+            },
+            {
+              "lat": 28.4670623,
+              "lon": 77.4577955
+            },
+            {
+              "lat": 28.4674674,
+              "lon": 77.4572049
+            },
+            {
+              "lat": 28.4684939,
+              "lon": 77.4556612
+            },
+            {
+              "lat": 28.468821,
+              "lon": 77.4551517
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 1466105447,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.468821,
+              "lon": 77.4551517
+            },
+            {
+              "lat": 28.4692602,
+              "lon": 77.4545061
+            },
+            {
+              "lat": 28.4702656,
+              "lon": 77.4529688
+            },
+            {
+              "lat": 28.4704239,
+              "lon": 77.452694
+            },
+            {
+              "lat": 28.4705533,
+              "lon": 77.4523956
+            },
+            {
+              "lat": 28.4706724,
+              "lon": 77.4520456
+            },
+            {
+              "lat": 28.470908,
+              "lon": 77.4512694
+            },
+            {
+              "lat": 28.4710519,
+              "lon": 77.4508815
+            },
+            {
+              "lat": 28.4712329,
+              "lon": 77.4505131
+            },
+            {
+              "lat": 28.4714255,
+              "lon": 77.4502043
+            },
+            {
+              "lat": 28.4715983,
+              "lon": 77.4499689
+            },
+            {
+              "lat": 28.4718097,
+              "lon": 77.4497235
+            },
+            {
+              "lat": 28.4720541,
+              "lon": 77.4494915
+            },
+            {
+              "lat": 28.4723375,
+              "lon": 77.4492489
+            },
+            {
+              "lat": 28.4726069,
+              "lon": 77.449017
+            },
+            {
+              "lat": 28.4728515,
+              "lon": 77.4488086
+            },
+            {
+              "lat": 28.4731685,
+              "lon": 77.4485197
+            },
+            {
+              "lat": 28.4734356,
+              "lon": 77.4482736
+            },
+            {
+              "lat": 28.4750761,
+              "lon": 77.4466166
+            },
+            {
+              "lat": 28.4758646,
+              "lon": 77.4458213
+            },
+            {
+              "lat": 28.4767101,
+              "lon": 77.4449131
+            },
+            {
+              "lat": 28.4784473,
+              "lon": 77.4429769
+            },
+            {
+              "lat": 28.4789843,
+              "lon": 77.4423795
+            },
+            {
+              "lat": 28.4805181,
+              "lon": 77.4406733
+            },
+            {
+              "lat": 28.481193,
+              "lon": 77.4398841
+            },
+            {
+              "lat": 28.4816677,
+              "lon": 77.4392503
+            },
+            {
+              "lat": 28.4833458,
+              "lon": 77.4369336
+            },
+            {
+              "lat": 28.484582,
+              "lon": 77.4351811
+            },
+            {
+              "lat": 28.4853739,
+              "lon": 77.4342162
+            },
+            {
+              "lat": 28.4856391,
+              "lon": 77.4338904
+            },
+            {
+              "lat": 28.4858772,
+              "lon": 77.4335899
+            },
+            {
+              "lat": 28.4862727,
+              "lon": 77.4330482
+            },
+            {
+              "lat": 28.4872081,
+              "lon": 77.4317104
+            },
+            {
+              "lat": 28.4873863,
+              "lon": 77.431451
+            },
+            {
+              "lat": 28.4881675,
+              "lon": 77.430303
+            },
+            {
+              "lat": 28.4896824,
+              "lon": 77.4281311
+            },
+            {
+              "lat": 28.4902871,
+              "lon": 77.4272737
+            },
+            {
+              "lat": 28.4927446,
+              "lon": 77.4242146
+            },
+            {
+              "lat": 28.4942406,
+              "lon": 77.4223517
+            },
+            {
+              "lat": 28.4947991,
+              "lon": 77.421575
+            },
+            {
+              "lat": 28.4953957,
+              "lon": 77.4206543
+            },
+            {
+              "lat": 28.495938,
+              "lon": 77.4197238
+            },
+            {
+              "lat": 28.4968839,
+              "lon": 77.4176872
+            },
+            {
+              "lat": 28.497321,
+              "lon": 77.4167458
+            },
+            {
+              "lat": 28.4978445,
+              "lon": 77.4156131
+            },
+            {
+              "lat": 28.4980876,
+              "lon": 77.4150366
+            },
+            {
+              "lat": 28.4987451,
+              "lon": 77.4133989
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 1466105449,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.4987451,
+              "lon": 77.4133989
+            },
+            {
+              "lat": 28.4989702,
+              "lon": 77.4128457
+            },
+            {
+              "lat": 28.4992726,
+              "lon": 77.4120935
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 610023996,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.4992726,
+              "lon": 77.4120935
+            },
+            {
+              "lat": 28.4993449,
+              "lon": 77.4119108
+            },
+            {
+              "lat": 28.4997405,
+              "lon": 77.4108527
+            },
+            {
+              "lat": 28.5001306,
+              "lon": 77.4098586
+            },
+            {
+              "lat": 28.5002683,
+              "lon": 77.4095667
+            },
+            {
+              "lat": 28.5004122,
+              "lon": 77.409327
+            },
+            {
+              "lat": 28.500575,
+              "lon": 77.409106
+            },
+            {
+              "lat": 28.5007914,
+              "lon": 77.4088838
+            },
+            {
+              "lat": 28.5009818,
+              "lon": 77.408727
+            },
+            {
+              "lat": 28.5012223,
+              "lon": 77.4085729
+            },
+            {
+              "lat": 28.5014598,
+              "lon": 77.4084739
+            },
+            {
+              "lat": 28.5017212,
+              "lon": 77.4083964
+            },
+            {
+              "lat": 28.5020076,
+              "lon": 77.408352
+            },
+            {
+              "lat": 28.5022429,
+              "lon": 77.4083401
+            },
+            {
+              "lat": 28.50249,
+              "lon": 77.4083524
+            },
+            {
+              "lat": 28.5030536,
+              "lon": 77.4083931
+            },
+            {
+              "lat": 28.5033297,
+              "lon": 77.4083855
+            },
+            {
+              "lat": 28.5036068,
+              "lon": 77.4083488
+            },
+            {
+              "lat": 28.5039661,
+              "lon": 77.4082418
+            },
+            {
+              "lat": 28.5042514,
+              "lon": 77.4081204
+            },
+            {
+              "lat": 28.5045224,
+              "lon": 77.4079638
+            },
+            {
+              "lat": 28.5065031,
+              "lon": 77.4065867
+            },
+            {
+              "lat": 28.5085156,
+              "lon": 77.4051393
+            },
+            {
+              "lat": 28.5107596,
+              "lon": 77.4035768
+            },
+            {
+              "lat": 28.5119343,
+              "lon": 77.4027608
+            },
+            {
+              "lat": 28.5133958,
+              "lon": 77.4017504
+            },
+            {
+              "lat": 28.5140388,
+              "lon": 77.4013613
+            },
+            {
+              "lat": 28.5151583,
+              "lon": 77.4007981
+            },
+            {
+              "lat": 28.5171608,
+              "lon": 77.399775
+            },
+            {
+              "lat": 28.5191197,
+              "lon": 77.3987432
+            },
+            {
+              "lat": 28.519967,
+              "lon": 77.3982415
+            },
+            {
+              "lat": 28.5206181,
+              "lon": 77.3978526
+            },
+            {
+              "lat": 28.5211682,
+              "lon": 77.3974962
+            },
+            {
+              "lat": 28.5215161,
+              "lon": 77.3971707
+            },
+            {
+              "lat": 28.5222584,
+              "lon": 77.3964141
+            },
+            {
+              "lat": 28.5229384,
+              "lon": 77.3956879
+            },
+            {
+              "lat": 28.5234823,
+              "lon": 77.3952365
+            },
+            {
+              "lat": 28.5238765,
+              "lon": 77.3949828
+            },
+            {
+              "lat": 28.5243334,
+              "lon": 77.3948166
+            },
+            {
+              "lat": 28.5252617,
+              "lon": 77.3948606
+            },
+            {
+              "lat": 28.5254975,
+              "lon": 77.394939
+            },
+            {
+              "lat": 28.5260184,
+              "lon": 77.3951277
+            },
+            {
+              "lat": 28.5264183,
+              "lon": 77.3952858
+            },
+            {
+              "lat": 28.5266719,
+              "lon": 77.3953759
+            },
+            {
+              "lat": 28.5268909,
+              "lon": 77.3954322
+            },
+            {
+              "lat": 28.5272329,
+              "lon": 77.3953809
+            },
+            {
+              "lat": 28.529632,
+              "lon": 77.3950679
+            },
+            {
+              "lat": 28.5324104,
+              "lon": 77.3947219
+            },
+            {
+              "lat": 28.5341328,
+              "lon": 77.3945258
+            },
+            {
+              "lat": 28.5382772,
+              "lon": 77.3944609
+            },
+            {
+              "lat": 28.5402371,
+              "lon": 77.3943833
+            },
+            {
+              "lat": 28.5404288,
+              "lon": 77.3943475
+            },
+            {
+              "lat": 28.5405952,
+              "lon": 77.3943078
+            },
+            {
+              "lat": 28.5407291,
+              "lon": 77.3942195
+            },
+            {
+              "lat": 28.5420783,
+              "lon": 77.3930385
+            },
+            {
+              "lat": 28.5424339,
+              "lon": 77.3927641
+            },
+            {
+              "lat": 28.5440072,
+              "lon": 77.3918176
+            },
+            {
+              "lat": 28.5444675,
+              "lon": 77.3915813
+            },
+            {
+              "lat": 28.5449531,
+              "lon": 77.391435
+            },
+            {
+              "lat": 28.5465978,
+              "lon": 77.390978
+            },
+            {
+              "lat": 28.5471016,
+              "lon": 77.3908477
+            },
+            {
+              "lat": 28.5472976,
+              "lon": 77.3907866
+            },
+            {
+              "lat": 28.5475723,
+              "lon": 77.3907006
+            },
+            {
+              "lat": 28.5477208,
+              "lon": 77.3906475
+            },
+            {
+              "lat": 28.5478567,
+              "lon": 77.3905968
+            },
+            {
+              "lat": 28.5481722,
+              "lon": 77.3904688
+            },
+            {
+              "lat": 28.5485298,
+              "lon": 77.3903072
+            },
+            {
+              "lat": 28.549288,
+              "lon": 77.3899106
+            },
+            {
+              "lat": 28.5495869,
+              "lon": 77.3897538
+            },
+            {
+              "lat": 28.5502007,
+              "lon": 77.3894268
+            },
+            {
+              "lat": 28.5505887,
+              "lon": 77.3892165
+            },
+            {
+              "lat": 28.5509198,
+              "lon": 77.3890452
+            },
+            {
+              "lat": 28.5511415,
+              "lon": 77.388928
+            },
+            {
+              "lat": 28.5512772,
+              "lon": 77.3888489
+            },
+            {
+              "lat": 28.551382,
+              "lon": 77.3887822
+            },
+            {
+              "lat": 28.5515389,
+              "lon": 77.3886725
+            },
+            {
+              "lat": 28.5516727,
+              "lon": 77.3885671
+            },
+            {
+              "lat": 28.5517491,
+              "lon": 77.3884989
+            },
+            {
+              "lat": 28.5519202,
+              "lon": 77.3883377
+            },
+            {
+              "lat": 28.5527728,
+              "lon": 77.3874078
+            },
+            {
+              "lat": 28.5533026,
+              "lon": 77.3868439
+            },
+            {
+              "lat": 28.5538419,
+              "lon": 77.3863508
+            },
+            {
+              "lat": 28.554544,
+              "lon": 77.3858944
+            },
+            {
+              "lat": 28.5549514,
+              "lon": 77.3856302
+            },
+            {
+              "lat": 28.5551729,
+              "lon": 77.3854932
+            },
+            {
+              "lat": 28.5560412,
+              "lon": 77.3849173
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 1180683914,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.5560412,
+              "lon": 77.3849173
+            },
+            {
+              "lat": 28.557733,
+              "lon": 77.3837951
+            },
+            {
+              "lat": 28.5592089,
+              "lon": 77.3828178
+            },
+            {
+              "lat": 28.5613153,
+              "lon": 77.3814263
+            },
+            {
+              "lat": 28.5623695,
+              "lon": 77.3807169
+            },
+            {
+              "lat": 28.5627221,
+              "lon": 77.3804752
+            },
+            {
+              "lat": 28.5629866,
+              "lon": 77.3803031
+            },
+            {
+              "lat": 28.5632739,
+              "lon": 77.3801193
+            },
+            {
+              "lat": 28.5634862,
+              "lon": 77.3800095
+            },
+            {
+              "lat": 28.5641105,
+              "lon": 77.3798143
+            },
+            {
+              "lat": 28.5645589,
+              "lon": 77.3797419
+            },
+            {
+              "lat": 28.5653301,
+              "lon": 77.3796268
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 1490163904,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.5653301,
+              "lon": 77.3796268
+            },
+            {
+              "lat": 28.5674584,
+              "lon": 77.3793207
+            },
+            {
+              "lat": 28.5699634,
+              "lon": 77.3789289
+            },
+            {
+              "lat": 28.5728228,
+              "lon": 77.3784667
+            },
+            {
+              "lat": 28.5743471,
+              "lon": 77.3782123
+            },
+            {
+              "lat": 28.5758405,
+              "lon": 77.3779977
+            },
+            {
+              "lat": 28.579217,
+              "lon": 77.3774387
+            },
+            {
+              "lat": 28.5797444,
+              "lon": 77.3773344
+            },
+            {
+              "lat": 28.5805007,
+              "lon": 77.3771374
+            },
+            {
+              "lat": 28.5814969,
+              "lon": 77.3768674
+            },
+            {
+              "lat": 28.5817139,
+              "lon": 77.3768047
+            },
+            {
+              "lat": 28.5819162,
+              "lon": 77.3767345
+            },
+            {
+              "lat": 28.5820936,
+              "lon": 77.3766505
+            },
+            {
+              "lat": 28.583011,
+              "lon": 77.3761753
+            },
+            {
+              "lat": 28.5833111,
+              "lon": 77.3760308
+            },
+            {
+              "lat": 28.5835688,
+              "lon": 77.3759269
+            },
+            {
+              "lat": 28.5838745,
+              "lon": 77.3758208
+            },
+            {
+              "lat": 28.5843614,
+              "lon": 77.3756647
+            },
+            {
+              "lat": 28.5845803,
+              "lon": 77.3755963
+            },
+            {
+              "lat": 28.58498,
+              "lon": 77.375469
+            },
+            {
+              "lat": 28.5851155,
+              "lon": 77.375427
+            },
+            {
+              "lat": 28.5857163,
+              "lon": 77.3752397
+            }
+          ]
+        }
+      ],
+      "tags": {
+        "colour": "aqua",
+        "from": "Depot",
+        "name": "Aqua Line: Depot → Noida Sector 51",
+        "network": "Noida Metro",
+        "network:wikidata": "Q16909221",
+        "operator": "NMRC",
+        "public_transport:version": "2",
+        "ref": "Aqua Line",
+        "route": "subway",
+        "to": "Noida Sector 51",
+        "type": "route",
+        "wikidata": "Q41668068",
+        "wikipedia": "en:Aqua Line (Noida Metro)"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 9268569,
+      "bounds": {
+        "minlat": 28.4446355,
+        "minlon": 77.3752792,
+        "maxlat": 28.5857254,
+        "maxlon": 77.5439804
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 10074914484,
+          "role": "stop",
+          "lat": 28.5857254,
+          "lon": 77.3752792
+        },
+        {
+          "type": "node",
+          "ref": 4950923221,
+          "role": "stop",
+          "lat": 28.5743612,
+          "lon": 77.3782577
+        },
+        {
+          "type": "node",
+          "ref": 10074914483,
+          "role": "stop",
+          "lat": 28.5653399,
+          "lon": 77.3796863
+        },
+        {
+          "type": "node",
+          "ref": 10074914482,
+          "role": "stop",
+          "lat": 28.5560682,
+          "lon": 77.3849701
+        },
+        {
+          "type": "node",
+          "ref": 10074914481,
+          "role": "stop",
+          "lat": 28.5493098,
+          "lon": 77.3899644
+        },
+        {
+          "type": "node",
+          "ref": 10074914480,
+          "role": "stop",
+          "lat": 28.5324158,
+          "lon": 77.3947827
+        },
+        {
+          "type": "node",
+          "ref": 10074914479,
+          "role": "stop",
+          "lat": 28.5222947,
+          "lon": 77.3964592
+        },
+        {
+          "type": "node",
+          "ref": 10074914478,
+          "role": "stop",
+          "lat": 28.5107876,
+          "lon": 77.4036289
+        },
+        {
+          "type": "node",
+          "ref": 10074914477,
+          "role": "stop",
+          "lat": 28.4990137,
+          "lon": 77.412868
+        },
+        {
+          "type": "node",
+          "ref": 10074914476,
+          "role": "stop",
+          "lat": 28.4942812,
+          "lon": 77.4223917
+        },
+        {
+          "type": "node",
+          "ref": 10074914475,
+          "role": "stop",
+          "lat": 28.4863132,
+          "lon": 77.4330884
+        },
+        {
+          "type": "node",
+          "ref": 10074914474,
+          "role": "stop",
+          "lat": 28.4790219,
+          "lon": 77.4424232
+        },
+        {
+          "type": "node",
+          "ref": 10074914473,
+          "role": "stop",
+          "lat": 28.4688753,
+          "lon": 77.4551892
+        },
+        {
+          "type": "node",
+          "ref": 10074914472,
+          "role": "stop",
+          "lat": 28.4593419,
+          "lon": 77.4662076
+        },
+        {
+          "type": "node",
+          "ref": 10074914471,
+          "role": "stop",
+          "lat": 28.4480792,
+          "lon": 77.4766226
+        },
+        {
+          "type": "node",
+          "ref": 4849443433,
+          "role": "stop",
+          "lat": 28.4570728,
+          "lon": 77.5002978
+        },
+        {
+          "type": "node",
+          "ref": 10074914470,
+          "role": "stop",
+          "lat": 28.4634141,
+          "lon": 77.5083353
+        },
+        {
+          "type": "node",
+          "ref": 10074914469,
+          "role": "stop",
+          "lat": 28.4710499,
+          "lon": 77.5127076
+        },
+        {
+          "type": "node",
+          "ref": 10074914468,
+          "role": "stop",
+          "lat": 28.4784907,
+          "lon": 77.5256933
+        },
+        {
+          "type": "node",
+          "ref": 10074914467,
+          "role": "stop",
+          "lat": 28.4847012,
+          "lon": 77.5364801
+        },
+        {
+          "type": "node",
+          "ref": 10074914466,
+          "role": "stop",
+          "lat": 28.4890297,
+          "lon": 77.5439804
+        },
+        {
+          "type": "way",
+          "ref": 687733478,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.5857254,
+              "lon": 77.3752792
+            },
+            {
+              "lat": 28.584991,
+              "lon": 77.3755135
+            },
+            {
+              "lat": 28.5845905,
+              "lon": 77.3756392
+            },
+            {
+              "lat": 28.5843678,
+              "lon": 77.3757125
+            },
+            {
+              "lat": 28.5835769,
+              "lon": 77.3759768
+            },
+            {
+              "lat": 28.5833293,
+              "lon": 77.3760754
+            },
+            {
+              "lat": 28.5828199,
+              "lon": 77.3763253
+            },
+            {
+              "lat": 28.5821119,
+              "lon": 77.3766934
+            },
+            {
+              "lat": 28.581928,
+              "lon": 77.3767787
+            },
+            {
+              "lat": 28.5817222,
+              "lon": 77.3768502
+            },
+            {
+              "lat": 28.5806681,
+              "lon": 77.3771446
+            },
+            {
+              "lat": 28.5797469,
+              "lon": 77.3773776
+            },
+            {
+              "lat": 28.5792242,
+              "lon": 77.3774814
+            },
+            {
+              "lat": 28.5785356,
+              "lon": 77.3776367
+            },
+            {
+              "lat": 28.5758618,
+              "lon": 77.3780422
+            },
+            {
+              "lat": 28.5743612,
+              "lon": 77.3782577
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 687733479,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.5743612,
+              "lon": 77.3782577
+            },
+            {
+              "lat": 28.5728362,
+              "lon": 77.3785061
+            },
+            {
+              "lat": 28.569966,
+              "lon": 77.3789891
+            },
+            {
+              "lat": 28.5675435,
+              "lon": 77.3793583
+            },
+            {
+              "lat": 28.5653399,
+              "lon": 77.3796863
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 687733480,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.5653399,
+              "lon": 77.3796863
+            },
+            {
+              "lat": 28.5645632,
+              "lon": 77.3798201
+            },
+            {
+              "lat": 28.564129,
+              "lon": 77.379874
+            },
+            {
+              "lat": 28.5635055,
+              "lon": 77.3800666
+            },
+            {
+              "lat": 28.5632982,
+              "lon": 77.3801739
+            },
+            {
+              "lat": 28.5630131,
+              "lon": 77.3803563
+            },
+            {
+              "lat": 28.5627493,
+              "lon": 77.3805279
+            },
+            {
+              "lat": 28.562397,
+              "lon": 77.3807694
+            },
+            {
+              "lat": 28.5613424,
+              "lon": 77.381479
+            },
+            {
+              "lat": 28.5592358,
+              "lon": 77.3828707
+            },
+            {
+              "lat": 28.55776,
+              "lon": 77.3838479
+            },
+            {
+              "lat": 28.5560682,
+              "lon": 77.3849701
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 687733481,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.5560682,
+              "lon": 77.3849701
+            },
+            {
+              "lat": 28.5551992,
+              "lon": 77.3855465
+            },
+            {
+              "lat": 28.5549775,
+              "lon": 77.3856836
+            },
+            {
+              "lat": 28.5545706,
+              "lon": 77.3859475
+            },
+            {
+              "lat": 28.5538722,
+              "lon": 77.3864015
+            },
+            {
+              "lat": 28.5533378,
+              "lon": 77.3868901
+            },
+            {
+              "lat": 28.5528094,
+              "lon": 77.3874525
+            },
+            {
+              "lat": 28.551979,
+              "lon": 77.3883429
+            },
+            {
+              "lat": 28.5517084,
+              "lon": 77.3885991
+            },
+            {
+              "lat": 28.5515736,
+              "lon": 77.3887051
+            },
+            {
+              "lat": 28.5514601,
+              "lon": 77.3887875
+            },
+            {
+              "lat": 28.5512967,
+              "lon": 77.388894
+            },
+            {
+              "lat": 28.5511596,
+              "lon": 77.3889711
+            },
+            {
+              "lat": 28.5509373,
+              "lon": 77.3890899
+            },
+            {
+              "lat": 28.5505605,
+              "lon": 77.3892826
+            },
+            {
+              "lat": 28.5500487,
+              "lon": 77.3895628
+            },
+            {
+              "lat": 28.54961,
+              "lon": 77.389809
+            },
+            {
+              "lat": 28.5493098,
+              "lon": 77.3899644
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 687733482,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.5493098,
+              "lon": 77.3899644
+            },
+            {
+              "lat": 28.5485422,
+              "lon": 77.3903524
+            },
+            {
+              "lat": 28.548185,
+              "lon": 77.3905132
+            },
+            {
+              "lat": 28.5478629,
+              "lon": 77.3906448
+            },
+            {
+              "lat": 28.5477298,
+              "lon": 77.3906945
+            },
+            {
+              "lat": 28.5475851,
+              "lon": 77.390745
+            },
+            {
+              "lat": 28.5473095,
+              "lon": 77.3908343
+            },
+            {
+              "lat": 28.5471085,
+              "lon": 77.3908945
+            },
+            {
+              "lat": 28.5466033,
+              "lon": 77.3910256
+            },
+            {
+              "lat": 28.5449662,
+              "lon": 77.3914943
+            },
+            {
+              "lat": 28.5444855,
+              "lon": 77.3916391
+            },
+            {
+              "lat": 28.5440308,
+              "lon": 77.3918725
+            },
+            {
+              "lat": 28.5424616,
+              "lon": 77.3928166
+            },
+            {
+              "lat": 28.5421105,
+              "lon": 77.3930875
+            },
+            {
+              "lat": 28.5407839,
+              "lon": 77.3943321
+            },
+            {
+              "lat": 28.5406237,
+              "lon": 77.3944206
+            },
+            {
+              "lat": 28.5404377,
+              "lon": 77.3944601
+            },
+            {
+              "lat": 28.5402346,
+              "lon": 77.3944642
+            },
+            {
+              "lat": 28.5382714,
+              "lon": 77.3945037
+            },
+            {
+              "lat": 28.534136,
+              "lon": 77.3945869
+            },
+            {
+              "lat": 28.5324158,
+              "lon": 77.3947827
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 687733483,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.5324158,
+              "lon": 77.3947827
+            },
+            {
+              "lat": 28.5296399,
+              "lon": 77.3951099
+            },
+            {
+              "lat": 28.5272175,
+              "lon": 77.3954236
+            },
+            {
+              "lat": 28.5268518,
+              "lon": 77.3954722
+            },
+            {
+              "lat": 28.5264697,
+              "lon": 77.3953631
+            },
+            {
+              "lat": 28.5260297,
+              "lon": 77.395226
+            },
+            {
+              "lat": 28.5253028,
+              "lon": 77.3949442
+            },
+            {
+              "lat": 28.5243416,
+              "lon": 77.3948778
+            },
+            {
+              "lat": 28.5238981,
+              "lon": 77.3950391
+            },
+            {
+              "lat": 28.5235114,
+              "lon": 77.395288
+            },
+            {
+              "lat": 28.5229727,
+              "lon": 77.3957351
+            },
+            {
+              "lat": 28.5222947,
+              "lon": 77.3964592
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 687733484,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.5222947,
+              "lon": 77.3964592
+            },
+            {
+              "lat": 28.5215511,
+              "lon": 77.3972171
+            },
+            {
+              "lat": 28.5211988,
+              "lon": 77.3975467
+            },
+            {
+              "lat": 28.5206439,
+              "lon": 77.3979062
+            },
+            {
+              "lat": 28.5199919,
+              "lon": 77.3982957
+            },
+            {
+              "lat": 28.5191434,
+              "lon": 77.3987981
+            },
+            {
+              "lat": 28.5171831,
+              "lon": 77.3998306
+            },
+            {
+              "lat": 28.5151802,
+              "lon": 77.4008539
+            },
+            {
+              "lat": 28.5140623,
+              "lon": 77.4014163
+            },
+            {
+              "lat": 28.5134224,
+              "lon": 77.4018035
+            },
+            {
+              "lat": 28.5119622,
+              "lon": 77.402813
+            },
+            {
+              "lat": 28.5107876,
+              "lon": 77.4036289
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 687733485,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.5107876,
+              "lon": 77.4036289
+            },
+            {
+              "lat": 28.5085436,
+              "lon": 77.4051915
+            },
+            {
+              "lat": 28.5065265,
+              "lon": 77.4066415
+            },
+            {
+              "lat": 28.5045428,
+              "lon": 77.4080225
+            },
+            {
+              "lat": 28.5042723,
+              "lon": 77.4081748
+            },
+            {
+              "lat": 28.5039786,
+              "lon": 77.4083005
+            },
+            {
+              "lat": 28.5036159,
+              "lon": 77.4084076
+            },
+            {
+              "lat": 28.5033209,
+              "lon": 77.4084441
+            },
+            {
+              "lat": 28.5030553,
+              "lon": 77.4084487
+            },
+            {
+              "lat": 28.5024878,
+              "lon": 77.4084135
+            },
+            {
+              "lat": 28.5022484,
+              "lon": 77.4084036
+            },
+            {
+              "lat": 28.502009,
+              "lon": 77.4084152
+            },
+            {
+              "lat": 28.501729,
+              "lon": 77.4084587
+            },
+            {
+              "lat": 28.5014733,
+              "lon": 77.4085358
+            },
+            {
+              "lat": 28.5012467,
+              "lon": 77.4086346
+            },
+            {
+              "lat": 28.5010101,
+              "lon": 77.4087819
+            },
+            {
+              "lat": 28.5008224,
+              "lon": 77.4089383
+            },
+            {
+              "lat": 28.5006023,
+              "lon": 77.4091614
+            },
+            {
+              "lat": 28.5004408,
+              "lon": 77.4093772
+            },
+            {
+              "lat": 28.5003172,
+              "lon": 77.4095931
+            },
+            {
+              "lat": 28.5001809,
+              "lon": 77.4098879
+            },
+            {
+              "lat": 28.4997899,
+              "lon": 77.4108781
+            },
+            {
+              "lat": 28.4993145,
+              "lon": 77.412113
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 1466105448,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.4993145,
+              "lon": 77.412113
+            },
+            {
+              "lat": 28.4990137,
+              "lon": 77.412868
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 1466105450,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.4990137,
+              "lon": 77.412868
+            },
+            {
+              "lat": 28.4987925,
+              "lon": 77.4134234
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 687733486,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.4987925,
+              "lon": 77.4134234
+            },
+            {
+              "lat": 28.4981331,
+              "lon": 77.4150569
+            },
+            {
+              "lat": 28.4978868,
+              "lon": 77.4156356
+            },
+            {
+              "lat": 28.4973673,
+              "lon": 77.4167748
+            },
+            {
+              "lat": 28.4959861,
+              "lon": 77.4197493
+            },
+            {
+              "lat": 28.4954403,
+              "lon": 77.4206885
+            },
+            {
+              "lat": 28.4948415,
+              "lon": 77.4216125
+            },
+            {
+              "lat": 28.4942812,
+              "lon": 77.4223917
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 687733487,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.4942812,
+              "lon": 77.4223917
+            },
+            {
+              "lat": 28.4927843,
+              "lon": 77.4242558
+            },
+            {
+              "lat": 28.4903279,
+              "lon": 77.4273135
+            },
+            {
+              "lat": 28.4897244,
+              "lon": 77.4281692
+            },
+            {
+              "lat": 28.4882109,
+              "lon": 77.4303391
+            },
+            {
+              "lat": 28.4869796,
+              "lon": 77.4321144
+            },
+            {
+              "lat": 28.4863132,
+              "lon": 77.4330884
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 687733488,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.4863132,
+              "lon": 77.4330884
+            },
+            {
+              "lat": 28.4859082,
+              "lon": 77.4336199
+            },
+            {
+              "lat": 28.4856623,
+              "lon": 77.4339288
+            },
+            {
+              "lat": 28.4846229,
+              "lon": 77.4352207
+            },
+            {
+              "lat": 28.4833875,
+              "lon": 77.4369722
+            },
+            {
+              "lat": 28.4817089,
+              "lon": 77.4392896
+            },
+            {
+              "lat": 28.4812327,
+              "lon": 77.4399253
+            },
+            {
+              "lat": 28.4805561,
+              "lon": 77.4407165
+            },
+            {
+              "lat": 28.4790219,
+              "lon": 77.4424232
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 687733489,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.4790219,
+              "lon": 77.4424232
+            },
+            {
+              "lat": 28.4784849,
+              "lon": 77.4430206
+            },
+            {
+              "lat": 28.4767473,
+              "lon": 77.4449571
+            },
+            {
+              "lat": 28.4759009,
+              "lon": 77.4458664
+            },
+            {
+              "lat": 28.475111,
+              "lon": 77.446663
+            },
+            {
+              "lat": 28.4734603,
+              "lon": 77.448325
+            },
+            {
+              "lat": 28.4731877,
+              "lon": 77.4485785
+            },
+            {
+              "lat": 28.4728821,
+              "lon": 77.4488554
+            },
+            {
+              "lat": 28.4725948,
+              "lon": 77.4490981
+            },
+            {
+              "lat": 28.4723628,
+              "lon": 77.4492934
+            },
+            {
+              "lat": 28.4720786,
+              "lon": 77.4495432
+            },
+            {
+              "lat": 28.4718363,
+              "lon": 77.4497753
+            },
+            {
+              "lat": 28.4716185,
+              "lon": 77.4500135
+            },
+            {
+              "lat": 28.4714518,
+              "lon": 77.4502528
+            },
+            {
+              "lat": 28.471267,
+              "lon": 77.4505432
+            },
+            {
+              "lat": 28.4710787,
+              "lon": 77.4509297
+            },
+            {
+              "lat": 28.4709477,
+              "lon": 77.4512952
+            },
+            {
+              "lat": 28.4707034,
+              "lon": 77.452078
+            },
+            {
+              "lat": 28.4705848,
+              "lon": 77.4524292
+            },
+            {
+              "lat": 28.4704681,
+              "lon": 77.4527136
+            },
+            {
+              "lat": 28.4703077,
+              "lon": 77.4529972
+            },
+            {
+              "lat": 28.4693017,
+              "lon": 77.4545419
+            },
+            {
+              "lat": 28.4688753,
+              "lon": 77.4551892
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 687733491,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.4688753,
+              "lon": 77.4551892
+            },
+            {
+              "lat": 28.4685459,
+              "lon": 77.4557003
+            },
+            {
+              "lat": 28.4675101,
+              "lon": 77.4572422
+            },
+            {
+              "lat": 28.4670959,
+              "lon": 77.4578406
+            },
+            {
+              "lat": 28.4667343,
+              "lon": 77.4583258
+            },
+            {
+              "lat": 28.4661345,
+              "lon": 77.4590162
+            },
+            {
+              "lat": 28.4655106,
+              "lon": 77.4596026
+            },
+            {
+              "lat": 28.4639971,
+              "lon": 77.4609561
+            },
+            {
+              "lat": 28.4635016,
+              "lon": 77.461464
+            },
+            {
+              "lat": 28.461901,
+              "lon": 77.4633496
+            },
+            {
+              "lat": 28.4611923,
+              "lon": 77.4642017
+            },
+            {
+              "lat": 28.4605849,
+              "lon": 77.4648571
+            },
+            {
+              "lat": 28.4599172,
+              "lon": 77.4655834
+            },
+            {
+              "lat": 28.4593419,
+              "lon": 77.4662076
+            },
+            {
+              "lat": 28.4589845,
+              "lon": 77.4665933
+            },
+            {
+              "lat": 28.4581299,
+              "lon": 77.4675138
+            },
+            {
+              "lat": 28.4569391,
+              "lon": 77.4689354
+            },
+            {
+              "lat": 28.4563165,
+              "lon": 77.4696489
+            },
+            {
+              "lat": 28.4557893,
+              "lon": 77.4702257
+            },
+            {
+              "lat": 28.4552623,
+              "lon": 77.4707676
+            },
+            {
+              "lat": 28.4547836,
+              "lon": 77.4712367
+            },
+            {
+              "lat": 28.4542825,
+              "lon": 77.4717214
+            },
+            {
+              "lat": 28.453713,
+              "lon": 77.4722319
+            },
+            {
+              "lat": 28.4528122,
+              "lon": 77.4729024
+            },
+            {
+              "lat": 28.4521024,
+              "lon": 77.473522
+            },
+            {
+              "lat": 28.4509492,
+              "lon": 77.4744715
+            },
+            {
+              "lat": 28.4501616,
+              "lon": 77.4750643
+            },
+            {
+              "lat": 28.4480792,
+              "lon": 77.4766226
+            },
+            {
+              "lat": 28.4469236,
+              "lon": 77.4774648
+            },
+            {
+              "lat": 28.4464944,
+              "lon": 77.4778269
+            },
+            {
+              "lat": 28.4459448,
+              "lon": 77.4784022
+            },
+            {
+              "lat": 28.4454945,
+              "lon": 77.4790594
+            },
+            {
+              "lat": 28.4452312,
+              "lon": 77.4795441
+            },
+            {
+              "lat": 28.4450699,
+              "lon": 77.4799499
+            },
+            {
+              "lat": 28.4449591,
+              "lon": 77.480261
+            },
+            {
+              "lat": 28.4448502,
+              "lon": 77.4806053
+            },
+            {
+              "lat": 28.4447609,
+              "lon": 77.480996
+            },
+            {
+              "lat": 28.4446855,
+              "lon": 77.4814546
+            },
+            {
+              "lat": 28.4446486,
+              "lon": 77.4818274
+            },
+            {
+              "lat": 28.4446355,
+              "lon": 77.4823422
+            },
+            {
+              "lat": 28.4446708,
+              "lon": 77.4828839
+            },
+            {
+              "lat": 28.44475,
+              "lon": 77.4834673
+            },
+            {
+              "lat": 28.4448643,
+              "lon": 77.4839703
+            },
+            {
+              "lat": 28.4450348,
+              "lon": 77.4844851
+            },
+            {
+              "lat": 28.4452321,
+              "lon": 77.4849493
+            },
+            {
+              "lat": 28.44543,
+              "lon": 77.4853376
+            },
+            {
+              "lat": 28.4456519,
+              "lon": 77.485703
+            },
+            {
+              "lat": 28.4466377,
+              "lon": 77.4870843
+            },
+            {
+              "lat": 28.4474938,
+              "lon": 77.4882376
+            },
+            {
+              "lat": 28.4494961,
+              "lon": 77.4906462
+            },
+            {
+              "lat": 28.449941,
+              "lon": 77.4910996
+            },
+            {
+              "lat": 28.450794,
+              "lon": 77.491926
+            },
+            {
+              "lat": 28.4514676,
+              "lon": 77.4926498
+            },
+            {
+              "lat": 28.4518453,
+              "lon": 77.4931329
+            },
+            {
+              "lat": 28.4522225,
+              "lon": 77.493626
+            },
+            {
+              "lat": 28.4525825,
+              "lon": 77.4941247
+            },
+            {
+              "lat": 28.4534225,
+              "lon": 77.495418
+            },
+            {
+              "lat": 28.4551982,
+              "lon": 77.4976683
+            },
+            {
+              "lat": 28.4564906,
+              "lon": 77.4995459
+            },
+            {
+              "lat": 28.4570728,
+              "lon": 77.5002978
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 687733492,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.4570728,
+              "lon": 77.5002978
+            },
+            {
+              "lat": 28.4585648,
+              "lon": 77.5022226
+            },
+            {
+              "lat": 28.4608863,
+              "lon": 77.5052173
+            },
+            {
+              "lat": 28.4623984,
+              "lon": 77.5070563
+            },
+            {
+              "lat": 28.4634141,
+              "lon": 77.5083353
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 687733493,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.4634141,
+              "lon": 77.5083353
+            },
+            {
+              "lat": 28.4641074,
+              "lon": 77.5092528
+            },
+            {
+              "lat": 28.4644854,
+              "lon": 77.5097268
+            },
+            {
+              "lat": 28.4646899,
+              "lon": 77.5099451
+            },
+            {
+              "lat": 28.464898,
+              "lon": 77.5101113
+            },
+            {
+              "lat": 28.4650672,
+              "lon": 77.5102092
+            },
+            {
+              "lat": 28.4652434,
+              "lon": 77.5102884
+            },
+            {
+              "lat": 28.4653914,
+              "lon": 77.5103313
+            },
+            {
+              "lat": 28.4655959,
+              "lon": 77.5103607
+            },
+            {
+              "lat": 28.4658264,
+              "lon": 77.5103675
+            },
+            {
+              "lat": 28.4660262,
+              "lon": 77.5103473
+            },
+            {
+              "lat": 28.4662438,
+              "lon": 77.5102804
+            },
+            {
+              "lat": 28.4665114,
+              "lon": 77.5101408
+            },
+            {
+              "lat": 28.4667065,
+              "lon": 77.5099865
+            },
+            {
+              "lat": 28.467184,
+              "lon": 77.5095775
+            },
+            {
+              "lat": 28.4673791,
+              "lon": 77.5094421
+            },
+            {
+              "lat": 28.4676338,
+              "lon": 77.5093147
+            },
+            {
+              "lat": 28.4678673,
+              "lon": 77.5092638
+            },
+            {
+              "lat": 28.4681408,
+              "lon": 77.5092356
+            },
+            {
+              "lat": 28.4683216,
+              "lon": 77.5092476
+            },
+            {
+              "lat": 28.4685231,
+              "lon": 77.5092839
+            },
+            {
+              "lat": 28.4687484,
+              "lon": 77.509367
+            },
+            {
+              "lat": 28.4688738,
+              "lon": 77.5094306
+            },
+            {
+              "lat": 28.4689885,
+              "lon": 77.5095096
+            },
+            {
+              "lat": 28.4690935,
+              "lon": 77.5095864
+            },
+            {
+              "lat": 28.4691905,
+              "lon": 77.509674
+            },
+            {
+              "lat": 28.469355,
+              "lon": 77.5098431
+            },
+            {
+              "lat": 28.4695048,
+              "lon": 77.5100442
+            },
+            {
+              "lat": 28.4710499,
+              "lon": 77.5127076
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 687733494,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.4710499,
+              "lon": 77.5127076
+            },
+            {
+              "lat": 28.4784907,
+              "lon": 77.5256933
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 687733495,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.4784907,
+              "lon": 77.5256933
+            },
+            {
+              "lat": 28.4847012,
+              "lon": 77.5364801
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 688068784,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.4847012,
+              "lon": 77.5364801
+            },
+            {
+              "lat": 28.4874552,
+              "lon": 77.5412838
+            },
+            {
+              "lat": 28.4890297,
+              "lon": 77.5439804
+            }
+          ]
+        }
+      ],
+      "tags": {
+        "colour": "aqua",
+        "from": "Noida Sector 51",
+        "name": "Aqua Line: Noida Sector 51 → Depot",
+        "network": "Noida Metro",
+        "network:wikidata": "Q16909221",
+        "operator": "NMRC",
+        "public_transport:version": "2",
+        "ref": "Aqua Line",
+        "route": "subway",
+        "to": "Depot",
+        "type": "route",
+        "wikidata": "Q41668068",
+        "wikipedia": "en:Aqua Line (Noida Metro)"
       }
     },
     {

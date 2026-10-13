@@ -54,30 +54,6 @@
       "note": "Reference terminals Kalena Agrahara and Nagawara missing in data"
     },
     {
-      "finding_id": "F-01",
-      "target_milestone": "M10.2",
-      "city_id": "delhi",
-      "rule": "ground-truth-length",
-      "subject": "del-blue",
-      "note": "Computed length 55.68 km differs from 65.35 km reference"
-    },
-    {
-      "finding_id": "F-01",
-      "target_milestone": "M10.2",
-      "city_id": "delhi",
-      "rule": "ground-truth-station-count",
-      "subject": "del-blue",
-      "note": "Operational station count differs from reference"
-    },
-    {
-      "finding_id": "F-01",
-      "target_milestone": "M10.2",
-      "city_id": "delhi",
-      "rule": "reference-station-missing",
-      "subject": "del-blue",
-      "note": "Reference terminal Noida Electronic City missing in data"
-    },
-    {
       "finding_id": "F-10",
       "target_milestone": "M10.2",
       "city_id": "mumbai",
@@ -295,36 +271,6 @@
     },
     {
       "city_id": "delhi",
-      "rule": "ground-truth-station-count",
-      "subject": "del-golden",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "ground-truth-station-count",
-      "subject": "del-green",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "ground-truth-station-count",
-      "subject": "del-magenta",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "ground-truth-station-count",
-      "subject": "del-red",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "ground-truth-station-count",
-      "subject": "del-violet",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "delhi",
       "rule": "interchange-consistency",
       "subject": "del-yamuna-bank",
       "reason": "not yet reviewed, triaged per city in M10.2"
@@ -339,24 +285,6 @@
       "city_id": "delhi",
       "rule": "reference-station-missing",
       "subject": "del-golden",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "reference-station-missing",
-      "subject": "del-grey",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "reference-station-missing",
-      "subject": "del-red",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "reference-station-missing",
-      "subject": "del-violet",
       "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
@@ -392,12 +320,6 @@
     {
       "city_id": "delhi",
       "rule": "station-far-from-nearest-segment",
-      "subject": "del-delhi-gate",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "station-far-from-nearest-segment",
       "subject": "del-dilli-haat-ina",
       "reason": "not yet reviewed, triaged per city in M10.2"
     },
@@ -405,12 +327,6 @@
       "city_id": "delhi",
       "rule": "station-far-from-nearest-segment",
       "subject": "del-domestic-airport",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "station-far-from-nearest-segment",
-      "subject": "del-dwarka-kakrola",
       "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
@@ -434,12 +350,6 @@
     {
       "city_id": "delhi",
       "rule": "station-far-from-nearest-segment",
-      "subject": "del-madhuban-chowk",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "station-far-from-nearest-segment",
       "subject": "del-mayur-vihar-i",
       "reason": "not yet reviewed, triaged per city in M10.2"
     },
@@ -447,12 +357,6 @@
       "city_id": "delhi",
       "rule": "station-far-from-nearest-segment",
       "subject": "del-netaji-subhash-place",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "station-far-from-nearest-segment",
-      "subject": "del-new-delhi",
       "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
@@ -748,6 +652,246 @@
       "rule": "polyline-hook",
       "subject": "che-corridor-5-seg-01",
       "reason": "not yet reviewed, triaged per city in M10.2"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "future-date-unconfirmed",
+      "subject": "del-ghaziabad",
+      "reason": "triaged in M10.2 Delhi reconciliation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "future-record-no-reference",
+      "subject": "del-ghaziabad",
+      "reason": "triaged in M10.2 Delhi reconciliation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-length",
+      "subject": "del-pink",
+      "reason": "triaged in M10.2 Delhi reconciliation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-arthala",
+      "reason": "triaged in M10.2 Delhi reconciliation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-badarpur",
+      "reason": "triaged in M10.2 Delhi reconciliation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-bata-chowk",
+      "reason": "triaged in M10.2 Delhi reconciliation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-dwarka",
+      "reason": "triaged in M10.2 Delhi reconciliation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-escorts-mujesar",
+      "reason": "triaged in M10.2 Delhi reconciliation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-ghaziabad",
+      "reason": "triaged in M10.2 Delhi reconciliation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-govind-puri",
+      "reason": "triaged in M10.2 Delhi reconciliation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-harkesh-nagar-okhla",
+      "reason": "triaged in M10.2 Delhi reconciliation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-hindon-river",
+      "reason": "triaged in M10.2 Delhi reconciliation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-mewala-maharajpur",
+      "reason": "triaged in M10.2 Delhi reconciliation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-mohan-nagar",
+      "reason": "triaged in M10.2 Delhi reconciliation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-neelam-chowk-ajronda",
+      "reason": "triaged in M10.2 Delhi reconciliation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-nhpc-chowk",
+      "reason": "triaged in M10.2 Delhi reconciliation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-noida-city-centre",
+      "reason": "triaged in M10.2 Delhi reconciliation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-noida-electronic-city",
+      "reason": "triaged in M10.2 Delhi reconciliation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-noida-sector-34",
+      "reason": "triaged in M10.2 Delhi reconciliation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-noida-sector-52",
+      "reason": "triaged in M10.2 Delhi reconciliation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-noida-sector-59",
+      "reason": "triaged in M10.2 Delhi reconciliation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-noida-sector-61",
+      "reason": "triaged in M10.2 Delhi reconciliation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-noida-sector-62",
+      "reason": "triaged in M10.2 Delhi reconciliation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-raja-nahar-singh",
+      "reason": "triaged in M10.2 Delhi reconciliation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-rajendra-nagar",
+      "reason": "triaged in M10.2 Delhi reconciliation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-sant-surdas-sihi",
+      "reason": "triaged in M10.2 Delhi reconciliation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-sarai",
+      "reason": "triaged in M10.2 Delhi reconciliation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-sector-28",
+      "reason": "triaged in M10.2 Delhi reconciliation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-shaheed-sthal",
+      "reason": "triaged in M10.2 Delhi reconciliation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "del-shyam-park",
+      "reason": "triaged in M10.2 Delhi reconciliation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "segment-end-far-from-station",
+      "subject": "del-golden-branch-01",
+      "reason": "triaged in M10.2 Delhi reconciliation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "segment-end-far-from-station",
+      "subject": "del-golden-branch-01",
+      "reason": "triaged in M10.2 Delhi reconciliation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "segment-end-far-from-station",
+      "subject": "del-magenta-seg-03",
+      "reason": "triaged in M10.2 Delhi reconciliation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "segment-end-far-from-station",
+      "subject": "del-magenta-seg-03",
+      "reason": "triaged in M10.2 Delhi reconciliation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "subject": "del-dwarka",
+      "reason": "triaged in M10.2 Delhi reconciliation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "subject": "del-rajouri-garden",
+      "reason": "triaged in M10.2 Delhi reconciliation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "subject": "del-sikanderpur",
+      "reason": "triaged in M10.2 Delhi reconciliation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-gap",
+      "subject": "del-golden|del-domestic-airport|del-andrews-ganj",
+      "reason": "triaged in M10.2 Delhi reconciliation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-gap",
+      "subject": "del-grey|del-dwarka|del-najafgarh",
+      "reason": "triaged in M10.2 Delhi reconciliation"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-gap",
+      "subject": "del-magenta|del-janakpuri-west|del-bhalaswa",
+      "reason": "triaged in M10.2 Delhi reconciliation"
     }
   ],
   "accepted_warnings": [
@@ -1618,12 +1762,6 @@
     {
       "city_id": "delhi",
       "rule": "future-date-unconfirmed",
-      "subject": "del-indraprastha",
-      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "future-date-unconfirmed",
       "subject": "del-magenta-seg-02",
       "reason": "Expected completion date pending operator progress update or unconfirmed flag"
     },
@@ -1690,12 +1828,6 @@
     {
       "city_id": "delhi",
       "rule": "future-record-no-reference",
-      "subject": "del-indraprastha",
-      "reason": "Future segment or station pending deep-link reference citation"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "future-record-no-reference",
       "subject": "del-north-pitampura-prashant-vihar",
       "reason": "Future segment or station pending deep-link reference citation"
     },
@@ -1756,12 +1888,6 @@
     {
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
-      "subject": "del-badarpur-border",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "layout/suspect-default-elevated",
       "subject": "del-badhkal-mor",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
@@ -1775,12 +1901,6 @@
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
       "subject": "del-barakhambha-road",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "layout/suspect-default-elevated",
-      "subject": "del-bhajanpura",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -1805,12 +1925,6 @@
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
       "subject": "del-brigadier-hoshiyar-singh",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "layout/suspect-default-elevated",
-      "subject": "del-burari",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -1865,12 +1979,6 @@
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
       "subject": "del-durgabai-deshmukh-south-campus",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "layout/suspect-default-elevated",
-      "subject": "del-dwarka-kakrola",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -2026,12 +2134,6 @@
     {
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
-      "subject": "del-jagatpur-wazirabad",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "layout/suspect-default-elevated",
       "subject": "del-jahangirpuri",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
@@ -2069,12 +2171,6 @@
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
       "subject": "del-jhandewalan",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "layout/suspect-default-elevated",
-      "subject": "del-jharoda-majra",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -2146,12 +2242,6 @@
     {
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
-      "subject": "del-khajuri-khas",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "layout/suspect-default-elevated",
       "subject": "del-kirti-nagar",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
@@ -2165,12 +2255,6 @@
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
       "subject": "del-krishna-nagar",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "layout/suspect-default-elevated",
-      "subject": "del-krishna-park-extension",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -2291,12 +2375,6 @@
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
       "subject": "del-munirka",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "layout/suspect-default-elevated",
-      "subject": "del-nanaksar-sonia-vihar",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -2447,12 +2525,6 @@
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
       "subject": "del-patel-nagar",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "layout/suspect-default-elevated",
-      "subject": "del-peera-garhi",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -2686,12 +2758,6 @@
     {
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
-      "subject": "del-soorghat",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "layout/suspect-default-elevated",
       "subject": "del-south-extension",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
@@ -2776,12 +2842,6 @@
     {
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
-      "subject": "del-tughlkabad",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "layout/suspect-default-elevated",
       "subject": "del-udyog-nagar",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
@@ -2825,12 +2885,6 @@
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
       "subject": "del-yamuna-bank",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "layout/suspect-default-elevated",
-      "subject": "del-yamuna-vihar",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -2920,49 +2974,13 @@
     {
       "city_id": "delhi",
       "rule": "station-gap",
-      "subject": "del-blue|del-akshardham|del-supreme-court",
-      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "station-gap",
       "subject": "del-blue|del-dwarka-sector-21|del-yamuna-bank",
       "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
     },
     {
       "city_id": "delhi",
       "rule": "station-gap",
-      "subject": "del-golden|del-terminal-1-igi-airport|del-chirag-delhi",
-      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "station-gap",
       "subject": "del-green|del-brigadier-hoshiyar-singh|del-kirti-nagar",
-      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "station-gap",
-      "subject": "del-grey|del-dwarka-kakrola|del-najafgarh",
-      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "station-gap",
-      "subject": "del-magenta|del-deepali-chowk|del-indraprastha",
-      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "station-gap",
-      "subject": "del-magenta|del-krishna-park-extension|del-majlis-park",
-      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "station-gap",
-      "subject": "del-magenta|del-new-delhi|del-inderlok",
       "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
     },
     {
@@ -2987,12 +3005,6 @@
       "city_id": "delhi",
       "rule": "station-gap",
       "subject": "del-pink|del-shiv-vihar|del-jaffrabad",
-      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "station-gap",
-      "subject": "del-violet|del-badarpur-border|del-badhkal-mor",
       "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
     },
     {

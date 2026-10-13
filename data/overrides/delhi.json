@@ -4,9 +4,9 @@
     "name": "Delhi",
     "bbox": [
       76.84,
-      28.4,
-      77.35,
-      28.88
+      28.25,
+      77.45,
+      28.92
     ],
     "operator": "DMRC",
     "phases": [
@@ -106,12 +106,15 @@
       "operator": "DMRC",
       "city_id": "delhi",
       "source": "dmrc+news",
-      "aliases": ["Silver Line", "Gold Line"]
+      "aliases": [
+        "Silver Line",
+        "Gold Line"
+      ]
     }
   ],
   "segments": [
     {
-      "osmId": 447214,
+      "osmId": 8037718,
       "segment_id": "del-red-seg-01",
       "line_id": "del-red",
       "line_name": "Red Line",
@@ -192,7 +195,7 @@
       "city_id": "delhi"
     },
     {
-      "osmId": 2535797,
+      "osmId": 8037705,
       "segment_id": "del-violet-seg-01",
       "line_id": "del-violet",
       "line_name": "Violet Line",
@@ -375,7 +378,11 @@
   "dedupeRadiusM": 350,
   "stationAliases": {
     "Ramakrishna Ashram Marg": "R K Ashram Marg",
-    "Seva Teerth": "Udyog Bhawan"
+    "Seva Teerth": "Udyog Bhawan",
+    "Dwarka - Kakrola": "Dwarka",
+    "tughlkabad": "Tughlakabad",
+    "Peera Garhi": "Peeragarhi",
+    "Badarpur border": "Badarpur Border"
   },
   "out_of_scope_line_ids": [],
   "out_of_scope_station_ids": [
@@ -401,10 +408,38 @@
     "Sector 53-54",
     "Sector 54 Chowk",
     "Sector 55–56",
+    "del-burari",
+    "del-jagatpur-wazirabad",
+    "del-khajuri-khas",
+    "del-yamuna-vihar",
+    "del-bhajanpura",
+    "del-soorghat",
+    "del-nanaksar-sonia-vihar",
+    "del-jharoda-majra",
+    "del-krishna-park-extension",
+    "del-noida-sector-143",
+    "del-noida-sector-144",
+    "del-noida-sector-137",
+    "del-nsez",
+    "del-noida-sector-101",
+    "del-noida-sector-81",
+    "del-noida-sector-76",
+    "del-noida-sector-142",
+    "del-noida-sector-70",
+    "del-rainbow",
+    "del-greater-noida-sector-4",
+    "del-noida-sector-83",
+    "del-noida-sector-145",
+    "del-noida-sector-51",
     "del-noida-sector-44",
     "del-noida-office",
     "Noida Sector 44",
     "Noida Office",
+    "del-guldhar",
+    "del-ghaziabad-2",
+    "del-peera-garhi",
+    "del-tughlkabad",
+    "del-badarpur-border",
     "del-new-delhi-airport-express-terminal",
     "New Delhi Airport Express Terminal",
     "del-kirti-nagar-2",
@@ -457,7 +492,9 @@
     "del-tigri",
     "del-tughlakabad-railway-colony",
     "del-vasantkunj-sector-d",
-    "del-west-enclave"
+    "del-west-enclave",
+    "del-tughlakabad-2",
+    "tughlkabad"
   ],
   "stationOverrides": {
     "Azadpur": {
@@ -474,7 +511,10 @@
       "references": [
         "https://www.delhimetrorail.com/network_map"
       ],
-      "last_verified": "2026-10-08"
+      "last_verified": "2026-10-08",
+      "line_ids": [
+        "del-yellow"
+      ]
     },
     "Saket": {
       "status": "operational",
@@ -546,7 +586,11 @@
       "references": [
         "https://www.delhimetrorail.com/network_map"
       ],
-      "last_verified": "2026-10-08"
+      "last_verified": "2026-10-08",
+      "line_ids": [
+        "del-yellow",
+        "del-airport"
+      ]
     },
     "Rajiv Chowk": {
       "layout": "underground",
@@ -641,7 +685,10 @@
       "references": [
         "https://www.delhimetrorail.com/network_map"
       ],
-      "last_verified": "2026-10-08"
+      "last_verified": "2026-10-08",
+      "line_ids": [
+        "del-violet"
+      ]
     },
     "ITO": {
       "layout": "underground",
@@ -704,7 +751,8 @@
       "references": [
         "https://www.delhimetrorail.com/network_map"
       ],
-      "last_verified": "2026-10-08"
+      "last_verified": "2026-10-08",
+      "status": "operational"
     },
     "Airport (T-3)": {
       "layout": "underground",
@@ -745,7 +793,12 @@
       "coordinates": [
         77.24955,
         28.6206
-      ]
+      ],
+      "line_ids": [
+        "del-blue"
+      ],
+      "status": "operational",
+      "phase": "I"
     },
     "Najafgarh": {
       "layout": "underground",
@@ -760,6 +813,88 @@
         "https://www.delhimetrorail.com/network_map"
       ],
       "last_verified": "2026-10-08"
+    },
+    "Tughlakabad": {
+      "line_ids": [
+        "del-violet"
+      ]
+    },
+    "Madhuban Chowk": {
+      "line_ids": [
+        "del-red"
+      ]
+    },
+    "Majlis Park": {
+      "line_ids": [
+        "del-pink"
+      ]
+    },
+    "Inderlok": {
+      "line_ids": [
+        "del-red",
+        "del-green"
+      ]
+    },
+    "Terminal 1 IGI Airport": {
+      "line_ids": [
+        "del-magenta"
+      ]
+    },
+    "Chirag Delhi": {
+      "line_ids": [
+        "del-magenta"
+      ]
+    },
+    "Lajpat Nagar": {
+      "line_ids": [
+        "del-violet",
+        "del-pink"
+      ]
+    },
+    "Moolchand": {
+      "line_ids": [
+        "del-violet"
+      ]
+    },
+    "Noida Sector 34": {
+      "line_ids": [
+        "del-blue"
+      ],
+      "status": "operational",
+      "phase": "I",
+      "coordinates": [
+        77.36352,
+        28.58023
+      ]
+    },
+    "Noida Golf Course": {
+      "line_ids": [
+        "del-blue"
+      ],
+      "status": "operational",
+      "phase": "I",
+      "coordinates": [
+        77.3464,
+        28.56743
+      ]
+    },
+    "Rajouri Garden": {
+      "line_ids": [
+        "del-blue",
+        "del-pink"
+      ],
+      "is_interchange": true
+    },
+    "Sikanderpur": {
+      "line_ids": [
+        "del-yellow"
+      ],
+      "is_interchange": true,
+      "status": "operational",
+      "coordinates": [
+        77.09278,
+        28.48194
+      ]
     }
   }
 }

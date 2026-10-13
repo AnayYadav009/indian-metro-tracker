@@ -118,23 +118,6 @@
     ]
   },
   {
-    "id": "delhi",
-    "name": "Delhi",
-    "bbox": [
-      76.84,
-      28.4,
-      77.35,
-      28.88
-    ],
-    "operator": "DMRC",
-    "phases": [
-      "I",
-      "II",
-      "III",
-      "IV"
-    ]
-  },
-  {
     "id": "hyderabad",
     "name": "Hyderabad",
     "bbox": [
@@ -181,5 +164,22 @@
       "2"
     ],
     "network_id": "noida-metro"
+  },
+  {
+    "id": "delhi",
+    "name": "Delhi",
+    "bbox": [
+      76.84,
+      28.25,
+      77.45,
+      28.92
+    ],
+    "operator": "DMRC",
+    "phases": [
+      "I",
+      "II",
+      "III",
+      "IV"
+    ]
   }
 ]

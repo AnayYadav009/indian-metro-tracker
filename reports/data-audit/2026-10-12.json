@@ -120,23 +120,6 @@
       }
     },
     {
-      "city_id": "delhi",
-      "city_name": "Delhi",
-      "lines": 10,
-      "segments": 16,
-      "stations": 228,
-      "segmentSources": {
-        "osm": 16
-      },
-      "stationSources": {
-        "osm": 228
-      },
-      "lineSources": {
-        "osm+dmrc": 9,
-        "dmrc+news": 1
-      }
-    },
-    {
       "city_id": "hyderabad",
       "city_name": "Hyderabad",
       "lines": 3,
@@ -183,6 +166,23 @@
       },
       "lineSources": {
         "osm+nmrc": 1
+      }
+    },
+    {
+      "city_id": "delhi",
+      "city_name": "Delhi",
+      "lines": 10,
+      "segments": 16,
+      "stations": 240,
+      "segmentSources": {
+        "osm": 16
+      },
+      "stationSources": {
+        "osm": 240
+      },
+      "lineSources": {
+        "osm+dmrc": 9,
+        "dmrc+news": 1
       }
     }
   ],
@@ -1277,14 +1277,14 @@
       "rule": "consecutive-segment-gap",
       "severity": "warn",
       "subject": "del-blue-seg-01|del-blue-seg-02",
-      "message": "Segments of line 'del-blue' have nearest endpoint gap of 9184 m (threshold: 150 m)"
+      "message": "Segments of line 'del-blue' have nearest endpoint gap of 4217 m (threshold: 150 m)"
     },
     {
       "city_id": "delhi",
       "rule": "consecutive-segment-gap",
       "severity": "warn",
       "subject": "del-golden-branch-01|del-golden-seg-01",
-      "message": "Segments of line 'del-golden' have nearest endpoint gap of 10682 m (threshold: 150 m)"
+      "message": "Segments of line 'del-golden' have nearest endpoint gap of 9836 m (threshold: 150 m)"
     },
     {
       "city_id": "delhi",
@@ -1298,21 +1298,21 @@
       "rule": "consecutive-segment-gap",
       "severity": "warn",
       "subject": "del-magenta-seg-01|del-magenta-seg-02",
-      "message": "Segments of line 'del-magenta' have nearest endpoint gap of 6501 m (threshold: 150 m)"
+      "message": "Segments of line 'del-magenta' have nearest endpoint gap of 8571 m (threshold: 150 m)"
     },
     {
       "city_id": "delhi",
       "rule": "consecutive-segment-gap",
       "severity": "warn",
       "subject": "del-magenta-seg-01|del-magenta-seg-03",
-      "message": "Segments of line 'del-magenta' have nearest endpoint gap of 8869 m (threshold: 150 m)"
+      "message": "Segments of line 'del-magenta' have nearest endpoint gap of 8974 m (threshold: 150 m)"
     },
     {
       "city_id": "delhi",
       "rule": "consecutive-segment-gap",
       "severity": "warn",
       "subject": "del-magenta-seg-02|del-magenta-seg-03",
-      "message": "Segments of line 'del-magenta' have nearest endpoint gap of 5731 m (threshold: 150 m)"
+      "message": "Segments of line 'del-magenta' have nearest endpoint gap of 5301 m (threshold: 150 m)"
     },
     {
       "city_id": "delhi",
@@ -1360,6 +1360,13 @@
       "city_id": "delhi",
       "rule": "future-date-unconfirmed",
       "severity": "warn",
+      "subject": "del-ghaziabad",
+      "message": "Future station has no verified expected completion date"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "future-date-unconfirmed",
+      "severity": "warn",
       "subject": "del-golden-branch-01",
       "message": "Future segment has no verified expected completion date"
     },
@@ -1375,13 +1382,6 @@
       "rule": "future-date-unconfirmed",
       "severity": "warn",
       "subject": "del-haiderpur-village",
-      "message": "Future station has no verified expected completion date"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "future-date-unconfirmed",
-      "severity": "warn",
-      "subject": "del-indraprastha",
       "message": "Future station has no verified expected completion date"
     },
     {
@@ -1458,14 +1458,14 @@
       "city_id": "delhi",
       "rule": "future-record-no-reference",
       "severity": "warn",
-      "subject": "del-haiderpur-village",
+      "subject": "del-ghaziabad",
       "message": "Future station has no source reference"
     },
     {
       "city_id": "delhi",
       "rule": "future-record-no-reference",
       "severity": "warn",
-      "subject": "del-indraprastha",
+      "subject": "del-haiderpur-village",
       "message": "Future station has no source reference"
     },
     {
@@ -1487,91 +1487,49 @@
       "rule": "ground-truth-length",
       "severity": "warn",
       "subject": "del-airport",
-      "message": "Operational length: computed 23.80 km vs reference 24.69 km (3.6%) (unverified reference)"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "ground-truth-length",
-      "severity": "warn",
-      "subject": "del-blue",
-      "message": "Operational length: computed 55.68 km vs reference 65.35 km (14.8%) (unverified reference)"
+      "message": "Operational length: computed 23.80 km vs reference 24.69 km (3.6%)"
     },
     {
       "city_id": "delhi",
       "rule": "ground-truth-length",
       "severity": "warn",
       "subject": "del-grey",
-      "message": "Operational length: computed 6.04 km vs reference 5.19 km (16.3%) (unverified reference)"
+      "message": "Operational length: computed 6.04 km vs reference 5.19 km (16.3%)"
     },
     {
       "city_id": "delhi",
       "rule": "ground-truth-length",
       "severity": "warn",
       "subject": "del-magenta",
-      "message": "Operational length: computed 37.93 km vs reference 50.18 km (24.4%) (unverified reference)"
+      "message": "Operational length: computed 35.75 km vs reference 37.46 km (4.6%)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "del-pink",
+      "message": "Operational length: computed 61.43 km vs reference 59.58 km (3.1%)"
     },
     {
       "city_id": "delhi",
       "rule": "ground-truth-length",
       "severity": "warn",
       "subject": "del-red",
-      "message": "Operational length: computed 26.54 km vs reference 34.55 km (23.2%) (unverified reference)"
+      "message": "Operational length: computed 33.39 km vs reference 34.55 km (3.4%)"
     },
     {
       "city_id": "delhi",
       "rule": "ground-truth-length",
       "severity": "warn",
       "subject": "del-violet",
-      "message": "Operational length: computed 36.84 km vs reference 46.34 km (20.5%) (unverified reference)"
+      "message": "Operational length: computed 44.74 km vs reference 46.34 km (3.5%)"
     },
     {
       "city_id": "delhi",
       "rule": "ground-truth-length",
       "severity": "warn",
       "subject": "del-yellow",
-      "message": "Operational length: computed 47.39 km vs reference 49.02 km (3.3%) (unverified reference)"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "ground-truth-station-count",
-      "severity": "warn",
-      "subject": "del-blue",
-      "message": "Operational station count: data has 49, reference has 58 (unverified reference)"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "ground-truth-station-count",
-      "severity": "warn",
-      "subject": "del-golden",
-      "message": "Operational station count: data has 5, reference has 0 (unverified reference)"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "ground-truth-station-count",
-      "severity": "warn",
-      "subject": "del-green",
-      "message": "Operational station count: data has 25, reference has 24 (unverified reference)"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "ground-truth-station-count",
-      "severity": "warn",
-      "subject": "del-magenta",
-      "message": "Operational station count: data has 32, reference has 33 (unverified reference)"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "ground-truth-station-count",
-      "severity": "warn",
-      "subject": "del-red",
-      "message": "Operational station count: data has 23, reference has 29 (unverified reference)"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "ground-truth-station-count",
-      "severity": "warn",
-      "subject": "del-violet",
-      "message": "Operational station count: data has 26, reference has 34 (unverified reference)"
+      "message": "Operational length: computed 47.39 km vs reference 49.02 km (3.3%)"
     },
     {
       "city_id": "delhi",
@@ -1626,6 +1584,13 @@
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
       "severity": "warn",
+      "subject": "del-arthala",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
       "subject": "del-ashok-park-main",
       "message": "Station has unverified layout (requires operator station list verification)"
     },
@@ -1640,7 +1605,7 @@
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
       "severity": "warn",
-      "subject": "del-badarpur-border",
+      "subject": "del-badarpur",
       "message": "Station has unverified layout (requires operator station list verification)"
     },
     {
@@ -1668,7 +1633,7 @@
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
       "severity": "warn",
-      "subject": "del-bhajanpura",
+      "subject": "del-bata-chowk",
       "message": "Station has unverified layout (requires operator station list verification)"
     },
     {
@@ -1697,13 +1662,6 @@
       "rule": "layout/suspect-default-elevated",
       "severity": "warn",
       "subject": "del-brigadier-hoshiyar-singh",
-      "message": "Station has unverified layout (requires operator station list verification)"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "layout/suspect-default-elevated",
-      "severity": "warn",
-      "subject": "del-burari",
       "message": "Station has unverified layout (requires operator station list verification)"
     },
     {
@@ -1773,7 +1731,7 @@
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
       "severity": "warn",
-      "subject": "del-dwarka-kakrola",
+      "subject": "del-dwarka",
       "message": "Station has unverified layout (requires operator station list verification)"
     },
     {
@@ -1857,7 +1815,21 @@
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
       "severity": "warn",
+      "subject": "del-escorts-mujesar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
       "subject": "del-esi-basaidarapur",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-ghaziabad",
       "message": "Station has unverified layout (requires operator station list verification)"
     },
     {
@@ -1885,6 +1857,13 @@
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
       "severity": "warn",
+      "subject": "del-govind-puri",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
       "subject": "del-greater-kailash",
       "message": "Station has unverified layout (requires operator station list verification)"
     },
@@ -1900,6 +1879,20 @@
       "rule": "layout/suspect-default-elevated",
       "severity": "warn",
       "subject": "del-haiderpur-village",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-harkesh-nagar-okhla",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-hindon-river",
       "message": "Station has unverified layout (requires operator station list verification)"
     },
     {
@@ -1955,13 +1948,6 @@
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
       "severity": "warn",
-      "subject": "del-jagatpur-wazirabad",
-      "message": "Station has unverified layout (requires operator station list verification)"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "layout/suspect-default-elevated",
-      "severity": "warn",
       "subject": "del-jahangirpuri",
       "message": "Station has unverified layout (requires operator station list verification)"
     },
@@ -2005,13 +1991,6 @@
       "rule": "layout/suspect-default-elevated",
       "severity": "warn",
       "subject": "del-jhandewalan",
-      "message": "Station has unverified layout (requires operator station list verification)"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "layout/suspect-default-elevated",
-      "severity": "warn",
-      "subject": "del-jharoda-majra",
       "message": "Station has unverified layout (requires operator station list verification)"
     },
     {
@@ -2095,13 +2074,6 @@
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
       "severity": "warn",
-      "subject": "del-khajuri-khas",
-      "message": "Station has unverified layout (requires operator station list verification)"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "layout/suspect-default-elevated",
-      "severity": "warn",
       "subject": "del-kirti-nagar",
       "message": "Station has unverified layout (requires operator station list verification)"
     },
@@ -2117,13 +2089,6 @@
       "rule": "layout/suspect-default-elevated",
       "severity": "warn",
       "subject": "del-krishna-nagar",
-      "message": "Station has unverified layout (requires operator station list verification)"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "layout/suspect-default-elevated",
-      "severity": "warn",
-      "subject": "del-krishna-park-extension",
       "message": "Station has unverified layout (requires operator station list verification)"
     },
     {
@@ -2214,6 +2179,13 @@
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
       "severity": "warn",
+      "subject": "del-mewala-maharajpur",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
       "subject": "del-millennium-city-centre-gurugram",
       "message": "Station has unverified layout (requires operator station list verification)"
     },
@@ -2229,6 +2201,13 @@
       "rule": "layout/suspect-default-elevated",
       "severity": "warn",
       "subject": "del-mohan-estate",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-mohan-nagar",
       "message": "Station has unverified layout (requires operator station list verification)"
     },
     {
@@ -2270,13 +2249,6 @@
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
       "severity": "warn",
-      "subject": "del-nanaksar-sonia-vihar",
-      "message": "Station has unverified layout (requires operator station list verification)"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "layout/suspect-default-elevated",
-      "severity": "warn",
       "subject": "del-nangli",
       "message": "Station has unverified layout (requires operator station list verification)"
     },
@@ -2312,6 +2284,13 @@
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
       "severity": "warn",
+      "subject": "del-neelam-chowk-ajronda",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
       "subject": "del-nehru-enclave",
       "message": "Station has unverified layout (requires operator station list verification)"
     },
@@ -2340,7 +2319,28 @@
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
       "severity": "warn",
+      "subject": "del-nhpc-chowk",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
       "subject": "del-nirman-vihar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-noida-city-centre",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-noida-electronic-city",
       "message": "Station has unverified layout (requires operator station list verification)"
     },
     {
@@ -2369,6 +2369,41 @@
       "rule": "layout/suspect-default-elevated",
       "severity": "warn",
       "subject": "del-noida-sector-18",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-noida-sector-34",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-noida-sector-52",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-noida-sector-59",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-noida-sector-61",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-noida-sector-62",
       "message": "Station has unverified layout (requires operator station list verification)"
     },
     {
@@ -2452,13 +2487,6 @@
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
       "severity": "warn",
-      "subject": "del-peera-garhi",
-      "message": "Station has unverified layout (requires operator station list verification)"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "layout/suspect-default-elevated",
-      "severity": "warn",
       "subject": "del-peeragarhi",
       "message": "Station has unverified layout (requires operator station list verification)"
     },
@@ -2529,7 +2557,21 @@
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
       "severity": "warn",
+      "subject": "del-raja-nahar-singh",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
       "subject": "del-rajdhani-park",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-rajendra-nagar",
       "message": "Station has unverified layout (requires operator station list verification)"
     },
     {
@@ -2599,6 +2641,20 @@
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
       "severity": "warn",
+      "subject": "del-sant-surdas-sihi",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-sarai",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
       "subject": "del-sarai-kale-khan-nizamuddin",
       "message": "Station has unverified layout (requires operator station list verification)"
     },
@@ -2627,6 +2683,13 @@
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
       "severity": "warn",
+      "subject": "del-sector-28",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
       "subject": "del-seelampur",
       "message": "Station has unverified layout (requires operator station list verification)"
     },
@@ -2649,6 +2712,13 @@
       "rule": "layout/suspect-default-elevated",
       "severity": "warn",
       "subject": "del-shaheed-nagar",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-shaheed-sthal",
       "message": "Station has unverified layout (requires operator station list verification)"
     },
     {
@@ -2711,6 +2781,13 @@
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
       "severity": "warn",
+      "subject": "del-shyam-park",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
       "subject": "del-sikanderpur",
       "message": "Station has unverified layout (requires operator station list verification)"
     },
@@ -2719,13 +2796,6 @@
       "rule": "layout/suspect-default-elevated",
       "severity": "warn",
       "subject": "del-sir-m-vishweshwaraiah-moti-bagh",
-      "message": "Station has unverified layout (requires operator station list verification)"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "layout/suspect-default-elevated",
-      "severity": "warn",
-      "subject": "del-soorghat",
       "message": "Station has unverified layout (requires operator station list verification)"
     },
     {
@@ -2830,13 +2900,6 @@
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
       "severity": "warn",
-      "subject": "del-tughlkabad",
-      "message": "Station has unverified layout (requires operator station list verification)"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "layout/suspect-default-elevated",
-      "severity": "warn",
       "subject": "del-udyog-nagar",
       "message": "Station has unverified layout (requires operator station list verification)"
     },
@@ -2887,13 +2950,6 @@
       "rule": "layout/suspect-default-elevated",
       "severity": "warn",
       "subject": "del-yamuna-bank",
-      "message": "Station has unverified layout (requires operator station list verification)"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "layout/suspect-default-elevated",
-      "severity": "warn",
-      "subject": "del-yamuna-vihar",
       "message": "Station has unverified layout (requires operator station list verification)"
     },
     {
@@ -2984,36 +3040,36 @@
       "city_id": "delhi",
       "rule": "reference-station-missing",
       "severity": "warn",
-      "subject": "del-blue",
-      "message": "Terminal 'Noida Electronic City' from reference not found in data station names (unverified reference)"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "reference-station-missing",
-      "severity": "warn",
       "subject": "del-golden",
       "message": "Terminal 'Tughlakabad' from reference not found in data station names (unverified reference)"
     },
     {
       "city_id": "delhi",
-      "rule": "reference-station-missing",
+      "rule": "segment-end-far-from-station",
       "severity": "warn",
-      "subject": "del-grey",
-      "message": "Terminal 'Dwarka' from reference not found in data station names (unverified reference)"
+      "subject": "del-golden-branch-01",
+      "message": "Segment start is 5203 m from nearest station of line 'del-golden' (threshold: 150 m)"
     },
     {
       "city_id": "delhi",
-      "rule": "reference-station-missing",
+      "rule": "segment-end-far-from-station",
       "severity": "warn",
-      "subject": "del-red",
-      "message": "Terminal 'Shaheed Sthal' from reference not found in data station names (unverified reference)"
+      "subject": "del-golden-branch-01",
+      "message": "Segment end is 995 m from nearest station of line 'del-golden' (threshold: 150 m)"
     },
     {
       "city_id": "delhi",
-      "rule": "reference-station-missing",
+      "rule": "segment-end-far-from-station",
       "severity": "warn",
-      "subject": "del-violet",
-      "message": "Terminal 'Raja Nahar Singh' from reference not found in data station names (unverified reference)"
+      "subject": "del-magenta-seg-03",
+      "message": "Segment start is 6885 m from nearest station of line 'del-magenta' (threshold: 150 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
+      "subject": "del-magenta-seg-03",
+      "message": "Segment end is 5301 m from nearest station of line 'del-magenta' (threshold: 150 m)"
     },
     {
       "city_id": "delhi",
@@ -3048,7 +3104,7 @@
       "rule": "station-far-from-nearest-segment",
       "severity": "warn",
       "subject": "del-andrews-ganj",
-      "message": "Station is 198 m from nearest segment of line 'del-violet' (threshold: 75 m)"
+      "message": "Station is 195 m from nearest segment of line 'del-violet' (threshold: 75 m)"
     },
     {
       "city_id": "delhi",
@@ -3056,13 +3112,6 @@
       "severity": "warn",
       "subject": "del-azadpur",
       "message": "Station is 206 m from nearest segment of line 'del-pink' (threshold: 75 m)"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "station-far-from-nearest-segment",
-      "severity": "warn",
-      "subject": "del-delhi-gate",
-      "message": "Station is 95 m from nearest segment of line 'del-magenta' (threshold: 75 m)"
     },
     {
       "city_id": "delhi",
@@ -3082,7 +3131,7 @@
       "city_id": "delhi",
       "rule": "station-far-from-nearest-segment",
       "severity": "warn",
-      "subject": "del-dwarka-kakrola",
+      "subject": "del-dwarka",
       "message": "Station is 116 m from nearest segment of line 'del-grey' (threshold: 75 m)"
     },
     {
@@ -3110,13 +3159,6 @@
       "city_id": "delhi",
       "rule": "station-far-from-nearest-segment",
       "severity": "warn",
-      "subject": "del-madhuban-chowk",
-      "message": "Station is 168 m from nearest segment of line 'del-magenta' (threshold: 75 m)"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "station-far-from-nearest-segment",
-      "severity": "warn",
       "subject": "del-mayur-vihar-i",
       "message": "Station is 102 m from nearest segment of line 'del-pink' (threshold: 75 m)"
     },
@@ -3131,15 +3173,22 @@
       "city_id": "delhi",
       "rule": "station-far-from-nearest-segment",
       "severity": "warn",
-      "subject": "del-new-delhi",
-      "message": "Station is 156 m from nearest segment of line 'del-magenta' (threshold: 75 m)"
+      "subject": "del-punjabi-bagh-west",
+      "message": "Station is 154 m from nearest segment of line 'del-green' (threshold: 75 m)"
     },
     {
       "city_id": "delhi",
       "rule": "station-far-from-nearest-segment",
       "severity": "warn",
-      "subject": "del-punjabi-bagh-west",
-      "message": "Station is 154 m from nearest segment of line 'del-green' (threshold: 75 m)"
+      "subject": "del-rajouri-garden",
+      "message": "Station is 229 m from nearest segment of line 'del-pink' (threshold: 75 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "station-far-from-nearest-segment",
+      "severity": "warn",
+      "subject": "del-sikanderpur",
+      "message": "Station is 81 m from nearest segment of line 'del-yellow' (threshold: 75 m)"
     },
     {
       "city_id": "delhi",
@@ -3173,13 +3222,6 @@
       "city_id": "delhi",
       "rule": "station-gap",
       "severity": "warn",
-      "subject": "del-blue|del-akshardham|del-supreme-court",
-      "message": "Stations are 3670 m apart (threshold: 3000 m)"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "station-gap",
-      "severity": "warn",
       "subject": "del-blue|del-dwarka-sector-21|del-yamuna-bank",
       "message": "Stations are 21914 m apart (threshold: 3000 m)"
     },
@@ -3187,8 +3229,8 @@
       "city_id": "delhi",
       "rule": "station-gap",
       "severity": "warn",
-      "subject": "del-golden|del-terminal-1-igi-airport|del-chirag-delhi",
-      "message": "Stations are 10841 m apart (threshold: 3000 m)"
+      "subject": "del-golden|del-domestic-airport|del-andrews-ganj",
+      "message": "Stations are 10827 m apart (threshold: 3000 m)"
     },
     {
       "city_id": "delhi",
@@ -3201,29 +3243,15 @@
       "city_id": "delhi",
       "rule": "station-gap",
       "severity": "warn",
-      "subject": "del-grey|del-dwarka-kakrola|del-najafgarh",
+      "subject": "del-grey|del-dwarka|del-najafgarh",
       "message": "Stations are 3547 m apart (threshold: 3000 m)"
     },
     {
       "city_id": "delhi",
       "rule": "station-gap",
       "severity": "warn",
-      "subject": "del-magenta|del-deepali-chowk|del-indraprastha",
-      "message": "Stations are 15437 m apart (threshold: 3000 m)"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "station-gap",
-      "severity": "warn",
-      "subject": "del-magenta|del-krishna-park-extension|del-majlis-park",
-      "message": "Stations are 12765 m apart (threshold: 3000 m)"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "station-gap",
-      "severity": "warn",
-      "subject": "del-magenta|del-new-delhi|del-inderlok",
-      "message": "Stations are 6111 m apart (threshold: 3000 m)"
+      "subject": "del-magenta|del-janakpuri-west|del-bhalaswa",
+      "message": "Stations are 14822 m apart (threshold: 3000 m)"
     },
     {
       "city_id": "delhi",
@@ -3255,17 +3283,10 @@
     },
     {
       "city_id": "delhi",
-      "rule": "station-gap",
-      "severity": "warn",
-      "subject": "del-violet|del-badarpur-border|del-badhkal-mor",
-      "message": "Stations are 8166 m apart (threshold: 3000 m)"
-    },
-    {
-      "city_id": "delhi",
       "rule": "last-verified-distribution",
       "severity": "info",
       "subject": "delhi",
-      "message": "last_verified distribution: 2026-10-08: 38; 2026-10-10: 2; missing: 204"
+      "message": "last_verified distribution: 2026-10-08: 38; 2026-10-10: 2; missing: 216"
     },
     {
       "city_id": "gurugram",
