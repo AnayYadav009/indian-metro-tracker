@@ -30,18 +30,6 @@
       "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
-      "city_id": "pune",
-      "rule": "segment-self-intersecting",
-      "subject": "pun-line-3-seg-01",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "pune",
-      "rule": "segment-end-far-from-station",
-      "subject": "pun-line-3-seg-01",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
       "city_id": "bengaluru",
       "rule": "ground-truth-length",
       "subject": "blr-yellow",
@@ -246,30 +234,6 @@
       "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
-      "city_id": "gurugram",
-      "rule": "polyline-hook",
-      "subject": "gur-rapid-seg-01",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "hyderabad",
-      "rule": "consecutive-segment-gap",
-      "subject": "hyd-green-seg-01|hyd-green-seg-02",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "hyderabad",
-      "rule": "segment-end-far-from-station",
-      "subject": "hyd-green-seg-02",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "hyderabad",
-      "rule": "segment-end-far-from-station",
-      "subject": "hyd-green-seg-02",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
       "city_id": "mumbai",
       "rule": "consecutive-segment-gap",
       "subject": "mum-line-4-seg-01|mum-planned-seg-01",
@@ -339,12 +303,6 @@
       "city_id": "mumbai",
       "rule": "segment-end-far-from-station",
       "subject": "mum-planned-seg-01",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "noida",
-      "rule": "consecutive-segment-gap",
-      "subject": "noi-aqua-seg-01|noi-aqua-seg-02",
       "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
@@ -3593,6 +3551,48 @@
       "rule": "station-far-from-nearest-segment",
       "subject": "pune-district-court",
       "reason": "Physical station entrance/concourse offset from track centerline within tolerances"
+    },
+    {
+      "city_id": "pune",
+      "rule": "segment-self-intersecting",
+      "subject": "pun-line-3-seg-01",
+      "reason": "Line 3 under construction alignment follows Hinjawadi flyover complex geometry."
+    },
+    {
+      "city_id": "pune",
+      "rule": "segment-end-far-from-station",
+      "subject": "pun-line-3-seg-01",
+      "reason": "Line 3 under construction terminals Hinjawadi and Civil Court not yet commissioned."
+    },
+    {
+      "city_id": "gurugram",
+      "rule": "polyline-hook",
+      "subject": "gur-rapid-seg-01",
+      "reason": "Rapid Metro Cyber City loop track layout contains authentic circular reversal geometry."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "consecutive-segment-gap",
+      "subject": "hyd-green-seg-01|hyd-green-seg-02",
+      "reason": "Old City Falaknuma extension branches from MGBS across Musi river corridor."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "segment-end-far-from-station",
+      "subject": "hyd-green-seg-02",
+      "reason": "Old City Falaknuma extension under pre-construction with stations not yet open."
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "segment-end-far-from-station",
+      "subject": "hyd-green-seg-02",
+      "reason": "Old City Falaknuma extension under pre-construction with stations not yet open."
+    },
+    {
+      "city_id": "noida",
+      "rule": "consecutive-segment-gap",
+      "subject": "noi-aqua-seg-01|noi-aqua-seg-02",
+      "reason": "Approved Sector 142 to Botanical Garden spur branches from intermediate station Sector 142."
     }
   ]
 }
