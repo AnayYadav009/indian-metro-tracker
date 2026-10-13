@@ -141,7 +141,7 @@
     "name": "Line 1 (Blue)",
     "city": "Mumbai",
     "color": "#0072CE",
-    "operator": "MMRDA",
+    "operator": "MMOPL",
     "city_id": "mumbai",
     "source": "osm+mmrda"
   },
@@ -150,7 +150,7 @@
     "name": "Line 2A (Yellow)",
     "city": "Mumbai",
     "color": "#FFD700",
-    "operator": "MMRDA",
+    "operator": "MMMOCL",
     "city_id": "mumbai",
     "source": "osm+mmrda"
   },
@@ -159,7 +159,7 @@
     "name": "Line 7 (Red)",
     "city": "Mumbai",
     "color": "#ED1C24",
-    "operator": "MMRDA",
+    "operator": "MMMOCL",
     "city_id": "mumbai",
     "source": "osm+mmrda"
   },
@@ -168,7 +168,7 @@
     "name": "Line 3 (Aqua)",
     "city": "Mumbai",
     "color": "#00A3E0",
-    "operator": "MMRDA",
+    "operator": "MMRCL",
     "city_id": "mumbai",
     "source": "osm+mmrda"
   },
@@ -177,7 +177,7 @@
     "name": "Line 4 (Green)",
     "city": "Mumbai",
     "color": "#00B140",
-    "operator": "MMRDA",
+    "operator": "MMMOCL",
     "city_id": "mumbai",
     "source": "osm+mmrda"
   },
@@ -186,7 +186,7 @@
     "name": "Line 2B (Yellow Ext)",
     "city": "Mumbai",
     "color": "#FFC72C",
-    "operator": "MMRDA",
+    "operator": "MMMOCL",
     "city_id": "mumbai",
     "source": "osm+mmrda"
   },

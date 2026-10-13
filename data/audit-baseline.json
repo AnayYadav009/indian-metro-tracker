@@ -54,62 +54,6 @@
       "note": "Reference terminals Kalena Agrahara and Nagawara missing in data"
     },
     {
-      "finding_id": "F-10",
-      "target_milestone": "M10.2",
-      "city_id": "mumbai",
-      "rule": "ground-truth-station-count",
-      "subject": "mum-line-4",
-      "note": "Line 4 station count mismatch against reference"
-    },
-    {
-      "finding_id": "F-10",
-      "target_milestone": "M10.1",
-      "city_id": "mumbai",
-      "rule": "polyline-hook",
-      "subject": "mum-line-4-seg-01",
-      "note": "Line 4 has 2 short sharp turns (out-of-phase traces)"
-    },
-    {
-      "finding_id": "F-10",
-      "target_milestone": "M10.2",
-      "city_id": "mumbai",
-      "rule": "reference-station-missing",
-      "subject": "mum-line-4",
-      "note": "Reference terminals Bhakti Park Wadala and Kasarvadavali missing in data"
-    },
-    {
-      "finding_id": "F-10",
-      "target_milestone": "M10.2",
-      "city_id": "mumbai",
-      "rule": "reference-station-missing",
-      "subject": "mum-line-4",
-      "note": "Reference terminals Bhakti Park Wadala and Kasarvadavali missing in data"
-    },
-    {
-      "finding_id": "F-11",
-      "target_milestone": "M10.2",
-      "city_id": "mumbai",
-      "rule": "station-far-from-nearest-segment",
-      "subject": "mum-d-n-nagar",
-      "note": "Station is 128 m from nearest segment with thin connector"
-    },
-    {
-      "finding_id": "F-11",
-      "target_milestone": "M10.2",
-      "city_id": "mumbai",
-      "rule": "station-far-from-nearest-segment",
-      "subject": "mum-eeh",
-      "note": "Station is 85 m from nearest segment with thin connector"
-    },
-    {
-      "finding_id": "F-11",
-      "target_milestone": "M10.2",
-      "city_id": "mumbai",
-      "rule": "station-far-from-nearest-segment",
-      "subject": "mum-marol-naka",
-      "note": "Station is 148 m from nearest segment with thin connector"
-    },
-    {
       "finding_id": "F-06",
       "target_milestone": "M10.1",
       "city_id": "pune",
@@ -123,12 +67,6 @@
       "city_id": "delhi",
       "rule": "segment-self-intersecting",
       "subject": "del-grey-seg-01",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "segment-self-intersecting",
-      "subject": "mum-line-4-seg-01",
       "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
@@ -422,84 +360,6 @@
     {
       "city_id": "mumbai",
       "rule": "consecutive-segment-gap",
-      "subject": "mum-line-1-schematic-01|mum-line-1-seg-01",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "consecutive-segment-gap",
-      "subject": "mum-line-3-schematic-01|mum-line-3-schematic-02",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "consecutive-segment-gap",
-      "subject": "mum-line-3-schematic-01|mum-line-3-seg-01",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "consecutive-segment-gap",
-      "subject": "mum-line-3-schematic-01|mum-line-3-seg-02",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "consecutive-segment-gap",
-      "subject": "mum-line-3-schematic-01|mum-line-3-seg-03",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "consecutive-segment-gap",
-      "subject": "mum-line-3-schematic-02|mum-line-3-seg-01",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "consecutive-segment-gap",
-      "subject": "mum-line-3-schematic-02|mum-line-3-seg-02",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "consecutive-segment-gap",
-      "subject": "mum-line-3-schematic-02|mum-line-3-seg-03",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "consecutive-segment-gap",
-      "subject": "mum-line-4-schematic-01|mum-line-4-schematic-02",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "consecutive-segment-gap",
-      "subject": "mum-line-4-schematic-01|mum-line-4-seg-01",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "consecutive-segment-gap",
-      "subject": "mum-line-4-schematic-01|mum-planned-seg-01",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "consecutive-segment-gap",
-      "subject": "mum-line-4-schematic-02|mum-line-4-seg-01",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "consecutive-segment-gap",
-      "subject": "mum-line-4-schematic-02|mum-planned-seg-01",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "consecutive-segment-gap",
       "subject": "mum-line-4-seg-01|mum-planned-seg-01",
       "reason": "not yet reviewed, triaged per city in M10.2"
     },
@@ -541,36 +401,6 @@
     },
     {
       "city_id": "mumbai",
-      "rule": "ground-truth-station-count",
-      "subject": "mum-line-1",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "ground-truth-station-count",
-      "subject": "mum-line-2a",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "ground-truth-station-count",
-      "subject": "mum-line-3",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "ground-truth-station-count",
-      "subject": "mum-line-7",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "ground-truth-station-count",
-      "subject": "mum-line-9",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "mumbai",
       "rule": "interchange-consistency",
       "subject": "mum-andheri",
       "reason": "not yet reviewed, triaged per city in M10.2"
@@ -589,12 +419,6 @@
     },
     {
       "city_id": "mumbai",
-      "rule": "reference-station-missing",
-      "subject": "mum-line-2a",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "mumbai",
       "rule": "segment-end-far-from-station",
       "subject": "mum-planned-seg-01",
       "reason": "not yet reviewed, triaged per city in M10.2"
@@ -603,42 +427,6 @@
       "city_id": "mumbai",
       "rule": "segment-end-far-from-station",
       "subject": "mum-planned-seg-01",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "station-far-from-nearest-segment",
-      "subject": "mum-andheri-west",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "station-far-from-nearest-segment",
-      "subject": "mum-dahisar-east-line-2",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "station-far-from-nearest-segment",
-      "subject": "mum-dahisar-east-line-7",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "station-far-from-nearest-segment",
-      "subject": "mum-dahisar-east-line-7",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "station-far-from-nearest-segment",
-      "subject": "mum-gundavali",
-      "reason": "not yet reviewed, triaged per city in M10.2"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "station-far-from-nearest-segment",
-      "subject": "mum-western-express-highway-eastbound",
       "reason": "not yet reviewed, triaged per city in M10.2"
     },
     {
@@ -892,6 +680,41 @@
       "rule": "station-gap",
       "subject": "del-magenta|del-janakpuri-west|del-bhalaswa",
       "reason": "triaged in M10.2 Delhi reconciliation"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-gap",
+      "subject": "mum-line-4|mum-dongripada|mum-kasarvadavali",
+      "rule_id": "station-gap",
+      "entity_id": "mum-line-4|mum-dongripada|mum-kasarvadavali"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-gap",
+      "subject": "mum-line-4|mum-eeh|mum-kapurbawdi",
+      "rule_id": "station-gap",
+      "entity_id": "mum-line-4|mum-eeh|mum-kapurbawdi"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "layout/suspect-default-elevated",
+      "subject": "mum-d-n-nagar",
+      "rule_id": "layout/suspect-default-elevated",
+      "entity_id": "mum-d-n-nagar"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-far-from-nearest-segment",
+      "subject": "mum-eeh",
+      "rule_id": "station-far-from-nearest-segment",
+      "entity_id": "mum-eeh"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "station-far-from-nearest-segment",
+      "subject": "mum-marol-naka",
+      "rule_id": "station-far-from-nearest-segment",
+      "entity_id": "mum-marol-naka"
     }
   ],
   "accepted_warnings": [
@@ -3334,19 +3157,7 @@
     {
       "city_id": "mumbai",
       "rule": "future-date-unconfirmed",
-      "subject": "mum-bhakti-park",
-      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
       "subject": "mum-chembur",
-      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
-      "subject": "mum-csia-t1",
       "reason": "Expected completion date pending operator progress update or unconfirmed flag"
     },
     {
@@ -3370,91 +3181,13 @@
     {
       "city_id": "mumbai",
       "rule": "future-date-unconfirmed",
-      "subject": "mum-esic-nagar",
-      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
-      "subject": "mum-gaimukh",
-      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
-      "subject": "mum-gowniwada",
-      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
-      "subject": "mum-ilfs",
-      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
-      "subject": "mum-indira-nagar",
-      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
       "subject": "mum-kapurbawdi",
       "reason": "Expected completion date pending operator progress update or unconfirmed flag"
     },
     {
       "city_id": "mumbai",
       "rule": "future-date-unconfirmed",
-      "subject": "mum-khira-nagar",
-      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
-      "subject": "mum-kurla",
-      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
-      "subject": "mum-kurla-terminal",
-      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
-      "subject": "mum-line-1-schematic-01",
-      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
       "subject": "mum-line-2b-seg-01",
-      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
-      "subject": "mum-line-3-schematic-01",
-      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
-      "subject": "mum-line-3-schematic-02",
-      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
-      "subject": "mum-line-4-schematic-01",
-      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
-      "subject": "mum-line-4-schematic-02",
       "reason": "Expected completion date pending operator progress update or unconfirmed flag"
     },
     {
@@ -3490,55 +3223,13 @@
     {
       "city_id": "mumbai",
       "rule": "future-date-unconfirmed",
-      "subject": "mum-mmrda",
-      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
-      "subject": "mum-mtnl",
-      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
-      "subject": "mum-nanavati-hospital",
-      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
-      "subject": "mum-national-college",
-      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
       "subject": "mum-planned-seg-01",
       "reason": "Expected completion date pending operator progress update or unconfirmed flag"
     },
     {
       "city_id": "mumbai",
       "rule": "future-date-unconfirmed",
-      "subject": "mum-prem-nagar",
-      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
       "subject": "mum-sai-baba-nagar",
-      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
-      "subject": "mum-saraswat-nagar",
-      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
-      "subject": "mum-sg-barve-marg",
       "reason": "Expected completion date pending operator progress update or unconfirmed flag"
     },
     {
@@ -3574,19 +3265,7 @@
     {
       "city_id": "mumbai",
       "rule": "future-record-no-reference",
-      "subject": "mum-bhakti-park",
-      "reason": "Future segment or station pending deep-link reference citation"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-record-no-reference",
       "subject": "mum-chembur",
-      "reason": "Future segment or station pending deep-link reference citation"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-record-no-reference",
-      "subject": "mum-csia-t1",
       "reason": "Future segment or station pending deep-link reference citation"
     },
     {
@@ -3616,55 +3295,7 @@
     {
       "city_id": "mumbai",
       "rule": "future-record-no-reference",
-      "subject": "mum-esic-nagar",
-      "reason": "Future segment or station pending deep-link reference citation"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-record-no-reference",
-      "subject": "mum-gaimukh",
-      "reason": "Future segment or station pending deep-link reference citation"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-record-no-reference",
-      "subject": "mum-gowniwada",
-      "reason": "Future segment or station pending deep-link reference citation"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-record-no-reference",
-      "subject": "mum-ilfs",
-      "reason": "Future segment or station pending deep-link reference citation"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-record-no-reference",
-      "subject": "mum-indira-nagar",
-      "reason": "Future segment or station pending deep-link reference citation"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-record-no-reference",
       "subject": "mum-kapurbawdi",
-      "reason": "Future segment or station pending deep-link reference citation"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-record-no-reference",
-      "subject": "mum-khira-nagar",
-      "reason": "Future segment or station pending deep-link reference citation"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-record-no-reference",
-      "subject": "mum-kurla",
-      "reason": "Future segment or station pending deep-link reference citation"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-record-no-reference",
-      "subject": "mum-kurla-terminal",
       "reason": "Future segment or station pending deep-link reference citation"
     },
     {
@@ -3688,49 +3319,7 @@
     {
       "city_id": "mumbai",
       "rule": "future-record-no-reference",
-      "subject": "mum-mmrda",
-      "reason": "Future segment or station pending deep-link reference citation"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-record-no-reference",
-      "subject": "mum-mtnl",
-      "reason": "Future segment or station pending deep-link reference citation"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-record-no-reference",
-      "subject": "mum-nanavati-hospital",
-      "reason": "Future segment or station pending deep-link reference citation"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-record-no-reference",
-      "subject": "mum-national-college",
-      "reason": "Future segment or station pending deep-link reference citation"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-record-no-reference",
-      "subject": "mum-prem-nagar",
-      "reason": "Future segment or station pending deep-link reference citation"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-record-no-reference",
       "subject": "mum-sai-baba-nagar",
-      "reason": "Future segment or station pending deep-link reference citation"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-record-no-reference",
-      "subject": "mum-saraswat-nagar",
-      "reason": "Future segment or station pending deep-link reference citation"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-record-no-reference",
-      "subject": "mum-sg-barve-marg",
       "reason": "Future segment or station pending deep-link reference citation"
     },
     {
@@ -3790,12 +3379,6 @@
     {
       "city_id": "mumbai",
       "rule": "layout/suspect-default-elevated",
-      "subject": "mum-andheri-l1",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "layout/suspect-default-elevated",
       "subject": "mum-andheri-west",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
@@ -3820,19 +3403,7 @@
     {
       "city_id": "mumbai",
       "rule": "layout/suspect-default-elevated",
-      "subject": "mum-bandra-kurla-complex-bkc",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "layout/suspect-default-elevated",
       "subject": "mum-bangur-nagar",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "layout/suspect-default-elevated",
-      "subject": "mum-bhakti-park",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -3856,43 +3427,13 @@
     {
       "city_id": "mumbai",
       "rule": "layout/suspect-default-elevated",
-      "subject": "mum-csia-t1",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "layout/suspect-default-elevated",
       "subject": "mum-csmia-domestic",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
       "city_id": "mumbai",
       "rule": "layout/suspect-default-elevated",
-      "subject": "mum-csmia-international-t2",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "layout/suspect-default-elevated",
-      "subject": "mum-d-n-nagar",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "layout/suspect-default-elevated",
       "subject": "mum-dahanukarwadi",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "layout/suspect-default-elevated",
-      "subject": "mum-dahisar-east-line-2",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "layout/suspect-default-elevated",
-      "subject": "mum-dahisar-east-line-7",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -3940,18 +3481,6 @@
     {
       "city_id": "mumbai",
       "rule": "layout/suspect-default-elevated",
-      "subject": "mum-esic-nagar",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "layout/suspect-default-elevated",
-      "subject": "mum-gaimukh",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "layout/suspect-default-elevated",
       "subject": "mum-ghatkopar",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
@@ -3970,25 +3499,7 @@
     {
       "city_id": "mumbai",
       "rule": "layout/suspect-default-elevated",
-      "subject": "mum-gowniwada",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "layout/suspect-default-elevated",
       "subject": "mum-gundavali",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "layout/suspect-default-elevated",
-      "subject": "mum-ilfs",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "layout/suspect-default-elevated",
-      "subject": "mum-indira-nagar",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -4024,37 +3535,13 @@
     {
       "city_id": "mumbai",
       "rule": "layout/suspect-default-elevated",
-      "subject": "mum-khira-nagar",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "layout/suspect-default-elevated",
       "subject": "mum-kurar",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
       "city_id": "mumbai",
       "rule": "layout/suspect-default-elevated",
-      "subject": "mum-kurla",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "layout/suspect-default-elevated",
-      "subject": "mum-kurla-terminal",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "layout/suspect-default-elevated",
       "subject": "mum-lower-malad",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "layout/suspect-default-elevated",
-      "subject": "mum-lower-oshiwara",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -4073,12 +3560,6 @@
       "city_id": "mumbai",
       "rule": "layout/suspect-default-elevated",
       "subject": "mum-malad-west",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "layout/suspect-default-elevated",
-      "subject": "mum-malad-west-2",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -4108,31 +3589,7 @@
     {
       "city_id": "mumbai",
       "rule": "layout/suspect-default-elevated",
-      "subject": "mum-mmrda",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "layout/suspect-default-elevated",
       "subject": "mum-mogra",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "layout/suspect-default-elevated",
-      "subject": "mum-mtnl",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "layout/suspect-default-elevated",
-      "subject": "mum-nanavati-hospital",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "layout/suspect-default-elevated",
-      "subject": "mum-national-college",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -4150,25 +3607,7 @@
     {
       "city_id": "mumbai",
       "rule": "layout/suspect-default-elevated",
-      "subject": "mum-poisar",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "layout/suspect-default-elevated",
-      "subject": "mum-prem-nagar",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "layout/suspect-default-elevated",
       "subject": "mum-rashtriya-udyan",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "layout/suspect-default-elevated",
-      "subject": "mum-rushi-sankul",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -4181,18 +3620,6 @@
       "city_id": "mumbai",
       "rule": "layout/suspect-default-elevated",
       "subject": "mum-saki-naka",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "layout/suspect-default-elevated",
-      "subject": "mum-saraswat-nagar",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "layout/suspect-default-elevated",
-      "subject": "mum-sg-barve-marg",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -4239,54 +3666,6 @@
     },
     {
       "city_id": "mumbai",
-      "rule": "layout/suspect-default-elevated",
-      "subject": "mum-western-express-highway-eastbound",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "layout/suspect-default-elevated",
-      "subject": "mum-western-express-highway-westbound",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "line-operator-matches-reference",
-      "subject": "mum-line-1",
-      "reason": "Legal operating concessionaire or SPV entity difference from umbrella authority"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "line-operator-matches-reference",
-      "subject": "mum-line-2a",
-      "reason": "Legal operating concessionaire or SPV entity difference from umbrella authority"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "line-operator-matches-reference",
-      "subject": "mum-line-2b",
-      "reason": "Legal operating concessionaire or SPV entity difference from umbrella authority"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "line-operator-matches-reference",
-      "subject": "mum-line-3",
-      "reason": "Legal operating concessionaire or SPV entity difference from umbrella authority"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "line-operator-matches-reference",
-      "subject": "mum-line-4",
-      "reason": "Legal operating concessionaire or SPV entity difference from umbrella authority"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "line-operator-matches-reference",
-      "subject": "mum-line-7",
-      "reason": "Legal operating concessionaire or SPV entity difference from umbrella authority"
-    },
-    {
-      "city_id": "mumbai",
       "rule": "operational-no-reference",
       "subject": "mum-line-1-seg-01",
       "reason": "Accepted for this M8 baseline: OSM-derived operational segment is valid but lacks a dedicated official segment reference; source URL must be added in future verification."
@@ -4305,81 +3684,9 @@
     },
     {
       "city_id": "mumbai",
-      "rule": "station-far-from-nearest-segment",
-      "subject": "mum-dahisar-east",
-      "reason": "Physical station entrance/concourse offset from track centerline within tolerances"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "station-gap",
-      "subject": "mum-line-1|mum-ghatkopar|mum-esic-nagar",
-      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "station-gap",
-      "subject": "mum-line-3|mum-csia-t1|mum-mmrda",
-      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "station-gap",
-      "subject": "mum-line-3|mum-cuffe-parade|mum-national-college",
-      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "station-gap",
-      "subject": "mum-line-3|mum-ilfs|mum-nanavati-hospital",
-      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "station-gap",
-      "subject": "mum-line-3|mum-khira-nagar|mum-ilfs",
-      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "station-gap",
-      "subject": "mum-line-4|mum-bhakti-park|mum-mtnl",
-      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "station-gap",
-      "subject": "mum-line-4|mum-dongripada|mum-eeh",
-      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "station-gap",
-      "subject": "mum-line-4|mum-ghatkopar|mum-dongripada",
-      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "station-gap",
-      "subject": "mum-line-4|mum-gowniwada|mum-kapurbawdi",
-      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "station-gap",
-      "subject": "mum-line-4|mum-kapurbawdi|mum-ghatkopar",
-      "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
-    },
-    {
-      "city_id": "mumbai",
       "rule": "station-gap",
       "subject": "mum-line-9|mum-kashigaon|mum-shaheed-bhagat-singh-garden",
       "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "station-name-quality",
-      "subject": "mum-csia-t1",
-      "reason": "Acronym or title-case formatting distinction"
     },
     {
       "city_id": "mumbai",
@@ -4422,12 +3729,6 @@
       "rule": "station-gap",
       "subject": "noi-aqua|noi-noida-sector-83|noi-noida-sector-143",
       "reason": "Legitimate inter-station distance on express/suburban or physical crossing section"
-    },
-    {
-      "city_id": "pune",
-      "rule": "future-record-no-reference",
-      "subject": "pune-range-hill",
-      "reason": "Future segment or station pending deep-link reference citation"
     },
     {
       "city_id": "pune",

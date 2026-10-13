@@ -154,6 +154,7 @@ export interface CityOverrideData {
       layout?: "underground" | "elevated" | "at-grade" | null;
       last_verified?: string;
       coordinates?: [number, number];
+      references?: string[];
     }
   >;
   out_of_scope_station_ids?: string[];
@@ -375,6 +376,7 @@ export function mergeCityOverrides(
     openedOn: string | null;
     expectedCompletion: string | null;
     lastVerified: string | null;
+    references: string[];
   }> = [];
 
   for (const st of deduplicatedStations) {
@@ -505,6 +507,9 @@ export function mergeCityOverrides(
       if (override.coordinates) st.coords = override.coordinates;
     }
 
+    let stationReferences: string[] = [];
+    if (override?.references) stationReferences = override.references;
+
     stationsWithLines.push({
       st,
       assignedLineIds: Array.from(lineIdsSet),
@@ -515,6 +520,7 @@ export function mergeCityOverrides(
       openedOn,
       expectedCompletion,
       lastVerified,
+      references: stationReferences,
     });
   }
 
@@ -800,7 +806,7 @@ export function mergeCityOverrides(
         layout: sw.layout,
         layout_source: sw.layoutSource,
         source: "osm",
-        references: [],
+        references: sw.references || [],
         last_verified: sw.lastVerified,
         retrieved_at: retrievedAt,
         ...(interchangeId !== undefined ? { interchange_id: interchangeId } : {}),

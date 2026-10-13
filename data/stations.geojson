@@ -27,7 +27,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehindu.com/news/cities/Delhi/rapid-metro-rail-gurgaon-opens-to-public/article5350992.ece"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10",
         "interchange_id": "gur-sikanderpur"
@@ -59,7 +61,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehindu.com/news/cities/Delhi/rapid-metro-rail-gurgaon-opens-to-public/article5350992.ece"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -90,7 +94,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehindu.com/news/cities/Delhi/rapid-metro-rail-gurgaon-opens-to-public/article5350992.ece"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -121,7 +127,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehindu.com/news/cities/Delhi/rapid-metro-rail-gurgaon-opens-to-public/article5350992.ece"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -152,7 +160,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehindu.com/news/cities/Delhi/rapid-metro-rail-gurgaon-opens-to-public/article5350992.ece"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -183,7 +193,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehindu.com/news/cities/Delhi/rapid-metro-rail-gurgaon-opens-to-public/article5350992.ece"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -214,7 +226,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehindu.com/news/cities/Delhi/after-hurdles-rapid-metros-phase-ii-opens/article17752674.ece"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -245,7 +259,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehindu.com/news/cities/Delhi/after-hurdles-rapid-metros-phase-ii-opens/article17752674.ece"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -276,7 +292,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehindu.com/news/cities/Delhi/after-hurdles-rapid-metros-phase-ii-opens/article17752674.ece"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -307,7 +325,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehindu.com/news/cities/Delhi/after-hurdles-rapid-metros-phase-ii-opens/article17752674.ece"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -338,7 +358,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehindu.com/news/cities/Delhi/after-hurdles-rapid-metros-phase-ii-opens/article17752674.ece"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -369,7 +391,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehindu.com/news/cities/mumbai/navi-mumbai-metro-starts-services-from-today/article67543265.ece"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -400,7 +424,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehindu.com/news/cities/mumbai/navi-mumbai-metro-starts-services-from-today/article67543265.ece"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -431,7 +457,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehindu.com/news/cities/mumbai/navi-mumbai-metro-starts-services-from-today/article67543265.ece"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -462,7 +490,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehindu.com/news/cities/mumbai/navi-mumbai-metro-starts-services-from-today/article67543265.ece"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -493,7 +523,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehindu.com/news/cities/mumbai/navi-mumbai-metro-starts-services-from-today/article67543265.ece"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -524,7 +556,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehindu.com/news/cities/mumbai/navi-mumbai-metro-starts-services-from-today/article67543265.ece"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -555,7 +589,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehindu.com/news/cities/mumbai/navi-mumbai-metro-starts-services-from-today/article67543265.ece"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -586,7 +622,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehindu.com/news/cities/mumbai/navi-mumbai-metro-starts-services-from-today/article67543265.ece"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -617,7 +655,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehindu.com/news/cities/mumbai/navi-mumbai-metro-starts-services-from-today/article67543265.ece"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -648,7 +688,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehindu.com/news/cities/mumbai/navi-mumbai-metro-starts-services-from-today/article67543265.ece"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -679,7 +721,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehindu.com/news/cities/mumbai/navi-mumbai-metro-starts-services-from-today/article67543265.ece"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -710,7 +754,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://chennaimetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -741,7 +787,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://chennaimetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -772,7 +820,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://chennaimetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -803,7 +853,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://chennaimetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -834,7 +886,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://chennaimetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -865,7 +919,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://chennaimetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -896,7 +952,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://chennaimetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -927,7 +985,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://chennaimetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -958,7 +1018,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://chennaimetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -989,7 +1051,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://chennaimetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -1020,7 +1084,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://chennaimetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -1052,7 +1118,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://chennaimetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10",
         "interchange_id": "chennai-alandur"
@@ -1084,7 +1152,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://chennaimetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -1115,7 +1185,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://chennaimetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -1146,7 +1218,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://chennaimetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -1177,7 +1251,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://chennaimetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -1208,7 +1284,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://chennaimetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -1239,7 +1317,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://chennaimetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -1270,7 +1350,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://chennaimetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -1301,7 +1383,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://chennaimetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -1332,7 +1416,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://chennaimetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -1364,7 +1450,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://chennaimetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10",
         "interchange_id": "chennai-chennai-central"
@@ -1396,7 +1484,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://chennaimetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -1427,7 +1517,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://chennaimetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -1458,7 +1550,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://chennaimetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -1489,7 +1583,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://chennaimetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -1520,7 +1616,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://chennaimetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -1551,7 +1649,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://chennaimetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -1582,7 +1682,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://chennaimetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -1613,7 +1715,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://chennaimetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -1644,7 +1748,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://chennaimetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -1675,7 +1781,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://chennaimetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -1706,7 +1814,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://chennaimetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -1737,7 +1847,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://chennaimetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -1768,7 +1880,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://chennaimetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -1799,7 +1913,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://chennaimetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -1830,7 +1946,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://chennaimetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -1861,7 +1979,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://chennaimetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -1892,7 +2012,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://chennaimetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -1923,7 +2045,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://chennaimetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -1954,7 +2078,9 @@
         "layout": "at-grade",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://chennaimetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -1985,7 +2111,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.punemetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -2016,7 +2144,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.punemetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -2047,7 +2177,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.punemetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -2078,7 +2210,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.punemetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -2109,7 +2243,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.punemetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -2140,7 +2276,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.punemetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -2171,7 +2309,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.punemetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -2202,7 +2342,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.punemetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -2233,7 +2375,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.punemetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -2264,7 +2408,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.punemetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -2295,7 +2441,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.punemetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -2326,7 +2474,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.punemetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -2359,7 +2509,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.punemetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10",
         "interchange_id": "pune-district-court"
@@ -2391,7 +2543,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.punemetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -2422,7 +2576,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.punemetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -2453,7 +2609,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.punemetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -2484,7 +2642,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.punemetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -2515,7 +2675,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.punemetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -2546,7 +2708,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.punemetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -2577,7 +2741,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.punemetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -2608,7 +2774,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.punemetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -2639,7 +2807,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.punemetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -2670,7 +2840,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.punemetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -2701,7 +2873,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.punemetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -2732,7 +2906,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.punemetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -2763,7 +2939,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.punemetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -2794,7 +2972,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.punemetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -2825,7 +3005,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.punemetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -2856,7 +3038,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.punemetrorail.org"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -2949,7 +3133,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://english.bmrc.co.in/"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -3323,7 +3509,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://english.bmrc.co.in/"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -3602,7 +3790,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://english.bmrc.co.in/"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -4318,7 +4508,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://english.bmrc.co.in/"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -4474,7 +4666,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://english.bmrc.co.in/"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10",
         "interchange_id": "blr-nadaprabhu-kempegowda-majestic"
@@ -5613,12 +5807,11 @@
         "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
-          "mum-line-1",
-          "mum-line-2a"
+          "mum-line-1"
         ],
         "status": "operational",
         "phase": "1",
-        "is_interchange": true,
+        "is_interchange": false,
         "opened_on": null,
         "expected_completion": null,
         "completion_unconfirmed": false,
@@ -5627,8 +5820,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-10",
-        "interchange_id": "mum-d-n-nagar"
+        "retrieved_at": "2026-10-10"
       }
     },
     {
@@ -5832,12 +6024,11 @@
         "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
-          "mum-line-1",
-          "mum-line-4"
+          "mum-line-1"
         ],
         "status": "operational",
         "phase": "1",
-        "is_interchange": true,
+        "is_interchange": false,
         "opened_on": null,
         "expected_completion": null,
         "completion_unconfirmed": false,
@@ -5846,8 +6037,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-10",
-        "interchange_id": "mum-ghatkopar"
+        "retrieved_at": "2026-10-10"
       }
     },
     {
@@ -5908,7 +6098,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mmrda.maharashtra.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10",
         "interchange_id": "mum-marol-naka"
@@ -5924,60 +6116,27 @@
         ]
       },
       "properties": {
-        "station_id": "mum-western-express-highway-eastbound",
-        "name": "Western Express Highway (eastbound)",
+        "station_id": "mum-western-express-highway",
+        "name": "Western Express Highway",
         "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
-          "mum-line-1",
-          "mum-line-7"
+          "mum-line-1"
         ],
         "status": "operational",
         "phase": "1",
-        "is_interchange": true,
+        "is_interchange": false,
         "opened_on": null,
         "expected_completion": null,
         "completion_unconfirmed": false,
-        "layout": null,
-        "layout_source": "unverified",
+        "layout": "elevated",
+        "layout_source": "operator",
         "source": "osm",
-        "references": [],
-        "last_verified": null,
-        "retrieved_at": "2026-10-10",
-        "interchange_id": "mum-western-express-highway-eastbound"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          72.85587,
-          19.11616
-        ]
-      },
-      "properties": {
-        "station_id": "mum-western-express-highway-westbound",
-        "name": "Western Express Highway (westbound)",
-        "city_id": "mumbai",
-        "city": "Mumbai",
-        "line_ids": [
-          "mum-line-1",
-          "mum-line-7"
+        "references": [
+          "https://mmrda.maharashtra.gov.in/"
         ],
-        "status": "operational",
-        "phase": "1",
-        "is_interchange": true,
-        "opened_on": null,
-        "expected_completion": null,
-        "completion_unconfirmed": false,
-        "layout": null,
-        "layout_source": "unverified",
-        "source": "osm",
-        "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-10",
-        "interchange_id": "mum-western-express-highway-westbound"
+        "retrieved_at": "2026-10-10"
       }
     },
     {
@@ -5995,167 +6154,10 @@
         "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
-          "mum-line-2b",
-          "mum-line-4"
+          "mum-line-2b"
         ],
         "status": "construction",
         "phase": "2B",
-        "is_interchange": true,
-        "opened_on": null,
-        "expected_completion": null,
-        "completion_unconfirmed": true,
-        "layout": null,
-        "layout_source": "unverified",
-        "source": "osm",
-        "references": [],
-        "last_verified": null,
-        "retrieved_at": "2026-10-10",
-        "interchange_id": "mum-chembur"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          72.83755,
-          19.07467
-        ]
-      },
-      "properties": {
-        "station_id": "mum-saraswat-nagar",
-        "name": "Saraswat Nagar",
-        "city_id": "mumbai",
-        "city": "Mumbai",
-        "line_ids": [
-          "mum-line-3"
-        ],
-        "status": "construction",
-        "phase": "1",
-        "is_interchange": false,
-        "opened_on": null,
-        "expected_completion": null,
-        "completion_unconfirmed": true,
-        "layout": null,
-        "layout_source": "unverified",
-        "source": "osm",
-        "references": [],
-        "last_verified": null,
-        "retrieved_at": "2026-10-10"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          72.83796,
-          19.08292
-        ]
-      },
-      "properties": {
-        "station_id": "mum-khira-nagar",
-        "name": "Khira Nagar",
-        "city_id": "mumbai",
-        "city": "Mumbai",
-        "line_ids": [
-          "mum-line-3"
-        ],
-        "status": "construction",
-        "phase": "1",
-        "is_interchange": false,
-        "opened_on": null,
-        "expected_completion": null,
-        "completion_unconfirmed": true,
-        "layout": null,
-        "layout_source": "unverified",
-        "source": "osm",
-        "references": [],
-        "last_verified": null,
-        "retrieved_at": "2026-10-10"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          72.83731,
-          19.06482
-        ]
-      },
-      "properties": {
-        "station_id": "mum-national-college",
-        "name": "National College",
-        "city_id": "mumbai",
-        "city": "Mumbai",
-        "line_ids": [
-          "mum-line-3"
-        ],
-        "status": "construction",
-        "phase": "1",
-        "is_interchange": false,
-        "opened_on": null,
-        "expected_completion": null,
-        "completion_unconfirmed": true,
-        "layout": null,
-        "layout_source": "unverified",
-        "source": "osm",
-        "references": [],
-        "last_verified": null,
-        "retrieved_at": "2026-10-10"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          72.83951,
-          19.09608
-        ]
-      },
-      "properties": {
-        "station_id": "mum-nanavati-hospital",
-        "name": "Nanavati Hospital",
-        "city_id": "mumbai",
-        "city": "Mumbai",
-        "line_ids": [
-          "mum-line-3"
-        ],
-        "status": "construction",
-        "phase": "1",
-        "is_interchange": false,
-        "opened_on": null,
-        "expected_completion": null,
-        "completion_unconfirmed": true,
-        "layout": null,
-        "layout_source": "unverified",
-        "source": "osm",
-        "references": [],
-        "last_verified": null,
-        "retrieved_at": "2026-10-10"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          72.83716,
-          19.11004
-        ]
-      },
-      "properties": {
-        "station_id": "mum-prem-nagar",
-        "name": "Prem Nagar",
-        "city_id": "mumbai",
-        "city": "Mumbai",
-        "line_ids": [
-          "mum-line-1"
-        ],
-        "status": "construction",
-        "phase": "1",
         "is_interchange": false,
         "opened_on": null,
         "expected_completion": null,
@@ -6576,270 +6578,21 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          72.88471,
-          19.063
-        ]
-      },
-      "properties": {
-        "station_id": "mum-kurla",
-        "name": "Kurla",
-        "city_id": "mumbai",
-        "city": "Mumbai",
-        "line_ids": [
-          "mum-line-4"
-        ],
-        "status": "construction",
-        "phase": "2B",
-        "is_interchange": false,
-        "opened_on": null,
-        "expected_completion": null,
-        "completion_unconfirmed": true,
-        "layout": null,
-        "layout_source": "unverified",
-        "source": "osm",
-        "references": [],
-        "last_verified": null,
-        "retrieved_at": "2026-10-10"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          72.88509,
-          19.07182
-        ]
-      },
-      "properties": {
-        "station_id": "mum-kurla-terminal",
-        "name": "Kurla Terminal",
-        "city_id": "mumbai",
-        "city": "Mumbai",
-        "line_ids": [
-          "mum-line-4"
-        ],
-        "status": "construction",
-        "phase": "2B",
-        "is_interchange": false,
-        "opened_on": null,
-        "expected_completion": null,
-        "completion_unconfirmed": true,
-        "layout": null,
-        "layout_source": "unverified",
-        "source": "osm",
-        "references": [],
-        "last_verified": null,
-        "retrieved_at": "2026-10-10"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          72.87741,
-          19.0758
-        ]
-      },
-      "properties": {
-        "station_id": "mum-sg-barve-marg",
-        "name": "SG Barve Marg",
-        "city_id": "mumbai",
-        "city": "Mumbai",
-        "line_ids": [
-          "mum-line-4"
-        ],
-        "status": "construction",
-        "phase": "2B",
-        "is_interchange": false,
-        "opened_on": null,
-        "expected_completion": null,
-        "completion_unconfirmed": true,
-        "layout": null,
-        "layout_source": "unverified",
-        "source": "osm",
-        "references": [],
-        "last_verified": null,
-        "retrieved_at": "2026-10-10"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          72.87063,
-          19.07049
-        ]
-      },
-      "properties": {
-        "station_id": "mum-mtnl",
-        "name": "MTNL",
-        "city_id": "mumbai",
-        "city": "Mumbai",
-        "line_ids": [
-          "mum-line-4"
-        ],
-        "status": "construction",
-        "phase": "2B",
-        "is_interchange": false,
-        "opened_on": null,
-        "expected_completion": null,
-        "completion_unconfirmed": true,
-        "layout": null,
-        "layout_source": "unverified",
-        "source": "osm",
-        "references": [],
-        "last_verified": null,
-        "retrieved_at": "2026-10-10"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          72.86004,
-          19.06364
-        ]
-      },
-      "properties": {
-        "station_id": "mum-ilfs",
-        "name": "IL&FS",
-        "city_id": "mumbai",
-        "city": "Mumbai",
-        "line_ids": [
-          "mum-line-3"
-        ],
-        "status": "construction",
-        "phase": "1",
-        "is_interchange": false,
-        "opened_on": null,
-        "expected_completion": null,
-        "completion_unconfirmed": true,
-        "layout": null,
-        "layout_source": "unverified",
-        "source": "osm",
-        "references": [],
-        "last_verified": null,
-        "retrieved_at": "2026-10-10"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          72.84939,
-          19.05401
-        ]
-      },
-      "properties": {
-        "station_id": "mum-mmrda",
-        "name": "MMRDA",
-        "city_id": "mumbai",
-        "city": "Mumbai",
-        "line_ids": [
-          "mum-line-3"
-        ],
-        "status": "construction",
-        "phase": "2A",
-        "is_interchange": false,
-        "opened_on": null,
-        "expected_completion": null,
-        "completion_unconfirmed": true,
-        "layout": null,
-        "layout_source": "unverified",
-        "source": "osm",
-        "references": [],
-        "last_verified": null,
-        "retrieved_at": "2026-10-10"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          72.83687,
-          19.10289
-        ]
-      },
-      "properties": {
-        "station_id": "mum-indira-nagar",
-        "name": "Indira Nagar",
-        "city_id": "mumbai",
-        "city": "Mumbai",
-        "line_ids": [
-          "mum-line-3"
-        ],
-        "status": "construction",
-        "phase": "1",
-        "is_interchange": false,
-        "opened_on": null,
-        "expected_completion": null,
-        "completion_unconfirmed": true,
-        "layout": null,
-        "layout_source": "unverified",
-        "source": "osm",
-        "references": [],
-        "last_verified": null,
-        "retrieved_at": "2026-10-10"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          72.82986,
-          19.11657
-        ]
-      },
-      "properties": {
-        "station_id": "mum-esic-nagar",
-        "name": "ESIC Nagar",
-        "city_id": "mumbai",
-        "city": "Mumbai",
-        "line_ids": [
-          "mum-line-1"
-        ],
-        "status": "construction",
-        "phase": "1",
-        "is_interchange": false,
-        "opened_on": null,
-        "expected_completion": null,
-        "completion_unconfirmed": true,
-        "layout": null,
-        "layout_source": "unverified",
-        "source": "osm",
-        "references": [],
-        "last_verified": null,
-        "retrieved_at": "2026-10-10"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           72.83142,
           19.12918
         ]
       },
       "properties": {
         "station_id": "mum-andheri-west",
-        "name": "Andheri (West)",
+        "name": "Andheri West",
         "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
-          "mum-line-2a",
-          "mum-line-1"
+          "mum-line-2a"
         ],
         "status": "operational",
         "phase": "2A",
-        "is_interchange": true,
+        "is_interchange": false,
         "opened_on": null,
         "expected_completion": null,
         "completion_unconfirmed": false,
@@ -6848,8 +6601,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-10",
-        "interchange_id": "mum-andheri-west"
+        "retrieved_at": "2026-10-10"
       }
     },
     {
@@ -7017,8 +6769,8 @@
         ]
       },
       "properties": {
-        "station_id": "mum-dahisar-east-line-2",
-        "name": "Dahisar (East) [Line 2]",
+        "station_id": "mum-dahisar-east",
+        "name": "Dahisar East",
         "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
@@ -7029,16 +6781,18 @@
         "status": "operational",
         "phase": "2A",
         "is_interchange": true,
-        "opened_on": null,
+        "opened_on": "2022-04-02",
         "expected_completion": null,
         "completion_unconfirmed": false,
-        "layout": null,
-        "layout_source": "unverified",
+        "layout": "elevated",
+        "layout_source": "operator",
         "source": "osm",
-        "references": [],
-        "last_verified": null,
+        "references": [
+          "https://mmrda.maharashtra.gov.in"
+        ],
+        "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10",
-        "interchange_id": "mum-dahisar-east-line-2"
+        "interchange_id": "mum-dahisar-east"
       }
     },
     {
@@ -7335,47 +7089,14 @@
         "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
-          "mum-line-7",
-          "mum-line-1"
+          "mum-line-7"
         ],
         "status": "operational",
-        "phase": "1",
-        "is_interchange": true,
-        "opened_on": null,
-        "expected_completion": null,
-        "completion_unconfirmed": false,
-        "layout": null,
-        "layout_source": "unverified",
-        "source": "osm",
-        "references": [],
-        "last_verified": null,
-        "retrieved_at": "2026-10-10",
-        "interchange_id": "mum-gundavali"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          72.85326,
-          19.09424
-        ]
-      },
-      "properties": {
-        "station_id": "mum-csia-t1",
-        "name": "CSIA T1",
-        "city_id": "mumbai",
-        "city": "Mumbai",
-        "line_ids": [
-          "mum-line-3"
-        ],
-        "status": "construction",
         "phase": "1",
         "is_interchange": false,
         "opened_on": null,
         "expected_completion": null,
-        "completion_unconfirmed": true,
+        "completion_unconfirmed": false,
         "layout": null,
         "layout_source": "unverified",
         "source": "osm",
@@ -7410,7 +7131,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mmrda.maharashtra.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -7441,7 +7164,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mmrda.maharashtra.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -7472,7 +7197,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mmrda.maharashtra.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -7503,7 +7230,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mmrda.maharashtra.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -7518,8 +7247,8 @@
         ]
       },
       "properties": {
-        "station_id": "mum-chhatrapati-shivaji-maharaj-international-airport-t2",
-        "name": "Chhatrapati Shivaji Maharaj International Airport - T2",
+        "station_id": "mum-csmia-international-t2",
+        "name": "CSMIA International T2",
         "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
@@ -7534,7 +7263,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mmrda.maharashtra.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -7565,7 +7296,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mmrda.maharashtra.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -7596,7 +7329,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mmrda.maharashtra.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -7627,7 +7362,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mmrda.maharashtra.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -7658,7 +7395,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mmrda.maharashtra.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10",
         "interchange_id": "mum-dadar"
@@ -7690,7 +7429,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mmrda.maharashtra.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -7721,7 +7462,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mmrda.maharashtra.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -7752,7 +7495,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mmrda.maharashtra.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -7783,7 +7528,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mmrda.maharashtra.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -7814,7 +7561,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mmrda.maharashtra.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -7845,7 +7594,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mmrda.maharashtra.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -7876,7 +7627,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mmrda.maharashtra.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -7907,7 +7660,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mmrda.maharashtra.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -7938,7 +7693,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mmrda.maharashtra.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -8031,7 +7788,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mmrda.maharashtra.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -8062,7 +7821,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mmrda.maharashtra.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10",
         "interchange_id": "mum-chhatrapati-shivaji-maharaj-terminus"
@@ -8094,7 +7855,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mmrda.maharashtra.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -8125,39 +7888,10 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
-        "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-10"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          72.84884,
-          19.12056
-        ]
-      },
-      "properties": {
-        "station_id": "mum-andheri-l1",
-        "name": "Andheri L1",
-        "city_id": "mumbai",
-        "city": "Mumbai",
-        "line_ids": [
-          "mum-line-1"
+        "references": [
+          "https://mmrda.maharashtra.gov.in"
         ],
-        "status": "operational",
-        "phase": "1",
-        "is_interchange": false,
-        "opened_on": null,
-        "expected_completion": null,
-        "completion_unconfirmed": false,
-        "layout": null,
-        "layout_source": "unverified",
-        "source": "osm",
-        "references": [],
-        "last_verified": null,
+        "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
     },
@@ -8173,68 +7907,6 @@
       "properties": {
         "station_id": "mum-kapurbawdi",
         "name": "Kapurbawdi",
-        "city_id": "mumbai",
-        "city": "Mumbai",
-        "line_ids": [
-          "mum-line-4"
-        ],
-        "status": "construction",
-        "phase": "4",
-        "is_interchange": false,
-        "opened_on": null,
-        "expected_completion": null,
-        "completion_unconfirmed": true,
-        "layout": null,
-        "layout_source": "unverified",
-        "source": "osm",
-        "references": [],
-        "last_verified": null,
-        "retrieved_at": "2026-10-10"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          72.94681,
-          19.28443
-        ]
-      },
-      "properties": {
-        "station_id": "mum-gaimukh",
-        "name": "Gaimukh",
-        "city_id": "mumbai",
-        "city": "Mumbai",
-        "line_ids": [
-          "mum-line-4"
-        ],
-        "status": "construction",
-        "phase": "4",
-        "is_interchange": false,
-        "opened_on": null,
-        "expected_completion": null,
-        "completion_unconfirmed": true,
-        "layout": null,
-        "layout_source": "unverified",
-        "source": "osm",
-        "references": [],
-        "last_verified": null,
-        "retrieved_at": "2026-10-10"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          72.95823,
-          19.27675
-        ]
-      },
-      "properties": {
-        "station_id": "mum-gowniwada",
-        "name": "Gowniwada",
         "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
@@ -8280,7 +7952,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mmrda.maharashtra.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -8311,7 +7985,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mmrda.maharashtra.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -8538,102 +8214,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          72.86666,
-          19.25062
-        ]
-      },
-      "properties": {
-        "station_id": "mum-dahisar-east-line-7",
-        "name": "Dahisar (East) [Line 7]",
-        "city_id": "mumbai",
-        "city": "Mumbai",
-        "line_ids": [
-          "mum-line-7",
-          "mum-line-2a",
-          "mum-line-9"
-        ],
-        "status": "operational",
-        "phase": "1",
-        "is_interchange": true,
-        "opened_on": null,
-        "expected_completion": null,
-        "completion_unconfirmed": false,
-        "layout": null,
-        "layout_source": "unverified",
-        "source": "osm",
-        "references": [],
-        "last_verified": null,
-        "retrieved_at": "2026-10-10",
-        "interchange_id": "mum-dahisar-east-line-7"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          72.86332,
-          19.20377
-        ]
-      },
-      "properties": {
-        "station_id": "mum-poisar",
-        "name": "Poisar",
-        "city_id": "mumbai",
-        "city": "Mumbai",
-        "line_ids": [
-          "mum-line-7"
-        ],
-        "status": "operational",
-        "phase": "1",
-        "is_interchange": false,
-        "opened_on": null,
-        "expected_completion": null,
-        "completion_unconfirmed": false,
-        "layout": null,
-        "layout_source": "unverified",
-        "source": "osm",
-        "references": [],
-        "last_verified": null,
-        "retrieved_at": "2026-10-10"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          72.85065,
-          19.2566
-        ]
-      },
-      "properties": {
-        "station_id": "mum-rushi-sankul",
-        "name": "Rushi Sankul",
-        "city_id": "mumbai",
-        "city": "Mumbai",
-        "line_ids": [
-          "mum-line-2a"
-        ],
-        "status": "operational",
-        "phase": "2A",
-        "is_interchange": false,
-        "opened_on": null,
-        "expected_completion": null,
-        "completion_unconfirmed": false,
-        "layout": null,
-        "layout_source": "unverified",
-        "source": "osm",
-        "references": [],
-        "last_verified": null,
-        "retrieved_at": "2026-10-10"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           72.83169,
           19.14072
         ]
@@ -8652,10 +8232,12 @@
         "opened_on": null,
         "expected_completion": null,
         "completion_unconfirmed": false,
-        "layout": null,
-        "layout_source": "unverified",
+        "layout": "elevated",
+        "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mmrda.maharashtra.gov.in/metro-line-2a"
+        ],
         "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
@@ -8696,68 +8278,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          72.83586,
-          19.18529
-        ]
-      },
-      "properties": {
-        "station_id": "mum-malad-west-2",
-        "name": "Malad (West)",
-        "city_id": "mumbai",
-        "city": "Mumbai",
-        "line_ids": [
-          "mum-line-2a"
-        ],
-        "status": "operational",
-        "phase": "2A",
-        "is_interchange": false,
-        "opened_on": null,
-        "expected_completion": null,
-        "completion_unconfirmed": false,
-        "layout": null,
-        "layout_source": "unverified",
-        "source": "osm",
-        "references": [],
-        "last_verified": null,
-        "retrieved_at": "2026-10-10"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          72.85431,
-          19.06108
-        ]
-      },
-      "properties": {
-        "station_id": "mum-bandra-kurla-complex-bkc",
-        "name": "Bandra Kurla Complex (BKC)",
-        "city_id": "mumbai",
-        "city": "Mumbai",
-        "line_ids": [
-          "mum-line-3"
-        ],
-        "status": "operational",
-        "phase": "1",
-        "is_interchange": false,
-        "opened_on": null,
-        "expected_completion": null,
-        "completion_unconfirmed": false,
-        "layout": null,
-        "layout_source": "unverified",
-        "source": "osm",
-        "references": [],
-        "last_verified": null,
-        "retrieved_at": "2026-10-10"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           72.84903,
           19.07031
         ]
@@ -8779,7 +8299,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mmrda.maharashtra.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -8810,7 +8332,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mmrda.maharashtra.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -8872,39 +8396,10 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
-        "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-10"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          72.87526,
-          19.10244
-        ]
-      },
-      "properties": {
-        "station_id": "mum-csmia-international-t2",
-        "name": "CSMIA International T2",
-        "city_id": "mumbai",
-        "city": "Mumbai",
-        "line_ids": [
-          "mum-line-3"
+        "references": [
+          "https://mmrda.maharashtra.gov.in"
         ],
-        "status": "operational",
-        "phase": "1",
-        "is_interchange": false,
-        "opened_on": null,
-        "expected_completion": null,
-        "completion_unconfirmed": false,
-        "layout": null,
-        "layout_source": "unverified",
-        "source": "osm",
-        "references": [],
-        "last_verified": null,
+        "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
     },
@@ -8934,38 +8429,9 @@
         "layout": "at-grade",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
-        "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-10"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          72.85358,
-          19.0939
-        ]
-      },
-      "properties": {
-        "station_id": "mum-chhatrapati-shivaji-maharaj-international-airport-t1",
-        "name": "Chhatrapati Shivaji Maharaj International Airport - T1",
-        "city_id": "mumbai",
-        "city": "Mumbai",
-        "line_ids": [
-          "mum-line-3"
+        "references": [
+          "https://mmrda.maharashtra.gov.in"
         ],
-        "status": "operational",
-        "phase": "1",
-        "is_interchange": false,
-        "opened_on": "2024-10-07",
-        "expected_completion": null,
-        "completion_unconfirmed": false,
-        "layout": "underground",
-        "layout_source": "operator",
-        "source": "osm",
-        "references": [],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -8980,8 +8446,8 @@
         ]
       },
       "properties": {
-        "station_id": "mum-bhakti-park",
-        "name": "Bhakti Park",
+        "station_id": "mum-bhakti-park-wadala",
+        "name": "Bhakti Park Wadala",
         "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
@@ -8991,12 +8457,14 @@
         "phase": "4",
         "is_interchange": false,
         "opened_on": null,
-        "expected_completion": null,
-        "completion_unconfirmed": true,
-        "layout": null,
-        "layout_source": "unverified",
+        "expected_completion": "2027",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mmrda.maharashtra.gov.in/"
+        ],
         "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
@@ -9068,33 +8536,32 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          72.86736,
-          19.25098
+          72.96037,
+          19.27442
         ]
       },
       "properties": {
-        "station_id": "mum-dahisar-east",
-        "name": "Dahisar East",
+        "station_id": "mum-kasarvadavali",
+        "name": "Kasarvadavali",
         "city_id": "mumbai",
         "city": "Mumbai",
         "line_ids": [
-          "mum-line-9",
-          "mum-line-2a",
-          "mum-line-7"
+          "mum-line-4"
         ],
-        "status": "operational",
-        "phase": "1",
-        "is_interchange": true,
-        "opened_on": "2022-04-02",
-        "expected_completion": null,
+        "status": "construction",
+        "phase": "4",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2027",
         "completion_unconfirmed": false,
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
-        "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-10",
-        "interchange_id": "mum-dahisar-east"
+        "references": [
+          "https://mmrda.maharashtra.gov.in/"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-10"
       }
     },
     {
@@ -9466,7 +8933,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mtp.indianrailways.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -9528,7 +8997,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mtp.indianrailways.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -9778,7 +9249,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mtp.indianrailways.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -9840,7 +9313,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mtp.indianrailways.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -9871,7 +9346,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mtp.indianrailways.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -9902,7 +9379,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mtp.indianrailways.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -9933,7 +9412,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mtp.indianrailways.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -9964,7 +9445,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mtp.indianrailways.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -10026,7 +9509,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mtp.indianrailways.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -10090,7 +9575,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mtp.indianrailways.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -10121,7 +9608,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mtp.indianrailways.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -10152,7 +9641,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mtp.indianrailways.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -10183,7 +9674,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mtp.indianrailways.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -10214,7 +9707,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mtp.indianrailways.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -10462,7 +9957,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mtp.indianrailways.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -10617,7 +10114,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mtp.indianrailways.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -10648,7 +10147,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mtp.indianrailways.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -10679,7 +10180,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://mtp.indianrailways.gov.in"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -10896,7 +10399,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -10927,7 +10433,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -10958,7 +10467,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -10989,7 +10501,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -11020,7 +10535,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -11051,7 +10569,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -11082,7 +10603,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -11113,7 +10637,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -11144,7 +10671,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -11175,7 +10705,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -11206,7 +10739,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -11237,7 +10773,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -11269,7 +10808,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10",
         "interchange_id": "hyderabad-ameerpet"
@@ -11301,7 +10843,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -11332,7 +10877,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -11363,7 +10911,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -11394,7 +10945,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -11425,7 +10979,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -11456,7 +11013,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -11487,7 +11047,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -11518,7 +11081,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -11549,7 +11115,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -11580,7 +11149,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -11611,7 +11183,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -11642,7 +11217,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -11673,7 +11251,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -11704,7 +11285,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -11735,7 +11319,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -11766,7 +11353,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -11797,7 +11387,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -11829,7 +11422,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10",
         "interchange_id": "hyderabad-mg-bus-station"
@@ -11861,7 +11457,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -11892,7 +11491,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -11923,7 +11525,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -11954,7 +11559,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -11985,7 +11593,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -12016,7 +11627,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -12047,7 +11661,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -12078,7 +11695,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -12109,7 +11729,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -12140,7 +11763,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -12171,7 +11797,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -12202,7 +11831,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -12233,7 +11865,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -12264,7 +11899,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -12295,7 +11933,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -12326,7 +11967,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -12357,7 +12001,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -12388,7 +12035,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -12419,7 +12069,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -12450,7 +12103,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -12481,7 +12137,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -12512,7 +12171,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -12543,7 +12205,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -12574,7 +12239,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -12605,7 +12273,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -12636,7 +12307,10 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://hmrl.co.in",
+          "https://ltmetro.com"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -12729,7 +12403,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.gujaratmetrorail.com/"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -12760,7 +12436,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.gujaratmetrorail.com/"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -12791,7 +12469,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.gujaratmetrorail.com/"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -13167,7 +12847,9 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.gujaratmetrorail.com/"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -14347,7 +14029,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -14378,7 +14062,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -14409,7 +14095,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -14440,7 +14128,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -14471,7 +14161,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -14502,7 +14194,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -14533,7 +14227,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -14564,7 +14260,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -14595,7 +14293,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -14626,7 +14326,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -14657,7 +14359,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -14688,7 +14392,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -14719,7 +14425,9 @@
         "layout": null,
         "layout_source": "unverified",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -14750,7 +14458,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -14781,7 +14491,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -14812,7 +14524,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10",
         "interchange_id": "noi-noida-sector-51"
@@ -14844,7 +14558,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -14875,7 +14591,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -14906,7 +14624,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -14937,7 +14657,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
+        ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
@@ -14968,7 +14690,9 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.nmrcnoida.com/"
+        ],
         "last_verified": "2026-10-10",
         "retrieved_at": "2026-10-10"
       }
@@ -15001,7 +14725,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -15032,7 +14756,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -15064,7 +14788,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12",
+        "retrieved_at": "2026-10-13",
         "interchange_id": "del-dwarka"
       }
     },
@@ -15096,7 +14820,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -15127,7 +14851,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -15158,7 +14882,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -15189,7 +14913,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -15221,7 +14945,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12",
+        "retrieved_at": "2026-10-13",
         "interchange_id": "del-rajouri-garden"
       }
     },
@@ -15253,7 +14977,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -15284,7 +15008,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -15315,7 +15039,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -15346,7 +15070,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -15377,7 +15101,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -15408,9 +15132,11 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.delhimetrorail.com/network_map"
+        ],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-12",
+        "retrieved_at": "2026-10-13",
         "interchange_id": "del-kashmere-gate"
       }
     },
@@ -15442,7 +15168,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -15473,7 +15199,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -15504,7 +15230,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -15535,7 +15261,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -15566,7 +15292,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -15597,7 +15323,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -15628,7 +15354,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -15659,7 +15385,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -15691,7 +15417,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12",
+        "retrieved_at": "2026-10-13",
         "interchange_id": "del-kirti-nagar"
       }
     },
@@ -15723,7 +15449,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -15754,7 +15480,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -15785,7 +15511,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -15816,7 +15542,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -15848,7 +15574,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12",
+        "retrieved_at": "2026-10-13",
         "interchange_id": "del-janakpuri-west"
       }
     },
@@ -15880,7 +15606,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -15911,7 +15637,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -15942,7 +15668,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -15973,7 +15699,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -16005,7 +15731,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12",
+        "retrieved_at": "2026-10-13",
         "interchange_id": "del-dwarka-sector-21"
       }
     },
@@ -16037,7 +15763,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -16068,7 +15794,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -16099,7 +15825,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -16129,9 +15855,11 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.delhimetrorail.com/network_map"
+        ],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-12",
+        "retrieved_at": "2026-10-13",
         "interchange_id": "del-delhi-aerocity"
       }
     },
@@ -16163,7 +15891,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -16192,9 +15920,11 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.delhimetrorail.com/network_map"
+        ],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -16224,9 +15954,11 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.delhimetrorail.com/network_map"
+        ],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-12",
+        "retrieved_at": "2026-10-13",
         "interchange_id": "del-hauz-khas"
       }
     },
@@ -16256,9 +15988,11 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.delhimetrorail.com/network_map"
+        ],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -16288,9 +16022,11 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.delhimetrorail.com/network_map"
+        ],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-12",
+        "retrieved_at": "2026-10-13",
         "interchange_id": "del-dilli-haat-ina"
       }
     },
@@ -16320,9 +16056,11 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.delhimetrorail.com/network_map"
+        ],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -16351,9 +16089,11 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.delhimetrorail.com/network_map"
+        ],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -16382,9 +16122,11 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.delhimetrorail.com/network_map"
+        ],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -16413,9 +16155,11 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.delhimetrorail.com/network_map"
+        ],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -16444,9 +16188,11 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.delhimetrorail.com/network_map"
+        ],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -16477,7 +16223,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -16507,9 +16253,11 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.delhimetrorail.com/network_map"
+        ],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-12",
+        "retrieved_at": "2026-10-13",
         "interchange_id": "del-mandi-house"
       }
     },
@@ -16539,9 +16287,11 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.delhimetrorail.com/network_map"
+        ],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -16572,7 +16322,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -16602,9 +16352,11 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.delhimetrorail.com/network_map"
+        ],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-12",
+        "retrieved_at": "2026-10-13",
         "interchange_id": "del-new-delhi"
       }
     },
@@ -16634,9 +16386,11 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.delhimetrorail.com/network_map"
+        ],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -16667,7 +16421,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12",
+        "retrieved_at": "2026-10-13",
         "interchange_id": "del-yamuna-bank"
       }
     },
@@ -16700,7 +16454,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12",
+        "retrieved_at": "2026-10-13",
         "interchange_id": "del-anand-vihar"
       }
     },
@@ -16732,7 +16486,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -16761,9 +16515,11 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.delhimetrorail.com/network_map"
+        ],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -16792,9 +16548,11 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.delhimetrorail.com/network_map"
+        ],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -16825,7 +16583,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -16854,9 +16612,11 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.delhimetrorail.com/network_map"
+        ],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -16885,9 +16645,11 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.delhimetrorail.com/network_map"
+        ],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -16919,7 +16681,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12",
+        "retrieved_at": "2026-10-13",
         "interchange_id": "del-lajpat-nagar"
       }
     },
@@ -16951,7 +16713,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -16982,7 +16744,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -17013,7 +16775,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -17044,7 +16806,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -17075,7 +16837,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -17106,7 +16868,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -17137,7 +16899,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -17168,7 +16930,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -17199,7 +16961,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -17230,7 +16992,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -17262,7 +17024,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12",
+        "retrieved_at": "2026-10-13",
         "interchange_id": "del-welcome"
       }
     },
@@ -17294,7 +17056,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -17325,7 +17087,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -17356,7 +17118,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -17387,7 +17149,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -17419,7 +17181,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12",
+        "retrieved_at": "2026-10-13",
         "interchange_id": "del-inderlok"
       }
     },
@@ -17451,7 +17213,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -17482,7 +17244,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -17514,7 +17276,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12",
+        "retrieved_at": "2026-10-13",
         "interchange_id": "del-netaji-subhash-place"
       }
     },
@@ -17546,7 +17308,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -17577,7 +17339,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -17606,9 +17368,11 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.delhimetrorail.com/network_map"
+        ],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -17637,9 +17401,11 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.delhimetrorail.com/network_map"
+        ],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -17670,7 +17436,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -17700,9 +17466,11 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.delhimetrorail.com/network_map"
+        ],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-12",
+        "retrieved_at": "2026-10-13",
         "interchange_id": "del-azadpur"
       }
     },
@@ -17735,7 +17503,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12",
+        "retrieved_at": "2026-10-13",
         "interchange_id": "del-karkarduma"
       }
     },
@@ -17767,7 +17535,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -17798,7 +17566,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -17829,7 +17597,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -17860,7 +17628,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -17891,7 +17659,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -17922,7 +17690,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -17954,7 +17722,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12",
+        "retrieved_at": "2026-10-13",
         "interchange_id": "del-mayur-vihar-i"
       }
     },
@@ -17986,7 +17754,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -18017,7 +17785,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -18046,9 +17814,11 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.delhimetrorail.com/network_map"
+        ],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -18079,7 +17849,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -18110,7 +17880,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -18141,7 +17911,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -18173,7 +17943,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12",
+        "retrieved_at": "2026-10-13",
         "interchange_id": "del-botanical-garden"
       }
     },
@@ -18205,7 +17975,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -18236,7 +18006,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -18265,9 +18035,11 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.delhimetrorail.com/network_map"
+        ],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -18298,7 +18070,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -18327,9 +18099,11 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.delhimetrorail.com/network_map"
+        ],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -18360,7 +18134,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -18391,7 +18165,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -18423,7 +18197,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12",
+        "retrieved_at": "2026-10-13",
         "interchange_id": "del-kalkaji-mandir"
       }
     },
@@ -18453,9 +18227,11 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.delhimetrorail.com/network_map"
+        ],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -18485,9 +18261,11 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.delhimetrorail.com/network_map"
+        ],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-12",
+        "retrieved_at": "2026-10-13",
         "interchange_id": "del-rajiv-chowk"
       }
     },
@@ -18519,7 +18297,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -18550,7 +18328,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -18581,7 +18359,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -18611,9 +18389,11 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.delhimetrorail.com/network_map"
+        ],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-12",
+        "retrieved_at": "2026-10-13",
         "interchange_id": "del-central-secretariat"
       }
     },
@@ -18645,7 +18425,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -18676,7 +18456,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -18707,7 +18487,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -18738,7 +18518,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -18769,7 +18549,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -18800,7 +18580,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -18831,7 +18611,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -18860,9 +18640,11 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.delhimetrorail.com/network_map"
+        ],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -18891,9 +18673,11 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.delhimetrorail.com/network_map"
+        ],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -18922,9 +18706,11 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.delhimetrorail.com/network_map"
+        ],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -18955,7 +18741,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -18984,9 +18770,11 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.delhimetrorail.com/network_map"
+        ],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -19017,7 +18805,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -19048,7 +18836,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -19079,7 +18867,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -19110,7 +18898,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -19141,7 +18929,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -19172,7 +18960,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -19203,7 +18991,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -19234,7 +19022,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -19265,7 +19053,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -19296,7 +19084,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -19327,7 +19115,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -19358,7 +19146,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -19389,7 +19177,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -19420,7 +19208,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -19451,7 +19239,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -19482,7 +19270,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -19513,7 +19301,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -19544,7 +19332,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -19575,7 +19363,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -19606,7 +19394,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -19637,7 +19425,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -19668,7 +19456,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -19699,7 +19487,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -19730,7 +19518,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -19761,7 +19549,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -19792,7 +19580,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -19823,7 +19611,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -19854,7 +19642,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -19886,7 +19674,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12",
+        "retrieved_at": "2026-10-13",
         "interchange_id": "del-punjabi-bagh-west"
       }
     },
@@ -19918,7 +19706,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -19949,7 +19737,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -19980,7 +19768,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -20011,7 +19799,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -20042,7 +19830,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -20073,7 +19861,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -20104,7 +19892,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -20135,7 +19923,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -20166,7 +19954,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -20197,7 +19985,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -20226,9 +20014,11 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.delhimetrorail.com/network_map"
+        ],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -20257,9 +20047,11 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.delhimetrorail.com/network_map"
+        ],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -20290,7 +20082,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -20321,7 +20113,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -20352,7 +20144,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -20383,7 +20175,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -20414,7 +20206,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -20445,7 +20237,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -20476,7 +20268,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -20507,7 +20299,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -20538,7 +20330,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -20567,9 +20359,11 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.delhimetrorail.com/network_map"
+        ],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -20600,7 +20394,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -20631,7 +20425,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -20662,7 +20456,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -20693,7 +20487,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -20724,7 +20518,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -20755,7 +20549,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -20786,7 +20580,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -20817,7 +20611,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -20848,7 +20642,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -20879,7 +20673,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -20910,7 +20704,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -20941,7 +20735,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -20972,7 +20766,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -21003,7 +20797,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -21034,7 +20828,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -21065,7 +20859,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -21096,7 +20890,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -21128,7 +20922,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12",
+        "retrieved_at": "2026-10-13",
         "interchange_id": "del-andrews-ganj"
       }
     },
@@ -21161,7 +20955,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12",
+        "retrieved_at": "2026-10-13",
         "interchange_id": "del-domestic-airport"
       }
     },
@@ -21193,7 +20987,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -21224,7 +21018,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -21255,7 +21049,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -21286,7 +21080,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -21317,7 +21111,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -21348,7 +21142,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -21380,7 +21174,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12",
+        "retrieved_at": "2026-10-13",
         "interchange_id": "del-aerocity"
       }
     },
@@ -21412,7 +21206,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -21441,9 +21235,11 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.delhimetrorail.com/network_map"
+        ],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -21474,7 +21270,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -21505,7 +21301,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -21536,7 +21332,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -21567,7 +21363,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -21598,7 +21394,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -21629,7 +21425,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -21660,7 +21456,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -21691,7 +21487,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -21722,7 +21518,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -21753,7 +21549,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -21784,7 +21580,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -21815,7 +21611,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -21846,7 +21642,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -21877,7 +21673,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -21908,7 +21704,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -21939,7 +21735,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -21970,7 +21766,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -22001,7 +21797,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -22032,7 +21828,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -22063,7 +21859,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -22094,7 +21890,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -22125,7 +21921,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -22156,7 +21952,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -22187,7 +21983,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -22218,7 +22014,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -22249,7 +22045,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -22280,7 +22076,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -22311,7 +22107,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -22342,7 +22138,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -22373,7 +22169,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -22402,9 +22198,11 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.delhimetrorail.com/network_map"
+        ],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -22435,7 +22233,7 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     },
     {
@@ -22464,9 +22262,11 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.delhimetrorail.com/network_map"
+        ],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-12"
+        "retrieved_at": "2026-10-13"
       }
     }
   ]
