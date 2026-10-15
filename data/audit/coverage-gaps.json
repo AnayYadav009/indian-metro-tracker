@@ -27,5 +27,42 @@
     "source_url": "https://nmrcnoida.com/Projects/Upcoming-projects",
     "reason": "NMRC lists this approved 11.56 km, 8-station corridor as an upcoming project. OSM way 538930428 is tagged railway=proposed and usage=branch, so it is not part of the operational Aqua Line and its partial proposed geometry is not compiled.",
     "review_date": "2027-01-15"
+  },
+  {
+    "city_id": "kolkata",
+    "line_id": "kol-yellow",
+    "stretch": "Jai Hind (Airport) - Michael Nagar",
+    "status": "under_construction",
+    "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2245960&lang=2&reg=48",
+    "reason": "PIB reports work is in progress, but the refreshed Kolkata cache has no Michael Nagar station node or coordinate for a sourced schematic segment.",
+    "review_date": "2027-01-15"
+  },
+  {
+    "city_id": "kolkata",
+    "line_id": "kol-yellow",
+    "stretch": "New Barrackpore - Barasat",
+    "status": "planned",
+    "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2245960&lang=2&reg=48",
+    "reason": "PIB states this 7.5 km stretch is held up by land acquisition and encroachment issues; no verified terminal coordinates or alignment are present in the refreshed cache.",
+    "review_date": "2027-01-15"
+  },
+  {
+    "city_id": "kolkata",
+    "line_id": "kol-pink",
+    "stretch": "Baranagar - Barrackpore",
+    "segment_id": "kol-pink-seg-01",
+    "status": "under_construction",
+    "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2245960&lang=2&reg=48",
+    "reason": "PIB reports the balance 12.5 km Baranagar–Barrackpore work is held up pending utility shifting/NOC; the override declaration has no matching compiled geometry.",
+    "review_date": "2027-01-15"
+  },
+  {
+    "city_id": "mumbai",
+    "line_id": "mum-line-2b",
+    "stretch": "Phase 2 (Chembur - DN Nagar)",
+    "status": "under_construction",
+    "source_url": "https://www.mmrda.maharashtra.gov.in/en/projects/transport/metro-line-2b/overview",
+    "reason": "MMRDA identifies the remaining Chembur–DN Nagar phase as under construction; no matching route geometry is available in the current compiled data.",
+    "review_date": "2027-01-15"
   }
 ]

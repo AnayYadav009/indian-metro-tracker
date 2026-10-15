@@ -106,10 +106,10 @@
       "city_id": "kolkata",
       "city_name": "Kolkata",
       "lines": 5,
-      "segments": 8,
+      "segments": 7,
       "stations": 57,
       "segmentSources": {
-        "osm": 8
+        "osm": 7
       },
       "stationSources": {
         "osm": 57
@@ -6952,24 +6952,24 @@
     },
     {
       "city_id": "kolkata",
-      "rule": "declared-not-compiled",
-      "severity": "error",
-      "subject": "kol-pink-seg-01",
-      "message": "Segment declared in overrides 'kol-pink-seg-01' has no matching compiled feature"
-    },
-    {
-      "city_id": "kolkata",
-      "rule": "declared-not-compiled",
-      "severity": "error",
-      "subject": "kol-yellow|Jai Hind (Airport) - Barasat",
-      "message": "Corridor 'Jai Hind (Airport) - Barasat' declared in references has no compiled construction feature"
-    },
-    {
-      "city_id": "kolkata",
-      "rule": "future-date-unconfirmed",
+      "rule": "coverage-gap",
       "severity": "warn",
-      "subject": "kol-yellow-seg-02",
-      "message": "Future segment has no verified expected completion date"
+      "subject": "kol-pink-seg-01",
+      "message": "Declared under construction stretch is tracked as a coverage gap: PIB reports the balance 12.5 km Baranagar–Barrackpore work is held up pending utility shifting/NOC; the override declaration has no matching compiled geometry."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "coverage-gap",
+      "severity": "warn",
+      "subject": "kol-yellow|Jai Hind (Airport) - Michael Nagar",
+      "message": "Declared under construction stretch is tracked as a coverage gap: PIB reports work is in progress, but the refreshed Kolkata cache has no Michael Nagar station node or coordinate for a sourced schematic segment."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "coverage-gap",
+      "severity": "warn",
+      "subject": "kol-yellow|New Barrackpore - Barasat",
+      "message": "Declared planned stretch is tracked as a coverage gap: PIB states this 7.5 km stretch is held up by land acquisition and encroachment issues; no verified terminal coordinates or alignment are present in the refreshed cache."
     },
     {
       "city_id": "kolkata",
@@ -7638,13 +7638,6 @@
     },
     {
       "city_id": "kolkata",
-      "rule": "segment-end-far-from-station",
-      "severity": "warn",
-      "subject": "kol-yellow-seg-02",
-      "message": "Segment start is 9846 m from nearest station of line 'kol-yellow' (threshold: 150 m)"
-    },
-    {
-      "city_id": "kolkata",
       "rule": "segment-sparse-vertices",
       "severity": "warn",
       "subject": "kol-purple-seg-02|leg-20-21",
@@ -7669,7 +7662,7 @@
       "rule": "last-verified-distribution",
       "severity": "info",
       "subject": "kolkata",
-      "message": "last_verified distribution: 2026-10-08: 21; 2026-10-13: 2; missing: 42"
+      "message": "last_verified distribution: 2026-10-08: 21; 2026-10-13: 2; missing: 41"
     },
     {
       "city_id": "mumbai",
@@ -7677,13 +7670,6 @@
       "severity": "error",
       "subject": "mum-line-1-schematic-01",
       "message": "Segment declared in overrides 'mum-line-1-schematic-01' has no matching compiled feature"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "declared-not-compiled",
-      "severity": "error",
-      "subject": "mum-line-2b|Phase 2 (Chembur - DN Nagar)",
-      "message": "Corridor 'Phase 2 (Chembur - DN Nagar)' declared in references has no compiled construction feature"
     },
     {
       "city_id": "mumbai",
@@ -7705,6 +7691,13 @@
       "severity": "warn",
       "subject": "mum-line-9-schematic-01|mum-line-9-seg-01",
       "message": "Segments of line 'mum-line-9' have nearest endpoint gap of 1244 m (threshold: 150 m)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "coverage-gap",
+      "severity": "warn",
+      "subject": "mum-line-2b|Phase 2 (Chembur - DN Nagar)",
+      "message": "Declared under construction stretch is tracked as a coverage gap: MMRDA identifies the remaining Chembur–DN Nagar phase as under construction; no matching route geometry is available in the current compiled data."
     },
     {
       "city_id": "mumbai",

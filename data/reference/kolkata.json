@@ -315,20 +315,35 @@
       ],
       "construction": [
         {
-          "stretch": "Jai Hind (Airport) - Barasat",
+          "stretch": "Jai Hind (Airport) - Michael Nagar",
+          "status": "under_construction",
           "phase": null,
           "expected_completion": null,
-          "stations": 6,
-          "notes": "Remaining 10.1 km stretch towards Barasat via Birati, Michael Nagar, New Barrackpore, Madhyamgram, and Hridaypur. Construction beyond airport has faced right-of-way and utility constraints.",
+          "stations": null,
+          "notes": "PIB reports work from Jai Hind Airport to Michael Nagar is in progress. Terminal coordinate for a sourced schematic is not available in the refreshed cache.",
           "source": {
-            "title": "Project Highlights - Yellow Line - Metro Railway Kolkata",
-            "url": "https://mtp.indianrailways.gov.in",
-            "retrieved_at": "2026-10-07",
-            "kind": "official"
+            "title": "Ridership in East-West Metro Corridor",
+            "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2245960&lang=2&reg=48",
+            "retrieved_at": "2026-10-15",
+            "kind": "government"
+          }
+        },
+        {
+          "stretch": "New Barrackpore - Barasat",
+          "status": "planned",
+          "phase": null,
+          "expected_completion": null,
+          "stations": null,
+          "notes": "Delayed: PIB reports this 7.5 km stretch is held up by land acquisition and encroachment issues. The status of the intervening Michael Nagar–New Barrackpore stretch remains unspecified by this source.",
+          "source": {
+            "title": "Ridership in East-West Metro Corridor",
+            "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2245960&lang=2&reg=48",
+            "retrieved_at": "2026-10-15",
+            "kind": "government"
           }
         }
       ],
-      "notes": "6.77 km operational stretch connecting Noapara to Jai Hind Bimanbandar (Airport) across 4 stations (Noapara, Dum Dum Cantonment, Jessore Road, Jai Hind). Extension to Barasat under construction/planning.",
+      "notes": "6.77 km operational stretch from Noapara to Jai Hind Airport. The extension is split into an under-construction Jai Hind–Michael Nagar section and a delayed New Barrackpore–Barasat section per the PIB release. Status and alignment for Michael Nagar–New Barrackpore remain unresolved.",
       "confidence": "sourced"
     },
     {
