@@ -2,7 +2,7 @@
 
 ## Declaration coverage and geometry evidence
 
-- `declared-not-compiled` is an error when an override-declared segment ID or a reference-declared corridor line has no compiled segment feature. The CLI supplies declarations from `data/overrides/*.json` and `data/reference/*.json`; this catches source/pipeline omissions such as a corridor whose ways are excluded from normalization.
+- `declared-not-compiled` is an error when an override-declared segment ID or a reference-declared corridor line has no compiled segment feature. A matching planned or under-construction declaration may instead be reported as a `coverage-gap` warning only when it has a fully sourced entry in `data/audit/coverage-gaps.json`. Operational declarations always remain errors, including when a matching gap entry is present. Unlisted or status-mismatched declarations remain errors.
 - `segment-parallel-duplicate` and `segment-overlap` remain active errors. A pair is exempted only when both compiled segments carry the same `shared_corridor` record, both contain the declared station range in order, the stations exist on both lines, and the measured overlap differs from the station-implied length by no more than 15%. Invalid or oversized declarations do not suppress the finding.
 - A schematic construction stretch can satisfy `reference-construction-stretch-missing` only if it has `geometry_quality: "schematic"`, a source URL, construction status, and two distinct mapped line stations within 300 m of its geometry endpoints. Otherwise the missing-stretch error remains and `schematic-segment-incomplete` is reported.
 - Schematic geometry is omitted from official geometry-length comparisons and operational city totals. It remains visible as a dashed line and its panel labels it “Approximate alignment.”
@@ -15,9 +15,16 @@ The audit is read-only. It never modifies data.
 
 - `reports/data-audit/<YYYY-MM-DD>.md` (human readable, grouped by city then severity)
 - `reports/data-audit/<YYYY-MM-DD>.json` (machine readable)
+- The CLI summary prints `Coverage gaps: N` separately; coverage-gap findings remain visible in both report formats.
 - Exit code 1 if any `error` exists, or any `warn` not listed in `data/audit-baseline.json`.
 
 Severities: **error** blocks merge. **warn** is tracked and must be fixed or baselined with a one-line reason. **info** is reported only.
+
+Coverage-gap entries require `city_id`, `line_id`, `stretch`, status (`planned` or
+`under_construction`), `source_url`, `reason`, and `review_date`. Override
+segment gaps may also include `segment_id` to associate the reference stretch
+with its source declaration. Coverage gaps are reviewed records, not baselines;
+they do not alter `data/audit-baseline.json`.
 
 Thresholds below are defaults and can be tuned per city in the overrides file.
 

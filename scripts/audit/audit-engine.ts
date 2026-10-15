@@ -84,8 +84,24 @@ export interface AuditResult {
 }
 
 export interface AuditDeclarations {
-  segments: Array<{ city_id: string; line_id: string; segment_id: string }>;
+  segments: Array<{
+    city_id: string;
+    line_id: string;
+    segment_id: string;
+    status?: "operational" | "construction" | "planned";
+  }>;
   lines: Array<{ city_id: string; line_id: string }>;
+}
+
+export interface CoverageGap {
+  city_id: string;
+  line_id: string;
+  stretch: string;
+  segment_id?: string;
+  status: "under_construction" | "planned";
+  source_url: string;
+  reason: string;
+  review_date: string;
 }
 
 export interface ReferenceSource {
@@ -106,6 +122,7 @@ export interface ReferenceLineOpening {
 
 export interface ReferenceLineConstruction {
   stretch: string;
+  status?: "under_construction" | "planned";
   phase: string | null;
   expected_completion: string | null;
   stations: number | null;
@@ -329,6 +346,7 @@ export function runAudit(
     outOfScopeStations?: Record<string, string[]>;
     outOfScopeLineIds?: string[];
     declarations?: AuditDeclarations;
+    coverageGaps?: CoverageGap[];
   }
 ): AuditResult {
   const cfg = AUDIT_THRESHOLDS;
@@ -339,6 +357,24 @@ export function runAudit(
   const intentionalBreaks = new Set(options?.intentionalBreaks || []);
   const outOfScopeStations = options?.outOfScopeStations || {};
   const outOfScopeLineIds = new Set(options?.outOfScopeLineIds || []);
+  const coverageGaps = options?.coverageGaps || [];
+
+  function coverageGapFor(
+    cityId: string,
+    lineId: string,
+    stretch: string,
+    status: "operational" | "construction" | "planned" | "under_construction"
+  ): CoverageGap | undefined {
+    if (status === "operational") return undefined;
+    const gapStatus = status === "construction" ? "under_construction" : status;
+    return coverageGaps.find(
+      (gap) =>
+        gap.city_id === cityId &&
+        gap.line_id === lineId &&
+        (gap.stretch === stretch || gap.segment_id === stretch) &&
+        gap.status === gapStatus
+    );
+  }
 
   const findings: Finding[] = [];
 
@@ -453,12 +489,20 @@ export function runAudit(
       compiled.properties.city_id !== declared.city_id ||
       compiled.properties.line_id !== declared.line_id
     ) {
+      const gap = coverageGapFor(
+        declared.city_id,
+        declared.line_id,
+        declared.segment_id,
+        declared.status || "operational"
+      );
       add(
         declared.city_id,
-        "declared-not-compiled",
-        "error",
+        gap ? "coverage-gap" : "declared-not-compiled",
+        gap ? "warn" : "error",
         declared.segment_id,
-        `Segment declared in overrides '${declared.segment_id}' has no matching compiled feature`
+        gap
+          ? `Declared ${gap.status.replaceAll("_", " ")} stretch is tracked as a coverage gap: ${gap.reason}`
+          : `Segment declared in overrides '${declared.segment_id}' has no matching compiled feature`
       );
     }
   }
@@ -2405,12 +2449,20 @@ export function runAudit(
             .filter(Boolean);
 
           if (conSegs.length === 0) {
+            const gap = coverageGapFor(
+              city.id,
+              refLine.line_id,
+              con.stretch,
+              con.status || "under_construction"
+            );
             add(
               city.id,
-              "declared-not-compiled",
-              "error",
+              gap ? "coverage-gap" : "declared-not-compiled",
+              gap ? "warn" : "error",
               `${refLine.line_id}|${con.stretch}`,
-              `Corridor '${con.stretch}' declared in references has no compiled construction feature`
+              gap
+                ? `Declared ${gap.status.replaceAll("_", " ")} stretch is tracked as a coverage gap: ${gap.reason}`
+                : `Corridor '${con.stretch}' declared in references has no compiled construction feature`
             );
           } else if (stretchParts.length >= 2) {
             const lineStations = stationsByLineId.get(refLine.line_id) || [];

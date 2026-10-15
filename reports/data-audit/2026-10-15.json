@@ -253,10 +253,10 @@
   "findings": [
     {
       "city_id": "ahmedabad",
-      "rule": "declared-not-compiled",
-      "severity": "error",
+      "rule": "coverage-gap",
+      "severity": "warn",
       "subject": "ahm-violet|GIFT City - Shahpur (Phase 2B extension)",
-      "message": "Corridor 'GIFT City - Shahpur (Phase 2B extension)' declared in references has no compiled construction feature"
+      "message": "Declared planned stretch is tracked as a coverage gap: GMRC has issued a tender, but the inspected awarded-tenders record does not verify an award or physical start; alignment geometry and station positions are not published in the current OSM cache."
     },
     {
       "city_id": "ahmedabad",
@@ -2241,17 +2241,17 @@
     },
     {
       "city_id": "chennai",
-      "rule": "declared-not-compiled",
-      "severity": "error",
-      "subject": "che-corridor-3-seg-01",
-      "message": "Segment declared in overrides 'che-corridor-3-seg-01' has no matching compiled feature"
-    },
-    {
-      "city_id": "chennai",
       "rule": "segment-parallel-duplicate",
       "severity": "error",
       "subject": "che-corridor-5-seg-01",
       "message": "Segment polyline folds back on itself running parallel within 60 m for ~381 m"
+    },
+    {
+      "city_id": "chennai",
+      "rule": "coverage-gap",
+      "severity": "warn",
+      "subject": "che-corridor-3-seg-01",
+      "message": "Declared under construction stretch is tracked as a coverage gap: CMRL confirms active Corridor 3 works, but the declared OSM relation still contains only inactive way members and the refreshed cache has no sourced SIPCOT 2 terminal station coordinate for a schematic segment."
     },
     {
       "city_id": "chennai",

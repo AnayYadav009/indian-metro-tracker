@@ -14,7 +14,7 @@ import {
   formatMarkdownReport,
   formatJsonReport,
 } from "./audit-engine";
-import type { AuditDeclarations, BaselineFile } from "./audit-engine";
+import type { AuditDeclarations, BaselineFile, CoverageGap } from "./audit-engine";
 import { loadMetroDatasetFromDisk } from "../lib/load-dataset";
 
 function main() {
@@ -29,6 +29,30 @@ function main() {
   const outOfScopeStations: Record<string, string[]> = {};
   const outOfScopeLineIds: string[] = [];
   const declarations: AuditDeclarations = { segments: [], lines: [] };
+  const coverageGapsPath = path.join(dataDir, "audit", "coverage-gaps.json");
+  let coverageGaps: CoverageGap[] = [];
+  if (fs.existsSync(coverageGapsPath)) {
+    try {
+      const parsed: unknown = JSON.parse(fs.readFileSync(coverageGapsPath, "utf-8"));
+      if (Array.isArray(parsed)) {
+        coverageGaps = parsed.filter(
+          (gap): gap is CoverageGap =>
+            typeof gap?.city_id === "string" &&
+            typeof gap?.line_id === "string" &&
+            typeof gap?.stretch === "string" &&
+            (gap?.segment_id === undefined || typeof gap.segment_id === "string") &&
+            ["planned", "under_construction"].includes(gap?.status) &&
+            typeof gap?.source_url === "string" &&
+            /^https?:\/\//.test(gap.source_url) &&
+            typeof gap?.reason === "string" &&
+            typeof gap?.review_date === "string" &&
+            /^\d{4}-\d{2}-\d{2}$/.test(gap.review_date)
+        );
+      }
+    } catch {
+      console.error(`⚠️ Could not parse ${coverageGapsPath}; no gaps will be reclassified.`);
+    }
+  }
 
   // Look for exemptions in each city's override file
   const overridesDir = path.join(dataDir, "overrides");
@@ -46,6 +70,7 @@ function main() {
               city_id: cityId,
               line_id: segment.line_id,
               segment_id: segment.segment_id,
+              status: segment.status,
             });
           }
         }
@@ -97,6 +122,7 @@ function main() {
       outOfScopeStations,
       outOfScopeLineIds,
       declarations,
+      coverageGaps,
     }
   );
 
@@ -166,6 +192,7 @@ function main() {
   console.log(`📋 Unreviewed warnings (awaiting city review): ${unreviewed.length}`);
   console.log(`🚨 Known walkthrough defects tracked: ${knownDefects.length}`);
   console.log(`⏳ Pending rules (report-only): ${pending.length}`);
+  console.log(`🗺️ Coverage gaps: ${result.findings.filter((f) => f.rule === "coverage-gap").length}`);
 
   const totalStale = staleAccepted.length + staleUnreviewed.length + staleKnownDefects.length;
   if (totalStale > 0) {

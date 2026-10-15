@@ -858,6 +858,79 @@ describe("Audit Engine", () => {
       expect(findByRule(passResult.findings, "declared-not-compiled")).toHaveLength(0);
     });
 
+    it("coverage gaps cannot downgrade operational declarations", () => {
+      const result = runAudit(makeDataset({ segments: [] }), {
+        ...AUDIT_OPTIONS,
+        declarations: {
+          segments: [{
+            city_id: "test-city",
+            line_id: "tc-red",
+            segment_id: "tc-red-seg-01",
+            status: "operational",
+          }],
+          lines: [],
+        },
+        coverageGaps: [{
+          city_id: "test-city",
+          line_id: "tc-red",
+          stretch: "tc-red-seg-01",
+          status: "planned",
+          source_url: "https://example.com/source",
+          reason: "Fixture only",
+          review_date: "2026-10-15",
+        }],
+      });
+
+      expect(findByRule(result.findings, "declared-not-compiled")).toHaveLength(1);
+      expect(findByRule(result.findings, "coverage-gap")).toHaveLength(0);
+    });
+
+    it("reclassifies a matching planned declaration as a coverage gap", () => {
+      const result = runAudit(makeDataset({ segments: [] }), {
+        ...AUDIT_OPTIONS,
+        declarations: {
+          segments: [{
+            city_id: "test-city",
+            line_id: "tc-red",
+            segment_id: "tc-red-seg-01",
+            status: "planned",
+          }],
+          lines: [],
+        },
+        coverageGaps: [{
+          city_id: "test-city",
+          line_id: "tc-red",
+          stretch: "tc-red-seg-01",
+          status: "planned",
+          source_url: "https://example.com/source",
+          reason: "Fixture only",
+          review_date: "2026-10-15",
+        }],
+      });
+
+      expect(findByRule(result.findings, "coverage-gap")).toHaveLength(1);
+      expect(findByRule(result.findings, "declared-not-compiled")).toHaveLength(0);
+    });
+
+    it("keeps an unlisted planned declaration as an error", () => {
+      const result = runAudit(makeDataset({ segments: [] }), {
+        ...AUDIT_OPTIONS,
+        declarations: {
+          segments: [{
+            city_id: "test-city",
+            line_id: "tc-red",
+            segment_id: "tc-red-seg-01",
+            status: "planned",
+          }],
+          lines: [],
+        },
+        coverageGaps: [],
+      });
+
+      expect(findByRule(result.findings, "declared-not-compiled")).toHaveLength(1);
+      expect(findByRule(result.findings, "coverage-gap")).toHaveLength(0);
+    });
+
     it("segment-parallel-duplicate: flags twin tracks 20 m apart for 500 m and passes separate tracks", () => {
       // Failing fixture: twin tracks 20m apart (~0.00018 deg lat) for 500m
       const segTrack1 = makeSegment({

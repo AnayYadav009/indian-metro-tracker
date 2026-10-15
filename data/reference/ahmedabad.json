@@ -169,10 +169,17 @@
       "construction": [
         {
           "stretch": "GIFT City - Shahpur (Phase 2B extension)",
+          "status": "planned",
           "phase": "2B",
-          "expected_completion": "2028-12",
+          "expected_completion": null,
           "stations": 3,
-          "notes": "3.33 km elevated extension from GIFT City to Shahpur with 3 stations approved by Government of Gujarat."
+          "notes": "3.33 km elevated extension from GIFT City to Shahpur with 3 stations. GMRC has issued a tender; award and physical commencement were not verified, so this remains planned/procurement.",
+          "source": {
+            "title": "Construction tender for GIFT City to Shahpur extension",
+            "url": "https://www.gujaratmetrorail.com/tenders/construction-of-3-33-km-elevated-viaducts-and-3-nos-stations-from-gift-city-to-shahpur-circle-including-civil-structural-works-architectural-finishing-works-structural-steel-roofing-signages-phe-2/",
+            "retrieved_at": "2026-10-15",
+            "kind": "official"
+          }
         }
       ],
       "notes": "Phase 2 Corridor-2 spur line from GNLU interchange to GIFT City via PDEU. Extension towards Shahpur (Phase 2B) approved. Coverage review on 2026-10-13 confirmed Phase 2B (GIFT City to Shahpur, 3.33 km) is sanctioned with tenders invited; alignment geometry and station positions not yet released in OSM."
