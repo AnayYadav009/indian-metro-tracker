@@ -2,6 +2,7 @@ import type { LayerProps } from "react-map-gl/maplibre";
 import type { Status } from "@/types/schema";
 import { STATION_STYLE, stationStrokeExpression } from "@/lib/station-style";
 import { buildVisibilityExpression } from "@/lib/filter-utils";
+import { MIN_LINE_WIDTH_LOW_ZOOM, NATIONAL_ZOOM_THRESHOLD } from "@/lib/map-config";
 
 /**
  * Layer IDs that receive pointer events (click, hover).
@@ -16,15 +17,18 @@ export const INTERACTIVE_LAYER_IDS = [
 
 /**
  * Standard data-driven zoom-based line width interpolation across all statuses.
+ * Ensures lines remain distinctly visible (>= MIN_LINE_WIDTH_LOW_ZOOM) even at national zoom.
  */
 export const LINE_WIDTH_ZOOM_EXPRESSION: unknown[] = [
   "interpolate",
   ["linear"],
   ["zoom"],
-  6,
-  2.5,
+  3.5,
+  MIN_LINE_WIDTH_LOW_ZOOM,
+  NATIONAL_ZOOM_THRESHOLD,
+  MIN_LINE_WIDTH_LOW_ZOOM,
   10,
-  4,
+  4.5,
   14,
   6,
 ];
@@ -32,8 +36,18 @@ export const LINE_WIDTH_ZOOM_EXPRESSION: unknown[] = [
 const FUTURE_LINE_WIDTH_EXPRESSION: unknown[] = [
   "case",
   ["==", ["get", "geometry_quality"], "schematic"],
-  2,
-  4,
+  [
+    "interpolate",
+    ["linear"],
+    ["zoom"],
+    3.5,
+    2.5,
+    NATIONAL_ZOOM_THRESHOLD,
+    2.5,
+    10,
+    3.5,
+  ],
+  LINE_WIDTH_ZOOM_EXPRESSION,
 ];
 
 /**

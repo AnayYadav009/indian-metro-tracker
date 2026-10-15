@@ -195,11 +195,98 @@ describe("MetadataPanel Component", () => {
     });
 
     render(<MetadataPanel />);
-    expect(screen.getByTestId("metadata-panel")).toBeInTheDocument();
-
     const closeButton = screen.getByTestId("close-metadata-panel");
     fireEvent.click(closeButton);
-
     expect(useMetroStore.getState().selectedFeature).toBeNull();
+  });
+
+  describe("M13.1 UX Hardening Labels & Copy", () => {
+    it("renders '1 station' singular when stations_count is 1", () => {
+      const mockSegment: SegmentProperties = {
+        segment_id: "test-single-seg",
+        line_id: "test-line",
+        line_name: "Test Single Station Line",
+        city_id: "delhi",
+        city: "Delhi",
+        operator: "DMRC",
+        status: "operational",
+        phase: "I",
+        length_km: 1.5,
+        gauge: "standard",
+        inaugurated_on: "2020-01-01",
+        expected_completion: null,
+        stations_count: 1,
+        color: "#000000",
+        source: "mock",
+        references: [],
+        last_verified: null,
+      };
+
+      useMetroStore.getState().setSelectedFeature({
+        type: "segment",
+        data: mockSegment,
+      });
+
+      render(<MetadataPanel />);
+      expect(screen.getByText("1 station")).toBeInTheDocument();
+    });
+
+    it("renders 'Stations not yet published' when stations_not_published is true or 0 stations on future segment", () => {
+      const mockSegment: SegmentProperties = {
+        segment_id: "test-future-seg",
+        line_id: "test-line",
+        line_name: "Future Test Line",
+        city_id: "chennai",
+        city: "Chennai",
+        operator: "CMRL",
+        status: "construction",
+        phase: "2",
+        length_km: 10.0,
+        gauge: "standard",
+        inaugurated_on: null,
+        expected_completion: "2028",
+        stations_count: 0,
+        stations_not_published: true,
+        color: "#FFD100",
+        source: "mock",
+        references: [],
+        last_verified: null,
+      };
+
+      useMetroStore.getState().setSelectedFeature({
+        type: "segment",
+        data: mockSegment,
+      });
+
+      render(<MetadataPanel />);
+      expect(screen.getByText("Stations not yet published")).toBeInTheDocument();
+    });
+
+    it("renders 'Date not recorded' when operational segment or station has null opened_on/inaugurated_on", () => {
+      const mockStation: StationProperties = {
+        station_id: "test-undated-station",
+        name: "Undated Metro Station",
+        city_id: "delhi",
+        city: "Delhi",
+        line_ids: ["del-red"],
+        status: "operational",
+        phase: "I",
+        is_interchange: false,
+        opened_on: null,
+        expected_completion: null,
+        layout: "elevated",
+        source: "osm",
+        last_verified: null,
+      };
+
+      useMetroStore.getState().setSelectedFeature({
+        type: "station",
+        data: mockStation,
+      });
+
+      render(<MetadataPanel />);
+      expect(screen.getByText("Date not recorded")).toBeInTheDocument();
+      expect(screen.getByText("Not verified (OSM data)")).toBeInTheDocument();
+    });
   });
 });

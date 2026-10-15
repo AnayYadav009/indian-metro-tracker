@@ -136,6 +136,8 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
     [selectedStatuses, selectedCityId, selectedPhases, selectedYear, includeFuture]
   );
 
+  const [isLoadingTiles, setIsLoadingTiles] = useState<boolean>(false);
+
   // Pan/zoom map when city selection changes
   useEffect(() => {
     if (!mapRef.current) return;
@@ -147,14 +149,19 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
       const targetCity = dataset.cities.find((c) => c.id === selectedCityId);
       if (targetCity) {
         const [minLng, minLat, maxLng, maxLat] = targetCity.bbox;
+        // Desktop padding reserves space for the filter panel (left) and metadata panel (right)
+        const isDesktop = typeof window !== "undefined" && window.innerWidth >= 768;
         mapRef.current.fitBounds(
           [
             [minLng, minLat],
             [maxLng, maxLat],
           ],
           {
-            padding: 80,
-            duration: 1200,
+            padding: isDesktop
+              ? { top: 70, bottom: 70, left: 400, right: 80 }
+              : { top: 80, bottom: 80, left: 24, right: 24 },
+            duration: 800,
+            essential: true,
           }
         );
       }
@@ -162,10 +169,30 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
       mapRef.current.flyTo({
         center: [INITIAL_VIEW_STATE.longitude, INITIAL_VIEW_STATE.latitude],
         zoom: INITIAL_VIEW_STATE.zoom,
-        duration: 1200,
+        duration: 800,
+        essential: true,
       });
     }
   }, [selectedCityId, dataset.cities]);
+
+  // Adjust camera to avoid feature overlap with metadata panel (desktop right panel)
+  useEffect(() => {
+    if (!mapRef.current || !selectedFeature) return;
+    const isDesktop = typeof window !== "undefined" && window.innerWidth >= 768;
+    if (!isDesktop) return;
+
+    if (selectedFeature.type === "station") {
+      const stn = getStationById(selectedFeature.data.station_id);
+      if (stn) {
+        const [lng, lat] = stn.geometry.coordinates;
+        mapRef.current.easeTo({
+          center: [lng, lat],
+          padding: { top: 0, bottom: 0, left: 0, right: 400 },
+          duration: 400,
+        });
+      }
+    }
+  }, [selectedFeature]);
 
   // Handle click on map features
   const handleMapClick = useCallback(
@@ -300,6 +327,7 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
         onMouseMove={handleMouseMove}
         onMouseEnter={() => setCursor("pointer")}
         onMouseLeave={handleMouseLeave}
+        onIdle={() => setIsLoadingTiles(false)}
       >
         <NavigationControl position="top-right" showCompass showZoom />
 
@@ -348,6 +376,17 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
           />
         </Source>
       </Map>
+
+      {/* Subtle map tile loading indicator */}
+      {isLoadingTiles && (
+        <div
+          data-testid="map-loading-indicator"
+          className="pointer-events-none absolute bottom-4 left-4 z-20 flex items-center gap-2 rounded-full border border-slate-700/60 bg-slate-900/80 px-2.5 py-1 text-[11px] text-slate-300 shadow-md backdrop-blur-sm"
+        >
+          <span className="h-2 w-2 animate-ping rounded-full bg-emerald-400" />
+          <span>Updating map...</span>
+        </div>
+      )}
 
       {/* Hover preview tooltip */}
       <HoverTooltip />
