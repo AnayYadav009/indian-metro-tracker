@@ -48,7 +48,6 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
   const mapRef = useRef<MapRef>(null);
   const [cursor, setCursor] = useState<string>("auto");
 
-  // Subscribe to filter & selection state
   const selectedCityId = useMetroStore((state) => state.selectedCityId);
   const selectedStatuses = useMetroStore((state) => state.selectedStatuses);
   const selectedPhases = useMetroStore((state) => state.selectedPhases);
@@ -71,7 +70,6 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
     [showStations]
   );
 
-  // Compute selected IDs for highlight layers
   const selectedSegmentId =
     selectedFeature?.type === "segment"
       ? selectedFeature.data.segment_id
@@ -81,10 +79,8 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
       ? selectedFeature.data.station_id
       : null;
 
-  // Load metro dataset
   const dataset = useMemo(() => getMetroData(), []);
 
-  // MapLibre WebGL Layer Filter Expressions (filters applied directly by GPU without re-parsing GeoJSON)
   const operationalFilter = useMemo(
     () =>
       buildStatusFilter(
@@ -138,7 +134,6 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
 
   const [isLoadingTiles, setIsLoadingTiles] = useState<boolean>(false);
 
-  // Pan/zoom map when city selection changes
   useEffect(() => {
     if (!mapRef.current) return;
     if (typeof window !== "undefined") {
@@ -175,7 +170,6 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
     }
   }, [selectedCityId, dataset.cities]);
 
-  // Adjust camera to avoid feature overlap with metadata panel (desktop right panel)
   useEffect(() => {
     if (!mapRef.current || !selectedFeature) return;
     const isDesktop = typeof window !== "undefined" && window.innerWidth >= 768;
@@ -194,7 +188,6 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
     }
   }, [selectedFeature]);
 
-  // Handle click on map features
   const handleMapClick = useCallback(
     (e: MapLayerMouseEvent) => {
       const features = e.features;
@@ -203,7 +196,7 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
         return;
       }
 
-      // Prioritize station points over lines when both overlap
+      // Prefer stations when their point overlaps a line.
       const stationF = features.find(
         (f) =>
           f.layer.id === "interchange-points" ||
@@ -223,7 +216,6 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
         }
       }
 
-      // Check for metro segments
       const segmentF = features.find(
         (f) =>
           f.layer.id === "operational-lines" ||
@@ -244,20 +236,17 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
         }
       }
 
-      // If clicked on canvas without interactive feature, clear selection
       clearSelectedFeature();
     },
     [clearSelectedFeature, setSelectedFeature]
   );
 
-  // Handle mouse move for hover tooltip and pointer cursor
   const handleMouseMove = useCallback(
     (e: MapLayerMouseEvent) => {
       const features = e.features;
       if (features && features.length > 0) {
         setCursor("pointer");
 
-        // Station hover
         const stationF = showStations
           ? features.find(
           (f) =>
@@ -278,7 +267,6 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
           return;
         }
 
-        // Segment hover
         const segmentF = features.find(
           (f) => f.properties && "segment_id" in f.properties
         );
@@ -356,32 +344,26 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
       >
         <NavigationControl position="top-right" showCompass showZoom />
 
-        {/* Metro Segments: Solid (operational), Dashed (construction), Dotted (planned) */}
         <Source id="metro-segments" type="geojson" data={dataset.segments}>
-          {/* Highlight glowing underlay for selected segment */}
           <Layer {...getSelectedSegmentLayer(selectedSegmentId)} />
           <Layer {...withFilter(operationalLineLayer, operationalFilter)} />
           <Layer {...withFilter(constructionLineLayer, constructionFilter)} />
           <Layer {...withFilter(plannedLineLayer, plannedFilter)} />
         </Source>
 
-        {/* Metro Stations: Points with interchange indicators and labels */}
         <Source id="metro-stations" type="geojson" data={dataset.stations}>
-          {/* Highlight ring for selected station */}
           <Layer
             {...withVisibility(
               getSelectedStationLayer(selectedStationId),
               showStations
             )}
           />
-          {/* Regular station dots (non-interchange) */}
           <Layer
             {...withVisibility(
               withFilter(stationCircleLayer, stationFilter),
               showStations
             )}
           />
-          {/* Interchange stations: distinct larger ring marker */}
           <Layer
             {...withVisibility(
               withFilter(
@@ -402,7 +384,6 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
         </Source>
       </Map>
 
-      {/* Subtle map tile loading indicator */}
       {isLoadingTiles && (
         <div
           data-testid="map-loading-indicator"
@@ -413,7 +394,6 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
         </div>
       )}
 
-      {/* Hover preview tooltip */}
       <HoverTooltip />
     </div>
   );

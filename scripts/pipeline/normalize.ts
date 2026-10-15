@@ -1,4 +1,5 @@
 import { calculateLineStringLengthKm } from "../../lib/geo";
+import { cleanStationName } from "../lib/station-name";
 
 export interface NormalizedStation {
   osmId: number;
@@ -68,12 +69,7 @@ export function normalizeOverpassCity(cityId: string, rawData: any): NormalizedC
   const stationsMap = new Map<number, NormalizedStation>();
   for (const node of stationNodes) {
     const rawName = node.tags["name:en"] || node.tags.name || `Station ${node.id}`;
-    // Clean name (e.g., strip line qualifiers "(Blue Line)", " Metro Station", etc.)
-    const cleanName = rawName
-      .replace(/\s*\([^)]*(line|corridor|branch)[^)]*\)/gi, "")
-      .replace(/\s+metro\s+station/i, "")
-      .replace(/\s+station/i, "")
-      .trim();
+    const cleanName = cleanStationName(rawName);
 
     let stationStatus: "operational" | "construction" | "planned" = "operational";
     if (node.tags.railway === "construction" || node.tags.construction === "station") {

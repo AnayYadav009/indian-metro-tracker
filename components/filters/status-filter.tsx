@@ -13,16 +13,12 @@ export function StatusFilter() {
 
   const dataset = getMetroData();
 
-  // Calculate segment count per status in current city scope
-  const getCountForStatus = (status: Status) => {
-    return dataset.segments.features.filter((f) => {
-      if (f.properties.status !== status) return false;
-      if (selectedCityId && f.properties.city_id !== selectedCityId) {
-        return false;
-      }
-      return true;
-    }).length;
-  };
+  const getCountForStatus = (status: Status) =>
+    dataset.segments.features.filter(
+      ({ properties }) =>
+        properties.status === status &&
+        (!selectedCityId || properties.city_id === selectedCityId)
+    ).length;
 
   return (
     <div className="flex flex-col gap-1.5">
@@ -61,7 +57,6 @@ export function StatusFilter() {
                 </span>
               </div>
 
-              {/* Visual Pattern Indicator */}
               <div className="flex items-center gap-2">
                 <div className="h-2 w-14 flex items-center">
                   {opt.lineStyle === "solid" && (
