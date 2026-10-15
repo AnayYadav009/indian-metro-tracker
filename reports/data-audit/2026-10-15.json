@@ -8929,7 +8929,7 @@
       "rule": "segment-parallel-duplicate",
       "severity": "error",
       "subject": "pun-line-3-seg-01",
-      "message": "Segment polyline folds back on itself running parallel within 60 m for ~18455 m"
+      "message": "Segment polyline folds back on itself running parallel within 60 m for ~1946 m"
     },
     {
       "city_id": "pune",
@@ -9139,7 +9139,7 @@
       "rule": "segment-end-far-from-station",
       "severity": "warn",
       "subject": "pun-line-3-seg-01",
-      "message": "Segment start is 7877 m from nearest station of line 'pun-line-3' (threshold: 150 m)"
+      "message": "Segment start is 18275 m from nearest station of line 'pun-line-3' (threshold: 150 m)"
     },
     {
       "city_id": "pune",
@@ -9159,35 +9159,7 @@
       "city_id": "pune",
       "rule": "segment-sparse-vertices",
       "severity": "warn",
-      "subject": "pun-line-3-seg-01|leg-15-16",
-      "message": "Segment has a leg of 1107 m without vertices (threshold: 1000 m for non-schematic segments)"
-    },
-    {
-      "city_id": "pune",
-      "rule": "segment-sparse-vertices",
-      "severity": "warn",
-      "subject": "pun-line-3-seg-01|leg-18-19",
-      "message": "Segment has a leg of 1097 m without vertices (threshold: 1000 m for non-schematic segments)"
-    },
-    {
-      "city_id": "pune",
-      "rule": "segment-sparse-vertices",
-      "severity": "warn",
-      "subject": "pun-line-3-seg-01|leg-2-3",
-      "message": "Segment has a leg of 1135 m without vertices (threshold: 1000 m for non-schematic segments)"
-    },
-    {
-      "city_id": "pune",
-      "rule": "segment-sparse-vertices",
-      "severity": "warn",
-      "subject": "pun-line-3-seg-01|leg-27-28",
-      "message": "Segment has a leg of 1009 m without vertices (threshold: 1000 m for non-schematic segments)"
-    },
-    {
-      "city_id": "pune",
-      "rule": "segment-sparse-vertices",
-      "severity": "warn",
-      "subject": "pun-line-3-seg-01|leg-462-463",
+      "subject": "pun-line-3-seg-01|leg-453-454",
       "message": "Segment has a leg of 1070 m without vertices (threshold: 1000 m for non-schematic segments)"
     },
     {
@@ -9210,6 +9182,13 @@
       "severity": "info",
       "subject": "pune",
       "message": "last_verified distribution: 2026-10-08: 30; missing: 2"
+    },
+    {
+      "city_id": "pune",
+      "rule": "station-outside-bbox-on-segment",
+      "severity": "info",
+      "subject": "pun-line-3-seg-01",
+      "message": "Segment has geometry outside the city bbox"
     },
     {
       "city_id": "surat",
