@@ -2591,10 +2591,10 @@
     },
     {
       "city_id": "delhi",
-      "rule": "declared-not-compiled",
+      "rule": "ground-truth-station-count",
       "severity": "error",
-      "subject": "del-pink|Phase 4 extension (Maujpur - Majlis Park)",
-      "message": "Corridor 'Phase 4 extension (Maujpur - Majlis Park)' declared in references has no compiled construction feature"
+      "subject": "del-pink",
+      "message": "Operational station count: data has 38, reference has 45"
     },
     {
       "city_id": "delhi",
@@ -2874,7 +2874,7 @@
       "rule": "ground-truth-length",
       "severity": "warn",
       "subject": "del-pink",
-      "message": "Operational length: computed 61.43 km vs reference 59.58 km (3.1%)"
+      "message": "Operational length: computed 61.43 km vs reference 71.548 km (14.1%)"
     },
     {
       "city_id": "delhi",
