@@ -39238,52 +39238,6 @@
         "type": "LineString",
         "coordinates": [
           [
-            77.40361,
-            28.51077
-          ],
-          [
-            77.40184,
-            28.5024
-          ],
-          [
-            77.41285,
-            28.49897
-          ]
-        ]
-      },
-      "properties": {
-        "segment_id": "noi-aqua-seg-02",
-        "line_id": "noi-aqua",
-        "line_name": "Aqua Line Extension (Botanical Garden - Sector 142)",
-        "city_id": "noida",
-        "city": "Noida",
-        "operator": "NMRC",
-        "status": "construction",
-        "phase": "2",
-        "length_km": 2.1,
-        "gauge": "standard",
-        "inaugurated_on": null,
-        "expected_completion": "2030",
-        "stations_count": 2,
-        "color": "#00CED1",
-        "stations_not_published": false,
-        "source": "osm",
-        "references": [
-          "https://ddnews.gov.in",
-          "https://www.openstreetmap.org/way/538930428"
-        ],
-        "completion_unconfirmed": false,
-        "last_verified": null,
-        "retrieved_at": "2026-10-10",
-        "geometry_quality": "exact"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "LineString",
-        "coordinates": [
-          [
             77.41547,
             28.67065
           ],

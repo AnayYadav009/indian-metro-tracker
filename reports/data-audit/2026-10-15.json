@@ -156,10 +156,10 @@
       "city_id": "noida",
       "city_name": "Noida",
       "lines": 1,
-      "segments": 2,
+      "segments": 1,
       "stations": 21,
       "segmentSources": {
-        "osm": 2
+        "osm": 1
       },
       "stationSources": {
         "osm": 21
@@ -8758,17 +8758,10 @@
     },
     {
       "city_id": "noida",
-      "rule": "segment-parallel-duplicate",
-      "severity": "error",
-      "subject": "noi-aqua-seg-01|noi-aqua-seg-02",
-      "message": "Segments run parallel within 60 m for ~624 m (twin tracks)"
-    },
-    {
-      "city_id": "noida",
-      "rule": "consecutive-segment-gap",
+      "rule": "coverage-gap",
       "severity": "warn",
-      "subject": "noi-aqua-seg-01|noi-aqua-seg-02",
-      "message": "Segments of line 'noi-aqua' have nearest endpoint gap of 8782 m (threshold: 150 m)"
+      "subject": "noi-aqua|Sector 142 to Botanical Garden",
+      "message": "Declared planned stretch is tracked as a coverage gap: NMRC lists this approved 11.56 km, 8-station corridor as an upcoming project. OSM way 538930428 is tagged railway=proposed and usage=branch, so it is not part of the operational Aqua Line and its partial proposed geometry is not compiled."
     },
     {
       "city_id": "noida",
@@ -8800,31 +8793,10 @@
     },
     {
       "city_id": "noida",
-      "rule": "segment-sparse-vertices",
-      "severity": "warn",
-      "subject": "noi-aqua-seg-02|leg-1-2",
-      "message": "Segment has a leg of 1141 m without vertices (threshold: 1000 m for non-schematic segments)"
-    },
-    {
-      "city_id": "noida",
-      "rule": "station-gap",
-      "severity": "warn",
-      "subject": "noi-aqua|noi-depot|noi-noida-sector-137",
-      "message": "Stations are 13932 m apart (threshold: 3000 m)"
-    },
-    {
-      "city_id": "noida",
-      "rule": "station-gap",
-      "severity": "warn",
-      "subject": "noi-aqua|noi-noida-sector-83|noi-noida-sector-143",
-      "message": "Stations are 4015 m apart (threshold: 3000 m)"
-    },
-    {
-      "city_id": "noida",
       "rule": "last-verified-distribution",
       "severity": "info",
       "subject": "noida",
-      "message": "last_verified distribution: 2026-10-08: 20; 2026-10-10: 1; missing: 2"
+      "message": "last_verified distribution: 2026-10-08: 20; 2026-10-10: 1; missing: 1"
     },
     {
       "city_id": "pune",

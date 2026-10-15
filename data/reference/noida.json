@@ -31,18 +31,19 @@
       "construction": [
         {
           "stretch": "Sector 142 to Botanical Garden",
+          "status": "planned",
           "phase": "2",
-          "expected_completion": "2030",
+          "expected_completion": null,
           "stations": 8,
           "source": {
-            "title": "Cabinet approves Noida Metro extension from Sector 142 to Botanical Garden",
-            "url": "https://ddnews.gov.in",
-            "retrieved_at": "2026-10-08",
-            "kind": "government"
+            "title": "NMRC Upcoming Projects: Sector 142 to Botanical Garden",
+            "url": "https://nmrcnoida.com/Projects/Upcoming-projects",
+            "retrieved_at": "2026-10-15",
+            "kind": "official"
           }
         }
       ],
-      "notes": "29.7 km fully elevated corridor connecting Sector 51 in Noida to Depot in Greater Noida across 21 stations. Operated by Noida Metro Rail Corporation (NMRC). Interchange with DMRC Blue Line at Sector 51/52 via pedestrian walkway. Union Cabinet approved 11.56 km extension from Sector 142 to Botanical Garden on 2026-02-14."
+      "notes": "29.7 km fully elevated corridor connecting Sector 51 in Noida to Depot in Greater Noida across 21 stations. Operated by Noida Metro Rail Corporation (NMRC). Interchange with DMRC Blue Line at Sector 51/52 via pedestrian walkway. The approved Sector 142 to Botanical Garden extension (11.56 km, 8 stations) is listed as an upcoming project by NMRC and remains a planned coverage gap."
     }
   ],
   "confidence": "sourced"
