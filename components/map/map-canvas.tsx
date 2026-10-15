@@ -27,8 +27,10 @@ import {
   INTERACTIVE_LAYER_IDS,
   operationalLineLayer,
   constructionLineLayer,
+  schematicLineLayer,
   plannedLineLayer,
   getSelectedSegmentLayer,
+  getSelectedSchematicSegmentLayer,
   interchangeStationLayer,
   stationCircleLayer,
   getSelectedStationLayer,
@@ -346,8 +348,16 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
 
         <Source id="metro-segments" type="geojson" data={dataset.segments}>
           <Layer {...getSelectedSegmentLayer(selectedSegmentId)} />
+          <Layer {...getSelectedSchematicSegmentLayer(selectedSegmentId)} />
           <Layer {...withFilter(operationalLineLayer, operationalFilter)} />
           <Layer {...withFilter(constructionLineLayer, constructionFilter)} />
+          <Layer
+            {...withFilter(schematicLineLayer, [
+              "all",
+              ["==", ["get", "geometry_quality"], "schematic"],
+              ["any", constructionFilter, plannedFilter],
+            ])}
+          />
           <Layer {...withFilter(plannedLineLayer, plannedFilter)} />
         </Source>
 

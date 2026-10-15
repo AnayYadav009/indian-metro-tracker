@@ -12,6 +12,7 @@ export const INTERACTIVE_LAYER_IDS = [
   "station-points",
   "operational-lines",
   "construction-lines",
+  "schematic-lines",
   "planned-lines",
 ];
 
@@ -61,7 +62,28 @@ export const constructionLineLayer: LayerProps = {
   id: "construction-lines",
   type: "line",
   source: "metro-segments",
-  filter: ["==", ["get", "status"], "construction"],
+  filter: [
+    "all",
+    ["==", ["get", "status"], "construction"],
+    ["!=", ["get", "geometry_quality"], "schematic"],
+  ],
+  layout: {
+    "line-cap": "butt",
+    "line-join": "round",
+  },
+  paint: {
+    "line-color": ["get", "color"],
+    "line-width": LINE_WIDTH_ZOOM_EXPRESSION as any,
+    "line-dasharray": [4, 2],
+    "line-opacity": 0.9,
+  },
+};
+
+export const schematicLineLayer: LayerProps = {
+  id: "schematic-lines",
+  type: "line",
+  source: "metro-segments",
+  filter: ["==", ["get", "geometry_quality"], "schematic"],
   layout: {
     "line-cap": "butt",
     "line-join": "round",
@@ -82,7 +104,11 @@ export const plannedLineLayer: LayerProps = {
   id: "planned-lines",
   type: "line",
   source: "metro-segments",
-  filter: ["==", ["get", "status"], "planned"],
+  filter: [
+    "all",
+    ["==", ["get", "status"], "planned"],
+    ["!=", ["get", "geometry_quality"], "schematic"],
+  ],
   layout: {
     "line-cap": "round",
     "line-join": "round",
@@ -103,7 +129,11 @@ export const getSelectedSegmentLayer = (selectedId: string | null): LayerProps =
   id: "selected-segment-glow",
   type: "line",
   source: "metro-segments",
-  filter: ["==", ["get", "segment_id"], selectedId || "__NONE__"],
+  filter: [
+    "all",
+    ["==", ["get", "segment_id"], selectedId || "__NONE__"],
+    ["!=", ["get", "geometry_quality"], "schematic"],
+  ],
   layout: {
     "line-cap": "round",
     "line-join": "round",
@@ -121,6 +151,29 @@ export const getSelectedSegmentLayer = (selectedId: string | null): LayerProps =
       14,
       12,
     ],
+    "line-opacity": 0.8,
+  },
+});
+
+export const getSelectedSchematicSegmentLayer = (
+  selectedId: string | null
+): LayerProps => ({
+  id: "selected-schematic-segment-glow",
+  type: "line",
+  source: "metro-segments",
+  filter: [
+    "all",
+    ["==", ["get", "segment_id"], selectedId || "__NONE__"],
+    ["==", ["get", "geometry_quality"], "schematic"],
+  ],
+  layout: {
+    "line-cap": "butt",
+    "line-join": "round",
+  },
+  paint: {
+    "line-color": "#38bdf8",
+    "line-width": ["interpolate", ["linear"], ["zoom"], 6, 5.5, 10, 8, 14, 12],
+    "line-dasharray": [4, 2],
     "line-opacity": 0.8,
   },
 });

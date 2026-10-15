@@ -253,10 +253,10 @@
   "findings": [
     {
       "city_id": "ahmedabad",
-      "rule": "reference-construction-stretch-missing",
+      "rule": "declared-not-compiled",
       "severity": "error",
       "subject": "ahm-violet|GIFT City - Shahpur (Phase 2B extension)",
-      "message": "Construction stretch 'GIFT City - Shahpur (Phase 2B extension)' declared in reference has no construction segments in data"
+      "message": "Corridor 'GIFT City - Shahpur (Phase 2B extension)' declared in references has no compiled construction feature"
     },
     {
       "city_id": "ahmedabad",
@@ -2241,6 +2241,13 @@
     },
     {
       "city_id": "chennai",
+      "rule": "declared-not-compiled",
+      "severity": "error",
+      "subject": "che-corridor-3-seg-01",
+      "message": "Segment declared in overrides 'che-corridor-3-seg-01' has no matching compiled feature"
+    },
+    {
+      "city_id": "chennai",
       "rule": "segment-parallel-duplicate",
       "severity": "error",
       "subject": "che-corridor-5-seg-01",
@@ -2584,6 +2591,13 @@
     },
     {
       "city_id": "delhi",
+      "rule": "declared-not-compiled",
+      "severity": "error",
+      "subject": "del-pink|Phase 4 extension (Maujpur - Majlis Park)",
+      "message": "Corridor 'Phase 4 extension (Maujpur - Majlis Park)' declared in references has no compiled construction feature"
+    },
+    {
+      "city_id": "delhi",
       "rule": "line-terminal-missing",
       "severity": "error",
       "subject": "del-grey|del-dwarka",
@@ -2595,13 +2609,6 @@
       "severity": "error",
       "subject": "del-pink|del-shiv-vihar",
       "message": "Terminal station 'Shiv Vihar' is 3399 m away from nearest segment end of line 'del-pink' (threshold: 300 m)"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "reference-construction-stretch-missing",
-      "severity": "error",
-      "subject": "del-pink|Phase 4 extension (Maujpur - Majlis Park)",
-      "message": "Construction stretch 'Phase 4 extension (Maujpur - Majlis Park)' declared in reference has no construction segments in data"
     },
     {
       "city_id": "delhi",
@@ -6945,10 +6952,17 @@
     },
     {
       "city_id": "kolkata",
-      "rule": "reference-construction-stretch-missing",
+      "rule": "declared-not-compiled",
+      "severity": "error",
+      "subject": "kol-pink-seg-01",
+      "message": "Segment declared in overrides 'kol-pink-seg-01' has no matching compiled feature"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "declared-not-compiled",
       "severity": "error",
       "subject": "kol-yellow|Jai Hind (Airport) - Barasat",
-      "message": "Construction stretch 'Jai Hind (Airport) - Barasat' declared in reference has no construction segments in data"
+      "message": "Corridor 'Jai Hind (Airport) - Barasat' declared in references has no compiled construction feature"
     },
     {
       "city_id": "kolkata",
@@ -7663,6 +7677,13 @@
       "severity": "error",
       "subject": "mumbai",
       "message": "City operational km differs from reference by 10.8%: computed 80.70 km vs reference 90.47 km (threshold: 10%)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "declared-not-compiled",
+      "severity": "error",
+      "subject": "mum-line-1-schematic-01",
+      "message": "Segment declared in overrides 'mum-line-1-schematic-01' has no matching compiled feature"
     },
     {
       "city_id": "mumbai",
@@ -8758,31 +8779,31 @@
     },
     {
       "city_id": "nagpur",
-      "rule": "reference-construction-stretch-missing",
+      "rule": "declared-not-compiled",
       "severity": "error",
       "subject": "nag-aqua|Lokmanya Nagar to Hingna (Reach 3A extension)",
-      "message": "Construction stretch 'Lokmanya Nagar to Hingna (Reach 3A extension)' declared in reference has no construction segments in data"
+      "message": "Corridor 'Lokmanya Nagar to Hingna (Reach 3A extension)' declared in references has no compiled construction feature"
     },
     {
       "city_id": "nagpur",
-      "rule": "reference-construction-stretch-missing",
+      "rule": "declared-not-compiled",
       "severity": "error",
       "subject": "nag-aqua|Prajapati Nagar to Transport Nagar (Reach 4A extension)",
-      "message": "Construction stretch 'Prajapati Nagar to Transport Nagar (Reach 4A extension)' declared in reference has no construction segments in data"
+      "message": "Corridor 'Prajapati Nagar to Transport Nagar (Reach 4A extension)' declared in references has no compiled construction feature"
     },
     {
       "city_id": "nagpur",
-      "rule": "reference-construction-stretch-missing",
+      "rule": "declared-not-compiled",
       "severity": "error",
       "subject": "nag-orange|Automotive Square to Kanhan River (Reach 2B extension)",
-      "message": "Construction stretch 'Automotive Square to Kanhan River (Reach 2B extension)' declared in reference has no construction segments in data"
+      "message": "Corridor 'Automotive Square to Kanhan River (Reach 2B extension)' declared in references has no compiled construction feature"
     },
     {
       "city_id": "nagpur",
-      "rule": "reference-construction-stretch-missing",
+      "rule": "declared-not-compiled",
       "severity": "error",
       "subject": "nag-orange|Khapri to Butibori MIDC ESR (Reach 1A extension)",
-      "message": "Construction stretch 'Khapri to Butibori MIDC ESR (Reach 1A extension)' declared in reference has no construction segments in data"
+      "message": "Corridor 'Khapri to Butibori MIDC ESR (Reach 1A extension)' declared in references has no compiled construction feature"
     },
     {
       "city_id": "nagpur",
@@ -8898,24 +8919,24 @@
     },
     {
       "city_id": "pune",
-      "rule": "reference-construction-stretch-missing",
+      "rule": "declared-not-compiled",
       "severity": "error",
       "subject": "pun-purple|PCMC - Nigdi (Bhakti Shakti)",
-      "message": "Construction stretch 'PCMC - Nigdi (Bhakti Shakti)' declared in reference has no construction segments in data"
+      "message": "Corridor 'PCMC - Nigdi (Bhakti Shakti)' declared in references has no compiled construction feature"
     },
     {
       "city_id": "pune",
-      "rule": "reference-construction-stretch-missing",
+      "rule": "declared-not-compiled",
       "severity": "error",
       "subject": "pun-purple|Range Hill station infill",
-      "message": "Construction stretch 'Range Hill station infill' declared in reference has no construction segments in data"
+      "message": "Corridor 'Range Hill station infill' declared in references has no compiled construction feature"
     },
     {
       "city_id": "pune",
-      "rule": "reference-construction-stretch-missing",
+      "rule": "declared-not-compiled",
       "severity": "error",
       "subject": "pun-purple|Swargate - Katraj",
-      "message": "Construction stretch 'Swargate - Katraj' declared in reference has no construction segments in data"
+      "message": "Corridor 'Swargate - Katraj' declared in references has no compiled construction feature"
     },
     {
       "city_id": "pune",

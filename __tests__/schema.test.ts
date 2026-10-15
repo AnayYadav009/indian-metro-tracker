@@ -703,4 +703,173 @@ describe("Schema Validation Tests", () => {
       )
     ).toBe(true);
   });
+
+  it("validates schematic endpoints and excludes schematic geometry from length checks", () => {
+    const city = {
+      id: "schematic-city",
+      name: "Schematic City",
+      bbox: [77, 12, 78, 13] as [number, number, number, number],
+      operator: "SCRL",
+      phases: ["1"],
+    };
+    const line = {
+      id: "sc-red",
+      name: "Red Line",
+      city_id: city.id,
+      city: city.name,
+      color: "#FF0000",
+      operator: "SCRL",
+      source: "official",
+    };
+    const station = (id: string, name: string, lng: number) => ({
+      type: "Feature" as const,
+      geometry: { type: "Point" as const, coordinates: [lng, 12.5] as [number, number] },
+      properties: {
+        station_id: id,
+        name,
+        city_id: city.id,
+        city: city.name,
+        line_ids: [line.id],
+        status: "construction",
+        phase: "1",
+        is_interchange: false,
+        opened_on: null,
+        expected_completion: "2028",
+        layout: "elevated",
+        source: "official",
+        references: ["https://operator.example/phase-map"],
+        last_verified: null,
+      },
+    });
+    const segment = (endLng: number) => ({
+      type: "Feature" as const,
+      geometry: {
+        type: "LineString" as const,
+        coordinates: [[77.5, 12.5], [endLng, 12.5]] as [number, number][],
+      },
+      properties: {
+        segment_id: "sc-red-con-01",
+        line_id: line.id,
+        line_name: line.name,
+        city_id: city.id,
+        city: city.name,
+        operator: line.operator,
+        status: "construction",
+        phase: "1",
+        length_km: 0.01,
+        gauge: "standard",
+        inaugurated_on: null,
+        expected_completion: "2028",
+        stations_count: 2,
+        color: "#FF0000",
+        source: "official",
+        references: ["https://operator.example/phase-map"],
+        last_verified: null,
+        geometry_quality: "schematic",
+      },
+    });
+    const validate = (endLng: number) => validateMetroDataset({
+      cities: [city],
+      lines: [line],
+      segments: { type: "FeatureCollection", features: [segment(endLng)] },
+      stations: {
+        type: "FeatureCollection",
+        features: [station("sc-start", "Station A", 77.5), station("sc-end", "Station B", 77.51)],
+      },
+    });
+
+    const passing = validate(77.51);
+    expect(passing.errors).toHaveLength(0);
+    expect(passing.warnings.some((warning) => warning.includes("sc-red-con-01") && warning.includes("length mismatch"))).toBe(false);
+
+    const failing = validate(77.53);
+    expect(failing.errors.some((error) => error.includes("sc-red-con-01") && error.includes("two distinct mapped stations"))).toBe(true);
+  });
+
+  it("requires shared-corridor declarations to be paired and supported by consecutive mapped stations", () => {
+    const city = {
+      id: "shared-city",
+      name: "Shared City",
+      bbox: [77, 12, 78, 13] as [number, number, number, number],
+      operator: "SCRL",
+      phases: ["1"],
+    };
+    const line = {
+      id: "sc-red",
+      name: "Red Line",
+      city_id: city.id,
+      city: city.name,
+      color: "#FF0000",
+      operator: "SCRL",
+      source: "official",
+    };
+    const shared = {
+      segment_ids: ["sc-a", "sc-b"],
+      shared_station_ids: ["sc-start", "sc-end"],
+      reason: "The official route map identifies this common trunk.",
+      source: "https://operator.example/route-map",
+    };
+    const segment = (id: string, offset: number, includeDeclaration: boolean) => ({
+      type: "Feature" as const,
+      geometry: {
+        type: "LineString" as const,
+        coordinates: [[77.5, 12.5 + offset], [77.51, 12.5 + offset]] as [number, number][],
+      },
+      properties: {
+        segment_id: id,
+        line_id: line.id,
+        line_name: line.name,
+        city_id: city.id,
+        city: city.name,
+        operator: line.operator,
+        status: "construction",
+        phase: "1",
+        length_km: 1.1,
+        gauge: "standard",
+        inaugurated_on: null,
+        expected_completion: "2028",
+        stations_count: 2,
+        color: "#FF0000",
+        source: "official",
+        references: ["https://operator.example/route-map"],
+        last_verified: null,
+        ...(includeDeclaration ? { shared_corridor: shared } : {}),
+      },
+    });
+    const stations = [77.5, 77.51].map((lng, index) => ({
+      type: "Feature" as const,
+      geometry: { type: "Point" as const, coordinates: [lng, 12.5] as [number, number] },
+      properties: {
+        station_id: index ? "sc-end" : "sc-start",
+        name: index ? "Station B" : "Station A",
+        city_id: city.id,
+        city: city.name,
+        line_ids: [line.id],
+        status: "construction",
+        phase: "1",
+        is_interchange: false,
+        opened_on: null,
+        expected_completion: "2028",
+        layout: "elevated",
+        source: "official",
+        references: ["https://operator.example/route-map"],
+        last_verified: null,
+      },
+    }));
+    const validate = (paired: boolean) => validateMetroDataset({
+      cities: [city],
+      lines: [line],
+      segments: {
+        type: "FeatureCollection",
+        features: [segment("sc-a", 0, true), segment("sc-b", 0.0001, paired)],
+      },
+      stations: { type: "FeatureCollection", features: stations },
+    });
+
+    const passing = validate(true);
+    expect(passing.errors).toHaveLength(0);
+
+    const failing = validate(false);
+    expect(failing.errors.some((error) => error.includes("declared identically on both segments"))).toBe(true);
+  });
 });

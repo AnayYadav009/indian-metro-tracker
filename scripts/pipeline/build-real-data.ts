@@ -54,6 +54,12 @@ export async function buildCityData(cityId: string, forceFetch = false): Promise
   );
   const normalized = normalizeOverpassCity(cityId, rawData, routeWayOrders);
   console.log(`   Found ${normalized.segments.length} route segments and ${normalized.stations.length} stations.`);
+  console.log(
+    `   Filtered ${normalized.filteredInactiveWays?.length || 0} inactive route way member(s).`
+  );
+  for (const { relationId, wayId } of normalized.filteredInactiveWays || []) {
+    console.log(`   • relation ${relationId}: excluded inactive way ${wayId}`);
+  }
 
   // Check cache file mtime for retrieved_at date
   const rawCacheFile = path.resolve(process.cwd(), "data", "raw", `${cityId}.json`);

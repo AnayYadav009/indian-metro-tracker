@@ -14,7 +14,7 @@ import {
   formatMarkdownReport,
   formatJsonReport,
 } from "./audit-engine";
-import type { BaselineFile } from "./audit-engine";
+import type { AuditDeclarations, BaselineFile } from "./audit-engine";
 import { loadMetroDatasetFromDisk } from "../lib/load-dataset";
 
 function main() {
@@ -28,6 +28,7 @@ function main() {
   const intentionalBreaks: string[] = [];
   const outOfScopeStations: Record<string, string[]> = {};
   const outOfScopeLineIds: string[] = [];
+  const declarations: AuditDeclarations = { segments: [], lines: [] };
 
   // Look for exemptions in each city's override file
   const overridesDir = path.join(dataDir, "overrides");
@@ -39,6 +40,15 @@ function main() {
           fs.readFileSync(path.join(overridesDir, file), "utf-8")
         );
         const cityId = override.city?.id || file.replace(".json", "");
+        for (const segment of override.segments || []) {
+          if (segment.segment_id && segment.line_id) {
+            declarations.segments.push({
+              city_id: cityId,
+              line_id: segment.line_id,
+              segment_id: segment.segment_id,
+            });
+          }
+        }
         if (override.selfIntersectionExemptions) {
           selfIntersectionExemptions.push(...override.selfIntersectionExemptions);
         }
@@ -57,6 +67,23 @@ function main() {
     }
   }
 
+  const referenceDir = path.join(dataDir, "reference");
+  if (fs.existsSync(referenceDir)) {
+    for (const file of fs.readdirSync(referenceDir)) {
+      if (!file.endsWith(".json")) continue;
+      try {
+        const reference = JSON.parse(fs.readFileSync(path.join(referenceDir, file), "utf-8"));
+        for (const line of reference.lines || []) {
+          if (reference.city_id && line.line_id) {
+            declarations.lines.push({ city_id: reference.city_id, line_id: line.line_id });
+          }
+        }
+      } catch {
+        // Ignore malformed reference files here; reference schema checks report them separately.
+      }
+    }
+  }
+
   console.log("🔍 Running data audit...\n");
 
   const today = new Date().toISOString().slice(0, 10);
@@ -69,6 +96,7 @@ function main() {
       referenceDir: path.join(dataDir, "reference"),
       outOfScopeStations,
       outOfScopeLineIds,
+      declarations,
     }
   );
 

@@ -29,6 +29,7 @@ export interface NormalizedCityData {
   cityName: string;
   segments: NormalizedSegment[];
   stations: NormalizedStation[];
+  filteredInactiveWays?: Array<{ relationId: number; wayId: number }>;
 }
 
 export function slugify(str: string): string {
@@ -113,6 +114,7 @@ export function normalizeOverpassCity(
   );
 
   const segments: NormalizedSegment[] = [];
+  const filteredInactiveWays: Array<{ relationId: number; wayId: number }> = [];
 
   for (const rel of routeRelations) {
     const relName = rel.tags.name || `Relation ${rel.id}`;
@@ -126,6 +128,11 @@ export function normalizeOverpassCity(
     const stationOsmIds: number[] = [];
 
     if (rel.members && Array.isArray(rel.members)) {
+      for (const member of rel.members) {
+        if (member.type === "way" && member.role === "inactive") {
+          filteredInactiveWays.push({ relationId: rel.id, wayId: member.ref });
+        }
+      }
       const orderedWays = routeWayOrders[rel.id];
       const members = orderedWays
         ? [
@@ -264,5 +271,6 @@ export function normalizeOverpassCity(
     cityName: cityId.charAt(0).toUpperCase() + cityId.slice(1),
     segments,
     stations: Array.from(stationsMap.values()),
+    filteredInactiveWays,
   };
 }

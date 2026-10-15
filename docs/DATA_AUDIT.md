@@ -1,5 +1,12 @@
 # Data Audit
 
+## Declaration coverage and geometry evidence
+
+- `declared-not-compiled` is an error when an override-declared segment ID or a reference-declared corridor line has no compiled segment feature. The CLI supplies declarations from `data/overrides/*.json` and `data/reference/*.json`; this catches source/pipeline omissions such as a corridor whose ways are excluded from normalization.
+- `segment-parallel-duplicate` and `segment-overlap` remain active errors. A pair is exempted only when both compiled segments carry the same `shared_corridor` record, both contain the declared station range in order, the stations exist on both lines, and the measured overlap differs from the station-implied length by no more than 15%. Invalid or oversized declarations do not suppress the finding.
+- A schematic construction stretch can satisfy `reference-construction-stretch-missing` only if it has `geometry_quality: "schematic"`, a source URL, construction status, and two distinct mapped line stations within 300 m of its geometry endpoints. Otherwise the missing-stretch error remains and `schematic-segment-incomplete` is reported.
+- Schematic geometry is omitted from official geometry-length comparisons and operational city totals. It remains visible as a dashed line and its panel labels it “Approximate alignment.”
+
 Specification for `npm run audit:data` (`scripts/audit/consistency-report.ts`) and the repair workflow used in M8, M10 and M15.
 
 The audit is read-only. It never modifies data.

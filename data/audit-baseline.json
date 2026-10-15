@@ -1,11 +1,9 @@
 {
   "pending_rules": [
-    "segment-parallel-duplicate",
     "segment-hairpin",
     "segment-sparse-vertices",
     "city-km-vs-reference",
     "line-terminal-missing",
-    "reference-construction-stretch-missing",
     "orphan-future-station"
   ],
   "known_defects": [
