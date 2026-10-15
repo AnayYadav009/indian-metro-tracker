@@ -23494,21 +23494,22 @@
         "city_id": "mumbai",
         "city": "Mumbai",
         "operator": "MMMOCL",
-        "status": "construction",
+        "status": "operational",
         "phase": "2B",
         "length_km": 5.4,
         "gauge": "standard",
-        "inaugurated_on": null,
+        "inaugurated_on": "2026-04-07",
         "expected_completion": null,
         "stations_count": 6,
         "color": "#FFC72C",
         "stations_not_published": false,
         "source": "osm",
         "references": [
-          "https://mmrda.maharashtra.gov.in/"
+          "https://mmrda.maharashtra.gov.in/en/projects/transport/metro-line-2b/overview",
+          "https://www.openstreetmap.org/relation/20403808"
         ],
-        "completion_unconfirmed": true,
-        "last_verified": null,
+        "completion_unconfirmed": false,
+        "last_verified": "2026-08-31",
         "retrieved_at": "2026-10-10",
         "geometry_quality": "exact"
       }

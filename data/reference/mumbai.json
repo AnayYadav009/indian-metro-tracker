@@ -118,7 +118,7 @@
       "operator": "MMMOCL",
       "topology": "linear",
       "operational_stations": 4,
-      "operational_length_km": 4.97,
+      "operational_length_km": 4.7,
       "planned_length_km": 13.58,
       "terminals": [
         "Dahisar East",
@@ -133,8 +133,10 @@
           "opened_on": "2026-04-07",
           "stations_added": 4,
           "source": {
-            "kind": "official",
-            "url": "https://mmrda.maharashtra.gov.in/metro-line-9"
+            "title": "Mumbai Metro Line 9 Phase I status",
+            "url": "https://mmrda.maharashtra.gov.in/en/projects/transport/metro-line-9/overview",
+            "retrieved_at": "2026-10-15",
+            "kind": "official"
           }
         }
       ],
@@ -240,8 +242,8 @@
       "official_name": "Metro Line 2B (Yellow Line Extension)",
       "operator": "MMMOCL",
       "topology": "linear",
-      "operational_stations": null,
-      "operational_length_km": 5.5,
+      "operational_stations": 6,
+      "operational_length_km": 5.79,
       "planned_length_km": 23.64,
       "terminals": [
         "Chembur",

@@ -7673,17 +7673,17 @@
     },
     {
       "city_id": "mumbai",
-      "rule": "city-km-vs-reference",
+      "rule": "declared-not-compiled",
       "severity": "error",
-      "subject": "mumbai",
-      "message": "City operational km differs from reference by 10.8%: computed 80.70 km vs reference 90.47 km (threshold: 10%)"
+      "subject": "mum-line-1-schematic-01",
+      "message": "Segment declared in overrides 'mum-line-1-schematic-01' has no matching compiled feature"
     },
     {
       "city_id": "mumbai",
       "rule": "declared-not-compiled",
       "severity": "error",
-      "subject": "mum-line-1-schematic-01",
-      "message": "Segment declared in overrides 'mum-line-1-schematic-01' has no matching compiled feature"
+      "subject": "mum-line-2b|Phase 2 (Chembur - DN Nagar)",
+      "message": "Corridor 'Phase 2 (Chembur - DN Nagar)' declared in references has no compiled construction feature"
     },
     {
       "city_id": "mumbai",
@@ -7717,27 +7717,6 @@
       "city_id": "mumbai",
       "rule": "future-date-unconfirmed",
       "severity": "warn",
-      "subject": "mum-chembur",
-      "message": "Future station has no verified expected completion date"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
-      "severity": "warn",
-      "subject": "mum-deonar",
-      "message": "Future station has no verified expected completion date"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
-      "severity": "warn",
-      "subject": "mum-diamond-garden",
-      "message": "Future station has no verified expected completion date"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
-      "severity": "warn",
       "subject": "mum-eeh",
       "message": "Future station has no verified expected completion date"
     },
@@ -7752,13 +7731,6 @@
       "city_id": "mumbai",
       "rule": "future-date-unconfirmed",
       "severity": "warn",
-      "subject": "mum-line-2b-seg-01",
-      "message": "Future segment has no verified expected completion date"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
-      "severity": "warn",
       "subject": "mum-line-4-seg-01",
       "message": "Future segment has no verified expected completion date"
     },
@@ -7768,20 +7740,6 @@
       "severity": "warn",
       "subject": "mum-line-9-schematic-01",
       "message": "Future segment has no verified expected completion date"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
-      "severity": "warn",
-      "subject": "mum-mandale",
-      "message": "Future station has no verified expected completion date"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
-      "severity": "warn",
-      "subject": "mum-mankhurd",
-      "message": "Future station has no verified expected completion date"
     },
     {
       "city_id": "mumbai",
@@ -7815,13 +7773,6 @@
       "city_id": "mumbai",
       "rule": "future-date-unconfirmed",
       "severity": "warn",
-      "subject": "mum-shivaji-chowk-chembur",
-      "message": "Future station has no verified expected completion date"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
-      "severity": "warn",
       "subject": "mum-suman-nagar",
       "message": "Future station has no verified expected completion date"
     },
@@ -7837,27 +7788,6 @@
       "rule": "future-record-no-reference",
       "severity": "warn",
       "subject": "mum-anik-nagar-bus-depot",
-      "message": "Future station has no source reference"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-record-no-reference",
-      "severity": "warn",
-      "subject": "mum-chembur",
-      "message": "Future station has no source reference"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-record-no-reference",
-      "severity": "warn",
-      "subject": "mum-deonar",
-      "message": "Future station has no source reference"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-record-no-reference",
-      "severity": "warn",
-      "subject": "mum-diamond-garden",
       "message": "Future station has no source reference"
     },
     {
@@ -7885,20 +7815,6 @@
       "city_id": "mumbai",
       "rule": "future-record-no-reference",
       "severity": "warn",
-      "subject": "mum-mandale",
-      "message": "Future station has no source reference"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-record-no-reference",
-      "severity": "warn",
-      "subject": "mum-mankhurd",
-      "message": "Future station has no source reference"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-record-no-reference",
-      "severity": "warn",
       "subject": "mum-meditya-nagar",
       "message": "Future station has no source reference"
     },
@@ -7914,13 +7830,6 @@
       "rule": "future-record-no-reference",
       "severity": "warn",
       "subject": "mum-shaheed-bhagat-singh-garden",
-      "message": "Future station has no source reference"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-record-no-reference",
-      "severity": "warn",
-      "subject": "mum-shivaji-chowk-chembur",
       "message": "Future station has no source reference"
     },
     {
@@ -7956,7 +7865,7 @@
       "rule": "ground-truth-length",
       "severity": "warn",
       "subject": "mum-line-2b",
-      "message": "Operational length: computed 0.00 km vs reference 5.5 km (100.0%)"
+      "message": "Operational length: computed 5.44 km vs reference 5.79 km (6.0%)"
     },
     {
       "city_id": "mumbai",
@@ -7970,7 +7879,7 @@
       "rule": "ground-truth-length",
       "severity": "warn",
       "subject": "mum-line-9",
-      "message": "Operational length: computed 3.52 km vs reference 4.97 km (29.1%)"
+      "message": "Operational length: computed 3.52 km vs reference 4.7 km (25.0%)"
     },
     {
       "city_id": "mumbai",
@@ -8768,7 +8677,7 @@
       "rule": "last-verified-distribution",
       "severity": "info",
       "subject": "mumbai",
-      "message": "last_verified distribution: 2026-10-06: 1; 2026-10-08: 33; 2026-10-10: 1; 2026-10-13: 1; missing: 63"
+      "message": "last_verified distribution: 2026-08-31: 7; 2026-10-06: 1; 2026-10-08: 33; 2026-10-10: 1; 2026-10-13: 1; missing: 56"
     },
     {
       "city_id": "mumbai",

@@ -6172,17 +6172,19 @@
         "line_ids": [
           "mum-line-2b"
         ],
-        "status": "construction",
+        "status": "operational",
         "phase": "2B",
         "is_interchange": false,
-        "opened_on": null,
+        "opened_on": "2026-08-13",
         "expected_completion": null,
-        "completion_unconfirmed": true,
+        "completion_unconfirmed": false,
         "layout": null,
         "layout_source": "unverified",
         "source": "osm",
-        "references": [],
-        "last_verified": null,
+        "references": [
+          "https://mmrda.maharashtra.gov.in/en/projects/transport/metro-line-2b/overview"
+        ],
+        "last_verified": "2026-08-31",
         "retrieved_at": "2026-10-10"
       }
     },
@@ -6451,17 +6453,19 @@
         "line_ids": [
           "mum-line-2b"
         ],
-        "status": "construction",
+        "status": "operational",
         "phase": "2B",
         "is_interchange": false,
-        "opened_on": null,
+        "opened_on": "2026-04-07",
         "expected_completion": null,
-        "completion_unconfirmed": true,
+        "completion_unconfirmed": false,
         "layout": null,
         "layout_source": "unverified",
         "source": "osm",
-        "references": [],
-        "last_verified": null,
+        "references": [
+          "https://mmrda.maharashtra.gov.in/en/projects/transport/metro-line-2b/overview"
+        ],
+        "last_verified": "2026-08-31",
         "retrieved_at": "2026-10-10"
       }
     },
@@ -6482,17 +6486,19 @@
         "line_ids": [
           "mum-line-2b"
         ],
-        "status": "construction",
+        "status": "operational",
         "phase": "2B",
         "is_interchange": false,
-        "opened_on": null,
+        "opened_on": "2026-04-07",
         "expected_completion": null,
-        "completion_unconfirmed": true,
+        "completion_unconfirmed": false,
         "layout": null,
         "layout_source": "unverified",
         "source": "osm",
-        "references": [],
-        "last_verified": null,
+        "references": [
+          "https://mmrda.maharashtra.gov.in/en/projects/transport/metro-line-2b/overview"
+        ],
+        "last_verified": "2026-08-31",
         "retrieved_at": "2026-10-10"
       }
     },
@@ -6513,17 +6519,19 @@
         "line_ids": [
           "mum-line-2b"
         ],
-        "status": "construction",
+        "status": "operational",
         "phase": "2B",
         "is_interchange": false,
-        "opened_on": null,
+        "opened_on": "2026-04-07",
         "expected_completion": null,
-        "completion_unconfirmed": true,
+        "completion_unconfirmed": false,
         "layout": null,
         "layout_source": "unverified",
         "source": "osm",
-        "references": [],
-        "last_verified": null,
+        "references": [
+          "https://mmrda.maharashtra.gov.in/en/projects/transport/metro-line-2b/overview"
+        ],
+        "last_verified": "2026-08-31",
         "retrieved_at": "2026-10-10"
       }
     },
@@ -6544,17 +6552,19 @@
         "line_ids": [
           "mum-line-2b"
         ],
-        "status": "construction",
+        "status": "operational",
         "phase": "2B",
         "is_interchange": false,
-        "opened_on": null,
+        "opened_on": "2026-04-07",
         "expected_completion": null,
-        "completion_unconfirmed": true,
+        "completion_unconfirmed": false,
         "layout": null,
         "layout_source": "unverified",
         "source": "osm",
-        "references": [],
-        "last_verified": null,
+        "references": [
+          "https://mmrda.maharashtra.gov.in/en/projects/transport/metro-line-2b/overview"
+        ],
+        "last_verified": "2026-08-31",
         "retrieved_at": "2026-10-10"
       }
     },
@@ -8502,17 +8512,19 @@
         "line_ids": [
           "mum-line-2b"
         ],
-        "status": "construction",
+        "status": "operational",
         "phase": "2B",
         "is_interchange": false,
-        "opened_on": null,
+        "opened_on": "2026-04-07",
         "expected_completion": null,
-        "completion_unconfirmed": true,
+        "completion_unconfirmed": false,
         "layout": null,
         "layout_source": "unverified",
         "source": "osm",
-        "references": [],
-        "last_verified": null,
+        "references": [
+          "https://mmrda.maharashtra.gov.in/en/projects/transport/metro-line-2b/overview"
+        ],
+        "last_verified": "2026-08-31",
         "retrieved_at": "2026-10-10"
       }
     },
