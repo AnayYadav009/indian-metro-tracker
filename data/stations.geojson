@@ -22298,6 +22298,4368 @@
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-13"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.8157,
+          22.72679
+        ]
+      },
+      "properties": {
+        "station_id": "indore-bsf",
+        "name": "BSF",
+        "city_id": "indore",
+        "city": "Indore",
+        "line_ids": [
+          "ind-yellow"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2028-12",
+        "completion_unconfirmed": false,
+        "layout": "underground",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.87549,
+          22.72107
+        ]
+      },
+      "properties": {
+        "station_id": "indore-high-court-hotel-residency",
+        "name": "High Court / Hotel Residency",
+        "city_id": "indore",
+        "city": "Indore",
+        "line_ids": [
+          "ind-yellow"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2027-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.80483,
+          22.72901
+        ]
+      },
+      "properties": {
+        "station_id": "indore-indore-airport",
+        "name": "Indore Airport",
+        "city_id": "indore",
+        "city": "Indore",
+        "line_ids": [
+          "ind-yellow"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2028-12",
+        "completion_unconfirmed": false,
+        "layout": "underground",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.83277,
+          22.72262
+        ]
+      },
+      "properties": {
+        "station_id": "indore-ram-chandra-nagar-square",
+        "name": "Ram Chandra Nagar Square",
+        "city_id": "indore",
+        "city": "Indore",
+        "line_ids": [
+          "ind-yellow"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2028-12",
+        "completion_unconfirmed": false,
+        "layout": "underground",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.8913,
+          22.72354
+        ]
+      },
+      "properties": {
+        "station_id": "indore-patrakar-colony",
+        "name": "Patrakar Colony",
+        "city_id": "indore",
+        "city": "Indore",
+        "line_ids": [
+          "ind-yellow"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2027-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.90278,
+          22.72053
+        ]
+      },
+      "properties": {
+        "station_id": "indore-bengali-colony",
+        "name": "Bengali Colony",
+        "city_id": "indore",
+        "city": "Indore",
+        "line_ids": [
+          "ind-yellow"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2027-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.86209,
+          22.77295
+        ]
+      },
+      "properties": {
+        "station_id": "indore-isbt-mr-10-flyover",
+        "name": "ISBT / MR 10 Flyover",
+        "city_id": "indore",
+        "city": "Indore",
+        "line_ids": [
+          "ind-yellow"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-09-06",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.mpmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.82363,
+          22.72491
+        ]
+      },
+      "properties": {
+        "station_id": "indore-kalani-nagar",
+        "name": "Kalani Nagar",
+        "city_id": "indore",
+        "city": "Indore",
+        "line_ids": [
+          "ind-yellow"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2028-12",
+        "completion_unconfirmed": false,
+        "layout": "underground",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.84702,
+          22.71966
+        ]
+      },
+      "properties": {
+        "station_id": "indore-maulana-azad-marg",
+        "name": "Maulana Azad Marg",
+        "city_id": "indore",
+        "city": "Indore",
+        "line_ids": [
+          "ind-yellow"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2028-12",
+        "completion_unconfirmed": false,
+        "layout": "underground",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.90229,
+          22.74018
+        ]
+      },
+      "properties": {
+        "station_id": "indore-mumtaj-bag-colony-1",
+        "name": "Mumtaj Bag Colony - 1",
+        "city_id": "indore",
+        "city": "Indore",
+        "line_ids": [
+          "ind-yellow"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2027-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.83976,
+          22.72089
+        ]
+      },
+      "properties": {
+        "station_id": "indore-bada-ganpati",
+        "name": "Bada Ganpati",
+        "city_id": "indore",
+        "city": "Indore",
+        "line_ids": [
+          "ind-yellow"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2028-12",
+        "completion_unconfirmed": false,
+        "layout": "underground",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.86768,
+          22.71987
+        ]
+      },
+      "properties": {
+        "station_id": "indore-indore-railway-station",
+        "name": "Indore Railway Station",
+        "city_id": "indore",
+        "city": "Indore",
+        "line_ids": [
+          "ind-yellow"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2028-12",
+        "completion_unconfirmed": false,
+        "layout": "underground",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.90336,
+          22.7295
+        ]
+      },
+      "properties": {
+        "station_id": "indore-mumtaj-bag-colony-2",
+        "name": "Mumtaj Bag Colony - 2",
+        "city_id": "indore",
+        "city": "Indore",
+        "line_ids": [
+          "ind-yellow"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2027-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.88848,
+          22.75261
+        ]
+      },
+      "properties": {
+        "station_id": "indore-meghdoot-garden",
+        "name": "Meghdoot Garden",
+        "city_id": "indore",
+        "city": "Indore",
+        "line_ids": [
+          "ind-yellow"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-09-06",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.mpmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.85697,
+          22.71921
+        ]
+      },
+      "properties": {
+        "station_id": "indore-rajwada-palace",
+        "name": "Rajwada Palace",
+        "city_id": "indore",
+        "city": "Indore",
+        "line_ids": [
+          "ind-yellow"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2028-12",
+        "completion_unconfirmed": false,
+        "layout": "underground",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.88447,
+          22.72339
+        ]
+      },
+      "properties": {
+        "station_id": "indore-palasia-square",
+        "name": "Palasia Square",
+        "city_id": "indore",
+        "city": "Indore",
+        "line_ids": [
+          "ind-yellow"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2027-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.80094,
+          22.74533
+        ]
+      },
+      "properties": {
+        "station_id": "indore-maharani-lakshmi-bai",
+        "name": "Maharani Lakshmi Bai",
+        "city_id": "indore",
+        "city": "Indore",
+        "line_ids": [
+          "ind-yellow"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2025-05-31",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.mpmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.81113,
+          22.76311
+        ]
+      },
+      "properties": {
+        "station_id": "indore-rani-durgavati",
+        "name": "Rani Durgavati",
+        "city_id": "indore",
+        "city": "Indore",
+        "line_ids": [
+          "ind-yellow"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2025-05-31",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.mpmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.80426,
+          22.75407
+        ]
+      },
+      "properties": {
+        "station_id": "indore-rani-avanti-bai-lodhi",
+        "name": "Rani Avanti Bai Lodhi",
+        "city_id": "indore",
+        "city": "Indore",
+        "line_ids": [
+          "ind-yellow"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2025-05-31",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.mpmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.81896,
+          22.77179
+        ]
+      },
+      "properties": {
+        "station_id": "indore-veerangana-jhalkari-bai",
+        "name": "Veerangana Jhalkari Bai",
+        "city_id": "indore",
+        "city": "Indore",
+        "line_ids": [
+          "ind-yellow"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2025-05-31",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.mpmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.82583,
+          22.77819
+        ]
+      },
+      "properties": {
+        "station_id": "indore-super-corridor-2",
+        "name": "Super Corridor 2",
+        "city_id": "indore",
+        "city": "Indore",
+        "line_ids": [
+          "ind-yellow"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-09-06",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.mpmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.79748,
+          22.73898
+        ]
+      },
+      "properties": {
+        "station_id": "indore-gandhi-nagar",
+        "name": "Gandhi Nagar",
+        "city_id": "indore",
+        "city": "Indore",
+        "line_ids": [
+          "ind-yellow"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2025-05-31",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.mpmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.86984,
+          22.76481
+        ]
+      },
+      "properties": {
+        "station_id": "indore-chandragupta-square",
+        "name": "Chandragupta Square",
+        "city_id": "indore",
+        "city": "Indore",
+        "line_ids": [
+          "ind-yellow"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-09-06",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.mpmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.87571,
+          22.75964
+        ]
+      },
+      "properties": {
+        "station_id": "indore-hira-nagar",
+        "name": "Hira Nagar",
+        "city_id": "indore",
+        "city": "Indore",
+        "line_ids": [
+          "ind-yellow"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-09-06",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.mpmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.88019,
+          22.75451
+        ]
+      },
+      "properties": {
+        "station_id": "indore-bapat-square",
+        "name": "Bapat Square",
+        "city_id": "indore",
+        "city": "Indore",
+        "line_ids": [
+          "ind-yellow"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-09-06",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.mpmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.89428,
+          22.75137
+        ]
+      },
+      "properties": {
+        "station_id": "indore-vijay-nagar-square",
+        "name": "Vijay Nagar Square",
+        "city_id": "indore",
+        "city": "Indore",
+        "line_ids": [
+          "ind-yellow"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-09-06",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.mpmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.90327,
+          22.74737
+        ]
+      },
+      "properties": {
+        "station_id": "indore-radisson-square",
+        "name": "Radisson Square",
+        "city_id": "indore",
+        "city": "Indore",
+        "line_ids": [
+          "ind-yellow"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-09-06",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.mpmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.85437,
+          22.78284
+        ]
+      },
+      "properties": {
+        "station_id": "indore-mr-10-road",
+        "name": "MR 10 Road",
+        "city_id": "indore",
+        "city": "Indore",
+        "line_ids": [
+          "ind-yellow"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-09-06",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.mpmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.84612,
+          22.78988
+        ]
+      },
+      "properties": {
+        "station_id": "indore-bhawarsala-square",
+        "name": "Bhawarsala Square",
+        "city_id": "indore",
+        "city": "Indore",
+        "line_ids": [
+          "ind-yellow"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-09-06",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.mpmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.83711,
+          22.78659
+        ]
+      },
+      "properties": {
+        "station_id": "indore-super-corridor-1",
+        "name": "Super Corridor 1",
+        "city_id": "indore",
+        "city": "Indore",
+        "line_ids": [
+          "ind-yellow"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-09-06",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.mpmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.43009,
+          23.24773
+        ]
+      },
+      "properties": {
+        "station_id": "bhopal-subhash-nagar",
+        "name": "Subhash Nagar",
+        "city_id": "bhopal",
+        "city": "Bhopal",
+        "line_ids": [
+          "bho-orange"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2025-12-21",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.mpmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.43153,
+          23.24014
+        ]
+      },
+      "properties": {
+        "station_id": "bhopal-kendriya-vidyalaya",
+        "name": "Kendriya Vidyalaya",
+        "city_id": "bhopal",
+        "city": "Bhopal",
+        "line_ids": [
+          "bho-orange"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2025-12-21",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.mpmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.43137,
+          23.23282
+        ]
+      },
+      "properties": {
+        "station_id": "bhopal-board-office-chauraha",
+        "name": "Board Office Chauraha",
+        "city_id": "bhopal",
+        "city": "Bhopal",
+        "line_ids": [
+          "bho-orange"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2025-12-21",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.mpmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.43523,
+          23.22763
+        ]
+      },
+      "properties": {
+        "station_id": "bhopal-mp-nagar",
+        "name": "MP Nagar",
+        "city_id": "bhopal",
+        "city": "Bhopal",
+        "line_ids": [
+          "bho-orange"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2025-12-21",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.mpmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.43849,
+          23.22099
+        ]
+      },
+      "properties": {
+        "station_id": "bhopal-rani-kamalapati-railway-station",
+        "name": "Rani Kamalapati Railway Station",
+        "city_id": "bhopal",
+        "city": "Bhopal",
+        "line_ids": [
+          "bho-orange"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2025-12-21",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.mpmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.44327,
+          23.21616
+        ]
+      },
+      "properties": {
+        "station_id": "bhopal-drm-office",
+        "name": "DRM Office",
+        "city_id": "bhopal",
+        "city": "Bhopal",
+        "line_ids": [
+          "bho-orange"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2025-12-21",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.mpmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.45082,
+          23.21661
+        ]
+      },
+      "properties": {
+        "station_id": "bhopal-alkapuri",
+        "name": "Alkapuri",
+        "city_id": "bhopal",
+        "city": "Bhopal",
+        "line_ids": [
+          "bho-orange"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2025-12-21",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.mpmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.45605,
+          23.21005
+        ]
+      },
+      "properties": {
+        "station_id": "bhopal-aiims-bhopal",
+        "name": "AIIMS Bhopal",
+        "city_id": "bhopal",
+        "city": "Bhopal",
+        "line_ids": [
+          "bho-orange"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2025-12-21",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.mpmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.4018,
+          23.2954
+        ]
+      },
+      "properties": {
+        "station_id": "bhopal-karond-circle",
+        "name": "Karond Circle",
+        "city_id": "bhopal",
+        "city": "Bhopal",
+        "line_ids": [
+          "bho-orange"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2028-06",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.4025,
+          23.2895
+        ]
+      },
+      "properties": {
+        "station_id": "bhopal-krishi-upaj-mandi",
+        "name": "Krishi Upaj Mandi",
+        "city_id": "bhopal",
+        "city": "Bhopal",
+        "line_ids": [
+          "bho-orange"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2028-06",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.4035,
+          23.2842
+        ]
+      },
+      "properties": {
+        "station_id": "bhopal-dig-bungalow",
+        "name": "DIG Bungalow",
+        "city_id": "bhopal",
+        "city": "Bhopal",
+        "line_ids": [
+          "bho-orange"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2028-06",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.4055,
+          23.2785
+        ]
+      },
+      "properties": {
+        "station_id": "bhopal-sindhi-colony",
+        "name": "Sindhi Colony",
+        "city_id": "bhopal",
+        "city": "Bhopal",
+        "line_ids": [
+          "bho-orange"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2028-06",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.4085,
+          23.2725
+        ]
+      },
+      "properties": {
+        "station_id": "bhopal-nadra-bus-stand",
+        "name": "Nadra Bus Stand",
+        "city_id": "bhopal",
+        "city": "Bhopal",
+        "line_ids": [
+          "bho-orange"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2028-06",
+        "completion_unconfirmed": false,
+        "layout": "underground",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.4126,
+          23.2663
+        ]
+      },
+      "properties": {
+        "station_id": "bhopal-bhopal-railway-station",
+        "name": "Bhopal Railway Station",
+        "city_id": "bhopal",
+        "city": "Bhopal",
+        "line_ids": [
+          "bho-orange"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2028-06",
+        "completion_unconfirmed": false,
+        "layout": "underground",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.4165,
+          23.2595
+        ]
+      },
+      "properties": {
+        "station_id": "bhopal-aishbagh",
+        "name": "Aishbagh",
+        "city_id": "bhopal",
+        "city": "Bhopal",
+        "line_ids": [
+          "bho-orange"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2028-06",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.4219,
+          23.2533
+        ]
+      },
+      "properties": {
+        "station_id": "bhopal-pul-bogda",
+        "name": "Pul Bogda",
+        "city_id": "bhopal",
+        "city": "Bhopal",
+        "line_ids": [
+          "bho-orange",
+          "bho-blue"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": true,
+        "opened_on": null,
+        "expected_completion": "2028-06",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15",
+        "interchange_id": "bhopal-pul-bogda"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.374,
+          23.205
+        ]
+      },
+      "properties": {
+        "station_id": "bhopal-bhadbhada-square",
+        "name": "Bhadbhada Square",
+        "city_id": "bhopal",
+        "city": "Bhopal",
+        "line_ids": [
+          "bho-blue"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2028-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.3825,
+          23.212
+        ]
+      },
+      "properties": {
+        "station_id": "bhopal-depot-square",
+        "name": "Depot Square",
+        "city_id": "bhopal",
+        "city": "Bhopal",
+        "line_ids": [
+          "bho-blue"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2028-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.391,
+          23.2205
+        ]
+      },
+      "properties": {
+        "station_id": "bhopal-jawahar-chowk",
+        "name": "Jawahar Chowk",
+        "city_id": "bhopal",
+        "city": "Bhopal",
+        "line_ids": [
+          "bho-blue"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2028-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.397,
+          23.226
+        ]
+      },
+      "properties": {
+        "station_id": "bhopal-roshanpura-square",
+        "name": "Roshanpura Square",
+        "city_id": "bhopal",
+        "city": "Bhopal",
+        "line_ids": [
+          "bho-blue"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2028-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.4025,
+          23.232
+        ]
+      },
+      "properties": {
+        "station_id": "bhopal-kushabhau-thakre-hall",
+        "name": "Kushabhau Thakre Hall",
+        "city_id": "bhopal",
+        "city": "Bhopal",
+        "line_ids": [
+          "bho-blue"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2028-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.411,
+          23.242
+        ]
+      },
+      "properties": {
+        "station_id": "bhopal-parade-ground",
+        "name": "Parade Ground",
+        "city_id": "bhopal",
+        "city": "Bhopal",
+        "line_ids": [
+          "bho-blue"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2028-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.432,
+          23.2545
+        ]
+      },
+      "properties": {
+        "station_id": "bhopal-prabhat-square",
+        "name": "Prabhat Square",
+        "city_id": "bhopal",
+        "city": "Bhopal",
+        "line_ids": [
+          "bho-blue"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2028-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.441,
+          23.2535
+        ]
+      },
+      "properties": {
+        "station_id": "bhopal-govindpura",
+        "name": "Govindpura",
+        "city_id": "bhopal",
+        "city": "Bhopal",
+        "line_ids": [
+          "bho-blue"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2028-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.449,
+          23.2525
+        ]
+      },
+      "properties": {
+        "station_id": "bhopal-govindpura-industrial-area",
+        "name": "Govindpura Industrial Area",
+        "city_id": "bhopal",
+        "city": "Bhopal",
+        "line_ids": [
+          "bho-blue"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2028-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.457,
+          23.2518
+        ]
+      },
+      "properties": {
+        "station_id": "bhopal-jk-road",
+        "name": "JK Road",
+        "city_id": "bhopal",
+        "city": "Bhopal",
+        "line_ids": [
+          "bho-blue"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2028-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.4655,
+          23.2512
+        ]
+      },
+      "properties": {
+        "station_id": "bhopal-indrapuri",
+        "name": "Indrapuri",
+        "city_id": "bhopal",
+        "city": "Bhopal",
+        "line_ids": [
+          "bho-blue"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2028-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.475,
+          23.2506
+        ]
+      },
+      "properties": {
+        "station_id": "bhopal-piplani",
+        "name": "Piplani",
+        "city_id": "bhopal",
+        "city": "Bhopal",
+        "line_ids": [
+          "bho-blue"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2028-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.485,
+          23.25
+        ]
+      },
+      "properties": {
+        "station_id": "bhopal-ratnagiri-tiraha",
+        "name": "Ratnagiri Tiraha",
+        "city_id": "bhopal",
+        "city": "Bhopal",
+        "line_ids": [
+          "bho-blue"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2028-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.08253,
+          21.1282
+        ]
+      },
+      "properties": {
+        "station_id": "nagpur-congress-nagar",
+        "name": "Congress Nagar",
+        "city_id": "nagpur",
+        "city": "Nagpur",
+        "line_ids": [
+          "nag-orange"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2022-12-11",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.metrorailnagpur.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.05581,
+          21.06605
+        ]
+      },
+      "properties": {
+        "station_id": "nagpur-new-airport",
+        "name": "New Airport",
+        "city_id": "nagpur",
+        "city": "Nagpur",
+        "line_ids": [
+          "nag-orange"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2019-03-08",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "at-grade",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.metrorailnagpur.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.07567,
+          21.12767
+        ]
+      },
+      "properties": {
+        "station_id": "nagpur-rahate-colony",
+        "name": "Rahate Colony",
+        "city_id": "nagpur",
+        "city": "Nagpur",
+        "line_ids": [
+          "nag-orange"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2022-12-11",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.metrorailnagpur.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.09043,
+          21.15138
+        ]
+      },
+      "properties": {
+        "station_id": "nagpur-nagpur-railway-station",
+        "name": "Nagpur Railway Station",
+        "city_id": "nagpur",
+        "city": "Nagpur",
+        "line_ids": [
+          "nag-aqua"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2022-12-11",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.metrorailnagpur.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.10978,
+          21.1795
+        ]
+      },
+      "properties": {
+        "station_id": "nagpur-nari-road",
+        "name": "Nari Road",
+        "city_id": "nagpur",
+        "city": "Nagpur",
+        "line_ids": [
+          "nag-orange"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2022-12-11",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.metrorailnagpur.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.11039,
+          21.14965
+        ]
+      },
+      "properties": {
+        "station_id": "nagpur-chitaroli-square",
+        "name": "Chitaroli Square",
+        "city_id": "nagpur",
+        "city": "Nagpur",
+        "line_ids": [
+          "nag-aqua"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2022-12-11",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.metrorailnagpur.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.11951,
+          21.18579
+        ]
+      },
+      "properties": {
+        "station_id": "nagpur-automotive-square",
+        "name": "Automotive Square",
+        "city_id": "nagpur",
+        "city": "Nagpur",
+        "line_ids": [
+          "nag-orange"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2022-12-11",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.metrorailnagpur.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.10291,
+          21.15105
+        ]
+      },
+      "properties": {
+        "station_id": "nagpur-agrasen-square",
+        "name": "Agrasen Square",
+        "city_id": "nagpur",
+        "city": "Nagpur",
+        "line_ids": [
+          "nag-aqua"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2022-12-11",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.metrorailnagpur.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.12949,
+          21.14832
+        ]
+      },
+      "properties": {
+        "station_id": "nagpur-ambedkar-square",
+        "name": "Ambedkar Square",
+        "city_id": "nagpur",
+        "city": "Nagpur",
+        "line_ids": [
+          "nag-aqua"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2022-12-11",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.metrorailnagpur.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.09242,
+          21.16867
+        ]
+      },
+      "properties": {
+        "station_id": "nagpur-kadbi-square",
+        "name": "Kadbi Square",
+        "city_id": "nagpur",
+        "city": "Nagpur",
+        "line_ids": [
+          "nag-orange"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2022-12-11",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.metrorailnagpur.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.09492,
+          21.15297
+        ]
+      },
+      "properties": {
+        "station_id": "nagpur-dosar-vaisya-square",
+        "name": "Dosar Vaisya Square",
+        "city_id": "nagpur",
+        "city": "Nagpur",
+        "line_ids": [
+          "nag-aqua"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2022-12-11",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.metrorailnagpur.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.13641,
+          21.14803
+        ]
+      },
+      "properties": {
+        "station_id": "nagpur-vaishnao-devi-square",
+        "name": "Vaishnao Devi Square",
+        "city_id": "nagpur",
+        "city": "Nagpur",
+        "line_ids": [
+          "nag-aqua"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2022-12-11",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.metrorailnagpur.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.11824,
+          21.14881
+        ]
+      },
+      "properties": {
+        "station_id": "nagpur-telephone-exchange",
+        "name": "Telephone Exchange",
+        "city_id": "nagpur",
+        "city": "Nagpur",
+        "line_ids": [
+          "nag-aqua"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2022-12-11",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.metrorailnagpur.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.10073,
+          21.17369
+        ]
+      },
+      "properties": {
+        "station_id": "nagpur-indora-square",
+        "name": "Indora Square",
+        "city_id": "nagpur",
+        "city": "Nagpur",
+        "line_ids": [
+          "nag-orange"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2022-12-11",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.metrorailnagpur.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.08373,
+          21.16163
+        ]
+      },
+      "properties": {
+        "station_id": "nagpur-gaddi-godam-square",
+        "name": "Gaddi Godam Square",
+        "city_id": "nagpur",
+        "city": "Nagpur",
+        "line_ids": [
+          "nag-orange"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2022-12-11",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.metrorailnagpur.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.14882,
+          21.15015
+        ]
+      },
+      "properties": {
+        "station_id": "nagpur-prajapati-nagar",
+        "name": "Prajapati Nagar",
+        "city_id": "nagpur",
+        "city": "Nagpur",
+        "line_ids": [
+          "nag-aqua"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2022-12-11",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.metrorailnagpur.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.08977,
+          21.14599
+        ]
+      },
+      "properties": {
+        "station_id": "nagpur-cotton-market",
+        "name": "Cotton Market",
+        "city_id": "nagpur",
+        "city": "Nagpur",
+        "line_ids": [
+          "nag-aqua"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2022-12-11",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.metrorailnagpur.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.08148,
+          21.15436
+        ]
+      },
+      "properties": {
+        "station_id": "nagpur-kasturchand-park",
+        "name": "Kasturchand Park",
+        "city_id": "nagpur",
+        "city": "Nagpur",
+        "line_ids": [
+          "nag-orange"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2021-08-20",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "at-grade",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.metrorailnagpur.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.08064,
+          21.1467
+        ]
+      },
+      "properties": {
+        "station_id": "nagpur-zero-mile-freedom-park",
+        "name": "Zero Mile Freedom Park",
+        "city_id": "nagpur",
+        "city": "Nagpur",
+        "line_ids": [
+          "nag-orange"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2021-08-20",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.metrorailnagpur.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0826,
+          21.14168
+        ]
+      },
+      "properties": {
+        "station_id": "nagpur-sitabuldi",
+        "name": "Sitabuldi",
+        "city_id": "nagpur",
+        "city": "Nagpur",
+        "line_ids": [
+          "nag-orange",
+          "nag-aqua"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": true,
+        "opened_on": "2019-03-08",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.metrorailnagpur.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15",
+        "interchange_id": "nagpur-sitabuldi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.06961,
+          21.10914
+        ]
+      },
+      "properties": {
+        "station_id": "nagpur-chhatrapati-square",
+        "name": "Chhatrapati Square",
+        "city_id": "nagpur",
+        "city": "Nagpur",
+        "line_ids": [
+          "nag-orange"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2022-12-11",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.metrorailnagpur.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.07211,
+          21.11821
+        ]
+      },
+      "properties": {
+        "station_id": "nagpur-ajni-square",
+        "name": "Ajni Square",
+        "city_id": "nagpur",
+        "city": "Nagpur",
+        "line_ids": [
+          "nag-orange"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2022-12-11",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.metrorailnagpur.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.06632,
+          21.09635
+        ]
+      },
+      "properties": {
+        "station_id": "nagpur-ujjwal-nagar",
+        "name": "Ujjwal Nagar",
+        "city_id": "nagpur",
+        "city": "Nagpur",
+        "line_ids": [
+          "nag-orange"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2022-12-11",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.metrorailnagpur.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.06818,
+          21.10364
+        ]
+      },
+      "properties": {
+        "station_id": "nagpur-jaiprakash-nagar",
+        "name": "Jaiprakash Nagar",
+        "city_id": "nagpur",
+        "city": "Nagpur",
+        "line_ids": [
+          "nag-orange"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2019-03-08",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.metrorailnagpur.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.06379,
+          21.08622
+        ]
+      },
+      "properties": {
+        "station_id": "nagpur-airport",
+        "name": "Airport",
+        "city_id": "nagpur",
+        "city": "Nagpur",
+        "line_ids": [
+          "nag-orange"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2019-03-08",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.metrorailnagpur.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.06053,
+          21.07906
+        ]
+      },
+      "properties": {
+        "station_id": "nagpur-airport-south",
+        "name": "Airport South",
+        "city_id": "nagpur",
+        "city": "Nagpur",
+        "line_ids": [
+          "nag-orange"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2019-03-08",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.metrorailnagpur.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.04784,
+          21.04935
+        ]
+      },
+      "properties": {
+        "station_id": "nagpur-khapri",
+        "name": "Khapri",
+        "city_id": "nagpur",
+        "city": "Nagpur",
+        "line_ids": [
+          "nag-orange"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2019-03-08",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "at-grade",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.metrorailnagpur.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.07009,
+          21.13831
+        ]
+      },
+      "properties": {
+        "station_id": "nagpur-institute-of-engineers",
+        "name": "Institute of Engineers",
+        "city_id": "nagpur",
+        "city": "Nagpur",
+        "line_ids": [
+          "nag-aqua"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2020-01-28",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.metrorailnagpur.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.07783,
+          21.14072
+        ]
+      },
+      "properties": {
+        "station_id": "nagpur-jhansi-rani-square",
+        "name": "Jhansi Rani Square",
+        "city_id": "nagpur",
+        "city": "Nagpur",
+        "line_ids": [
+          "nag-aqua"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2020-01-28",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.metrorailnagpur.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.02941,
+          21.12152
+        ]
+      },
+      "properties": {
+        "station_id": "nagpur-rachana-ring-road-junction",
+        "name": "Rachana Ring Road Junction",
+        "city_id": "nagpur",
+        "city": "Nagpur",
+        "line_ids": [
+          "nag-aqua"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2020-01-28",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.metrorailnagpur.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.01947,
+          21.11878
+        ]
+      },
+      "properties": {
+        "station_id": "nagpur-vasudev-nagar",
+        "name": "Vasudev Nagar",
+        "city_id": "nagpur",
+        "city": "Nagpur",
+        "line_ids": [
+          "nag-aqua"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2020-01-28",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.metrorailnagpur.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0126,
+          21.1162
+        ]
+      },
+      "properties": {
+        "station_id": "nagpur-bansi-nagar",
+        "name": "Bansi Nagar",
+        "city_id": "nagpur",
+        "city": "Nagpur",
+        "line_ids": [
+          "nag-aqua"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2020-01-28",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.metrorailnagpur.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.00175,
+          21.1108
+        ]
+      },
+      "properties": {
+        "station_id": "nagpur-lokmanya-nagar",
+        "name": "Lokmanya Nagar",
+        "city_id": "nagpur",
+        "city": "Nagpur",
+        "line_ids": [
+          "nag-aqua"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2020-01-28",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.metrorailnagpur.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.06164,
+          21.13621
+        ]
+      },
+      "properties": {
+        "station_id": "nagpur-shankar-nagar-square",
+        "name": "Shankar Nagar Square",
+        "city_id": "nagpur",
+        "city": "Nagpur",
+        "line_ids": [
+          "nag-aqua"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2020-01-28",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.metrorailnagpur.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0548,
+          21.13292
+        ]
+      },
+      "properties": {
+        "station_id": "nagpur-lad-square",
+        "name": "LAD Square",
+        "city_id": "nagpur",
+        "city": "Nagpur",
+        "line_ids": [
+          "nag-aqua"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2020-01-28",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.metrorailnagpur.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.04574,
+          21.12869
+        ]
+      },
+      "properties": {
+        "station_id": "nagpur-dharampeth-college",
+        "name": "Dharampeth College",
+        "city_id": "nagpur",
+        "city": "Nagpur",
+        "line_ids": [
+          "nag-aqua"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2020-01-28",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.metrorailnagpur.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.04205,
+          21.12332
+        ]
+      },
+      "properties": {
+        "station_id": "nagpur-subhash-nagar",
+        "name": "Subhash Nagar",
+        "city_id": "nagpur",
+        "city": "Nagpur",
+        "line_ids": [
+          "nag-aqua"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2020-01-28",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.metrorailnagpur.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.78903,
+          21.19011
+        ]
+      },
+      "properties": {
+        "station_id": "surat-adajan-gam",
+        "name": "Adajan Gam",
+        "city_id": "surat",
+        "city": "Surat",
+        "line_ids": [
+          "sur-green"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2027-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.gujaratmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.78118,
+          21.21851
+        ]
+      },
+      "properties": {
+        "station_id": "surat-ugat-vaarigruh",
+        "name": "Ugat Vaarigruh",
+        "city_id": "surat",
+        "city": "Surat",
+        "line_ids": [
+          "sur-green"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2027-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.gujaratmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.8335,
+          21.19807
+        ]
+      },
+      "properties": {
+        "station_id": "surat-maskati-hospital",
+        "name": "Maskati Hospital",
+        "city_id": "surat",
+        "city": "Surat",
+        "line_ids": [
+          "sur-red"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2027-12",
+        "completion_unconfirmed": false,
+        "layout": "underground",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.gujaratmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.88671,
+          21.22345
+        ]
+      },
+      "properties": {
+        "station_id": "surat-varachha-chopati-garden",
+        "name": "Varachha Chopati Garden",
+        "city_id": "surat",
+        "city": "Surat",
+        "line_ids": [
+          "sur-red"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2027-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.gujaratmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.81934,
+          21.18704
+        ]
+      },
+      "properties": {
+        "station_id": "surat-kadarsha-ni-nal",
+        "name": "Kadarsha Ni Nal",
+        "city_id": "surat",
+        "city": "Surat",
+        "line_ids": [
+          "sur-red"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2027-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.gujaratmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.84167,
+          21.20388
+        ]
+      },
+      "properties": {
+        "station_id": "surat-surat-railway-station",
+        "name": "Surat Railway Station",
+        "city_id": "surat",
+        "city": "Surat",
+        "line_ids": [
+          "sur-red"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2027-12",
+        "completion_unconfirmed": false,
+        "layout": "underground",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.gujaratmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.87965,
+          21.1897
+        ]
+      },
+      "properties": {
+        "station_id": "surat-bharat-cancer-hospital",
+        "name": "Bharat Cancer Hospital",
+        "city_id": "surat",
+        "city": "Surat",
+        "line_ids": [
+          "sur-green"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2027-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.gujaratmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.84822,
+          21.20597
+        ]
+      },
+      "properties": {
+        "station_id": "surat-central-warehouse",
+        "name": "Central Warehouse",
+        "city_id": "surat",
+        "city": "Surat",
+        "line_ids": [
+          "sur-red"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2027-12",
+        "completion_unconfirmed": false,
+        "layout": "underground",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.gujaratmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.7858,
+          21.19532
+        ]
+      },
+      "properties": {
+        "station_id": "surat-performing-art-centre",
+        "name": "Performing Art Centre",
+        "city_id": "surat",
+        "city": "Surat",
+        "line_ids": [
+          "sur-green"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2027-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.gujaratmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.78259,
+          21.20874
+        ]
+      },
+      "properties": {
+        "station_id": "surat-palanpur-road",
+        "name": "Palanpur Road",
+        "city_id": "surat",
+        "city": "Surat",
+        "line_ids": [
+          "sur-green"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2027-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.gujaratmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.77694,
+          21.22144
+        ]
+      },
+      "properties": {
+        "station_id": "surat-botanical-garden",
+        "name": "Botanical Garden",
+        "city_id": "surat",
+        "city": "Surat",
+        "line_ids": [
+          "sur-green"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2027-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.gujaratmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.86755,
+          21.21646
+        ]
+      },
+      "properties": {
+        "station_id": "surat-kapodra",
+        "name": "Kapodra",
+        "city_id": "surat",
+        "city": "Surat",
+        "line_ids": [
+          "sur-red"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2027-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.gujaratmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.85494,
+          21.20948
+        ]
+      },
+      "properties": {
+        "station_id": "surat-labheshwar-chowk",
+        "name": "Labheshwar Chowk",
+        "city_id": "surat",
+        "city": "Surat",
+        "line_ids": [
+          "sur-red"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2027-12",
+        "completion_unconfirmed": false,
+        "layout": "underground",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.gujaratmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.8493,
+          21.18523
+        ]
+      },
+      "properties": {
+        "station_id": "surat-anjana-farm",
+        "name": "Anjana Farm",
+        "city_id": "surat",
+        "city": "Surat",
+        "line_ids": [
+          "sur-green"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2027-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.gujaratmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.81839,
+          21.18096
+        ]
+      },
+      "properties": {
+        "station_id": "surat-majura-gate",
+        "name": "Majura Gate",
+        "city_id": "surat",
+        "city": "Surat",
+        "line_ids": [
+          "sur-red",
+          "sur-green"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": true,
+        "opened_on": null,
+        "expected_completion": "2027-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.gujaratmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15",
+        "interchange_id": "surat-majura-gate"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.78284,
+          21.19969
+        ]
+      },
+      "properties": {
+        "station_id": "surat-lp-savani-school",
+        "name": "L.P. Savani School",
+        "city_id": "surat",
+        "city": "Surat",
+        "line_ids": [
+          "sur-green"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2027-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.gujaratmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.80061,
+          21.18757
+        ]
+      },
+      "properties": {
+        "station_id": "surat-badri-narayan-temple",
+        "name": "Badri Narayan Temple",
+        "city_id": "surat",
+        "city": "Surat",
+        "line_ids": [
+          "sur-green"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2027-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.gujaratmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.81585,
+          21.17087
+        ]
+      },
+      "properties": {
+        "station_id": "surat-rupali-canal",
+        "name": "Rupali Canal",
+        "city_id": "surat",
+        "city": "Surat",
+        "line_ids": [
+          "sur-red"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2027-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.gujaratmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.81169,
+          21.16195
+        ]
+      },
+      "properties": {
+        "station_id": "surat-althan-tenement",
+        "name": "Althan Tenement",
+        "city_id": "surat",
+        "city": "Surat",
+        "line_ids": [
+          "sur-red"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2027-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.gujaratmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.87688,
+          21.21957
+        ]
+      },
+      "properties": {
+        "station_id": "surat-shri-swaminarayan-mandir-kalakunj",
+        "name": "Shri Swaminarayan Mandir Kalakunj",
+        "city_id": "surat",
+        "city": "Surat",
+        "line_ids": [
+          "sur-red"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2027-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.gujaratmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.89423,
+          21.22689
+        ]
+      },
+      "properties": {
+        "station_id": "surat-nature-park",
+        "name": "Nature Park",
+        "city_id": "surat",
+        "city": "Surat",
+        "line_ids": [
+          "sur-red"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2027-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.gujaratmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.89298,
+          21.18902
+        ]
+      },
+      "properties": {
+        "station_id": "surat-saroli",
+        "name": "Saroli",
+        "city_id": "surat",
+        "city": "Surat",
+        "line_ids": [
+          "sur-green"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2027-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.gujaratmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.80797,
+          21.1847
+        ]
+      },
+      "properties": {
+        "station_id": "surat-athwa-chopati",
+        "name": "Athwa Chopati",
+        "city_id": "surat",
+        "city": "Surat",
+        "line_ids": [
+          "sur-green"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2027-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.gujaratmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.86858,
+          21.1902
+        ]
+      },
+      "properties": {
+        "station_id": "surat-magob",
+        "name": "Magob",
+        "city_id": "surat",
+        "city": "Surat",
+        "line_ids": [
+          "sur-green"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2027-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.gujaratmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.8192,
+          21.19572
+        ]
+      },
+      "properties": {
+        "station_id": "surat-chowk-bazar",
+        "name": "Chowk Bazar",
+        "city_id": "surat",
+        "city": "Surat",
+        "line_ids": [
+          "sur-red"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2027-12",
+        "completion_unconfirmed": false,
+        "layout": "underground",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.gujaratmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.79936,
+          21.12206
+        ]
+      },
+      "properties": {
+        "station_id": "surat-convention-centre",
+        "name": "Convention Centre",
+        "city_id": "surat",
+        "city": "Surat",
+        "line_ids": [
+          "sur-red"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2027-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.gujaratmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.76901,
+          21.21972
+        ]
+      },
+      "properties": {
+        "station_id": "surat-bhesan",
+        "name": "Bhesan",
+        "city_id": "surat",
+        "city": "Surat",
+        "line_ids": [
+          "sur-green"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2027-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.gujaratmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.80794,
+          21.1526
+        ]
+      },
+      "properties": {
+        "station_id": "surat-althan-gam",
+        "name": "Althan Gam",
+        "city_id": "surat",
+        "city": "Surat",
+        "line_ids": [
+          "sur-red"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2027-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.gujaratmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.79818,
+          21.12874
+        ]
+      },
+      "properties": {
+        "station_id": "surat-bhimrad",
+        "name": "Bhimrad",
+        "city_id": "surat",
+        "city": "Surat",
+        "line_ids": [
+          "sur-red"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2027-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.gujaratmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.80088,
+          21.13598
+        ]
+      },
+      "properties": {
+        "station_id": "surat-woman-iti",
+        "name": "Woman ITI",
+        "city_id": "surat",
+        "city": "Surat",
+        "line_ids": [
+          "sur-red"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2027-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.gujaratmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.80505,
+          21.1452
+        ]
+      },
+      "properties": {
+        "station_id": "surat-vip-road",
+        "name": "VIP Road",
+        "city_id": "surat",
+        "city": "Surat",
+        "line_ids": [
+          "sur-red"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2027-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.gujaratmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.79793,
+          21.11117
+        ]
+      },
+      "properties": {
+        "station_id": "surat-dream-city",
+        "name": "Dream City",
+        "city_id": "surat",
+        "city": "Surat",
+        "line_ids": [
+          "sur-red"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2027-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.gujaratmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.90311,
+          21.23159
+        ]
+      },
+      "properties": {
+        "station_id": "surat-sarthana",
+        "name": "Sarthana",
+        "city_id": "surat",
+        "city": "Surat",
+        "line_ids": [
+          "sur-red"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2027-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.gujaratmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.83225,
+          21.18381
+        ]
+      },
+      "properties": {
+        "station_id": "surat-udhna-darwaja",
+        "name": "Udhna Darwaja",
+        "city_id": "surat",
+        "city": "Surat",
+        "line_ids": [
+          "sur-green"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2027-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.gujaratmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.83909,
+          21.18702
+        ]
+      },
+      "properties": {
+        "station_id": "surat-kamela-darwaja",
+        "name": "Kamela Darwaja",
+        "city_id": "surat",
+        "city": "Surat",
+        "line_ids": [
+          "sur-green"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2027-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.gujaratmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.85896,
+          21.18793
+        ]
+      },
+      "properties": {
+        "station_id": "surat-model-town",
+        "name": "Model Town",
+        "city_id": "surat",
+        "city": "Surat",
+        "line_ids": [
+          "sur-green"
+        ],
+        "status": "construction",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2027-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.gujaratmetrorail.com"
+        ],
+        "last_verified": "2026-10-15",
+        "retrieved_at": "2026-10-15"
+      }
     }
   ]
 }

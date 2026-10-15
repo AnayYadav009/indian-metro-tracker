@@ -409,5 +409,75 @@
       "Silver Line",
       "Gold Line"
     ]
+  },
+  {
+    "id": "ind-yellow",
+    "name": "Yellow Line (Line 3)",
+    "city": "Indore",
+    "city_id": "indore",
+    "color": "#FBBF24",
+    "operator": "MPMRCL",
+    "source": "osm+mpmrcl",
+    "notes": "Line 3 circular ring line covering 33.53 km across 29 stations."
+  },
+  {
+    "id": "bho-orange",
+    "name": "Orange Line (Line 2)",
+    "city": "Bhopal",
+    "city_id": "bhopal",
+    "color": "#F97316",
+    "operator": "MPMRCL",
+    "source": "osm+mpmrcl",
+    "notes": "Line 2 connects Karond Circle to AIIMS Bhopal (14.99 km, 16 stations). Priority corridor Subhash Nagar to AIIMS is operational."
+  },
+  {
+    "id": "bho-blue",
+    "name": "Blue Line (Line 5)",
+    "city": "Bhopal",
+    "city_id": "bhopal",
+    "color": "#3B82F6",
+    "operator": "MPMRCL",
+    "source": "osm+mpmrcl",
+    "notes": "Line 5 connects Bhadbhada Square to Ratnagiri Tiraha (12.91 km, 14 stations). Under active construction."
+  },
+  {
+    "id": "nag-orange",
+    "name": "Orange Line (Line 1)",
+    "city": "Nagpur",
+    "city_id": "nagpur",
+    "color": "#F97316",
+    "operator": "Maha Metro",
+    "source": "osm+mahametro",
+    "notes": "North-South Corridor from Automotive Square to Khapri (19.66 km, 18 stations). Phase 1 fully operational."
+  },
+  {
+    "id": "nag-aqua",
+    "name": "Aqua Line (Line 2)",
+    "city": "Nagpur",
+    "city_id": "nagpur",
+    "color": "#06B6D4",
+    "operator": "Maha Metro",
+    "source": "osm+mahametro",
+    "notes": "East-West Corridor from Lokmanya Nagar to Prajapati Nagar (18.56 km, 20 stations). Phase 1 fully operational."
+  },
+  {
+    "id": "sur-red",
+    "name": "Red Line (Line 1)",
+    "city": "Surat",
+    "color": "#EF4444",
+    "operator": "GMRC",
+    "city_id": "surat",
+    "source": "osm+gmrc",
+    "notes": "Corridor 1 (Diamond Corridor) from Sarthana to Dream City (21.61 km, 21 stations). Under construction."
+  },
+  {
+    "id": "sur-green",
+    "name": "Green Line (Line 2)",
+    "city": "Surat",
+    "color": "#10B981",
+    "operator": "GMRC",
+    "city_id": "surat",
+    "source": "osm+gmrc",
+    "notes": "Corridor 2 (Textile Corridor) from Bhesan to Saroli (18.74 km, 18 stations). Under construction."
   }
 ]

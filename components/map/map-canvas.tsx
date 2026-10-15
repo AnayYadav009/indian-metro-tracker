@@ -326,7 +326,32 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
         onClick={handleMapClick}
         onMouseMove={handleMouseMove}
         onMouseEnter={() => setCursor("pointer")}
-        onMouseLeave={handleMouseLeave}
+        onLoad={() => {
+          if (!mapRef.current) return;
+          if (typeof window !== "undefined") {
+            (window as any)._mapLibreInstance = mapRef.current.getMap();
+          }
+          if (selectedCityId) {
+            const targetCity = dataset.cities.find((c) => c.id === selectedCityId);
+            if (targetCity) {
+              const [minLng, minLat, maxLng, maxLat] = targetCity.bbox;
+              const isDesktop = typeof window !== "undefined" && window.innerWidth >= 768;
+              mapRef.current.fitBounds(
+                [
+                  [minLng, minLat],
+                  [maxLng, maxLat],
+                ],
+                {
+                  padding: isDesktop
+                    ? { top: 70, bottom: 70, left: 400, right: 80 }
+                    : { top: 80, bottom: 80, left: 24, right: 24 },
+                  duration: 0,
+                  essential: true,
+                }
+              );
+            }
+          }
+        }}
         onIdle={() => setIsLoadingTiles(false)}
       >
         <NavigationControl position="top-right" showCompass showZoom />

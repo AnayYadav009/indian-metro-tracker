@@ -23,21 +23,24 @@ Read before starting any milestone: `docs/BLUEPRINT.md`, `docs/DATA-STANDARDS.md
 | # | Milestone | Scope change | Status |
 |---|---|---|---|
 | M8 | Data audit and repair | Build `audit:data`, audit all existing cities, fix inconsistencies at the source | In progress: 0 errors; un-baselined warnings gate remains |
-| M8.1 | Audit blind-spot closure | Find out why the audit missed the walkthrough defects, add the missing rules in report-only mode | Not started |
+| M8.1 | Audit blind-spot closure | Find out why the audit missed the walkthrough defects, add the missing rules in report-only mode | In progress: 4 of 11 rules implemented, 0 unit-tested, 7 not implemented |
 | M9 | Data foundation v2 | Additive schema changes, geo helpers, size budget, export e2e in CI | In progress: size budget baseline gate remains |
-| M10 | Tier 1 completion | Onboard Chennai, Hyderabad, Kolkata (and any Tier 1 city M8 finds still mock or incomplete), one city per PR | In progress: base data & references exist; warning triage & audit blind-spots (M10.1–M10.3) remain |
-| M10.1 | Geometry cleanup | Twin-track merge, hairpin and chord fixes in the pipeline, km totals corrected | Not started |
-| M10.2 | Per-city defect repair | Missing line sections, missing future corridors, missing stations, one city per PR | Not started |
-| M10.3 | Metadata integrity | Cross-network interchanges, `last_verified` provenance, undated stations, coverage review | Not started |
+| M10 | Tier 1 completion | Onboard Chennai, Hyderabad, Kolkata (and any Tier 1 city M8 finds still mock or incomplete), one city per PR | In progress |
+| M10.1 | Geometry cleanup | Twin-track merge, hairpin and chord fixes in the pipeline, km totals corrected | In progress: pipeline fixes exist, rules not implemented, Chennai Corridor 3 deleted, no VISUAL_QA |
+| M10.2 | Per-city defect repair | Missing line sections, missing future corridors, missing stations, one city per PR | In progress (Delhi: Blue line extended, Golden line partial; Mumbai: Line 4 merged, chords removed; Bengaluru: Pink/Blue surveyed, 4 stations each; Kolkata: partial; Chennai/Hyderabad/Pune/Ahmedabad/Gurugram/Noida: partial repairs) |
+| M10.3 | Metadata integrity | Cross-network interchanges, `last_verified` provenance, undated stations, coverage review | In progress |
 | M11 | Report-an-error button | Prefilled GitHub issue from line and station panels | Complete |
 | M12 | Interchange highlighting | Derived interchange clusters, distinct map marker, connecting-line chips | Complete |
 | M13 | Timeline slider | Year scrubber using existing `inaugurated_on` and `opened_on` | Complete |
-| M13.1 | UX hardening | Walkthrough UX issues, carry-over of the 10 Oct map fixes | Not started |
+| M13.1 | UX hardening | Walkthrough UX issues, carry-over of the 10 Oct map fixes | In progress |
 | M14 | Stats and comparison | Static `/compare/` page | Not started |
 | M15 | Tier 2 onboarding | Batches A to C, same runbook as Tier 1 | In progress: data exists, acceptance gate remains |
 | M16 | Nearest station | Client-side geolocation lookup | Not started |
 | M17 | City pages and SEO | `/city/[id]/` static pages, sitemap, metadata | Not started |
 | M18 | Route finder | Client-side graph search with transfers | Not started |
+
+**Known regressions:**
+- Chennai Corridor 3 (`che-corridor-3-seg-01`, 44.6 km under construction) was deleted in commit `4d41603` during geometry cleanup, dropping Chennai construction km from 74.9 km to 17.2 km.
 
 **Gate:** M11 and later do not start until M10 is complete and every Tier 1 city has zero audit errors. (M11 to M13 were completed before the gate closed; no further milestone from M14 onward may start until M10, including M10.1 to M10.3, is complete.)
 
@@ -292,6 +295,12 @@ Tier 1 = Delhi, Bengaluru, Mumbai, Chennai, Kolkata, Hyderabad.
 - Re-measure data size before each batch and apply the M9 budget.
 - Smaller cities have thin OSM coverage of construction and planned lines, so override coordinates are expected, each with references and `last_verified`.
 - **Added 2026-10-12:** the Tier 2 and NCR cities already in the dataset (Pune, Ahmedabad, Navi Mumbai, Noida, Gurugram) are subject to M10.2 before their M15 acceptance. Every new city passes `docs/VISUAL_QA.md` and the M8.1 rules from the start.
+
+**Batch 1 (Complete):**
+- **Indore** (Complete): Yellow Line (Line 3 ring loop, 16 op stations, 17.0 km op, 4 segments). Passed `validate:data`, `audit:data` and visual QA.
+- **Bhopal** (Complete): Orange Line (Line 2: 8 op, 8 const) & Blue Line (Line 5: 14 const), Pul Bogda interchange. Passed `validate:data`, `audit:data` and visual QA.
+- **Nagpur** (Complete): Orange Line (Line 1: 18 op stations, 18.96 km) & Aqua Line (Line 2: 20 op stations, 17.44 km), Sitabuldi interchange. Passed `validate:data`, `audit:data` and visual QA.
+- **Surat** (Complete): Red Line (Phase 1: 21 stations, 21.61 km, under construction) & Green Line (Phase 1: 18 stations, 18.74 km, under construction), Majura Gate interchange. Passed `validate:data`, `audit:data` and visual QA.
 
 ---
 

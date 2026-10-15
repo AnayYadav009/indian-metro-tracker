@@ -1,0 +1,88 @@
+{
+  "city_id": "indore",
+  "compiled_on": "2026-10-15",
+  "lines": [
+    {
+      "line_id": "ind-yellow",
+      "official_name": "Yellow Line (Line 3)",
+      "operator": "MPMRCL",
+      "topology": "loop",
+      "operational_stations": 16,
+      "operational_length_km": 17,
+      "planned_length_km": 33.53,
+      "terminals": [],
+      "status": "operational",
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "Priority Corridor (Gandhi Nagar to Super Corridor-3)",
+          "phase": null,
+          "opened_on": "2025-05-31",
+          "stations_added": 5,
+          "confidence": "sourced",
+          "source": {
+            "title": "Indore Metro initial priority corridor inaugurated",
+            "url": "https://www.mpmetrorail.com",
+            "retrieved_at": "2026-10-15",
+            "kind": "official"
+          }
+        },
+        {
+          "stage": "Priority Corridor-2 (Super Corridor-3 to Radisson Square)",
+          "phase": null,
+          "opened_on": "2026-09-06",
+          "stations_added": 11,
+          "confidence": "sourced",
+          "source": {
+            "title": "Commercial operations start on Indore Metro Gandhi Nagar to Radisson Square corridor",
+            "url": "https://www.mpmetrorail.com",
+            "retrieved_at": "2026-10-15",
+            "kind": "official"
+          }
+        }
+      ],
+      "construction": [
+        {
+          "stretch": "Radisson Square to Palasia Square (Elevated)",
+          "phase": "1",
+          "expected_completion": "2027-12",
+          "stations": 5,
+          "notes": "Package IN-04 elevated stretch covering Shaheed Bagh, Khajrana, Bengali Square, Patrakar Colony, Palasia",
+          "source": {
+            "title": "Indore Metro Package IN-04 work updates",
+            "url": "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/",
+            "retrieved_at": "2026-10-15",
+            "kind": "news"
+          }
+        },
+        {
+          "stretch": "Palasia Square to Airport via Railway Station and Rajwada (Underground)",
+          "phase": "1",
+          "expected_completion": "2028-12",
+          "stations": 7,
+          "notes": "Package IN-05R twin-tunnel underground stretch connecting Indore Railway Station, Rajwada, Bada Ganpati to Airport",
+          "source": {
+            "title": "Indore Metro underground package IN-05R details",
+            "url": "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/",
+            "retrieved_at": "2026-10-15",
+            "kind": "news"
+          }
+        },
+        {
+          "stretch": "Airport to Gandhi Nagar (Terminal loop closure)",
+          "phase": "1",
+          "expected_completion": "2028-12",
+          "stations": 1,
+          "notes": "Link closing the ring between Devi Ahilya Bai Holkar Airport and Gandhi Nagar depot",
+          "source": {
+            "title": "Indore Metro DPR ring corridor profile",
+            "url": "https://www.mpmetrorail.com",
+            "retrieved_at": "2026-10-15",
+            "kind": "official"
+          }
+        }
+      ],
+      "notes": "Indore Metro Phase 1 comprises Line 3 (Yellow Line) designed as a 33.53 km circular ring corridor with 29 stations. The initial 17.0 km priority stretch from Gandhi Nagar to Radisson Square (16 stations) is operational. Remaining elevated and underground sections completing the ring loop are under active construction."
+    }
+  ]
+}

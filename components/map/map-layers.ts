@@ -33,23 +33,6 @@ export const LINE_WIDTH_ZOOM_EXPRESSION: unknown[] = [
   6,
 ];
 
-const FUTURE_LINE_WIDTH_EXPRESSION: unknown[] = [
-  "case",
-  ["==", ["get", "geometry_quality"], "schematic"],
-  [
-    "interpolate",
-    ["linear"],
-    ["zoom"],
-    3.5,
-    2.5,
-    NATIONAL_ZOOM_THRESHOLD,
-    2.5,
-    10,
-    3.5,
-  ],
-  LINE_WIDTH_ZOOM_EXPRESSION,
-];
-
 /**
  * 1. Operational Lines Layer:
  * Solid stroke, data-driven line-color based on segment's color.
@@ -85,7 +68,7 @@ export const constructionLineLayer: LayerProps = {
   },
   paint: {
     "line-color": ["get", "color"],
-    "line-width": FUTURE_LINE_WIDTH_EXPRESSION as any,
+    "line-width": LINE_WIDTH_ZOOM_EXPRESSION as any,
     "line-dasharray": [4, 2],
     "line-opacity": 0.9,
   },

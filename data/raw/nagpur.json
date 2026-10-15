@@ -1,0 +1,7032 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-15T06:07:41Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "node",
+      "id": 6453679896,
+      "lat": 21.1282001,
+      "lon": 79.0825344,
+      "tags": {
+        "name": "Congress Nagar",
+        "name:hi": "काँग्रेस नगर",
+        "network": "Nagpur Metro",
+        "operator": "MahaMetro",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6458275659,
+      "lat": 21.0660456,
+      "lon": 79.0558137,
+      "tags": {
+        "name": "New Airport",
+        "name:hi": "नवीन विमानतळ",
+        "network": "Nagpur Metro",
+        "operator": "MahaMetro",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6458275665,
+      "lat": 21.1276716,
+      "lon": 79.0756674,
+      "tags": {
+        "name": "Rahate Colony",
+        "name:hi": "राहाटे कॉलनी",
+        "network": "Nagpur Metro",
+        "operator": "MahaMetro",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6831386963,
+      "lat": 21.1276607,
+      "lon": 79.0757042,
+      "tags": {
+        "name": "Rahate Colony",
+        "name:hi": "राहाटे कॉलनी",
+        "network": "Nagpur Metro",
+        "operator": "MahaMetro",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6831386964,
+      "lat": 21.1281974,
+      "lon": 79.0825728,
+      "tags": {
+        "name": "Congress Nagar",
+        "name:hi": "काँग्रेस नगर",
+        "operator": "MahaMetro",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6841157974,
+      "lat": 21.1273846,
+      "lon": 79.0753978,
+      "tags": {
+        "name": "Rahate Colony",
+        "name:hi": "राहाटे कॉलनी",
+        "operator": "MahaMetro",
+        "public_transport": "station",
+        "railway": "station",
+        "shelter": "yes",
+        "station": "subway",
+        "subway": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q61367795"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6841157975,
+      "lat": 21.1281984,
+      "lon": 79.0825531,
+      "tags": {
+        "name": "Congress Nagar",
+        "name:hi": "काँग्रेस नगर",
+        "network": "Nagpur Metro",
+        "operator": "MahaMetro",
+        "public_transport": "station",
+        "railway": "station",
+        "shelter": "yes",
+        "station": "subway",
+        "subway": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q61367784"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7049150985,
+      "lat": 21.1699068,
+      "lon": 79.1101322,
+      "tags": {
+        "addr:district": "Nagpur",
+        "addr:full": "774, Vaishali Nagar",
+        "addr:postcode": "440017",
+        "addr:state": "Maharashtra",
+        "name": "Zaveri Nursing Home, Nagpur",
+        "network": "Nagpur Metro",
+        "network:wikidata": "Q6959014",
+        "public_transport": "station",
+        "railway": "station",
+        "source": "OpenGovernmentData",
+        "station": "subway",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7944681323,
+      "lat": 21.1513767,
+      "lon": 79.0904355,
+      "tags": {
+        "name": "नागपुर रेल्वे स्टेशन",
+        "name:en": "Nagpur Railway Station",
+        "name:mr": "नागपुर रेल्वे स्टेशन",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "wikidata": "Q61367918"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7944685685,
+      "lat": 21.1795001,
+      "lon": 79.1097781,
+      "tags": {
+        "name": "Nari Road",
+        "name:mr": "नरी रोड",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q61367688"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7944685774,
+      "lat": 21.1496469,
+      "lon": 79.110395,
+      "tags": {
+        "name": "Chitaroli Square",
+        "name:mr": "चितारओळी चौक",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q61367888"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7944685834,
+      "lat": 21.1857923,
+      "lon": 79.1195065,
+      "tags": {
+        "name": "Automotive Square",
+        "name:mr": "ऑटोमोटिव्ह चौक",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "wikidata": "Q61367677"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7944686038,
+      "lat": 21.1510532,
+      "lon": 79.1029132,
+      "tags": {
+        "name": "Agrasen Square",
+        "name:mr": "अग्रसेन चौक",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "wheelchair": "yes",
+        "wikidata": "Q61367893"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7944686097,
+      "lat": 21.148325,
+      "lon": 79.1294936,
+      "tags": {
+        "name": "Ambedkar Square",
+        "name:mr": "आंबेडकर चौक",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "wikidata": "Q61070914"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7944686237,
+      "lat": 21.1686674,
+      "lon": 79.0924243,
+      "tags": {
+        "name": "Kadvi Square",
+        "name:mr": "कडवी चौक",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q61367720"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7944686405,
+      "lat": 21.1529727,
+      "lon": 79.094916,
+      "tags": {
+        "name": "Dosar Vaisya Square",
+        "name:mr": "दोसर वैश्य चौक",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "wikidata": "Q61367905"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7944686439,
+      "lat": 21.1480272,
+      "lon": 79.1364057,
+      "tags": {
+        "name": "Vaishnodevi Square",
+        "name:mr": "वैष्णोदेवी चौक",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "wikidata": "Q61367872"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7944686824,
+      "lat": 21.148814,
+      "lon": 79.1182431,
+      "tags": {
+        "name": "Telephone Exchange",
+        "name:mr": "टेलिफोन एक्सचेंज",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "wikidata": "Q61367880"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7944686882,
+      "lat": 21.1736873,
+      "lon": 79.1007283,
+      "tags": {
+        "name": "Indora Square",
+        "name:mr": "इंदोरा चौक",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q61367714"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7944687024,
+      "lat": 21.1616305,
+      "lon": 79.083725,
+      "tags": {
+        "name": "Gaddi Godam Square",
+        "name:mr": "गड्डीगोदाम चौक",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q61367753"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7944687085,
+      "lat": 21.1501485,
+      "lon": 79.148823,
+      "tags": {
+        "name": "Prajapati Nagar",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "PJN",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q61367864",
+        "wikipedia": "en:Prajapati Nagar metro station"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7944687375,
+      "lat": 21.1459896,
+      "lon": 79.0897729,
+      "tags": {
+        "name": "Cotton Market",
+        "name:mr": "कॉटन मार्केट",
+        "railway": "station",
+        "station": "subway"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9066500976,
+      "lat": 21.0660407,
+      "lon": 79.0558315,
+      "tags": {
+        "name": "New Airport",
+        "name:hi": "नवीन विमानतळ",
+        "network": "Nagpur Metro",
+        "operator": "MahaMetro",
+        "railway": "station",
+        "station": "subway",
+        "wikidata": "Q55074904"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10265546808,
+      "lat": 21.1496361,
+      "lon": 79.1103918,
+      "tags": {
+        "name": "Chitroli Square",
+        "name:mr": "चितरओळी चौक",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10967776981,
+      "lat": 21.149672,
+      "lon": 79.1103937,
+      "tags": {
+        "name": "Chitroli Square",
+        "name:mr": "चितरओळी चौक",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10967777985,
+      "lat": 21.0660298,
+      "lon": 79.0558483,
+      "tags": {
+        "name": "New Airport",
+        "name:hi": "नवीन विमानतळ",
+        "network": "Nagpur Metro",
+        "operator": "MahaMetro",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11368300687,
+      "lat": 21.1543646,
+      "lon": 79.081477,
+      "tags": {
+        "name": "Kasturchand Park",
+        "name:hi": "कस्तुरचंद पार्क",
+        "operator": "MahaMetro",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q61367761"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11368300688,
+      "lat": 21.1466946,
+      "lon": 79.0806347,
+      "tags": {
+        "name": "Zero Mile",
+        "name:hi": "झीरो माईल",
+        "operator": "MahaMetro",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q61367770"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11368300689,
+      "lat": 21.1402262,
+      "lon": 79.0871588,
+      "tags": {
+        "name": "Sitabuldi",
+        "name:hi": "सीताबर्डी",
+        "operator": "MahaMetro",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q59155303"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11368300690,
+      "lat": 21.109139,
+      "lon": 79.0696114,
+      "tags": {
+        "name": "Chhatrapati Square",
+        "name:hi": "छत्रपती चौक",
+        "network": "Nagpur Metro",
+        "operator": "MahaMetro",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11368300691,
+      "lat": 21.1182122,
+      "lon": 79.0721071,
+      "tags": {
+        "name": "Ajni Square",
+        "name:hi": "अजनी चौक",
+        "network": "Nagpur Metro",
+        "operator": "MahaMetro",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q61367800"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11368300692,
+      "lat": 21.0963504,
+      "lon": 79.0663192,
+      "tags": {
+        "name": "Ujjwal Nagar",
+        "name:hi": "उज्जवल नगर",
+        "operator": "MahaMetro",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q61367824"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11368300693,
+      "lat": 21.1036395,
+      "lon": 79.068179,
+      "tags": {
+        "name": "Jaiprakash Nagar",
+        "name:hi": "जयप्रकाश नगर",
+        "operator": "MahaMetro",
+        "public_transport": "station",
+        "railway": "station",
+        "ref": "JPN",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q61367813"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11368300694,
+      "lat": 21.0862162,
+      "lon": 79.0637884,
+      "tags": {
+        "name": "Airport",
+        "name:hi": "विमानतळ",
+        "network": "Nagpur Metro",
+        "operator": "MahaMetro",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q61367834"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11368300695,
+      "lat": 21.0790559,
+      "lon": 79.0605257,
+      "tags": {
+        "name": "Airport South",
+        "name:hi": "दक्षिण विमानतळ",
+        "network": "Nagpur Metro",
+        "operator": "MahaMetro",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q61367840"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11368300696,
+      "lat": 21.0493478,
+      "lon": 79.0478446,
+      "tags": {
+        "name": "Khapri",
+        "name:hi": "खापरी",
+        "operator": "MahaMetro",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q55074918"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11369581741,
+      "lat": 21.1383147,
+      "lon": 79.0700943,
+      "tags": {
+        "name": "Institute of Engineers",
+        "name:hi": "इन्स्टिट्यूट ऑफ इंजिनीअर्स",
+        "operator": "MahaMetro",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q61367931"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11369581742,
+      "lat": 21.1407181,
+      "lon": 79.0778268,
+      "tags": {
+        "name": "Jhasi Rani Square",
+        "name:hi": "झाशी राणी चौक",
+        "operator": "MahaMetro",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q61367928"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11369581743,
+      "lat": 21.121523,
+      "lon": 79.0294117,
+      "tags": {
+        "name": "Rachna Ring Road",
+        "operator": "MahaMetro",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q61367971"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11369581744,
+      "lat": 21.1187853,
+      "lon": 79.0194659,
+      "tags": {
+        "name": "Vasudev Nagar",
+        "name:hi": "वासुदेव नगर",
+        "network": "Nagpur Metro",
+        "operator": "MahaMetro",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q61367984"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11369581745,
+      "lat": 21.1161997,
+      "lon": 79.0126033,
+      "tags": {
+        "name": "Bansi Nagar",
+        "operator": "MahaMetro",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q61367989"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11369581746,
+      "lat": 21.1108046,
+      "lon": 79.001754,
+      "tags": {
+        "name": "Lokmanya Nagar",
+        "name:hi": "लोकमान्य नगर",
+        "operator": "MahaMetro",
+        "public_transport": "station",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q61367994"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11371112352,
+      "lat": 21.1362125,
+      "lon": 79.0616442,
+      "tags": {
+        "electrified": "contact_line",
+        "gauge": "1435",
+        "name": "Shankar Nagar Square",
+        "network": "Nagpur Metro",
+        "operator": "MahaMetro",
+        "public_transport": "station",
+        "public_transport:version": "2",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q55074918",
+        "wikipedia": "en:Nagpur Metro"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11371112353,
+      "lat": 21.1329162,
+      "lon": 79.054798,
+      "tags": {
+        "electrified": "contact_line",
+        "gauge": "1435",
+        "name": "LAD College",
+        "network": "Nagpur Metro",
+        "operator": "MahaMetro",
+        "public_transport": "station",
+        "public_transport:version": "2",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q55074918",
+        "wikipedia": "en:Nagpur Metro"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11371112354,
+      "lat": 21.1286919,
+      "lon": 79.0457448,
+      "tags": {
+        "electrified": "contact_line",
+        "gauge": "1435",
+        "name": "Ambazari Lake",
+        "network": "Nagpur Metro",
+        "operator": "MahaMetro",
+        "public_transport": "station",
+        "public_transport:version": "2",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q55074918",
+        "wikipedia": "en:Nagpur Metro"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11371112355,
+      "lat": 21.1233162,
+      "lon": 79.0420532,
+      "tags": {
+        "electrified": "contact_line",
+        "gauge": "1435",
+        "name": "Subhash Nagar",
+        "name:hi": "सुभाष नगर",
+        "network": "Nagpur Metro",
+        "operator": "MahaMetro",
+        "public_transport": "station",
+        "public_transport:version": "2",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "wikidata": "Q55074918",
+        "wikipedia": "en:Nagpur Metro"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1122408781,
+      "bounds": {
+        "minlat": 21.1467543,
+        "minlon": 79.1492769,
+        "maxlat": 21.1511238,
+        "maxlon": 79.1678419
+      },
+      "nodes": [
+        6720310447,
+        11300263427,
+        6720310448,
+        11300263423,
+        11300263434,
+        6720310449,
+        11300263432,
+        6720310450,
+        6720310451,
+        6720310452,
+        6720310453,
+        6720310454,
+        6720310455,
+        6720310456,
+        11300263466,
+        6447240189,
+        6447240190,
+        6447240191,
+        10967776466,
+        6447240192,
+        10967777996,
+        10967776904,
+        10967778127,
+        6447240193
+      ],
+      "geometry": [
+        {
+          "lat": 21.1467543,
+          "lon": 79.1678419
+        },
+        {
+          "lat": 21.1474794,
+          "lon": 79.1670711
+        },
+        {
+          "lat": 21.1481723,
+          "lon": 79.1663176
+        },
+        {
+          "lat": 21.148715,
+          "lon": 79.1657368
+        },
+        {
+          "lat": 21.1489682,
+          "lon": 79.1653996
+        },
+        {
+          "lat": 21.1491854,
+          "lon": 79.1650173
+        },
+        {
+          "lat": 21.1493165,
+          "lon": 79.1646243
+        },
+        {
+          "lat": 21.1494277,
+          "lon": 79.1641069
+        },
+        {
+          "lat": 21.1495389,
+          "lon": 79.1630448
+        },
+        {
+          "lat": 21.149553,
+          "lon": 79.1608903
+        },
+        {
+          "lat": 21.1496316,
+          "lon": 79.1586986
+        },
+        {
+          "lat": 21.1496839,
+          "lon": 79.15752
+        },
+        {
+          "lat": 21.1501203,
+          "lon": 79.1552622
+        },
+        {
+          "lat": 21.1506184,
+          "lon": 79.153382
+        },
+        {
+          "lat": 21.1508414,
+          "lon": 79.1525638
+        },
+        {
+          "lat": 21.151002,
+          "lon": 79.1514582
+        },
+        {
+          "lat": 21.1511079,
+          "lon": 79.1504471
+        },
+        {
+          "lat": 21.1511238,
+          "lon": 79.1500938
+        },
+        {
+          "lat": 21.1510848,
+          "lon": 79.149944
+        },
+        {
+          "lat": 21.151022,
+          "lon": 79.1497619
+        },
+        {
+          "lat": 21.150946,
+          "lon": 79.1496254
+        },
+        {
+          "lat": 21.1508629,
+          "lon": 79.1495021
+        },
+        {
+          "lat": 21.1507541,
+          "lon": 79.149393
+        },
+        {
+          "lat": 21.1506385,
+          "lon": 79.1492769
+        }
+      ],
+      "tags": {
+        "bridge": "yes",
+        "construction": "subway",
+        "electrified": "contact_line",
+        "layer": "2",
+        "railway": "construction"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1180968987,
+      "bounds": {
+        "minlat": 21.1467743,
+        "minlon": 79.149249,
+        "maxlat": 21.1511599,
+        "maxlon": 79.1678604
+      },
+      "nodes": [
+        10967778075,
+        11300263428,
+        10967776555,
+        11300263424,
+        11300263433,
+        10967777941,
+        11300263431,
+        10967777292,
+        10967776988,
+        10967778109,
+        10967777813,
+        10967777157,
+        10967776851,
+        10967777978,
+        10967764284,
+        10967777023,
+        10967776717,
+        10967777853,
+        10967777197,
+        10967776887,
+        10967776594,
+        10967777717,
+        10967777776
+      ],
+      "geometry": [
+        {
+          "lat": 21.1467743,
+          "lon": 79.1678604
+        },
+        {
+          "lat": 21.1475281,
+          "lon": 79.1670665
+        },
+        {
+          "lat": 21.1481233,
+          "lon": 79.1664501
+        },
+        {
+          "lat": 21.1487428,
+          "lon": 79.1657546
+        },
+        {
+          "lat": 21.1490005,
+          "lon": 79.165403
+        },
+        {
+          "lat": 21.1492122,
+          "lon": 79.1650322
+        },
+        {
+          "lat": 21.1493514,
+          "lon": 79.1646138
+        },
+        {
+          "lat": 21.1494586,
+          "lon": 79.1641138
+        },
+        {
+          "lat": 21.1495748,
+          "lon": 79.1630473
+        },
+        {
+          "lat": 21.1495889,
+          "lon": 79.1608912
+        },
+        {
+          "lat": 21.1496675,
+          "lon": 79.1587003
+        },
+        {
+          "lat": 21.1497197,
+          "lon": 79.1575246
+        },
+        {
+          "lat": 21.1501585,
+          "lon": 79.1552556
+        },
+        {
+          "lat": 21.150883,
+          "lon": 79.1525108
+        },
+        {
+          "lat": 21.1510063,
+          "lon": 79.1517169
+        },
+        {
+          "lat": 21.1511437,
+          "lon": 79.1504508
+        },
+        {
+          "lat": 21.1511599,
+          "lon": 79.1500895
+        },
+        {
+          "lat": 21.1511191,
+          "lon": 79.1499321
+        },
+        {
+          "lat": 21.1510546,
+          "lon": 79.1497452
+        },
+        {
+          "lat": 21.150976,
+          "lon": 79.1496042
+        },
+        {
+          "lat": 21.1508899,
+          "lon": 79.1494765
+        },
+        {
+          "lat": 21.1507786,
+          "lon": 79.1493649
+        },
+        {
+          "lat": 21.1506632,
+          "lon": 79.149249
+        }
+      ],
+      "tags": {
+        "bridge": "yes",
+        "construction": "subway",
+        "electrified": "contact_line",
+        "layer": "2",
+        "railway": "construction"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 9565725,
+      "bounds": {
+        "minlat": 21.0493536,
+        "minlon": 79.0478185,
+        "maxlat": 21.1858323,
+        "maxlon": 79.1197452
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 6453679371,
+          "role": "stop",
+          "lat": 21.0493536,
+          "lon": 79.0478185
+        },
+        {
+          "type": "node",
+          "ref": 6458275659,
+          "role": "stop",
+          "lat": 21.0660456,
+          "lon": 79.0558137
+        },
+        {
+          "type": "node",
+          "ref": 6458275660,
+          "role": "stop",
+          "lat": 21.0790612,
+          "lon": 79.0605087
+        },
+        {
+          "type": "node",
+          "ref": 6458275662,
+          "role": "stop",
+          "lat": 21.0862196,
+          "lon": 79.0637683
+        },
+        {
+          "type": "node",
+          "ref": 6458275661,
+          "role": "stop",
+          "lat": 21.0963549,
+          "lon": 79.0663005
+        },
+        {
+          "type": "node",
+          "ref": 6458275663,
+          "role": "stop",
+          "lat": 21.103626,
+          "lon": 79.0681431
+        },
+        {
+          "type": "node",
+          "ref": 6458275664,
+          "role": "stop",
+          "lat": 21.109126,
+          "lon": 79.0696438
+        },
+        {
+          "type": "node",
+          "ref": 6453679904,
+          "role": "stop",
+          "lat": 21.1182155,
+          "lon": 79.0720891
+        },
+        {
+          "type": "node",
+          "ref": 6458275665,
+          "role": "stop",
+          "lat": 21.1276716,
+          "lon": 79.0756674
+        },
+        {
+          "type": "node",
+          "ref": 6453679896,
+          "role": "stop",
+          "lat": 21.1282001,
+          "lon": 79.0825344
+        },
+        {
+          "type": "node",
+          "ref": 7175548075,
+          "role": "stop",
+          "lat": 21.1417778,
+          "lon": 79.0823084
+        },
+        {
+          "type": "node",
+          "ref": 4060968067,
+          "role": "stop",
+          "lat": 21.1466945,
+          "lon": 79.0806151
+        },
+        {
+          "type": "node",
+          "ref": 7944686624,
+          "role": "stop",
+          "lat": 21.1543687,
+          "lon": 79.0814575
+        },
+        {
+          "type": "node",
+          "ref": 10267033812,
+          "role": "stop",
+          "lat": 21.1616376,
+          "lon": 79.0837084
+        },
+        {
+          "type": "node",
+          "ref": 10267033822,
+          "role": "stop",
+          "lat": 21.1686553,
+          "lon": 79.0923831
+        },
+        {
+          "type": "node",
+          "ref": 10267033817,
+          "role": "stop",
+          "lat": 21.1736817,
+          "lon": 79.1007062
+        },
+        {
+          "type": "node",
+          "ref": 10267033823,
+          "role": "stop",
+          "lat": 21.1794472,
+          "lon": 79.1098087
+        },
+        {
+          "type": "node",
+          "ref": 6453679383,
+          "role": "stop",
+          "lat": 21.1858323,
+          "lon": 79.1197452
+        },
+        {
+          "type": "way",
+          "ref": 688639785,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.0493536,
+              "lon": 79.0478185
+            },
+            {
+              "lat": 21.0496232,
+              "lon": 79.0479458
+            },
+            {
+              "lat": 21.0498382,
+              "lon": 79.0480424
+            },
+            {
+              "lat": 21.0509021,
+              "lon": 79.04852
+            },
+            {
+              "lat": 21.0511871,
+              "lon": 79.048685
+            },
+            {
+              "lat": 21.0513543,
+              "lon": 79.0487922
+            },
+            {
+              "lat": 21.0519066,
+              "lon": 79.0491772
+            },
+            {
+              "lat": 21.052288,
+              "lon": 79.0494077
+            },
+            {
+              "lat": 21.0525142,
+              "lon": 79.0495317
+            },
+            {
+              "lat": 21.0527632,
+              "lon": 79.0496456
+            },
+            {
+              "lat": 21.0534766,
+              "lon": 79.0499804
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 714985490,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.0534766,
+              "lon": 79.0499804
+            },
+            {
+              "lat": 21.0542509,
+              "lon": 79.0503503
+            },
+            {
+              "lat": 21.0558186,
+              "lon": 79.0511623
+            },
+            {
+              "lat": 21.0560537,
+              "lon": 79.0512878
+            },
+            {
+              "lat": 21.0571371,
+              "lon": 79.0517839
+            },
+            {
+              "lat": 21.0573703,
+              "lon": 79.0518907
+            },
+            {
+              "lat": 21.0608933,
+              "lon": 79.0535107
+            },
+            {
+              "lat": 21.0613038,
+              "lon": 79.0536784
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 1180968925,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.0613038,
+              "lon": 79.0536784
+            },
+            {
+              "lat": 21.0657218,
+              "lon": 79.0556266
+            },
+            {
+              "lat": 21.0660456,
+              "lon": 79.0558137
+            },
+            {
+              "lat": 21.0668799,
+              "lon": 79.0562096
+            },
+            {
+              "lat": 21.0683522,
+              "lon": 79.0568608
+            },
+            {
+              "lat": 21.0698815,
+              "lon": 79.057467
+            },
+            {
+              "lat": 21.0703795,
+              "lon": 79.0576869
+            },
+            {
+              "lat": 21.0709164,
+              "lon": 79.0579058
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 1180968898,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.0709164,
+              "lon": 79.0579058
+            },
+            {
+              "lat": 21.0711717,
+              "lon": 79.0580329
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 688281193,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.0711717,
+              "lon": 79.0580329
+            },
+            {
+              "lat": 21.0724031,
+              "lon": 79.0586807
+            },
+            {
+              "lat": 21.0732015,
+              "lon": 79.0590079
+            },
+            {
+              "lat": 21.0735319,
+              "lon": 79.0590884
+            },
+            {
+              "lat": 21.0752513,
+              "lon": 79.0593727
+            },
+            {
+              "lat": 21.0764739,
+              "lon": 79.0595725
+            },
+            {
+              "lat": 21.0768255,
+              "lon": 79.0596382
+            },
+            {
+              "lat": 21.0773211,
+              "lon": 79.0597455
+            },
+            {
+              "lat": 21.0776477,
+              "lon": 79.0598515
+            },
+            {
+              "lat": 21.077958,
+              "lon": 79.0599775
+            },
+            {
+              "lat": 21.0781232,
+              "lon": 79.0600619
+            },
+            {
+              "lat": 21.0790612,
+              "lon": 79.0605087
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 688639794,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.0796143,
+              "lon": 79.0607801
+            },
+            {
+              "lat": 21.0790612,
+              "lon": 79.0605087
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 688281191,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.084684,
+              "lon": 79.0633908
+            },
+            {
+              "lat": 21.0838857,
+              "lon": 79.0631868
+            },
+            {
+              "lat": 21.0835491,
+              "lon": 79.0630808
+            },
+            {
+              "lat": 21.0833676,
+              "lon": 79.062999
+            },
+            {
+              "lat": 21.0832563,
+              "lon": 79.0629441
+            },
+            {
+              "lat": 21.0830948,
+              "lon": 79.0628368
+            },
+            {
+              "lat": 21.0829159,
+              "lon": 79.0626986
+            },
+            {
+              "lat": 21.0827532,
+              "lon": 79.0625368
+            },
+            {
+              "lat": 21.0825805,
+              "lon": 79.0623605
+            },
+            {
+              "lat": 21.0823522,
+              "lon": 79.0621443
+            },
+            {
+              "lat": 21.0821337,
+              "lon": 79.0619698
+            },
+            {
+              "lat": 21.0818417,
+              "lon": 79.0618058
+            },
+            {
+              "lat": 21.0796143,
+              "lon": 79.0607801
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 688639797,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.0862196,
+              "lon": 79.0637683
+            },
+            {
+              "lat": 21.084684,
+              "lon": 79.0633908
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 1274890490,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.0887565,
+              "lon": 79.0643916
+            },
+            {
+              "lat": 21.0862196,
+              "lon": 79.0637683
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 688639781,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.0963549,
+              "lon": 79.0663005
+            },
+            {
+              "lat": 21.0952332,
+              "lon": 79.0659828
+            },
+            {
+              "lat": 21.0887565,
+              "lon": 79.0643916
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 688639789,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.103626,
+              "lon": 79.0681431
+            },
+            {
+              "lat": 21.1031133,
+              "lon": 79.0680202
+            },
+            {
+              "lat": 21.1017277,
+              "lon": 79.0676537
+            },
+            {
+              "lat": 21.0963549,
+              "lon": 79.0663005
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 688639787,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.109126,
+              "lon": 79.0696438
+            },
+            {
+              "lat": 21.1076401,
+              "lon": 79.0692365
+            },
+            {
+              "lat": 21.1045775,
+              "lon": 79.0683405
+            },
+            {
+              "lat": 21.103626,
+              "lon": 79.0681431
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 688639791,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.1182155,
+              "lon": 79.0720891
+            },
+            {
+              "lat": 21.113338,
+              "lon": 79.0707514
+            },
+            {
+              "lat": 21.1108555,
+              "lon": 79.0701141
+            },
+            {
+              "lat": 21.1095895,
+              "lon": 79.0697727
+            },
+            {
+              "lat": 21.109126,
+              "lon": 79.0696438
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 688639783,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.1276716,
+              "lon": 79.0756674
+            },
+            {
+              "lat": 21.1264972,
+              "lon": 79.0752728
+            },
+            {
+              "lat": 21.1259255,
+              "lon": 79.0750247
+            },
+            {
+              "lat": 21.1253289,
+              "lon": 79.0747967
+            },
+            {
+              "lat": 21.1217645,
+              "lon": 79.0734237
+            },
+            {
+              "lat": 21.1206701,
+              "lon": 79.0729849
+            },
+            {
+              "lat": 21.1200463,
+              "lon": 79.0727351
+            },
+            {
+              "lat": 21.1190005,
+              "lon": 79.0723426
+            },
+            {
+              "lat": 21.1182155,
+              "lon": 79.0720891
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 688639788,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.1304296,
+              "lon": 79.0827899
+            },
+            {
+              "lat": 21.1301315,
+              "lon": 79.0827348
+            },
+            {
+              "lat": 21.1298617,
+              "lon": 79.0826903
+            },
+            {
+              "lat": 21.1294,
+              "lon": 79.0826296
+            },
+            {
+              "lat": 21.129168,
+              "lon": 79.0826046
+            },
+            {
+              "lat": 21.1289817,
+              "lon": 79.082585
+            },
+            {
+              "lat": 21.1282001,
+              "lon": 79.0825344
+            },
+            {
+              "lat": 21.1274742,
+              "lon": 79.0824615
+            },
+            {
+              "lat": 21.1273398,
+              "lon": 79.0824456
+            },
+            {
+              "lat": 21.1272419,
+              "lon": 79.08243
+            },
+            {
+              "lat": 21.1271457,
+              "lon": 79.0824049
+            },
+            {
+              "lat": 21.127052,
+              "lon": 79.0823707
+            },
+            {
+              "lat": 21.1269616,
+              "lon": 79.0823275
+            },
+            {
+              "lat": 21.1268752,
+              "lon": 79.0822758
+            },
+            {
+              "lat": 21.1267935,
+              "lon": 79.0822159
+            },
+            {
+              "lat": 21.1267171,
+              "lon": 79.0821483
+            },
+            {
+              "lat": 21.1266468,
+              "lon": 79.0820737
+            },
+            {
+              "lat": 21.126583,
+              "lon": 79.0819925
+            },
+            {
+              "lat": 21.1265263,
+              "lon": 79.0819055
+            },
+            {
+              "lat": 21.1264771,
+              "lon": 79.0818134
+            },
+            {
+              "lat": 21.1264358,
+              "lon": 79.0817164
+            },
+            {
+              "lat": 21.1264027,
+              "lon": 79.0816157
+            },
+            {
+              "lat": 21.1263784,
+              "lon": 79.0815122
+            },
+            {
+              "lat": 21.1263629,
+              "lon": 79.0814069
+            },
+            {
+              "lat": 21.1263564,
+              "lon": 79.0813004
+            },
+            {
+              "lat": 21.1263589,
+              "lon": 79.0811937
+            },
+            {
+              "lat": 21.1263704,
+              "lon": 79.0810877
+            },
+            {
+              "lat": 21.1263909,
+              "lon": 79.0809833
+            },
+            {
+              "lat": 21.1264201,
+              "lon": 79.0808813
+            },
+            {
+              "lat": 21.1264578,
+              "lon": 79.0807826
+            },
+            {
+              "lat": 21.1265037,
+              "lon": 79.0806879
+            },
+            {
+              "lat": 21.1265574,
+              "lon": 79.0805981
+            },
+            {
+              "lat": 21.1266185,
+              "lon": 79.0805139
+            },
+            {
+              "lat": 21.126729,
+              "lon": 79.0803909
+            },
+            {
+              "lat": 21.1286907,
+              "lon": 79.07862
+            },
+            {
+              "lat": 21.1287658,
+              "lon": 79.0785518
+            },
+            {
+              "lat": 21.1288512,
+              "lon": 79.0784701
+            },
+            {
+              "lat": 21.1289302,
+              "lon": 79.0783813
+            },
+            {
+              "lat": 21.1290025,
+              "lon": 79.0782862
+            },
+            {
+              "lat": 21.1290675,
+              "lon": 79.0781851
+            },
+            {
+              "lat": 21.1291248,
+              "lon": 79.0780789
+            },
+            {
+              "lat": 21.1291741,
+              "lon": 79.0779681
+            },
+            {
+              "lat": 21.129215,
+              "lon": 79.0778535
+            },
+            {
+              "lat": 21.1292473,
+              "lon": 79.0777358
+            },
+            {
+              "lat": 21.1292708,
+              "lon": 79.0776156
+            },
+            {
+              "lat": 21.1292854,
+              "lon": 79.0774939
+            },
+            {
+              "lat": 21.1292909,
+              "lon": 79.0773713
+            },
+            {
+              "lat": 21.1292875,
+              "lon": 79.0772509
+            },
+            {
+              "lat": 21.1292753,
+              "lon": 79.0771311
+            },
+            {
+              "lat": 21.1292545,
+              "lon": 79.0770127
+            },
+            {
+              "lat": 21.1292251,
+              "lon": 79.0768964
+            },
+            {
+              "lat": 21.1291874,
+              "lon": 79.0767828
+            },
+            {
+              "lat": 21.1291415,
+              "lon": 79.0766728
+            },
+            {
+              "lat": 21.1290878,
+              "lon": 79.076567
+            },
+            {
+              "lat": 21.1290266,
+              "lon": 79.0764659
+            },
+            {
+              "lat": 21.1289582,
+              "lon": 79.0763703
+            },
+            {
+              "lat": 21.1288831,
+              "lon": 79.0762806
+            },
+            {
+              "lat": 21.1288017,
+              "lon": 79.0761975
+            },
+            {
+              "lat": 21.1287145,
+              "lon": 79.0761215
+            },
+            {
+              "lat": 21.128622,
+              "lon": 79.076053
+            },
+            {
+              "lat": 21.1285249,
+              "lon": 79.0759923
+            },
+            {
+              "lat": 21.1284236,
+              "lon": 79.07594
+            },
+            {
+              "lat": 21.1282972,
+              "lon": 79.075882
+            },
+            {
+              "lat": 21.1276716,
+              "lon": 79.0756674
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 403783074,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.1417778,
+              "lon": 79.0823084
+            },
+            {
+              "lat": 21.1411861,
+              "lon": 79.0825778
+            },
+            {
+              "lat": 21.1398107,
+              "lon": 79.0831976
+            },
+            {
+              "lat": 21.1396038,
+              "lon": 79.0833105
+            },
+            {
+              "lat": 21.1395129,
+              "lon": 79.0833719
+            },
+            {
+              "lat": 21.1394267,
+              "lon": 79.0834409
+            },
+            {
+              "lat": 21.1393459,
+              "lon": 79.0835168
+            },
+            {
+              "lat": 21.1392709,
+              "lon": 79.0835993
+            },
+            {
+              "lat": 21.1392022,
+              "lon": 79.0836879
+            },
+            {
+              "lat": 21.1391505,
+              "lon": 79.0837652
+            },
+            {
+              "lat": 21.1391035,
+              "lon": 79.0838459
+            },
+            {
+              "lat": 21.1390616,
+              "lon": 79.0839297
+            },
+            {
+              "lat": 21.138989,
+              "lon": 79.0841023
+            },
+            {
+              "lat": 21.1388849,
+              "lon": 79.0844143
+            },
+            {
+              "lat": 21.1387398,
+              "lon": 79.0848624
+            },
+            {
+              "lat": 21.1386917,
+              "lon": 79.0849818
+            },
+            {
+              "lat": 21.1386494,
+              "lon": 79.0850715
+            },
+            {
+              "lat": 21.1385946,
+              "lon": 79.0851647
+            },
+            {
+              "lat": 21.1385326,
+              "lon": 79.0852526
+            },
+            {
+              "lat": 21.1384638,
+              "lon": 79.0853345
+            },
+            {
+              "lat": 21.1383887,
+              "lon": 79.0854098
+            },
+            {
+              "lat": 21.1382774,
+              "lon": 79.0854945
+            },
+            {
+              "lat": 21.1382464,
+              "lon": 79.0855194
+            },
+            {
+              "lat": 21.138222,
+              "lon": 79.0855384
+            },
+            {
+              "lat": 21.1381316,
+              "lon": 79.0855908
+            },
+            {
+              "lat": 21.1380373,
+              "lon": 79.0856348
+            },
+            {
+              "lat": 21.1379444,
+              "lon": 79.0856685
+            },
+            {
+              "lat": 21.1378493,
+              "lon": 79.085694
+            },
+            {
+              "lat": 21.1377525,
+              "lon": 79.0857112
+            },
+            {
+              "lat": 21.1376547,
+              "lon": 79.0857198
+            },
+            {
+              "lat": 21.1375567,
+              "lon": 79.0857198
+            },
+            {
+              "lat": 21.1374589,
+              "lon": 79.0857113
+            },
+            {
+              "lat": 21.1373621,
+              "lon": 79.0856943
+            },
+            {
+              "lat": 21.1372669,
+              "lon": 79.0856689
+            },
+            {
+              "lat": 21.1370803,
+              "lon": 79.0855978
+            },
+            {
+              "lat": 21.1363355,
+              "lon": 79.0852128
+            },
+            {
+              "lat": 21.1351892,
+              "lon": 79.0846334
+            },
+            {
+              "lat": 21.1342543,
+              "lon": 79.0841507
+            },
+            {
+              "lat": 21.1337651,
+              "lon": 79.0839098
+            },
+            {
+              "lat": 21.1334936,
+              "lon": 79.0837827
+            },
+            {
+              "lat": 21.1331415,
+              "lon": 79.0836272
+            },
+            {
+              "lat": 21.1328187,
+              "lon": 79.0834973
+            },
+            {
+              "lat": 21.1323632,
+              "lon": 79.0833275
+            },
+            {
+              "lat": 21.1319527,
+              "lon": 79.0831872
+            },
+            {
+              "lat": 21.1316184,
+              "lon": 79.0830886
+            },
+            {
+              "lat": 21.131047,
+              "lon": 79.0829302
+            },
+            {
+              "lat": 21.1304811,
+              "lon": 79.0828027
+            },
+            {
+              "lat": 21.1304296,
+              "lon": 79.0827899
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 688281194,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.1417778,
+              "lon": 79.0823084
+            },
+            {
+              "lat": 21.1421071,
+              "lon": 79.0821567
+            },
+            {
+              "lat": 21.1425624,
+              "lon": 79.0819086
+            },
+            {
+              "lat": 21.14273,
+              "lon": 79.0817906
+            },
+            {
+              "lat": 21.1429139,
+              "lon": 79.0816109
+            },
+            {
+              "lat": 21.143059,
+              "lon": 79.081454
+            },
+            {
+              "lat": 21.1431716,
+              "lon": 79.0813199
+            },
+            {
+              "lat": 21.1433,
+              "lon": 79.0811815
+            },
+            {
+              "lat": 21.1434388,
+              "lon": 79.0810507
+            },
+            {
+              "lat": 21.143556,
+              "lon": 79.0809615
+            },
+            {
+              "lat": 21.1437192,
+              "lon": 79.0808638
+            },
+            {
+              "lat": 21.1438315,
+              "lon": 79.0808136
+            },
+            {
+              "lat": 21.1439589,
+              "lon": 79.0807662
+            },
+            {
+              "lat": 21.1441066,
+              "lon": 79.0807282
+            },
+            {
+              "lat": 21.144318,
+              "lon": 79.0807062
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 768598466,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.144318,
+              "lon": 79.0807062
+            },
+            {
+              "lat": 21.1448804,
+              "lon": 79.080683
+            },
+            {
+              "lat": 21.1454514,
+              "lon": 79.0806594
+            },
+            {
+              "lat": 21.1462434,
+              "lon": 79.0806309
+            },
+            {
+              "lat": 21.1466945,
+              "lon": 79.0806151
+            },
+            {
+              "lat": 21.1477099,
+              "lon": 79.0805756
+            },
+            {
+              "lat": 21.1480485,
+              "lon": 79.0805809
+            },
+            {
+              "lat": 21.1483774,
+              "lon": 79.0805997
+            },
+            {
+              "lat": 21.1486576,
+              "lon": 79.080644
+            },
+            {
+              "lat": 21.1498071,
+              "lon": 79.0808196
+            },
+            {
+              "lat": 21.1499335,
+              "lon": 79.0808318
+            },
+            {
+              "lat": 21.150126,
+              "lon": 79.0808505
+            },
+            {
+              "lat": 21.1505438,
+              "lon": 79.0808719
+            },
+            {
+              "lat": 21.1510228,
+              "lon": 79.0808679
+            },
+            {
+              "lat": 21.1515469,
+              "lon": 79.0808505
+            },
+            {
+              "lat": 21.1518946,
+              "lon": 79.0808773
+            },
+            {
+              "lat": 21.1522125,
+              "lon": 79.0809337
+            },
+            {
+              "lat": 21.1525273,
+              "lon": 79.0810042
+            },
+            {
+              "lat": 21.1538875,
+              "lon": 79.0813456
+            },
+            {
+              "lat": 21.1543687,
+              "lon": 79.0814575
+            },
+            {
+              "lat": 21.1548011,
+              "lon": 79.0815732
+            },
+            {
+              "lat": 21.1555467,
+              "lon": 79.08176
+            },
+            {
+              "lat": 21.1558086,
+              "lon": 79.0818272
+            },
+            {
+              "lat": 21.1561012,
+              "lon": 79.0819032
+            },
+            {
+              "lat": 21.1567311,
+              "lon": 79.0820695
+            },
+            {
+              "lat": 21.1572639,
+              "lon": 79.0821742
+            },
+            {
+              "lat": 21.1579493,
+              "lon": 79.0823257
+            },
+            {
+              "lat": 21.1583641,
+              "lon": 79.0824122
+            },
+            {
+              "lat": 21.1592259,
+              "lon": 79.082639
+            },
+            {
+              "lat": 21.1595502,
+              "lon": 79.0827347
+            },
+            {
+              "lat": 21.1599367,
+              "lon": 79.0828729
+            },
+            {
+              "lat": 21.1603331,
+              "lon": 79.0830325
+            },
+            {
+              "lat": 21.1607334,
+              "lon": 79.0832135
+            },
+            {
+              "lat": 21.1612461,
+              "lon": 79.083479
+            },
+            {
+              "lat": 21.1616376,
+              "lon": 79.0837084
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 1327500758,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.1616376,
+              "lon": 79.0837084
+            },
+            {
+              "lat": 21.1619265,
+              "lon": 79.083868
+            },
+            {
+              "lat": 21.1621729,
+              "lon": 79.0840061
+            },
+            {
+              "lat": 21.1623436,
+              "lon": 79.0841409
+            },
+            {
+              "lat": 21.1624674,
+              "lon": 79.0842468
+            },
+            {
+              "lat": 21.1625887,
+              "lon": 79.0843816
+            },
+            {
+              "lat": 21.1626669,
+              "lon": 79.0844715
+            },
+            {
+              "lat": 21.1628355,
+              "lon": 79.0846972
+            },
+            {
+              "lat": 21.1637262,
+              "lon": 79.0858998
+            },
+            {
+              "lat": 21.1639381,
+              "lon": 79.0862072
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 1327500760,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.1639381,
+              "lon": 79.0862072
+            },
+            {
+              "lat": 21.1640117,
+              "lon": 79.086314
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 724321806,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.1640117,
+              "lon": 79.086314
+            },
+            {
+              "lat": 21.164157,
+              "lon": 79.0865247
+            },
+            {
+              "lat": 21.1650907,
+              "lon": 79.0878604
+            },
+            {
+              "lat": 21.165922,
+              "lon": 79.0890638
+            },
+            {
+              "lat": 21.1660405,
+              "lon": 79.0892288
+            },
+            {
+              "lat": 21.1662191,
+              "lon": 79.0894536
+            },
+            {
+              "lat": 21.166404,
+              "lon": 79.0896717
+            },
+            {
+              "lat": 21.1666471,
+              "lon": 79.0899571
+            },
+            {
+              "lat": 21.166969,
+              "lon": 79.0902919
+            },
+            {
+              "lat": 21.1671315,
+              "lon": 79.0904469
+            },
+            {
+              "lat": 21.167451,
+              "lon": 79.0907328
+            },
+            {
+              "lat": 21.1675739,
+              "lon": 79.0908457
+            },
+            {
+              "lat": 21.1677234,
+              "lon": 79.090986
+            },
+            {
+              "lat": 21.1678693,
+              "lon": 79.0911463
+            },
+            {
+              "lat": 21.1679887,
+              "lon": 79.0912923
+            },
+            {
+              "lat": 21.1680532,
+              "lon": 79.0913967
+            },
+            {
+              "lat": 21.1682178,
+              "lon": 79.0916591
+            },
+            {
+              "lat": 21.1686553,
+              "lon": 79.0923831
+            },
+            {
+              "lat": 21.1690236,
+              "lon": 79.0929921
+            },
+            {
+              "lat": 21.1693484,
+              "lon": 79.0935286
+            },
+            {
+              "lat": 21.1696344,
+              "lon": 79.0940092
+            },
+            {
+              "lat": 21.169767,
+              "lon": 79.0942738
+            },
+            {
+              "lat": 21.1698501,
+              "lon": 79.0944597
+            },
+            {
+              "lat": 21.1699846,
+              "lon": 79.0948068
+            },
+            {
+              "lat": 21.1700456,
+              "lon": 79.0949765
+            },
+            {
+              "lat": 21.1702277,
+              "lon": 79.0954696
+            },
+            {
+              "lat": 21.1703736,
+              "lon": 79.0958736
+            },
+            {
+              "lat": 21.1704515,
+              "lon": 79.0960652
+            },
+            {
+              "lat": 21.1705408,
+              "lon": 79.0962861
+            },
+            {
+              "lat": 21.1707229,
+              "lon": 79.0965943
+            },
+            {
+              "lat": 21.1709148,
+              "lon": 79.0968523
+            },
+            {
+              "lat": 21.1712429,
+              "lon": 79.0972364
+            },
+            {
+              "lat": 21.1715105,
+              "lon": 79.0975524
+            },
+            {
+              "lat": 21.1718437,
+              "lon": 79.0979406
+            },
+            {
+              "lat": 21.1720855,
+              "lon": 79.0982526
+            },
+            {
+              "lat": 21.1723323,
+              "lon": 79.0986
+            },
+            {
+              "lat": 21.1734785,
+              "lon": 79.100389
+            },
+            {
+              "lat": 21.1736817,
+              "lon": 79.1007062
+            },
+            {
+              "lat": 21.1741976,
+              "lon": 79.1015338
+            },
+            {
+              "lat": 21.1758383,
+              "lon": 79.1041911
+            },
+            {
+              "lat": 21.1767854,
+              "lon": 79.1056967
+            },
+            {
+              "lat": 21.1777428,
+              "lon": 79.1071744
+            },
+            {
+              "lat": 21.1783392,
+              "lon": 79.1080546
+            },
+            {
+              "lat": 21.1786682,
+              "lon": 79.1085591
+            },
+            {
+              "lat": 21.1790466,
+              "lon": 79.1091897
+            },
+            {
+              "lat": 21.1794472,
+              "lon": 79.1098087
+            },
+            {
+              "lat": 21.1816967,
+              "lon": 79.1132731
+            },
+            {
+              "lat": 21.1832526,
+              "lon": 79.1157205
+            },
+            {
+              "lat": 21.1835114,
+              "lon": 79.1161564
+            },
+            {
+              "lat": 21.1837335,
+              "lon": 79.1165887
+            },
+            {
+              "lat": 21.1838365,
+              "lon": 79.1167894
+            },
+            {
+              "lat": 21.1841004,
+              "lon": 79.1173151
+            },
+            {
+              "lat": 21.1843155,
+              "lon": 79.1177456
+            },
+            {
+              "lat": 21.1844343,
+              "lon": 79.1179602
+            },
+            {
+              "lat": 21.1846444,
+              "lon": 79.1182861
+            },
+            {
+              "lat": 21.1849357,
+              "lon": 79.1186951
+            },
+            {
+              "lat": 21.1858323,
+              "lon": 79.1197452
+            }
+          ]
+        }
+      ],
+      "tags": {
+        "colour": "orange",
+        "duration": "00:38:50",
+        "from": "Khapri",
+        "interval": "00:15:00",
+        "name": "Orange Line: Khapri → Automotive Square",
+        "network": "Nagpur Metro",
+        "network:wikidata": "Q6959014",
+        "opening_hours": "06:00-22:00",
+        "operator": "MahaMetro",
+        "public_transport:version": "2",
+        "ref": "Orange Line",
+        "route": "subway",
+        "source:interval": "https://www.metrorailnagpur.com/time-table",
+        "to": "Automotive Square",
+        "type": "route",
+        "wikidata": "Q61996404",
+        "wikipedia": "en:Orange Line (Nagpur Metro)"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 9571556,
+      "bounds": {
+        "minlat": 21.0493391,
+        "minlon": 79.0478538,
+        "maxlat": 21.1858059,
+        "maxlon": 79.1197714
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 10967776593,
+          "role": "stop",
+          "lat": 21.1858059,
+          "lon": 79.1197714
+        },
+        {
+          "type": "node",
+          "ref": 10967776534,
+          "role": "stop",
+          "lat": 21.1794177,
+          "lon": 79.1098307
+        },
+        {
+          "type": "node",
+          "ref": 10967777922,
+          "role": "stop",
+          "lat": 21.1736519,
+          "lon": 79.1007278
+        },
+        {
+          "type": "node",
+          "ref": 10967776883,
+          "role": "stop",
+          "lat": 21.1686251,
+          "lon": 79.092404
+        },
+        {
+          "type": "node",
+          "ref": 10967776742,
+          "role": "stop",
+          "lat": 21.1616208,
+          "lon": 79.0837424
+        },
+        {
+          "type": "node",
+          "ref": 10967777178,
+          "role": "stop",
+          "lat": 21.1543605,
+          "lon": 79.081495
+        },
+        {
+          "type": "node",
+          "ref": 10967777103,
+          "role": "stop",
+          "lat": 21.1466957,
+          "lon": 79.0806536
+        },
+        {
+          "type": "node",
+          "ref": 10967777706,
+          "role": "stop",
+          "lat": 21.1417914,
+          "lon": 79.0823441
+        },
+        {
+          "type": "node",
+          "ref": 6831386964,
+          "role": "stop",
+          "lat": 21.1281974,
+          "lon": 79.0825728
+        },
+        {
+          "type": "node",
+          "ref": 6831386963,
+          "role": "stop",
+          "lat": 21.1276607,
+          "lon": 79.0757042
+        },
+        {
+          "type": "node",
+          "ref": 10967777120,
+          "role": "stop",
+          "lat": 21.118206,
+          "lon": 79.0721262
+        },
+        {
+          "type": "node",
+          "ref": 10967776818,
+          "role": "stop",
+          "lat": 21.1091164,
+          "lon": 79.0696847
+        },
+        {
+          "type": "node",
+          "ref": 10967776517,
+          "role": "stop",
+          "lat": 21.1036072,
+          "lon": 79.0682071
+        },
+        {
+          "type": "node",
+          "ref": 10967777291,
+          "role": "stop",
+          "lat": 21.0963466,
+          "lon": 79.066338
+        },
+        {
+          "type": "node",
+          "ref": 10967776987,
+          "role": "stop",
+          "lat": 21.0862115,
+          "lon": 79.0638058
+        },
+        {
+          "type": "node",
+          "ref": 10967777156,
+          "role": "stop",
+          "lat": 21.0790464,
+          "lon": 79.0605438
+        },
+        {
+          "type": "node",
+          "ref": 10967777985,
+          "role": "stop",
+          "lat": 21.0660298,
+          "lon": 79.0558483
+        },
+        {
+          "type": "node",
+          "ref": 10967776716,
+          "role": "stop",
+          "lat": 21.0493391,
+          "lon": 79.0478538
+        },
+        {
+          "type": "way",
+          "ref": 1180968939,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.1858059,
+              "lon": 79.1197714
+            },
+            {
+              "lat": 21.1849081,
+              "lon": 79.1187199
+            },
+            {
+              "lat": 21.1846153,
+              "lon": 79.1183087
+            },
+            {
+              "lat": 21.184404,
+              "lon": 79.117981
+            },
+            {
+              "lat": 21.1842842,
+              "lon": 79.1177645
+            },
+            {
+              "lat": 21.1840687,
+              "lon": 79.1173333
+            },
+            {
+              "lat": 21.1839448,
+              "lon": 79.1170865
+            },
+            {
+              "lat": 21.183805,
+              "lon": 79.1168078
+            },
+            {
+              "lat": 21.1834805,
+              "lon": 79.116176
+            },
+            {
+              "lat": 21.1832226,
+              "lon": 79.1157417
+            },
+            {
+              "lat": 21.1816671,
+              "lon": 79.1132949
+            },
+            {
+              "lat": 21.1814623,
+              "lon": 79.1129795
+            },
+            {
+              "lat": 21.1794177,
+              "lon": 79.1098307
+            },
+            {
+              "lat": 21.1790168,
+              "lon": 79.1092111
+            },
+            {
+              "lat": 21.1786383,
+              "lon": 79.1085805
+            },
+            {
+              "lat": 21.17831,
+              "lon": 79.1080769
+            },
+            {
+              "lat": 21.1777135,
+              "lon": 79.1071966
+            },
+            {
+              "lat": 21.1767544,
+              "lon": 79.1057164
+            },
+            {
+              "lat": 21.1758085,
+              "lon": 79.1042126
+            },
+            {
+              "lat": 21.1741677,
+              "lon": 79.1015551
+            },
+            {
+              "lat": 21.1736519,
+              "lon": 79.1007278
+            },
+            {
+              "lat": 21.1734488,
+              "lon": 79.1004108
+            },
+            {
+              "lat": 21.1723032,
+              "lon": 79.0986226
+            },
+            {
+              "lat": 21.1720573,
+              "lon": 79.0982766
+            },
+            {
+              "lat": 21.1718166,
+              "lon": 79.0979659
+            },
+            {
+              "lat": 21.171484,
+              "lon": 79.0975784
+            },
+            {
+              "lat": 21.1712164,
+              "lon": 79.0972624
+            },
+            {
+              "lat": 21.1708875,
+              "lon": 79.0968773
+            },
+            {
+              "lat": 21.1706936,
+              "lon": 79.0966167
+            },
+            {
+              "lat": 21.1705089,
+              "lon": 79.0963042
+            },
+            {
+              "lat": 21.1704185,
+              "lon": 79.0960805
+            },
+            {
+              "lat": 21.1703404,
+              "lon": 79.0958883
+            },
+            {
+              "lat": 21.1701943,
+              "lon": 79.0954837
+            },
+            {
+              "lat": 21.1700121,
+              "lon": 79.0949905
+            },
+            {
+              "lat": 21.1699512,
+              "lon": 79.0948211
+            },
+            {
+              "lat": 21.1698173,
+              "lon": 79.0944754
+            },
+            {
+              "lat": 21.169735,
+              "lon": 79.0942913
+            },
+            {
+              "lat": 21.1696034,
+              "lon": 79.0940287
+            },
+            {
+              "lat": 21.1693182,
+              "lon": 79.0935495
+            },
+            {
+              "lat": 21.1689935,
+              "lon": 79.0930131
+            },
+            {
+              "lat": 21.1686251,
+              "lon": 79.092404
+            },
+            {
+              "lat": 21.1681879,
+              "lon": 79.0916803
+            },
+            {
+              "lat": 21.1680233,
+              "lon": 79.0914181
+            },
+            {
+              "lat": 21.1679601,
+              "lon": 79.0913158
+            },
+            {
+              "lat": 21.1678429,
+              "lon": 79.0911725
+            },
+            {
+              "lat": 21.1676986,
+              "lon": 79.091014
+            },
+            {
+              "lat": 21.1675504,
+              "lon": 79.0908748
+            },
+            {
+              "lat": 21.1674278,
+              "lon": 79.0907623
+            },
+            {
+              "lat": 21.167108,
+              "lon": 79.0904761
+            },
+            {
+              "lat": 21.1669446,
+              "lon": 79.0903201
+            },
+            {
+              "lat": 21.1666214,
+              "lon": 79.089984
+            },
+            {
+              "lat": 21.1663774,
+              "lon": 79.0896976
+            },
+            {
+              "lat": 21.1661922,
+              "lon": 79.089479
+            },
+            {
+              "lat": 21.1660126,
+              "lon": 79.0892531
+            },
+            {
+              "lat": 21.1658933,
+              "lon": 79.0890871
+            },
+            {
+              "lat": 21.1650619,
+              "lon": 79.0878835
+            },
+            {
+              "lat": 21.1641282,
+              "lon": 79.0865477
+            },
+            {
+              "lat": 21.1639831,
+              "lon": 79.0863372
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 1327500761,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.1639831,
+              "lon": 79.0863372
+            },
+            {
+              "lat": 21.1639058,
+              "lon": 79.0862252
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 1327500759,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.1639058,
+              "lon": 79.0862252
+            },
+            {
+              "lat": 21.1636977,
+              "lon": 79.0859233
+            },
+            {
+              "lat": 21.1628074,
+              "lon": 79.0847212
+            },
+            {
+              "lat": 21.1626397,
+              "lon": 79.0844967
+            },
+            {
+              "lat": 21.1625627,
+              "lon": 79.0844081
+            },
+            {
+              "lat": 21.1624432,
+              "lon": 79.0842754
+            },
+            {
+              "lat": 21.1623217,
+              "lon": 79.0841715
+            },
+            {
+              "lat": 21.1621538,
+              "lon": 79.0840389
+            },
+            {
+              "lat": 21.16191,
+              "lon": 79.0839022
+            },
+            {
+              "lat": 21.1616208,
+              "lon": 79.0837424
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 1180968910,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.1616208,
+              "lon": 79.0837424
+            },
+            {
+              "lat": 21.1612297,
+              "lon": 79.0835133
+            },
+            {
+              "lat": 21.1607186,
+              "lon": 79.0832486
+            },
+            {
+              "lat": 21.1603198,
+              "lon": 79.0830683
+            },
+            {
+              "lat": 21.1599247,
+              "lon": 79.0829092
+            },
+            {
+              "lat": 21.1595398,
+              "lon": 79.0827716
+            },
+            {
+              "lat": 21.1592168,
+              "lon": 79.0826763
+            },
+            {
+              "lat": 21.1583564,
+              "lon": 79.0824498
+            },
+            {
+              "lat": 21.1579423,
+              "lon": 79.0823635
+            },
+            {
+              "lat": 21.1572571,
+              "lon": 79.082212
+            },
+            {
+              "lat": 21.1567236,
+              "lon": 79.0821072
+            },
+            {
+              "lat": 21.1560927,
+              "lon": 79.0819406
+            },
+            {
+              "lat": 21.1558002,
+              "lon": 79.0818647
+            },
+            {
+              "lat": 21.1555384,
+              "lon": 79.0817975
+            },
+            {
+              "lat": 21.1547927,
+              "lon": 79.0816106
+            },
+            {
+              "lat": 21.1543605,
+              "lon": 79.081495
+            },
+            {
+              "lat": 21.1538796,
+              "lon": 79.0813832
+            },
+            {
+              "lat": 21.1525196,
+              "lon": 79.0810418
+            },
+            {
+              "lat": 21.1522059,
+              "lon": 79.0809716
+            },
+            {
+              "lat": 21.1518903,
+              "lon": 79.0809156
+            },
+            {
+              "lat": 21.1515461,
+              "lon": 79.080889
+            },
+            {
+              "lat": 21.1510235,
+              "lon": 79.0809064
+            },
+            {
+              "lat": 21.150543,
+              "lon": 79.0809105
+            },
+            {
+              "lat": 21.1501235,
+              "lon": 79.0808889
+            },
+            {
+              "lat": 21.1498029,
+              "lon": 79.0808579
+            },
+            {
+              "lat": 21.1486524,
+              "lon": 79.0806821
+            },
+            {
+              "lat": 21.1486095,
+              "lon": 79.0806753
+            },
+            {
+              "lat": 21.1484846,
+              "lon": 79.0806556
+            },
+            {
+              "lat": 21.1483738,
+              "lon": 79.0806381
+            },
+            {
+              "lat": 21.1481021,
+              "lon": 79.0806225
+            },
+            {
+              "lat": 21.1480473,
+              "lon": 79.0806194
+            },
+            {
+              "lat": 21.1477103,
+              "lon": 79.0806142
+            },
+            {
+              "lat": 21.1466957,
+              "lon": 79.0806536
+            },
+            {
+              "lat": 21.1462445,
+              "lon": 79.0806694
+            },
+            {
+              "lat": 21.1454526,
+              "lon": 79.0806979
+            },
+            {
+              "lat": 21.1452194,
+              "lon": 79.0807075
+            },
+            {
+              "lat": 21.1443204,
+              "lon": 79.0807447
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 1180968880,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.1443204,
+              "lon": 79.0807447
+            },
+            {
+              "lat": 21.1441126,
+              "lon": 79.0807663
+            },
+            {
+              "lat": 21.143969,
+              "lon": 79.0808032
+            },
+            {
+              "lat": 21.1438444,
+              "lon": 79.0808496
+            },
+            {
+              "lat": 21.1437349,
+              "lon": 79.0808986
+            },
+            {
+              "lat": 21.1435767,
+              "lon": 79.0809964
+            },
+            {
+              "lat": 21.1434612,
+              "lon": 79.0810809
+            },
+            {
+              "lat": 21.1433246,
+              "lon": 79.0812096
+            },
+            {
+              "lat": 21.1431977,
+              "lon": 79.0813464
+            },
+            {
+              "lat": 21.1430851,
+              "lon": 79.0814804
+            },
+            {
+              "lat": 21.1429388,
+              "lon": 79.0816387
+            },
+            {
+              "lat": 21.1427521,
+              "lon": 79.0818211
+            },
+            {
+              "lat": 21.1425805,
+              "lon": 79.081942
+            },
+            {
+              "lat": 21.1421216,
+              "lon": 79.0821921
+            },
+            {
+              "lat": 21.1417914,
+              "lon": 79.0823441
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 1180968933,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.1417914,
+              "lon": 79.0823441
+            },
+            {
+              "lat": 21.1412004,
+              "lon": 79.0826131
+            },
+            {
+              "lat": 21.139826,
+              "lon": 79.0832325
+            },
+            {
+              "lat": 21.1396215,
+              "lon": 79.083344
+            },
+            {
+              "lat": 21.1395332,
+              "lon": 79.0834037
+            },
+            {
+              "lat": 21.1394494,
+              "lon": 79.0834708
+            },
+            {
+              "lat": 21.1393707,
+              "lon": 79.0835448
+            },
+            {
+              "lat": 21.1392977,
+              "lon": 79.0836251
+            },
+            {
+              "lat": 21.1392306,
+              "lon": 79.0837115
+            },
+            {
+              "lat": 21.1391804,
+              "lon": 79.0837866
+            },
+            {
+              "lat": 21.1391346,
+              "lon": 79.0838652
+            },
+            {
+              "lat": 21.1390938,
+              "lon": 79.0839468
+            },
+            {
+              "lat": 21.1390224,
+              "lon": 79.0841167
+            },
+            {
+              "lat": 21.1389188,
+              "lon": 79.0844272
+            },
+            {
+              "lat": 21.1387734,
+              "lon": 79.0848764
+            },
+            {
+              "lat": 21.1387242,
+              "lon": 79.0849981
+            },
+            {
+              "lat": 21.1386807,
+              "lon": 79.0850905
+            },
+            {
+              "lat": 21.1386242,
+              "lon": 79.0851866
+            },
+            {
+              "lat": 21.1385603,
+              "lon": 79.0852771
+            },
+            {
+              "lat": 21.1384894,
+              "lon": 79.0853615
+            },
+            {
+              "lat": 21.1384121,
+              "lon": 79.085439
+            },
+            {
+              "lat": 21.1383289,
+              "lon": 79.0855092
+            },
+            {
+              "lat": 21.1382404,
+              "lon": 79.0855715
+            },
+            {
+              "lat": 21.1381473,
+              "lon": 79.0856255
+            },
+            {
+              "lat": 21.1380503,
+              "lon": 79.0856707
+            },
+            {
+              "lat": 21.1379546,
+              "lon": 79.0857055
+            },
+            {
+              "lat": 21.1378566,
+              "lon": 79.0857318
+            },
+            {
+              "lat": 21.1377569,
+              "lon": 79.0857494
+            },
+            {
+              "lat": 21.1376562,
+              "lon": 79.0857583
+            },
+            {
+              "lat": 21.1375552,
+              "lon": 79.0857584
+            },
+            {
+              "lat": 21.1374545,
+              "lon": 79.0857496
+            },
+            {
+              "lat": 21.1373548,
+              "lon": 79.0857321
+            },
+            {
+              "lat": 21.1372565,
+              "lon": 79.0857058
+            },
+            {
+              "lat": 21.1370664,
+              "lon": 79.0856334
+            },
+            {
+              "lat": 21.1363201,
+              "lon": 79.0852475
+            },
+            {
+              "lat": 21.1351738,
+              "lon": 79.0846681
+            },
+            {
+              "lat": 21.134239,
+              "lon": 79.0841855
+            },
+            {
+              "lat": 21.1337505,
+              "lon": 79.083945
+            },
+            {
+              "lat": 21.1334796,
+              "lon": 79.0838182
+            },
+            {
+              "lat": 21.1331284,
+              "lon": 79.0836631
+            },
+            {
+              "lat": 21.1328065,
+              "lon": 79.0835335
+            },
+            {
+              "lat": 21.1323518,
+              "lon": 79.0833641
+            },
+            {
+              "lat": 21.1319425,
+              "lon": 79.0832241
+            },
+            {
+              "lat": 21.1316091,
+              "lon": 79.0831258
+            },
+            {
+              "lat": 21.1310388,
+              "lon": 79.0829677
+            },
+            {
+              "lat": 21.1304734,
+              "lon": 79.0828403
+            },
+            {
+              "lat": 21.1304225,
+              "lon": 79.0828276
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 729154431,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.1304225,
+              "lon": 79.0828276
+            },
+            {
+              "lat": 21.1301257,
+              "lon": 79.0827729
+            },
+            {
+              "lat": 21.1298568,
+              "lon": 79.0827284
+            },
+            {
+              "lat": 21.129396,
+              "lon": 79.0826679
+            },
+            {
+              "lat": 21.1291644,
+              "lon": 79.0826429
+            },
+            {
+              "lat": 21.1289789,
+              "lon": 79.0826234
+            },
+            {
+              "lat": 21.1281974,
+              "lon": 79.0825728
+            },
+            {
+              "lat": 21.1274706,
+              "lon": 79.0824999
+            },
+            {
+              "lat": 21.1273352,
+              "lon": 79.0824838
+            },
+            {
+              "lat": 21.127235,
+              "lon": 79.0824678
+            },
+            {
+              "lat": 21.1271357,
+              "lon": 79.082442
+            },
+            {
+              "lat": 21.1270389,
+              "lon": 79.0824066
+            },
+            {
+              "lat": 21.1269455,
+              "lon": 79.082362
+            },
+            {
+              "lat": 21.1268562,
+              "lon": 79.0823086
+            },
+            {
+              "lat": 21.1267718,
+              "lon": 79.0822467
+            },
+            {
+              "lat": 21.126693,
+              "lon": 79.0821769
+            },
+            {
+              "lat": 21.1266203,
+              "lon": 79.0820998
+            },
+            {
+              "lat": 21.1265544,
+              "lon": 79.082016
+            },
+            {
+              "lat": 21.1264959,
+              "lon": 79.0819262
+            },
+            {
+              "lat": 21.1264451,
+              "lon": 79.081831
+            },
+            {
+              "lat": 21.1264024,
+              "lon": 79.0817308
+            },
+            {
+              "lat": 21.1263683,
+              "lon": 79.0816268
+            },
+            {
+              "lat": 21.1263431,
+              "lon": 79.08152
+            },
+            {
+              "lat": 21.1263271,
+              "lon": 79.0814111
+            },
+            {
+              "lat": 21.1263204,
+              "lon": 79.0813012
+            },
+            {
+              "lat": 21.126323,
+              "lon": 79.081191
+            },
+            {
+              "lat": 21.1263349,
+              "lon": 79.0810815
+            },
+            {
+              "lat": 21.126356,
+              "lon": 79.0809737
+            },
+            {
+              "lat": 21.1263862,
+              "lon": 79.0808683
+            },
+            {
+              "lat": 21.1264251,
+              "lon": 79.0807664
+            },
+            {
+              "lat": 21.1264725,
+              "lon": 79.0806686
+            },
+            {
+              "lat": 21.126528,
+              "lon": 79.0805758
+            },
+            {
+              "lat": 21.1265913,
+              "lon": 79.0804886
+            },
+            {
+              "lat": 21.1267044,
+              "lon": 79.0803628
+            },
+            {
+              "lat": 21.1286675,
+              "lon": 79.0785906
+            },
+            {
+              "lat": 21.1287422,
+              "lon": 79.0785228
+            },
+            {
+              "lat": 21.1288262,
+              "lon": 79.0784424
+            },
+            {
+              "lat": 21.1289033,
+              "lon": 79.0783558
+            },
+            {
+              "lat": 21.1289737,
+              "lon": 79.078263
+            },
+            {
+              "lat": 21.1290371,
+              "lon": 79.0781645
+            },
+            {
+              "lat": 21.129093,
+              "lon": 79.0780609
+            },
+            {
+              "lat": 21.129141,
+              "lon": 79.0779529
+            },
+            {
+              "lat": 21.1291809,
+              "lon": 79.0778411
+            },
+            {
+              "lat": 21.1292125,
+              "lon": 79.0777263
+            },
+            {
+              "lat": 21.1292354,
+              "lon": 79.0776092
+            },
+            {
+              "lat": 21.1292496,
+              "lon": 79.0774905
+            },
+            {
+              "lat": 21.1292549,
+              "lon": 79.077371
+            },
+            {
+              "lat": 21.1292516,
+              "lon": 79.0772536
+            },
+            {
+              "lat": 21.1292397,
+              "lon": 79.0771368
+            },
+            {
+              "lat": 21.1292194,
+              "lon": 79.0770213
+            },
+            {
+              "lat": 21.1291908,
+              "lon": 79.0769079
+            },
+            {
+              "lat": 21.129154,
+              "lon": 79.0767972
+            },
+            {
+              "lat": 21.1291093,
+              "lon": 79.0766899
+            },
+            {
+              "lat": 21.1290569,
+              "lon": 79.0765867
+            },
+            {
+              "lat": 21.1289972,
+              "lon": 79.0764882
+            },
+            {
+              "lat": 21.1289305,
+              "lon": 79.0763949
+            },
+            {
+              "lat": 21.1288573,
+              "lon": 79.0763075
+            },
+            {
+              "lat": 21.1287779,
+              "lon": 79.0762265
+            },
+            {
+              "lat": 21.1286929,
+              "lon": 79.0761523
+            },
+            {
+              "lat": 21.1286027,
+              "lon": 79.0760855
+            },
+            {
+              "lat": 21.128508,
+              "lon": 79.0760264
+            },
+            {
+              "lat": 21.1284088,
+              "lon": 79.0759751
+            },
+            {
+              "lat": 21.1282847,
+              "lon": 79.0759182
+            },
+            {
+              "lat": 21.1276607,
+              "lon": 79.0757042
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 1180968984,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.1276607,
+              "lon": 79.0757042
+            },
+            {
+              "lat": 21.126485,
+              "lon": 79.0753091
+            },
+            {
+              "lat": 21.1259055,
+              "lon": 79.0751132
+            },
+            {
+              "lat": 21.1257282,
+              "lon": 79.07504
+            },
+            {
+              "lat": 21.1236398,
+              "lon": 79.0742311
+            },
+            {
+              "lat": 21.121752,
+              "lon": 79.0734599
+            },
+            {
+              "lat": 21.1206573,
+              "lon": 79.0730209
+            },
+            {
+              "lat": 21.1200342,
+              "lon": 79.0727714
+            },
+            {
+              "lat": 21.1189895,
+              "lon": 79.0723793
+            },
+            {
+              "lat": 21.118206,
+              "lon": 79.0721262
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 1180968897,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.118206,
+              "lon": 79.0721262
+            },
+            {
+              "lat": 21.1133291,
+              "lon": 79.0707888
+            },
+            {
+              "lat": 21.1108437,
+              "lon": 79.0701577
+            },
+            {
+              "lat": 21.1095837,
+              "lon": 79.0698133
+            },
+            {
+              "lat": 21.1091164,
+              "lon": 79.0696847
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 1180968924,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.1091164,
+              "lon": 79.0696847
+            },
+            {
+              "lat": 21.1076322,
+              "lon": 79.0692778
+            },
+            {
+              "lat": 21.1045686,
+              "lon": 79.0683779
+            },
+            {
+              "lat": 21.1036072,
+              "lon": 79.0682071
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 1180968945,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.1036072,
+              "lon": 79.0682071
+            },
+            {
+              "lat": 21.1031113,
+              "lon": 79.0680689
+            },
+            {
+              "lat": 21.101707,
+              "lon": 79.0677182
+            },
+            {
+              "lat": 21.0963466,
+              "lon": 79.066338
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 1180968973,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.0963466,
+              "lon": 79.066338
+            },
+            {
+              "lat": 21.0951609,
+              "lon": 79.0660315
+            },
+            {
+              "lat": 21.08875,
+              "lon": 79.0644371
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 1274890489,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.08875,
+              "lon": 79.0644371
+            },
+            {
+              "lat": 21.0862115,
+              "lon": 79.0638058
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 1180968883,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.0862115,
+              "lon": 79.0638058
+            },
+            {
+              "lat": 21.0846758,
+              "lon": 79.0634283
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 1180968913,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.0846758,
+              "lon": 79.0634283
+            },
+            {
+              "lat": 21.0838764,
+              "lon": 79.063224
+            },
+            {
+              "lat": 21.083537,
+              "lon": 79.0631172
+            },
+            {
+              "lat": 21.0833531,
+              "lon": 79.0630343
+            },
+            {
+              "lat": 21.0832392,
+              "lon": 79.0629781
+            },
+            {
+              "lat": 21.0830748,
+              "lon": 79.0628688
+            },
+            {
+              "lat": 21.0828931,
+              "lon": 79.0627284
+            },
+            {
+              "lat": 21.0827286,
+              "lon": 79.0625649
+            },
+            {
+              "lat": 21.0825562,
+              "lon": 79.0623889
+            },
+            {
+              "lat": 21.0823295,
+              "lon": 79.0621743
+            },
+            {
+              "lat": 21.0821145,
+              "lon": 79.0620025
+            },
+            {
+              "lat": 21.0818262,
+              "lon": 79.0618406
+            },
+            {
+              "lat": 21.0795997,
+              "lon": 79.0608153
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 1180968936,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.0795997,
+              "lon": 79.0608153
+            },
+            {
+              "lat": 21.0790464,
+              "lon": 79.0605438
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 1180968956,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.0790464,
+              "lon": 79.0605438
+            },
+            {
+              "lat": 21.0781082,
+              "lon": 79.0600969
+            },
+            {
+              "lat": 21.0779439,
+              "lon": 79.060013
+            },
+            {
+              "lat": 21.0776361,
+              "lon": 79.059888
+            },
+            {
+              "lat": 21.0773123,
+              "lon": 79.0597829
+            },
+            {
+              "lat": 21.0768189,
+              "lon": 79.0596761
+            },
+            {
+              "lat": 21.0764681,
+              "lon": 79.0596105
+            },
+            {
+              "lat": 21.0752458,
+              "lon": 79.0594108
+            },
+            {
+              "lat": 21.0735251,
+              "lon": 79.0591262
+            },
+            {
+              "lat": 21.073191,
+              "lon": 79.0590449
+            },
+            {
+              "lat": 21.0723887,
+              "lon": 79.058716
+            },
+            {
+              "lat": 21.0711562,
+              "lon": 79.0580677
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 1180968989,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.0711562,
+              "lon": 79.0580677
+            },
+            {
+              "lat": 21.0709024,
+              "lon": 79.0579414
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 1180968901,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.0709024,
+              "lon": 79.0579414
+            },
+            {
+              "lat": 21.0703663,
+              "lon": 79.0577227
+            },
+            {
+              "lat": 21.0698684,
+              "lon": 79.0575029
+            },
+            {
+              "lat": 21.0683391,
+              "lon": 79.0568967
+            },
+            {
+              "lat": 21.0668658,
+              "lon": 79.056245
+            },
+            {
+              "lat": 21.0660298,
+              "lon": 79.0558483
+            },
+            {
+              "lat": 21.0657064,
+              "lon": 79.0556615
+            },
+            {
+              "lat": 21.0612906,
+              "lon": 79.0537142
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 1180968927,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.0612906,
+              "lon": 79.0537142
+            },
+            {
+              "lat": 21.0608798,
+              "lon": 79.0535464
+            },
+            {
+              "lat": 21.0573557,
+              "lon": 79.0519259
+            },
+            {
+              "lat": 21.0560421,
+              "lon": 79.0513242
+            },
+            {
+              "lat": 21.0557933,
+              "lon": 79.0511923
+            },
+            {
+              "lat": 21.0542361,
+              "lon": 79.0503854
+            },
+            {
+              "lat": 21.053462,
+              "lon": 79.0500157
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 1180968946,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.053462,
+              "lon": 79.0500157
+            },
+            {
+              "lat": 21.0527489,
+              "lon": 79.049681
+            },
+            {
+              "lat": 21.0524989,
+              "lon": 79.0495666
+            },
+            {
+              "lat": 21.052271,
+              "lon": 79.0494416
+            },
+            {
+              "lat": 21.0518879,
+              "lon": 79.0492102
+            },
+            {
+              "lat": 21.0513353,
+              "lon": 79.0488249
+            },
+            {
+              "lat": 21.0511693,
+              "lon": 79.0487185
+            },
+            {
+              "lat": 21.0508865,
+              "lon": 79.0485548
+            },
+            {
+              "lat": 21.050298,
+              "lon": 79.0482906
+            },
+            {
+              "lat": 21.0496092,
+              "lon": 79.0479813
+            },
+            {
+              "lat": 21.0493391,
+              "lon": 79.0478538
+            }
+          ]
+        }
+      ],
+      "tags": {
+        "colour": "orange",
+        "duration": "00:38:50",
+        "from": "Automotive Square",
+        "interval": "00:15:00",
+        "name": "Orange Line: Automotive Square → Khapri",
+        "network": "Nagpur Metro",
+        "network:wikidata": "Q6959014",
+        "opening_hours": "06:00-22:00",
+        "operator": "MahaMetro",
+        "public_transport:version": "2",
+        "ref": "Orange Line",
+        "route": "subway",
+        "source:interval": "https://www.metrorailnagpur.com/time-table",
+        "to": "Khapri",
+        "type": "route",
+        "wikidata": "Q61996404",
+        "wikipedia": "en:Orange Line (Nagpur Metro)"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 10659361,
+      "bounds": {
+        "minlat": 21.1107887,
+        "minlon": 79.0017637,
+        "maxlat": 21.1534099,
+        "maxlon": 79.1488146
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 6447240194,
+          "role": "stop",
+          "lat": 21.1501925,
+          "lon": 79.1488146
+        },
+        {
+          "type": "node",
+          "ref": 10265568624,
+          "role": "stop",
+          "lat": 21.1479989,
+          "lon": 79.1363999
+        },
+        {
+          "type": "node",
+          "ref": 10265568623,
+          "role": "stop",
+          "lat": 21.1482961,
+          "lon": 79.1294926
+        },
+        {
+          "type": "node",
+          "ref": 3198490274,
+          "role": "stop",
+          "lat": 21.148803,
+          "lon": 79.1182308
+        },
+        {
+          "type": "node",
+          "ref": 10265546808,
+          "role": "stop",
+          "lat": 21.1496361,
+          "lon": 79.1103918
+        },
+        {
+          "type": "node",
+          "ref": 10265546803,
+          "role": "stop",
+          "lat": 21.1510455,
+          "lon": 79.1029233
+        },
+        {
+          "type": "node",
+          "ref": 2621887787,
+          "role": "stop",
+          "lat": 21.1529225,
+          "lon": 79.0948969
+        },
+        {
+          "type": "node",
+          "ref": 6447240202,
+          "role": "stop",
+          "lat": 21.151374,
+          "lon": 79.090455
+        },
+        {
+          "type": "node",
+          "ref": 7944687375,
+          "role": "stop",
+          "lat": 21.1459896,
+          "lon": 79.0897729
+        },
+        {
+          "type": "node",
+          "ref": 7175548063,
+          "role": "stop",
+          "lat": 21.1415382,
+          "lon": 79.0828708
+        },
+        {
+          "type": "node",
+          "ref": 7156023723,
+          "role": "stop",
+          "lat": 21.1406996,
+          "lon": 79.077835
+        },
+        {
+          "type": "node",
+          "ref": 7175548062,
+          "role": "stop",
+          "lat": 21.138297,
+          "lon": 79.0701002
+        },
+        {
+          "type": "node",
+          "ref": 7944611752,
+          "role": "stop",
+          "lat": 21.1361949,
+          "lon": 79.0616484
+        },
+        {
+          "type": "node",
+          "ref": 7944611751,
+          "role": "stop",
+          "lat": 21.1329009,
+          "lon": 79.0548081
+        },
+        {
+          "type": "node",
+          "ref": 7944611753,
+          "role": "stop",
+          "lat": 21.128688,
+          "lon": 79.0457636
+        },
+        {
+          "type": "node",
+          "ref": 7175548061,
+          "role": "stop",
+          "lat": 21.1232982,
+          "lon": 79.0420526
+        },
+        {
+          "type": "node",
+          "ref": 7944611754,
+          "role": "stop",
+          "lat": 21.1215036,
+          "lon": 79.0294167
+        },
+        {
+          "type": "node",
+          "ref": 7175548060,
+          "role": "stop",
+          "lat": 21.1187675,
+          "lon": 79.0194769
+        },
+        {
+          "type": "node",
+          "ref": 7944611755,
+          "role": "stop",
+          "lat": 21.1161845,
+          "lon": 79.0126158
+        },
+        {
+          "type": "node",
+          "ref": 7175548059,
+          "role": "stop",
+          "lat": 21.1107887,
+          "lon": 79.0017637
+        },
+        {
+          "type": "way",
+          "ref": 503689822,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.1501925,
+              "lon": 79.1488146
+            },
+            {
+              "lat": 21.149875,
+              "lon": 79.1484647
+            },
+            {
+              "lat": 21.1497087,
+              "lon": 79.148256
+            },
+            {
+              "lat": 21.1493372,
+              "lon": 79.1477468
+            },
+            {
+              "lat": 21.1489896,
+              "lon": 79.1472195
+            },
+            {
+              "lat": 21.1487252,
+              "lon": 79.1467899
+            },
+            {
+              "lat": 21.1485784,
+              "lon": 79.1465339
+            },
+            {
+              "lat": 21.1484557,
+              "lon": 79.1462975
+            },
+            {
+              "lat": 21.148301,
+              "lon": 79.1458967
+            },
+            {
+              "lat": 21.1481698,
+              "lon": 79.1453609
+            },
+            {
+              "lat": 21.1481302,
+              "lon": 79.145047
+            },
+            {
+              "lat": 21.1480785,
+              "lon": 79.1436061
+            },
+            {
+              "lat": 21.1479824,
+              "lon": 79.1414965
+            },
+            {
+              "lat": 21.1479509,
+              "lon": 79.1400442
+            },
+            {
+              "lat": 21.1479232,
+              "lon": 79.1380342
+            },
+            {
+              "lat": 21.1479426,
+              "lon": 79.1374483
+            },
+            {
+              "lat": 21.1479989,
+              "lon": 79.1363999
+            },
+            {
+              "lat": 21.1480589,
+              "lon": 79.1349142
+            },
+            {
+              "lat": 21.1482059,
+              "lon": 79.1313032
+            },
+            {
+              "lat": 21.1482961,
+              "lon": 79.1294926
+            },
+            {
+              "lat": 21.1484308,
+              "lon": 79.125908
+            },
+            {
+              "lat": 21.148803,
+              "lon": 79.1182308
+            },
+            {
+              "lat": 21.1488251,
+              "lon": 79.1177804
+            },
+            {
+              "lat": 21.1488375,
+              "lon": 79.1174987
+            },
+            {
+              "lat": 21.1488632,
+              "lon": 79.1170265
+            },
+            {
+              "lat": 21.1488729,
+              "lon": 79.1166557
+            },
+            {
+              "lat": 21.1488968,
+              "lon": 79.1163058
+            },
+            {
+              "lat": 21.1489478,
+              "lon": 79.115919
+            },
+            {
+              "lat": 21.1490215,
+              "lon": 79.1153338
+            },
+            {
+              "lat": 21.1490507,
+              "lon": 79.1150749
+            },
+            {
+              "lat": 21.1490843,
+              "lon": 79.1146301
+            },
+            {
+              "lat": 21.1491311,
+              "lon": 79.1141958
+            },
+            {
+              "lat": 21.1491771,
+              "lon": 79.1138828
+            },
+            {
+              "lat": 21.1492771,
+              "lon": 79.1133063
+            },
+            {
+              "lat": 21.1493455,
+              "lon": 79.1129947
+            },
+            {
+              "lat": 21.1494381,
+              "lon": 79.1126011
+            },
+            {
+              "lat": 21.1494975,
+              "lon": 79.1123684
+            },
+            {
+              "lat": 21.14953,
+              "lon": 79.1121981
+            },
+            {
+              "lat": 21.1495594,
+              "lon": 79.1119862
+            },
+            {
+              "lat": 21.1495757,
+              "lon": 79.1118166
+            },
+            {
+              "lat": 21.1495863,
+              "lon": 79.1115517
+            },
+            {
+              "lat": 21.1495946,
+              "lon": 79.1113044
+            },
+            {
+              "lat": 21.1496361,
+              "lon": 79.1103918
+            },
+            {
+              "lat": 21.1496764,
+              "lon": 79.1095162
+            },
+            {
+              "lat": 21.1497157,
+              "lon": 79.1091934
+            },
+            {
+              "lat": 21.1497458,
+              "lon": 79.109019
+            },
+            {
+              "lat": 21.1497927,
+              "lon": 79.1087563
+            },
+            {
+              "lat": 21.1499749,
+              "lon": 79.107936
+            },
+            {
+              "lat": 21.1502181,
+              "lon": 79.106964
+            },
+            {
+              "lat": 21.1504313,
+              "lon": 79.1061011
+            },
+            {
+              "lat": 21.1505011,
+              "lon": 79.1058052
+            },
+            {
+              "lat": 21.1505779,
+              "lon": 79.1054351
+            },
+            {
+              "lat": 21.1506703,
+              "lon": 79.1050083
+            },
+            {
+              "lat": 21.1507707,
+              "lon": 79.1045916
+            },
+            {
+              "lat": 21.1508797,
+              "lon": 79.1040774
+            },
+            {
+              "lat": 21.1509407,
+              "lon": 79.1037085
+            },
+            {
+              "lat": 21.1509867,
+              "lon": 79.1034283
+            },
+            {
+              "lat": 21.1510455,
+              "lon": 79.1029233
+            },
+            {
+              "lat": 21.1511096,
+              "lon": 79.1023809
+            },
+            {
+              "lat": 21.1512547,
+              "lon": 79.1012941
+            },
+            {
+              "lat": 21.1513336,
+              "lon": 79.1008747
+            },
+            {
+              "lat": 21.1514574,
+              "lon": 79.1003716
+            },
+            {
+              "lat": 21.1517107,
+              "lon": 79.0994355
+            },
+            {
+              "lat": 21.1518602,
+              "lon": 79.0988213
+            },
+            {
+              "lat": 21.1522053,
+              "lon": 79.0975606
+            },
+            {
+              "lat": 21.1523858,
+              "lon": 79.0970463
+            },
+            {
+              "lat": 21.1524906,
+              "lon": 79.0967188
+            },
+            {
+              "lat": 21.1525698,
+              "lon": 79.0964312
+            },
+            {
+              "lat": 21.1526489,
+              "lon": 79.0961143
+            },
+            {
+              "lat": 21.1527594,
+              "lon": 79.0956956
+            },
+            {
+              "lat": 21.1528062,
+              "lon": 79.0954829
+            },
+            {
+              "lat": 21.1528349,
+              "lon": 79.0953734
+            },
+            {
+              "lat": 21.1529225,
+              "lon": 79.0948969
+            },
+            {
+              "lat": 21.1530446,
+              "lon": 79.0944139
+            },
+            {
+              "lat": 21.1532722,
+              "lon": 79.0935135
+            },
+            {
+              "lat": 21.1533047,
+              "lon": 79.0933725
+            },
+            {
+              "lat": 21.1533317,
+              "lon": 79.0932337
+            },
+            {
+              "lat": 21.1533564,
+              "lon": 79.093091
+            },
+            {
+              "lat": 21.1533727,
+              "lon": 79.0929509
+            },
+            {
+              "lat": 21.1533892,
+              "lon": 79.0927732
+            },
+            {
+              "lat": 21.1533973,
+              "lon": 79.0925232
+            },
+            {
+              "lat": 21.1534099,
+              "lon": 79.0918395
+            },
+            {
+              "lat": 21.1534038,
+              "lon": 79.0917143
+            },
+            {
+              "lat": 21.1533959,
+              "lon": 79.0916125
+            },
+            {
+              "lat": 21.1533799,
+              "lon": 79.0915118
+            },
+            {
+              "lat": 21.1533559,
+              "lon": 79.091413
+            },
+            {
+              "lat": 21.153324,
+              "lon": 79.0913168
+            },
+            {
+              "lat": 21.1532844,
+              "lon": 79.0912238
+            },
+            {
+              "lat": 21.1532375,
+              "lon": 79.0911349
+            },
+            {
+              "lat": 21.1531832,
+              "lon": 79.09105
+            },
+            {
+              "lat": 21.1531221,
+              "lon": 79.0909705
+            },
+            {
+              "lat": 21.1530549,
+              "lon": 79.090897
+            },
+            {
+              "lat": 21.1529819,
+              "lon": 79.0908301
+            },
+            {
+              "lat": 21.1529038,
+              "lon": 79.0907702
+            },
+            {
+              "lat": 21.1528211,
+              "lon": 79.0907179
+            },
+            {
+              "lat": 21.1527345,
+              "lon": 79.0906734
+            },
+            {
+              "lat": 21.1526446,
+              "lon": 79.0906372
+            },
+            {
+              "lat": 21.1525521,
+              "lon": 79.0906096
+            },
+            {
+              "lat": 21.1523861,
+              "lon": 79.0905759
+            },
+            {
+              "lat": 21.1518923,
+              "lon": 79.0905053
+            },
+            {
+              "lat": 21.151374,
+              "lon": 79.090455
+            },
+            {
+              "lat": 21.1501916,
+              "lon": 79.0902758
+            },
+            {
+              "lat": 21.1489937,
+              "lon": 79.0901094
+            },
+            {
+              "lat": 21.1482671,
+              "lon": 79.0900121
+            },
+            {
+              "lat": 21.1472648,
+              "lon": 79.0898889
+            },
+            {
+              "lat": 21.1468086,
+              "lon": 79.0898433
+            },
+            {
+              "lat": 21.1463912,
+              "lon": 79.0897943
+            },
+            {
+              "lat": 21.1460292,
+              "lon": 79.0897573
+            },
+            {
+              "lat": 21.145505,
+              "lon": 79.0897038
+            },
+            {
+              "lat": 21.1453336,
+              "lon": 79.0896796
+            },
+            {
+              "lat": 21.1452035,
+              "lon": 79.0896562
+            },
+            {
+              "lat": 21.1451147,
+              "lon": 79.0896287
+            },
+            {
+              "lat": 21.1450272,
+              "lon": 79.0895998
+            },
+            {
+              "lat": 21.1449527,
+              "lon": 79.089565
+            },
+            {
+              "lat": 21.1448896,
+              "lon": 79.0895368
+            },
+            {
+              "lat": 21.1447983,
+              "lon": 79.0894877
+            },
+            {
+              "lat": 21.1447072,
+              "lon": 79.0894194
+            },
+            {
+              "lat": 21.1446125,
+              "lon": 79.0893303
+            },
+            {
+              "lat": 21.1444056,
+              "lon": 79.0891093
+            },
+            {
+              "lat": 21.1441942,
+              "lon": 79.0888618
+            },
+            {
+              "lat": 21.1439058,
+              "lon": 79.0885337
+            },
+            {
+              "lat": 21.143311,
+              "lon": 79.0878552
+            },
+            {
+              "lat": 21.1431791,
+              "lon": 79.0876948
+            },
+            {
+              "lat": 21.143099,
+              "lon": 79.0875862
+            },
+            {
+              "lat": 21.1430396,
+              "lon": 79.0874943
+            },
+            {
+              "lat": 21.1429808,
+              "lon": 79.0873984
+            },
+            {
+              "lat": 21.1429295,
+              "lon": 79.0873019
+            },
+            {
+              "lat": 21.1428714,
+              "lon": 79.0871671
+            },
+            {
+              "lat": 21.1427951,
+              "lon": 79.0869518
+            },
+            {
+              "lat": 21.1421868,
+              "lon": 79.0850173
+            },
+            {
+              "lat": 21.1415382,
+              "lon": 79.0828708
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 768598465,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.1415382,
+              "lon": 79.0828708
+            },
+            {
+              "lat": 21.1414034,
+              "lon": 79.0824039
+            },
+            {
+              "lat": 21.1413114,
+              "lon": 79.0819879
+            },
+            {
+              "lat": 21.1412834,
+              "lon": 79.08143
+            },
+            {
+              "lat": 21.1412684,
+              "lon": 79.0807633
+            },
+            {
+              "lat": 21.1412745,
+              "lon": 79.0803214
+            },
+            {
+              "lat": 21.1412692,
+              "lon": 79.0800236
+            },
+            {
+              "lat": 21.1412498,
+              "lon": 79.0797951
+            },
+            {
+              "lat": 21.1411711,
+              "lon": 79.0794073
+            },
+            {
+              "lat": 21.1411091,
+              "lon": 79.0791569
+            },
+            {
+              "lat": 21.1409756,
+              "lon": 79.0786714
+            },
+            {
+              "lat": 21.1408438,
+              "lon": 79.0782437
+            },
+            {
+              "lat": 21.1406996,
+              "lon": 79.077835
+            },
+            {
+              "lat": 21.140383,
+              "lon": 79.0768781
+            },
+            {
+              "lat": 21.1402415,
+              "lon": 79.0764438
+            },
+            {
+              "lat": 21.1400363,
+              "lon": 79.075816
+            },
+            {
+              "lat": 21.1399142,
+              "lon": 79.075357
+            },
+            {
+              "lat": 21.13979,
+              "lon": 79.0748269
+            },
+            {
+              "lat": 21.1397136,
+              "lon": 79.0744581
+            },
+            {
+              "lat": 21.1395829,
+              "lon": 79.0740068
+            },
+            {
+              "lat": 21.1391671,
+              "lon": 79.0727535
+            },
+            {
+              "lat": 21.1390598,
+              "lon": 79.0723301
+            },
+            {
+              "lat": 21.1388113,
+              "lon": 79.0715126
+            },
+            {
+              "lat": 21.1386459,
+              "lon": 79.0710062
+            },
+            {
+              "lat": 21.1385503,
+              "lon": 79.0707654
+            },
+            {
+              "lat": 21.138297,
+              "lon": 79.0701002
+            },
+            {
+              "lat": 21.1380437,
+              "lon": 79.069433
+            },
+            {
+              "lat": 21.1378816,
+              "lon": 79.0689323
+            },
+            {
+              "lat": 21.1373368,
+              "lon": 79.0671229
+            },
+            {
+              "lat": 21.1368954,
+              "lon": 79.0656635
+            },
+            {
+              "lat": 21.1367904,
+              "lon": 79.0652486
+            },
+            {
+              "lat": 21.1367061,
+              "lon": 79.0647948
+            },
+            {
+              "lat": 21.1362719,
+              "lon": 79.0620789
+            },
+            {
+              "lat": 21.1361949,
+              "lon": 79.0616484
+            },
+            {
+              "lat": 21.1360958,
+              "lon": 79.0612387
+            },
+            {
+              "lat": 21.1359517,
+              "lon": 79.0607484
+            },
+            {
+              "lat": 21.1358119,
+              "lon": 79.0603179
+            },
+            {
+              "lat": 21.1356775,
+              "lon": 79.0599566
+            },
+            {
+              "lat": 21.1354519,
+              "lon": 79.0594236
+            },
+            {
+              "lat": 21.1353369,
+              "lon": 79.05916
+            },
+            {
+              "lat": 21.1351512,
+              "lon": 79.0587835
+            },
+            {
+              "lat": 21.135007,
+              "lon": 79.0585161
+            },
+            {
+              "lat": 21.134647,
+              "lon": 79.0578637
+            },
+            {
+              "lat": 21.1344179,
+              "lon": 79.0574663
+            },
+            {
+              "lat": 21.1339489,
+              "lon": 79.0566135
+            },
+            {
+              "lat": 21.1332795,
+              "lon": 79.0554431
+            },
+            {
+              "lat": 21.13315,
+              "lon": 79.0552132
+            },
+            {
+              "lat": 21.1329009,
+              "lon": 79.0548081
+            },
+            {
+              "lat": 21.132598,
+              "lon": 79.054249
+            },
+            {
+              "lat": 21.1322846,
+              "lon": 79.0536918
+            },
+            {
+              "lat": 21.1318937,
+              "lon": 79.0530058
+            },
+            {
+              "lat": 21.1314773,
+              "lon": 79.0522521
+            },
+            {
+              "lat": 21.1314185,
+              "lon": 79.0521089
+            },
+            {
+              "lat": 21.1313552,
+              "lon": 79.0519597
+            },
+            {
+              "lat": 21.131267,
+              "lon": 79.0516694
+            },
+            {
+              "lat": 21.1308254,
+              "lon": 79.0499635
+            },
+            {
+              "lat": 21.1307568,
+              "lon": 79.0496656
+            },
+            {
+              "lat": 21.1307135,
+              "lon": 79.0494238
+            },
+            {
+              "lat": 21.1306799,
+              "lon": 79.0489752
+            },
+            {
+              "lat": 21.130694,
+              "lon": 79.048723
+            },
+            {
+              "lat": 21.1307337,
+              "lon": 79.0484827
+            },
+            {
+              "lat": 21.1308315,
+              "lon": 79.0480651
+            },
+            {
+              "lat": 21.1309012,
+              "lon": 79.0477972
+            },
+            {
+              "lat": 21.1309637,
+              "lon": 79.0475274
+            },
+            {
+              "lat": 21.1309822,
+              "lon": 79.0473968
+            },
+            {
+              "lat": 21.1309883,
+              "lon": 79.0472912
+            },
+            {
+              "lat": 21.1309856,
+              "lon": 79.0471855
+            },
+            {
+              "lat": 21.1309742,
+              "lon": 79.0470804
+            },
+            {
+              "lat": 21.1309542,
+              "lon": 79.0469768
+            },
+            {
+              "lat": 21.1309258,
+              "lon": 79.0468755
+            },
+            {
+              "lat": 21.1308891,
+              "lon": 79.0467773
+            },
+            {
+              "lat": 21.1308445,
+              "lon": 79.0466829
+            },
+            {
+              "lat": 21.1307923,
+              "lon": 79.0465932
+            },
+            {
+              "lat": 21.130733,
+              "lon": 79.0465087
+            },
+            {
+              "lat": 21.1306706,
+              "lon": 79.0464343
+            },
+            {
+              "lat": 21.1306027,
+              "lon": 79.0463657
+            },
+            {
+              "lat": 21.1305297,
+              "lon": 79.0463034
+            },
+            {
+              "lat": 21.1304521,
+              "lon": 79.0462478
+            },
+            {
+              "lat": 21.1303705,
+              "lon": 79.0461994
+            },
+            {
+              "lat": 21.1302853,
+              "lon": 79.0461585
+            },
+            {
+              "lat": 21.1301973,
+              "lon": 79.0461253
+            },
+            {
+              "lat": 21.1300683,
+              "lon": 79.0460857
+            },
+            {
+              "lat": 21.1294319,
+              "lon": 79.0459261
+            },
+            {
+              "lat": 21.12892,
+              "lon": 79.04582
+            },
+            {
+              "lat": 21.128688,
+              "lon": 79.0457636
+            },
+            {
+              "lat": 21.1272759,
+              "lon": 79.0454272
+            },
+            {
+              "lat": 21.1265844,
+              "lon": 79.0452693
+            },
+            {
+              "lat": 21.126189,
+              "lon": 79.0451801
+            },
+            {
+              "lat": 21.125624,
+              "lon": 79.0450477
+            },
+            {
+              "lat": 21.1253838,
+              "lon": 79.0449927
+            },
+            {
+              "lat": 21.1251911,
+              "lon": 79.0449411
+            },
+            {
+              "lat": 21.1250166,
+              "lon": 79.0448941
+            },
+            {
+              "lat": 21.1248853,
+              "lon": 79.0448445
+            },
+            {
+              "lat": 21.124702,
+              "lon": 79.0447634
+            },
+            {
+              "lat": 21.124555,
+              "lon": 79.0446742
+            },
+            {
+              "lat": 21.1244293,
+              "lon": 79.0445897
+            },
+            {
+              "lat": 21.1242329,
+              "lon": 79.0444355
+            },
+            {
+              "lat": 21.1239721,
+              "lon": 79.0442189
+            },
+            {
+              "lat": 21.1238157,
+              "lon": 79.0440774
+            },
+            {
+              "lat": 21.1237112,
+              "lon": 79.0439828
+            },
+            {
+              "lat": 21.1235605,
+              "lon": 79.0438246
+            },
+            {
+              "lat": 21.1234539,
+              "lon": 79.0436695
+            },
+            {
+              "lat": 21.123384,
+              "lon": 79.0435395
+            },
+            {
+              "lat": 21.1233186,
+              "lon": 79.0433575
+            },
+            {
+              "lat": 21.1232788,
+              "lon": 79.0431953
+            },
+            {
+              "lat": 21.1232575,
+              "lon": 79.0429326
+            },
+            {
+              "lat": 21.1232628,
+              "lon": 79.0427259
+            },
+            {
+              "lat": 21.1232834,
+              "lon": 79.0424045
+            },
+            {
+              "lat": 21.1232982,
+              "lon": 79.0420526
+            },
+            {
+              "lat": 21.1233044,
+              "lon": 79.0416012
+            },
+            {
+              "lat": 21.123323,
+              "lon": 79.0408397
+            },
+            {
+              "lat": 21.1233363,
+              "lon": 79.0400299
+            },
+            {
+              "lat": 21.1233309,
+              "lon": 79.0398364
+            },
+            {
+              "lat": 21.123315,
+              "lon": 79.0396079
+            },
+            {
+              "lat": 21.1232858,
+              "lon": 79.0394173
+            },
+            {
+              "lat": 21.1231673,
+              "lon": 79.0387241
+            },
+            {
+              "lat": 21.1229461,
+              "lon": 79.0375006
+            },
+            {
+              "lat": 21.1225441,
+              "lon": 79.0352784
+            },
+            {
+              "lat": 21.1224673,
+              "lon": 79.034892
+            },
+            {
+              "lat": 21.1223608,
+              "lon": 79.0341599
+            },
+            {
+              "lat": 21.1219996,
+              "lon": 79.0321438
+            },
+            {
+              "lat": 21.1218448,
+              "lon": 79.0312524
+            },
+            {
+              "lat": 21.1217139,
+              "lon": 79.0304956
+            },
+            {
+              "lat": 21.1216104,
+              "lon": 79.0299769
+            },
+            {
+              "lat": 21.1215036,
+              "lon": 79.0294167
+            },
+            {
+              "lat": 21.1213774,
+              "lon": 79.0287609
+            },
+            {
+              "lat": 21.1212177,
+              "lon": 79.0279312
+            },
+            {
+              "lat": 21.1206325,
+              "lon": 79.0247749
+            },
+            {
+              "lat": 21.1205487,
+              "lon": 79.0243095
+            },
+            {
+              "lat": 21.1205137,
+              "lon": 79.024103
+            },
+            {
+              "lat": 21.1204061,
+              "lon": 79.023533
+            },
+            {
+              "lat": 21.1203154,
+              "lon": 79.0230884
+            },
+            {
+              "lat": 21.120236,
+              "lon": 79.022788
+            },
+            {
+              "lat": 21.1201503,
+              "lon": 79.0225486
+            },
+            {
+              "lat": 21.1199845,
+              "lon": 79.0221637
+            },
+            {
+              "lat": 21.1197412,
+              "lon": 79.0216347
+            },
+            {
+              "lat": 21.119426,
+              "lon": 79.0209212
+            },
+            {
+              "lat": 21.1187675,
+              "lon": 79.0194769
+            },
+            {
+              "lat": 21.1185915,
+              "lon": 79.0190919
+            },
+            {
+              "lat": 21.1178628,
+              "lon": 79.0174907
+            },
+            {
+              "lat": 21.1177814,
+              "lon": 79.0172634
+            },
+            {
+              "lat": 21.1177257,
+              "lon": 79.0170681
+            },
+            {
+              "lat": 21.1176975,
+              "lon": 79.0168452
+            },
+            {
+              "lat": 21.1176913,
+              "lon": 79.0166413
+            },
+            {
+              "lat": 21.1176948,
+              "lon": 79.0164753
+            },
+            {
+              "lat": 21.1177176,
+              "lon": 79.0161869
+            },
+            {
+              "lat": 21.117745,
+              "lon": 79.0154369
+            },
+            {
+              "lat": 21.1177458,
+              "lon": 79.0151752
+            },
+            {
+              "lat": 21.1177382,
+              "lon": 79.0150425
+            },
+            {
+              "lat": 21.1177214,
+              "lon": 79.0149225
+            },
+            {
+              "lat": 21.117692,
+              "lon": 79.0148011
+            },
+            {
+              "lat": 21.1176539,
+              "lon": 79.0146958
+            },
+            {
+              "lat": 21.1175882,
+              "lon": 79.0145544
+            },
+            {
+              "lat": 21.1175206,
+              "lon": 79.0144457
+            },
+            {
+              "lat": 21.1174137,
+              "lon": 79.0142867
+            },
+            {
+              "lat": 21.1167622,
+              "lon": 79.0133904
+            },
+            {
+              "lat": 21.1166012,
+              "lon": 79.013177
+            },
+            {
+              "lat": 21.1164818,
+              "lon": 79.013012
+            },
+            {
+              "lat": 21.1161845,
+              "lon": 79.0126158
+            },
+            {
+              "lat": 21.1156566,
+              "lon": 79.0119009
+            },
+            {
+              "lat": 21.115319,
+              "lon": 79.011447
+            },
+            {
+              "lat": 21.1151501,
+              "lon": 79.0112138
+            },
+            {
+              "lat": 21.1150319,
+              "lon": 79.0110405
+            },
+            {
+              "lat": 21.1148458,
+              "lon": 79.0107614
+            },
+            {
+              "lat": 21.1147352,
+              "lon": 79.0105575
+            },
+            {
+              "lat": 21.1146308,
+              "lon": 79.010328
+            },
+            {
+              "lat": 21.1138838,
+              "lon": 79.008628
+            },
+            {
+              "lat": 21.1135535,
+              "lon": 79.0078595
+            },
+            {
+              "lat": 21.1131641,
+              "lon": 79.0069739
+            },
+            {
+              "lat": 21.1121166,
+              "lon": 79.0045597
+            },
+            {
+              "lat": 21.1117325,
+              "lon": 79.003688
+            },
+            {
+              "lat": 21.1116143,
+              "lon": 79.0034144
+            },
+            {
+              "lat": 21.111376,
+              "lon": 79.0028659
+            },
+            {
+              "lat": 21.1112903,
+              "lon": 79.0026681
+            },
+            {
+              "lat": 21.1111471,
+              "lon": 79.0023699
+            },
+            {
+              "lat": 21.1110537,
+              "lon": 79.0021925
+            },
+            {
+              "lat": 21.110998,
+              "lon": 79.0020987
+            },
+            {
+              "lat": 21.1109288,
+              "lon": 79.0019942
+            },
+            {
+              "lat": 21.1107887,
+              "lon": 79.0017637
+            }
+          ]
+        }
+      ],
+      "tags": {
+        "colour": "aqua",
+        "duration": "00:37:55",
+        "from": "Prajapati Nagar",
+        "interval": "00:15:00",
+        "name": "Aqua Line: Prajapati Nagar → Lokmanya Nagar",
+        "network": "Nagpur Metro",
+        "network:wikidata": "Q6959014",
+        "opening_hours": "06:00-22:00",
+        "operator": "MahaMetro",
+        "public_transport:version": "2",
+        "ref": "Aqua Line",
+        "route": "subway",
+        "source:interval": "https://www.metrorailnagpur.com/time-table",
+        "to": "Lokmanya Nagar",
+        "type": "route",
+        "wikidata": "Q62051025",
+        "wikipedia": "en:Aqua Line (Nagpur Metro)"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 10659362,
+      "bounds": {
+        "minlat": 21.1108188,
+        "minlon": 79.0017427,
+        "maxlat": 21.1534458,
+        "maxlon": 79.1487877
+      },
+      "members": [
+        {
+          "type": "node",
+          "ref": 10967777065,
+          "role": "stop",
+          "lat": 21.1108188,
+          "lon": 79.0017427
+        },
+        {
+          "type": "node",
+          "ref": 10967776674,
+          "role": "stop",
+          "lat": 21.1162125,
+          "lon": 79.0125917
+        },
+        {
+          "type": "node",
+          "ref": 10967777788,
+          "role": "stop",
+          "lat": 21.1187996,
+          "lon": 79.0194594
+        },
+        {
+          "type": "node",
+          "ref": 10967776494,
+          "role": "stop",
+          "lat": 21.1215387,
+          "lon": 79.0294085
+        },
+        {
+          "type": "node",
+          "ref": 10967777018,
+          "role": "stop",
+          "lat": 21.1233341,
+          "lon": 79.0420538
+        },
+        {
+          "type": "node",
+          "ref": 10967776465,
+          "role": "stop",
+          "lat": 21.1286958,
+          "lon": 79.045726
+        },
+        {
+          "type": "node",
+          "ref": 10967778113,
+          "role": "stop",
+          "lat": 21.1329314,
+          "lon": 79.0547879
+        },
+        {
+          "type": "node",
+          "ref": 10967778041,
+          "role": "stop",
+          "lat": 21.13623,
+          "lon": 79.0616399
+        },
+        {
+          "type": "node",
+          "ref": 10967776609,
+          "role": "stop",
+          "lat": 21.1383303,
+          "lon": 79.0700856
+        },
+        {
+          "type": "node",
+          "ref": 10967776860,
+          "role": "stop",
+          "lat": 21.1407334,
+          "lon": 79.0778217
+        },
+        {
+          "type": "node",
+          "ref": 10967777980,
+          "role": "stop",
+          "lat": 21.1415725,
+          "lon": 79.0828592
+        },
+        {
+          "type": "node",
+          "ref": 7944687375,
+          "role": "stop",
+          "lat": 21.1459896,
+          "lon": 79.0897729
+        },
+        {
+          "type": "node",
+          "ref": 10967777766,
+          "role": "stop",
+          "lat": 21.1513782,
+          "lon": 79.0904167
+        },
+        {
+          "type": "node",
+          "ref": 10967776792,
+          "role": "stop",
+          "lat": 21.1529575,
+          "lon": 79.0949057
+        },
+        {
+          "type": "node",
+          "ref": 10967776749,
+          "role": "stop",
+          "lat": 21.1510811,
+          "lon": 79.1029281
+        },
+        {
+          "type": "node",
+          "ref": 10967776981,
+          "role": "stop",
+          "lat": 21.149672,
+          "lon": 79.1103937
+        },
+        {
+          "type": "node",
+          "ref": 10967776603,
+          "role": "stop",
+          "lat": 21.1488389,
+          "lon": 79.1182328
+        },
+        {
+          "type": "node",
+          "ref": 10967777164,
+          "role": "stop",
+          "lat": 21.148332,
+          "lon": 79.1294946
+        },
+        {
+          "type": "node",
+          "ref": 10967776727,
+          "role": "stop",
+          "lat": 21.1480348,
+          "lon": 79.1364018
+        },
+        {
+          "type": "node",
+          "ref": 10967776592,
+          "role": "stop",
+          "lat": 21.1502182,
+          "lon": 79.1487877
+        },
+        {
+          "type": "way",
+          "ref": 1180968882,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.1415725,
+              "lon": 79.0828592
+            },
+            {
+              "lat": 21.1414381,
+              "lon": 79.0823937
+            },
+            {
+              "lat": 21.1413471,
+              "lon": 79.0819823
+            },
+            {
+              "lat": 21.1413193,
+              "lon": 79.0814285
+            },
+            {
+              "lat": 21.1413043,
+              "lon": 79.0807631
+            },
+            {
+              "lat": 21.1413105,
+              "lon": 79.0803213
+            },
+            {
+              "lat": 21.1413051,
+              "lon": 79.0800215
+            },
+            {
+              "lat": 21.1412854,
+              "lon": 79.0797892
+            },
+            {
+              "lat": 21.141206,
+              "lon": 79.0793982
+            },
+            {
+              "lat": 21.1411437,
+              "lon": 79.0791465
+            },
+            {
+              "lat": 21.1410099,
+              "lon": 79.0786599
+            },
+            {
+              "lat": 21.1408777,
+              "lon": 79.0782308
+            },
+            {
+              "lat": 21.1407334,
+              "lon": 79.0778217
+            },
+            {
+              "lat": 21.1404169,
+              "lon": 79.0768653
+            },
+            {
+              "lat": 21.1402754,
+              "lon": 79.0764311
+            },
+            {
+              "lat": 21.1400705,
+              "lon": 79.0758044
+            },
+            {
+              "lat": 21.1399489,
+              "lon": 79.0753471
+            },
+            {
+              "lat": 21.1398184,
+              "lon": 79.0747884
+            },
+            {
+              "lat": 21.1397484,
+              "lon": 79.0744482
+            },
+            {
+              "lat": 21.139617,
+              "lon": 79.0739947
+            },
+            {
+              "lat": 21.1392014,
+              "lon": 79.072742
+            },
+            {
+              "lat": 21.1390942,
+              "lon": 79.072319
+            },
+            {
+              "lat": 21.1388453,
+              "lon": 79.0715003
+            },
+            {
+              "lat": 21.1386794,
+              "lon": 79.0709923
+            },
+            {
+              "lat": 21.1385835,
+              "lon": 79.0707505
+            },
+            {
+              "lat": 21.1383303,
+              "lon": 79.0700856
+            },
+            {
+              "lat": 21.1380774,
+              "lon": 79.0694194
+            },
+            {
+              "lat": 21.1379157,
+              "lon": 79.06892
+            },
+            {
+              "lat": 21.137371,
+              "lon": 79.0671111
+            },
+            {
+              "lat": 21.1369299,
+              "lon": 79.0656525
+            },
+            {
+              "lat": 21.1368254,
+              "lon": 79.0652398
+            },
+            {
+              "lat": 21.1367415,
+              "lon": 79.0647878
+            },
+            {
+              "lat": 21.1363072,
+              "lon": 79.062072
+            },
+            {
+              "lat": 21.13623,
+              "lon": 79.0616399
+            },
+            {
+              "lat": 21.1361304,
+              "lon": 79.0612281
+            },
+            {
+              "lat": 21.1359858,
+              "lon": 79.0607363
+            },
+            {
+              "lat": 21.1358456,
+              "lon": 79.0603044
+            },
+            {
+              "lat": 21.1357105,
+              "lon": 79.0599415
+            },
+            {
+              "lat": 21.1354845,
+              "lon": 79.0594075
+            },
+            {
+              "lat": 21.1353691,
+              "lon": 79.0591428
+            },
+            {
+              "lat": 21.1351826,
+              "lon": 79.0587649
+            },
+            {
+              "lat": 21.135038,
+              "lon": 79.0584967
+            },
+            {
+              "lat": 21.1346777,
+              "lon": 79.0578437
+            },
+            {
+              "lat": 21.1344487,
+              "lon": 79.0574464
+            },
+            {
+              "lat": 21.1339796,
+              "lon": 79.0565937
+            },
+            {
+              "lat": 21.1333102,
+              "lon": 79.0554231
+            },
+            {
+              "lat": 21.1331803,
+              "lon": 79.0551926
+            },
+            {
+              "lat": 21.1329314,
+              "lon": 79.0547879
+            },
+            {
+              "lat": 21.1326289,
+              "lon": 79.0542294
+            },
+            {
+              "lat": 21.1323154,
+              "lon": 79.0536718
+            },
+            {
+              "lat": 21.1319245,
+              "lon": 79.0529859
+            },
+            {
+              "lat": 21.1315093,
+              "lon": 79.0522344
+            },
+            {
+              "lat": 21.1314513,
+              "lon": 79.0520932
+            },
+            {
+              "lat": 21.1313887,
+              "lon": 79.0519458
+            },
+            {
+              "lat": 21.1313014,
+              "lon": 79.0516583
+            },
+            {
+              "lat": 21.1308602,
+              "lon": 79.0499537
+            },
+            {
+              "lat": 21.130792,
+              "lon": 79.0496573
+            },
+            {
+              "lat": 21.1307492,
+              "lon": 79.0494186
+            },
+            {
+              "lat": 21.1307159,
+              "lon": 79.0489748
+            },
+            {
+              "lat": 21.1307298,
+              "lon": 79.0487275
+            },
+            {
+              "lat": 21.1307689,
+              "lon": 79.0484908
+            },
+            {
+              "lat": 21.1308663,
+              "lon": 79.0480749
+            },
+            {
+              "lat": 21.1309359,
+              "lon": 79.047807
+            },
+            {
+              "lat": 21.1309989,
+              "lon": 79.0475349
+            },
+            {
+              "lat": 21.131018,
+              "lon": 79.0474009
+            },
+            {
+              "lat": 21.1310242,
+              "lon": 79.0472919
+            },
+            {
+              "lat": 21.1310214,
+              "lon": 79.0471827
+            },
+            {
+              "lat": 21.1310097,
+              "lon": 79.0470743
+            },
+            {
+              "lat": 21.1309891,
+              "lon": 79.0469673
+            },
+            {
+              "lat": 21.1309597,
+              "lon": 79.0468628
+            },
+            {
+              "lat": 21.1309219,
+              "lon": 79.0467614
+            },
+            {
+              "lat": 21.1308759,
+              "lon": 79.046664
+            },
+            {
+              "lat": 21.130822,
+              "lon": 79.0465714
+            },
+            {
+              "lat": 21.1307607,
+              "lon": 79.0464842
+            },
+            {
+              "lat": 21.1306964,
+              "lon": 79.0464073
+            },
+            {
+              "lat": 21.1306263,
+              "lon": 79.0463365
+            },
+            {
+              "lat": 21.1305509,
+              "lon": 79.0462722
+            },
+            {
+              "lat": 21.1304708,
+              "lon": 79.0462149
+            },
+            {
+              "lat": 21.1303865,
+              "lon": 79.0461649
+            },
+            {
+              "lat": 21.1302987,
+              "lon": 79.0461227
+            },
+            {
+              "lat": 21.1302082,
+              "lon": 79.0460886
+            },
+            {
+              "lat": 21.1300774,
+              "lon": 79.0460484
+            },
+            {
+              "lat": 21.1294394,
+              "lon": 79.0458884
+            },
+            {
+              "lat": 21.1289274,
+              "lon": 79.0457823
+            },
+            {
+              "lat": 21.1286958,
+              "lon": 79.045726
+            },
+            {
+              "lat": 21.1272835,
+              "lon": 79.0453896
+            },
+            {
+              "lat": 21.1265919,
+              "lon": 79.0452316
+            },
+            {
+              "lat": 21.1261965,
+              "lon": 79.0451424
+            },
+            {
+              "lat": 21.1256316,
+              "lon": 79.04501
+            },
+            {
+              "lat": 21.1253919,
+              "lon": 79.0449552
+            },
+            {
+              "lat": 21.1251999,
+              "lon": 79.0449037
+            },
+            {
+              "lat": 21.125027,
+              "lon": 79.0448572
+            },
+            {
+              "lat": 21.1248981,
+              "lon": 79.0448085
+            },
+            {
+              "lat": 21.1247178,
+              "lon": 79.0447287
+            },
+            {
+              "lat": 21.1245734,
+              "lon": 79.0446411
+            },
+            {
+              "lat": 21.1244495,
+              "lon": 79.0445578
+            },
+            {
+              "lat": 21.1242545,
+              "lon": 79.0444047
+            },
+            {
+              "lat": 21.1239947,
+              "lon": 79.0441889
+            },
+            {
+              "lat": 21.1238389,
+              "lon": 79.044048
+            },
+            {
+              "lat": 21.1237354,
+              "lon": 79.0439543
+            },
+            {
+              "lat": 21.1235877,
+              "lon": 79.0437993
+            },
+            {
+              "lat": 21.123484,
+              "lon": 79.0436484
+            },
+            {
+              "lat": 21.1234165,
+              "lon": 79.0435229
+            },
+            {
+              "lat": 21.1233528,
+              "lon": 79.0433456
+            },
+            {
+              "lat": 21.1233143,
+              "lon": 79.0431887
+            },
+            {
+              "lat": 21.1232935,
+              "lon": 79.0429315
+            },
+            {
+              "lat": 21.1232987,
+              "lon": 79.0427277
+            },
+            {
+              "lat": 21.1233192,
+              "lon": 79.0424067
+            },
+            {
+              "lat": 21.1233341,
+              "lon": 79.0420538
+            },
+            {
+              "lat": 21.1233403,
+              "lon": 79.041602
+            },
+            {
+              "lat": 21.1233589,
+              "lon": 79.0408406
+            },
+            {
+              "lat": 21.1233722,
+              "lon": 79.0400296
+            },
+            {
+              "lat": 21.1233668,
+              "lon": 79.0398344
+            },
+            {
+              "lat": 21.1233507,
+              "lon": 79.0396033
+            },
+            {
+              "lat": 21.1233212,
+              "lon": 79.0394107
+            },
+            {
+              "lat": 21.1232026,
+              "lon": 79.0387169
+            },
+            {
+              "lat": 21.1230739,
+              "lon": 79.0377869
+            },
+            {
+              "lat": 21.1229166,
+              "lon": 79.0368773
+            },
+            {
+              "lat": 21.1226366,
+              "lon": 79.0353455
+            },
+            {
+              "lat": 21.122494,
+              "lon": 79.0346316
+            },
+            {
+              "lat": 21.1223962,
+              "lon": 79.0341534
+            },
+            {
+              "lat": 21.1220349,
+              "lon": 79.0321365
+            },
+            {
+              "lat": 21.1218802,
+              "lon": 79.0312453
+            },
+            {
+              "lat": 21.1217492,
+              "lon": 79.0304883
+            },
+            {
+              "lat": 21.1216456,
+              "lon": 79.0299689
+            },
+            {
+              "lat": 21.1215387,
+              "lon": 79.0294085
+            },
+            {
+              "lat": 21.1212529,
+              "lon": 79.0279235
+            },
+            {
+              "lat": 21.1206678,
+              "lon": 79.0247676
+            },
+            {
+              "lat": 21.120584,
+              "lon": 79.0243024
+            },
+            {
+              "lat": 21.120549,
+              "lon": 79.0240957
+            },
+            {
+              "lat": 21.1204412,
+              "lon": 79.0235251
+            },
+            {
+              "lat": 21.1203503,
+              "lon": 79.0230791
+            },
+            {
+              "lat": 21.1202701,
+              "lon": 79.0227759
+            },
+            {
+              "lat": 21.1201834,
+              "lon": 79.0225337
+            },
+            {
+              "lat": 21.1200169,
+              "lon": 79.0221472
+            },
+            {
+              "lat": 21.1197735,
+              "lon": 79.0216179
+            },
+            {
+              "lat": 21.1194584,
+              "lon": 79.0209047
+            },
+            {
+              "lat": 21.1187996,
+              "lon": 79.0194594
+            },
+            {
+              "lat": 21.1186234,
+              "lon": 79.0190743
+            },
+            {
+              "lat": 21.1178957,
+              "lon": 79.0174753
+            },
+            {
+              "lat": 21.1178154,
+              "lon": 79.0172508
+            },
+            {
+              "lat": 21.1177609,
+              "lon": 79.0170598
+            },
+            {
+              "lat": 21.1177333,
+              "lon": 79.0168419
+            },
+            {
+              "lat": 21.1177272,
+              "lon": 79.0166411
+            },
+            {
+              "lat": 21.1177307,
+              "lon": 79.0164774
+            },
+            {
+              "lat": 21.1177534,
+              "lon": 79.0161893
+            },
+            {
+              "lat": 21.1177809,
+              "lon": 79.0154377
+            },
+            {
+              "lat": 21.1177817,
+              "lon": 79.0151741
+            },
+            {
+              "lat": 21.117774,
+              "lon": 79.0150385
+            },
+            {
+              "lat": 21.1177566,
+              "lon": 79.0149148
+            },
+            {
+              "lat": 21.1177263,
+              "lon": 79.0147892
+            },
+            {
+              "lat": 21.1176868,
+              "lon": 79.0146802
+            },
+            {
+              "lat": 21.1176193,
+              "lon": 79.014535
+            },
+            {
+              "lat": 21.1175502,
+              "lon": 79.0144237
+            },
+            {
+              "lat": 21.1174424,
+              "lon": 79.0142636
+            },
+            {
+              "lat": 21.1167903,
+              "lon": 79.0133665
+            },
+            {
+              "lat": 21.1166293,
+              "lon": 79.0131531
+            },
+            {
+              "lat": 21.11651,
+              "lon": 79.0129882
+            },
+            {
+              "lat": 21.1162125,
+              "lon": 79.0125917
+            },
+            {
+              "lat": 21.1156847,
+              "lon": 79.011877
+            },
+            {
+              "lat": 21.1153473,
+              "lon": 79.0114232
+            },
+            {
+              "lat": 21.1151788,
+              "lon": 79.0111906
+            },
+            {
+              "lat": 21.115061,
+              "lon": 79.011018
+            },
+            {
+              "lat": 21.114876,
+              "lon": 79.0107405
+            },
+            {
+              "lat": 21.1147669,
+              "lon": 79.0105394
+            },
+            {
+              "lat": 21.1146632,
+              "lon": 79.0103114
+            },
+            {
+              "lat": 21.1139163,
+              "lon": 79.0086117
+            },
+            {
+              "lat": 21.1135861,
+              "lon": 79.0078433
+            },
+            {
+              "lat": 21.1131966,
+              "lon": 79.0069576
+            },
+            {
+              "lat": 21.1121492,
+              "lon": 79.0045434
+            },
+            {
+              "lat": 21.1117651,
+              "lon": 79.0036717
+            },
+            {
+              "lat": 21.1116469,
+              "lon": 79.0033982
+            },
+            {
+              "lat": 21.1114855,
+              "lon": 79.0030267
+            },
+            {
+              "lat": 21.1114086,
+              "lon": 79.0028497
+            },
+            {
+              "lat": 21.1113226,
+              "lon": 79.0026512
+            },
+            {
+              "lat": 21.1111787,
+              "lon": 79.0023516
+            },
+            {
+              "lat": 21.1110846,
+              "lon": 79.0021727
+            },
+            {
+              "lat": 21.1110278,
+              "lon": 79.0020771
+            },
+            {
+              "lat": 21.1109585,
+              "lon": 79.0019726
+            },
+            {
+              "lat": 21.1108188,
+              "lon": 79.0017427
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 1180968971,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 21.1502182,
+              "lon": 79.1487877
+            },
+            {
+              "lat": 21.1499015,
+              "lon": 79.1484387
+            },
+            {
+              "lat": 21.1497365,
+              "lon": 79.1482316
+            },
+            {
+              "lat": 21.1494316,
+              "lon": 79.1478137
+            },
+            {
+              "lat": 21.1493661,
+              "lon": 79.1477238
+            },
+            {
+              "lat": 21.1490193,
+              "lon": 79.1471978
+            },
+            {
+              "lat": 21.1487555,
+              "lon": 79.1467692
+            },
+            {
+              "lat": 21.1486094,
+              "lon": 79.1465144
+            },
+            {
+              "lat": 21.1484881,
+              "lon": 79.1462807
+            },
+            {
+              "lat": 21.1483351,
+              "lon": 79.1458844
+            },
+            {
+              "lat": 21.1482051,
+              "lon": 79.1453534
+            },
+            {
+              "lat": 21.148166,
+              "lon": 79.1450437
+            },
+            {
+              "lat": 21.1481144,
+              "lon": 79.1436044
+            },
+            {
+              "lat": 21.1480183,
+              "lon": 79.1414951
+            },
+            {
+              "lat": 21.1479868,
+              "lon": 79.1400434
+            },
+            {
+              "lat": 21.1479591,
+              "lon": 79.1380346
+            },
+            {
+              "lat": 21.1479785,
+              "lon": 79.1374501
+            },
+            {
+              "lat": 21.1480348,
+              "lon": 79.1364018
+            },
+            {
+              "lat": 21.1480948,
+              "lon": 79.1349159
+            },
+            {
+              "lat": 21.1482418,
+              "lon": 79.1313051
+            },
+            {
+              "lat": 21.148332,
+              "lon": 79.1294946
+            },
+            {
+              "lat": 21.1488389,
+              "lon": 79.1182328
+            },
+            {
+              "lat": 21.148861,
+              "lon": 79.1177823
+            },
+            {
+              "lat": 21.1488734,
+              "lon": 79.1175008
+            },
+            {
+              "lat": 21.1488991,
+              "lon": 79.1170281
+            },
+            {
+              "lat": 21.1489088,
+              "lon": 79.1166576
+            },
+            {
+              "lat": 21.1489325,
+              "lon": 79.1163099
+            },
+            {
+              "lat": 21.1489834,
+              "lon": 79.1159243
+            },
+            {
+              "lat": 21.1490571,
+              "lon": 79.1153386
+            },
+            {
+              "lat": 21.1490864,
+              "lon": 79.1150787
+            },
+            {
+              "lat": 21.14912,
+              "lon": 79.1146339
+            },
+            {
+              "lat": 21.1491667,
+              "lon": 79.114201
+            },
+            {
+              "lat": 21.1492125,
+              "lon": 79.1138894
+            },
+            {
+              "lat": 21.1493122,
+              "lon": 79.1133142
+            },
+            {
+              "lat": 21.1493804,
+              "lon": 79.1130039
+            },
+            {
+              "lat": 21.1494728,
+              "lon": 79.1126109
+            },
+            {
+              "lat": 21.1495324,
+              "lon": 79.1123774
+            },
+            {
+              "lat": 21.1495654,
+              "lon": 79.1122048
+            },
+            {
+              "lat": 21.1495951,
+              "lon": 79.111991
+            },
+            {
+              "lat": 21.1496115,
+              "lon": 79.1118194
+            },
+            {
+              "lat": 21.1496222,
+              "lon": 79.1115532
+            },
+            {
+              "lat": 21.1496305,
+              "lon": 79.111306
+            },
+            {
+              "lat": 21.149672,
+              "lon": 79.1103937
+            },
+            {
+              "lat": 21.1497122,
+              "lon": 79.1095196
+            },
+            {
+              "lat": 21.1497512,
+              "lon": 79.1091994
+            },
+            {
+              "lat": 21.1497811,
+              "lon": 79.1090261
+            },
+            {
+              "lat": 21.1498278,
+              "lon": 79.1087644
+            },
+            {
+              "lat": 21.1500097,
+              "lon": 79.1079455
+            },
+            {
+              "lat": 21.1502528,
+              "lon": 79.1069739
+            },
+            {
+              "lat": 21.150466,
+              "lon": 79.1061107
+            },
+            {
+              "lat": 21.1505361,
+              "lon": 79.1058141
+            },
+            {
+              "lat": 21.1506129,
+              "lon": 79.1054436
+            },
+            {
+              "lat": 21.1507052,
+              "lon": 79.1050175
+            },
+            {
+              "lat": 21.1508056,
+              "lon": 79.1046006
+            },
+            {
+              "lat": 21.1509149,
+              "lon": 79.104085
+            },
+            {
+              "lat": 21.1509761,
+              "lon": 79.1037152
+            },
+            {
+              "lat": 21.1510222,
+              "lon": 79.103434
+            },
+            {
+              "lat": 21.1510811,
+              "lon": 79.1029281
+            },
+            {
+              "lat": 21.1511452,
+              "lon": 79.102386
+            },
+            {
+              "lat": 21.1512901,
+              "lon": 79.1013007
+            },
+            {
+              "lat": 21.1513686,
+              "lon": 79.1008834
+            },
+            {
+              "lat": 21.1514921,
+              "lon": 79.1003819
+            },
+            {
+              "lat": 21.1515981,
+              "lon": 79.0999899
+            },
+            {
+              "lat": 21.1517453,
+              "lon": 79.0994457
+            },
+            {
+              "lat": 21.1518948,
+              "lon": 79.0988316
+            },
+            {
+              "lat": 21.1522394,
+              "lon": 79.0975729
+            },
+            {
+              "lat": 21.1524196,
+              "lon": 79.0970594
+            },
+            {
+              "lat": 21.1525248,
+              "lon": 79.0967306
+            },
+            {
+              "lat": 21.1526044,
+              "lon": 79.0964416
+            },
+            {
+              "lat": 21.1526836,
+              "lon": 79.0961245
+            },
+            {
+              "lat": 21.1527942,
+              "lon": 79.0957053
+            },
+            {
+              "lat": 21.152841,
+              "lon": 79.0954926
+            },
+            {
+              "lat": 21.1528699,
+              "lon": 79.0953824
+            },
+            {
+              "lat": 21.1529575,
+              "lon": 79.0949057
+            },
+            {
+              "lat": 21.1530793,
+              "lon": 79.094424
+            },
+            {
+              "lat": 21.153307,
+              "lon": 79.0935232
+            },
+            {
+              "lat": 21.1533397,
+              "lon": 79.0933811
+            },
+            {
+              "lat": 21.1533669,
+              "lon": 79.0932411
+            },
+            {
+              "lat": 21.1533919,
+              "lon": 79.0930969
+            },
+            {
+              "lat": 21.1534084,
+              "lon": 79.0929552
+            },
+            {
+              "lat": 21.1534251,
+              "lon": 79.0927758
+            },
+            {
+              "lat": 21.1534332,
+              "lon": 79.0925242
+            },
+            {
+              "lat": 21.1534458,
+              "lon": 79.0918389
+            },
+            {
+              "lat": 21.1534396,
+              "lon": 79.0917118
+            },
+            {
+              "lat": 21.1534316,
+              "lon": 79.0916077
+            },
+            {
+              "lat": 21.1534151,
+              "lon": 79.0915037
+            },
+            {
+              "lat": 21.1533902,
+              "lon": 79.0914017
+            },
+            {
+              "lat": 21.1533573,
+              "lon": 79.0913023
+            },
+            {
+              "lat": 21.1533164,
+              "lon": 79.0912063
+            },
+            {
+              "lat": 21.153268,
+              "lon": 79.0911145
+            },
+            {
+              "lat": 21.1532119,
+              "lon": 79.0910269
+            },
+            {
+              "lat": 21.1531489,
+              "lon": 79.0909448
+            },
+            {
+              "lat": 21.1530794,
+              "lon": 79.0908689
+            },
+            {
+              "lat": 21.1530041,
+              "lon": 79.0907997
+            },
+            {
+              "lat": 21.1529234,
+              "lon": 79.0907379
+            },
+            {
+              "lat": 21.152838,
+              "lon": 79.0906838
+            },
+            {
+              "lat": 21.1527486,
+              "lon": 79.0906379
+            },
+            {
+              "lat": 21.1526557,
+              "lon": 79.0906006
+            },
+            {
+              "lat": 21.1525603,
+              "lon": 79.090572
+            },
+            {
+              "lat": 21.1523918,
+              "lon": 79.0905378
+            },
+            {
+              "lat": 21.1518963,
+              "lon": 79.090467
+            },
+            {
+              "lat": 21.1513782,
+              "lon": 79.0904167
+            },
+            {
+              "lat": 21.1501964,
+              "lon": 79.0902376
+            },
+            {
+              "lat": 21.1489982,
+              "lon": 79.0900712
+            },
+            {
+              "lat": 21.1483133,
+              "lon": 79.0899687
+            },
+            {
+              "lat": 21.1472686,
+              "lon": 79.0898505
+            },
+            {
+              "lat": 21.1468122,
+              "lon": 79.089805
+            },
+            {
+              "lat": 21.1463948,
+              "lon": 79.089756
+            },
+            {
+              "lat": 21.1460326,
+              "lon": 79.089719
+            },
+            {
+              "lat": 21.145509,
+              "lon": 79.0896655
+            },
+            {
+              "lat": 21.1453389,
+              "lon": 79.0896415
+            },
+            {
+              "lat": 21.1452115,
+              "lon": 79.0896186
+            },
+            {
+              "lat": 21.145125,
+              "lon": 79.0895918
+            },
+            {
+              "lat": 21.1450397,
+              "lon": 79.0895637
+            },
+            {
+              "lat": 21.1449668,
+              "lon": 79.0895295
+            },
+            {
+              "lat": 21.1449045,
+              "lon": 79.0895018
+            },
+            {
+              "lat": 21.1448167,
+              "lon": 79.0894545
+            },
+            {
+              "lat": 21.1447294,
+              "lon": 79.0893891
+            },
+            {
+              "lat": 21.1446371,
+              "lon": 79.0893022
+            },
+            {
+              "lat": 21.1444315,
+              "lon": 79.0890827
+            },
+            {
+              "lat": 21.1442205,
+              "lon": 79.0888356
+            },
+            {
+              "lat": 21.143932,
+              "lon": 79.0885073
+            },
+            {
+              "lat": 21.1433376,
+              "lon": 79.0878293
+            },
+            {
+              "lat": 21.1432067,
+              "lon": 79.0876701
+            },
+            {
+              "lat": 21.1431279,
+              "lon": 79.0875632
+            },
+            {
+              "lat": 21.1430694,
+              "lon": 79.0874728
+            },
+            {
+              "lat": 21.1430115,
+              "lon": 79.0873783
+            },
+            {
+              "lat": 21.1429615,
+              "lon": 79.0872842
+            },
+            {
+              "lat": 21.1429045,
+              "lon": 79.0871521
+            },
+            {
+              "lat": 21.1428289,
+              "lon": 79.0869388
+            },
+            {
+              "lat": 21.1422209,
+              "lon": 79.0850052
+            },
+            {
+              "lat": 21.142088,
+              "lon": 79.0845654
+            },
+            {
+              "lat": 21.1417525,
+              "lon": 79.083455
+            },
+            {
+              "lat": 21.1415725,
+              "lon": 79.0828592
+            }
+          ]
+        }
+      ],
+      "tags": {
+        "colour": "aqua",
+        "duration": "00:37:55",
+        "from": "Lokmanya Nagar",
+        "interval": "00:15:00",
+        "name": "Aqua Line: Lokmanya Nagar → Prajapati Nagar",
+        "network": "Nagpur Metro",
+        "network:wikidata": "Q6959014",
+        "opening_hours": "06:00-22:00",
+        "operator": "MahaMetro",
+        "public_transport:version": "2",
+        "ref": "Aqua Line",
+        "route": "subway",
+        "source:interval": "https://www.metrorailnagpur.com/time-table",
+        "to": "Prajapati Nagar",
+        "type": "route",
+        "wikidata": "Q62051025",
+        "wikipedia": "en:Aqua Line (Nagpur Metro)"
+      }
+    }
+  ]
+}

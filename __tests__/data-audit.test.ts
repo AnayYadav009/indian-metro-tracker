@@ -55,15 +55,16 @@ function makeSegment(overrides?: Partial<Record<string, unknown>>) {
     completion_unconfirmed: false,
     ...overrides,
   };
+  const geometry = (overrides?.geometry as { type: "LineString"; coordinates: [number, number][] }) || {
+    type: "LineString" as const,
+    coordinates: [
+      [77.5, 12.5],
+      [77.6, 12.5],
+    ] as [number, number][],
+  };
   return {
     type: "Feature" as const,
-    geometry: {
-      type: "LineString" as const,
-      coordinates: [
-        [77.5, 12.5],
-        [77.6, 12.5],
-      ] as [number, number][],
-    },
+    geometry,
     properties: base,
   };
 }
@@ -86,11 +87,12 @@ function makeStation(overrides?: Partial<Record<string, unknown>>) {
     last_verified: "2026-01-01",
     ...overrides,
   };
+  const coords = (overrides?.coordinates as [number, number]) || [77.5, 12.5];
   return {
     type: "Feature" as const,
     geometry: {
       type: "Point" as const,
-      coordinates: [77.5, 12.5] as [number, number],
+      coordinates: coords,
     },
     properties: base,
   };
@@ -565,6 +567,20 @@ describe("Audit Engine", () => {
       expect(unbaselined.length).toBe(1);
       expect(unbaselined[0].severity).toBe("error");
     });
+
+    it("segregates pending rules into pending list without failing CI", () => {
+      const findings: Finding[] = [
+        { city_id: "a", rule: "segment-parallel-duplicate", severity: "error", subject: "s1", message: "m1" },
+      ];
+      const baseline: BaselineFile = {
+        accepted_warnings: [],
+        pending_rules: ["segment-parallel-duplicate"],
+      };
+      const { unbaselined, pending } = applyBaseline(findings, baseline);
+      expect(unbaselined.length).toBe(0);
+      expect(pending.length).toBe(1);
+      expect(pending[0].rule).toBe("segment-parallel-duplicate");
+    });
   });
 
   describe("Deterministic output", () => {
@@ -672,6 +688,461 @@ describe("Audit Engine", () => {
       expect(selfCheckFindings.length).toBe(2);
       expect(selfCheckFindings.some((f) => f.message.includes("chronological"))).toBe(true);
       expect(selfCheckFindings.some((f) => f.message.includes("sum of stations_added"))).toBe(true);
+
+      fs.rmSync(tmpDir, { recursive: true, force: true });
+    });
+  });
+
+  describe("E. M10.3 Audit Rules", () => {
+    it("future-segment-no-stations: flags future segment with 0 stations and no stations_not_published flag", () => {
+      // Failing fixture: future segment with 0 stations
+      const failingSeg = makeSegment({
+        segment_id: "fail-future-seg",
+        status: "construction",
+        expected_completion: "2028-12",
+        inaugurated_on: null,
+        stations_count: 0,
+      });
+      const failingData = makeDataset({ segments: [failingSeg], stations: [] });
+      const failResult = runAudit(failingData, AUDIT_OPTIONS);
+      const failHits = findByRule(failResult.findings, "future-segment-no-stations");
+      expect(failHits.length).toBe(1);
+      expect(failHits[0].subject).toBe("fail-future-seg");
+
+      // Passing fixture: future segment with stations_not_published
+      const passingSeg = makeSegment({
+        segment_id: "pass-future-seg",
+        status: "construction",
+        expected_completion: "2028-12",
+        inaugurated_on: null,
+        stations_count: 0,
+        stations_not_published: true,
+      });
+      const passData = makeDataset({ segments: [passingSeg], stations: [] });
+      const passResult = runAudit(passData, AUDIT_OPTIONS);
+      const passHits = findByRule(passResult.findings, "future-segment-no-stations");
+      expect(passHits.length).toBe(0);
+    });
+
+    it("cross-network-interchange: flags adjacent stations across networks without interchange_id", () => {
+      // Failing fixture: Delhi and Gurugram stations 100m apart without interchange_id
+      const lineDel = makeLine({ id: "del-yellow", city_id: "delhi", city: "Delhi" });
+      const lineGur = makeLine({ id: "gur-rapid", city_id: "gurugram", city: "Gurugram" });
+      const stDelhi = makeStation({
+        station_id: "del-sikanderpur",
+        city_id: "delhi",
+        city: "Delhi",
+        line_ids: ["del-yellow"],
+        name: "Sikanderpur",
+        coordinates: [77.092, 28.481],
+        interchange_id: undefined,
+      });
+      const stGurugram = makeStation({
+        station_id: "gur-sikanderpur",
+        city_id: "gurugram",
+        city: "Gurugram",
+        line_ids: ["gur-rapid"],
+        name: "Sikanderpur",
+        coordinates: [77.0925, 28.481],
+        interchange_id: undefined,
+      });
+      const failingData = makeDataset({
+        cities: [
+          makeCity({ id: "delhi", name: "Delhi", bbox: [76.5, 28.0, 77.5, 29.0] }),
+          makeCity({ id: "gurugram", name: "Gurugram", bbox: [76.5, 28.0, 77.5, 29.0] }),
+        ],
+        lines: [lineDel, lineGur],
+        stations: [stDelhi, stGurugram],
+      });
+      const failResult = runAudit(failingData, AUDIT_OPTIONS);
+      const failHits = findByRule(failResult.findings, "cross-network-interchange");
+      expect(failHits.length).toBe(1);
+
+      // Passing fixture: stations share interchange_id
+      const passDelhi = makeStation({
+        station_id: "del-sikanderpur",
+        city_id: "delhi",
+        city: "Delhi",
+        line_ids: ["del-yellow"],
+        name: "Sikanderpur",
+        coordinates: [77.092, 28.481],
+        interchange_id: "sikanderpur-cluster",
+      });
+      const passGurugram = makeStation({
+        station_id: "gur-sikanderpur",
+        city_id: "gurugram",
+        city: "Gurugram",
+        line_ids: ["gur-rapid"],
+        name: "Sikanderpur",
+        coordinates: [77.0925, 28.481],
+        interchange_id: "sikanderpur-cluster",
+      });
+      const passData = makeDataset({
+        cities: [
+          makeCity({ id: "delhi", name: "Delhi", bbox: [76.5, 28.0, 77.5, 29.0] }),
+          makeCity({ id: "gurugram", name: "Gurugram", bbox: [76.5, 28.0, 77.5, 29.0] }),
+        ],
+        lines: [lineDel, lineGur],
+        stations: [passDelhi, passGurugram],
+      });
+      const passResult = runAudit(passData, AUDIT_OPTIONS);
+      const passHits = findByRule(passResult.findings, "cross-network-interchange");
+      expect(passHits.length).toBe(0);
+    });
+
+    it("verified-without-official-source: flags records with last_verified but only OSM references", () => {
+      // Failing fixture: station with last_verified and only OSM reference
+      const failingStation = makeStation({
+        station_id: "st-osm-only",
+        last_verified: "2026-01-01",
+        references: ["https://www.openstreetmap.org/node/123"],
+      });
+      const failResult = runAudit(makeDataset({ stations: [failingStation] }), AUDIT_OPTIONS);
+      const failHits = findByRule(failResult.findings, "verified-without-official-source");
+      expect(failHits.length).toBe(1);
+      expect(failHits[0].subject).toBe("st-osm-only");
+
+      // Passing fixture: station with official government reference
+      const passingStation = makeStation({
+        station_id: "st-official",
+        last_verified: "2026-01-01",
+        references: ["https://delhimetrorail.com/official-press-release"],
+      });
+      const passResult = runAudit(makeDataset({ stations: [passingStation] }), AUDIT_OPTIONS);
+      const passHits = findByRule(passResult.findings, "verified-without-official-source");
+      expect(passHits.length).toBe(0);
+    });
+
+    it("operational-station-no-opened-on: flags operational stations with null opened_on", () => {
+      // Failing fixture: operational station with null opened_on
+      const failingStation = makeStation({
+        station_id: "st-no-date",
+        status: "operational",
+        opened_on: null,
+      });
+      const failResult = runAudit(makeDataset({ stations: [failingStation] }), AUDIT_OPTIONS);
+      const failHits = findByRule(failResult.findings, "operational-station-no-opened-on");
+      expect(failHits.length).toBe(1);
+
+      // Passing fixture: operational station with opened_on date
+      const passingStation = makeStation({
+        station_id: "st-has-date",
+        status: "operational",
+        opened_on: "2020-01-01",
+      });
+      const passResult = runAudit(makeDataset({ stations: [passingStation] }), AUDIT_OPTIONS);
+      const passHits = findByRule(passResult.findings, "operational-station-no-opened-on");
+      expect(passHits.length).toBe(0);
+    });
+  });
+
+  describe("F. M8.1 Audit Rules (Blind-Spot Closure)", () => {
+    it("segment-parallel-duplicate: flags twin tracks 20 m apart for 500 m and passes separate tracks", () => {
+      // Failing fixture: twin tracks 20m apart (~0.00018 deg lat) for 500m
+      const segTrack1 = makeSegment({
+        segment_id: "seg-track-1",
+        geometry: {
+          type: "LineString",
+          coordinates: [
+            [77.5, 12.5],
+            [77.505, 12.5],
+          ],
+        },
+      });
+      const segTrack2 = makeSegment({
+        segment_id: "seg-track-2",
+        geometry: {
+          type: "LineString",
+          coordinates: [
+            [77.5, 12.50018],
+            [77.505, 12.50018],
+          ],
+        },
+      });
+      const failData = makeDataset({ segments: [segTrack1, segTrack2], stations: [] });
+      const failResult = runAudit(failData, AUDIT_OPTIONS);
+      const failHits = findByRule(failResult.findings, "segment-parallel-duplicate");
+      expect(failHits.length).toBe(1);
+      expect(failHits[0].subject).toContain("seg-track-1");
+
+      // Passing fixture: tracks separated by 500m (~0.0045 deg)
+      const passTrack2 = makeSegment({
+        segment_id: "seg-track-pass",
+        geometry: {
+          type: "LineString",
+          coordinates: [
+            [77.5, 12.505],
+            [77.505, 12.505],
+          ],
+        },
+      });
+      const passData = makeDataset({ segments: [segTrack1, passTrack2], stations: [] });
+      const passResult = runAudit(passData, AUDIT_OPTIONS);
+      const passHits = findByRule(passResult.findings, "segment-parallel-duplicate");
+      expect(passHits.length).toBe(0);
+    });
+
+    it("segment-hairpin: flags sharp 170° spike doubling back within 100 m", () => {
+      // Failing fixture: spike turning back 170° within 100m
+      const segHairpin = makeSegment({
+        segment_id: "seg-hairpin",
+        geometry: {
+          type: "LineString",
+          coordinates: [
+            [77.5, 12.5],
+            [77.5005, 12.5],
+            [77.50005, 12.50005],
+          ],
+        },
+      });
+      const failResult = runAudit(makeDataset({ segments: [segHairpin], stations: [] }), AUDIT_OPTIONS);
+      const failHits = findByRule(failResult.findings, "segment-hairpin");
+      expect(failHits.length).toBe(1);
+      expect(failHits[0].subject).toContain("seg-hairpin");
+
+      // Passing fixture: smooth curve with turn under 90°
+      const segSmooth = makeSegment({
+        segment_id: "seg-smooth",
+        geometry: {
+          type: "LineString",
+          coordinates: [
+            [77.5, 12.5],
+            [77.505, 12.5],
+            [77.508, 12.503],
+          ],
+        },
+      });
+      const passResult = runAudit(makeDataset({ segments: [segSmooth], stations: [] }), AUDIT_OPTIONS);
+      const passHits = findByRule(passResult.findings, "segment-hairpin");
+      expect(passHits.length).toBe(0);
+    });
+
+    it("segment-sparse-vertices: flags 1.5 km chord in non-schematic segment and passes schematic", () => {
+      // Failing fixture: 1.5 km straight leg (~0.014 deg lon) in non-schematic segment
+      const segChord = makeSegment({
+        segment_id: "seg-chord",
+        geometry_quality: "exact",
+        geometry: {
+          type: "LineString",
+          coordinates: [
+            [77.5, 12.5],
+            [77.514, 12.5],
+          ],
+        },
+      });
+      const failResult = runAudit(makeDataset({ segments: [segChord], stations: [] }), AUDIT_OPTIONS);
+      const failHits = findByRule(failResult.findings, "segment-sparse-vertices");
+      expect(failHits.length).toBe(1);
+      expect(failHits[0].subject).toContain("seg-chord");
+
+      // Passing fixture: 1.5 km chord in schematic segment
+      const segSchematic = makeSegment({
+        segment_id: "seg-schematic",
+        geometry_quality: "schematic",
+        geometry: {
+          type: "LineString",
+          coordinates: [
+            [77.5, 12.5],
+            [77.514, 12.5],
+          ],
+        },
+      });
+      const passResult = runAudit(makeDataset({ segments: [segSchematic], stations: [] }), AUDIT_OPTIONS);
+      const passHits = findByRule(passResult.findings, "segment-sparse-vertices");
+      expect(passHits.length).toBe(0);
+    });
+
+    it("orphan-future-station: flags future station with no nearby segment", () => {
+      // Failing fixture: future station 1 km away from any line segment
+      const futureOrphan = makeStation({
+        station_id: "st-future-orphan",
+        status: "construction",
+        expected_completion: "2028-12",
+        opened_on: null,
+        line_ids: ["tc-red"],
+        coordinates: [77.5, 12.51], // ~1.1 km north of segment at 12.5
+      });
+      const failResult = runAudit(makeDataset({ stations: [futureOrphan] }), AUDIT_OPTIONS);
+      const failHits = findByRule(failResult.findings, "orphan-future-station");
+      expect(failHits.length).toBe(1);
+      expect(failHits[0].subject).toBe("st-future-orphan");
+
+      // Passing fixture: future station close to segment (within 50m)
+      const futureNear = makeStation({
+        station_id: "st-future-near",
+        status: "construction",
+        expected_completion: "2028-12",
+        opened_on: null,
+        line_ids: ["tc-red"],
+        coordinates: [77.5, 12.5002], // ~22m away
+      });
+      const passResult = runAudit(makeDataset({ stations: [futureNear] }), AUDIT_OPTIONS);
+      const passHits = findByRule(passResult.findings, "orphan-future-station");
+      expect(passHits.length).toBe(0);
+    });
+
+    it("line-terminal-missing: flags reference terminal station not near segment end", () => {
+      const fs = require("node:fs");
+      const path = require("node:path");
+      const os = require("node:os");
+      const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), "ref-term-test-"));
+
+      const refData = {
+        city_id: "test-city",
+        compiled_on: "2026-10-07",
+        lines: [
+          {
+            line_id: "tc-red",
+            official_name: "Red Line",
+            operator: "TCRL",
+            topology: "linear",
+            status: "operational",
+            operational_stations: 2,
+            terminals: ["Station A", "Station Omega"],
+          },
+        ],
+      };
+      fs.writeFileSync(path.join(tmpDir, "test-city.json"), JSON.stringify(refData));
+
+      // Failing fixture: Station Omega is 1.5 km away from segment ends
+      const stA = makeStation({
+        station_id: "st-a",
+        name: "Station A",
+        coordinates: [77.5, 12.5], // matches start of segment
+      });
+      const stOmegaFar = makeStation({
+        station_id: "st-omega",
+        name: "Station Omega",
+        coordinates: [77.55, 12.5], // far from segment end at 77.6
+      });
+      const segRed = makeSegment({
+        segment_id: "tc-red-seg",
+        geometry: {
+          type: "LineString",
+          coordinates: [
+            [77.5, 12.5],
+            [77.6, 12.5],
+          ],
+        },
+      });
+      const failDataset = makeDataset({
+        stations: [stA, stOmegaFar],
+        segments: [segRed],
+      });
+      const failResult = runAudit(failDataset, { ...AUDIT_OPTIONS, referenceDir: tmpDir });
+      const failHits = findByRule(failResult.findings, "line-terminal-missing");
+      expect(failHits.length).toBe(1);
+      expect(failHits[0].subject).toContain("st-omega");
+
+      // Passing fixture: Station Omega is at the segment end (77.6, 12.5)
+      const stOmegaEnd = makeStation({
+        station_id: "st-omega",
+        name: "Station Omega",
+        coordinates: [77.6, 12.5],
+      });
+      const passDataset = makeDataset({
+        stations: [stA, stOmegaEnd],
+        segments: [segRed],
+      });
+      const passResult = runAudit(passDataset, { ...AUDIT_OPTIONS, referenceDir: tmpDir });
+      const passHits = findByRule(passResult.findings, "line-terminal-missing");
+      expect(passHits.length).toBe(0);
+
+      fs.rmSync(tmpDir, { recursive: true, force: true });
+    });
+
+    it("reference-construction-stretch-missing: flags missing construction segment for reference stretch", () => {
+      const fs = require("node:fs");
+      const path = require("node:path");
+      const os = require("node:os");
+      const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), "ref-con-test-"));
+
+      const refData = {
+        city_id: "test-city",
+        compiled_on: "2026-10-07",
+        lines: [
+          {
+            line_id: "tc-red",
+            official_name: "Red Line",
+            operator: "TCRL",
+            status: "under_construction",
+            terminals: ["Station A", "Station B"],
+            construction: [
+              {
+                stretch: "Station A - Station B",
+                phase: "2",
+                expected_completion: "2028-12-31",
+                stations: 2,
+              },
+            ],
+          },
+        ],
+      };
+      fs.writeFileSync(path.join(tmpDir, "test-city.json"), JSON.stringify(refData));
+
+      // Failing fixture: no construction segments for tc-red
+      const failDataset = makeDataset({ segments: [] });
+      const failResult = runAudit(failDataset, { ...AUDIT_OPTIONS, referenceDir: tmpDir });
+      const failHits = findByRule(failResult.findings, "reference-construction-stretch-missing");
+      expect(failHits.length).toBe(1);
+      expect(failHits[0].subject).toContain("Station A - Station B");
+
+      // Passing fixture: construction segment matching stretch exists
+      const conSeg = makeSegment({
+        segment_id: "tc-red-con-01",
+        status: "construction",
+        geometry: {
+          type: "LineString",
+          coordinates: [
+            [77.5, 12.5],
+            [77.6, 12.5],
+          ],
+        },
+      });
+      const passDataset = makeDataset({ segments: [conSeg] });
+      const passResult = runAudit(passDataset, { ...AUDIT_OPTIONS, referenceDir: tmpDir });
+      const passHits = findByRule(passResult.findings, "reference-construction-stretch-missing");
+      expect(passHits.length).toBe(0);
+
+      fs.rmSync(tmpDir, { recursive: true, force: true });
+    });
+
+    it("city-km-vs-reference: flags city operational length mismatch > 10% vs reference", () => {
+      const fs = require("node:fs");
+      const path = require("node:path");
+      const os = require("node:os");
+      const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), "ref-km-test-"));
+
+      const refData = {
+        city_id: "test-city",
+        compiled_on: "2026-10-07",
+        lines: [
+          {
+            line_id: "tc-red",
+            official_name: "Red Line",
+            operator: "TCRL",
+            status: "operational",
+            operational_length_km: 25.0, // Reference says 25 km
+            terminals: ["Station A", "Station B"],
+          },
+        ],
+      };
+      fs.writeFileSync(path.join(tmpDir, "test-city.json"), JSON.stringify(refData));
+
+      // Failing fixture: Data has ~10.8 km (mismatch ~56% > 10%)
+      const failDataset = makeDataset(); // segment is ~10.8 km
+      const failResult = runAudit(failDataset, { ...AUDIT_OPTIONS, referenceDir: tmpDir });
+      const failHits = findByRule(failResult.findings, "city-km-vs-reference");
+      expect(failHits.length).toBe(1);
+      expect(failHits[0].subject).toBe("test-city");
+
+      // Passing fixture: Reference is 11.0 km (~2% diff)
+      refData.lines[0].operational_length_km = 11.0;
+      fs.writeFileSync(path.join(tmpDir, "test-city.json"), JSON.stringify(refData));
+
+      const passResult = runAudit(failDataset, { ...AUDIT_OPTIONS, referenceDir: tmpDir });
+      const passHits = findByRule(passResult.findings, "city-km-vs-reference");
+      expect(passHits.length).toBe(0);
 
       fs.rmSync(tmpDir, { recursive: true, force: true });
     });
