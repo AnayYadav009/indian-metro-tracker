@@ -115,6 +115,7 @@ export interface CityOverrideData {
   }>;
   segments: Array<{
     osmId?: number;
+    orderedWayIds?: Array<{ id: number; reversed?: boolean }>;
     segment_id: string;
     line_id: string;
     line_name: string;

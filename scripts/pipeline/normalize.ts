@@ -60,7 +60,16 @@ export function isStationNode(e: { type: string; tags?: Record<string, string> }
 /**
  * Normalizes raw Overpass response elements into structured transit segments and stations.
  */
-export function normalizeOverpassCity(cityId: string, rawData: any): NormalizedCityData {
+export interface RouteWayOrder {
+  id: number;
+  reversed?: boolean;
+}
+
+export function normalizeOverpassCity(
+  cityId: string,
+  rawData: any,
+  routeWayOrders: Record<number, RouteWayOrder[]> = {}
+): NormalizedCityData {
   const elements: any[] = rawData.elements || [];
 
   // 1. Extract stations (subway, light rail, and under-construction stations)
@@ -117,7 +126,17 @@ export function normalizeOverpassCity(cityId: string, rawData: any): NormalizedC
     const stationOsmIds: number[] = [];
 
     if (rel.members && Array.isArray(rel.members)) {
-      for (const m of rel.members) {
+      const orderedWays = routeWayOrders[rel.id];
+      const members = orderedWays
+        ? [
+            ...rel.members.filter((member: any) => member.type === "node"),
+            ...orderedWays.map((way) => {
+              const member = rel.members.find((candidate: any) => candidate.type === "way" && candidate.ref === way.id);
+              return member ? { ...member, reverseGeometry: way.reversed } : undefined;
+            }).filter(Boolean),
+          ]
+        : rel.members;
+      for (const m of members) {
         if (m.type === "node" && stationsMap.has(m.ref)) {
           stationOsmIds.push(m.ref);
           if (m.role === "stop" || m.role === "platform" || m.role === "station" || !m.role) {
@@ -137,6 +156,7 @@ export function normalizeOverpassCity(cityId: string, rawData: any): NormalizedC
             Number(Number(pt.lon).toFixed(6)),
             Number(Number(pt.lat).toFixed(6)),
           ]);
+          if (m.reverseGeometry) wayCoords.reverse();
 
           if (coords.length === 0) {
             coords.push(...wayCoords);

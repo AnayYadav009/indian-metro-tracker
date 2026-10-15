@@ -84,6 +84,14 @@
     },
     {
       "osmId": 11720071,
+      "orderedWayIds": [
+        { "id": 610018751, "reversed": true },
+        { "id": 1258949231, "reversed": true },
+        { "id": 1258466136, "reversed": true },
+        { "id": 855300989, "reversed": true },
+        { "id": 1146853675 },
+        { "id": 610018750 }
+      ],
       "segment_id": "kol-green-seg-01",
       "line_id": "kol-green",
       "line_name": "Green Line (Howrah Maidan - Salt Lake Sector V)",

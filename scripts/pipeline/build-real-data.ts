@@ -47,7 +47,12 @@ export async function buildCityData(cityId: string, forceFetch = false): Promise
 
   // 2. Normalize
   console.log(`⚙️  Normalizing OSM primitives for ${cityId}...`);
-  const normalized = normalizeOverpassCity(cityId, rawData);
+  const routeWayOrders = Object.fromEntries(
+    overrides.segments
+      .filter((segment) => segment.osmId && segment.orderedWayIds)
+      .map((segment) => [segment.osmId!, segment.orderedWayIds!])
+  );
+  const normalized = normalizeOverpassCity(cityId, rawData, routeWayOrders);
   console.log(`   Found ${normalized.segments.length} route segments and ${normalized.stations.length} stations.`);
 
   // Check cache file mtime for retrieved_at date

@@ -6945,13 +6945,6 @@
     },
     {
       "city_id": "kolkata",
-      "rule": "line-terminal-missing",
-      "severity": "error",
-      "subject": "kol-green|kolkata-howrah-maidan",
-      "message": "Terminal station 'Howrah Maidan' is 2136 m away from nearest segment end of line 'kol-green' (threshold: 300 m)"
-    },
-    {
-      "city_id": "kolkata",
       "rule": "reference-construction-stretch-missing",
       "severity": "error",
       "subject": "kol-yellow|Jai Hind (Airport) - Barasat",
@@ -6963,6 +6956,13 @@
       "severity": "warn",
       "subject": "kol-yellow-seg-02",
       "message": "Future segment has no verified expected completion date"
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "kol-green",
+      "message": "Operational length: computed 15.06 km vs reference 16.55 km (9.0%)"
     },
     {
       "city_id": "kolkata",
@@ -7628,13 +7628,6 @@
       "severity": "warn",
       "subject": "kol-yellow-seg-02",
       "message": "Segment start is 9846 m from nearest station of line 'kol-yellow' (threshold: 150 m)"
-    },
-    {
-      "city_id": "kolkata",
-      "rule": "segment-sparse-vertices",
-      "severity": "warn",
-      "subject": "kol-green-seg-01|leg-20-21",
-      "message": "Segment has a leg of 2719 m without vertices (threshold: 1000 m for non-schematic segments)"
     },
     {
       "city_id": "kolkata",
