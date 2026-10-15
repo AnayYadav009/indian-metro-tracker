@@ -124,6 +124,7 @@ function main() {
     accepted,
     unreviewed,
     knownDefects,
+    pending,
     staleAccepted,
     staleUnreviewed,
     staleKnownDefects,
@@ -136,6 +137,7 @@ function main() {
   console.log(`✅ Accepted warnings (reviewed): ${accepted.length}`);
   console.log(`📋 Unreviewed warnings (awaiting city review): ${unreviewed.length}`);
   console.log(`🚨 Known walkthrough defects tracked: ${knownDefects.length}`);
+  console.log(`⏳ Pending rules (report-only): ${pending.length}`);
 
   const totalStale = staleAccepted.length + staleUnreviewed.length + staleKnownDefects.length;
   if (totalStale > 0) {

@@ -27,6 +27,10 @@ export const INITIAL_VIEW_STATE = {
   maxZoom: 18,
 };
 
+// National zoom threshold below which city hubs/networks maintain increased minimum stroke width
+export const NATIONAL_ZOOM_THRESHOLD = 6;
+export const MIN_LINE_WIDTH_LOW_ZOOM = 3.5;
+
 // Backward-compatible export constants derived from BASEMAP_CONFIG
 export const BASEMAP_STYLE_URL = BASEMAP_CONFIG.styleUrl;
 export const OSM_ATTRIBUTION = BASEMAP_CONFIG.osmAttribution;

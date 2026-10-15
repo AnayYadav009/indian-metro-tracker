@@ -40,13 +40,27 @@ export function StationDetail({ station, coordinates }: StationDetailProps) {
 
     return allLineIds.map((lineId) => {
       const line = dataset.lines.find((l) => l.id === lineId);
+      // Derive status from the line's segments in the dataset
+      const lineSegs = dataset.segments.features.filter(
+        (s) => s.properties.line_id === lineId
+      );
+      let statusLabel = "";
+      if (lineSegs.some((s) => s.properties.status === "operational")) {
+        statusLabel = "Operational";
+      } else if (lineSegs.some((s) => s.properties.status === "construction")) {
+        statusLabel = "Under Construction";
+      } else if (lineSegs.some((s) => s.properties.status === "planned")) {
+        statusLabel = "Planned";
+      }
+
       return {
         id: lineId,
         name: line?.name || lineId,
         color: line?.color || DEFAULT_LINE_FALLBACK_COLOR,
+        statusLabel,
       };
     });
-  }, [station.line_ids, station.interchange_id, dataset.stations, dataset.lines]);
+  }, [station.line_ids, station.interchange_id, dataset.stations, dataset.lines, dataset.segments]);
 
   /** Clicking a line chip selects the first operational segment of that line */
   const handleLineChipClick = useCallback(
@@ -69,11 +83,14 @@ export function StationDetail({ station, coordinates }: StationDetailProps) {
     <div data-testid="station-detail" className="flex flex-col gap-4 text-slate-200">
       {/* Station Name Header & Interchange Badge */}
       <div className="flex items-start justify-between gap-2">
-        <div>
-          <h3 className="text-lg font-bold tracking-tight text-white">
+        <div className="min-w-0 flex-1">
+          <h3
+            title={station.name}
+            className="text-base font-bold tracking-tight text-white leading-snug break-words"
+          >
             {station.name}
           </h3>
-          <p className="text-xs text-slate-400 font-mono">
+          <p className="text-xs text-slate-400 font-mono truncate mt-0.5">
             {station.station_id}
           </p>
         </div>
@@ -110,10 +127,15 @@ export function StationDetail({ station, coordinates }: StationDetailProps) {
                   className="inline-flex items-center gap-1.5"
                 >
                   <span
-                    className="h-2 w-2 rounded-full"
+                    className="h-2 w-2 rounded-full shrink-0"
                     style={{ backgroundColor: line.color }}
                   />
-                  {line.name}
+                  <span>{line.name}</span>
+                  {line.statusLabel && (
+                    <span className="text-[10px] font-normal text-slate-400">
+                      • {line.statusLabel}
+                    </span>
+                  )}
                 </span>
               </button>
             ))}
@@ -130,10 +152,15 @@ export function StationDetail({ station, coordinates }: StationDetailProps) {
                 className="inline-flex items-center gap-1.5 rounded-full border border-slate-800 bg-slate-900 px-2.5 py-1 text-xs font-semibold text-slate-100 shadow-sm"
               >
                 <span
-                  className="h-2 w-2 rounded-full"
+                  className="h-2 w-2 rounded-full shrink-0"
                   style={{ backgroundColor: line.color }}
                 />
-                {line.name}
+                <span>{line.name}</span>
+                {line.statusLabel && (
+                  <span className="text-[10px] font-normal text-slate-400">
+                    • {line.statusLabel}
+                  </span>
+                )}
               </span>
             ))}
           </div>
@@ -153,7 +180,7 @@ export function StationDetail({ station, coordinates }: StationDetailProps) {
           </span>
           <p className="font-semibold text-slate-100">
             {station.status === "operational"
-              ? station.opened_on || "N/A"
+              ? station.opened_on || "Date not recorded"
               : station.expected_completion || "TBD"}
           </p>
         </div>
@@ -185,7 +212,11 @@ export function StationDetail({ station, coordinates }: StationDetailProps) {
             {station.source}
           </span>
         </span>
-        <span>Verified: {station.last_verified}</span>
+        <span>
+          {station.last_verified
+            ? `Verified: ${station.last_verified}`
+            : "Not verified (OSM data)"}
+        </span>
       </div>
     </div>
   );

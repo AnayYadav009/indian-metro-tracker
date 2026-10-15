@@ -17,11 +17,14 @@ export function SegmentDetail({ segment }: SegmentDetailProps) {
           className="h-9 w-3 rounded-full shrink-0 shadow"
           style={{ backgroundColor: segment.color }}
         />
-        <div className="flex-1 overflow-hidden">
-          <h3 className="text-lg font-bold tracking-tight text-white truncate">
+        <div className="flex-1 min-w-0">
+          <h3
+            title={segment.line_name}
+            className="text-base font-bold tracking-tight text-white leading-snug break-words"
+          >
             {segment.line_name}
           </h3>
-          <p className="text-xs text-slate-400 font-mono truncate">
+          <p className="text-xs text-slate-400 font-mono truncate mt-0.5">
             {segment.segment_id}
           </p>
         </div>
@@ -60,7 +63,15 @@ export function SegmentDetail({ segment }: SegmentDetailProps) {
 
         <div>
           <span className="text-slate-400">Stations</span>
-          <p className="font-semibold text-slate-100">{segment.stations_count} stations</p>
+          <p className="font-semibold text-slate-100">
+            {segment.stations_not_published ||
+            ((segment.status === "construction" || segment.status === "planned") &&
+              segment.stations_count === 0)
+              ? "Stations not yet published"
+              : segment.stations_count === 1
+              ? "1 station"
+              : `${segment.stations_count} stations`}
+          </p>
         </div>
 
         <div>
@@ -74,7 +85,7 @@ export function SegmentDetail({ segment }: SegmentDetailProps) {
           </span>
           <p className="font-semibold text-slate-100">
             {segment.status === "operational"
-              ? segment.inaugurated_on || "N/A"
+              ? segment.inaugurated_on || "Date not recorded"
               : segment.expected_completion || "TBD"}
           </p>
         </div>
@@ -118,7 +129,11 @@ export function SegmentDetail({ segment }: SegmentDetailProps) {
             {segment.source}
           </span>
         </span>
-        <span>Verified: {segment.last_verified}</span>
+        <span>
+          {segment.last_verified
+            ? `Verified: ${segment.last_verified}`
+            : "Not verified (OSM data)"}
+        </span>
       </div>
     </div>
   );

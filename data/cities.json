@@ -181,5 +181,66 @@
       "III",
       "IV"
     ]
+  },
+  {
+    "id": "indore",
+    "name": "Indore",
+    "bbox": [
+      75.75,
+      22.65,
+      75.95,
+      22.82
+    ],
+    "operator": "MPMRCL",
+    "phases": [
+      "1"
+    ],
+    "network_id": "indore-metro"
+  },
+  {
+    "id": "bhopal",
+    "name": "Bhopal",
+    "bbox": [
+      77.3,
+      23.18,
+      77.55,
+      23.35
+    ],
+    "operator": "MPMRCL",
+    "phases": [
+      "1"
+    ],
+    "network_id": "bhopal-metro"
+  },
+  {
+    "id": "nagpur",
+    "name": "Nagpur",
+    "bbox": [
+      78.98,
+      21.03,
+      79.17,
+      21.2
+    ],
+    "operator": "Maha Metro",
+    "phases": [
+      "1",
+      "2"
+    ],
+    "network_id": "nagpur-metro"
+  },
+  {
+    "id": "surat",
+    "name": "Surat",
+    "bbox": [
+      72.74,
+      21.09,
+      72.93,
+      21.26
+    ],
+    "operator": "GMRC",
+    "phases": [
+      "1"
+    ],
+    "network_id": "surat-metro"
   }
 ]

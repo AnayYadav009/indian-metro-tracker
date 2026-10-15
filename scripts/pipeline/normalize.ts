@@ -50,6 +50,8 @@ export function isStationNode(e: { type: string; tags?: Record<string, string> }
     tags.subway === "yes" ||
     tags.station === "light_rail" ||
     tags.light_rail === "yes" ||
+    tags["construction:railway"] === "station" ||
+    tags["construction:station"] === "subway" ||
     (tags.railway === "construction" && (tags.construction === "station" || tags.subway === "yes"))
   );
 }

@@ -11,13 +11,14 @@ export interface ApplyBaselineResult {
   accepted: Finding[];
   unreviewed: Finding[];
   knownDefects: Finding[];
+  pending: Finding[];
   staleAccepted: BaselineEntry[];
   staleUnreviewed: BaselineEntry[];
   staleKnownDefects: KnownDefectEntry[];
 }
 
 /**
- * Separates findings into accepted, unreviewed, known defects, and unbaselined sets.
+ * Separates findings into accepted, unreviewed, known defects, pending rules, and unbaselined sets.
  * Also tracks stale baseline entries that match no active finding.
  */
 export function applyBaseline(
@@ -27,6 +28,7 @@ export function applyBaseline(
   const acceptedList = baseline.accepted_warnings || [];
   const unreviewedList = baseline.unreviewed_warnings || [];
   const knownDefectsList = baseline.known_defects || [];
+  const pendingRulesSet = new Set(baseline.pending_rules || []);
 
   const acceptedKeys = new Set(acceptedList.map((e) => `${e.city_id}|${e.rule}|${e.subject}`));
   const unreviewedKeys = new Set(unreviewedList.map((e) => `${e.city_id}|${e.rule}|${e.subject}`));
@@ -40,8 +42,14 @@ export function applyBaseline(
   const accepted: Finding[] = [];
   const unreviewed: Finding[] = [];
   const knownDefects: Finding[] = [];
+  const pending: Finding[] = [];
 
   for (const f of findings) {
+    if (pendingRulesSet.has(f.rule)) {
+      pending.push(f);
+      continue;
+    }
+
     if (f.severity !== "warn") {
       unbaselined.push(f);
       continue;
@@ -77,6 +85,7 @@ export function applyBaseline(
     accepted,
     unreviewed,
     knownDefects,
+    pending,
     staleAccepted,
     staleUnreviewed,
     staleKnownDefects,

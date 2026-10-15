@@ -1,0 +1,2443 @@
+{
+  "city": {
+    "id": "indore",
+    "name": "Indore",
+    "bbox": [
+      75.75,
+      22.65,
+      75.95,
+      22.82
+    ],
+    "operator": "MPMRCL",
+    "phases": [
+      "1"
+    ],
+    "network_id": "indore-metro"
+  },
+  "lines": [
+    {
+      "id": "ind-yellow",
+      "name": "Yellow Line (Line 3)",
+      "city": "Indore",
+      "city_id": "indore",
+      "color": "#FBBF24",
+      "operator": "MPMRCL",
+      "source": "osm+mpmrcl",
+      "notes": "Line 3 circular ring line covering 33.53 km across 29 stations."
+    }
+  ],
+  "segments": [
+    {
+      "segment_id": "ind-yellow-seg-01",
+      "line_id": "ind-yellow",
+      "line_name": "Yellow Line (Line 3)",
+      "phase": "1",
+      "status": "operational",
+      "gauge": "standard",
+      "inaugurated_on": "2025-05-31",
+      "expected_completion": null,
+      "color": "#FBBF24",
+      "coordinates": [
+        [
+          75.797484,
+          22.738985
+        ],
+        [
+          75.797764,
+          22.739564
+        ],
+        [
+          75.798044,
+          22.740188
+        ],
+        [
+          75.798248,
+          22.740599
+        ],
+        [
+          75.798305,
+          22.74072
+        ],
+        [
+          75.798445,
+          22.741032
+        ],
+        [
+          75.798677,
+          22.741528
+        ],
+        [
+          75.798857,
+          22.741908
+        ],
+        [
+          75.798982,
+          22.742144
+        ],
+        [
+          75.799141,
+          22.742412
+        ],
+        [
+          75.799304,
+          22.742676
+        ],
+        [
+          75.799486,
+          22.742934
+        ],
+        [
+          75.799825,
+          22.743403
+        ],
+        [
+          75.800004,
+          22.743661
+        ],
+        [
+          75.800158,
+          22.743898
+        ],
+        [
+          75.800323,
+          22.744165
+        ],
+        [
+          75.800449,
+          22.744387
+        ],
+        [
+          75.800573,
+          22.744624
+        ],
+        [
+          75.800639,
+          22.744755
+        ],
+        [
+          75.800702,
+          22.744887
+        ],
+        [
+          75.800847,
+          22.745213
+        ],
+        [
+          75.800899,
+          22.74534
+        ],
+        [
+          75.80094,
+          22.745448
+        ],
+        [
+          75.801023,
+          22.745675
+        ],
+        [
+          75.801105,
+          22.745925
+        ],
+        [
+          75.801201,
+          22.746248
+        ],
+        [
+          75.802462,
+          22.750874
+        ],
+        [
+          75.802545,
+          22.751175
+        ],
+        [
+          75.802639,
+          22.751474
+        ],
+        [
+          75.802747,
+          22.751766
+        ],
+        [
+          75.802871,
+          22.752053
+        ],
+        [
+          75.80301,
+          22.752334
+        ],
+        [
+          75.803161,
+          22.752608
+        ],
+        [
+          75.803327,
+          22.752876
+        ],
+        [
+          75.803505,
+          22.753135
+        ],
+        [
+          75.803691,
+          22.753383
+        ],
+        [
+          75.80423,
+          22.754087
+        ],
+        [
+          75.811131,
+          22.763114
+        ],
+        [
+          75.814007,
+          22.766871
+        ],
+        [
+          75.8142,
+          22.767121
+        ],
+        [
+          75.8144,
+          22.767369
+        ],
+        [
+          75.814602,
+          22.767611
+        ],
+        [
+          75.814808,
+          22.767851
+        ],
+        [
+          75.815021,
+          22.768086
+        ],
+        [
+          75.815237,
+          22.768322
+        ],
+        [
+          75.815459,
+          22.768551
+        ],
+        [
+          75.815683,
+          22.768777
+        ],
+        [
+          75.815912,
+          22.768998
+        ],
+        [
+          75.817524,
+          22.770525
+        ],
+        [
+          75.818392,
+          22.771335
+        ],
+        [
+          75.818916,
+          22.771825
+        ],
+        [
+          75.819353,
+          22.772227
+        ],
+        [
+          75.825259,
+          22.777739
+        ],
+        [
+          75.825782,
+          22.77823
+        ],
+        [
+          75.826233,
+          22.778644
+        ],
+        [
+          75.826786,
+          22.779149
+        ],
+        [
+          75.827019,
+          22.779367
+        ],
+        [
+          75.827242,
+          22.779593
+        ],
+        [
+          75.827452,
+          22.779827
+        ],
+        [
+          75.827656,
+          22.780061
+        ],
+        [
+          75.827868,
+          22.7803
+        ],
+        [
+          75.828097,
+          22.780529
+        ],
+        [
+          75.828338,
+          22.780739
+        ],
+        [
+          75.829831,
+          22.781954
+        ],
+        [
+          75.830911,
+          22.782818
+        ],
+        [
+          75.831847,
+          22.783567
+        ],
+        [
+          75.832467,
+          22.784032
+        ],
+        [
+          75.833293,
+          22.784618
+        ],
+        [
+          75.83405,
+          22.785075
+        ],
+        [
+          75.834688,
+          22.785399
+        ],
+        [
+          75.835324,
+          22.785684
+        ],
+        [
+          75.836018,
+          22.785998
+        ],
+        [
+          75.83621,
+          22.786103
+        ],
+        [
+          75.836496,
+          22.786279
+        ],
+        [
+          75.837081,
+          22.786631
+        ],
+        [
+          75.837674,
+          22.786988
+        ],
+        [
+          75.839497,
+          22.788079
+        ],
+        [
+          75.840846,
+          22.788877
+        ],
+        [
+          75.84124,
+          22.789098
+        ],
+        [
+          75.841632,
+          22.789293
+        ],
+        [
+          75.842024,
+          22.789461
+        ],
+        [
+          75.84252,
+          22.789632
+        ],
+        [
+          75.843035,
+          22.789768
+        ],
+        [
+          75.843494,
+          22.789864
+        ],
+        [
+          75.843966,
+          22.789928
+        ],
+        [
+          75.844483,
+          22.789965
+        ],
+        [
+          75.844945,
+          22.789965
+        ],
+        [
+          75.845427,
+          22.789953
+        ],
+        [
+          75.846121,
+          22.789923
+        ],
+        [
+          75.846815,
+          22.789893
+        ],
+        [
+          75.847731,
+          22.789891
+        ],
+        [
+          75.848053,
+          22.7899
+        ],
+        [
+          75.848295,
+          22.789887
+        ],
+        [
+          75.84852,
+          22.789849
+        ],
+        [
+          75.84874,
+          22.789764
+        ],
+        [
+          75.84894,
+          22.78964
+        ],
+        [
+          75.84912,
+          22.789475
+        ],
+        [
+          75.84936,
+          22.789188
+        ],
+        [
+          75.850031,
+          22.788337
+        ],
+        [
+          75.850506,
+          22.787738
+        ],
+        [
+          75.851142,
+          22.786952
+        ],
+        [
+          75.852274,
+          22.785553
+        ],
+        [
+          75.853977,
+          22.783344
+        ],
+        [
+          75.854374,
+          22.782838
+        ],
+        [
+          75.854773,
+          22.782329
+        ],
+        [
+          75.855146,
+          22.781856
+        ],
+        [
+          75.857069,
+          22.779536
+        ],
+        [
+          75.858231,
+          22.778113
+        ],
+        [
+          75.858423,
+          22.777845
+        ],
+        [
+          75.858649,
+          22.777531
+        ],
+        [
+          75.858934,
+          22.777123
+        ],
+        [
+          75.860771,
+          22.77454
+        ],
+        [
+          75.861781,
+          22.773102
+        ],
+        [
+          75.862621,
+          22.77188
+        ],
+        [
+          75.863448,
+          22.770677
+        ],
+        [
+          75.863833,
+          22.770096
+        ],
+        [
+          75.864178,
+          22.769559
+        ],
+        [
+          75.864522,
+          22.769023
+        ],
+        [
+          75.864762,
+          22.76865
+        ],
+        [
+          75.864916,
+          22.768437
+        ],
+        [
+          75.865068,
+          22.768266
+        ],
+        [
+          75.865301,
+          22.76808
+        ],
+        [
+          75.865567,
+          22.767926
+        ],
+        [
+          75.865923,
+          22.767774
+        ],
+        [
+          75.866467,
+          22.767557
+        ],
+        [
+          75.866706,
+          22.767441
+        ],
+        [
+          75.866943,
+          22.76729
+        ],
+        [
+          75.867301,
+          22.76698
+        ],
+        [
+          75.868453,
+          22.765895
+        ],
+        [
+          75.868657,
+          22.765721
+        ],
+        [
+          75.86888,
+          22.765538
+        ],
+        [
+          75.869301,
+          22.76522
+        ],
+        [
+          75.86984,
+          22.764809
+        ],
+        [
+          75.870387,
+          22.764391
+        ],
+        [
+          75.870602,
+          22.764226
+        ],
+        [
+          75.870824,
+          22.764083
+        ],
+        [
+          75.871055,
+          22.76396
+        ],
+        [
+          75.87136,
+          22.763849
+        ],
+        [
+          75.872016,
+          22.763631
+        ],
+        [
+          75.872276,
+          22.763525
+        ],
+        [
+          75.872479,
+          22.763412
+        ],
+        [
+          75.872728,
+          22.763238
+        ],
+        [
+          75.873683,
+          22.762398
+        ],
+        [
+          75.874839,
+          22.761348
+        ],
+        [
+          75.875032,
+          22.761142
+        ],
+        [
+          75.875213,
+          22.760904
+        ],
+        [
+          75.875308,
+          22.760721
+        ],
+        [
+          75.875395,
+          22.760508
+        ],
+        [
+          75.875495,
+          22.760243
+        ],
+        [
+          75.875712,
+          22.759642
+        ],
+        [
+          75.875929,
+          22.759042
+        ],
+        [
+          75.875998,
+          22.758845
+        ],
+        [
+          75.876106,
+          22.758578
+        ],
+        [
+          75.876235,
+          22.758279
+        ],
+        [
+          75.876388,
+          22.757981
+        ],
+        [
+          75.876571,
+          22.757661
+        ],
+        [
+          75.876767,
+          22.757354
+        ],
+        [
+          75.876975,
+          22.757062
+        ],
+        [
+          75.87728,
+          22.756674
+        ],
+        [
+          75.877492,
+          22.756403
+        ],
+        [
+          75.877856,
+          22.755927
+        ],
+        [
+          75.878202,
+          22.75548
+        ],
+        [
+          75.878366,
+          22.755276
+        ],
+        [
+          75.87851,
+          22.755114
+        ],
+        [
+          75.878673,
+          22.754972
+        ],
+        [
+          75.878911,
+          22.754831
+        ],
+        [
+          75.879132,
+          22.754748
+        ],
+        [
+          75.879535,
+          22.75465
+        ],
+        [
+          75.880194,
+          22.754505
+        ],
+        [
+          75.880855,
+          22.754359
+        ],
+        [
+          75.881365,
+          22.75424
+        ],
+        [
+          75.887827,
+          22.752802
+        ],
+        [
+          75.888487,
+          22.752655
+        ],
+        [
+          75.889145,
+          22.752509
+        ],
+        [
+          75.893616,
+          22.751516
+        ],
+        [
+          75.894276,
+          22.751369
+        ],
+        [
+          75.894938,
+          22.751221
+        ],
+        [
+          75.895857,
+          22.751012
+        ],
+        [
+          75.897663,
+          22.750605
+        ],
+        [
+          75.898909,
+          22.750274
+        ],
+        [
+          75.89932,
+          22.750177
+        ],
+        [
+          75.902346,
+          22.749575
+        ],
+        [
+          75.902554,
+          22.749518
+        ],
+        [
+          75.902752,
+          22.749437
+        ],
+        [
+          75.90293,
+          22.749323
+        ],
+        [
+          75.903085,
+          22.749189
+        ],
+        [
+          75.903217,
+          22.749018
+        ],
+        [
+          75.903313,
+          22.748842
+        ],
+        [
+          75.903373,
+          22.748649
+        ],
+        [
+          75.903393,
+          22.748472
+        ],
+        [
+          75.903396,
+          22.74831
+        ],
+        [
+          75.903355,
+          22.747994
+        ],
+        [
+          75.903271,
+          22.747372
+        ]
+      ],
+      "geometry_quality": "exact",
+      "references": [
+        "https://www.mpmetrorail.com",
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ],
+      "last_verified": "2026-10-15"
+    },
+    {
+      "segment_id": "ind-yellow-seg-02",
+      "line_id": "ind-yellow",
+      "line_name": "Yellow Line (Line 3)",
+      "phase": "1",
+      "status": "construction",
+      "gauge": "standard",
+      "inaugurated_on": null,
+      "expected_completion": "2027-12",
+      "color": "#FBBF24",
+      "coordinates": [
+        [
+          75.903271,
+          22.747372
+        ],
+        [
+          75.90253,
+          22.742119
+        ],
+        [
+          75.902457,
+          22.741507
+        ],
+        [
+          75.901853,
+          22.735446
+        ],
+        [
+          75.901821,
+          22.734522
+        ],
+        [
+          75.901836,
+          22.733906
+        ],
+        [
+          75.901919,
+          22.732993
+        ],
+        [
+          75.902019,
+          22.732388
+        ],
+        [
+          75.9022,
+          22.731809
+        ],
+        [
+          75.902491,
+          22.731248
+        ],
+        [
+          75.903144,
+          22.729979
+        ],
+        [
+          75.903316,
+          22.729539
+        ],
+        [
+          75.903579,
+          22.728732
+        ],
+        [
+          75.903944,
+          22.727701
+        ],
+        [
+          75.904763,
+          22.725899
+        ],
+        [
+          75.905574,
+          22.724477
+        ],
+        [
+          75.90573,
+          22.724124
+        ],
+        [
+          75.90585,
+          22.723766
+        ],
+        [
+          75.905946,
+          22.723266
+        ],
+        [
+          75.905989,
+          22.72283
+        ],
+        [
+          75.906034,
+          22.722243
+        ],
+        [
+          75.906058,
+          22.721082
+        ],
+        [
+          75.905976,
+          22.72078
+        ],
+        [
+          75.905786,
+          22.720534
+        ],
+        [
+          75.905433,
+          22.720342
+        ],
+        [
+          75.905025,
+          22.720262
+        ],
+        [
+          75.904677,
+          22.720272
+        ],
+        [
+          75.903806,
+          22.720405
+        ],
+        [
+          75.901263,
+          22.720752
+        ],
+        [
+          75.898675,
+          22.721138
+        ],
+        [
+          75.89781,
+          22.721235
+        ],
+        [
+          75.897064,
+          22.721304
+        ],
+        [
+          75.896716,
+          22.721353
+        ],
+        [
+          75.896384,
+          22.721455
+        ],
+        [
+          75.896098,
+          22.72165
+        ],
+        [
+          75.89583,
+          22.721783
+        ],
+        [
+          75.895487,
+          22.72188
+        ],
+        [
+          75.895034,
+          22.721947
+        ],
+        [
+          75.894726,
+          22.722101
+        ],
+        [
+          75.893949,
+          22.72291
+        ],
+        [
+          75.893604,
+          22.723091
+        ],
+        [
+          75.893212,
+          22.723172
+        ],
+        [
+          75.892561,
+          22.72343
+        ],
+        [
+          75.892167,
+          22.723505
+        ],
+        [
+          75.891195,
+          22.723501
+        ],
+        [
+          75.889235,
+          22.723524
+        ],
+        [
+          75.887313,
+          22.723725
+        ],
+        [
+          75.88646,
+          22.723767
+        ],
+        [
+          75.885889,
+          22.723723
+        ],
+        [
+          75.885051,
+          22.723506
+        ],
+        [
+          75.88343,
+          22.723085
+        ],
+        [
+          75.881614,
+          22.722615
+        ],
+        [
+          75.87622,
+          22.721187
+        ],
+        [
+          75.875141,
+          22.720905
+        ],
+        [
+          75.87325,
+          22.720497
+        ],
+        [
+          75.87268,
+          22.720393
+        ],
+        [
+          75.871334,
+          22.720169
+        ],
+        [
+          75.869043,
+          22.719879
+        ],
+        [
+          75.868186,
+          22.719864
+        ],
+        [
+          75.867443,
+          22.719864
+        ],
+        [
+          75.8637,
+          22.719864
+        ]
+      ],
+      "geometry_quality": "exact",
+      "references": [
+        "https://www.mpmetrorail.com",
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ],
+      "last_verified": "2026-10-15",
+      "endpoint_station_ids": [
+        "ind-radisson-square",
+        "ind-indore-railway"
+      ]
+    },
+    {
+      "segment_id": "ind-yellow-seg-03",
+      "line_id": "ind-yellow",
+      "line_name": "Yellow Line (Line 3)",
+      "phase": "1",
+      "status": "construction",
+      "gauge": "standard",
+      "inaugurated_on": null,
+      "expected_completion": "2028-12",
+      "color": "#FBBF24",
+      "coordinates": [
+        [
+          75.8637,
+          22.719864
+        ],
+        [
+          75.857757,
+          22.719409
+        ],
+        [
+          75.855139,
+          22.718676
+        ],
+        [
+          75.843037,
+          22.720101
+        ],
+        [
+          75.836934,
+          22.721513
+        ],
+        [
+          75.832707,
+          22.722673
+        ],
+        [
+          75.830747,
+          22.72321
+        ],
+        [
+          75.828726,
+          22.723739
+        ],
+        [
+          75.826996,
+          22.724189
+        ],
+        [
+          75.824847,
+          22.724711
+        ],
+        [
+          75.822092,
+          22.725352
+        ],
+        [
+          75.819484,
+          22.725957
+        ],
+        [
+          75.816563,
+          22.726653
+        ],
+        [
+          75.814762,
+          22.727069
+        ],
+        [
+          75.811607,
+          22.727777
+        ],
+        [
+          75.807246,
+          22.729138
+        ],
+        [
+          75.806729,
+          22.729209
+        ],
+        [
+          75.806215,
+          22.729176
+        ],
+        [
+          75.804129,
+          22.728903
+        ],
+        [
+          75.803707,
+          22.728891
+        ],
+        [
+          75.803318,
+          22.728992
+        ]
+      ],
+      "geometry_quality": "exact",
+      "references": [
+        "https://www.mpmetrorail.com",
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ],
+      "last_verified": "2026-10-15"
+    },
+    {
+      "segment_id": "ind-yellow-seg-04",
+      "line_id": "ind-yellow",
+      "line_name": "Yellow Line (Line 3)",
+      "phase": "1",
+      "status": "construction",
+      "gauge": "standard",
+      "inaugurated_on": null,
+      "expected_completion": "2028-12",
+      "color": "#FBBF24",
+      "coordinates": [
+        [
+          75.803276,
+          22.728888
+        ],
+        [
+          75.802904,
+          22.729133
+        ],
+        [
+          75.802663,
+          22.729471
+        ],
+        [
+          75.80172,
+          22.731446
+        ],
+        [
+          75.801487,
+          22.731826
+        ],
+        [
+          75.801131,
+          22.732157
+        ],
+        [
+          75.799082,
+          22.733341
+        ],
+        [
+          75.79825,
+          22.733826
+        ],
+        [
+          75.797484,
+          22.738985
+        ]
+      ],
+      "geometry_quality": "exact",
+      "references": [
+        "https://www.mpmetrorail.com",
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ],
+      "last_verified": "2026-10-15"
+    }
+  ],
+  "dedupeRadiusM": 500,
+  "stationAliases": {
+    "Devi Ahilya Bai Holkar Terminal (Gandhi Nagar)": "Gandhi Nagar",
+    "Malviya Nagar Square": "Radisson Square",
+    "Malviya Nagar Chauraha": "Radisson Square",
+    "ISBT / MR 10 Flyover-2": "ISBT / MR 10 Flyover",
+    "Meghdhoot Garden": "Meghdoot Garden",
+    "Mumtaj Bag Colony Station - 1": "Shaheed Bagh",
+    "Mumtaj Bag Colony Station - 2": "Khajrana Square",
+    "Bengali Colony Station": "Bengali Square",
+    "Patrakar Colony Station": "Patrakar Colony",
+    "Palasia Square Station": "Palasia Square",
+    "High Court / Hotel Residency Station": "High Court",
+    "Indore Railway": "Indore Railway Station",
+    "Rajwada Palace Station": "Rajwada",
+    "Maualana Azad Marg": "Maulana Azad Marg",
+    "Bada Ganpati Station": "Bada Ganpati",
+    "Ram Chandra Nagar Square Station": "Ramchandra Nagar",
+    "Kalani Nagar Station": "Kalani Nagar",
+    "BSF Station": "BSF",
+    "Indore Airport Station": "Indore Airport",
+    "ISBT / MR 10 Flyover Station": "ISBT / MR 10 Flyover"
+  },
+  "stationOverrides": {
+    "ind-gandhi-nagar": {
+      "name": "Gandhi Nagar",
+      "opened_on": "2025-05-31",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "indore-gandhi-nagar": {
+      "name": "Gandhi Nagar",
+      "opened_on": "2025-05-31",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "Gandhi Nagar": {
+      "name": "Gandhi Nagar",
+      "opened_on": "2025-05-31",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "ind-maharani-lakshmi-bai": {
+      "name": "Maharani Lakshmi Bai",
+      "opened_on": "2025-05-31",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "indore-maharani-lakshmi-bai": {
+      "name": "Maharani Lakshmi Bai",
+      "opened_on": "2025-05-31",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "Maharani Lakshmi Bai": {
+      "name": "Maharani Lakshmi Bai",
+      "opened_on": "2025-05-31",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "ind-rani-avanti-bai-lodhi": {
+      "name": "Rani Avanti Bai Lodhi",
+      "opened_on": "2025-05-31",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "indore-rani-avanti-bai-lodhi": {
+      "name": "Rani Avanti Bai Lodhi",
+      "opened_on": "2025-05-31",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "Rani Avanti Bai Lodhi": {
+      "name": "Rani Avanti Bai Lodhi",
+      "opened_on": "2025-05-31",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "ind-rani-durgavati": {
+      "name": "Rani Durgavati",
+      "opened_on": "2025-05-31",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "indore-rani-durgavati": {
+      "name": "Rani Durgavati",
+      "opened_on": "2025-05-31",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "Rani Durgavati": {
+      "name": "Rani Durgavati",
+      "opened_on": "2025-05-31",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "ind-veerangana-jhalkari-bai": {
+      "name": "Veerangana Jhalkari Bai",
+      "opened_on": "2025-05-31",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "indore-veerangana-jhalkari-bai": {
+      "name": "Veerangana Jhalkari Bai",
+      "opened_on": "2025-05-31",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "Veerangana Jhalkari Bai": {
+      "name": "Veerangana Jhalkari Bai",
+      "opened_on": "2025-05-31",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "ind-super-corridor-2": {
+      "name": "Super Corridor 2",
+      "opened_on": "2026-09-06",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "indore-super-corridor-2": {
+      "name": "Super Corridor 2",
+      "opened_on": "2026-09-06",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "Super Corridor 2": {
+      "name": "Super Corridor 2",
+      "opened_on": "2026-09-06",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "ind-super-corridor-1": {
+      "name": "Super Corridor 1",
+      "opened_on": "2026-09-06",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "indore-super-corridor-1": {
+      "name": "Super Corridor 1",
+      "opened_on": "2026-09-06",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "Super Corridor 1": {
+      "name": "Super Corridor 1",
+      "opened_on": "2026-09-06",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "ind-bhawarsala-square": {
+      "name": "Bhawarsala Square",
+      "opened_on": "2026-09-06",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "indore-bhawarsala-square": {
+      "name": "Bhawarsala Square",
+      "opened_on": "2026-09-06",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "Bhawarsala Square": {
+      "name": "Bhawarsala Square",
+      "opened_on": "2026-09-06",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "ind-mr-10-road": {
+      "name": "MR 10 Road",
+      "opened_on": "2026-09-06",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "indore-mr-10-road": {
+      "name": "MR 10 Road",
+      "opened_on": "2026-09-06",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "MR 10 Road": {
+      "name": "MR 10 Road",
+      "opened_on": "2026-09-06",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "ind-isbt-mr-10-flyover-2": {
+      "name": "ISBT / MR 10 Flyover",
+      "opened_on": "2026-09-06",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "indore-isbt-mr-10-flyover-2": {
+      "name": "ISBT / MR 10 Flyover",
+      "opened_on": "2026-09-06",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "ISBT / MR 10 Flyover": {
+      "name": "ISBT / MR 10 Flyover",
+      "opened_on": "2026-09-06",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "ind-chandragupta-square": {
+      "name": "Chandragupta Square",
+      "opened_on": "2026-09-06",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "indore-chandragupta-square": {
+      "name": "Chandragupta Square",
+      "opened_on": "2026-09-06",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "Chandragupta Square": {
+      "name": "Chandragupta Square",
+      "opened_on": "2026-09-06",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "ind-hira-nagar": {
+      "name": "Hira Nagar",
+      "opened_on": "2026-09-06",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "indore-hira-nagar": {
+      "name": "Hira Nagar",
+      "opened_on": "2026-09-06",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "Hira Nagar": {
+      "name": "Hira Nagar",
+      "opened_on": "2026-09-06",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "ind-bapat-square": {
+      "name": "Bapat Square",
+      "opened_on": "2026-09-06",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "indore-bapat-square": {
+      "name": "Bapat Square",
+      "opened_on": "2026-09-06",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "Bapat Square": {
+      "name": "Bapat Square",
+      "opened_on": "2026-09-06",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "ind-meghdoot-garden": {
+      "name": "Meghdoot Garden",
+      "opened_on": "2026-09-06",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "indore-meghdoot-garden": {
+      "name": "Meghdoot Garden",
+      "opened_on": "2026-09-06",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "Meghdoot Garden": {
+      "name": "Meghdoot Garden",
+      "opened_on": "2026-09-06",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "ind-vijay-nagar-square": {
+      "name": "Vijay Nagar Square",
+      "opened_on": "2026-09-06",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "indore-vijay-nagar-square": {
+      "name": "Vijay Nagar Square",
+      "opened_on": "2026-09-06",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "Vijay Nagar Square": {
+      "name": "Vijay Nagar Square",
+      "opened_on": "2026-09-06",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "ind-radisson-square": {
+      "name": "Radisson Square",
+      "opened_on": "2026-09-06",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "indore-radisson-square": {
+      "name": "Radisson Square",
+      "opened_on": "2026-09-06",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "Radisson Square": {
+      "name": "Radisson Square",
+      "opened_on": "2026-09-06",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "ind-shaheed-bagh": {
+      "name": "Shaheed Bagh",
+      "opened_on": null,
+      "phase": "1",
+      "status": "construction",
+      "layout": "elevated",
+      "expected_completion": "2027-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "indore-shaheed-bagh": {
+      "name": "Shaheed Bagh",
+      "opened_on": null,
+      "phase": "1",
+      "status": "construction",
+      "layout": "elevated",
+      "expected_completion": "2027-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "Shaheed Bagh": {
+      "name": "Shaheed Bagh",
+      "opened_on": null,
+      "phase": "1",
+      "status": "construction",
+      "layout": "elevated",
+      "expected_completion": "2027-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "ind-khajrana-square": {
+      "name": "Khajrana Square",
+      "opened_on": null,
+      "phase": "1",
+      "status": "construction",
+      "layout": "elevated",
+      "expected_completion": "2027-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "indore-khajrana-square": {
+      "name": "Khajrana Square",
+      "opened_on": null,
+      "phase": "1",
+      "status": "construction",
+      "layout": "elevated",
+      "expected_completion": "2027-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "Khajrana Square": {
+      "name": "Khajrana Square",
+      "opened_on": null,
+      "phase": "1",
+      "status": "construction",
+      "layout": "elevated",
+      "expected_completion": "2027-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "ind-bengali-square": {
+      "name": "Bengali Square",
+      "opened_on": null,
+      "phase": "1",
+      "status": "construction",
+      "layout": "elevated",
+      "expected_completion": "2027-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "indore-bengali-square": {
+      "name": "Bengali Square",
+      "opened_on": null,
+      "phase": "1",
+      "status": "construction",
+      "layout": "elevated",
+      "expected_completion": "2027-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "Bengali Square": {
+      "name": "Bengali Square",
+      "opened_on": null,
+      "phase": "1",
+      "status": "construction",
+      "layout": "elevated",
+      "expected_completion": "2027-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "ind-patrakar-colony": {
+      "name": "Patrakar Colony",
+      "opened_on": null,
+      "phase": "1",
+      "status": "construction",
+      "layout": "elevated",
+      "expected_completion": "2027-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "indore-patrakar-colony": {
+      "name": "Patrakar Colony",
+      "opened_on": null,
+      "phase": "1",
+      "status": "construction",
+      "layout": "elevated",
+      "expected_completion": "2027-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "Patrakar Colony": {
+      "name": "Patrakar Colony",
+      "opened_on": null,
+      "phase": "1",
+      "status": "construction",
+      "layout": "elevated",
+      "expected_completion": "2027-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "ind-palasia-square": {
+      "name": "Palasia Square",
+      "opened_on": null,
+      "phase": "1",
+      "status": "construction",
+      "layout": "elevated",
+      "expected_completion": "2027-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "indore-palasia-square": {
+      "name": "Palasia Square",
+      "opened_on": null,
+      "phase": "1",
+      "status": "construction",
+      "layout": "elevated",
+      "expected_completion": "2027-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "Palasia Square": {
+      "name": "Palasia Square",
+      "opened_on": null,
+      "phase": "1",
+      "status": "construction",
+      "layout": "elevated",
+      "expected_completion": "2027-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "ind-high-court": {
+      "name": "High Court",
+      "opened_on": null,
+      "phase": "1",
+      "status": "construction",
+      "layout": "elevated",
+      "expected_completion": "2027-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "indore-high-court": {
+      "name": "High Court",
+      "opened_on": null,
+      "phase": "1",
+      "status": "construction",
+      "layout": "elevated",
+      "expected_completion": "2027-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "High Court": {
+      "name": "High Court",
+      "opened_on": null,
+      "phase": "1",
+      "status": "construction",
+      "layout": "elevated",
+      "expected_completion": "2027-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "ind-indore-railway-station": {
+      "name": "Indore Railway Station",
+      "opened_on": null,
+      "phase": "1",
+      "status": "construction",
+      "layout": "underground",
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "indore-indore-railway-station": {
+      "name": "Indore Railway Station",
+      "opened_on": null,
+      "phase": "1",
+      "status": "construction",
+      "layout": "underground",
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "Indore Railway Station": {
+      "name": "Indore Railway Station",
+      "opened_on": null,
+      "phase": "1",
+      "status": "construction",
+      "layout": "underground",
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "ind-rajwada": {
+      "name": "Rajwada",
+      "opened_on": null,
+      "phase": "1",
+      "status": "construction",
+      "layout": "underground",
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "indore-rajwada": {
+      "name": "Rajwada",
+      "opened_on": null,
+      "phase": "1",
+      "status": "construction",
+      "layout": "underground",
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "Rajwada": {
+      "name": "Rajwada",
+      "opened_on": null,
+      "phase": "1",
+      "status": "construction",
+      "layout": "underground",
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "ind-maulana-azad-marg": {
+      "name": "Maulana Azad Marg",
+      "opened_on": null,
+      "phase": "1",
+      "status": "construction",
+      "layout": "underground",
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "indore-maulana-azad-marg": {
+      "name": "Maulana Azad Marg",
+      "opened_on": null,
+      "phase": "1",
+      "status": "construction",
+      "layout": "underground",
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "Maulana Azad Marg": {
+      "name": "Maulana Azad Marg",
+      "opened_on": null,
+      "phase": "1",
+      "status": "construction",
+      "layout": "underground",
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "ind-bada-ganpati": {
+      "name": "Bada Ganpati",
+      "opened_on": null,
+      "phase": "1",
+      "status": "construction",
+      "layout": "underground",
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "indore-bada-ganpati": {
+      "name": "Bada Ganpati",
+      "opened_on": null,
+      "phase": "1",
+      "status": "construction",
+      "layout": "underground",
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "Bada Ganpati": {
+      "name": "Bada Ganpati",
+      "opened_on": null,
+      "phase": "1",
+      "status": "construction",
+      "layout": "underground",
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "ind-ramchandra-nagar": {
+      "name": "Ramchandra Nagar",
+      "opened_on": null,
+      "phase": "1",
+      "status": "construction",
+      "layout": "underground",
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "indore-ramchandra-nagar": {
+      "name": "Ramchandra Nagar",
+      "opened_on": null,
+      "phase": "1",
+      "status": "construction",
+      "layout": "underground",
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "Ramchandra Nagar": {
+      "name": "Ramchandra Nagar",
+      "opened_on": null,
+      "phase": "1",
+      "status": "construction",
+      "layout": "underground",
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "ind-kalani-nagar": {
+      "name": "Kalani Nagar",
+      "opened_on": null,
+      "phase": "1",
+      "status": "construction",
+      "layout": "underground",
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "indore-kalani-nagar": {
+      "name": "Kalani Nagar",
+      "opened_on": null,
+      "phase": "1",
+      "status": "construction",
+      "layout": "underground",
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "Kalani Nagar": {
+      "name": "Kalani Nagar",
+      "opened_on": null,
+      "phase": "1",
+      "status": "construction",
+      "layout": "underground",
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "ind-bsf": {
+      "name": "BSF",
+      "opened_on": null,
+      "phase": "1",
+      "status": "construction",
+      "layout": "underground",
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "indore-bsf": {
+      "name": "BSF",
+      "opened_on": null,
+      "phase": "1",
+      "status": "construction",
+      "layout": "underground",
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "BSF": {
+      "name": "BSF",
+      "opened_on": null,
+      "phase": "1",
+      "status": "construction",
+      "layout": "underground",
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "ind-indore-airport": {
+      "name": "Indore Airport",
+      "opened_on": null,
+      "phase": "1",
+      "status": "construction",
+      "layout": "underground",
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "indore-indore-airport": {
+      "name": "Indore Airport",
+      "opened_on": null,
+      "phase": "1",
+      "status": "construction",
+      "layout": "underground",
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "Indore Airport": {
+      "name": "Indore Airport",
+      "opened_on": null,
+      "phase": "1",
+      "status": "construction",
+      "layout": "underground",
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "indore-bengali-colony": {
+      "name": "Bengali Colony",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "expected_completion": "2027-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "Bengali Colony": {
+      "name": "Bengali Colony",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "expected_completion": "2027-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "indore-high-court-hotel-residency": {
+      "name": "High Court / Hotel Residency",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "expected_completion": "2027-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "High Court / Hotel Residency": {
+      "name": "High Court / Hotel Residency",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "expected_completion": "2027-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "indore-mumtaj-bag-colony-1": {
+      "name": "Mumtaj Bag Colony - 1",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "expected_completion": "2027-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "Mumtaj Bag Colony - 1": {
+      "name": "Mumtaj Bag Colony - 1",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "expected_completion": "2027-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "indore-mumtaj-bag-colony-2": {
+      "name": "Mumtaj Bag Colony - 2",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "expected_completion": "2027-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "Mumtaj Bag Colony - 2": {
+      "name": "Mumtaj Bag Colony - 2",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "expected_completion": "2027-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "indore-rajwada-palace": {
+      "name": "Rajwada Palace",
+      "status": "construction",
+      "phase": "1",
+      "layout": "underground",
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "Rajwada Palace": {
+      "name": "Rajwada Palace",
+      "status": "construction",
+      "phase": "1",
+      "layout": "underground",
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "indore-ram-chandra-nagar-square": {
+      "name": "Ram Chandra Nagar Square",
+      "status": "construction",
+      "phase": "1",
+      "layout": "underground",
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "Ram Chandra Nagar Square": {
+      "name": "Ram Chandra Nagar Square",
+      "status": "construction",
+      "phase": "1",
+      "layout": "underground",
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/indore-metro-information-route-maps-project-updates/"
+      ]
+    }
+  },
+  "out_of_scope_station_ids": [
+    "indore-super-corridor-4"
+  ],
+  "intentionalBreaks": [
+    "ind-yellow-seg-01|ind-yellow-seg-03",
+    "ind-yellow-seg-02|ind-yellow-seg-04"
+  ]
+}

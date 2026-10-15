@@ -1723,6 +1723,220 @@ export function runAudit(
     }
   }
 
+  // ── M8.1 Audit Rules (Report-Only Pending Rules) ──────────────────────────
+
+  // M8.1.1: segment-parallel-duplicate
+  // Two traces of the same line run within ~60 m of each other for more than ~300 m (twin tracks)
+  // or a single polyline folded back on itself within 60 m for >300 m (Pune Line 1 defect)
+  for (const [lineId, lineSegs] of segmentsByLineId.entries()) {
+    const line = lineById.get(lineId);
+    const cityId = line?.city_id || lineSegs[0]?.properties.city_id;
+    if (!cityId) continue;
+
+    // A. Inter-segment parallel check
+    if (lineSegs.length >= 2) {
+      for (let i = 0; i < lineSegs.length; i++) {
+        for (let j = i + 1; j < lineSegs.length; j++) {
+          const segA = lineSegs[i];
+          const segB = lineSegs[j];
+          if (
+            segA.properties.geometry_quality === "schematic" ||
+            segB.properties.geometry_quality === "schematic"
+          ) {
+            continue;
+          }
+          const coordsA = segA.geometry.coordinates as [number, number][];
+          const coordsB = segB.geometry.coordinates as [number, number][];
+
+          const bboxA = segmentBbox(coordsA);
+          const bboxB = segmentBbox(coordsB);
+          const marginDeg = (cfg.parallelDuplicateMaxDistM / 111_000) * 2;
+          if (!bboxOverlap(bboxA, bboxB, marginDeg)) continue;
+
+          const lenAKm = calculateLineStringLengthKm(coordsA);
+          const lenAM = lenAKm * 1000;
+          const stepM = 25;
+          const numSamples = Math.max(2, Math.ceil(lenAM / stepM));
+
+          let parallelCount = 0;
+          for (let s = 0; s <= numSamples; s++) {
+            const t = s / numSamples;
+            const pt = interpolatePolyline(coordsA, t);
+            const distM = pointToPolylineDistanceM(pt, coordsB);
+            if (distM <= cfg.parallelDuplicateMaxDistM) {
+              parallelCount++;
+            }
+          }
+
+          const sharedParallelM = (parallelCount / (numSamples + 1)) * lenAM;
+          if (sharedParallelM >= cfg.parallelDuplicateMinSharedM) {
+            add(
+              cityId,
+              "segment-parallel-duplicate",
+              "error",
+              `${segA.properties.segment_id}|${segB.properties.segment_id}`,
+              `Segments run parallel within ${cfg.parallelDuplicateMaxDistM} m for ~${Math.round(sharedParallelM)} m (twin tracks)`
+            );
+          }
+        }
+      }
+    }
+
+    // B. Intra-segment folded track check (polyline folded back on itself)
+    for (const seg of lineSegs) {
+      if (seg.properties.geometry_quality === "schematic") continue;
+      const coords = seg.geometry.coordinates as [number, number][];
+      if (coords.length < 6) continue;
+
+      const segLenKm = calculateLineStringLengthKm(coords);
+      const segLenM = segLenKm * 1000;
+      if (segLenM < cfg.parallelDuplicateMinSharedM * 2) continue;
+
+      // Sample along the segment and check distance to non-adjacent parts of itself
+      const stepM = 30;
+      const numSamples = Math.max(4, Math.ceil(segLenM / stepM));
+      const samplePoints: Array<{ t: number; pt: [number, number]; distAlongM: number }> = [];
+
+      for (let s = 0; s <= numSamples; s++) {
+        const t = s / numSamples;
+        samplePoints.push({
+          t,
+          pt: interpolatePolyline(coords, t),
+          distAlongM: t * segLenM,
+        });
+      }
+
+      let foldedParallelCount = 0;
+      for (let s = 0; s < samplePoints.length; s++) {
+        const sp = samplePoints[s];
+        // Check distance to points that are at least parallelDuplicateMinSharedM away along-track
+        for (let other = 0; other < samplePoints.length; other++) {
+          const op = samplePoints[other];
+          if (Math.abs(sp.distAlongM - op.distAlongM) >= cfg.parallelDuplicateMinSharedM) {
+            const d = haversineDistanceKm(sp.pt, op.pt) * 1000;
+            if (d <= cfg.parallelDuplicateMaxDistM) {
+              foldedParallelCount++;
+              break;
+            }
+          }
+        }
+      }
+
+      const foldedSharedM = (foldedParallelCount / samplePoints.length) * segLenM;
+      if (foldedSharedM >= cfg.parallelDuplicateMinSharedM) {
+        add(
+          cityId,
+          "segment-parallel-duplicate",
+          "error",
+          seg.properties.segment_id,
+          `Segment polyline folds back on itself running parallel within ${cfg.parallelDuplicateMaxDistM} m for ~${Math.round(foldedSharedM)} m`
+        );
+      }
+    }
+  }
+
+  // M8.1.2: segment-hairpin
+  // A turn sharper than ~150 degrees within ~300 m (a spike that doubles back)
+  for (const seg of segments.features) {
+    const p = seg.properties;
+    const coords = seg.geometry.coordinates as [number, number][];
+    if (coords.length < 3) continue;
+
+    for (let i = 1; i < coords.length - 1; i++) {
+      const a = coords[i - 1];
+      const b = coords[i];
+      const c = coords[i + 1];
+
+      const ux = b[0] - a[0];
+      const uy = b[1] - a[1];
+      const vx = c[0] - b[0];
+      const vy = c[1] - b[1];
+      const denom = Math.hypot(ux, uy) * Math.hypot(vx, vy);
+      if (denom === 0) continue;
+
+      const cosVal = Math.max(-1, Math.min(1, (ux * vx + uy * vy) / denom));
+      const interiorAngleDeg = (Math.acos(cosVal) * 180) / Math.PI;
+      const spanM =
+        haversineDistanceKm(a, b) * 1000 + haversineDistanceKm(b, c) * 1000;
+
+      if (interiorAngleDeg >= cfg.hairpinAngleDeg && spanM <= cfg.hairpinSpanM) {
+        add(
+          p.city_id,
+          "segment-hairpin",
+          "error",
+          `${p.segment_id}|v${i}`,
+          `Segment contains hairpin turn of ${Math.round(interiorAngleDeg)}° within ${Math.round(spanM)} m span (threshold: ${cfg.hairpinAngleDeg}° / ${cfg.hairpinSpanM} m)`
+        );
+      }
+    }
+  }
+
+  // M8.1.3: segment-sparse-vertices
+  // A leg longer than ~1 km in a segment not marked schematic (straight chord across a curve)
+  for (const seg of segments.features) {
+    const p = seg.properties;
+    if (p.geometry_quality === "schematic") continue;
+    const coords = seg.geometry.coordinates as [number, number][];
+    if (coords.length < 2) continue;
+
+    for (let i = 0; i < coords.length - 1; i++) {
+      const legDistM = haversineDistanceKm(coords[i], coords[i + 1]) * 1000;
+      if (legDistM > cfg.sparseVertexMaxChordM) {
+        add(
+          p.city_id,
+          "segment-sparse-vertices",
+          "warn",
+          `${p.segment_id}|leg-${i}-${i + 1}`,
+          `Segment has a leg of ${Math.round(legDistM)} m without vertices (threshold: ${cfg.sparseVertexMaxChordM} m for non-schematic segments)`
+        );
+      }
+    }
+  }
+
+  // M8.1.4: orphan-future-station
+  // Construction or planned stations must also pass the orphan and 75 m / 250 m checks
+  for (const st of stations.features) {
+    const p = st.properties;
+    if (p.status !== "construction" && p.status !== "planned") continue;
+
+    const stCoord = st.geometry.coordinates as [number, number];
+    let minDistAnyLineSeg = Infinity;
+
+    for (const lineId of p.line_ids) {
+      const lineSegs = segmentsByLineId.get(lineId) || [];
+      let minDistThisLine = Infinity;
+
+      for (const seg of lineSegs) {
+        const d = pointToPolylineDistanceM(
+          stCoord,
+          seg.geometry.coordinates as [number, number][]
+        );
+        if (d < minDistThisLine) minDistThisLine = d;
+        if (d < minDistAnyLineSeg) minDistAnyLineSeg = d;
+      }
+
+      if (lineSegs.length > 0 && minDistThisLine > cfg.stationFarFromAllSegmentsM) {
+        add(
+          p.city_id,
+          "orphan-future-station",
+          "error",
+          p.station_id,
+          `Future station is ${Math.round(minDistThisLine)} m from nearest segment of line '${lineId}' (threshold: ${cfg.stationFarFromAllSegmentsM} m)`
+        );
+      }
+    }
+
+    if (minDistAnyLineSeg === Infinity) {
+      add(
+        p.city_id,
+        "orphan-future-station",
+        "error",
+        p.station_id,
+        `Future station has no segments for any of its lines`
+      );
+    }
+  }
+
   // ── D. Ground truth comparison ───────────────────────────────────────────
 
   const refDir =
@@ -1846,11 +2060,13 @@ export function runAudit(
       // D2: Terminal station names (after alias normalization)
       if (refLine.terminals && refLine.terminals.length > 0) {
         const lineStations = stationsByLineId.get(refLine.line_id) || [];
+        const lineSegs = segmentsByLineId.get(refLine.line_id) || [];
         const stationNames = new Set(
           lineStations.map((s) => normalizeStationName(s.properties.name))
         );
         for (const terminal of refLine.terminals) {
-          if (!stationNames.has(normalizeStationName(terminal))) {
+          const normTerm = normalizeStationName(terminal);
+          if (!stationNames.has(normTerm)) {
             const isUnverified = refLine.confidence === "unverified";
             const sev: Severity = isUnverified ? "warn" : "error";
             const label = isUnverified ? " (unverified reference)" : "";
@@ -1861,6 +2077,45 @@ export function runAudit(
               refLine.line_id,
               `Terminal '${terminal}' from reference not found in data station names${label}`
             );
+          } else {
+            // M8.1.5: line-terminal-missing
+            // Every terminal in the reference must have a station within ~300 m of a segment end of that line
+            const termStation = lineStations.find(
+              (s) => normalizeStationName(s.properties.name) === normTerm
+            );
+            if (termStation && lineSegs.length > 0) {
+              const stCoord = termStation.geometry.coordinates as [number, number];
+              let minEndDistM = Infinity;
+
+              for (const seg of lineSegs) {
+                const coords = seg.geometry.coordinates as [number, number][];
+                if (coords.length < 2) continue;
+                const startPt = coords[0];
+                const endPt = coords[coords.length - 1];
+                const dStart = haversineDistanceKm(stCoord, startPt) * 1000;
+                const dEnd = haversineDistanceKm(stCoord, endPt) * 1000;
+                if (dStart < minEndDistM) minEndDistM = dStart;
+                if (dEnd < minEndDistM) minEndDistM = dEnd;
+              }
+
+              if (minEndDistM > cfg.terminalToSegmentEndMaxM) {
+                add(
+                  city.id,
+                  "line-terminal-missing",
+                  "error",
+                  `${refLine.line_id}|${termStation.properties.station_id}`,
+                  `Terminal station '${terminal}' is ${Math.round(minEndDistM)} m away from nearest segment end of line '${refLine.line_id}' (threshold: ${cfg.terminalToSegmentEndMaxM} m)`
+                );
+              }
+            } else if (!termStation || lineSegs.length === 0) {
+              add(
+                city.id,
+                "line-terminal-missing",
+                "error",
+                `${refLine.line_id}|${terminal}`,
+                `Terminal station '${terminal}' has no segment endpoints on line '${refLine.line_id}'`
+              );
+            }
           }
         }
       }
@@ -1938,6 +2193,66 @@ export function runAudit(
               `Construction stretch '${con.stretch}' has invalid source kind '${con.source.kind}'`
             );
           }
+
+          // M8.1.6: reference-construction-stretch-missing
+          // Every construction[] stretch in the reference needs a data segment with matching status
+          const lineSegs = segmentsByLineId.get(refLine.line_id) || [];
+          const conSegs = lineSegs.filter((s) => s.properties.status === "construction");
+
+          // Parse stretch terminals if formatted like "Start - End" or "Start to End"
+          const stretchParts = con.stretch
+            .split(/\s*(?:-|–|—|to)\s*/i)
+            .map((s) => s.trim())
+            .filter(Boolean);
+
+          if (conSegs.length === 0) {
+            add(
+              city.id,
+              "reference-construction-stretch-missing",
+              "error",
+              `${refLine.line_id}|${con.stretch}`,
+              `Construction stretch '${con.stretch}' declared in reference has no construction segments in data`
+            );
+          } else if (stretchParts.length >= 2) {
+            const lineStations = stationsByLineId.get(refLine.line_id) || [];
+            const stA = lineStations.find(
+              (s) => normalizeStationName(s.properties.name) === normalizeStationName(stretchParts[0])
+            );
+            const stB = lineStations.find(
+              (s) => normalizeStationName(s.properties.name) === normalizeStationName(stretchParts[1])
+            );
+
+            if (stA && stB) {
+              const ptA = stA.geometry.coordinates as [number, number];
+              const ptB = stB.geometry.coordinates as [number, number];
+
+              // Verify if there is any construction segment whose ends match ptA and ptB within threshold
+              const hasMatchingSeg = conSegs.some((seg) => {
+                const coords = seg.geometry.coordinates as [number, number][];
+                if (coords.length < 2) return false;
+                const segStart = coords[0];
+                const segEnd = coords[coords.length - 1];
+
+                const matchDirect =
+                  haversineDistanceKm(ptA, segStart) * 1000 <= cfg.constructionStretchEndMaxM &&
+                  haversineDistanceKm(ptB, segEnd) * 1000 <= cfg.constructionStretchEndMaxM;
+                const matchReverse =
+                  haversineDistanceKm(ptA, segEnd) * 1000 <= cfg.constructionStretchEndMaxM &&
+                  haversineDistanceKm(ptB, segStart) * 1000 <= cfg.constructionStretchEndMaxM;
+                return matchDirect || matchReverse;
+              });
+
+              if (!hasMatchingSeg) {
+                add(
+                  city.id,
+                  "reference-construction-stretch-missing",
+                  "error",
+                  `${refLine.line_id}|${con.stretch}`,
+                  `Construction stretch '${con.stretch}' endpoints ('${stretchParts[0]}', '${stretchParts[1]}') do not match endpoints of any construction segment within ${cfg.constructionStretchEndMaxM} m`
+                );
+              }
+            }
+          }
         }
       }
 
@@ -1999,6 +2314,37 @@ export function runAudit(
             `Operational length: computed ${totalKm.toFixed(2)} km vs reference ${refLengthKm} km (${(diff * 100).toFixed(1)}%)${label}`
           );
         }
+      }
+    }
+
+    // M8.1.7: city-km-vs-reference
+    // City operational km differs from the reference by more than 10 percent (each line counted once)
+    let cityDataOpKm = 0;
+    let cityRefOpKm = 0;
+
+    for (const refLine of refData.lines) {
+      if (refLine.operational_length_km != null) {
+        cityRefOpKm += refLine.operational_length_km;
+      }
+      const lineSegs = segmentsByLineId.get(refLine.line_id) || [];
+      const opSegs = lineSegs.filter((s) => s.properties.status === "operational");
+      const lineKm = opSegs.reduce(
+        (acc, s) => acc + calculateLineStringLengthKm(s.geometry.coordinates as [number, number][]),
+        0
+      );
+      cityDataOpKm += lineKm;
+    }
+
+    if (cityRefOpKm > 0) {
+      const cityKmDiff = Math.abs(cityDataOpKm - cityRefOpKm) / cityRefOpKm;
+      if (cityKmDiff > cfg.cityKmVsReferenceErrorPct) {
+        add(
+          city.id,
+          "city-km-vs-reference",
+          "error",
+          city.id,
+          `City operational km differs from reference by ${(cityKmDiff * 100).toFixed(1)}%: computed ${cityDataOpKm.toFixed(2)} km vs reference ${cityRefOpKm.toFixed(2)} km (threshold: ${cfg.cityKmVsReferenceErrorPct * 100}%)`
+        );
       }
     }
 

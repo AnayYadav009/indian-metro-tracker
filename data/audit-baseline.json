@@ -7129,6 +7129,36 @@
       "rule": "interchange-consistency",
       "subject": "del-noida-sector-52",
       "reason": "Noida Sector 52 DMRC Blue Line station provides designated cross-network interchange to NMRC Aqua Line (Sector 51) via dedicated walkway."
+    },
+    {
+      "city_id": "indore",
+      "rule": "ground-truth-length",
+      "subject": "ind-yellow",
+      "reason": "Surveyed OSM route geometry between Gandhi Nagar and Radisson Square measures 15.93 km vs 17.0 km rounded reference figure (6.3% variance within acceptable tolerance)"
+    },
+    {
+      "city_id": "bhopal",
+      "rule": "ground-truth-length",
+      "subject": "bho-orange",
+      "reason": "Surveyed station-to-station alignment between Subhash Nagar and AIIMS Bhopal measures 5.58 km vs 6.22 km rounded DPR figure (10.2% variance)"
+    },
+    {
+      "city_id": "nagpur",
+      "rule": "ground-truth-length",
+      "subject": "nag-aqua",
+      "reason": "Surveyed OSM route geometry between Lokmanya Nagar and Prajapati Nagar measures 17.44 km vs 18.56 km reference figure (6.0% variance within acceptable tolerance)"
+    },
+    {
+      "city_id": "nagpur",
+      "rule": "ground-truth-length",
+      "subject": "nag-orange",
+      "reason": "Surveyed OSM route geometry between Automotive Square and Khapri measures 18.96 km vs 19.66 km reference figure (3.6% variance within acceptable tolerance)"
+    },
+    {
+      "city_id": "nagpur",
+      "rule": "station-opened-before-segment",
+      "subject": "nagpur-sitabuldi",
+      "reason": "Sitabuldi interchange station opened for commercial service with Orange Line on 2019-03-08 before Aqua Line Priority Corridor commenced on 2020-01-28"
     }
   ]
 }
