@@ -42,20 +42,25 @@ export function useUrlSync() {
       }
 
       // Hydrate status
-      const statusParam = params.get("status");
-      if (statusParam) {
-        const statuses = statusParam.split(",").filter((s) =>
-          ["operational", "construction", "planned"].includes(s)
-        ) as Status[];
-        if (statuses.length > 0) {
-          setStatuses(statuses);
-        }
+      const validStatuses = new Set<Status>([
+        "operational",
+        "construction",
+        "planned",
+      ]);
+      const statuses = (params.get("status")?.split(",") ?? []).filter(
+        (status): status is Status => validStatuses.has(status as Status)
+      );
+      if (statuses.length) {
+        setStatuses(statuses);
       }
 
       // Hydrate phases only if city is present
       const phaseParam = params.get("phase");
       if (city && phaseParam) {
-        const phases = phaseParam.split(",").map((p) => decodeURIComponent(p.trim())).filter(Boolean);
+        const phases = phaseParam
+          .split(",")
+          .map((phase) => decodeURIComponent(phase.trim()))
+          .filter(Boolean);
         if (phases.length > 0) {
           setPhases(phases);
         }
@@ -65,20 +70,19 @@ export function useUrlSync() {
 
       // Hydrate selection: ?selected=segment:del-yellow-seg-01 or ?selected=station:del-rajiv-chowk
       const selectedParam = params.get("selected");
-      if (selectedParam && selectedParam.includes(":")) {
-        const colonIndex = selectedParam.indexOf(":");
+      const colonIndex = selectedParam?.indexOf(":") ?? -1;
+      if (selectedParam && colonIndex > -1) {
         const type = selectedParam.slice(0, colonIndex);
         const id = selectedParam.slice(colonIndex + 1);
-
         if (id && type === "segment") {
-          const seg = getSegmentById(id);
-          if (seg && (!city || seg.properties.city_id === city)) {
-            setSelectedFeature({ type: "segment", data: seg.properties });
+          const segment = getSegmentById(id);
+          if (segment && (!city || segment.properties.city_id === city)) {
+            setSelectedFeature({ type, data: segment.properties });
           }
         } else if (id && type === "station") {
-          const stn = getStationById(id);
-          if (stn && (!city || stn.properties.city_id === city)) {
-            setSelectedFeature({ type: "station", data: stn.properties });
+          const station = getStationById(id);
+          if (station && (!city || station.properties.city_id === city)) {
+            setSelectedFeature({ type, data: station.properties });
           }
         }
       }
@@ -101,7 +105,13 @@ export function useUrlSync() {
       console.warn("Failed to parse URL search parameters:", err);
       isHydrated.current = true;
     }
-  }, [setSelectedCity, setStatuses, setPhases, setSelectedFeature, toggleStations]);
+  }, [
+    setSelectedCity,
+    setStatuses,
+    setPhases,
+    setSelectedFeature,
+    toggleStations,
+  ]);
 
   // 2. Sync state updates back to URL
   useEffect(() => {
@@ -144,7 +154,9 @@ export function useUrlSync() {
       }
 
       const queryString = params.toString();
-      const newUrl = queryString ? `${window.location.pathname}?${queryString}` : window.location.pathname;
+      const newUrl = queryString
+        ? `${window.location.pathname}?${queryString}`
+        : window.location.pathname;
 
       window.history.replaceState(null, "", newUrl);
     } catch (err) {

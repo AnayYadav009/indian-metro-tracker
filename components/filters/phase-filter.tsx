@@ -13,7 +13,6 @@ export function PhaseFilter() {
 
   const dataset = getMetroData();
 
-  // Determine active city
   const activeCity = selectedCityId
     ? dataset.cities.find((c) => c.id === selectedCityId)
     : null;
@@ -34,7 +33,7 @@ export function PhaseFilter() {
     );
   }
 
-  const availablePhases = activeCity.phases || [];
+  const availablePhases = activeCity.phases ?? [];
 
   if (availablePhases.length === 0) return null;
 

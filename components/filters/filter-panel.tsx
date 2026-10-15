@@ -17,7 +17,6 @@ export function FilterPanel() {
   const setSearchQuery = useMetroStore((state) => state.setSearchQuery);
   const resetFilters = useMetroStore((state) => state.resetFilters);
 
-  // Compute number of non-default filters active
   const hasActiveFilters =
     selectedCityId !== null ||
     selectedStatuses.length < 3 ||
@@ -29,7 +28,6 @@ export function FilterPanel() {
       data-testid="filter-panel"
       className="absolute top-4 left-4 z-20 w-[92vw] max-w-sm rounded-xl border border-slate-800 bg-slate-900/95 p-4 text-slate-100 shadow-2xl backdrop-blur-md transition-all sm:w-96"
     >
-      {/* Header bar */}
       <div className="flex items-center justify-between pb-2 border-b border-slate-800/80">
         <div className="flex items-center gap-2">
           <SlidersHorizontal className="h-4 w-4 text-emerald-400" />
@@ -68,10 +66,8 @@ export function FilterPanel() {
         </div>
       </div>
 
-      {/* Collapsible content */}
       {!isCollapsed && (
         <div className="mt-3 flex flex-col gap-4 text-xs max-h-[340px] sm:max-h-[calc(100vh-8rem)] overflow-y-auto pr-1">
-          {/* Search box */}
           <div className="relative">
             <Search className="absolute left-2.5 top-2.5 h-3.5 w-3.5 text-slate-400" />
             <input
@@ -93,13 +89,10 @@ export function FilterPanel() {
             )}
           </div>
 
-          {/* City Selection */}
           <CitySelect />
 
-          {/* Status Selection */}
           <StatusFilter />
 
-          {/* Dynamic Phase Selection */}
           <PhaseFilter />
         </div>
       )}
