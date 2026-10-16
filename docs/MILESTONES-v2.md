@@ -34,7 +34,7 @@ Read before starting any milestone: `docs/BLUEPRINT.md`, `docs/DATA-STANDARDS.md
 | M13 | Timeline slider | Year scrubber using existing `inaugurated_on` and `opened_on` | Complete |
 | M13.1 | UX hardening | Walkthrough UX issues, carry-over of the 10 Oct map fixes | In progress |
 | M14 | Stats and comparison | Static `/compare/` page | Not started |
-| M15 | Tier 2 onboarding | Batches A to C, same runbook as Tier 1 | In progress: data exists, acceptance gate remains |
+| M15 | Tier 2 onboarding | Batches A to C, same runbook as Tier 1 | Complete: all 12 candidate cities onboarded |
 | M16 | Nearest station | Client-side geolocation lookup | Not started |
 | M17 | City pages and SEO | `/city/[id]/` static pages, sitemap, metadata | Not started |
 | M18 | Route finder | Client-side graph search with transfers | Not started |
@@ -301,6 +301,16 @@ Tier 1 = Delhi, Bengaluru, Mumbai, Chennai, Kolkata, Hyderabad.
 - **Bhopal** (Complete): Orange Line (Line 2: 8 op, 8 const) & Blue Line (Line 5: 14 const), Pul Bogda interchange. Passed `validate:data`, `audit:data` and visual QA.
 - **Nagpur** (Complete): Orange Line (Line 1: 18 op stations, 18.96 km) & Aqua Line (Line 2: 20 op stations, 17.44 km), Sitabuldi interchange. Passed `validate:data`, `audit:data` and visual QA.
 - **Surat** (Complete): Red Line (Phase 1: 21 stations, 21.61 km, under construction) & Green Line (Phase 1: 18 stations, 18.74 km, under construction), Majura Gate interchange. Passed `validate:data`, `audit:data` and visual QA.
+
+**Batch 2 (Complete):**
+- **Kochi** (Complete): Line 1 Blue Line (25 op stations, 27.95 km op, 1 segment). Passed `validate:data`, `audit:data` and visual QA.
+- **Lucknow** (Complete): Red Line North-South Corridor (21 op stations, 23.386 km op, 1 segment). Passed `validate:data`, `audit:data` and visual QA.
+- **Kanpur** (Complete): Orange Line Corridor 1 (14 op stations, 14.643 km op, 1 segment). Passed `validate:data`, `audit:data` and visual QA.
+
+**Batch 3 (Complete):**
+- **Agra** (Complete): Yellow Line Priority Corridor (6 op stations, 4.957 km op, 1 segment). Passed `validate:data`, `audit:data` and visual QA.
+- **Jaipur** (Complete): Pink Line Phase 1A + 1B (11 op stations, 10.91 km op, 1 segment). Passed `validate:data`, `audit:data` and visual QA.
+- **Patna** (Complete): Blue Line Priority Corridor (5 op stations, 5.283 km op, 1 segment). Passed `validate:data`, `audit:data` and visual QA.
 
 ---
 
