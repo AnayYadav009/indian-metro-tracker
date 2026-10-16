@@ -1,0 +1,896 @@
+{
+  "city": {
+    "id": "kochi",
+    "name": "Kochi",
+    "bbox": [
+      76.25,
+      9.92,
+      76.38,
+      10.14
+    ],
+    "operator": "KMRL",
+    "phases": [
+      "1"
+    ],
+    "network_id": "kochi-metro"
+  },
+  "lines": [
+    {
+      "id": "koc-blue",
+      "name": "Line 1 (Blue Line)",
+      "city": "Kochi",
+      "city_id": "kochi",
+      "color": "#0284C7",
+      "operator": "KMRL",
+      "source": "osm+kmrl",
+      "notes": "Line 1 connects Aluva to Thrippunithura Terminal (28.12 km, 25 elevated stations). Fully operational."
+    }
+  ],
+  "segments": [
+    {
+      "osmId": 7752157,
+      "segment_id": "koc-blue-seg-01",
+      "line_id": "koc-blue",
+      "line_name": "Line 1 (Blue Line)",
+      "phase": "1",
+      "status": "operational",
+      "gauge": "standard",
+      "inaugurated_on": "2017-06-19",
+      "expected_completion": null,
+      "color": "#0284C7",
+      "orderedWayIds": [
+        {
+          "id": 686311423,
+          "reversed": false
+        },
+        {
+          "id": 548696491,
+          "reversed": false
+        },
+        {
+          "id": 548696490,
+          "reversed": false
+        },
+        {
+          "id": 548696489,
+          "reversed": false
+        },
+        {
+          "id": 548696488,
+          "reversed": false
+        },
+        {
+          "id": 548696487,
+          "reversed": false
+        },
+        {
+          "id": 548696486,
+          "reversed": false
+        },
+        {
+          "id": 548696484,
+          "reversed": false
+        },
+        {
+          "id": 548696483,
+          "reversed": false
+        },
+        {
+          "id": 548696482,
+          "reversed": false
+        },
+        {
+          "id": 548696481,
+          "reversed": false
+        },
+        {
+          "id": 686311421,
+          "reversed": false
+        },
+        {
+          "id": 548696480,
+          "reversed": false
+        },
+        {
+          "id": 499054966,
+          "reversed": false
+        },
+        {
+          "id": 548696479,
+          "reversed": false
+        },
+        {
+          "id": 548268961,
+          "reversed": true
+        },
+        {
+          "id": 686311422,
+          "reversed": true
+        },
+        {
+          "id": 265569665,
+          "reversed": true
+        },
+        {
+          "id": 845049742,
+          "reversed": true
+        },
+        {
+          "id": 845049740,
+          "reversed": true
+        },
+        {
+          "id": 845049739,
+          "reversed": true
+        },
+        {
+          "id": 845049738,
+          "reversed": true
+        }
+      ],
+      "references": [
+        "https://kochimetro.org"
+      ],
+      "last_verified": "2026-10-16",
+      "geometry_quality": "exact"
+    }
+  ],
+  "stationOverrides": {
+    "kochi-aluva": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-06-19",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "Aluva": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-06-19",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "kochi-pulinchodu": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-06-19",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "Pulinchodu": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-06-19",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "kochi-companypady": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-06-19",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "Companypady": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-06-19",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "kochi-ambattukavu": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-06-19",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "Ambattukavu": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-06-19",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "kochi-muttom": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-06-19",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "Muttom": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-06-19",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "kochi-kalamassery-town": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-06-19",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "Kalamassery Town": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-06-19",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "kochi-cochin-university": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-06-19",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "Cochin University": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-06-19",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "kochi-pathadipalam": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-06-19",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "Pathadipalam": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-06-19",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "kochi-edappally": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-06-19",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "Edappally": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-06-19",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "kochi-changampuzha-park": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-06-19",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "Changampuzha Park": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-06-19",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "kochi-palarivattom": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-06-19",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "Palarivattom": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-06-19",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "kochi-jln-stadium": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-10-03",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "JLN Stadium": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-10-03",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "kochi-kaloor": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-10-03",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "Kaloor": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-10-03",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "kochi-town-hall": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-10-03",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "Town Hall": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-10-03",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "kochi-m-g-road": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-10-03",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "M. G. Road": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-10-03",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "kochi-maharajas-college": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-10-03",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "Maharaja's College": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-10-03",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "kochi-ernakulam-south": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2019-09-03",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "Ernakulam South": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2019-09-03",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "kochi-kadavanthra": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2019-09-03",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "Kadavanthra": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2019-09-03",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "kochi-elamkulam": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2019-09-03",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "Elamkulam": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2019-09-03",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "kochi-vyttila": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2019-09-03",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "Vyttila": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2019-09-03",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "kochi-thykoodam": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2019-09-03",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "Thykoodam": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2019-09-03",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "kochi-petta": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2020-09-07",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "Petta": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2020-09-07",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "kochi-vadakkekotta": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2022-09-01",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "Vadakkekotta": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2022-09-01",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "kochi-sn-junction": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2022-09-01",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "SN Junction": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2022-09-01",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "kochi-thrippunithura-terminal": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2024-03-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    },
+    "Thrippunithura Terminal": {
+      "line_ids": [
+        "koc-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2024-03-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://kochimetro.org"
+      ]
+    }
+  },
+  "stationAliases": {
+    "pettah": "Petta"
+  },
+  "out_of_scope_station_ids": [
+    "kochi-infopark-i"
+  ]
+}

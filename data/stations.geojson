@@ -26672,6 +26672,831 @@
         "last_verified": "2026-10-15",
         "retrieved_at": "2026-10-15"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.34939,
+          10.11023
+        ]
+      },
+      "properties": {
+        "station_id": "kochi-aluva",
+        "name": "Aluva",
+        "city_id": "kochi",
+        "city": "Kochi",
+        "line_ids": [
+          "koc-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2017-06-19",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://kochimetro.org"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.35187,
+          9.95079
+        ]
+      },
+      "properties": {
+        "station_id": "kochi-thrippunithura-terminal",
+        "name": "Thrippunithura Terminal",
+        "city_id": "kochi",
+        "city": "Kochi",
+        "line_ids": [
+          "koc-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2024-03-06",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://kochimetro.org"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3387,
+          10.07942
+        ]
+      },
+      "properties": {
+        "station_id": "kochi-ambattukavu",
+        "name": "Ambattukavu",
+        "city_id": "kochi",
+        "city": "Kochi",
+        "line_ids": [
+          "koc-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2017-06-19",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://kochimetro.org"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.30245,
+          10.0151
+        ]
+      },
+      "properties": {
+        "station_id": "kochi-changampuzha-park",
+        "name": "Changampuzha Park",
+        "city_id": "kochi",
+        "city": "Kochi",
+        "line_ids": [
+          "koc-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2017-06-19",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://kochimetro.org"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.31831,
+          10.04668
+        ]
+      },
+      "properties": {
+        "station_id": "kochi-cochin-university",
+        "name": "Cochin University",
+        "city_id": "kochi",
+        "city": "Kochi",
+        "line_ids": [
+          "koc-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2017-06-19",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://kochimetro.org"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.34257,
+          10.0873
+        ]
+      },
+      "properties": {
+        "station_id": "kochi-companypady",
+        "name": "Companypady",
+        "city_id": "kochi",
+        "city": "Kochi",
+        "line_ids": [
+          "koc-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2017-06-19",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://kochimetro.org"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.30799,
+          10.02549
+        ]
+      },
+      "properties": {
+        "station_id": "kochi-edappally",
+        "name": "Edappally",
+        "city_id": "kochi",
+        "city": "Kochi",
+        "line_ids": [
+          "koc-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2017-06-19",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://kochimetro.org"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.29908,
+          10.00027
+        ]
+      },
+      "properties": {
+        "station_id": "kochi-jln-stadium",
+        "name": "JLN Stadium",
+        "city_id": "kochi",
+        "city": "Kochi",
+        "line_ids": [
+          "koc-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2017-10-03",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://kochimetro.org"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.32217,
+          10.05854
+        ]
+      },
+      "properties": {
+        "station_id": "kochi-kalamassery-town",
+        "name": "Kalamassery Town",
+        "city_id": "kochi",
+        "city": "Kochi",
+        "line_ids": [
+          "koc-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2017-06-19",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://kochimetro.org"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.29167,
+          9.9943
+        ]
+      },
+      "properties": {
+        "station_id": "kochi-kaloor",
+        "name": "Kaloor",
+        "city_id": "kochi",
+        "city": "Kochi",
+        "line_ids": [
+          "koc-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2017-10-03",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://kochimetro.org"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.33372,
+          10.07273
+        ]
+      },
+      "properties": {
+        "station_id": "kochi-muttom",
+        "name": "Muttom",
+        "city_id": "kochi",
+        "city": "Kochi",
+        "line_ids": [
+          "koc-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2017-06-19",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://kochimetro.org"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.30493,
+          10.00633
+        ]
+      },
+      "properties": {
+        "station_id": "kochi-palarivattom",
+        "name": "Palarivattom",
+        "city_id": "kochi",
+        "city": "Kochi",
+        "line_ids": [
+          "koc-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2017-06-19",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://kochimetro.org"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.31449,
+          10.03598
+        ]
+      },
+      "properties": {
+        "station_id": "kochi-pathadipalam",
+        "name": "Pathadipalam",
+        "city_id": "kochi",
+        "city": "Kochi",
+        "line_ids": [
+          "koc-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2017-06-19",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://kochimetro.org"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.34678,
+          10.09505
+        ]
+      },
+      "properties": {
+        "station_id": "kochi-pulinchodu",
+        "name": "Pulinchodu",
+        "city_id": "kochi",
+        "city": "Kochi",
+        "line_ids": [
+          "koc-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2017-06-19",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://kochimetro.org"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.28244,
+          9.98332
+        ]
+      },
+      "properties": {
+        "station_id": "kochi-m-g-road",
+        "name": "M. G. Road",
+        "city_id": "kochi",
+        "city": "Kochi",
+        "line_ids": [
+          "koc-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2017-10-03",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://kochimetro.org"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.28836,
+          9.99138
+        ]
+      },
+      "properties": {
+        "station_id": "kochi-town-hall",
+        "name": "Town Hall",
+        "city_id": "kochi",
+        "city": "Kochi",
+        "line_ids": [
+          "koc-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2017-10-03",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://kochimetro.org"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.28511,
+          9.97338
+        ]
+      },
+      "properties": {
+        "station_id": "kochi-maharajas-college",
+        "name": "Maharaja's College",
+        "city_id": "kochi",
+        "city": "Kochi",
+        "line_ids": [
+          "koc-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2017-10-03",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://kochimetro.org"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.32368,
+          9.96003
+        ]
+      },
+      "properties": {
+        "station_id": "kochi-thykoodam",
+        "name": "Thykoodam",
+        "city_id": "kochi",
+        "city": "Kochi",
+        "line_ids": [
+          "koc-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2019-09-03",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://kochimetro.org"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.32044,
+          9.96759
+        ]
+      },
+      "properties": {
+        "station_id": "kochi-vyttila",
+        "name": "Vyttila",
+        "city_id": "kochi",
+        "city": "Kochi",
+        "line_ids": [
+          "koc-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2019-09-03",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://kochimetro.org"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.30845,
+          9.96716
+        ]
+      },
+      "properties": {
+        "station_id": "kochi-elamkulam",
+        "name": "Elamkulam",
+        "city_id": "kochi",
+        "city": "Kochi",
+        "line_ids": [
+          "koc-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2019-09-03",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://kochimetro.org"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.29819,
+          9.96658
+        ]
+      },
+      "properties": {
+        "station_id": "kochi-kadavanthra",
+        "name": "Kadavanthra",
+        "city_id": "kochi",
+        "city": "Kochi",
+        "line_ids": [
+          "koc-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2019-09-03",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://kochimetro.org"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.28958,
+          9.96859
+        ]
+      },
+      "properties": {
+        "station_id": "kochi-ernakulam-south",
+        "name": "Ernakulam South",
+        "city_id": "kochi",
+        "city": "Kochi",
+        "line_ids": [
+          "koc-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2019-09-03",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://kochimetro.org"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.3301,
+          9.9526
+        ]
+      },
+      "properties": {
+        "station_id": "kochi-petta",
+        "name": "Petta",
+        "city_id": "kochi",
+        "city": "Kochi",
+        "line_ids": [
+          "koc-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2020-09-07",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://kochimetro.org"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.33949,
+          9.95281
+        ]
+      },
+      "properties": {
+        "station_id": "kochi-vadakkekotta",
+        "name": "Vadakkekotta",
+        "city_id": "kochi",
+        "city": "Kochi",
+        "line_ids": [
+          "koc-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2022-09-01",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://kochimetro.org"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.34604,
+          9.95468
+        ]
+      },
+      "properties": {
+        "station_id": "kochi-sn-junction",
+        "name": "SN Junction",
+        "city_id": "kochi",
+        "city": "Kochi",
+        "line_ids": [
+          "koc-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2022-09-01",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://kochimetro.org"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
     }
   ]
 }

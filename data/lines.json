@@ -479,5 +479,15 @@
     "city_id": "surat",
     "source": "osm+gmrc",
     "notes": "Corridor 2 (Textile Corridor) from Bhesan to Saroli (18.74 km, 18 stations). Under construction."
+  },
+  {
+    "id": "koc-blue",
+    "name": "Line 1 (Blue Line)",
+    "city": "Kochi",
+    "city_id": "kochi",
+    "color": "#0284C7",
+    "operator": "KMRL",
+    "source": "osm+kmrl",
+    "notes": "Line 1 connects Aluva to Thrippunithura Terminal (28.12 km, 25 elevated stations). Fully operational."
   }
 ]

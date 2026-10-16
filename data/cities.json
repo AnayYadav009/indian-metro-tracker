@@ -242,5 +242,20 @@
       "1"
     ],
     "network_id": "surat-metro"
+  },
+  {
+    "id": "kochi",
+    "name": "Kochi",
+    "bbox": [
+      76.25,
+      9.92,
+      76.38,
+      10.14
+    ],
+    "operator": "KMRL",
+    "phases": [
+      "1"
+    ],
+    "network_id": "kochi-metro"
   }
 ]
