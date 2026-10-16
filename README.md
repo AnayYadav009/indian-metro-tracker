@@ -110,6 +110,8 @@ npm run audit:data
 
 The local audit intentionally fails for uncorrected errors and un-baselined warnings; baselines must not be used to hide data problems. CI runs the same audit in warning report-only mode, so un-baselined warnings remain visible in the generated report while errors still fail the quality gate. Current audit status is reported in the latest dated report under [`reports/data-audit/`](reports/data-audit/).
 
+Known open data findings, their affected lines, and user-visible impact are tracked in [`reports/known-issues.md`](reports/known-issues.md). They are parked while feature milestones proceed; a feature must label incomplete data rather than imply complete coverage.
+
 ## Screenshots and attribution
 
 Existing QA screenshots are retained under [`reports/data-audit/`](reports/data-audit/). They are diagnostic artifacts, not a substitute for current visual verification.
