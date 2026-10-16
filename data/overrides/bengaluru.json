@@ -92,7 +92,157 @@
       "inaugurated_on": "2014-03-01",
       "expected_completion": null,
       "color": "#009933",
-      "city_id": "bengaluru"
+      "city_id": "bengaluru",
+      "endpoint_station_ids": [
+        "blr-silk-institute",
+        "blr-nagasandra"
+      ],
+      "orderedWayIds": [
+        {
+          "id": 607901275,
+          "reversed": true
+        },
+        {
+          "id": 607901276,
+          "reversed": true
+        },
+        {
+          "id": 607901277,
+          "reversed": true
+        },
+        {
+          "id": 607901278,
+          "reversed": true
+        },
+        {
+          "id": 607901279,
+          "reversed": true
+        },
+        {
+          "id": 607901280,
+          "reversed": true
+        },
+        {
+          "id": 607901281,
+          "reversed": true
+        },
+        {
+          "id": 607901282,
+          "reversed": true
+        },
+        {
+          "id": 607901283,
+          "reversed": true
+        },
+        {
+          "id": 607901284,
+          "reversed": true
+        },
+        {
+          "id": 607901287,
+          "reversed": true
+        },
+        {
+          "id": 607901288,
+          "reversed": true
+        },
+        {
+          "id": 607901291,
+          "reversed": true
+        },
+        {
+          "id": 1352306002,
+          "reversed": true
+        },
+        {
+          "id": 607901290,
+          "reversed": true
+        },
+        {
+          "id": 607901286,
+          "reversed": true
+        },
+        {
+          "id": 1352305993,
+          "reversed": true
+        },
+        {
+          "id": 607901292,
+          "reversed": true
+        },
+        {
+          "id": 607901295,
+          "reversed": true
+        },
+        {
+          "id": 607901296,
+          "reversed": true
+        },
+        {
+          "id": 607901297,
+          "reversed": false
+        },
+        {
+          "id": 1352361301,
+          "reversed": true
+        },
+        {
+          "id": 1352361298,
+          "reversed": true
+        },
+        {
+          "id": 607901311,
+          "reversed": true
+        },
+        {
+          "id": 607901308,
+          "reversed": true
+        },
+        {
+          "id": 607901304,
+          "reversed": true
+        },
+        {
+          "id": 607901301,
+          "reversed": false
+        },
+        {
+          "id": 607901300,
+          "reversed": false
+        },
+        {
+          "id": 607901299,
+          "reversed": false
+        },
+        {
+          "id": 607901294,
+          "reversed": false
+        },
+        {
+          "id": 607901293,
+          "reversed": false
+        },
+        {
+          "id": 630686436,
+          "reversed": false
+        },
+        {
+          "id": 630686435,
+          "reversed": false
+        },
+        {
+          "id": 630686434,
+          "reversed": false
+        },
+        {
+          "id": 630686433,
+          "reversed": false
+        },
+        {
+          "id": 1240092403,
+          "reversed": false
+        }
+      ]
     },
     {
       "osmId": 19421927,
@@ -3580,9 +3730,17 @@
       "phase": "2"
     },
     "Nagawara (Proposed)": {
+      "line_ids": [
+        "blr-pink"
+      ],
+      "phase": "2",
       "status": "construction",
-      "expected_completion": "2026-12",
-      "phase": "2"
+      "layout": "underground",
+      "expected_completion": "2027-03",
+      "completion_unconfirmed": true,
+      "references": [
+        "https://english.bmrc.co.in/FileUploads/0091bf_Phase2.pdf"
+      ]
     },
     "Kalena Agrahara": {
       "line_ids": [
@@ -3598,19 +3756,6 @@
       ]
     },
     "Nagawara": {
-      "line_ids": [
-        "blr-pink"
-      ],
-      "phase": "2",
-      "status": "construction",
-      "layout": "underground",
-      "expected_completion": "2027-03",
-      "completion_unconfirmed": true,
-      "references": [
-        "https://english.bmrc.co.in/FileUploads/0091bf_Phase2.pdf"
-      ]
-    },
-    "Nagawara (Proposed)": {
       "line_ids": [
         "blr-pink"
       ],
