@@ -39,7 +39,7 @@ export function SegmentDetail({ segment }: SegmentDetailProps) {
             data-testid="schematic-route-note"
             className="rounded-full border border-violet-500/30 bg-violet-500/10 px-2 py-1 text-[10px] font-medium text-violet-300"
           >
-            Schematic route
+            Approximate alignment.
           </span>
         )}
       </div>

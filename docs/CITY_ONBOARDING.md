@@ -1,5 +1,11 @@
 # City Onboarding Runbook
 
+## Declared route visibility
+
+`npm run audit:data` compares segment declarations from each city override and corridor declarations from each reference file with compiled segment features. A missing feature is an error (`declared-not-compiled`); do not remove the declaration to hide a pipeline omission. During a city rebuild, normalization reports the count and relation/way IDs of each OSM route member excluded for role `inactive`. Never promote those ways to active geometry without an authoritative alignment source.
+
+If a future construction corridor has official status and mapped endpoint stations but no sourced detailed alignment, it may use a schematic segment only under the requirements in `DATA-STANDARDS.md`. The source, status, endpoint stations and coordinates must all be verifiable.
+
 Use for every Tier 1 city (M10) and every Tier 2 city (M15). One city per PR. Do not batch cities into one PR.
 
 Before starting: M8 is complete and `docs/DATA-STANDARDS.md` and `docs/DATA_AUDIT.md` have been read.

@@ -1,11 +1,9 @@
 {
   "pending_rules": [
-    "segment-parallel-duplicate",
     "segment-hairpin",
     "segment-sparse-vertices",
     "city-km-vs-reference",
     "line-terminal-missing",
-    "reference-construction-stretch-missing",
     "orphan-future-station"
   ],
   "known_defects": [
@@ -2963,24 +2961,6 @@
     {
       "city_id": "mumbai",
       "rule": "future-date-unconfirmed",
-      "subject": "mum-chembur",
-      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
-      "subject": "mum-deonar",
-      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
-      "subject": "mum-diamond-garden",
-      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
       "subject": "mum-eeh",
       "reason": "Expected completion date pending operator progress update or unconfirmed flag"
     },
@@ -2993,12 +2973,6 @@
     {
       "city_id": "mumbai",
       "rule": "future-date-unconfirmed",
-      "subject": "mum-line-2b-seg-01",
-      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
       "subject": "mum-line-4-seg-01",
       "reason": "Expected completion date pending operator progress update or unconfirmed flag"
     },
@@ -3006,18 +2980,6 @@
       "city_id": "mumbai",
       "rule": "future-date-unconfirmed",
       "subject": "mum-line-9-schematic-01",
-      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
-      "subject": "mum-mandale",
-      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
-      "subject": "mum-mankhurd",
       "reason": "Expected completion date pending operator progress update or unconfirmed flag"
     },
     {
@@ -3047,12 +3009,6 @@
     {
       "city_id": "mumbai",
       "rule": "future-date-unconfirmed",
-      "subject": "mum-shivaji-chowk-chembur",
-      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
       "subject": "mum-suman-nagar",
       "reason": "Expected completion date pending operator progress update or unconfirmed flag"
     },
@@ -3066,24 +3022,6 @@
       "city_id": "mumbai",
       "rule": "future-record-no-reference",
       "subject": "mum-anik-nagar-bus-depot",
-      "reason": "Future segment or station pending deep-link reference citation"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-record-no-reference",
-      "subject": "mum-chembur",
-      "reason": "Future segment or station pending deep-link reference citation"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-record-no-reference",
-      "subject": "mum-deonar",
-      "reason": "Future segment or station pending deep-link reference citation"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-record-no-reference",
-      "subject": "mum-diamond-garden",
       "reason": "Future segment or station pending deep-link reference citation"
     },
     {
@@ -3107,18 +3045,6 @@
     {
       "city_id": "mumbai",
       "rule": "future-record-no-reference",
-      "subject": "mum-mandale",
-      "reason": "Future segment or station pending deep-link reference citation"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-record-no-reference",
-      "subject": "mum-mankhurd",
-      "reason": "Future segment or station pending deep-link reference citation"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-record-no-reference",
       "subject": "mum-meditya-nagar",
       "reason": "Future segment or station pending deep-link reference citation"
     },
@@ -3132,12 +3058,6 @@
       "city_id": "mumbai",
       "rule": "future-record-no-reference",
       "subject": "mum-shaheed-bhagat-singh-garden",
-      "reason": "Future segment or station pending deep-link reference citation"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-record-no-reference",
-      "subject": "mum-shivaji-chowk-chembur",
       "reason": "Future segment or station pending deep-link reference citation"
     },
     {

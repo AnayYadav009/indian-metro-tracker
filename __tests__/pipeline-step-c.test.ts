@@ -550,6 +550,44 @@ describe("Step C Pipeline Code & Rules", () => {
     expect(seg.coordinates[2]).toEqual([73.84, 18.60]);
   });
 
+  it("orders relation ways from an explicit source override", () => {
+    const raw = {
+      elements: [{
+        type: "relation", id: 7, tags: { route: "subway", name: "Line" },
+        members: [
+          { type: "way", ref: 2, role: "", geometry: [{ lat: 0, lon: 2 }, { lat: 0, lon: 1 }] },
+          { type: "way", ref: 1, role: "", geometry: [{ lat: 0, lon: 1 }, { lat: 0, lon: 0 }] },
+        ],
+      }],
+    };
+    const normalized = normalizeOverpassCity("testcity", raw, {
+      7: [{ id: 1, reversed: true }, { id: 2, reversed: true }],
+    });
+    expect(normalized.segments[0].coordinates).toEqual([[0, 0], [1, 0], [2, 0]]);
+  });
+
+  it("counts every inactive relation way omitted during normalization", () => {
+    const normalized = normalizeOverpassCity("testcity", {
+      elements: [{
+        type: "relation",
+        id: 77,
+        tags: { route: "subway", name: "Inactive corridor" },
+        members: [
+          { type: "way", ref: 701, role: "inactive", geometry: [{ lat: 0, lon: 0 }, { lat: 0, lon: 1 }] },
+          { type: "way", ref: 702, role: "inactive", geometry: [{ lat: 1, lon: 0 }, { lat: 1, lon: 1 }] },
+          { type: "way", ref: 703, role: "", geometry: [{ lat: 2, lon: 0 }, { lat: 2, lon: 1 }] },
+        ],
+      }],
+    });
+
+    expect(normalized.filteredInactiveWays).toEqual([
+      { relationId: 77, wayId: 701 },
+      { relationId: 77, wayId: 702 },
+    ]);
+    expect(normalized.segments).toHaveLength(1);
+    expect(normalized.segments[0].coordinates).toEqual([[0, 2], [1, 2]]);
+  });
+
   it("11. Requirement: hairpin spurs and backtracking spikes are pruned from segment polylines", () => {
     const overrides: CityOverrideData = {
       ...baseCityOverride,

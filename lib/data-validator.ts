@@ -6,7 +6,12 @@ import {
   StationFeatureCollectionSchema,
 } from "../types/schema";
 import type { City, Line, MetroDataset } from "../types/metro";
-import { calculateLineStringLengthKm, checkLengthMismatch } from "./geo";
+import {
+  calculateLineStringLengthKm,
+  checkLengthMismatch,
+  haversineDistanceM,
+  nearestPointOnPolyline,
+} from "./geo";
 
 const INDIA_COORDINATE_ENVELOPE = {
   minLng: 68,
@@ -98,6 +103,9 @@ export function validateMetroDataset(
   const lines = linesParsed.data;
   const segments = segmentsParsed.data;
   const stations = stationsParsed.data;
+  const stationsById = new Map(
+    stations.features.map((feature) => [feature.properties.station_id, feature])
+  );
 
   // Build lookup maps for relational validation
   const cityById = new Map<string, City>();
@@ -171,6 +179,33 @@ export function validateMetroDataset(
       }
     }
 
+    if (props.geometry_quality === "schematic") {
+      const coordinates = feature.geometry.coordinates as [number, number][];
+      const ends = [coordinates[0], coordinates[coordinates.length - 1]];
+      const endStations = ends.map((end) =>
+        stations.features
+          .filter((station) => station.properties.line_ids.includes(props.line_id))
+          .map((station) => ({
+            station,
+            distanceM: haversineDistanceM(
+              end,
+              station.geometry.coordinates as [number, number]
+            ),
+          }))
+          .sort((a, b) => a.distanceM - b.distanceM)[0]
+      );
+
+      if (
+        endStations.some((entry) => !entry || entry.distanceM > 300) ||
+        endStations[0]?.station.properties.station_id ===
+          endStations[1]?.station.properties.station_id
+      ) {
+        errors.push(
+          `Schematic segment '${props.segment_id}' must end at two distinct mapped stations on line '${props.line_id}' within 300 m`
+        );
+      }
+    }
+
     // 1.1 References required for non-mock segments with source !== "osm"
     const isNonMock = props.source.toLowerCase() !== "mock";
     const isNotPureOsm = props.source.toLowerCase() !== "osm";
@@ -216,14 +251,16 @@ export function validateMetroDataset(
     }
 
     // Geometry length sanity check (flag >10% mismatch)
-    const computedKm = calculateLineStringLengthKm(
-      feature.geometry.coordinates as [number, number][]
-    );
-    const lengthCheck = checkLengthMismatch(props.length_km, computedKm, 10);
-    if (lengthCheck.isMismatch) {
-      warnings.push(
-        `Segment "${props.segment_id}" length mismatch: declared ${props.length_km} km vs computed ${lengthCheck.computedKm} km (${lengthCheck.mismatchPct}% difference)`
+    if (props.geometry_quality !== "schematic") {
+      const computedKm = calculateLineStringLengthKm(
+        feature.geometry.coordinates as [number, number][]
       );
+      const lengthCheck = checkLengthMismatch(props.length_km, computedKm, 10);
+      if (lengthCheck.isMismatch) {
+        warnings.push(
+          `Segment "${props.segment_id}" length mismatch: declared ${props.length_km} km vs computed ${lengthCheck.computedKm} km (${lengthCheck.mismatchPct}% difference)`
+        );
+      }
     }
 
     // Coordinate Envelope and City Bounding Box checks
@@ -252,6 +289,111 @@ export function validateMetroDataset(
           );
         }
       }
+    }
+  }
+
+  const segmentById = new Map(
+    segments.features.map((feature) => [feature.properties.segment_id, feature])
+  );
+  for (const feature of segments.features) {
+    const corridor = feature.properties.shared_corridor;
+    if (!corridor) continue;
+    const segmentId = feature.properties.segment_id;
+    const peerId = corridor.segment_ids.find((id) => id !== segmentId);
+    const peer = peerId ? segmentById.get(peerId) : undefined;
+    if (
+      corridor.segment_ids[0] === corridor.segment_ids[1] ||
+      !corridor.segment_ids.includes(segmentId) ||
+      !peer
+    ) {
+      errors.push(
+        `Shared corridor on '${segmentId}' must name this segment and one compiled peer segment`
+      );
+      continue;
+    }
+    const peerCorridor = peer.properties.shared_corridor;
+    if (
+      !peerCorridor ||
+      JSON.stringify([...corridor.segment_ids].sort()) !==
+        JSON.stringify([...peerCorridor.segment_ids].sort()) ||
+      JSON.stringify(corridor.shared_station_ids) !==
+        JSON.stringify(peerCorridor.shared_station_ids) ||
+      corridor.reason !== peerCorridor.reason ||
+      corridor.source !== peerCorridor.source
+    ) {
+      errors.push(
+        `Shared corridor on '${segmentId}' must be declared identically on both segments`
+      );
+      continue;
+    }
+
+    const pair = [feature, peer];
+    const stationRange = corridor.shared_station_ids.map((id) => stationsById.get(id));
+    if (
+      stationRange.some(
+        (station) =>
+          !station ||
+          pair.some(
+            (segment) =>
+              !station.properties.line_ids.includes(segment.properties.line_id)
+          )
+      )
+    ) {
+      errors.push(
+        `Shared corridor on '${segmentId}' names missing stations or stations outside the paired lines`
+      );
+      continue;
+    }
+
+    const positionsFor = (segment: (typeof pair)[number]) => {
+      const coords = segment.geometry.coordinates as [number, number][];
+      const positions = stationRange.map((station) => {
+        const projection = nearestPointOnPolyline(
+          station!.geometry.coordinates as [number, number],
+          coords
+        );
+        return { position: projection.segmentIndex + projection.t, distanceM: projection.distanceM };
+      });
+      if (positions.some((position) => position.distanceM > 300)) return undefined;
+      const increasing = positions.every(
+        (position, index) => index === 0 || position.position > positions[index - 1].position
+      );
+      const decreasing = positions.every(
+        (position, index) => index === 0 || position.position < positions[index - 1].position
+      );
+      return increasing || decreasing ? positions : undefined;
+    };
+    const segmentPositions = pair.map(positionsFor);
+    let orderedOnBothSegments = segmentPositions.every(Boolean);
+    if (orderedOnBothSegments) {
+      const declaredIds = new Set(corridor.shared_station_ids);
+      const positionRanges = segmentPositions.map((positions) => {
+        const values = positions!.map((item) => item.position);
+        return [Math.min(...values), Math.max(...values)] as const;
+      });
+      const sharedIntermediateStation = stations.features.some((station) => {
+        if (
+          declaredIds.has(station.properties.station_id) ||
+          pair.some((segment) => !station.properties.line_ids.includes(segment.properties.line_id))
+        ) {
+          return false;
+        }
+        return pair.every((segment, index) => {
+          const projected = nearestPointOnPolyline(
+            station.geometry.coordinates as [number, number],
+            segment.geometry.coordinates as [number, number][]
+          );
+          const position = projected.segmentIndex + projected.t;
+          const [min, max] = positionRanges[index];
+          return projected.distanceM <= 300 && position > min && position < max;
+        });
+      });
+      if (sharedIntermediateStation) orderedOnBothSegments = false;
+    }
+    if (!orderedOnBothSegments) {
+      errors.push(
+        `Shared corridor stations on '${segmentId}' must form the same consecutive route range on both segments`
+      );
     }
   }
 

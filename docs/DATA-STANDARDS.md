@@ -1,5 +1,22 @@
 # Data Standards
 
+## Shared trunks and schematic construction geometry
+
+For two compiled segments that intentionally share a consecutive route section, add the same `shared_corridor` object to both segment records:
+
+```json
+{
+  "segment_ids": ["line-a-seg-01", "line-a-seg-02"],
+  "shared_station_ids": ["station-a", "station-b"],
+  "reason": "The operator route map shows these branches sharing this trunk.",
+  "source": "https://operator.example/route-map"
+}
+```
+
+The station IDs must exist on both segments' line and follow the same route order (forward or reverse). Audit suppression is limited to measured overlap within 15% of the consecutive station range's geographic length. The declaration is paired metadata, not a free-form overlap allowlist.
+
+Use `geometry_quality: "schematic"` only for sourced construction/planned corridor alignments when exact surveyed geometry is unavailable. The line must terminate within 300 m of two distinct mapped stations on its line and include a corridor source URL. Schematic geometry is rendered dashed and labeled “Approximate alignment”; it is excluded from geometry-vs-reference length checks and operational totals. Do not fabricate intermediate stations or coordinates.
+
 The single reference for what every data field means and where values may come from. If code and this file disagree, raise it; do not silently pick one.
 
 ## 1. Scope

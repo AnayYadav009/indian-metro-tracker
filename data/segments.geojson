@@ -6218,7 +6218,7 @@
         ],
         "completion_unconfirmed": false,
         "last_verified": null,
-        "retrieved_at": "2026-10-10",
+        "retrieved_at": "2026-10-15",
         "geometry_quality": "exact"
       }
     },
@@ -7675,7 +7675,7 @@
         ],
         "completion_unconfirmed": false,
         "last_verified": null,
-        "retrieved_at": "2026-10-10",
+        "retrieved_at": "2026-10-15",
         "geometry_quality": "exact"
       }
     },
@@ -7685,140 +7685,104 @@
         "type": "LineString",
         "coordinates": [
           [
-            73.79122,
-            18.55896
+            73.69539,
+            18.58434
           ],
           [
-            73.79013,
-            18.55934
+            73.69562,
+            18.58447
           ],
           [
-            73.78995,
-            18.5594
+            73.69584,
+            18.5846
           ],
           [
-            73.78043,
-            18.56416
+            73.69657,
+            18.58509
           ],
           [
-            73.77932,
-            18.56417
+            73.69772,
+            18.58586
           ],
           [
-            73.77911,
-            18.56418
+            73.69791,
+            18.58598
           ],
           [
-            73.77485,
-            18.56995
+            73.69815,
+            18.58609
           ],
           [
-            73.77481,
-            18.57049
+            73.69843,
+            18.58619
           ],
           [
-            73.7748,
-            18.57094
+            73.69894,
+            18.58634
           ],
           [
-            73.7748,
-            18.57107
+            73.69917,
+            18.58642
           ],
           [
-            73.76672,
-            18.57506
+            73.69939,
+            18.5865
           ],
           [
-            73.76562,
-            18.575
+            73.69961,
+            18.5866
           ],
           [
-            73.76541,
-            18.57499
+            73.70034,
+            18.58693
           ],
           [
-            73.76175,
-            18.57913
+            73.70072,
+            18.58712
           ],
           [
-            73.76138,
-            18.58011
+            73.7011,
+            18.58732
           ],
           [
-            73.76129,
-            18.58034
+            73.70134,
+            18.58745
           ],
           [
-            73.75777,
-            18.58972
+            73.70158,
+            18.58758
           ],
           [
-            73.75736,
-            18.59076
+            73.7019,
+            18.58774
           ],
           [
-            73.75732,
-            18.59087
+            73.70208,
+            18.58782
           ],
           [
-            73.74691,
-            18.59085
+            73.70225,
+            18.58789
           ],
           [
-            73.74584,
-            18.59101
+            73.70242,
+            18.58796
           ],
           [
-            73.74565,
-            18.59104
+            73.70269,
+            18.58807
           ],
           [
-            73.73785,
-            18.59199
+            73.70294,
+            18.58815
           ],
           [
-            73.73694,
-            18.59268
+            73.70328,
+            18.58826
           ],
           [
-            73.73682,
-            18.59277
-          ],
-          [
-            73.72846,
-            18.59436
-          ],
-          [
-            73.72734,
-            18.59455
-          ],
-          [
-            73.72716,
-            18.59459
-          ],
-          [
-            73.71785,
-            18.59672
-          ],
-          [
-            73.71676,
-            18.59648
-          ],
-          [
-            73.71656,
-            18.59644
-          ],
-          [
-            73.70976,
-            18.59446
-          ],
-          [
-            73.70883,
-            18.59397
-          ],
-          [
-            73.70865,
-            18.59388
+            73.70346,
+            18.58831
           ],
           [
             73.70428,
@@ -9627,7 +9591,7 @@
         "operator": "Pune IT City Metro Rail Limited",
         "status": "construction",
         "phase": "1",
-        "length_km": 32.7,
+        "length_km": 22.4,
         "gauge": "standard",
         "inaugurated_on": null,
         "expected_completion": "2026-12",
@@ -23530,21 +23494,22 @@
         "city_id": "mumbai",
         "city": "Mumbai",
         "operator": "MMMOCL",
-        "status": "construction",
+        "status": "operational",
         "phase": "2B",
         "length_km": 5.4,
         "gauge": "standard",
-        "inaugurated_on": null,
+        "inaugurated_on": "2026-04-07",
         "expected_completion": null,
         "stations_count": 6,
         "color": "#FFC72C",
         "stations_not_published": false,
         "source": "osm",
         "references": [
-          "https://mmrda.maharashtra.gov.in/"
+          "https://mmrda.maharashtra.gov.in/en/projects/transport/metro-line-2b/overview",
+          "https://www.openstreetmap.org/relation/20403808"
         ],
-        "completion_unconfirmed": true,
-        "last_verified": null,
+        "completion_unconfirmed": false,
+        "last_verified": "2026-08-31",
         "retrieved_at": "2026-10-10",
         "geometry_quality": "exact"
       }
@@ -26555,7 +26520,7 @@
         ],
         "completion_unconfirmed": false,
         "last_verified": null,
-        "retrieved_at": "2026-10-10",
+        "retrieved_at": "2026-10-15",
         "geometry_quality": "exact"
       }
     },
@@ -26565,88 +26530,100 @@
         "type": "LineString",
         "coordinates": [
           [
-            88.35048,
-            22.57206
-          ],
-          [
-            88.35055,
-            22.57205
-          ],
-          [
-            88.35083,
-            22.57283
-          ],
-          [
-            88.35237,
-            22.5776
-          ],
-          [
-            88.35242,
-            22.57789
-          ],
-          [
-            88.3524,
-            22.57825
-          ],
-          [
-            88.3523,
-            22.57891
-          ],
-          [
-            88.35213,
-            22.57945
-          ],
-          [
-            88.35184,
-            22.57992
-          ],
-          [
-            88.35148,
-            22.5802
-          ],
-          [
-            88.35105,
-            22.58041
-          ],
-          [
-            88.34928,
-            22.58116
-          ],
-          [
-            88.34337,
-            22.58202
-          ],
-          [
-            88.34016,
-            22.58337
-          ],
-          [
-            88.33878,
-            22.58395
-          ],
-          [
-            88.33632,
-            22.58451
-          ],
-          [
-            88.3351,
-            22.58469
-          ],
-          [
-            88.33464,
-            22.58457
+            88.334,
+            22.58378
           ],
           [
             88.33428,
             22.58427
           ],
           [
-            88.334,
-            22.58378
+            88.33464,
+            22.58457
           ],
           [
-            88.333,
-            22.58201
+            88.3351,
+            22.58469
+          ],
+          [
+            88.33632,
+            22.58451
+          ],
+          [
+            88.33878,
+            22.58395
+          ],
+          [
+            88.34016,
+            22.58337
+          ],
+          [
+            88.34337,
+            22.58202
+          ],
+          [
+            88.34928,
+            22.58116
+          ],
+          [
+            88.35105,
+            22.58041
+          ],
+          [
+            88.35148,
+            22.5802
+          ],
+          [
+            88.35184,
+            22.57992
+          ],
+          [
+            88.35213,
+            22.57945
+          ],
+          [
+            88.3523,
+            22.57891
+          ],
+          [
+            88.3524,
+            22.57825
+          ],
+          [
+            88.35242,
+            22.57789
+          ],
+          [
+            88.35237,
+            22.5776
+          ],
+          [
+            88.35083,
+            22.57283
+          ],
+          [
+            88.35055,
+            22.57205
+          ],
+          [
+            88.34874,
+            22.56692
+          ],
+          [
+            88.34865,
+            22.56607
+          ],
+          [
+            88.34885,
+            22.56557
+          ],
+          [
+            88.34922,
+            22.5651
+          ],
+          [
+            88.35027,
+            22.56418
           ],
           [
             88.35069,
@@ -27151,7 +27128,7 @@
         "operator": "KMRC",
         "status": "operational",
         "phase": "2",
-        "length_km": 17,
+        "length_km": 15.1,
         "gauge": "standard",
         "inaugurated_on": "2020-02-14",
         "expected_completion": null,
@@ -27167,7 +27144,7 @@
         ],
         "completion_unconfirmed": false,
         "last_verified": null,
-        "retrieved_at": "2026-10-10",
+        "retrieved_at": "2026-10-15",
         "geometry_quality": "exact"
       }
     },
@@ -27585,7 +27562,7 @@
         ],
         "completion_unconfirmed": false,
         "last_verified": null,
-        "retrieved_at": "2026-10-10",
+        "retrieved_at": "2026-10-15",
         "geometry_quality": "exact"
       }
     },
@@ -27706,7 +27683,7 @@
         ],
         "completion_unconfirmed": false,
         "last_verified": null,
-        "retrieved_at": "2026-10-10",
+        "retrieved_at": "2026-10-15",
         "geometry_quality": "exact"
       }
     },
@@ -28427,436 +28404,7 @@
         ],
         "completion_unconfirmed": false,
         "last_verified": null,
-        "retrieved_at": "2026-10-10",
-        "geometry_quality": "exact"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "LineString",
-        "coordinates": [
-          [
-            88.48397,
-            22.72468
-          ],
-          [
-            88.48286,
-            22.72363
-          ],
-          [
-            88.48225,
-            22.72301
-          ],
-          [
-            88.48164,
-            22.72233
-          ],
-          [
-            88.48079,
-            22.72155
-          ],
-          [
-            88.47945,
-            22.7202
-          ],
-          [
-            88.47862,
-            22.71944
-          ],
-          [
-            88.47585,
-            22.7168
-          ],
-          [
-            88.47522,
-            22.71617
-          ],
-          [
-            88.47361,
-            22.71453
-          ],
-          [
-            88.47111,
-            22.71211
-          ],
-          [
-            88.4686,
-            22.70969
-          ],
-          [
-            88.46764,
-            22.70878
-          ],
-          [
-            88.46591,
-            22.70715
-          ],
-          [
-            88.46317,
-            22.70455
-          ],
-          [
-            88.46179,
-            22.70322
-          ],
-          [
-            88.46058,
-            22.70206
-          ],
-          [
-            88.4592,
-            22.70073
-          ],
-          [
-            88.45695,
-            22.69862
-          ],
-          [
-            88.45528,
-            22.69705
-          ],
-          [
-            88.45431,
-            22.696
-          ],
-          [
-            88.45341,
-            22.69504
-          ],
-          [
-            88.45264,
-            22.69427
-          ],
-          [
-            88.45191,
-            22.6936
-          ],
-          [
-            88.45171,
-            22.69333
-          ],
-          [
-            88.45161,
-            22.69305
-          ],
-          [
-            88.45161,
-            22.69285
-          ],
-          [
-            88.45164,
-            22.69261
-          ],
-          [
-            88.45174,
-            22.69232
-          ],
-          [
-            88.45177,
-            22.69196
-          ],
-          [
-            88.45167,
-            22.69144
-          ],
-          [
-            88.45156,
-            22.69065
-          ],
-          [
-            88.45158,
-            22.69018
-          ],
-          [
-            88.45171,
-            22.68968
-          ],
-          [
-            88.45197,
-            22.6891
-          ],
-          [
-            88.45234,
-            22.68843
-          ],
-          [
-            88.45255,
-            22.68777
-          ],
-          [
-            88.45275,
-            22.68669
-          ],
-          [
-            88.45306,
-            22.68601
-          ],
-          [
-            88.4534,
-            22.68553
-          ],
-          [
-            88.45387,
-            22.68498
-          ],
-          [
-            88.45432,
-            22.68421
-          ],
-          [
-            88.45445,
-            22.68381
-          ],
-          [
-            88.45445,
-            22.68351
-          ],
-          [
-            88.45425,
-            22.68306
-          ],
-          [
-            88.454,
-            22.68255
-          ],
-          [
-            88.45393,
-            22.68201
-          ],
-          [
-            88.45405,
-            22.68098
-          ],
-          [
-            88.45412,
-            22.68042
-          ],
-          [
-            88.454,
-            22.68014
-          ],
-          [
-            88.45367,
-            22.67999
-          ],
-          [
-            88.45322,
-            22.67992
-          ],
-          [
-            88.45255,
-            22.67987
-          ],
-          [
-            88.45152,
-            22.67973
-          ],
-          [
-            88.45082,
-            22.67964
-          ],
-          [
-            88.45056,
-            22.67959
-          ],
-          [
-            88.45018,
-            22.67951
-          ],
-          [
-            88.45003,
-            22.67947
-          ],
-          [
-            88.44939,
-            22.67929
-          ],
-          [
-            88.44836,
-            22.67885
-          ],
-          [
-            88.44798,
-            22.67868
-          ],
-          [
-            88.44793,
-            22.67862
-          ],
-          [
-            88.44743,
-            22.67827
-          ],
-          [
-            88.44681,
-            22.67773
-          ],
-          [
-            88.44608,
-            22.67663
-          ],
-          [
-            88.44573,
-            22.67599
-          ],
-          [
-            88.44554,
-            22.67539
-          ],
-          [
-            88.44537,
-            22.67414
-          ],
-          [
-            88.44533,
-            22.67381
-          ],
-          [
-            88.44529,
-            22.67337
-          ],
-          [
-            88.44519,
-            22.67222
-          ],
-          [
-            88.44515,
-            22.67164
-          ],
-          [
-            88.44493,
-            22.66906
-          ],
-          [
-            88.44462,
-            22.66685
-          ],
-          [
-            88.44456,
-            22.66624
-          ],
-          [
-            88.44445,
-            22.66565
-          ],
-          [
-            88.4443,
-            22.66517
-          ],
-          [
-            88.44407,
-            22.66464
-          ],
-          [
-            88.44359,
-            22.66374
-          ],
-          [
-            88.4429,
-            22.66241
-          ],
-          [
-            88.44259,
-            22.66201
-          ],
-          [
-            88.44228,
-            22.66144
-          ],
-          [
-            88.44197,
-            22.66063
-          ],
-          [
-            88.4413,
-            22.6588
-          ],
-          [
-            88.4404,
-            22.65644
-          ],
-          [
-            88.44018,
-            22.65589
-          ],
-          [
-            88.43991,
-            22.65508
-          ],
-          [
-            88.43956,
-            22.65421
-          ],
-          [
-            88.43926,
-            22.65362
-          ],
-          [
-            88.43898,
-            22.65324
-          ],
-          [
-            88.43879,
-            22.65286
-          ],
-          [
-            88.43799,
-            22.65146
-          ],
-          [
-            88.4378,
-            22.65086
-          ],
-          [
-            88.43775,
-            22.65061
-          ],
-          [
-            88.43764,
-            22.65015
-          ],
-          [
-            88.43762,
-            22.64978
-          ],
-          [
-            88.43757,
-            22.64947
-          ],
-          [
-            88.43753,
-            22.64901
-          ],
-          [
-            88.43734,
-            22.64738
-          ]
-        ]
-      },
-      "properties": {
-        "segment_id": "kol-yellow-seg-02",
-        "line_id": "kol-yellow",
-        "line_name": "Yellow Line Extension (Jai Hind - Barasat)",
-        "city_id": "kolkata",
-        "city": "Kolkata",
-        "operator": "Metro Railway, Kolkata",
-        "status": "planned",
-        "phase": "4",
-        "length_km": 10.7,
-        "gauge": "broad",
-        "inaugurated_on": null,
-        "expected_completion": null,
-        "stations_count": 1,
-        "color": "#FFD100",
-        "stations_not_published": false,
-        "source": "osm",
-        "references": [
-          "https://mtp.indianrailways.gov.in"
-        ],
-        "completion_unconfirmed": true,
-        "last_verified": null,
-        "retrieved_at": "2026-10-10",
+        "retrieved_at": "2026-10-15",
         "geometry_quality": "exact"
       }
     },
@@ -29310,7 +28858,7 @@
         ],
         "completion_unconfirmed": false,
         "last_verified": null,
-        "retrieved_at": "2026-10-10",
+        "retrieved_at": "2026-10-15",
         "geometry_quality": "exact"
       }
     },
@@ -29879,7 +29427,7 @@
         ],
         "completion_unconfirmed": false,
         "last_verified": null,
-        "retrieved_at": "2026-10-10",
+        "retrieved_at": "2026-10-15",
         "geometry_quality": "exact"
       }
     },
@@ -39261,52 +38809,6 @@
         "type": "LineString",
         "coordinates": [
           [
-            77.40361,
-            28.51077
-          ],
-          [
-            77.40184,
-            28.5024
-          ],
-          [
-            77.41285,
-            28.49897
-          ]
-        ]
-      },
-      "properties": {
-        "segment_id": "noi-aqua-seg-02",
-        "line_id": "noi-aqua",
-        "line_name": "Aqua Line Extension (Botanical Garden - Sector 142)",
-        "city_id": "noida",
-        "city": "Noida",
-        "operator": "NMRC",
-        "status": "construction",
-        "phase": "2",
-        "length_km": 2.1,
-        "gauge": "standard",
-        "inaugurated_on": null,
-        "expected_completion": "2030",
-        "stations_count": 2,
-        "color": "#00CED1",
-        "stations_not_published": false,
-        "source": "osm",
-        "references": [
-          "https://ddnews.gov.in",
-          "https://www.openstreetmap.org/way/538930428"
-        ],
-        "completion_unconfirmed": false,
-        "last_verified": null,
-        "retrieved_at": "2026-10-10",
-        "geometry_quality": "exact"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "LineString",
-        "coordinates": [
-          [
             77.41547,
             28.67065
           ],
@@ -40396,7 +39898,7 @@
         "references": [],
         "completion_unconfirmed": false,
         "last_verified": null,
-        "retrieved_at": "2026-10-13",
+        "retrieved_at": "2026-10-15",
         "geometry_quality": "exact"
       }
     },
@@ -41811,7 +41313,7 @@
         "references": [],
         "completion_unconfirmed": false,
         "last_verified": null,
-        "retrieved_at": "2026-10-13",
+        "retrieved_at": "2026-10-15",
         "geometry_quality": "exact"
       }
     },
@@ -43866,7 +43368,7 @@
         "references": [],
         "completion_unconfirmed": false,
         "last_verified": null,
-        "retrieved_at": "2026-10-13",
+        "retrieved_at": "2026-10-15",
         "geometry_quality": "exact"
       }
     },
@@ -44293,7 +43795,7 @@
         "references": [],
         "completion_unconfirmed": false,
         "last_verified": null,
-        "retrieved_at": "2026-10-13",
+        "retrieved_at": "2026-10-15",
         "geometry_quality": "exact"
       }
     },
@@ -44872,7 +44374,7 @@
         "references": [],
         "completion_unconfirmed": false,
         "last_verified": null,
-        "retrieved_at": "2026-10-13",
+        "retrieved_at": "2026-10-15",
         "geometry_quality": "exact"
       }
     },
@@ -45071,7 +44573,7 @@
         "references": [],
         "completion_unconfirmed": false,
         "last_verified": null,
-        "retrieved_at": "2026-10-13",
+        "retrieved_at": "2026-10-15",
         "geometry_quality": "exact"
       }
     },
@@ -46614,7 +46116,7 @@
         "references": [],
         "completion_unconfirmed": false,
         "last_verified": null,
-        "retrieved_at": "2026-10-13",
+        "retrieved_at": "2026-10-15",
         "geometry_quality": "exact"
       }
     },
@@ -47237,7 +46739,7 @@
         "references": [],
         "completion_unconfirmed": false,
         "last_verified": null,
-        "retrieved_at": "2026-10-13",
+        "retrieved_at": "2026-10-15",
         "geometry_quality": "exact"
       }
     },
@@ -50208,7 +49710,7 @@
         "references": [],
         "completion_unconfirmed": false,
         "last_verified": null,
-        "retrieved_at": "2026-10-13",
+        "retrieved_at": "2026-10-15",
         "geometry_quality": "exact"
       }
     },
@@ -51199,7 +50701,7 @@
         "references": [],
         "completion_unconfirmed": false,
         "last_verified": null,
-        "retrieved_at": "2026-10-13",
+        "retrieved_at": "2026-10-15",
         "geometry_quality": "exact"
       }
     },
@@ -51410,7 +50912,7 @@
         "references": [],
         "completion_unconfirmed": false,
         "last_verified": null,
-        "retrieved_at": "2026-10-13",
+        "retrieved_at": "2026-10-15",
         "geometry_quality": "exact"
       }
     },
@@ -51856,7 +51358,7 @@
         ],
         "completion_unconfirmed": true,
         "last_verified": null,
-        "retrieved_at": "2026-10-13",
+        "retrieved_at": "2026-10-15",
         "geometry_quality": "exact"
       }
     },
@@ -52214,7 +51716,7 @@
         ],
         "completion_unconfirmed": true,
         "last_verified": null,
-        "retrieved_at": "2026-10-13",
+        "retrieved_at": "2026-10-15",
         "geometry_quality": "exact"
       }
     },
@@ -52472,7 +51974,7 @@
         ],
         "completion_unconfirmed": true,
         "last_verified": null,
-        "retrieved_at": "2026-10-13",
+        "retrieved_at": "2026-10-15",
         "geometry_quality": "exact"
       }
     },
@@ -52555,7 +52057,7 @@
         ],
         "completion_unconfirmed": true,
         "last_verified": "2026-10-10",
-        "retrieved_at": "2026-10-13",
+        "retrieved_at": "2026-10-15",
         "geometry_quality": "exact"
       }
     },
@@ -52810,7 +52312,7 @@
         ],
         "completion_unconfirmed": false,
         "last_verified": "2026-10-10",
-        "retrieved_at": "2026-10-13",
+        "retrieved_at": "2026-10-15",
         "geometry_quality": "exact"
       }
     },

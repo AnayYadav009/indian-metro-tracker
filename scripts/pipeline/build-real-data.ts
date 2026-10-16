@@ -9,6 +9,23 @@ import type { City, Line, SegmentFeature, StationFeature } from "../../types/met
 
 const DATA_DIR = path.resolve(process.cwd(), "data");
 
+export function replaceCityRecords<T>(
+  existing: T[],
+  replacements: T[],
+  belongsToCity: (record: T) => boolean,
+  getId: (record: T) => string
+): T[] {
+  const remaining = new Map(replacements.map((record) => [getId(record), record]));
+  const merged = existing.flatMap((record) => {
+    if (!belongsToCity(record)) return [record];
+    const replacement = remaining.get(getId(record));
+    if (!replacement) return [];
+    remaining.delete(getId(record));
+    return [replacement];
+  });
+  return [...merged, ...remaining.values()];
+}
+
 export async function buildCityData(cityId: string, forceFetch = false): Promise<{
   city: City;
   lines: Line[];
@@ -30,8 +47,19 @@ export async function buildCityData(cityId: string, forceFetch = false): Promise
 
   // 2. Normalize
   console.log(`⚙️  Normalizing OSM primitives for ${cityId}...`);
-  const normalized = normalizeOverpassCity(cityId, rawData);
+  const routeWayOrders = Object.fromEntries(
+    overrides.segments
+      .filter((segment) => segment.osmId && segment.orderedWayIds)
+      .map((segment) => [segment.osmId!, segment.orderedWayIds!])
+  );
+  const normalized = normalizeOverpassCity(cityId, rawData, routeWayOrders);
   console.log(`   Found ${normalized.segments.length} route segments and ${normalized.stations.length} stations.`);
+  console.log(
+    `   Filtered ${normalized.filteredInactiveWays?.length || 0} inactive route way member(s).`
+  );
+  for (const { relationId, wayId } of normalized.filteredInactiveWays || []) {
+    console.log(`   • relation ${relationId}: excluded inactive way ${wayId}`);
+  }
 
   // Check cache file mtime for retrieved_at date
   const rawCacheFile = path.resolve(process.cwd(), "data", "raw", `${cityId}.json`);
@@ -168,22 +196,33 @@ if (require.main === module) {
       const existingStns = fs.existsSync(stnsFile) ? JSON.parse(fs.readFileSync(stnsFile, "utf-8")).features : [];
 
       // Replace or merge city
-      const mergedCities = [
-        ...existingCities.filter((c) => c.id.toLowerCase() !== cityArg.toLowerCase()),
-        cityData.city,
-      ];
-      const mergedLines = [
-        ...existingLines.filter((l) => (l.city_id || l.city).toLowerCase() !== cityArg.toLowerCase()),
-        ...cityData.lines,
-      ];
-      const mergedSegs = [
-        ...existingSegs.filter((s: any) => (s.properties.city_id || s.properties.city).toLowerCase() !== cityArg.toLowerCase()),
-        ...cityData.segments,
-      ];
-      const mergedStns = [
-        ...existingStns.filter((s: any) => (s.properties.city_id || s.properties.city).toLowerCase() !== cityArg.toLowerCase()),
-        ...cityData.stations,
-      ];
+      const targetCity = cityArg.toLowerCase();
+      const mergedCities = replaceCityRecords(
+        existingCities,
+        [cityData.city],
+        (city) => city.id.toLowerCase() === targetCity,
+        (city) => city.id
+      );
+      const mergedLines = replaceCityRecords(
+        existingLines,
+        cityData.lines,
+        (line) => (line.city_id || line.city).toLowerCase() === targetCity,
+        (line) => line.id
+      );
+      const mergedSegs = replaceCityRecords(
+        existingSegs,
+        cityData.segments,
+        (segment: any) =>
+          (segment.properties.city_id || segment.properties.city).toLowerCase() === targetCity,
+        (segment: any) => segment.properties.segment_id
+      );
+      const mergedStns = replaceCityRecords(
+        existingStns,
+        cityData.stations,
+        (station: any) =>
+          (station.properties.city_id || station.properties.city).toLowerCase() === targetCity,
+        (station: any) => station.properties.station_id
+      );
 
       saveActiveDataset({
         cities: mergedCities,

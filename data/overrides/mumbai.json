@@ -1696,16 +1696,18 @@
       "line_id": "mum-line-2b",
       "line_name": "Line 2B (DN Nagar - Mandale)",
       "phase": "2B",
-      "status": "construction",
+      "status": "operational",
       "gauge": "standard",
-      "inaugurated_on": null,
+      "inaugurated_on": "2026-04-07",
       "expected_completion": null,
-      "completion_unconfirmed": true,
+      "completion_unconfirmed": false,
       "color": "#FFC72C",
       "references": [
-        "https://mmrda.maharashtra.gov.in/"
+        "https://mmrda.maharashtra.gov.in/en/projects/transport/metro-line-2b/overview",
+        "https://www.openstreetmap.org/relation/20403808"
       ],
-      "city_id": "mumbai"
+      "city_id": "mumbai",
+      "last_verified": "2026-08-31"
     },
     {
       "segment_id": "mum-planned-seg-01",
@@ -3368,6 +3370,54 @@
       "layout": "elevated",
       "references": [
         "https://mmrda.maharashtra.gov.in/metro-line-2a"
+      ]
+    },
+    "Mandale": {
+      "status": "operational",
+      "opened_on": "2026-04-07",
+      "last_verified": "2026-08-31",
+      "references": [
+        "https://mmrda.maharashtra.gov.in/en/projects/transport/metro-line-2b/overview"
+      ]
+    },
+    "Mankhurd": {
+      "status": "operational",
+      "opened_on": "2026-04-07",
+      "last_verified": "2026-08-31",
+      "references": [
+        "https://mmrda.maharashtra.gov.in/en/projects/transport/metro-line-2b/overview"
+      ]
+    },
+    "Shivaji Chowk (Chembur)": {
+      "status": "operational",
+      "opened_on": "2026-04-07",
+      "last_verified": "2026-08-31",
+      "references": [
+        "https://mmrda.maharashtra.gov.in/en/projects/transport/metro-line-2b/overview"
+      ]
+    },
+    "Deonar": {
+      "status": "operational",
+      "opened_on": "2026-04-07",
+      "last_verified": "2026-08-31",
+      "references": [
+        "https://mmrda.maharashtra.gov.in/en/projects/transport/metro-line-2b/overview"
+      ]
+    },
+    "Diamond Garden": {
+      "status": "operational",
+      "opened_on": "2026-04-07",
+      "last_verified": "2026-08-31",
+      "references": [
+        "https://mmrda.maharashtra.gov.in/en/projects/transport/metro-line-2b/overview"
+      ]
+    },
+    "Chembur": {
+      "status": "operational",
+      "opened_on": "2026-08-13",
+      "last_verified": "2026-08-31",
+      "references": [
+        "https://mmrda.maharashtra.gov.in/en/projects/transport/metro-line-2b/overview"
       ]
     }
   },

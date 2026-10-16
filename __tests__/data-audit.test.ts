@@ -837,6 +837,100 @@ describe("Audit Engine", () => {
   });
 
   describe("F. M8.1 Audit Rules (Blind-Spot Closure)", () => {
+    it("declared-not-compiled: reports missing override segment and passes a compiled declaration", () => {
+      const declarations = {
+        segments: [{ city_id: "test-city", line_id: "tc-red", segment_id: "tc-red-seg-01" }],
+        lines: [{ city_id: "test-city", line_id: "tc-red" }],
+      };
+      const failResult = runAudit(makeDataset({ segments: [] }), {
+        ...AUDIT_OPTIONS,
+        declarations,
+      });
+      const failHits = findByRule(failResult.findings, "declared-not-compiled");
+      expect(failHits).toHaveLength(1);
+      expect(failHits[0].subject).toBe("tc-red-seg-01");
+
+      const passSegment = makeSegment({ segment_id: "tc-red-seg-01" });
+      const passResult = runAudit(makeDataset({ segments: [passSegment] }), {
+        ...AUDIT_OPTIONS,
+        declarations,
+      });
+      expect(findByRule(passResult.findings, "declared-not-compiled")).toHaveLength(0);
+    });
+
+    it("coverage gaps cannot downgrade operational declarations", () => {
+      const result = runAudit(makeDataset({ segments: [] }), {
+        ...AUDIT_OPTIONS,
+        declarations: {
+          segments: [{
+            city_id: "test-city",
+            line_id: "tc-red",
+            segment_id: "tc-red-seg-01",
+            status: "operational",
+          }],
+          lines: [],
+        },
+        coverageGaps: [{
+          city_id: "test-city",
+          line_id: "tc-red",
+          stretch: "tc-red-seg-01",
+          status: "planned",
+          source_url: "https://example.com/source",
+          reason: "Fixture only",
+          review_date: "2026-10-15",
+        }],
+      });
+
+      expect(findByRule(result.findings, "declared-not-compiled")).toHaveLength(1);
+      expect(findByRule(result.findings, "coverage-gap")).toHaveLength(0);
+    });
+
+    it("reclassifies a matching planned declaration as a coverage gap", () => {
+      const result = runAudit(makeDataset({ segments: [] }), {
+        ...AUDIT_OPTIONS,
+        declarations: {
+          segments: [{
+            city_id: "test-city",
+            line_id: "tc-red",
+            segment_id: "tc-red-seg-01",
+            status: "planned",
+          }],
+          lines: [],
+        },
+        coverageGaps: [{
+          city_id: "test-city",
+          line_id: "tc-red",
+          stretch: "tc-red-seg-01",
+          status: "planned",
+          source_url: "https://example.com/source",
+          reason: "Fixture only",
+          review_date: "2026-10-15",
+        }],
+      });
+
+      expect(findByRule(result.findings, "coverage-gap")).toHaveLength(1);
+      expect(findByRule(result.findings, "declared-not-compiled")).toHaveLength(0);
+    });
+
+    it("keeps an unlisted planned declaration as an error", () => {
+      const result = runAudit(makeDataset({ segments: [] }), {
+        ...AUDIT_OPTIONS,
+        declarations: {
+          segments: [{
+            city_id: "test-city",
+            line_id: "tc-red",
+            segment_id: "tc-red-seg-01",
+            status: "planned",
+          }],
+          lines: [],
+        },
+        coverageGaps: [],
+      });
+
+      expect(findByRule(result.findings, "declared-not-compiled")).toHaveLength(1);
+      expect(findByRule(result.findings, "coverage-gap")).toHaveLength(0);
+    });
+
     it("segment-parallel-duplicate: flags twin tracks 20 m apart for 500 m and passes separate tracks", () => {
       // Failing fixture: twin tracks 20m apart (~0.00018 deg lat) for 500m
       const segTrack1 = makeSegment({
@@ -880,6 +974,50 @@ describe("Audit Engine", () => {
       const passResult = runAudit(passData, AUDIT_OPTIONS);
       const passHits = findByRule(passResult.findings, "segment-parallel-duplicate");
       expect(passHits.length).toBe(0);
+    });
+
+    it("shared corridor suppression requires the measured overlap to match the station range within 15%", () => {
+      const source = "https://operator.example/route-map";
+      const shared = {
+        segment_ids: ["shared-a", "shared-b"],
+        shared_station_ids: ["shared-start", "shared-end"],
+        reason: "Official route map shows the consecutive common trunk.",
+        source,
+      };
+      const segmentA = (endLng: number) => makeSegment({
+        segment_id: "shared-a",
+        shared_corridor: shared,
+        geometry: { type: "LineString", coordinates: [[77.5, 12.5], [endLng, 12.5]] },
+      });
+      const segmentB = (endLng: number) => makeSegment({
+        segment_id: "shared-b",
+        shared_corridor: shared,
+        geometry: { type: "LineString", coordinates: [[77.5, 12.5001], [endLng, 12.5001]] },
+      });
+      const sharedStations = (endLng: number) => [
+        makeStation({ station_id: "shared-start", coordinates: [77.5, 12.5], line_ids: ["tc-red"] }),
+        makeStation({ station_id: "shared-end", coordinates: [endLng, 12.5], line_ids: ["tc-red"] }),
+      ];
+
+      const matchingResult = runAudit(
+        makeDataset({
+          segments: [segmentA(77.51), segmentB(77.51)],
+          stations: sharedStations(77.51),
+        }),
+        AUDIT_OPTIONS
+      );
+      expect(findByRule(matchingResult.findings, "segment-parallel-duplicate")).toHaveLength(0);
+      expect(findByRule(matchingResult.findings, "segment-overlap")).toHaveLength(0);
+
+      const oversizedResult = runAudit(
+        makeDataset({
+          segments: [segmentA(77.53), segmentB(77.53)],
+          stations: sharedStations(77.51),
+        }),
+        AUDIT_OPTIONS
+      );
+      expect(findByRule(oversizedResult.findings, "segment-parallel-duplicate").length).toBeGreaterThan(0);
+      expect(findByRule(oversizedResult.findings, "segment-overlap").length).toBeGreaterThan(0);
     });
 
     it("segment-hairpin: flags sharp 170° spike doubling back within 100 m", () => {
@@ -1051,7 +1189,7 @@ describe("Audit Engine", () => {
       fs.rmSync(tmpDir, { recursive: true, force: true });
     });
 
-    it("reference-construction-stretch-missing: flags missing construction segment for reference stretch", () => {
+    it("declared-not-compiled: flags a reference construction corridor without a feature", () => {
       const fs = require("node:fs");
       const path = require("node:path");
       const os = require("node:os");
@@ -1083,7 +1221,7 @@ describe("Audit Engine", () => {
       // Failing fixture: no construction segments for tc-red
       const failDataset = makeDataset({ segments: [] });
       const failResult = runAudit(failDataset, { ...AUDIT_OPTIONS, referenceDir: tmpDir });
-      const failHits = findByRule(failResult.findings, "reference-construction-stretch-missing");
+      const failHits = findByRule(failResult.findings, "declared-not-compiled");
       expect(failHits.length).toBe(1);
       expect(failHits[0].subject).toContain("Station A - Station B");
 
@@ -1101,9 +1239,65 @@ describe("Audit Engine", () => {
       });
       const passDataset = makeDataset({ segments: [conSeg] });
       const passResult = runAudit(passDataset, { ...AUDIT_OPTIONS, referenceDir: tmpDir });
-      const passHits = findByRule(passResult.findings, "reference-construction-stretch-missing");
+      const passHits = findByRule(passResult.findings, "declared-not-compiled");
       expect(passHits.length).toBe(0);
 
+      fs.rmSync(tmpDir, { recursive: true, force: true });
+    });
+
+    it("schematic construction stretch requires cited source and two mapped terminal stations", () => {
+      const fs = require("node:fs");
+      const path = require("node:path");
+      const os = require("node:os");
+      const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), "schematic-ref-test-"));
+      fs.writeFileSync(path.join(tmpDir, "test-city.json"), JSON.stringify({
+        city_id: "test-city",
+        compiled_on: "2026-10-15",
+        lines: [{
+          line_id: "tc-red",
+          official_name: "Red Line",
+          operator: "TCRL",
+          topology: "linear",
+          operational_stations: 2,
+          operational_length_km: 0,
+          planned_length_km: 1,
+          terminals: ["Station A", "Station B"],
+          status: "under_construction",
+          construction: [{
+            stretch: "Station A - Station B",
+            phase: "1",
+            expected_completion: "2028",
+            stations: 2,
+          }],
+        }],
+      }));
+      const stations = [
+        makeStation({ station_id: "schematic-a", name: "Station A", coordinates: [77.5, 12.5], line_ids: ["tc-red"] }),
+        makeStation({ station_id: "schematic-b", name: "Station B", coordinates: [77.51, 12.5], line_ids: ["tc-red"] }),
+      ];
+      const segment = (end: number) => makeSegment({
+        segment_id: "tc-red-schematic",
+        status: "construction",
+        inaugurated_on: null,
+        expected_completion: "2028",
+        geometry_quality: "schematic",
+        references: ["https://tcrl.org/official-alignment"],
+        geometry: { type: "LineString", coordinates: [[77.5, 12.5], [end, 12.5]] },
+      });
+
+      const passing = runAudit(
+        makeDataset({ stations, segments: [segment(77.51)] }),
+        { ...AUDIT_OPTIONS, referenceDir: tmpDir }
+      );
+      expect(findByRule(passing.findings, "schematic-segment-incomplete")).toHaveLength(0);
+      expect(findByRule(passing.findings, "reference-construction-stretch-missing")).toHaveLength(0);
+
+      const failing = runAudit(
+        makeDataset({ stations, segments: [segment(77.53)] }),
+        { ...AUDIT_OPTIONS, referenceDir: tmpDir }
+      );
+      expect(findByRule(failing.findings, "schematic-segment-incomplete")).toHaveLength(1);
+      expect(findByRule(failing.findings, "declared-not-compiled")).toHaveLength(1);
       fs.rmSync(tmpDir, { recursive: true, force: true });
     });
 

@@ -479,8 +479,8 @@
       "official_name": "Pink Line (Line 7)",
       "operator": "DMRC",
       "topology": "linear",
-      "operational_stations": 38,
-      "operational_length_km": 59.58,
+      "operational_stations": 45,
+      "operational_length_km": 71.548,
       "planned_length_km": 71.55,
       "terminals": [
         "Majlis Park",
@@ -538,22 +538,20 @@
             "kind": "official",
             "url": "https://www.delhimetrorail.com/corporate"
           }
-        }
-      ],
-      "construction": [
+        },
         {
-          "stretch": "Phase 4 extension (Maujpur - Majlis Park)",
+          "stage": "Majlis Park - Maujpur-Babarpur",
           "phase": "4",
-          "expected_completion": null,
-          "stations": 8,
-          "notes": "12.31 km ring completion section from Maujpur-Babarpur to Majlis Park, completing the ring.",
+          "opened_on": "2026-03-08",
+          "stations_added": 7,
           "source": {
             "kind": "official",
-            "url": "https://www.delhimetrorail.com/project-updates"
+            "url": "https://delhimetrorail.com/pages/about-us/present-network"
           }
         }
       ],
-      "notes": "59.58 km operational semi-ring corridor with 38 stations from Majlis Park to Shiv Vihar. Phase 4 Maujpur–Majlis Park extension will turn it into India's first complete ring metro line."
+      "construction": [],
+      "notes": "71.548 km operational corridor with 45 stations from Majlis Park to Shiv Vihar, including the Majlis Park-Maujpur-Babarpur extension opened 2026-03-08."
     },
     {
       "line_id": "del-magenta",

@@ -115,6 +115,34 @@ describe("MetadataPanel Component", () => {
     expect(screen.getByText("Expected Completion")).toBeInTheDocument();
   });
 
+  it("labels schematic segments as approximate alignments", () => {
+    const mockSegment: SegmentProperties = {
+      segment_id: "blr-pink-schematic-01",
+      line_id: "blr-pink",
+      line_name: "Pink Line",
+      city_id: "bengaluru",
+      city: "Bengaluru",
+      operator: "BMRCL",
+      status: "construction",
+      phase: "2",
+      length_km: 13.8,
+      gauge: "standard",
+      inaugurated_on: null,
+      expected_completion: "2028",
+      stations_count: 2,
+      color: "#EC4899",
+      source: "official",
+      references: ["https://example.com/alignment"],
+      last_verified: null,
+      geometry_quality: "schematic",
+    };
+    useMetroStore.getState().setSelectedFeature({ type: "segment", data: mockSegment });
+    render(<MetadataPanel />);
+    expect(screen.getByTestId("schematic-route-note")).toHaveTextContent(
+      "Approximate alignment."
+    );
+  });
+
   it("renders station metadata correctly when a station is selected", () => {
     const mockStation: StationProperties = {
       station_id: "del-rajiv-chowk",

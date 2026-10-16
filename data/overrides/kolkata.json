@@ -84,6 +84,14 @@
     },
     {
       "osmId": 11720071,
+      "orderedWayIds": [
+        { "id": 610018751, "reversed": true },
+        { "id": 1258949231, "reversed": true },
+        { "id": 1258466136, "reversed": true },
+        { "id": 855300989, "reversed": true },
+        { "id": 1146853675 },
+        { "id": 610018750 }
+      ],
       "segment_id": "kol-green-seg-01",
       "line_id": "kol-green",
       "line_name": "Green Line (Howrah Maidan - Salt Lake Sector V)",
@@ -148,22 +156,6 @@
       ]
     },
     {
-      "osmId": 535333480,
-      "segment_id": "kol-yellow-seg-02",
-      "line_id": "kol-yellow",
-      "line_name": "Yellow Line Extension (Jai Hind - Barasat)",
-      "phase": "4",
-      "status": "planned",
-      "gauge": "broad",
-      "inaugurated_on": null,
-      "expected_completion": null,
-      "completion_unconfirmed": true,
-      "color": "#FFD100",
-      "references": [
-        "https://mtp.indianrailways.gov.in"
-      ]
-    },
-    {
       "osmId": 17320238,
       "segment_id": "kol-orange-seg-01",
       "line_id": "kol-orange",
@@ -199,14 +191,14 @@
       "line_id": "kol-pink",
       "line_name": "Pink Line (Baranagar - Barrackpore)",
       "phase": "5",
-      "status": "planned",
+      "status": "construction",
       "gauge": "broad",
       "inaugurated_on": null,
       "expected_completion": null,
       "completion_unconfirmed": true,
       "color": "#E31B6D",
       "references": [
-        "https://mtp.indianrailways.gov.in"
+        "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2245960&lang=2&reg=48"
       ]
     }
   ],

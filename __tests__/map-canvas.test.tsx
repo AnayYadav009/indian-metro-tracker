@@ -15,7 +15,9 @@ vi.mock("react-map-gl/maplibre", () => {
     Source: ({ children }: { children?: React.ReactNode }) => (
       <div data-testid="mock-map-source">{children}</div>
     ),
-    Layer: () => <div data-testid="mock-map-layer" />,
+    Layer: ({ id }: { id: string }) => (
+      <div data-testid={`mock-map-layer-${id}`} data-layer-id={id} />
+    ),
   };
 });
 
@@ -32,7 +34,11 @@ describe("Map Canvas Components & Rendering", () => {
     expect(screen.getByTestId("mock-maplibre-map")).toBeInTheDocument();
     expect(screen.getByTestId("mock-nav-control")).toBeInTheDocument();
     expect(screen.getAllByTestId("mock-map-source").length).toBe(2);
-    // 8 layers: segment glow + 3 line status layers + selected segment + interchange stations + station circles + station highlight
-    expect(screen.getAllByTestId("mock-map-layer").length).toBe(8);
+    // 10 layers include separate schematic drawing and selection-glow layers.
+    expect(screen.getAllByTestId(/^mock-map-layer-/).length).toBe(10);
+    expect(screen.getByTestId("mock-map-layer-schematic-lines")).toBeInTheDocument();
+    expect(
+      screen.getByTestId("mock-map-layer-selected-schematic-segment-glow")
+    ).toBeInTheDocument();
   });
 });

@@ -11,7 +11,7 @@ import {
   type NormalizedCityData,
   type NormalizedSegment,
 } from "./normalize";
-import type { SegmentFeature, StationFeature } from "../../types/metro";
+import type { SegmentFeature, SharedCorridor, StationFeature } from "../../types/metro";
 
 type Coordinate = [number, number];
 
@@ -115,6 +115,7 @@ export interface CityOverrideData {
   }>;
   segments: Array<{
     osmId?: number;
+    orderedWayIds?: Array<{ id: number; reversed?: boolean }>;
     segment_id: string;
     line_id: string;
     line_name: string;
@@ -130,6 +131,7 @@ export interface CityOverrideData {
     completion_unconfirmed?: boolean;
     last_verified?: string;
     geometry_quality?: "exact" | "schematic";
+    shared_corridor?: SharedCorridor;
     endpoint_station_ids?: string[];
     stations_not_published?: boolean;
   }>;
@@ -750,6 +752,7 @@ export function mergeCityOverrides(
         last_verified: lastVerifiedDate,
         retrieved_at: iseg.isOsmSourced ? retrievedAt : undefined,
         geometry_quality: iseg.geometryQuality,
+        shared_corridor: segOverride.shared_corridor,
       },
     });
   }

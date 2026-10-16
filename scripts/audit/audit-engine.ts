@@ -83,6 +83,27 @@ export interface AuditResult {
   findings: Finding[];
 }
 
+export interface AuditDeclarations {
+  segments: Array<{
+    city_id: string;
+    line_id: string;
+    segment_id: string;
+    status?: "operational" | "construction" | "planned";
+  }>;
+  lines: Array<{ city_id: string; line_id: string }>;
+}
+
+export interface CoverageGap {
+  city_id: string;
+  line_id: string;
+  stretch: string;
+  segment_id?: string;
+  status: "under_construction" | "planned";
+  source_url: string;
+  reason: string;
+  review_date: string;
+}
+
 export interface ReferenceSource {
   title: string;
   url: string;
@@ -101,6 +122,7 @@ export interface ReferenceLineOpening {
 
 export interface ReferenceLineConstruction {
   stretch: string;
+  status?: "under_construction" | "planned";
   phase: string | null;
   expected_completion: string | null;
   stations: number | null;
@@ -323,6 +345,8 @@ export function runAudit(
     referenceDir?: string;
     outOfScopeStations?: Record<string, string[]>;
     outOfScopeLineIds?: string[];
+    declarations?: AuditDeclarations;
+    coverageGaps?: CoverageGap[];
   }
 ): AuditResult {
   const cfg = AUDIT_THRESHOLDS;
@@ -333,6 +357,24 @@ export function runAudit(
   const intentionalBreaks = new Set(options?.intentionalBreaks || []);
   const outOfScopeStations = options?.outOfScopeStations || {};
   const outOfScopeLineIds = new Set(options?.outOfScopeLineIds || []);
+  const coverageGaps = options?.coverageGaps || [];
+
+  function coverageGapFor(
+    cityId: string,
+    lineId: string,
+    stretch: string,
+    status: "operational" | "construction" | "planned" | "under_construction"
+  ): CoverageGap | undefined {
+    if (status === "operational") return undefined;
+    const gapStatus = status === "construction" ? "under_construction" : status;
+    return coverageGaps.find(
+      (gap) =>
+        gap.city_id === cityId &&
+        gap.line_id === lineId &&
+        (gap.stretch === stretch || gap.segment_id === stretch) &&
+        gap.status === gapStatus
+    );
+  }
 
   const findings: Finding[] = [];
 
@@ -440,6 +482,56 @@ export function runAudit(
     segmentsByLineId.set(seg.properties.line_id, arr);
   }
 
+  for (const declared of options?.declarations?.segments || []) {
+    const compiled = segmentById.get(declared.segment_id);
+    if (
+      !compiled ||
+      compiled.properties.city_id !== declared.city_id ||
+      compiled.properties.line_id !== declared.line_id
+    ) {
+      const gap = coverageGapFor(
+        declared.city_id,
+        declared.line_id,
+        declared.segment_id,
+        declared.status || "operational"
+      );
+      add(
+        declared.city_id,
+        gap ? "coverage-gap" : "declared-not-compiled",
+        gap ? "warn" : "error",
+        declared.segment_id,
+        gap
+          ? `Declared ${gap.status.replaceAll("_", " ")} stretch is tracked as a coverage gap: ${gap.reason}`
+          : `Segment declared in overrides '${declared.segment_id}' has no matching compiled feature`
+      );
+    }
+  }
+  for (const declared of options?.declarations?.lines || []) {
+    const hasCompiledSegment = (segmentsByLineId.get(declared.line_id) || []).some(
+      (segment) => segment.properties.city_id === declared.city_id
+    );
+    const hasDeclaredSegment = (options?.declarations?.segments || []).some(
+      (segment) =>
+        segment.city_id === declared.city_id &&
+        segment.line_id === declared.line_id &&
+        (() => {
+          const compiled = segmentById.get(segment.segment_id);
+          return !compiled ||
+            compiled.properties.city_id !== segment.city_id ||
+            compiled.properties.line_id !== segment.line_id;
+        })()
+    );
+    if (!hasCompiledSegment && !hasDeclaredSegment) {
+      add(
+        declared.city_id,
+        "declared-not-compiled",
+        "error",
+        declared.line_id,
+        `Corridor declared in references '${declared.line_id}' has no compiled segment feature`
+      );
+    }
+  }
+
   const stationsByLineId = new Map<string, StationFeature[]>();
   const stationById = new Map<string, StationFeature>();
   for (const st of stations.features) {
@@ -449,6 +541,134 @@ export function runAudit(
       arr.push(st);
       stationsByLineId.set(lineId, arr);
     }
+  }
+
+  function declaredSharedCorridorLengthM(
+    segA: SegmentFeature,
+    segB: SegmentFeature
+  ): number | undefined {
+    const declaration = segA.properties.shared_corridor;
+    const peerDeclaration = segB.properties.shared_corridor;
+    if (!declaration || !peerDeclaration) return undefined;
+    const declaredIds = [...declaration.segment_ids].sort();
+    if (
+      JSON.stringify(declaredIds) !==
+        JSON.stringify([...peerDeclaration.segment_ids].sort()) ||
+      declaredIds[0] !== [segA.properties.segment_id, segB.properties.segment_id].sort()[0] ||
+      declaredIds[1] !== [segA.properties.segment_id, segB.properties.segment_id].sort()[1] ||
+      JSON.stringify(declaration.shared_station_ids) !==
+        JSON.stringify(peerDeclaration.shared_station_ids) ||
+      declaration.reason !== peerDeclaration.reason ||
+      declaration.source !== peerDeclaration.source
+    ) {
+      return undefined;
+    }
+
+    const sharedStations = declaration.shared_station_ids.map((id) => stationById.get(id));
+    if (
+      sharedStations.length < 2 ||
+      sharedStations.some(
+        (station) =>
+          !station ||
+          !station.properties.line_ids.includes(segA.properties.line_id) ||
+          !station.properties.line_ids.includes(segB.properties.line_id)
+      )
+    ) {
+      return undefined;
+    }
+
+    const stationCoords = sharedStations.map(
+      (station) => station!.geometry.coordinates as [number, number]
+    );
+    const stationPathM = stationCoords.slice(1).reduce(
+      (total, point, index) =>
+        total + haversineDistanceKm(stationCoords[index], point) * 1000,
+      0
+    );
+    if (stationPathM <= 0) return undefined;
+
+    const positionsFor = (segment: SegmentFeature) => {
+      const coords = segment.geometry.coordinates as [number, number][];
+      const projections = stationCoords.map((point) =>
+        nearestPointOnPolyline(point, coords)
+      );
+      if (projections.some((projection) => projection.distanceM > 300)) return undefined;
+      const positions = projections.map(
+        (projection) => projection.segmentIndex + projection.t
+      );
+      const increasing = positions.every(
+        (position, index) => index === 0 || position > positions[index - 1]
+      );
+      const decreasing = positions.every(
+        (position, index) => index === 0 || position < positions[index - 1]
+      );
+      return increasing || decreasing ? positions : undefined;
+    };
+    const segmentPositions = [positionsFor(segA), positionsFor(segB)];
+    if (!segmentPositions.every(Boolean)) return undefined;
+    const positionRanges = segmentPositions.map((positions) => [
+      Math.min(...positions!),
+      Math.max(...positions!),
+    ] as const);
+    const declaredStationIds = new Set(declaration.shared_station_ids);
+    const intermediateSharedStation = stations.features.some((station) => {
+      if (
+        declaredStationIds.has(station.properties.station_id) ||
+        !station.properties.line_ids.includes(segA.properties.line_id) ||
+        !station.properties.line_ids.includes(segB.properties.line_id)
+      ) {
+        return false;
+      }
+      return [segA, segB].every((segment, index) => {
+        const projection = nearestPointOnPolyline(
+          station.geometry.coordinates as [number, number],
+          segment.geometry.coordinates as [number, number][]
+        );
+        const position = projection.segmentIndex + projection.t;
+        const [min, max] = positionRanges[index];
+        return projection.distanceM <= 300 && position > min && position < max;
+      });
+    });
+    return intermediateSharedStation ? undefined : stationPathM;
+  }
+
+  function overlapMatchesSharedCorridor(
+    segA: SegmentFeature,
+    segB: SegmentFeature,
+    measuredM: number
+  ): boolean {
+    const declaredM = declaredSharedCorridorLengthM(segA, segB);
+    return Boolean(
+      declaredM && Math.abs(measuredM - declaredM) / declaredM <= 0.15
+    );
+  }
+
+  function isValidSchematicSegment(segment: SegmentFeature): boolean {
+    const properties = segment.properties;
+    if (
+      properties.geometry_quality !== "schematic" ||
+      (properties.status !== "construction" && properties.status !== "planned") ||
+      properties.references.length === 0
+    ) {
+      return false;
+    }
+    const coordinates = segment.geometry.coordinates as [number, number][];
+    const lineStations = stationsByLineId.get(properties.line_id) || [];
+    const nearestAt = (point: [number, number]) =>
+      lineStations
+        .map((station) => ({
+          id: station.properties.station_id,
+          distanceM: haversineDistanceKm(
+            point,
+            station.geometry.coordinates as [number, number]
+          ) * 1000,
+        }))
+        .sort((a, b) => a.distanceM - b.distanceM)[0];
+    const start = nearestAt(coordinates[0]);
+    const end = nearestAt(coordinates[coordinates.length - 1]);
+    return Boolean(
+      start && end && start.id !== end.id && start.distanceM <= 300 && end.distanceM <= 300
+    );
   }
 
   const stationsByCityId = new Map<string, StationFeature[]>();
@@ -954,7 +1174,10 @@ export function runAudit(
         }
 
         const sharedM = (closeCount / (numSamples + 1)) * lengthAM;
-        if (sharedM > cfg.overlapMinSharedM) {
+        if (
+          sharedM > cfg.overlapMinSharedM &&
+          !overlapMatchesSharedCorridor(segA, segB, sharedM)
+        ) {
           add(
             cityId,
             "segment-overlap",
@@ -1096,6 +1319,7 @@ export function runAudit(
   // B8: Computed length_km vs official_length_km
   for (const seg of segments.features) {
     const p = seg.properties;
+    if (p.geometry_quality === "schematic") continue;
     // official_length_km is not yet in schema (M9), but check if present on raw properties
     const raw = p as Record<string, unknown>;
     const officialKm = raw["official_length_km"] as number | undefined;
@@ -1135,6 +1359,17 @@ export function runAudit(
         "error",
         p.segment_id,
         `Operational segment has geometry_quality: 'schematic' (operational segments must not be schematic)`
+      );
+    } else if (
+      p.geometry_quality === "schematic" &&
+      !isValidSchematicSegment(seg)
+    ) {
+      add(
+        p.city_id,
+        "schematic-segment-incomplete",
+        "error",
+        p.segment_id,
+        `Schematic segment must be construction/planned, cite a corridor source, and terminate at two distinct mapped stations within 300 m`
       );
     }
   }
@@ -1769,7 +2004,10 @@ export function runAudit(
           }
 
           const sharedParallelM = (parallelCount / (numSamples + 1)) * lenAM;
-          if (sharedParallelM >= cfg.parallelDuplicateMinSharedM) {
+          if (
+            sharedParallelM >= cfg.parallelDuplicateMinSharedM &&
+            !overlapMatchesSharedCorridor(segA, segB, sharedParallelM)
+          ) {
             add(
               cityId,
               "segment-parallel-duplicate",
@@ -2197,7 +2435,12 @@ export function runAudit(
           // M8.1.6: reference-construction-stretch-missing
           // Every construction[] stretch in the reference needs a data segment with matching status
           const lineSegs = segmentsByLineId.get(refLine.line_id) || [];
-          const conSegs = lineSegs.filter((s) => s.properties.status === "construction");
+        const conSegs = lineSegs.filter(
+          (segment) =>
+            segment.properties.status === "construction" &&
+            (segment.properties.geometry_quality !== "schematic" ||
+              isValidSchematicSegment(segment))
+        );
 
           // Parse stretch terminals if formatted like "Start - End" or "Start to End"
           const stretchParts = con.stretch
@@ -2206,12 +2449,20 @@ export function runAudit(
             .filter(Boolean);
 
           if (conSegs.length === 0) {
+            const gap = coverageGapFor(
+              city.id,
+              refLine.line_id,
+              con.stretch,
+              con.status || "under_construction"
+            );
             add(
               city.id,
-              "reference-construction-stretch-missing",
-              "error",
+              gap ? "coverage-gap" : "declared-not-compiled",
+              gap ? "warn" : "error",
               `${refLine.line_id}|${con.stretch}`,
-              `Construction stretch '${con.stretch}' declared in reference has no construction segments in data`
+              gap
+                ? `Declared ${gap.status.replaceAll("_", " ")} stretch is tracked as a coverage gap: ${gap.reason}`
+                : `Corridor '${con.stretch}' declared in references has no compiled construction feature`
             );
           } else if (stretchParts.length >= 2) {
             const lineStations = stationsByLineId.get(refLine.line_id) || [];
@@ -2291,7 +2542,9 @@ export function runAudit(
       if (refLengthKm != null) {
         const lineSegs = segmentsByLineId.get(refLine.line_id) || [];
         const opSegs = lineSegs.filter(
-          (s) => s.properties.status === "operational"
+          (s) =>
+            s.properties.status === "operational" &&
+            s.properties.geometry_quality !== "schematic"
         );
         const totalKm = opSegs.reduce(
           (acc, s) =>
@@ -2327,7 +2580,11 @@ export function runAudit(
         cityRefOpKm += refLine.operational_length_km;
       }
       const lineSegs = segmentsByLineId.get(refLine.line_id) || [];
-      const opSegs = lineSegs.filter((s) => s.properties.status === "operational");
+        const opSegs = lineSegs.filter(
+          (s) =>
+            s.properties.status === "operational" &&
+            s.properties.geometry_quality !== "schematic"
+        );
       const lineKm = opSegs.reduce(
         (acc, s) => acc + calculateLineStringLengthKm(s.geometry.coordinates as [number, number][]),
         0

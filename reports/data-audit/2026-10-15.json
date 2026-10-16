@@ -106,10 +106,10 @@
       "city_id": "kolkata",
       "city_name": "Kolkata",
       "lines": 5,
-      "segments": 8,
+      "segments": 7,
       "stations": 57,
       "segmentSources": {
-        "osm": 8
+        "osm": 7
       },
       "stationSources": {
         "osm": 57
@@ -156,10 +156,10 @@
       "city_id": "noida",
       "city_name": "Noida",
       "lines": 1,
-      "segments": 2,
+      "segments": 1,
       "stations": 21,
       "segmentSources": {
-        "osm": 2
+        "osm": 1
       },
       "stationSources": {
         "osm": 21
@@ -253,10 +253,10 @@
   "findings": [
     {
       "city_id": "ahmedabad",
-      "rule": "reference-construction-stretch-missing",
-      "severity": "error",
+      "rule": "coverage-gap",
+      "severity": "warn",
       "subject": "ahm-violet|GIFT City - Shahpur (Phase 2B extension)",
-      "message": "Construction stretch 'GIFT City - Shahpur (Phase 2B extension)' declared in reference has no construction segments in data"
+      "message": "Declared planned stretch is tracked as a coverage gap: GMRC has issued a tender, but the inspected awarded-tenders record does not verify an award or physical start; alignment geometry and station positions are not published in the current OSM cache."
     },
     {
       "city_id": "ahmedabad",
@@ -2248,6 +2248,13 @@
     },
     {
       "city_id": "chennai",
+      "rule": "coverage-gap",
+      "severity": "warn",
+      "subject": "che-corridor-3-seg-01",
+      "message": "Declared under construction stretch is tracked as a coverage gap: CMRL confirms active Corridor 3 works, but the declared OSM relation still contains only inactive way members and the refreshed cache has no sourced SIPCOT 2 terminal station coordinate for a schematic segment."
+    },
+    {
+      "city_id": "chennai",
       "rule": "ground-truth-length",
       "severity": "warn",
       "subject": "che-blue",
@@ -2584,6 +2591,13 @@
     },
     {
       "city_id": "delhi",
+      "rule": "ground-truth-station-count",
+      "severity": "error",
+      "subject": "del-pink",
+      "message": "Operational station count: data has 38, reference has 45"
+    },
+    {
+      "city_id": "delhi",
       "rule": "line-terminal-missing",
       "severity": "error",
       "subject": "del-grey|del-dwarka",
@@ -2595,13 +2609,6 @@
       "severity": "error",
       "subject": "del-pink|del-shiv-vihar",
       "message": "Terminal station 'Shiv Vihar' is 3399 m away from nearest segment end of line 'del-pink' (threshold: 300 m)"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "reference-construction-stretch-missing",
-      "severity": "error",
-      "subject": "del-pink|Phase 4 extension (Maujpur - Majlis Park)",
-      "message": "Construction stretch 'Phase 4 extension (Maujpur - Majlis Park)' declared in reference has no construction segments in data"
     },
     {
       "city_id": "delhi",
@@ -2867,7 +2874,7 @@
       "rule": "ground-truth-length",
       "severity": "warn",
       "subject": "del-pink",
-      "message": "Operational length: computed 61.43 km vs reference 59.58 km (3.1%)"
+      "message": "Operational length: computed 61.43 km vs reference 71.548 km (14.1%)"
     },
     {
       "city_id": "delhi",
@@ -6945,24 +6952,31 @@
     },
     {
       "city_id": "kolkata",
-      "rule": "line-terminal-missing",
-      "severity": "error",
-      "subject": "kol-green|kolkata-howrah-maidan",
-      "message": "Terminal station 'Howrah Maidan' is 2136 m away from nearest segment end of line 'kol-green' (threshold: 300 m)"
-    },
-    {
-      "city_id": "kolkata",
-      "rule": "reference-construction-stretch-missing",
-      "severity": "error",
-      "subject": "kol-yellow|Jai Hind (Airport) - Barasat",
-      "message": "Construction stretch 'Jai Hind (Airport) - Barasat' declared in reference has no construction segments in data"
-    },
-    {
-      "city_id": "kolkata",
-      "rule": "future-date-unconfirmed",
+      "rule": "coverage-gap",
       "severity": "warn",
-      "subject": "kol-yellow-seg-02",
-      "message": "Future segment has no verified expected completion date"
+      "subject": "kol-pink-seg-01",
+      "message": "Declared under construction stretch is tracked as a coverage gap: PIB reports the balance 12.5 km Baranagar–Barrackpore work is held up pending utility shifting/NOC; the override declaration has no matching compiled geometry."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "coverage-gap",
+      "severity": "warn",
+      "subject": "kol-yellow|Jai Hind (Airport) - Michael Nagar",
+      "message": "Declared under construction stretch is tracked as a coverage gap: PIB reports work is in progress, but the refreshed Kolkata cache has no Michael Nagar station node or coordinate for a sourced schematic segment."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "coverage-gap",
+      "severity": "warn",
+      "subject": "kol-yellow|New Barrackpore - Barasat",
+      "message": "Declared planned stretch is tracked as a coverage gap: PIB states this 7.5 km stretch is held up by land acquisition and encroachment issues; no verified terminal coordinates or alignment are present in the refreshed cache."
+    },
+    {
+      "city_id": "kolkata",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "kol-green",
+      "message": "Operational length: computed 15.06 km vs reference 16.55 km (9.0%)"
     },
     {
       "city_id": "kolkata",
@@ -7624,20 +7638,6 @@
     },
     {
       "city_id": "kolkata",
-      "rule": "segment-end-far-from-station",
-      "severity": "warn",
-      "subject": "kol-yellow-seg-02",
-      "message": "Segment start is 9846 m from nearest station of line 'kol-yellow' (threshold: 150 m)"
-    },
-    {
-      "city_id": "kolkata",
-      "rule": "segment-sparse-vertices",
-      "severity": "warn",
-      "subject": "kol-green-seg-01|leg-20-21",
-      "message": "Segment has a leg of 2719 m without vertices (threshold: 1000 m for non-schematic segments)"
-    },
-    {
-      "city_id": "kolkata",
       "rule": "segment-sparse-vertices",
       "severity": "warn",
       "subject": "kol-purple-seg-02|leg-20-21",
@@ -7662,14 +7662,14 @@
       "rule": "last-verified-distribution",
       "severity": "info",
       "subject": "kolkata",
-      "message": "last_verified distribution: 2026-10-08: 21; 2026-10-13: 2; missing: 42"
+      "message": "last_verified distribution: 2026-10-08: 21; 2026-10-13: 2; missing: 41"
     },
     {
       "city_id": "mumbai",
-      "rule": "city-km-vs-reference",
+      "rule": "declared-not-compiled",
       "severity": "error",
-      "subject": "mumbai",
-      "message": "City operational km differs from reference by 10.8%: computed 80.70 km vs reference 90.47 km (threshold: 10%)"
+      "subject": "mum-line-1-schematic-01",
+      "message": "Segment declared in overrides 'mum-line-1-schematic-01' has no matching compiled feature"
     },
     {
       "city_id": "mumbai",
@@ -7694,30 +7694,16 @@
     },
     {
       "city_id": "mumbai",
+      "rule": "coverage-gap",
+      "severity": "warn",
+      "subject": "mum-line-2b|Phase 2 (Chembur - DN Nagar)",
+      "message": "Declared under construction stretch is tracked as a coverage gap: MMRDA identifies the remaining Chembur–DN Nagar phase as under construction; no matching route geometry is available in the current compiled data."
+    },
+    {
+      "city_id": "mumbai",
       "rule": "future-date-unconfirmed",
       "severity": "warn",
       "subject": "mum-anik-nagar-bus-depot",
-      "message": "Future station has no verified expected completion date"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
-      "severity": "warn",
-      "subject": "mum-chembur",
-      "message": "Future station has no verified expected completion date"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
-      "severity": "warn",
-      "subject": "mum-deonar",
-      "message": "Future station has no verified expected completion date"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
-      "severity": "warn",
-      "subject": "mum-diamond-garden",
       "message": "Future station has no verified expected completion date"
     },
     {
@@ -7738,13 +7724,6 @@
       "city_id": "mumbai",
       "rule": "future-date-unconfirmed",
       "severity": "warn",
-      "subject": "mum-line-2b-seg-01",
-      "message": "Future segment has no verified expected completion date"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
-      "severity": "warn",
       "subject": "mum-line-4-seg-01",
       "message": "Future segment has no verified expected completion date"
     },
@@ -7754,20 +7733,6 @@
       "severity": "warn",
       "subject": "mum-line-9-schematic-01",
       "message": "Future segment has no verified expected completion date"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
-      "severity": "warn",
-      "subject": "mum-mandale",
-      "message": "Future station has no verified expected completion date"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
-      "severity": "warn",
-      "subject": "mum-mankhurd",
-      "message": "Future station has no verified expected completion date"
     },
     {
       "city_id": "mumbai",
@@ -7801,13 +7766,6 @@
       "city_id": "mumbai",
       "rule": "future-date-unconfirmed",
       "severity": "warn",
-      "subject": "mum-shivaji-chowk-chembur",
-      "message": "Future station has no verified expected completion date"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-date-unconfirmed",
-      "severity": "warn",
       "subject": "mum-suman-nagar",
       "message": "Future station has no verified expected completion date"
     },
@@ -7823,27 +7781,6 @@
       "rule": "future-record-no-reference",
       "severity": "warn",
       "subject": "mum-anik-nagar-bus-depot",
-      "message": "Future station has no source reference"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-record-no-reference",
-      "severity": "warn",
-      "subject": "mum-chembur",
-      "message": "Future station has no source reference"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-record-no-reference",
-      "severity": "warn",
-      "subject": "mum-deonar",
-      "message": "Future station has no source reference"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-record-no-reference",
-      "severity": "warn",
-      "subject": "mum-diamond-garden",
       "message": "Future station has no source reference"
     },
     {
@@ -7871,20 +7808,6 @@
       "city_id": "mumbai",
       "rule": "future-record-no-reference",
       "severity": "warn",
-      "subject": "mum-mandale",
-      "message": "Future station has no source reference"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-record-no-reference",
-      "severity": "warn",
-      "subject": "mum-mankhurd",
-      "message": "Future station has no source reference"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-record-no-reference",
-      "severity": "warn",
       "subject": "mum-meditya-nagar",
       "message": "Future station has no source reference"
     },
@@ -7900,13 +7823,6 @@
       "rule": "future-record-no-reference",
       "severity": "warn",
       "subject": "mum-shaheed-bhagat-singh-garden",
-      "message": "Future station has no source reference"
-    },
-    {
-      "city_id": "mumbai",
-      "rule": "future-record-no-reference",
-      "severity": "warn",
-      "subject": "mum-shivaji-chowk-chembur",
       "message": "Future station has no source reference"
     },
     {
@@ -7942,7 +7858,7 @@
       "rule": "ground-truth-length",
       "severity": "warn",
       "subject": "mum-line-2b",
-      "message": "Operational length: computed 0.00 km vs reference 5.5 km (100.0%)"
+      "message": "Operational length: computed 5.44 km vs reference 5.79 km (6.0%)"
     },
     {
       "city_id": "mumbai",
@@ -7956,7 +7872,7 @@
       "rule": "ground-truth-length",
       "severity": "warn",
       "subject": "mum-line-9",
-      "message": "Operational length: computed 3.52 km vs reference 4.97 km (29.1%)"
+      "message": "Operational length: computed 3.52 km vs reference 4.7 km (25.0%)"
     },
     {
       "city_id": "mumbai",
@@ -8754,7 +8670,7 @@
       "rule": "last-verified-distribution",
       "severity": "info",
       "subject": "mumbai",
-      "message": "last_verified distribution: 2026-10-06: 1; 2026-10-08: 33; 2026-10-10: 1; 2026-10-13: 1; missing: 63"
+      "message": "last_verified distribution: 2026-08-31: 7; 2026-10-06: 1; 2026-10-08: 33; 2026-10-10: 1; 2026-10-13: 1; missing: 56"
     },
     {
       "city_id": "mumbai",
@@ -8765,31 +8681,31 @@
     },
     {
       "city_id": "nagpur",
-      "rule": "reference-construction-stretch-missing",
+      "rule": "declared-not-compiled",
       "severity": "error",
       "subject": "nag-aqua|Lokmanya Nagar to Hingna (Reach 3A extension)",
-      "message": "Construction stretch 'Lokmanya Nagar to Hingna (Reach 3A extension)' declared in reference has no construction segments in data"
+      "message": "Corridor 'Lokmanya Nagar to Hingna (Reach 3A extension)' declared in references has no compiled construction feature"
     },
     {
       "city_id": "nagpur",
-      "rule": "reference-construction-stretch-missing",
+      "rule": "declared-not-compiled",
       "severity": "error",
       "subject": "nag-aqua|Prajapati Nagar to Transport Nagar (Reach 4A extension)",
-      "message": "Construction stretch 'Prajapati Nagar to Transport Nagar (Reach 4A extension)' declared in reference has no construction segments in data"
+      "message": "Corridor 'Prajapati Nagar to Transport Nagar (Reach 4A extension)' declared in references has no compiled construction feature"
     },
     {
       "city_id": "nagpur",
-      "rule": "reference-construction-stretch-missing",
+      "rule": "declared-not-compiled",
       "severity": "error",
       "subject": "nag-orange|Automotive Square to Kanhan River (Reach 2B extension)",
-      "message": "Construction stretch 'Automotive Square to Kanhan River (Reach 2B extension)' declared in reference has no construction segments in data"
+      "message": "Corridor 'Automotive Square to Kanhan River (Reach 2B extension)' declared in references has no compiled construction feature"
     },
     {
       "city_id": "nagpur",
-      "rule": "reference-construction-stretch-missing",
+      "rule": "declared-not-compiled",
       "severity": "error",
       "subject": "nag-orange|Khapri to Butibori MIDC ESR (Reach 1A extension)",
-      "message": "Construction stretch 'Khapri to Butibori MIDC ESR (Reach 1A extension)' declared in reference has no construction segments in data"
+      "message": "Corridor 'Khapri to Butibori MIDC ESR (Reach 1A extension)' declared in references has no compiled construction feature"
     },
     {
       "city_id": "nagpur",
@@ -8835,17 +8751,10 @@
     },
     {
       "city_id": "noida",
-      "rule": "segment-parallel-duplicate",
-      "severity": "error",
-      "subject": "noi-aqua-seg-01|noi-aqua-seg-02",
-      "message": "Segments run parallel within 60 m for ~624 m (twin tracks)"
-    },
-    {
-      "city_id": "noida",
-      "rule": "consecutive-segment-gap",
+      "rule": "coverage-gap",
       "severity": "warn",
-      "subject": "noi-aqua-seg-01|noi-aqua-seg-02",
-      "message": "Segments of line 'noi-aqua' have nearest endpoint gap of 8782 m (threshold: 150 m)"
+      "subject": "noi-aqua|Sector 142 to Botanical Garden",
+      "message": "Declared planned stretch is tracked as a coverage gap: NMRC lists this approved 11.56 km, 8-station corridor as an upcoming project. OSM way 538930428 is tagged railway=proposed and usage=branch, so it is not part of the operational Aqua Line and its partial proposed geometry is not compiled."
     },
     {
       "city_id": "noida",
@@ -8877,59 +8786,38 @@
     },
     {
       "city_id": "noida",
-      "rule": "segment-sparse-vertices",
-      "severity": "warn",
-      "subject": "noi-aqua-seg-02|leg-1-2",
-      "message": "Segment has a leg of 1141 m without vertices (threshold: 1000 m for non-schematic segments)"
-    },
-    {
-      "city_id": "noida",
-      "rule": "station-gap",
-      "severity": "warn",
-      "subject": "noi-aqua|noi-depot|noi-noida-sector-137",
-      "message": "Stations are 13932 m apart (threshold: 3000 m)"
-    },
-    {
-      "city_id": "noida",
-      "rule": "station-gap",
-      "severity": "warn",
-      "subject": "noi-aqua|noi-noida-sector-83|noi-noida-sector-143",
-      "message": "Stations are 4015 m apart (threshold: 3000 m)"
-    },
-    {
-      "city_id": "noida",
       "rule": "last-verified-distribution",
       "severity": "info",
       "subject": "noida",
-      "message": "last_verified distribution: 2026-10-08: 20; 2026-10-10: 1; missing: 2"
+      "message": "last_verified distribution: 2026-10-08: 20; 2026-10-10: 1; missing: 1"
     },
     {
       "city_id": "pune",
-      "rule": "reference-construction-stretch-missing",
+      "rule": "declared-not-compiled",
       "severity": "error",
       "subject": "pun-purple|PCMC - Nigdi (Bhakti Shakti)",
-      "message": "Construction stretch 'PCMC - Nigdi (Bhakti Shakti)' declared in reference has no construction segments in data"
+      "message": "Corridor 'PCMC - Nigdi (Bhakti Shakti)' declared in references has no compiled construction feature"
     },
     {
       "city_id": "pune",
-      "rule": "reference-construction-stretch-missing",
+      "rule": "declared-not-compiled",
       "severity": "error",
       "subject": "pun-purple|Range Hill station infill",
-      "message": "Construction stretch 'Range Hill station infill' declared in reference has no construction segments in data"
+      "message": "Corridor 'Range Hill station infill' declared in references has no compiled construction feature"
     },
     {
       "city_id": "pune",
-      "rule": "reference-construction-stretch-missing",
+      "rule": "declared-not-compiled",
       "severity": "error",
       "subject": "pun-purple|Swargate - Katraj",
-      "message": "Construction stretch 'Swargate - Katraj' declared in reference has no construction segments in data"
+      "message": "Corridor 'Swargate - Katraj' declared in references has no compiled construction feature"
     },
     {
       "city_id": "pune",
       "rule": "segment-parallel-duplicate",
       "severity": "error",
       "subject": "pun-line-3-seg-01",
-      "message": "Segment polyline folds back on itself running parallel within 60 m for ~18455 m"
+      "message": "Segment polyline folds back on itself running parallel within 60 m for ~1946 m"
     },
     {
       "city_id": "pune",
@@ -9139,7 +9027,7 @@
       "rule": "segment-end-far-from-station",
       "severity": "warn",
       "subject": "pun-line-3-seg-01",
-      "message": "Segment start is 7877 m from nearest station of line 'pun-line-3' (threshold: 150 m)"
+      "message": "Segment start is 18275 m from nearest station of line 'pun-line-3' (threshold: 150 m)"
     },
     {
       "city_id": "pune",
@@ -9159,35 +9047,7 @@
       "city_id": "pune",
       "rule": "segment-sparse-vertices",
       "severity": "warn",
-      "subject": "pun-line-3-seg-01|leg-15-16",
-      "message": "Segment has a leg of 1107 m without vertices (threshold: 1000 m for non-schematic segments)"
-    },
-    {
-      "city_id": "pune",
-      "rule": "segment-sparse-vertices",
-      "severity": "warn",
-      "subject": "pun-line-3-seg-01|leg-18-19",
-      "message": "Segment has a leg of 1097 m without vertices (threshold: 1000 m for non-schematic segments)"
-    },
-    {
-      "city_id": "pune",
-      "rule": "segment-sparse-vertices",
-      "severity": "warn",
-      "subject": "pun-line-3-seg-01|leg-2-3",
-      "message": "Segment has a leg of 1135 m without vertices (threshold: 1000 m for non-schematic segments)"
-    },
-    {
-      "city_id": "pune",
-      "rule": "segment-sparse-vertices",
-      "severity": "warn",
-      "subject": "pun-line-3-seg-01|leg-27-28",
-      "message": "Segment has a leg of 1009 m without vertices (threshold: 1000 m for non-schematic segments)"
-    },
-    {
-      "city_id": "pune",
-      "rule": "segment-sparse-vertices",
-      "severity": "warn",
-      "subject": "pun-line-3-seg-01|leg-462-463",
+      "subject": "pun-line-3-seg-01|leg-453-454",
       "message": "Segment has a leg of 1070 m without vertices (threshold: 1000 m for non-schematic segments)"
     },
     {
@@ -9210,6 +9070,13 @@
       "severity": "info",
       "subject": "pune",
       "message": "last_verified distribution: 2026-10-08: 30; missing: 2"
+    },
+    {
+      "city_id": "pune",
+      "rule": "station-outside-bbox-on-segment",
+      "severity": "info",
+      "subject": "pun-line-3-seg-01",
+      "message": "Segment has geometry outside the city bbox"
     },
     {
       "city_id": "surat",
