@@ -1,4 +1,4 @@
-﻿import { test, expect } from "@playwright/test";
+import { test, expect } from "@playwright/test";
 
 test.describe("Jaipur Visual & Interaction QA (M15)", () => {
   test.beforeEach(async ({ page }) => {
@@ -15,6 +15,10 @@ test.describe("Jaipur Visual & Interaction QA (M15)", () => {
     const jaipurBtn = page.getByTestId("city-select-jaipur");
     await expect(jaipurBtn).toBeVisible();
     await jaipurBtn.click();
+    const filterToggle = page.getByTestId("collapse-filter-btn");
+    if ((await filterToggle.getAttribute("aria-expanded")) === "false") {
+      await filterToggle.click({ force: true });
+    }
 
     // 2. Verify dynamic phases for Jaipur render
     await expect(page.getByTestId("phase-pill-1")).toBeVisible();

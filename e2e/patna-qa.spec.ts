@@ -1,4 +1,4 @@
-﻿import { test, expect } from "@playwright/test";
+import { test, expect } from "@playwright/test";
 
 test.describe("Patna Visual & Interaction QA (M15)", () => {
   test.beforeEach(async ({ page }) => {
@@ -15,6 +15,10 @@ test.describe("Patna Visual & Interaction QA (M15)", () => {
     const patnaBtn = page.getByTestId("city-select-patna");
     await expect(patnaBtn).toBeVisible();
     await patnaBtn.click();
+    const filterToggle = page.getByTestId("collapse-filter-btn");
+    if ((await filterToggle.getAttribute("aria-expanded")) === "false") {
+      await filterToggle.click({ force: true });
+    }
 
     // 2. Verify dynamic phases for Patna render
     await expect(page.getByTestId("phase-pill-1")).toBeVisible();

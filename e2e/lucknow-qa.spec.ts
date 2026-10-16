@@ -15,6 +15,10 @@ test.describe("Lucknow Visual & Interaction QA (M15)", () => {
     const lucknowBtn = page.getByTestId("city-select-lucknow");
     await expect(lucknowBtn).toBeVisible();
     await lucknowBtn.click();
+    const filterToggle = page.getByTestId("collapse-filter-btn");
+    if ((await filterToggle.getAttribute("aria-expanded")) === "false") {
+      await filterToggle.click({ force: true });
+    }
 
     // 2. Verify dynamic phases for Lucknow render
     await expect(page.getByTestId("phase-pill-1")).toBeVisible();
