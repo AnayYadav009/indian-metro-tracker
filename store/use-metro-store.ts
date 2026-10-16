@@ -137,17 +137,7 @@ export const useMetroStore = create<MetroStoreState>((set) => ({
   setHoveredFeature: (hovered) =>
     set((state) => {
       const current = state.hoveredFeature;
-      if (
-        current?.type === hovered?.type &&
-        current?.id === hovered?.id &&
-        current?.name === hovered?.name &&
-        current?.status === hovered?.status &&
-        current?.color === hovered?.color &&
-        current?.x === hovered?.x &&
-        current?.y === hovered?.y
-      ) {
-        return state;
-      }
+      if (current?.type === hovered?.type && current?.id === hovered?.id && current?.name === hovered?.name && current?.status === hovered?.status && current?.color === hovered?.color && current?.x === hovered?.x && current?.y === hovered?.y) return state;
       return { hoveredFeature: hovered };
     }),
 

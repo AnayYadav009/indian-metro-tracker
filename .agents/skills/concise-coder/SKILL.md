@@ -21,3 +21,5 @@ Generates clean, idiomatic code with minimal lines and zero unnecessary architec
 4. **Scope Control**:
    - Touch and output only the code necessary to solve the prompt.
    - Never regenerate an entire 300-line file when a 10-line modification solves the issue.
+5. **Strict Net-Line Reduction on Refactors**:
+   - When refactoring existing files, every modified file must end up with fewer lines than its baseline. Prefer compact inline `.find()` / `.some()` / `.filter()` expressions over multi-line `Map`/`Set` index scaffolding unless indexing is strictly required for large-scale performance.

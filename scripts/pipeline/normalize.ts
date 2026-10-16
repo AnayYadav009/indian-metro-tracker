@@ -1,4 +1,5 @@
 import { calculateLineStringLengthKm } from "../../lib/geo";
+import { appendCoordinates, roundCoordinates } from "../lib/geometry";
 import { cleanStationName } from "../lib/station-name";
 
 export interface NormalizedStation {
@@ -100,7 +101,6 @@ export function normalizeOverpassCity(
       status: stationStatus,
     });
   }
-
   // 2. Extract route relations
   const routeRelations = elements.filter(
     (e) =>
@@ -114,7 +114,13 @@ export function normalizeOverpassCity(
   );
 
   const segments: NormalizedSegment[] = [];
-  const filteredInactiveWays: Array<{ relationId: number; wayId: number }> = [];
+  const filteredInactiveWays = routeRelations.flatMap((rel) =>
+    Array.isArray(rel.members)
+      ? rel.members
+          .filter((member: any) => member.type === "way" && member.role === "inactive")
+          .map((member: any) => ({ relationId: rel.id, wayId: member.ref }))
+      : []
+  );
 
   for (const rel of routeRelations) {
     const relName = rel.tags.name || `Relation ${rel.id}`;
@@ -124,72 +130,54 @@ export function normalizeOverpassCity(
     const operator = rel.tags.operator || "";
 
     // Assemble LineString coordinates from way members
-    const coords: [number, number][] = [];
+    const relationMembers: any[] = Array.isArray(rel.members) ? rel.members : [];
     const stationOsmIds: number[] = [];
+    const orderedWays = routeWayOrders[rel.id];
+    const members = orderedWays
+      ? [
+          ...relationMembers.filter((member) => member.type === "node"),
+          ...orderedWays.flatMap((way) => {
+            const member = relationMembers.find((candidate) => candidate.type === "way" && candidate.ref === way.id);
+            return member ? [{ ...member, reverseGeometry: way.reversed }] : [];
+          }),
+        ]
+      : relationMembers;
 
-    if (rel.members && Array.isArray(rel.members)) {
-      for (const member of rel.members) {
-        if (member.type === "way" && member.role === "inactive") {
-          filteredInactiveWays.push({ relationId: rel.id, wayId: member.ref });
+    const relationId = rel.id.toString();
+    members
+      .filter((member) => member.type === "node" && stationsMap.has(member.ref))
+      .forEach((member) => {
+        stationOsmIds.push(member.ref);
+        if (["stop", "platform", "station", undefined, ""].includes(member.role)) {
+          const station = stationsMap.get(member.ref)!;
+          if (!station.lineRefs.includes(relationId)) station.lineRefs.push(relationId);
         }
+      });
+
+    const coords = members.reduce<[number, number][]>((coordinates, member) => {
+      if (
+        member.type !== "way" ||
+        !Array.isArray(member.geometry) ||
+        !member.geometry.length ||
+        (member.role && member.role !== "route")
+      ) return coordinates;
+
+      let wayCoords = roundCoordinates(
+        member.geometry.map((pt: any) => [Number(pt.lon), Number(pt.lat)] as [number, number]),
+        6
+      );
+      if (member.reverseGeometry) wayCoords.reverse();
+      if (coordinates.length) {
+        const last = coordinates[coordinates.length - 1];
+        const first = wayCoords[0];
+        const lastOfWay = wayCoords[wayCoords.length - 1];
+        if (
+          Math.hypot(last[0] - lastOfWay[0], last[1] - lastOfWay[1]) <
+          Math.hypot(last[0] - first[0], last[1] - first[1])
+        ) wayCoords.reverse();
       }
-      const orderedWays = routeWayOrders[rel.id];
-      const members = orderedWays
-        ? [
-            ...rel.members.filter((member: any) => member.type === "node"),
-            ...orderedWays.map((way) => {
-              const member = rel.members.find((candidate: any) => candidate.type === "way" && candidate.ref === way.id);
-              return member ? { ...member, reverseGeometry: way.reversed } : undefined;
-            }).filter(Boolean),
-          ]
-        : rel.members;
-      for (const m of members) {
-        if (m.type === "node" && stationsMap.has(m.ref)) {
-          stationOsmIds.push(m.ref);
-          if (m.role === "stop" || m.role === "platform" || m.role === "station" || !m.role) {
-            const st = stationsMap.get(m.ref)!;
-            if (!st.lineRefs.includes(rel.id.toString())) {
-              st.lineRefs.push(rel.id.toString());
-            }
-          }
-        } else if (
-          m.type === "way" &&
-          m.geometry &&
-          Array.isArray(m.geometry) &&
-          m.geometry.length > 0 &&
-          (!m.role || m.role === "" || m.role === "route")
-        ) {
-          const wayCoords: [number, number][] = m.geometry.map((pt: any) => [
-            Number(Number(pt.lon).toFixed(6)),
-            Number(Number(pt.lat).toFixed(6)),
-          ]);
-          if (m.reverseGeometry) wayCoords.reverse();
-
-          if (coords.length === 0) {
-            coords.push(...wayCoords);
-          } else {
-            const last = coords[coords.length - 1];
-            const first = wayCoords[0];
-            const lastOfWay = wayCoords[wayCoords.length - 1];
-
-            const distDirect = Math.hypot(last[0] - first[0], last[1] - first[1]);
-            const distReverse = Math.hypot(last[0] - lastOfWay[0], last[1] - lastOfWay[1]);
-
-            if (distReverse < distDirect) {
-              wayCoords.reverse();
-            }
-            // Append avoiding duplicate points
-            for (let i = 0; i < wayCoords.length; i++) {
-              const pt = wayCoords[i];
-              const prev = coords[coords.length - 1];
-              if (prev[0] !== pt[0] || prev[1] !== pt[1]) {
-                coords.push(pt);
-              }
-            }
-          }
-        }
-      }
-    }
+      return appendCoordinates(coordinates, wayCoords);
+    }, []);
 
     if (coords.length >= 2) {
       // Determine default status from tags or name
@@ -235,36 +223,17 @@ export function normalizeOverpassCity(
       e.geometry.length >= 2
   );
 
-  for (const way of constructionWays) {
-    const wayName = way.tags.name || way.tags["name:en"] || `Way ${way.id}`;
-    const wayRef = way.tags.ref || "";
-    const wayColour = way.tags.colour || way.tags.color;
-    const network = way.tags.network || "";
-    const operator = way.tags.operator || "";
-
-    const coords: [number, number][] = way.geometry.map((pt: any) => [
-      Number(Number(pt.lon).toFixed(6)),
-      Number(Number(pt.lat).toFixed(6)),
-    ]);
-
-    const status: "operational" | "construction" | "planned" =
-      way.tags.railway === "construction" ? "construction" : "planned";
-    const lengthKm = calculateLineStringLengthKm(coords);
-
-    segments.push({
-      osmId: way.id,
-      name: wayName,
-      ref: wayRef,
-      colour: wayColour,
-      network,
-      operator,
-      coordinates: coords,
-      lengthKm,
-      status,
-      tags: way.tags,
-      stationOsmIds: [],
-    });
-  }
+  segments.push(...constructionWays.map((way) => {
+    const { tags, geometry, id } = way;
+    const coordinates = roundCoordinates(geometry.map((pt: any) => [Number(pt.lon), Number(pt.lat)] as [number, number]), 6);
+    return {
+      osmId: id, name: tags.name || tags["name:en"] || `Way ${id}`, ref: tags.ref || "",
+      colour: tags.colour || tags.color, network: tags.network || "", operator: tags.operator || "",
+      coordinates, lengthKm: calculateLineStringLengthKm(coordinates),
+      status: tags.railway === "construction" ? "construction" as const : "planned" as const,
+      tags, stationOsmIds: [],
+    };
+  }));
 
   return {
     cityId,

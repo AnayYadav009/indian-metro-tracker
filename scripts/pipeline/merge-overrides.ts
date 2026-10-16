@@ -6,6 +6,7 @@ import {
   nearestPointOnPolyline,
   lineSlice,
 } from "../../lib/geo";
+import { normalizeCoordinates, segmentsIntersect } from "../lib/geometry";
 import {
   slugify,
   type NormalizedCityData,
@@ -15,38 +16,11 @@ import type { SegmentFeature, SharedCorridor, StationFeature } from "../../types
 
 type Coordinate = [number, number];
 
-function removeAdjacentDuplicateCoords(coords: Coordinate[]): Coordinate[] {
-  return coords.filter(
-    (coord, index) =>
-      index === 0 ||
-      coord[0] !== coords[index - 1][0] ||
-      coord[1] !== coords[index - 1][1]
-  );
-}
-
-function segmentsCross(
-  a: Coordinate,
-  b: Coordinate,
-  c: Coordinate,
-  d: Coordinate
-): boolean {
-  const cross = (o: Coordinate, p: Coordinate, q: Coordinate) =>
-    (p[0] - o[0]) * (q[1] - o[1]) - (p[1] - o[1]) * (q[0] - o[0]);
-  const abC = cross(a, b, c);
-  const abD = cross(a, b, d);
-  const cdA = cross(c, d, a);
-  const cdB = cross(c, d, b);
-  return (
-    ((abC > 0 && abD < 0) || (abC < 0 && abD > 0)) &&
-    ((cdA > 0 && cdB < 0) || (cdA < 0 && cdB > 0))
-  );
-}
-
 function removeShortSelfIntersectionSpur(coords: Coordinate[]): Coordinate[] {
   for (let i = 0; i < coords.length - 3; i++) {
     for (let j = i + 2; j < Math.min(coords.length - 1, i + 50); j++) {
       if (j === i + 1) continue;
-      if (segmentsCross(coords[i], coords[i + 1], coords[j], coords[j + 1])) {
+      if (segmentsIntersect(coords[i], coords[i + 1], coords[j], coords[j + 1])) {
         return [...coords.slice(0, i + 1), ...coords.slice(j + 1)];
       }
     }
@@ -186,7 +160,7 @@ export function mergeCityOverrides(
   stations: StationFeature[];
 } {
   const normalizedStations = [...normalized.stations];
-  for (const station of overrides.additionalStations || []) {
+  (overrides.additionalStations || []).forEach((station) => {
     if (!normalizedStations.some((existing) => existing.osmId === station.osmId)) {
       normalizedStations.push({
         osmId: station.osmId,
@@ -197,7 +171,7 @@ export function mergeCityOverrides(
         status: station.status || "operational",
       });
     }
-  }
+  });
   const cityName = overrides.city.name;
 
   // Map normalized segments by osmId
@@ -250,12 +224,17 @@ export function mergeCityOverrides(
   );
 
   const dedupeRadiusKm = (overrides.dedupeRadiusM || 350) / 1000;
-  const aliasMap = new Map<string, string>();
-  if (overrides.stationAliases) {
-    for (const [k, v] of Object.entries(overrides.stationAliases)) {
-      aliasMap.set(k.toLowerCase().trim(), v.trim());
-    }
-  }
+  const aliasMap = new Map(Object.entries(overrides.stationAliases || {}).map(([k, v]) => [k.toLowerCase().trim(), v.trim()]));
+  const outOfScopeList = new Set(overrides.out_of_scope_station_ids || []);
+  const cityPrefix: Record<string, string> = {
+    delhi: "del",
+    bengaluru: "blr",
+    mumbai: "mum",
+    gurugram: "gur",
+    noida: "noi",
+    "navi-mumbai": "nmm",
+  };
+  const prefix = cityPrefix[overrides.city.id] || overrides.city.id;
 
   interface DeduplicatedStation {
     id: string;
@@ -282,24 +261,9 @@ export function mergeCityOverrides(
     }
     const resolvedName = aliasMap.get(rawName.toLowerCase()) || rawName;
 
-    const prefix =
-      overrides.city.id === "delhi"
-        ? "del"
-        : overrides.city.id === "bengaluru"
-          ? "blr"
-          : overrides.city.id === "mumbai"
-            ? "mum"
-            : overrides.city.id === "gurugram"
-              ? "gur"
-              : overrides.city.id === "noida"
-                ? "noi"
-                : overrides.city.id === "navi-mumbai"
-                  ? "nmm"
-                  : overrides.city.id;
     const baseSlug = `${prefix}-${slugify(resolvedName)}`;
     let stationId = baseSlug;
 
-    const outOfScopeList = new Set(overrides.out_of_scope_station_ids || []);
     if (
       outOfScopeList.has(baseSlug) ||
       outOfScopeList.has(stationId) ||
@@ -317,9 +281,7 @@ export function mergeCityOverrides(
       const sameName =
         s.baseName.toLowerCase() === resolvedName.toLowerCase() ||
         s.baseName.toLowerCase() === rawName.toLowerCase();
-      const aliasMatch =
-        aliasMap.get(s.baseName.toLowerCase())?.toLowerCase() ===
-        resolvedName.toLowerCase();
+      const aliasMatch = aliasMap.get(s.baseName.toLowerCase())?.toLowerCase() === resolvedName.toLowerCase();
       const sharedInterchangeTag = Boolean(
         (station.tags?.interchange === "yes" ||
           station.tags?.public_transport === "stop_area") &&
@@ -333,9 +295,7 @@ export function mergeCityOverrides(
     if (existing) {
       // Merge lineRefs
       for (const ref of station.lineRefs || []) {
-        if (!existing.lineRefs.includes(ref)) {
-          existing.lineRefs.push(ref);
-        }
+        if (!existing.lineRefs.includes(ref)) existing.lineRefs.push(ref);
       }
       if (!existing.osmIds.includes(station.osmId)) {
         existing.osmIds.push(station.osmId);
@@ -389,26 +349,15 @@ export function mergeCityOverrides(
       "operational";
 
     // Tier 1: OSM route relation membership
-    for (const relRef of st.lineRefs) {
-      const segMatch = overrides.segments.find(
-        (s) => s.osmId === Number(relRef)
-      );
-      if (segMatch) {
-        lineIdsSet.add(segMatch.line_id);
-      }
-    }
-    for (const normalizedSegment of normalized.segments) {
-      if (
-        normalizedSegment.stationOsmIds.some((osmId) =>
-          st.osmIds.includes(osmId)
-        )
-      ) {
-        const segMatch = overrides.segments.find(
-          (s) => s.osmId === normalizedSegment.osmId
-        );
-        if (segMatch) lineIdsSet.add(segMatch.line_id);
-      }
-    }
+    st.lineRefs.forEach((relRef) => {
+      const segMatch = overrides.segments.find((segment) => segment.osmId === Number(relRef));
+      if (segMatch) lineIdsSet.add(segMatch.line_id);
+    });
+    normalized.segments.forEach((segment) => {
+      if (!segment.stationOsmIds.some((osmId) => st.osmIds.includes(osmId))) return;
+      const segMatch = overrides.segments.find((item) => item.osmId === segment.osmId);
+      if (segMatch) lineIdsSet.add(segMatch.line_id);
+    });
 
     // Tier 2: Proximity (< 200m) to segment geometry if available
     let closestDistM = Infinity;
@@ -568,7 +517,7 @@ export function mergeCityOverrides(
   // This removes turn-back/depot spurs that are outside the station span.
   for (const iseg of intermediateSegments) {
     if (iseg.coords) {
-      iseg.coords = removeAdjacentDuplicateCoords(iseg.coords);
+      iseg.coords = normalizeCoordinates(iseg.coords);
     }
     const coords = iseg.coords;
     if (!coords || coords.length < 2) continue;
@@ -653,10 +602,10 @@ export function mergeCityOverrides(
 
   for (const iseg of intermediateSegments) {
     if (iseg.coords) {
-      iseg.coords = removeAdjacentDuplicateCoords(
+      iseg.coords = normalizeCoordinates(
         removeHairpinSpurs(
           removeShortSelfIntersectionSpur(
-            removeAdjacentDuplicateCoords(iseg.coords)
+            normalizeCoordinates(iseg.coords)
           )
         )
       );
@@ -714,7 +663,7 @@ export function mergeCityOverrides(
         ? segOverride.last_verified!
         : segOverride.last_verified || null;
 
-    const truncatedCoords = removeAdjacentDuplicateCoords(
+    const truncatedCoords = normalizeCoordinates(
       coords.map(([lng, lat]) => [
         Number(lng.toFixed(5)),
         Number(lat.toFixed(5)),

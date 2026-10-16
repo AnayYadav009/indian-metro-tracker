@@ -44,14 +44,11 @@ export function StationDetail({ station, coordinates }: StationDetailProps) {
       const lineSegs = dataset.segments.features.filter(
         (s) => s.properties.line_id === lineId
       );
-      let statusLabel = "";
-      if (lineSegs.some((s) => s.properties.status === "operational")) {
-        statusLabel = "Operational";
-      } else if (lineSegs.some((s) => s.properties.status === "construction")) {
-        statusLabel = "Under Construction";
-      } else if (lineSegs.some((s) => s.properties.status === "planned")) {
-        statusLabel = "Planned";
-      }
+      const statusLabel = (["operational", "construction", "planned"] as const)
+        .find((status) => lineSegs.some((s) => s.properties.status === status))
+        ?.replace("operational", "Operational")
+        .replace("construction", "Under Construction")
+        .replace("planned", "Planned") ?? "";
 
       return {
         id: lineId,

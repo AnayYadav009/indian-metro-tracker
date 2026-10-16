@@ -2,6 +2,15 @@ import fs from "node:fs";
 import path from "node:path";
 import type { City, Line, SegmentFeatureCollection, StationFeatureCollection } from "../../types/metro";
 
+export function readJsonFile<T>(filePath: string, fallback?: T): T {
+  try {
+    return JSON.parse(fs.readFileSync(filePath, "utf-8")) as T;
+  } catch (error) {
+    if (fallback !== undefined) return fallback;
+    throw error;
+  }
+}
+
 export interface LoadedDataset {
   cities: City[];
   lines: Line[];

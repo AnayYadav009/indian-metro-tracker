@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { validateMetroDataset } from "../lib/data-validator";
 import { atomicWriteFiles } from "./lib/atomic-write";
+import { readJsonFile } from "./lib/load-dataset";
 import type { City, Line, SegmentFeatureCollection, StationFeatureCollection } from "../types/metro";
 
 const ROOT_DIR = path.resolve(__dirname, "..");
@@ -127,10 +128,10 @@ export function runMigrationOnDirectory(targetDir: string, options?: MigrationV2
   }
 
   console.log(`🔄 Migrating datasets in ${targetDir}...`);
-  const cities = JSON.parse(fs.readFileSync(citiesPath, "utf-8"));
-  const lines = JSON.parse(fs.readFileSync(linesPath, "utf-8"));
-  const segments = JSON.parse(fs.readFileSync(segsPath, "utf-8"));
-  const stations = JSON.parse(fs.readFileSync(stPath, "utf-8"));
+  const cities = readJsonFile<any[]>(citiesPath);
+  const lines = readJsonFile<any[]>(linesPath);
+  const segments = readJsonFile<any>(segsPath);
+  const stations = readJsonFile<any>(stPath);
 
   const migrated = migrateDatasetV2({ cities, lines, segments, stations }, options);
 
