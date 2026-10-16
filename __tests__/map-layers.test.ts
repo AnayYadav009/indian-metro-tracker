@@ -8,10 +8,19 @@ import {
   stationCircleLayer,
   stationLabelsLayer,
   withVisibility,
+  LINE_WIDTH_ZOOM_EXPRESSION,
 } from "@/components/map/map-layers";
 import { STATION_STYLE } from "@/lib/station-style";
+import { MIN_LINE_WIDTH_LOW_ZOOM, NATIONAL_ZOOM_THRESHOLD } from "@/lib/map-config";
 
 describe("MapLibre Layer Specifications", () => {
+  it("keeps lines visible at national zoom", () => {
+    expect(LINE_WIDTH_ZOOM_EXPRESSION).toContain(NATIONAL_ZOOM_THRESHOLD);
+    expect(LINE_WIDTH_ZOOM_EXPRESSION).toContain(MIN_LINE_WIDTH_LOW_ZOOM);
+    expect(LINE_WIDTH_ZOOM_EXPRESSION[3]).toBe(3.5);
+    expect(LINE_WIDTH_ZOOM_EXPRESSION[4]).toBe(MIN_LINE_WIDTH_LOW_ZOOM);
+  });
+
   describe("Line status visual discrimination without relying on color", () => {
     it("configures operationalLayer as a solid line", () => {
       const layer = operationalLineLayer as Record<string, any>;

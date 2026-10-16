@@ -12,6 +12,8 @@ import {
 } from "./badge-indicators";
 import { ReportIssueButton } from "./report-issue-button";
 import { DEFAULT_LINE_FALLBACK_COLOR } from "@/lib/metro-styles";
+import { getKnownIssueNotice } from "@/lib/known-issue-notices";
+import { getLineStatusLabels } from "@/lib/line-status";
 
 interface StationDetailProps {
   station: StationProperties;
@@ -44,17 +46,11 @@ export function StationDetail({ station, coordinates }: StationDetailProps) {
       const lineSegs = dataset.segments.features.filter(
         (s) => s.properties.line_id === lineId
       );
-      const statusLabel = (["operational", "construction", "planned"] as const)
-        .find((status) => lineSegs.some((s) => s.properties.status === status))
-        ?.replace("operational", "Operational")
-        .replace("construction", "Under Construction")
-        .replace("planned", "Planned") ?? "";
-
       return {
         id: lineId,
         name: line?.name || lineId,
         color: line?.color || DEFAULT_LINE_FALLBACK_COLOR,
-        statusLabel,
+        statusLabels: getLineStatusLabels(lineSegs.map((s) => s.properties.status)),
       };
     });
   }, [station.line_ids, station.interchange_id, dataset.stations, dataset.lines, dataset.segments]);
@@ -75,6 +71,7 @@ export function StationDetail({ station, coordinates }: StationDetailProps) {
 
   const isInterchange =
     station.is_interchange || station.interchange_id !== undefined;
+  const knownIssueNotice = getKnownIssueNotice(station.line_ids);
 
   return (
     <div data-testid="station-detail" className="flex flex-col gap-4 text-slate-200">
@@ -100,6 +97,16 @@ export function StationDetail({ station, coordinates }: StationDetailProps) {
         <PhaseBadge phase={station.phase} />
         <LayoutBadge layout={station.layout} />
       </div>
+
+      {knownIssueNotice && (
+        <p
+          data-testid="known-issue-notice"
+          role="status"
+          className="rounded-md border border-amber-400/30 bg-amber-400/10 px-3 py-2 text-xs leading-relaxed text-amber-100"
+        >
+          {knownIssueNotice}
+        </p>
+      )}
 
       {/* Connected Lines section — interchange stations show clickable chips */}
       {isInterchange && connectedLines.length > 1 ? (
@@ -128,9 +135,9 @@ export function StationDetail({ station, coordinates }: StationDetailProps) {
                     style={{ backgroundColor: line.color }}
                   />
                   <span>{line.name}</span>
-                  {line.statusLabel && (
+                  {line.statusLabels.length > 0 && (
                     <span className="text-[10px] font-normal text-slate-400">
-                      • {line.statusLabel}
+                      • {line.statusLabels.join(" / ")}
                     </span>
                   )}
                 </span>
@@ -153,9 +160,9 @@ export function StationDetail({ station, coordinates }: StationDetailProps) {
                   style={{ backgroundColor: line.color }}
                 />
                 <span>{line.name}</span>
-                {line.statusLabel && (
+                {line.statusLabels.length > 0 && (
                   <span className="text-[10px] font-normal text-slate-400">
-                    • {line.statusLabel}
+                    • {line.statusLabels.join(" / ")}
                   </span>
                 )}
               </span>

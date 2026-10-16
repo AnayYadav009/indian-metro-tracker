@@ -2,12 +2,15 @@ import React from "react";
 import type { SegmentProperties } from "@/types/schema";
 import { StatusBadge, PhaseBadge } from "./badge-indicators";
 import { ReportIssueButton } from "./report-issue-button";
+import { getKnownIssueNotice } from "@/lib/known-issue-notices";
 
 interface SegmentDetailProps {
   segment: SegmentProperties;
 }
 
 export function SegmentDetail({ segment }: SegmentDetailProps) {
+  const knownIssueNotice = getKnownIssueNotice([segment.line_id]);
+
   return (
     <div data-testid="segment-detail" className="flex flex-col gap-4 text-slate-200">
       {/* Line header & Color swatch */}
@@ -43,6 +46,16 @@ export function SegmentDetail({ segment }: SegmentDetailProps) {
           </span>
         )}
       </div>
+
+      {knownIssueNotice && (
+        <p
+          data-testid="known-issue-notice"
+          role="status"
+          className="rounded-md border border-amber-400/30 bg-amber-400/10 px-3 py-2 text-xs leading-relaxed text-amber-100"
+        >
+          {knownIssueNotice}
+        </p>
+      )}
 
       {/* Detailed properties grid */}
       <div className="grid grid-cols-2 gap-2.5 rounded-lg border border-slate-800 bg-slate-950/60 p-3 text-xs">

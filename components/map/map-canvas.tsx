@@ -135,6 +135,27 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
   );
 
   const [isLoadingTiles, setIsLoadingTiles] = useState<boolean>(false);
+  const [isMapReady, setIsMapReady] = useState(false);
+  const [selectionLocation, setSelectionLocation] = useState<{
+    featureKey: string;
+    coordinates: [number, number];
+  } | null>(null);
+
+  const selectedFeatureAnchor = useMemo<[number, number] | null>(() => {
+    if (!selectedFeature) return null;
+    if (selectedFeature.type === "station") {
+      const station = getStationById(selectedFeature.data.station_id);
+      return station?.geometry.coordinates as [number, number] | undefined ?? null;
+    }
+    const featureKey = `segment:${selectedFeature.data.segment_id}`;
+    if (selectionLocation?.featureKey === featureKey) return selectionLocation.coordinates;
+    const segment = getSegmentById(selectedFeature.data.segment_id);
+    if (!segment || segment.geometry.type !== "LineString") return null;
+    const coordinates = segment.geometry.coordinates;
+    return coordinates.length
+      ? (coordinates[Math.floor(coordinates.length / 2)] as [number, number])
+      : null;
+  }, [selectedFeature, selectionLocation]);
 
   useEffect(() => {
     if (!mapRef.current) return;
@@ -157,7 +178,7 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
             padding: isDesktop
               ? { top: 70, bottom: 70, left: 400, right: 80 }
               : { top: 80, bottom: 80, left: 24, right: 24 },
-            duration: 800,
+            duration: 450,
             essential: true,
           }
         );
@@ -166,34 +187,59 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
       mapRef.current.flyTo({
         center: [INITIAL_VIEW_STATE.longitude, INITIAL_VIEW_STATE.latitude],
         zoom: INITIAL_VIEW_STATE.zoom,
-        duration: 800,
+        duration: 450,
         essential: true,
       });
     }
   }, [selectedCityId, dataset.cities]);
 
   useEffect(() => {
-    if (!mapRef.current || !selectedFeature) return;
-    const isDesktop = typeof window !== "undefined" && window.innerWidth >= 768;
-    if (!isDesktop) return;
-
-    if (selectedFeature.type === "station") {
-      const stn = getStationById(selectedFeature.data.station_id);
-      if (stn) {
-        const [lng, lat] = stn.geometry.coordinates;
-        mapRef.current.easeTo({
-          center: [lng, lat],
-          padding: { top: 0, bottom: 0, left: 0, right: 400 },
-          duration: 400,
-        });
+    if (!mapRef.current || !isMapReady || !selectedFeatureAnchor) return;
+    const map = mapRef.current.getMap();
+    const mapRect = map.getContainer().getBoundingClientRect();
+    const target = { x: mapRect.width / 2, y: mapRect.height / 2 };
+    const overlays = [
+      ...document.querySelectorAll<HTMLElement>(
+        '[data-testid="metadata-panel"], [data-testid="filter-panel"]'
+      ),
+    ]
+      .filter((element) => element.getBoundingClientRect().width > 0)
+      .map((element) => {
+        const rect = element.getBoundingClientRect();
+        return {
+          left: rect.left - mapRect.left,
+          right: rect.right - mapRect.left,
+          top: rect.top - mapRect.top,
+          bottom: rect.bottom - mapRect.top,
+        };
+      });
+    for (const overlay of overlays) {
+      if (
+        target.x >= overlay.left && target.x <= overlay.right &&
+        target.y >= overlay.top && target.y <= overlay.bottom
+      ) {
+        target.y = Math.max(24, overlay.top - 24);
       }
     }
-  }, [selectedFeature]);
+    const anchorPoint = map.project(selectedFeatureAnchor);
+    const centerPoint = map.project(map.getCenter());
+    const nextCenterPoint = {
+      x: centerPoint.x + anchorPoint.x - target.x,
+      y: centerPoint.y + anchorPoint.y - target.y,
+    };
+    mapRef.current.easeTo({
+      center: map.unproject([nextCenterPoint.x, nextCenterPoint.y]),
+      padding: 0,
+      duration: 300,
+      essential: true,
+    });
+  }, [isMapReady, selectedFeatureAnchor]);
 
   const handleMapClick = useCallback(
     (e: MapLayerMouseEvent) => {
       const features = e.features;
       if (!features || features.length === 0) {
+        setSelectionLocation(null);
         clearSelectedFeature();
         return;
       }
@@ -210,6 +256,7 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
         const stationId = stationF.properties.station_id;
         const matched = getStationById(stationId);
         if (matched) {
+          setSelectionLocation(null);
           setSelectedFeature({
             type: "station",
             data: matched.properties,
@@ -230,6 +277,10 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
         const segmentId = segmentF.properties.segment_id;
         const matched = getSegmentById(segmentId);
         if (matched) {
+          setSelectionLocation({
+            featureKey: `segment:${segmentId}`,
+            coordinates: [e.lngLat.lng, e.lngLat.lat],
+          });
           setSelectedFeature({
             type: "segment",
             data: matched.properties,
@@ -318,6 +369,7 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
         onMouseEnter={() => setCursor("pointer")}
         onLoad={() => {
           if (!mapRef.current) return;
+          setIsMapReady(true);
           if (typeof window !== "undefined") {
             (window as any)._mapLibreInstance = mapRef.current.getMap();
           }
@@ -335,13 +387,14 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
                   padding: isDesktop
                     ? { top: 70, bottom: 70, left: 400, right: 80 }
                     : { top: 80, bottom: 80, left: 24, right: 24 },
-                  duration: 0,
+                    duration: 0,
                   essential: true,
                 }
               );
             }
           }
         }}
+        onMoveStart={() => setIsLoadingTiles(true)}
         onIdle={() => setIsLoadingTiles(false)}
       >
         <NavigationControl position="top-right" showCompass showZoom />
@@ -397,6 +450,8 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
       {isLoadingTiles && (
         <div
           data-testid="map-loading-indicator"
+          role="status"
+          aria-live="polite"
           className="pointer-events-none absolute bottom-4 left-4 z-20 flex items-center gap-2 rounded-full border border-slate-700/60 bg-slate-900/80 px-2.5 py-1 text-[11px] text-slate-300 shadow-md backdrop-blur-sm"
         >
           <span className="h-2 w-2 animate-ping rounded-full bg-emerald-400" />

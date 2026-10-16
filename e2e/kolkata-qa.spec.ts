@@ -15,6 +15,10 @@ test.describe("Kolkata Visual & Interaction QA (Step 5)", () => {
     const kolkataBtn = page.getByTestId("city-select-kolkata");
     await expect(kolkataBtn).toBeVisible();
     await kolkataBtn.click();
+    const filterToggle = page.getByTestId("collapse-filter-btn");
+    if ((await filterToggle.getAttribute("aria-expanded")) === "false") {
+      await filterToggle.click({ force: true });
+    }
 
     // 2. Verify dynamic phases for Kolkata render
     await expect(page.getByTestId("phase-pill-1")).toBeVisible();
