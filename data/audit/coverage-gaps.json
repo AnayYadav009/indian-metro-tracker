@@ -127,5 +127,14 @@
     "source_url": "https://www.punemetrorail.org",
     "reason": "Maha Metro Phase 1B southern underground extension (5.46 km) approved/tendered; alignment geometry is not yet present in the compiled dataset.",
     "review_date": "2027-01-15"
+  },
+  {
+    "city_id": "delhi",
+    "line_id": "del-pink",
+    "stretch": "Phase 4 extension (Majlis Park - Maujpur-Babarpur)",
+    "status": "under_construction",
+    "source_url": "https://delhimetrorail.com/pages/about-us/present-network",
+    "reason": "Phase 4 elevated extension corridor (12.3 km, 7 stations) completing the Ring Metro; route geometry and station nodes are not yet compiled in the OSM dataset.",
+    "review_date": "2027-01-15"
   }
 ]
