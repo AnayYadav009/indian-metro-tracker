@@ -1,0 +1,47 @@
+{
+  "city_id": "jaipur",
+  "compiled_on": "2026-10-16",
+  "lines": [
+    {
+      "line_id": "jai-pink",
+      "official_name": "Pink Line",
+      "operator": "JMRC",
+      "topology": "linear",
+      "operational_stations": 11,
+      "operational_length_km": 11.4,
+      "planned_length_km": 14.9,
+      "terminals": [
+        "Mansarovar",
+        "Badi Chaupar"
+      ],
+      "status": "operational",
+      "confidence": "sourced",
+      "openings": [
+        {
+          "stage": "Phase 1A (Mansarovar - Chandpole)",
+          "phase": null,
+          "opened_on": "2015-06-03",
+          "stations_added": 9,
+          "confidence": "sourced",
+          "source": {
+            "title": "Jaipur Metro Phase 1A Commercial Launch",
+            "url": "https://transport.rajasthan.gov.in/content/transportportal/en/metro.html",
+            "retrieved_at": "2026-10-16"
+          }
+        },
+        {
+          "stage": "Phase 1B (Chandpole - Badi Chaupar)",
+          "phase": null,
+          "opened_on": "2020-09-23",
+          "stations_added": 2,
+          "confidence": "sourced",
+          "source": {
+            "title": "Jaipur Metro Phase 1B Commercial Launch",
+            "url": "https://transport.rajasthan.gov.in/content/transportportal/en/metro.html",
+            "retrieved_at": "2026-10-16"
+          }
+        }
+      ]
+    }
+  ]
+}

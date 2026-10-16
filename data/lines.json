@@ -519,5 +519,15 @@
     "operator": "UPMRC",
     "source": "osm+upmrc",
     "notes": "Yellow Line connects Mankameshwar Mandir to Taj East Gate (5.2 km, 6 stations). Priority corridor fully operational."
+  },
+  {
+    "id": "jai-pink",
+    "name": "Pink Line",
+    "city": "Jaipur",
+    "city_id": "jaipur",
+    "color": "#ff748c",
+    "operator": "JMRC",
+    "source": "osm+jmrc",
+    "notes": "Pink Line connects Mansarovar to Badi Chaupar (11.97 km, 11 stations). Phase 1 fully operational."
   }
 ]

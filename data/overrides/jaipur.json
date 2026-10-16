@@ -1,0 +1,639 @@
+{
+  "city": {
+    "id": "jaipur",
+    "name": "Jaipur",
+    "bbox": [
+      75.7,
+      26.85,
+      75.86,
+      26.95
+    ],
+    "operator": "JMRC",
+    "phases": [
+      "1"
+    ],
+    "network_id": "jaipur-metro"
+  },
+  "lines": [
+    {
+      "id": "jai-pink",
+      "name": "Pink Line",
+      "city": "Jaipur",
+      "city_id": "jaipur",
+      "color": "#ff748c",
+      "operator": "JMRC",
+      "source": "osm+jmrc",
+      "notes": "Pink Line connects Mansarovar to Badi Chaupar (11.97 km, 11 stations). Phase 1 fully operational."
+    }
+  ],
+  "segments": [
+    {
+      "segment_id": "jai-pink-seg-01",
+      "line_id": "jai-pink",
+      "phase": "1",
+      "status": "operational",
+      "geometry_quality": "exact",
+      "osmId": 5250264,
+      "orderedWayIds": [
+        {
+          "id": 308729586,
+          "reversed": false
+        },
+        {
+          "id": 676313094,
+          "reversed": false
+        },
+        {
+          "id": 676313112,
+          "reversed": false
+        },
+        {
+          "id": 568709789,
+          "reversed": false
+        },
+        {
+          "id": 568709791,
+          "reversed": false
+        },
+        {
+          "id": 568709794,
+          "reversed": false
+        },
+        {
+          "id": 568709797,
+          "reversed": false
+        },
+        {
+          "id": 568709799,
+          "reversed": false
+        },
+        {
+          "id": 568709800,
+          "reversed": false
+        },
+        {
+          "id": 568709805,
+          "reversed": false
+        },
+        {
+          "id": 722997693,
+          "reversed": false
+        },
+        {
+          "id": 91602741,
+          "reversed": false
+        },
+        {
+          "id": 519595298,
+          "reversed": true
+        }
+      ],
+      "line_name": "Pink Line",
+      "gauge": "standard",
+      "inaugurated_on": "2015-06-03",
+      "expected_completion": null,
+      "color": "#ff748c",
+      "references": [
+        "https://transport.rajasthan.gov.in/content/transportportal/en/metro.html"
+      ],
+      "last_verified": "2026-10-16"
+    }
+  ],
+  "stations": [
+    {
+      "station_id": "1064270794",
+      "name": "Mansarovar",
+      "line_id": "jai-pink",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "is_interchange": false,
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://transport.rajasthan.gov.in/content/transportportal/en/metro.html"
+      ]
+    },
+    {
+      "station_id": "3566139322",
+      "name": "New Aatish Market",
+      "line_id": "jai-pink",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "is_interchange": false,
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://transport.rajasthan.gov.in/content/transportportal/en/metro.html"
+      ]
+    },
+    {
+      "station_id": "3139920403",
+      "name": "Vivek Vihar",
+      "line_id": "jai-pink",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "is_interchange": false,
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://transport.rajasthan.gov.in/content/transportportal/en/metro.html"
+      ]
+    },
+    {
+      "station_id": "3139920402",
+      "name": "Shyam Nagar",
+      "line_id": "jai-pink",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "is_interchange": false,
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://transport.rajasthan.gov.in/content/transportportal/en/metro.html"
+      ]
+    },
+    {
+      "station_id": "3139920401",
+      "name": "Ram Nagar",
+      "line_id": "jai-pink",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "is_interchange": false,
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://transport.rajasthan.gov.in/content/transportportal/en/metro.html"
+      ]
+    },
+    {
+      "station_id": "3139919926",
+      "name": "Civil Lines",
+      "line_id": "jai-pink",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "is_interchange": false,
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://transport.rajasthan.gov.in/content/transportportal/en/metro.html"
+      ]
+    },
+    {
+      "station_id": "3139920400",
+      "name": "Railway Station",
+      "line_id": "jai-pink",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "is_interchange": false,
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://transport.rajasthan.gov.in/content/transportportal/en/metro.html"
+      ]
+    },
+    {
+      "station_id": "1064270823",
+      "name": "Sindhi Camp",
+      "line_id": "jai-pink",
+      "phase": "1",
+      "status": "operational",
+      "layout": "elevated",
+      "is_interchange": false,
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://transport.rajasthan.gov.in/content/transportportal/en/metro.html"
+      ]
+    },
+    {
+      "station_id": "1064270915",
+      "name": "Chandpole",
+      "line_id": "jai-pink",
+      "phase": "1",
+      "status": "operational",
+      "layout": "underground",
+      "is_interchange": false,
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://transport.rajasthan.gov.in/content/transportportal/en/metro.html"
+      ]
+    },
+    {
+      "station_id": "3139919925",
+      "name": "Chhoti Chaupar",
+      "line_id": "jai-pink",
+      "phase": "1",
+      "status": "operational",
+      "layout": "underground",
+      "is_interchange": false,
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://transport.rajasthan.gov.in/content/transportportal/en/metro.html"
+      ]
+    },
+    {
+      "station_id": "8035756429",
+      "name": "Badi Chaupar",
+      "line_id": "jai-pink",
+      "phase": "1",
+      "status": "operational",
+      "layout": "underground",
+      "is_interchange": false,
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://transport.rajasthan.gov.in/content/transportportal/en/metro.html"
+      ]
+    }
+  ],
+  "stationOverrides": {
+    "jaipur-mansarovar": {
+      "line_ids": [
+        "jai-pink"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2015-06-03",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://transport.rajasthan.gov.in/content/transportportal/en/metro.html"
+      ]
+    },
+    "Mansarovar": {
+      "line_ids": [
+        "jai-pink"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2015-06-03",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://transport.rajasthan.gov.in/content/transportportal/en/metro.html"
+      ]
+    },
+    "jaipur-new-aatish-market": {
+      "line_ids": [
+        "jai-pink"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2015-06-03",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://transport.rajasthan.gov.in/content/transportportal/en/metro.html"
+      ]
+    },
+    "New Aatish Market": {
+      "line_ids": [
+        "jai-pink"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2015-06-03",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://transport.rajasthan.gov.in/content/transportportal/en/metro.html"
+      ]
+    },
+    "jaipur-vivek-vihar": {
+      "line_ids": [
+        "jai-pink"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2015-06-03",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://transport.rajasthan.gov.in/content/transportportal/en/metro.html"
+      ]
+    },
+    "Vivek Vihar": {
+      "line_ids": [
+        "jai-pink"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2015-06-03",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://transport.rajasthan.gov.in/content/transportportal/en/metro.html"
+      ]
+    },
+    "jaipur-shyam-nagar": {
+      "line_ids": [
+        "jai-pink"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2015-06-03",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://transport.rajasthan.gov.in/content/transportportal/en/metro.html"
+      ]
+    },
+    "Shyam Nagar": {
+      "line_ids": [
+        "jai-pink"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2015-06-03",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://transport.rajasthan.gov.in/content/transportportal/en/metro.html"
+      ]
+    },
+    "jaipur-ram-nagar": {
+      "line_ids": [
+        "jai-pink"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2015-06-03",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://transport.rajasthan.gov.in/content/transportportal/en/metro.html"
+      ]
+    },
+    "Ram Nagar": {
+      "line_ids": [
+        "jai-pink"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2015-06-03",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://transport.rajasthan.gov.in/content/transportportal/en/metro.html"
+      ]
+    },
+    "jaipur-civil-lines": {
+      "line_ids": [
+        "jai-pink"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2015-06-03",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://transport.rajasthan.gov.in/content/transportportal/en/metro.html"
+      ]
+    },
+    "Civil Lines": {
+      "line_ids": [
+        "jai-pink"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2015-06-03",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://transport.rajasthan.gov.in/content/transportportal/en/metro.html"
+      ]
+    },
+    "jaipur-railway-station": {
+      "line_ids": [
+        "jai-pink"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2015-06-03",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://transport.rajasthan.gov.in/content/transportportal/en/metro.html"
+      ]
+    },
+    "Railway Station": {
+      "line_ids": [
+        "jai-pink"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2015-06-03",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://transport.rajasthan.gov.in/content/transportportal/en/metro.html"
+      ]
+    },
+    "jaipur-railway": {
+      "line_ids": [
+        "jai-pink"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2015-06-03",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://transport.rajasthan.gov.in/content/transportportal/en/metro.html"
+      ]
+    },
+    "Railway": {
+      "line_ids": [
+        "jai-pink"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2015-06-03",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://transport.rajasthan.gov.in/content/transportportal/en/metro.html"
+      ]
+    },
+    "jaipur-sindhi-camp": {
+      "line_ids": [
+        "jai-pink"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2015-06-03",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://transport.rajasthan.gov.in/content/transportportal/en/metro.html"
+      ]
+    },
+    "Sindhi Camp": {
+      "line_ids": [
+        "jai-pink"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2015-06-03",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://transport.rajasthan.gov.in/content/transportportal/en/metro.html"
+      ]
+    },
+    "jaipur-chandpole": {
+      "line_ids": [
+        "jai-pink"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2015-06-03",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "underground",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://transport.rajasthan.gov.in/content/transportportal/en/metro.html"
+      ]
+    },
+    "Chandpole": {
+      "line_ids": [
+        "jai-pink"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2015-06-03",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "underground",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://transport.rajasthan.gov.in/content/transportportal/en/metro.html"
+      ]
+    },
+    "jaipur-chhoti-chaupar": {
+      "line_ids": [
+        "jai-pink"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2020-09-23",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "underground",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://transport.rajasthan.gov.in/content/transportportal/en/metro.html"
+      ]
+    },
+    "Chhoti Chaupar": {
+      "line_ids": [
+        "jai-pink"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2020-09-23",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "underground",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://transport.rajasthan.gov.in/content/transportportal/en/metro.html"
+      ]
+    },
+    "jaipur-choti-chaupar": {
+      "line_ids": [
+        "jai-pink"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2020-09-23",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "underground",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://transport.rajasthan.gov.in/content/transportportal/en/metro.html"
+      ]
+    },
+    "Choti Chaupar": {
+      "line_ids": [
+        "jai-pink"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2020-09-23",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "underground",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://transport.rajasthan.gov.in/content/transportportal/en/metro.html"
+      ]
+    },
+    "jaipur-badi-chaupar": {
+      "line_ids": [
+        "jai-pink"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2020-09-23",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "underground",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://transport.rajasthan.gov.in/content/transportportal/en/metro.html"
+      ]
+    },
+    "Badi Chaupar": {
+      "line_ids": [
+        "jai-pink"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2020-09-23",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "underground",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://transport.rajasthan.gov.in/content/transportportal/en/metro.html"
+      ]
+    }
+  }
+}

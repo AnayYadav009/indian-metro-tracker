@@ -302,5 +302,20 @@
       "1"
     ],
     "network_id": "agra-metro"
+  },
+  {
+    "id": "jaipur",
+    "name": "Jaipur",
+    "bbox": [
+      75.7,
+      26.85,
+      75.86,
+      26.95
+    ],
+    "operator": "JMRC",
+    "phases": [
+      "1"
+    ],
+    "network_id": "jaipur-metro"
   }
 ]
