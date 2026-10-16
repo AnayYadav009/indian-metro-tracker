@@ -287,5 +287,20 @@
       "1"
     ],
     "network_id": "kanpur-metro"
+  },
+  {
+    "id": "agra",
+    "name": "Agra",
+    "bbox": [
+      77.95,
+      27.12,
+      78.1,
+      27.22
+    ],
+    "operator": "UPMRC",
+    "phases": [
+      "1"
+    ],
+    "network_id": "agra-metro"
   }
 ]

@@ -28652,6 +28652,204 @@
         "last_verified": "2026-10-16",
         "retrieved_at": "2026-10-16"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.03573,
+          27.16821
+        ]
+      },
+      "properties": {
+        "station_id": "agra-taj-mahal",
+        "name": "Taj Mahal",
+        "city_id": "agra",
+        "city": "Agra",
+        "line_ids": [
+          "agr-yellow"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2024-03-06",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "underground",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://upmetrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.01704,
+          27.17825
+        ]
+      },
+      "properties": {
+        "station_id": "agra-mankameshwar-mandir",
+        "name": "Mankameshwar Mandir",
+        "city_id": "agra",
+        "city": "Agra",
+        "line_ids": [
+          "agr-yellow"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2024-03-06",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "underground",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://upmetrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.02219,
+          27.1749
+        ]
+      },
+      "properties": {
+        "station_id": "agra-dr-ambedkar-chowk",
+        "name": "Dr. Ambedkar Chowk",
+        "city_id": "agra",
+        "city": "Agra",
+        "line_ids": [
+          "agr-yellow"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2024-03-06",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "underground",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://upmetrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.04265,
+          27.16014
+        ]
+      },
+      "properties": {
+        "station_id": "agra-fatehabad-road",
+        "name": "Fatehabad Road",
+        "city_id": "agra",
+        "city": "Agra",
+        "line_ids": [
+          "agr-yellow"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2024-03-06",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://upmetrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.05074,
+          27.15781
+        ]
+      },
+      "properties": {
+        "station_id": "agra-shaheed-captain-shubham-gupta",
+        "name": "Shaheed Captain Shubham Gupta",
+        "city_id": "agra",
+        "city": "Agra",
+        "line_ids": [
+          "agr-yellow"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2024-03-06",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://upmetrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.05791,
+          27.15839
+        ]
+      },
+      "properties": {
+        "station_id": "agra-taj-east-gate",
+        "name": "Taj East Gate",
+        "city_id": "agra",
+        "city": "Agra",
+        "line_ids": [
+          "agr-yellow"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2024-03-06",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://upmetrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
     }
   ]
 }

@@ -1,0 +1,38 @@
+{
+  "city_id": "agra",
+  "compiled_on": "2026-10-16",
+  "lines": [
+    {
+      "line_id": "agr-yellow",
+      "official_name": "Yellow Line (Line 1)",
+      "operator": "UPMRC",
+      "topology": "linear",
+      "operational_stations": 6,
+      "operational_length_km": 5.2,
+      "planned_length_km": 14.25,
+      "terminals": [
+        "Mankameshwar Mandir",
+        "Taj East Gate"
+      ],
+      "status": "operational",
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "Priority Corridor (Taj East Gate to Mankameshwar Mandir)",
+          "phase": null,
+          "opened_on": "2024-03-06",
+          "stations_added": 6,
+          "confidence": "sourced",
+          "source": {
+            "title": "Prime Minister inaugurates Priority Corridor of Agra Metro from Taj East Gate to Mankameshwar Mandir",
+            "url": "https://upmetrorail.com",
+            "retrieved_at": "2026-10-16",
+            "kind": "official"
+          }
+        }
+      ],
+      "construction": [],
+      "notes": "Agra Metro Yellow Line (Line 1) priority corridor connects Mankameshwar Mandir to Taj East Gate (5.2 km, 6 stations: 3 underground, 3 elevated). Fully operational. Built and operated by UPMRC."
+    }
+  ]
+}

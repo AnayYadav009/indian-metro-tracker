@@ -509,5 +509,15 @@
     "operator": "UPMRC",
     "source": "osm+upmrc",
     "notes": "Orange Line connects IIT Kanpur to Kanpur Central (14.65 km, 14 stations). Fully operational."
+  },
+  {
+    "id": "agr-yellow",
+    "name": "Yellow Line",
+    "city": "Agra",
+    "city_id": "agra",
+    "color": "#EAB308",
+    "operator": "UPMRC",
+    "source": "osm+upmrc",
+    "notes": "Yellow Line connects Mankameshwar Mandir to Taj East Gate (5.2 km, 6 stations). Priority corridor fully operational."
   }
 ]

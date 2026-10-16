@@ -1,0 +1,333 @@
+{
+  "city": {
+    "id": "agra",
+    "name": "Agra",
+    "bbox": [
+      77.95,
+      27.12,
+      78.1,
+      27.22
+    ],
+    "operator": "UPMRC",
+    "phases": [
+      "1"
+    ],
+    "network_id": "agra-metro"
+  },
+  "lines": [
+    {
+      "id": "agr-yellow",
+      "name": "Yellow Line",
+      "city": "Agra",
+      "city_id": "agra",
+      "color": "#EAB308",
+      "operator": "UPMRC",
+      "source": "osm+upmrc",
+      "notes": "Yellow Line connects Mankameshwar Mandir to Taj East Gate (5.2 km, 6 stations). Priority corridor fully operational."
+    }
+  ],
+  "segments": [
+    {
+      "osmId": 16087452,
+      "segment_id": "agr-yellow-seg-01",
+      "line_id": "agr-yellow",
+      "line_name": "Yellow Line",
+      "phase": "1",
+      "status": "operational",
+      "gauge": "standard",
+      "inaugurated_on": "2024-03-06",
+      "expected_completion": null,
+      "color": "#EAB308",
+      "orderedWayIds": [
+        {
+          "id": 1189297880,
+          "reversed": false
+        },
+        {
+          "id": 1260538501,
+          "reversed": false
+        },
+        {
+          "id": 851795091,
+          "reversed": false
+        }
+      ],
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    }
+  ],
+  "stationOverrides": {
+    "agr-mankameshwar-mandir": {
+      "line_ids": [
+        "agr-yellow"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2024-03-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "underground",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "agra-mankameshwar-mandir": {
+      "line_ids": [
+        "agr-yellow"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2024-03-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "underground",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "Mankameshwar Mandir": {
+      "line_ids": [
+        "agr-yellow"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2024-03-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "underground",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "agr-dr-ambedkar-chowk": {
+      "line_ids": [
+        "agr-yellow"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2024-03-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "underground",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "agra-dr-ambedkar-chowk": {
+      "line_ids": [
+        "agr-yellow"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2024-03-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "underground",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "Dr. Ambedkar Chowk": {
+      "line_ids": [
+        "agr-yellow"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2024-03-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "underground",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "agr-taj-mahal": {
+      "line_ids": [
+        "agr-yellow"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2024-03-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "underground",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "agra-taj-mahal": {
+      "line_ids": [
+        "agr-yellow"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2024-03-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "underground",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "Taj Mahal": {
+      "line_ids": [
+        "agr-yellow"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2024-03-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "underground",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "agr-fatehabad-road": {
+      "line_ids": [
+        "agr-yellow"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2024-03-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "agra-fatehabad-road": {
+      "line_ids": [
+        "agr-yellow"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2024-03-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "Fatehabad Road": {
+      "line_ids": [
+        "agr-yellow"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2024-03-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "agr-shaheed-captain-shubham-gupta": {
+      "line_ids": [
+        "agr-yellow"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2024-03-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "agra-shaheed-captain-shubham-gupta": {
+      "line_ids": [
+        "agr-yellow"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2024-03-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "Shaheed Captain Shubham Gupta": {
+      "line_ids": [
+        "agr-yellow"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2024-03-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "agr-taj-east-gate": {
+      "line_ids": [
+        "agr-yellow"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2024-03-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "agra-taj-east-gate": {
+      "line_ids": [
+        "agr-yellow"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2024-03-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "Taj East Gate": {
+      "line_ids": [
+        "agr-yellow"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2024-03-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    }
+  }
+}
