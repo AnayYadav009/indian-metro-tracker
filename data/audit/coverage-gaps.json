@@ -64,5 +64,68 @@
     "source_url": "https://www.mmrda.maharashtra.gov.in/en/projects/transport/metro-line-2b/overview",
     "reason": "MMRDA identifies the remaining Chembur–DN Nagar phase as under construction; no matching route geometry is available in the current compiled data.",
     "review_date": "2027-01-15"
+  },
+  {
+    "city_id": "nagpur",
+    "line_id": "nag-aqua",
+    "stretch": "Lokmanya Nagar to Hingna (Reach 3A extension)",
+    "status": "under_construction",
+    "source_url": "https://themetrorailguy.com/nagpur-metro-phase-2-information-route-maps-project-updates/",
+    "reason": "Maha Metro Phase 2 Reach 3A civil packages are awarded, but alignment geometry and station coordinates are not yet available in the compiled dataset.",
+    "review_date": "2027-01-15"
+  },
+  {
+    "city_id": "nagpur",
+    "line_id": "nag-aqua",
+    "stretch": "Prajapati Nagar to Transport Nagar (Reach 4A extension)",
+    "status": "under_construction",
+    "source_url": "https://themetrorailguy.com/nagpur-metro-phase-2-information-route-maps-project-updates/",
+    "reason": "Maha Metro Phase 2 Reach 4A civil packages are awarded, but alignment geometry and station coordinates are not yet available in the compiled dataset.",
+    "review_date": "2027-01-15"
+  },
+  {
+    "city_id": "nagpur",
+    "line_id": "nag-orange",
+    "stretch": "Automotive Square to Kanhan River (Reach 2B extension)",
+    "status": "under_construction",
+    "source_url": "https://themetrorailguy.com/nagpur-metro-phase-2-information-route-maps-project-updates/",
+    "reason": "Maha Metro Phase 2 Reach 2B civil packages are awarded, but alignment geometry and station coordinates are not yet available in the compiled dataset.",
+    "review_date": "2027-01-15"
+  },
+  {
+    "city_id": "nagpur",
+    "line_id": "nag-orange",
+    "stretch": "Khapri to Butibori MIDC ESR (Reach 1A extension)",
+    "status": "under_construction",
+    "source_url": "https://themetrorailguy.com/nagpur-metro-phase-2-information-route-maps-project-updates/",
+    "reason": "Maha Metro Phase 2 Reach 1A civil packages are awarded, but alignment geometry and station coordinates are not yet available in the compiled dataset.",
+    "review_date": "2027-01-15"
+  },
+  {
+    "city_id": "pune",
+    "line_id": "pun-purple",
+    "stretch": "Range Hill station infill",
+    "status": "under_construction",
+    "source_url": "https://www.punemetrorail.org",
+    "reason": "Maha Metro infill station on operational corridor delayed by defence land clearance; station node and track alignment are not separately compiled.",
+    "review_date": "2027-01-15"
+  },
+  {
+    "city_id": "pune",
+    "line_id": "pun-purple",
+    "stretch": "PCMC - Nigdi (Bhakti Shakti)",
+    "status": "under_construction",
+    "source_url": "https://www.punemetrorail.org",
+    "reason": "Maha Metro Phase 1A northern extension (4.41 km) is under construction; alignment geometry is not yet present in the compiled dataset.",
+    "review_date": "2027-01-15"
+  },
+  {
+    "city_id": "pune",
+    "line_id": "pun-purple",
+    "stretch": "Swargate - Katraj",
+    "status": "under_construction",
+    "source_url": "https://www.punemetrorail.org",
+    "reason": "Maha Metro Phase 1B southern underground extension (5.46 km) approved/tendered; alignment geometry is not yet present in the compiled dataset.",
+    "review_date": "2027-01-15"
   }
 ]

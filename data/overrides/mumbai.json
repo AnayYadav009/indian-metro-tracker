@@ -2934,22 +2934,7 @@
       ],
       "city_id": "mumbai"
     },
-    {
-      "segment_id": "mum-line-1-schematic-01",
-      "line_id": "mum-line-1",
-      "line_name": "Line 1 construction station connector",
-      "phase": "1",
-      "status": "construction",
-      "gauge": "standard",
-      "inaugurated_on": null,
-      "expected_completion": null,
-      "completion_unconfirmed": true,
-      "color": "#0072CE",
-      "references": [
-        "https://mmrda.maharashtra.gov.in/"
-      ],
-      "last_verified": "2026-10-10"
-    },
+
     {
       "segment_id": "mum-line-9-schematic-01",
       "line_id": "mum-line-9",
