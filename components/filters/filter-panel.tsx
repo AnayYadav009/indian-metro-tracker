@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useMetroStore } from "@/store/use-metro-store";
 import { CitySelect } from "./city-select";
 import { StatusFilter } from "./status-filter";
@@ -16,6 +16,16 @@ export function FilterPanel() {
   const searchQuery = useMetroStore((state) => state.searchQuery);
   const setSearchQuery = useMetroStore((state) => state.setSearchQuery);
   const resetFilters = useMetroStore((state) => state.resetFilters);
+
+  useEffect(() => {
+    if (
+      typeof window !== "undefined" &&
+      typeof window.matchMedia === "function" &&
+      window.matchMedia("(max-width: 767px)").matches
+    ) {
+      setIsCollapsed(selectedCityId !== null);
+    }
+  }, [selectedCityId]);
 
   const hasActiveFilters =
     selectedCityId !== null ||
@@ -55,6 +65,8 @@ export function FilterPanel() {
             data-testid="collapse-filter-btn"
             onClick={() => setIsCollapsed((prev) => !prev)}
             aria-label={isCollapsed ? "Expand filters" : "Collapse filters"}
+            aria-expanded={!isCollapsed}
+            aria-controls="filter-panel-controls"
             className="rounded p-1 text-slate-400 hover:bg-slate-800 hover:text-slate-200"
           >
             {isCollapsed ? (
@@ -67,7 +79,7 @@ export function FilterPanel() {
       </div>
 
       {!isCollapsed && (
-        <div className="mt-3 flex flex-col gap-4 text-xs max-h-[340px] sm:max-h-[calc(100vh-8rem)] overflow-y-auto pr-1">
+        <div id="filter-panel-controls" className="mt-3 flex flex-col gap-4 text-xs max-h-[340px] sm:max-h-[calc(100vh-8rem)] overflow-y-auto pr-1">
           <div className="relative">
             <Search className="absolute left-2.5 top-2.5 h-3.5 w-3.5 text-slate-400" />
             <input
@@ -81,6 +93,7 @@ export function FilterPanel() {
             {searchQuery && (
               <button
                 type="button"
+                aria-label="Clear search"
                 onClick={() => setSearchQuery("")}
                 className="absolute right-2 top-2 text-slate-400 hover:text-slate-200"
               >

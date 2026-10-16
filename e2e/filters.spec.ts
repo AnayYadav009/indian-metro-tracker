@@ -42,6 +42,10 @@ test.describe("Filter UI and Map Interaction", () => {
 
     // Click Delhi
     await page.getByTestId("city-select-delhi").click();
+    const filterToggle = page.getByTestId("collapse-filter-btn");
+    if ((await filterToggle.getAttribute("aria-expanded")) === "false") {
+      await filterToggle.click({ force: true });
+    }
 
     // Delhi phases I-IV should appear and empty hint should disappear
     await expect(page.getByTestId("phase-filter-empty-hint")).not.toBeVisible();
@@ -51,7 +55,13 @@ test.describe("Filter UI and Map Interaction", () => {
     await expect(page.getByTestId("phase-pill-IV")).toHaveText("Phase IV");
 
     // Click Bengaluru
+    if ((await filterToggle.getAttribute("aria-expanded")) === "false") {
+      await filterToggle.click({ force: true });
+    }
     await page.getByTestId("city-select-bengaluru").click();
+    if ((await filterToggle.getAttribute("aria-expanded")) === "false") {
+      await filterToggle.click({ force: true });
+    }
     await expect(page.getByTestId("phase-pill-1")).toBeVisible();
     await expect(page.getByTestId("phase-pill-1")).toHaveText("Phase 1");
     await expect(page.getByTestId("phase-pill-2B")).toBeVisible();
