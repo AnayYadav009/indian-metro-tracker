@@ -30,22 +30,27 @@ test.describe("M13 Timeline Slider", () => {
     page,
   }) => {
     await page.goto("/");
+    await page.waitForLoadState("domcontentloaded");
 
     const slider = page.getByTestId("timeline-range-slider");
     await expect(slider).toBeVisible();
 
-    // Use fill() + input event — keyboard events on <input type="range"> are not
-    // supported by mobile browsers (Pixel 7 / mobile-chrome emulation), so we
-    // drive the slider programmatically to avoid a flaky platform-specific test.
-    await slider.evaluate((el: HTMLInputElement) => {
-      el.value = "2010";
-      el.dispatchEvent(new Event("input", { bubbles: true }));
-      el.dispatchEvent(new Event("change", { bubbles: true }));
-    });
-
-    // Year text updates immediately
     const currentYearText = page.getByTestId("timeline-current-year");
-    await expect(currentYearText).toHaveText("2010");
+
+    // Wait until hydration attaches change handlers and updates year
+    await expect(async () => {
+      await slider.evaluate((el: HTMLInputElement) => {
+        const setter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, "value")?.set;
+        if (setter) {
+          setter.call(el, "2010");
+        } else {
+          el.value = "2010";
+        }
+        el.dispatchEvent(new Event("input", { bubbles: true }));
+        el.dispatchEvent(new Event("change", { bubbles: true }));
+      });
+      await expect(currentYearText).toHaveText("2010", { timeout: 1000 });
+    }).toPass({ timeout: 10000 });
 
     // URL parameter ?year=2010 is updated
     await expect(page).toHaveURL(/year=2010/);
@@ -73,13 +78,17 @@ test.describe("M13 Timeline Slider", () => {
 
   test("toggles play and pause state", async ({ page }) => {
     await page.goto("/?year=2000");
+    await page.waitForLoadState("domcontentloaded");
 
     const playBtn = page.getByTestId("timeline-play-btn");
+    await expect(playBtn).toBeVisible();
     await expect(playBtn).toHaveAttribute("aria-label", "Play timeline");
 
-    // Click play
-    await playBtn.click();
-    await expect(playBtn).toHaveAttribute("aria-label", "Pause timeline");
+    // Wait until hydration is complete and toggle activates
+    await expect(async () => {
+      await playBtn.click();
+      await expect(playBtn).toHaveAttribute("aria-label", "Pause timeline", { timeout: 1000 });
+    }).toPass({ timeout: 10000 });
 
     // Click pause
     await playBtn.click();
