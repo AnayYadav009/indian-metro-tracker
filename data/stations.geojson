@@ -27497,6 +27497,699 @@
         "last_verified": "2026-10-16",
         "retrieved_at": "2026-10-16"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.9399,
+          26.84161
+        ]
+      },
+      "properties": {
+        "station_id": "lucknow-sachivalaya",
+        "name": "Sachivalaya",
+        "city_id": "lucknow",
+        "city": "Lucknow",
+        "line_ids": [
+          "lko-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2019-03-09",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "underground",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://upmetrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.92311,
+          26.83242
+        ]
+      },
+      "properties": {
+        "station_id": "lucknow-charbagh-railway",
+        "name": "Charbagh Railway",
+        "city_id": "lucknow",
+        "city": "Lucknow",
+        "line_ids": [
+          "lko-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2017-09-06",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://upmetrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.87878,
+          26.77155
+        ]
+      },
+      "properties": {
+        "station_id": "lucknow-amausi",
+        "name": "Amausi",
+        "city_id": "lucknow",
+        "city": "Lucknow",
+        "line_ids": [
+          "lko-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2019-03-09",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://upmetrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.88246,
+          26.77764
+        ]
+      },
+      "properties": {
+        "station_id": "lucknow-transport-nagar",
+        "name": "Transport Nagar",
+        "city_id": "lucknow",
+        "city": "Lucknow",
+        "line_ids": [
+          "lko-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2017-09-06",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://upmetrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.89174,
+          26.7944
+        ]
+      },
+      "properties": {
+        "station_id": "lucknow-krishna-nagar",
+        "name": "Krishna Nagar",
+        "city_id": "lucknow",
+        "city": "Lucknow",
+        "line_ids": [
+          "lko-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2017-09-06",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://upmetrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.89641,
+          26.8031
+        ]
+      },
+      "properties": {
+        "station_id": "lucknow-singar-nagar",
+        "name": "Singar Nagar",
+        "city_id": "lucknow",
+        "city": "Lucknow",
+        "line_ids": [
+          "lko-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2017-09-06",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://upmetrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.9025,
+          26.81402
+        ]
+      },
+      "properties": {
+        "station_id": "lucknow-alambagh",
+        "name": "Alambagh",
+        "city_id": "lucknow",
+        "city": "Lucknow",
+        "line_ids": [
+          "lko-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2017-09-06",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://upmetrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.90728,
+          26.81848
+        ]
+      },
+      "properties": {
+        "station_id": "lucknow-alambagh-bus",
+        "name": "Alambagh Bus",
+        "city_id": "lucknow",
+        "city": "Lucknow",
+        "line_ids": [
+          "lko-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2017-09-06",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://upmetrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.90984,
+          26.82531
+        ]
+      },
+      "properties": {
+        "station_id": "lucknow-mawaiya",
+        "name": "Mawaiya",
+        "city_id": "lucknow",
+        "city": "Lucknow",
+        "line_ids": [
+          "lko-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2017-09-06",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://upmetrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.91541,
+          26.83202
+        ]
+      },
+      "properties": {
+        "station_id": "lucknow-durgapuri",
+        "name": "Durgapuri",
+        "city_id": "lucknow",
+        "city": "Lucknow",
+        "line_ids": [
+          "lko-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2017-09-06",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://upmetrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.88418,
+          26.76628
+        ]
+      },
+      "properties": {
+        "station_id": "lucknow-chaudhary-charan-singh-international-airport",
+        "name": "Chaudhary Charan Singh International Airport",
+        "city_id": "lucknow",
+        "city": "Lucknow",
+        "line_ids": [
+          "lko-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2019-03-09",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "underground",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://upmetrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.93431,
+          26.83843
+        ]
+      },
+      "properties": {
+        "station_id": "lucknow-hussainganj",
+        "name": "Hussainganj",
+        "city_id": "lucknow",
+        "city": "Lucknow",
+        "line_ids": [
+          "lko-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2019-03-09",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "underground",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://upmetrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.99584,
+          26.8879
+        ]
+      },
+      "properties": {
+        "station_id": "lucknow-munshipulia",
+        "name": "Munshipulia",
+        "city_id": "lucknow",
+        "city": "Lucknow",
+        "line_ids": [
+          "lko-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2019-03-09",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://upmetrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.99087,
+          26.87277
+        ]
+      },
+      "properties": {
+        "station_id": "lucknow-indira-nagar",
+        "name": "Indira Nagar",
+        "city_id": "lucknow",
+        "city": "Lucknow",
+        "line_ids": [
+          "lko-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2019-03-09",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://upmetrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.9823,
+          26.87227
+        ]
+      },
+      "properties": {
+        "station_id": "lucknow-bhootnath-market",
+        "name": "Bhootnath Market",
+        "city_id": "lucknow",
+        "city": "Lucknow",
+        "line_ids": [
+          "lko-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2019-03-09",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://upmetrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.97389,
+          26.87095
+        ]
+      },
+      "properties": {
+        "station_id": "lucknow-lekhraj-market",
+        "name": "Lekhraj Market",
+        "city_id": "lucknow",
+        "city": "Lucknow",
+        "line_ids": [
+          "lko-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2019-03-09",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://upmetrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.96106,
+          26.87073
+        ]
+      },
+      "properties": {
+        "station_id": "lucknow-badshah-nagar",
+        "name": "Badshah Nagar",
+        "city_id": "lucknow",
+        "city": "Lucknow",
+        "line_ids": [
+          "lko-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2019-03-09",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://upmetrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.94561,
+          26.87105
+        ]
+      },
+      "properties": {
+        "station_id": "lucknow-it-college",
+        "name": "IT College",
+        "city_id": "lucknow",
+        "city": "Lucknow",
+        "line_ids": [
+          "lko-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2019-03-09",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://upmetrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.93951,
+          26.86551
+        ]
+      },
+      "properties": {
+        "station_id": "lucknow-vishwavidyalaya",
+        "name": "Vishwavidyalaya",
+        "city_id": "lucknow",
+        "city": "Lucknow",
+        "line_ids": [
+          "lko-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2019-03-09",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://upmetrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.9368,
+          26.85391
+        ]
+      },
+      "properties": {
+        "station_id": "lucknow-kd-singh-babu-stadium",
+        "name": "KD Singh Babu Stadium",
+        "city_id": "lucknow",
+        "city": "Lucknow",
+        "line_ids": [
+          "lko-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2019-03-09",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://upmetrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.94158,
+          26.85001
+        ]
+      },
+      "properties": {
+        "station_id": "lucknow-hazratganj",
+        "name": "Hazratganj",
+        "city_id": "lucknow",
+        "city": "Lucknow",
+        "line_ids": [
+          "lko-red"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2019-03-09",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "underground",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://upmetrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
     }
   ]
 }

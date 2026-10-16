@@ -1,0 +1,744 @@
+{
+  "city": {
+    "id": "lucknow",
+    "name": "Lucknow",
+    "bbox": [
+      80.84,
+      26.74,
+      81.04,
+      26.92
+    ],
+    "operator": "UPMRC",
+    "phases": [
+      "1"
+    ],
+    "network_id": "lucknow-metro"
+  },
+  "lines": [
+    {
+      "id": "lko-red",
+      "name": "Red Line (North-South Corridor)",
+      "city": "Lucknow",
+      "city_id": "lucknow",
+      "color": "#EF4444",
+      "operator": "UPMRC",
+      "source": "osm+upmrc",
+      "notes": "Red Line connects CCS Airport to Munshipulia (22.88 km, 21 stations). Fully operational."
+    }
+  ],
+  "segments": [
+    {
+      "osmId": 8299495,
+      "segment_id": "lko-red-seg-01",
+      "line_id": "lko-red",
+      "line_name": "Red Line (North-South Corridor)",
+      "phase": "1",
+      "status": "operational",
+      "gauge": "standard",
+      "inaugurated_on": "2017-09-06",
+      "expected_completion": null,
+      "color": "#EF4444",
+      "orderedWayIds": [
+        {
+          "id": 858376212,
+          "reversed": false
+        },
+        {
+          "id": 858337544,
+          "reversed": false
+        },
+        {
+          "id": 858337543,
+          "reversed": false
+        },
+        {
+          "id": 610019335,
+          "reversed": true
+        },
+        {
+          "id": 915382988,
+          "reversed": true
+        },
+        {
+          "id": 915382989,
+          "reversed": true
+        },
+        {
+          "id": 1050738579,
+          "reversed": false
+        },
+        {
+          "id": 1050738578,
+          "reversed": false
+        }
+      ],
+      "references": [
+        "https://upmetrorail.com"
+      ],
+      "last_verified": "2026-10-16",
+      "geometry_quality": "exact"
+    }
+  ],
+  "stationOverrides": {
+    "lko-chaudhary-charan-singh-international-airport": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2019-03-09",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "underground",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "Chaudhary Charan Singh International Airport": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2019-03-09",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "underground",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "lko-amausi": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2019-03-09",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "Amausi": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2019-03-09",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "lko-transport-nagar": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-09-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "Transport Nagar": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-09-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "lko-krishna-nagar": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-09-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "Krishna Nagar": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-09-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "lko-singar-nagar": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-09-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "Singar Nagar": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-09-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "lko-alambagh": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-09-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "Alambagh": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-09-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "lko-alambagh-bus": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-09-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "Alambagh Bus": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-09-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "Alambagh Bus Station": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-09-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "lko-mawaiya": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-09-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "Mawaiya": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-09-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "lko-durgapuri": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-09-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "Durgapuri": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-09-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "lko-charbagh-railway": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-09-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "Charbagh Railway": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-09-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "Charbagh Railway Station": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2017-09-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "lko-hussainganj": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2019-03-09",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "underground",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "Hussainganj": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2019-03-09",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "underground",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "lko-sachivalaya": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2019-03-09",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "underground",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "Sachivalaya": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2019-03-09",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "underground",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "lko-hazratganj": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2019-03-09",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "underground",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "Hazratganj": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2019-03-09",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "underground",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "lko-kd-singh-babu-stadium": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2019-03-09",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "KD Singh Babu Stadium": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2019-03-09",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "lko-vishwavidyalaya": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2019-03-09",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "Vishwavidyalaya": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2019-03-09",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "lko-it-college": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2019-03-09",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "IT College": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2019-03-09",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "lko-badshah-nagar": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2019-03-09",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "Badshah Nagar": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2019-03-09",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "lko-lekhraj-market": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2019-03-09",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "Lekhraj Market": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2019-03-09",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "lko-bhootnath-market": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2019-03-09",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "Bhootnath Market": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2019-03-09",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "lko-indira-nagar": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2019-03-09",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "Indira Nagar": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2019-03-09",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "lko-munshipulia": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2019-03-09",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "Munshipulia": {
+      "line_ids": [
+        "lko-red"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2019-03-09",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    }
+  }
+}

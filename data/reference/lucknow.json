@@ -1,0 +1,51 @@
+{
+  "city_id": "lucknow",
+  "compiled_on": "2026-10-16",
+  "lines": [
+    {
+      "line_id": "lko-red",
+      "official_name": "Red Line (North-South Corridor)",
+      "operator": "UPMRC",
+      "topology": "linear",
+      "operational_stations": 21,
+      "operational_length_km": 22.88,
+      "planned_length_km": 22.88,
+      "terminals": [
+        "Chaudhary Charan Singh International Airport",
+        "Munshipulia"
+      ],
+      "status": "operational",
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "Priority Corridor (Transport Nagar to Charbagh)",
+          "phase": null,
+          "opened_on": "2017-09-06",
+          "stations_added": 8,
+          "confidence": "sourced",
+          "source": {
+            "title": "Lucknow Metro commences commercial operations on priority corridor Transport Nagar to Charbagh",
+            "url": "https://upmetrorail.com",
+            "retrieved_at": "2026-10-16",
+            "kind": "official"
+          }
+        },
+        {
+          "stage": "North-South Corridor Completion (CCS Airport to Munshipulia)",
+          "phase": null,
+          "opened_on": "2019-03-09",
+          "stations_added": 13,
+          "confidence": "sourced",
+          "source": {
+            "title": "Prime Minister inaugurates commercial services on complete 23 km North-South Corridor of Lucknow Metro",
+            "url": "https://upmetrorail.com",
+            "retrieved_at": "2026-10-16",
+            "kind": "official"
+          }
+        }
+      ],
+      "construction": [],
+      "notes": "Lucknow Metro Red Line (North-South Corridor) spans 22.88 km with 21 stations (17 elevated, 4 underground) connecting Chaudhary Charan Singh International Airport to Munshipulia. Built and operated by UPMRC."
+    }
+  ]
+}

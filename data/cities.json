@@ -257,5 +257,20 @@
       "1"
     ],
     "network_id": "kochi-metro"
+  },
+  {
+    "id": "lucknow",
+    "name": "Lucknow",
+    "bbox": [
+      80.84,
+      26.74,
+      81.04,
+      26.92
+    ],
+    "operator": "UPMRC",
+    "phases": [
+      "1"
+    ],
+    "network_id": "lucknow-metro"
   }
 ]

@@ -489,5 +489,15 @@
     "operator": "KMRL",
     "source": "osm+kmrl",
     "notes": "Line 1 connects Aluva to Thrippunithura Terminal (28.12 km, 25 elevated stations). Fully operational."
+  },
+  {
+    "id": "lko-red",
+    "name": "Red Line (North-South Corridor)",
+    "city": "Lucknow",
+    "city_id": "lucknow",
+    "color": "#EF4444",
+    "operator": "UPMRC",
+    "source": "osm+upmrc",
+    "notes": "Red Line connects CCS Airport to Munshipulia (22.88 km, 21 stations). Fully operational."
   }
 ]
