@@ -1,0 +1,47 @@
+{
+  "city_id": "patna",
+  "compiled_on": "2026-10-16",
+  "lines": [
+    {
+      "line_id": "pat-blue",
+      "official_name": "Blue Line (Corridor 2)",
+      "operator": "PMRC",
+      "topology": "linear",
+      "operational_stations": 5,
+      "operational_length_km": 5.28,
+      "planned_length_km": 14.56,
+      "terminals": [
+        "New ISBT",
+        "Malahi Pakri"
+      ],
+      "status": "operational",
+      "confidence": "sourced",
+      "openings": [
+        {
+          "stage": "Priority Corridor Stage 1 (New ISBT - Bhootnath)",
+          "phase": null,
+          "opened_on": "2025-10-06",
+          "stations_added": 3,
+          "confidence": "sourced",
+          "source": {
+            "title": "Patna Metro Commercial Launch on Priority Section",
+            "url": "https://patnametrorail.com",
+            "retrieved_at": "2026-10-16"
+          }
+        },
+        {
+          "stage": "Priority Corridor Stage 2 (Bhootnath - Malahi Pakri)",
+          "phase": null,
+          "opened_on": "2026-07-02",
+          "stations_added": 2,
+          "confidence": "sourced",
+          "source": {
+            "title": "Patna Metro Extension to Malahi Pakri Inaugurated",
+            "url": "https://patnametrorail.com",
+            "retrieved_at": "2026-10-16"
+          }
+        }
+      ]
+    }
+  ]
+}

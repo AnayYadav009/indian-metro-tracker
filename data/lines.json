@@ -529,5 +529,15 @@
     "operator": "JMRC",
     "source": "osm+jmrc",
     "notes": "Pink Line connects Mansarovar to Badi Chaupar (11.97 km, 11 stations). Phase 1 fully operational."
+  },
+  {
+    "id": "pat-blue",
+    "name": "Blue Line (Corridor 2)",
+    "city": "Patna",
+    "city_id": "patna",
+    "color": "#4169E1",
+    "operator": "PMRC",
+    "source": "osm+pmrc",
+    "notes": "Blue Line priority corridor connects New ISBT to Malahi Pakri (5.28 km, 5 stations). Elevated priority corridor fully operational."
   }
 ]

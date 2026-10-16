@@ -317,5 +317,20 @@
       "1"
     ],
     "network_id": "jaipur-metro"
+  },
+  {
+    "id": "patna",
+    "name": "Patna",
+    "bbox": [
+      85.05,
+      25.55,
+      85.25,
+      25.68
+    ],
+    "operator": "PMRC",
+    "phases": [
+      "1"
+    ],
+    "network_id": "patna-metro"
   }
 ]

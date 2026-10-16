@@ -29213,6 +29213,171 @@
         "last_verified": "2026-10-16",
         "retrieved_at": "2026-10-16"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.1636,
+          25.58475
+        ]
+      },
+      "properties": {
+        "station_id": "patna-khemnichak",
+        "name": "Khemnichak",
+        "city_id": "patna",
+        "city": "Patna",
+        "line_ids": [
+          "pat-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-07-02",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://patnametrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.18675,
+          25.58567
+        ]
+      },
+      "properties": {
+        "station_id": "patna-zero-mile",
+        "name": "Zero Mile",
+        "city_id": "patna",
+        "city": "Patna",
+        "line_ids": [
+          "pat-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2025-10-06",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://patnametrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.17358,
+          25.58547
+        ]
+      },
+      "properties": {
+        "station_id": "patna-bhootnath",
+        "name": "Bhootnath",
+        "city_id": "patna",
+        "city": "Patna",
+        "line_ids": [
+          "pat-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2025-10-06",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://patnametrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.18975,
+          25.57632
+        ]
+      },
+      "properties": {
+        "station_id": "patna-new-isbt",
+        "name": "New ISBT",
+        "city_id": "patna",
+        "city": "Patna",
+        "line_ids": [
+          "pat-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2025-10-06",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://patnametrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.15712,
+          25.59351
+        ]
+      },
+      "properties": {
+        "station_id": "patna-malahi-pakri",
+        "name": "Malahi Pakri",
+        "city_id": "patna",
+        "city": "Patna",
+        "line_ids": [
+          "pat-blue"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-07-02",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://patnametrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
     }
   ]
 }
