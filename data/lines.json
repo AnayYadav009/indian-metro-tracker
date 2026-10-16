@@ -499,5 +499,15 @@
     "operator": "UPMRC",
     "source": "osm+upmrc",
     "notes": "Red Line connects CCS Airport to Munshipulia (22.88 km, 21 stations). Fully operational."
+  },
+  {
+    "id": "knp-orange",
+    "name": "Orange Line",
+    "city": "Kanpur",
+    "city_id": "kanpur",
+    "color": "#F97316",
+    "operator": "UPMRC",
+    "source": "osm+upmrc",
+    "notes": "Orange Line connects IIT Kanpur to Kanpur Central (14.65 km, 14 stations). Fully operational."
   }
 ]

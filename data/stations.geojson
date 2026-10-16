@@ -28190,6 +28190,468 @@
         "last_verified": "2026-10-16",
         "retrieved_at": "2026-10-16"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.24829,
+          26.5092
+        ]
+      },
+      "properties": {
+        "station_id": "kanpur-iit-kanpur",
+        "name": "IIT Kanpur",
+        "city_id": "kanpur",
+        "city": "Kanpur",
+        "line_ids": [
+          "knp-orange"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2021-12-28",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://upmetrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.25255,
+          26.50372
+        ]
+      },
+      "properties": {
+        "station_id": "kanpur-kalyanpur",
+        "name": "Kalyanpur",
+        "city_id": "kanpur",
+        "city": "Kanpur",
+        "line_ids": [
+          "knp-orange"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2021-12-28",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://upmetrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.25889,
+          26.49888
+        ]
+      },
+      "properties": {
+        "station_id": "kanpur-spm-hospital",
+        "name": "SPM Hospital",
+        "city_id": "kanpur",
+        "city": "Kanpur",
+        "line_ids": [
+          "knp-orange"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2021-12-28",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://upmetrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.26743,
+          26.49643
+        ]
+      },
+      "properties": {
+        "station_id": "kanpur-vishwavidyalaya",
+        "name": "Vishwavidyalaya",
+        "city_id": "kanpur",
+        "city": "Kanpur",
+        "line_ids": [
+          "knp-orange"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2021-12-28",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://upmetrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.28437,
+          26.49156
+        ]
+      },
+      "properties": {
+        "station_id": "kanpur-gurudev-chauraha",
+        "name": "Gurudev Chauraha",
+        "city_id": "kanpur",
+        "city": "Kanpur",
+        "line_ids": [
+          "knp-orange"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2021-12-28",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://upmetrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.29213,
+          26.48698
+        ]
+      },
+      "properties": {
+        "station_id": "kanpur-geeta-nagar",
+        "name": "Geeta Nagar",
+        "city_id": "kanpur",
+        "city": "Kanpur",
+        "line_ids": [
+          "knp-orange"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2021-12-28",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://upmetrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.30007,
+          26.48285
+        ]
+      },
+      "properties": {
+        "station_id": "kanpur-rawatpur",
+        "name": "Rawatpur",
+        "city_id": "kanpur",
+        "city": "Kanpur",
+        "line_ids": [
+          "knp-orange"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2021-12-28",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://upmetrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.31157,
+          26.47925
+        ]
+      },
+      "properties": {
+        "station_id": "kanpur-llr-hospital",
+        "name": "LLR Hospital",
+        "city_id": "kanpur",
+        "city": "Kanpur",
+        "line_ids": [
+          "knp-orange"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2021-12-28",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://upmetrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.31789,
+          26.47911
+        ]
+      },
+      "properties": {
+        "station_id": "kanpur-moti-jheel",
+        "name": "Moti Jheel",
+        "city_id": "kanpur",
+        "city": "Kanpur",
+        "line_ids": [
+          "knp-orange"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2021-12-28",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://upmetrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.33705,
+          26.477
+        ]
+      },
+      "properties": {
+        "station_id": "kanpur-chunniganj",
+        "name": "Chunniganj",
+        "city_id": "kanpur",
+        "city": "Kanpur",
+        "line_ids": [
+          "knp-orange"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2025-05-30",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "underground",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://upmetrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.34544,
+          26.474
+        ]
+      },
+      "properties": {
+        "station_id": "kanpur-naveen-market",
+        "name": "Naveen Market",
+        "city_id": "kanpur",
+        "city": "Kanpur",
+        "line_ids": [
+          "knp-orange"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2025-05-30",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "underground",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://upmetrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.3524,
+          26.47267
+        ]
+      },
+      "properties": {
+        "station_id": "kanpur-bada-chauraha",
+        "name": "Bada Chauraha",
+        "city_id": "kanpur",
+        "city": "Kanpur",
+        "line_ids": [
+          "knp-orange"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2025-05-30",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "underground",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://upmetrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.35946,
+          26.46417
+        ]
+      },
+      "properties": {
+        "station_id": "kanpur-nayaganj",
+        "name": "Nayaganj",
+        "city_id": "kanpur",
+        "city": "Kanpur",
+        "line_ids": [
+          "knp-orange"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2025-05-30",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "underground",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://upmetrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.35178,
+          26.45391
+        ]
+      },
+      "properties": {
+        "station_id": "kanpur-kanpur-central",
+        "name": "Kanpur Central",
+        "city_id": "kanpur",
+        "city": "Kanpur",
+        "line_ids": [
+          "knp-orange"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2025-05-30",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "underground",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://upmetrorail.com"
+        ],
+        "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
     }
   ]
 }

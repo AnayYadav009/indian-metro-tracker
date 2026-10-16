@@ -272,5 +272,20 @@
       "1"
     ],
     "network_id": "lucknow-metro"
+  },
+  {
+    "id": "kanpur",
+    "name": "Kanpur",
+    "bbox": [
+      80.2,
+      26.42,
+      80.4,
+      26.54
+    ],
+    "operator": "UPMRC",
+    "phases": [
+      "1"
+    ],
+    "network_id": "kanpur-metro"
   }
 ]

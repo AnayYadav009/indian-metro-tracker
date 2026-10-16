@@ -1,0 +1,51 @@
+{
+  "city_id": "kanpur",
+  "compiled_on": "2026-10-16",
+  "lines": [
+    {
+      "line_id": "knp-orange",
+      "official_name": "Orange Line (Line 1)",
+      "operator": "UPMRC",
+      "topology": "linear",
+      "operational_stations": 14,
+      "operational_length_km": 14.65,
+      "planned_length_km": 23.8,
+      "terminals": [
+        "IIT Kanpur",
+        "Kanpur Central"
+      ],
+      "status": "operational",
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "Priority Corridor (IIT Kanpur to Moti Jheel)",
+          "phase": null,
+          "opened_on": "2021-12-28",
+          "stations_added": 9,
+          "confidence": "sourced",
+          "source": {
+            "title": "Prime Minister inaugurates Kanpur Metro Priority Corridor from IIT Kanpur to Moti Jheel",
+            "url": "https://upmetrorail.com",
+            "retrieved_at": "2026-10-16",
+            "kind": "official"
+          }
+        },
+        {
+          "stage": "Underground Extension (Moti Jheel to Kanpur Central)",
+          "phase": null,
+          "opened_on": "2025-05-30",
+          "stations_added": 5,
+          "confidence": "sourced",
+          "source": {
+            "title": "Commercial services commence on Kanpur Metro Underground Extension to Kanpur Central",
+            "url": "https://upmetrorail.com",
+            "retrieved_at": "2026-10-16",
+            "kind": "official"
+          }
+        }
+      ],
+      "construction": [],
+      "notes": "Kanpur Metro Orange Line (Line 1) operational section spans 14.65 km with 14 stations (9 elevated, 5 underground) from IIT Kanpur to Kanpur Central. Operated by Uttar Pradesh Metro Rail Corporation (UPMRC)."
+    }
+  ]
+}
