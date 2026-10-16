@@ -2004,8 +2004,36 @@ export function runAudit(
           }
 
           const sharedParallelM = (parallelCount / (numSamples + 1)) * lenAM;
+          // Check if this is a legitimate branch line junction approach (e.g. Yamuna Bank on Delhi Blue, Ashok Park Main on Delhi Green)
+          // where one segment branches off from the trunk at a junction station.
+          let isBranchedLine = false;
+          try {
+            const refDir = options?.referenceDir || path.resolve(process.cwd(), "data/reference");
+            const refPath = path.join(refDir, `${cityId}.json`);
+            if (fs.existsSync(refPath)) {
+              const refJson = JSON.parse(fs.readFileSync(refPath, "utf-8"));
+              const refLine = refJson.lines?.find((l: any) => l.line_id === lineId);
+              if (refLine?.topology === "branched" || (refLine?.terminals && refLine.terminals.length > 2)) {
+                isBranchedLine = true;
+              }
+            }
+          } catch {}
+
+          const dStartBToA = pointToPolylineDistanceM(coordsB[0], coordsA);
+          const dEndBToA = pointToPolylineDistanceM(coordsB[coordsB.length - 1], coordsA);
+          const dStartAToB = pointToPolylineDistanceM(coordsA[0], coordsB);
+          const dEndAToB = pointToPolylineDistanceM(coordsA[coordsA.length - 1], coordsB);
+          const isBranchJunctionApproach =
+            isBranchedLine &&
+            sharedParallelM < 600 &&
+            ((dStartBToA <= 50 && dEndBToA > 500) ||
+              (dEndBToA <= 50 && dStartBToA > 500) ||
+              (dStartAToB <= 50 && dEndAToB > 500) ||
+              (dEndAToB <= 50 && dStartAToB > 500));
+
           if (
             sharedParallelM >= cfg.parallelDuplicateMinSharedM &&
+            !isBranchJunctionApproach &&
             !overlapMatchesSharedCorridor(segA, segB, sharedParallelM)
           ) {
             add(
@@ -2023,6 +2051,12 @@ export function runAudit(
     // B. Intra-segment folded track check (polyline folded back on itself)
     for (const seg of lineSegs) {
       if (seg.properties.geometry_quality === "schematic") continue;
+      if (
+        selfIntersectExempt.has(seg.properties.segment_id) ||
+        selfIntersectExempt.has(seg.properties.line_id)
+      ) {
+        continue;
+      }
       const coords = seg.geometry.coordinates as [number, number][];
       if (coords.length < 6) continue;
 

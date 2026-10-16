@@ -133,6 +133,10 @@
     },
     {
       "osmId": 12828618,
+      "orderedWayIds": [
+        { "id": 1540116146, "reversed": false },
+        { "id": 1533466785, "reversed": false }
+      ],
       "segment_id": "che-corridor-5-seg-01",
       "line_id": "che-corridor-5",
       "line_name": "Red Line (Madhavaram - Sholinganallur)",

@@ -231,7 +231,137 @@
       "inaugurated_on": "2018-03-14",
       "expected_completion": null,
       "color": "#FC8EAC",
-      "city_id": "delhi"
+      "city_id": "delhi",
+      "endpoint_station_ids": [
+        "del-shiv-vihar",
+        "del-majlis-park"
+      ],
+      "orderedWayIds": [
+        {
+          "id": 642636563,
+          "reversed": true
+        },
+        {
+          "id": 1184476776,
+          "reversed": true
+        },
+        {
+          "id": 1184476788,
+          "reversed": true
+        },
+        {
+          "id": 1184476778,
+          "reversed": false
+        },
+        {
+          "id": 1184476785,
+          "reversed": true
+        },
+        {
+          "id": 1055611602,
+          "reversed": true
+        },
+        {
+          "id": 915112330,
+          "reversed": true
+        },
+        {
+          "id": 915112329,
+          "reversed": true
+        },
+        {
+          "id": 659570769,
+          "reversed": true
+        },
+        {
+          "id": 661827634,
+          "reversed": true
+        },
+        {
+          "id": 364896924,
+          "reversed": true
+        },
+        {
+          "id": 473617055,
+          "reversed": true
+        },
+        {
+          "id": 615615095,
+          "reversed": true
+        },
+        {
+          "id": 279102625,
+          "reversed": true
+        },
+        {
+          "id": 1284144252,
+          "reversed": true
+        },
+        {
+          "id": 570756009,
+          "reversed": true
+        },
+        {
+          "id": 583105623,
+          "reversed": true
+        },
+        {
+          "id": 897488854,
+          "reversed": true
+        },
+        {
+          "id": 897488855,
+          "reversed": true
+        },
+        {
+          "id": 279102627,
+          "reversed": true
+        },
+        {
+          "id": 570756008,
+          "reversed": true
+        },
+        {
+          "id": 279102623,
+          "reversed": true
+        },
+        {
+          "id": 364896925,
+          "reversed": true
+        },
+        {
+          "id": 1183769463,
+          "reversed": true
+        },
+        {
+          "id": 364876206,
+          "reversed": false
+        },
+        {
+          "id": 1181404060,
+          "reversed": false
+        },
+        {
+          "id": 364876211,
+          "reversed": false
+        },
+        {
+          "id": 1181440756,
+          "reversed": false
+        },
+        {
+          "id": 631249188,
+          "reversed": true
+        },
+        {
+          "id": 661827638,
+          "reversed": true
+        },
+        {
+          "id": 1183304781,
+          "reversed": true
+        }
+      ]
     },
     {
       "osmId": 8385429,
@@ -248,6 +378,28 @@
     },
     {
       "osmId": 3537978,
+      "orderedWayIds": [
+        {
+          "id": 251754097,
+          "reversed": true
+        },
+        {
+          "id": 563896854,
+          "reversed": false
+        },
+        {
+          "id": 696687015,
+          "reversed": false
+        },
+        {
+          "id": 753427929,
+          "reversed": false
+        },
+        {
+          "id": 1219840308,
+          "reversed": false
+        }
+      ],
       "segment_id": "del-grey-seg-01",
       "line_id": "del-grey",
       "line_name": "Grey Line",

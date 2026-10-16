@@ -601,7 +601,11 @@ export function mergeCityOverrides(
 
     const first = projections[0];
     const last = projections[projections.length - 1];
-    if (first.position !== last.position) {
+    const isClosedLoop =
+      coords.length >= 4 &&
+      haversineDistanceM(coords[0], coords[coords.length - 1]) <= 50;
+
+    if (!isClosedLoop && first.position !== last.position) {
       iseg.coords = lineSlice(first.point, last.point, coords);
     }
     iseg.coords = removeShortSelfIntersectionSpur(iseg.coords || coords);
