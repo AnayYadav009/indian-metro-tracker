@@ -554,7 +554,22 @@ export function mergeCityOverrides(
       coords.length >= 4 &&
       haversineDistanceM(coords[0], coords[coords.length - 1]) <= 50;
 
-    if (!isClosedLoop && first.position !== last.position) {
+    const endpointIds = iseg.segOverride.endpoint_station_ids;
+    if (endpointIds && endpointIds.length === 2) {
+      const st1 = stationsWithLines.find((sw) => sw.st.id === endpointIds[0]);
+      const st2 = stationsWithLines.find((sw) => sw.st.id === endpointIds[1]);
+      if (st1 && st2) {
+        const p1 = nearestPointOnPolyline(st1.st.coords, coords);
+        const p2 = nearestPointOnPolyline(st2.st.coords, coords);
+        const [startPt, endPt] =
+          p1.segmentIndex + p1.t <= p2.segmentIndex + p2.t
+            ? [p1.point, p2.point]
+            : [p2.point, p1.point];
+        iseg.coords = lineSlice(startPt, endPt, coords);
+      } else if (!isClosedLoop && first.position !== last.position) {
+        iseg.coords = lineSlice(first.point, last.point, coords);
+      }
+    } else if (!isClosedLoop && first.position !== last.position) {
       iseg.coords = lineSlice(first.point, last.point, coords);
     }
     iseg.coords = removeShortSelfIntersectionSpur(iseg.coords || coords);
