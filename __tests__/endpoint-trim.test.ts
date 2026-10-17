@@ -1,12 +1,11 @@
 import { describe, it, expect } from "vitest";
 import { mergeCityOverrides, type CityOverrideData } from "@/scripts/pipeline/merge-overrides";
 import { normalizeOverpassCity } from "@/scripts/pipeline/normalize";
-import type { OverpassResponse } from "@/types/overpass";
 
 describe("Endpoint Station Trimming", () => {
   it("trims coordinates between projections of two specified endpoint stations", () => {
     // Polyline running west to east: (77.0, 28.0) -> (77.1, 28.0) -> (77.2, 28.0) -> (77.3, 28.0) -> (77.4, 28.0)
-    const rawOverpass: OverpassResponse = {
+    const rawOverpass = {
       version: 0.6,
       generator: "test",
       osm3s: { timestamp_osm_base: "2026-10-17T00:00:00Z" },
@@ -96,7 +95,6 @@ describe("Endpoint Station Trimming", () => {
           inaugurated_on: "2024-01-01",
           expected_completion: null,
           color: "#FF00FF",
-          city_id: "testcity",
           // Exactly two endpoint stations: Station Alpha and Station Gamma
           endpoint_station_ids: ["testcity-station-alpha", "testcity-station-gamma"],
         },
