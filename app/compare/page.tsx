@@ -16,6 +16,7 @@ import {
   Layers,
   Calendar,
   Percent,
+  MapPin,
 } from "lucide-react";
 import {
   getCityCompareStats,
@@ -456,16 +457,25 @@ export default function ComparePage() {
                       }
                       className="group cursor-pointer transition-colors hover:bg-slate-800/40"
                     >
-                      {/* City Name with link and caveat icon */}
+                      {/* City Name with link to city page, map link, and caveat icon */}
                       <td className="py-2.5 px-4 font-medium text-slate-100">
                         <div className="flex items-center gap-2">
                           <Link
-                            href={`/?city=${c.cityId}`}
+                            href={`/city/${c.cityId}/`}
+                            data-testid={`city-page-link-${c.cityId}`}
                             onClick={(e) => e.stopPropagation()}
                             className="font-semibold text-slate-100 hover:text-emerald-400 hover:underline"
-                            title={`View ${c.cityName} on Map`}
+                            title={`View ${c.cityName} Overview & Stats`}
                           >
                             {c.cityName}
+                          </Link>
+                          <Link
+                            href={`/?city=${c.cityId}`}
+                            onClick={(e) => e.stopPropagation()}
+                            className="text-slate-500 hover:text-emerald-400"
+                            title={`View ${c.cityName} on Map`}
+                          >
+                            <MapPin className="h-3 w-3" />
                           </Link>
 
                           {/* Data Quality / Length Mismatch Warning Flag (> 3%) */}
@@ -640,12 +650,21 @@ export default function ComparePage() {
                                 </strong>{" "}
                                 planned.
                               </div>
-                              <Link
-                                href={`/?city=${c.cityId}`}
-                                className="font-semibold text-emerald-400 hover:underline"
-                              >
-                                View full network on map →
-                              </Link>
+                              <div className="flex items-center gap-3">
+                                <Link
+                                  href={`/city/${c.cityId}/`}
+                                  className="font-semibold text-emerald-400 hover:underline"
+                                >
+                                  {c.cityName} City Page →
+                                </Link>
+                                <span className="text-slate-600">|</span>
+                                <Link
+                                  href={`/?city=${c.cityId}`}
+                                  className="text-slate-300 hover:text-white hover:underline"
+                                >
+                                  View on map →
+                                </Link>
+                              </div>
                             </div>
                           </div>
                         </td>
