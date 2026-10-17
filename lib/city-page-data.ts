@@ -85,6 +85,9 @@ export interface CityPageData {
   openingYearRange: string | null;
   earliestOpenedYear: number | null;
   latestOpenedYear: number | null;
+  hasAtLeast80PercentOpened: boolean;
+  openedStationsCount: number;
+  totalStationsCount: number;
   isUnderConstructionOnly: boolean;
 }
 
@@ -164,12 +167,19 @@ export function getCityPageData(cityId: string): CityPageData | null {
   const earliestOpenedYear = openedYears.length ? Math.min(...openedYears) : null;
   const latestOpenedYear = openedYears.length ? Math.max(...openedYears) : null;
 
+  const totalStationsCount = cityStations.length;
+  const openedStationsCount = openedYears.length;
+  const hasAtLeast80PercentOpened =
+    totalStationsCount > 0 && openedStationsCount / totalStationsCount >= 0.8;
+
   let openingYearRange: string | null = null;
-  if (earliestOpenedYear !== null && latestOpenedYear !== null) {
+  if (hasAtLeast80PercentOpened && earliestOpenedYear !== null && latestOpenedYear !== null) {
     openingYearRange =
       earliestOpenedYear === latestOpenedYear
         ? `${earliestOpenedYear}`
         : `${earliestOpenedYear} – ${latestOpenedYear}`;
+  } else if (openedStationsCount > 0) {
+    openingYearRange = `Opening dates recorded for ${openedStationsCount} of ${totalStationsCount} stations`;
   }
 
   const isUnderConstructionOnly =
@@ -182,6 +192,9 @@ export function getCityPageData(cityId: string): CityPageData | null {
     openingYearRange,
     earliestOpenedYear,
     latestOpenedYear,
+    hasAtLeast80PercentOpened,
+    openedStationsCount,
+    totalStationsCount,
     isUnderConstructionOnly,
   };
 }

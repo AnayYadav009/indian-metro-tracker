@@ -34,6 +34,7 @@ test.describe("M17 City Static Pages & SEO", () => {
       expect(parsed["@type"]).toBe("ItemPage");
       expect(parsed.mainEntity["@type"]).toBe("City");
       expect(parsed.mainEntity.name).toBe(city.name);
+      expect(parsed.mainEntity.geo).toBeUndefined();
 
       // 4. Lines & Corridors Table
       const linesTable = page.getByTestId("city-lines-table");

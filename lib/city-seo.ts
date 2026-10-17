@@ -11,13 +11,16 @@ export function getCityDescription(cityId: string): string {
   const data = getCityPageData(cityId);
   if (!data) return SITE_CONFIG.description;
 
-  const { city, stats, isUnderConstructionOnly, openingYearRange } = data;
+  const { city, stats, isUnderConstructionOnly, openingYearRange, hasAtLeast80PercentOpened } = data;
 
   if (isUnderConstructionOnly) {
     return `${city.name} metro transit network overview: 0 operational stations currently open, with ${stats.constructionKm} km across ${stats.linesCount} lines under active construction. Grounded in verified geospatial data.`;
   }
 
-  const yearClause = openingYearRange ? ` (opened ${openingYearRange})` : "";
+  const yearClause =
+    hasAtLeast80PercentOpened && openingYearRange
+      ? ` (opened ${openingYearRange})`
+      : "";
   return `${city.name} metro transit network overview: ${stats.operationalKm} km operational across ${stats.linesCount} lines and ${stats.operationalStations} stations${yearClause}. Verified geospatial data tracking operational, under-construction, and planned corridors.`;
 }
 
@@ -65,7 +68,7 @@ export interface CityJsonLd {
   mainEntity: {
     "@type": "City";
     name: string;
-    geo: {
+    geo?: {
       "@type": "GeoCoordinates";
       latitude: number;
       longitude: number;
@@ -81,9 +84,16 @@ export function generateCityJsonLd(cityId: string): CityJsonLd | null {
   const canonicalUrl = getCityCanonicalUrl(cityId);
   const description = getCityDescription(cityId);
 
-  const [minLng, minLat, maxLng, maxLat] = city.bbox;
-  const latitude = Math.round(((minLat + maxLat) / 2) * 10000) / 10000;
-  const longitude = Math.round(((minLng + maxLng) / 2) * 10000) / 10000;
+  // If city.center explicitly exists in cities.json, use it; do not compute GeoCoordinates from bbox midpoint
+  const rawCenter = (city as { center?: [number, number] }).center;
+  const geo =
+    Array.isArray(rawCenter) && rawCenter.length === 2
+      ? {
+          "@type": "GeoCoordinates" as const,
+          latitude: rawCenter[1],
+          longitude: rawCenter[0],
+        }
+      : undefined;
 
   return {
     "@context": "https://schema.org",
@@ -94,11 +104,7 @@ export function generateCityJsonLd(cityId: string): CityJsonLd | null {
     mainEntity: {
       "@type": "City",
       name: city.name,
-      geo: {
-        "@type": "GeoCoordinates",
-        latitude,
-        longitude,
-      },
+      ...(geo ? { geo } : {}),
     },
   };
 }

@@ -80,7 +80,7 @@ describe("M17 City SEO & Metadata Generation", () => {
     expect(patnaDesc).toContain("5 stations");
   });
 
-  it("generates valid schema.org JSON-LD using only verified properties", () => {
+  it("generates valid schema.org JSON-LD using only verified properties without bbox midpoint coordinates", () => {
     for (const city of citiesJson) {
       const jsonLd = generateCityJsonLd(city.id);
       expect(jsonLd).not.toBeNull();
@@ -93,14 +93,8 @@ describe("M17 City SEO & Metadata Generation", () => {
       expect(mainEntity?.["@type"]).toBe("City");
       expect(mainEntity?.name).toBe(city.name);
 
-      // Verify center coordinates match city.bbox midpoint
-      const [minLng, minLat, maxLng, maxLat] = city.bbox;
-      const expectedLat = Math.round(((minLat + maxLat) / 2) * 10000) / 10000;
-      const expectedLon = Math.round(((minLng + maxLng) / 2) * 10000) / 10000;
-
-      expect(mainEntity?.geo["@type"]).toBe("GeoCoordinates");
-      expect(mainEntity?.geo.latitude).toBe(expectedLat);
-      expect(mainEntity?.geo.longitude).toBe(expectedLon);
+      // Does not emit GeoCoordinates computed from bbox midpoint
+      expect(mainEntity?.geo).toBeUndefined();
     }
   });
 
@@ -127,13 +121,24 @@ describe("M17 City SEO & Metadata Generation", () => {
     expect(indoreYellow?.topology).toBe("loop");
   });
 
-  it("computes opening year ranges where station opened_on exists", () => {
+  it("applies 80% threshold for opening-year ranges versus station count disclosure", () => {
+    // Kochi: 25 of 25 stations have opened_on (100% >= 80%) -> shows range
     const kochiData = getCityPageData("kochi");
+    expect(kochiData?.hasAtLeast80PercentOpened).toBe(true);
     expect(kochiData?.openingYearRange).toBe("2017 – 2024");
-    expect(kochiData?.earliestOpenedYear).toBe(2017);
-    expect(kochiData?.latestOpenedYear).toBe(2024);
+    expect(getCityDescription("kochi")).toContain("(opened 2017 – 2024)");
 
+    // Delhi: 1 of 240 stations has opened_on (0.4% < 80%) -> shows disclosure
+    const delhiData = getCityPageData("delhi");
+    expect(delhiData?.hasAtLeast80PercentOpened).toBe(false);
+    expect(delhiData?.openingYearRange).toBe(
+      "Opening dates recorded for 1 of 240 stations"
+    );
+    expect(getCityDescription("delhi")).not.toContain("(opened");
+
+    // Surat: 0 stations have opened_on -> null
     const suratData = getCityPageData("surat");
+    expect(suratData?.hasAtLeast80PercentOpened).toBe(false);
     expect(suratData?.openingYearRange).toBeNull();
   });
 });

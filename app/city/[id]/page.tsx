@@ -41,6 +41,8 @@ export default async function CityPage({ params }: CityPageProps) {
     stats,
     lines,
     openingYearRange,
+    hasAtLeast80PercentOpened,
+    openedStationsCount,
     isUnderConstructionOnly,
   } = data;
   const jsonLd = generateCityJsonLd(id);
@@ -217,12 +219,21 @@ export default async function CityPage({ params }: CityPageProps) {
             </div>
 
             <div className="rounded-xl border border-slate-800 bg-slate-900/60 p-3.5 space-y-1">
-              <div className="text-[11px] font-medium text-slate-400">Opened Range</div>
-              <div className="text-lg font-bold text-white truncate" title={openingYearRange ?? "Not recorded"}>
+              <div className="text-[11px] font-medium text-slate-400">Opening Years</div>
+              <div
+                className={`font-bold text-white ${
+                  hasAtLeast80PercentOpened ? "text-lg" : "text-xs leading-snug"
+                }`}
+                title={openingYearRange ?? "No dates recorded"}
+              >
                 {openingYearRange ?? "—"}
               </div>
               <div className="text-[11px] text-slate-400">
-                {openingYearRange ? "verified openings" : "no dates recorded"}
+                {hasAtLeast80PercentOpened
+                  ? "≥80% stations verified"
+                  : openedStationsCount > 0
+                  ? "<80% stations dated"
+                  : "no dates recorded"}
               </div>
             </div>
           </section>
