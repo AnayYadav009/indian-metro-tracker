@@ -423,4 +423,172 @@ describe("M18 Route Finder", () => {
       expect(hasRapidMetro).toBe(true);
     });
   });
+
+  describe("Tier 1 Multi-Transfer Routes & Topological Edge Cases", () => {
+    function findStation(
+      graph: ReturnType<typeof buildTransitGraph>,
+      nameQuery: string
+    ) {
+      const q = nameQuery.toLowerCase();
+      const st = Array.from(graph.stations.values()).find((s) =>
+        s.name.toLowerCase().includes(q)
+      );
+      if (!st) {
+        throw new Error(
+          `Station query "${nameQuery}" not found in graph stations: ${Array.from(graph.stations.values()).map((s) => s.name).join(", ")}`
+        );
+      }
+      return st;
+    }
+
+    it("Delhi: finds multi-transfer route between Blue Line and Red Line asserting stops and transfers from compiled legs", () => {
+      const graph = buildTransitGraph({ cityId: "delhi" });
+      const fromSt = findStation(graph, "Dwarka Sector 21");
+      const toSt = findStation(graph, "Shaheed Sthal");
+
+      const route = findRoute(graph, fromSt.id, toSt.id);
+      expect(route).not.toBeNull();
+      if (!route) return;
+
+      // Assertions derived dynamically from compiled legs and transfers
+      expect(route.totalTransfers).toBeGreaterThanOrEqual(1);
+      expect(route.totalTransfers).toBe(route.legs.length - 1);
+      expect(route.totalStops).toBe(
+        route.legs.reduce((acc, leg) => acc + leg.stopCount, 0)
+      );
+      expect(route.totalDistanceKm).toBe(
+        Number(route.legs.reduce((acc, leg) => acc + leg.distanceKm, 0).toFixed(2))
+      );
+      expect(route.origin.id).toBe(fromSt.id);
+      expect(route.destination.id).toBe(toSt.id);
+      expect(route.legs[0].fromStation.id).toBe(fromSt.id);
+      expect(route.legs[route.legs.length - 1].toStation.id).toBe(toSt.id);
+    });
+
+    it("Mumbai: finds multi-transfer route between Line 1 (Blue) and Line 3 (Aqua) asserting stops from compiled legs", () => {
+      const graph = buildTransitGraph({ cityId: "mumbai" });
+      const fromSt = findStation(graph, "Andheri");
+      const toSt = findStation(graph, "Aarey JVLR");
+
+      const route = findRoute(graph, fromSt.id, toSt.id);
+      expect(route).not.toBeNull();
+      if (!route) return;
+
+      expect(route.totalTransfers).toBeGreaterThanOrEqual(1);
+      expect(route.totalTransfers).toBe(route.legs.length - 1);
+      expect(route.totalStops).toBe(
+        route.legs.reduce((acc, leg) => acc + leg.stopCount, 0)
+      );
+      expect(route.legs.map((l) => l.lineId)).toEqual(
+        expect.arrayContaining(["mum-line-1", "mum-line-3"])
+      );
+    });
+
+    it("Bengaluru: finds multi-transfer route between Purple Line and Green Line asserting stops from compiled legs", () => {
+      const graph = buildTransitGraph({ cityId: "bengaluru" });
+      const fromSt = findStation(graph, "Kadugodi");
+      const toSt = findStation(graph, "Nagasandra");
+
+      const route = findRoute(graph, fromSt.id, toSt.id);
+      expect(route).not.toBeNull();
+      if (!route) return;
+
+      expect(route.totalTransfers).toBeGreaterThanOrEqual(1);
+      expect(route.totalTransfers).toBe(route.legs.length - 1);
+      expect(route.totalStops).toBe(
+        route.legs.reduce((acc, leg) => acc + leg.stopCount, 0)
+      );
+      expect(route.legs.map((l) => l.lineId)).toEqual(
+        expect.arrayContaining(["blr-purple", "blr-green"])
+      );
+    });
+
+    it("Chennai: finds multi-transfer route between Blue Line and Green Line asserting stops from compiled legs", () => {
+      const graph = buildTransitGraph({ cityId: "chennai" });
+      const fromSt = findStation(graph, "Wimco Nagar");
+      const toSt = findStation(graph, "Koyambedu");
+
+      const route = findRoute(graph, fromSt.id, toSt.id);
+      expect(route).not.toBeNull();
+      if (!route) return;
+
+      expect(route.totalTransfers).toBeGreaterThanOrEqual(1);
+      expect(route.totalTransfers).toBe(route.legs.length - 1);
+      expect(route.totalStops).toBe(
+        route.legs.reduce((acc, leg) => acc + leg.stopCount, 0)
+      );
+      expect(route.legs.map((l) => l.lineId)).toEqual(
+        expect.arrayContaining(["che-blue", "che-green"])
+      );
+    });
+
+    it("Hyderabad: finds multi-transfer route between Red Line and Blue Line asserting stops from compiled legs", () => {
+      const graph = buildTransitGraph({ cityId: "hyderabad" });
+      const fromSt = findStation(graph, "Miyapur");
+      const toSt = findStation(graph, "Nagole");
+
+      const route = findRoute(graph, fromSt.id, toSt.id);
+      expect(route).not.toBeNull();
+      if (!route) return;
+
+      expect(route.totalTransfers).toBeGreaterThanOrEqual(1);
+      expect(route.totalTransfers).toBe(route.legs.length - 1);
+      expect(route.totalStops).toBe(
+        route.legs.reduce((acc, leg) => acc + leg.stopCount, 0)
+      );
+      expect(route.legs.map((l) => l.lineId)).toEqual(
+        expect.arrayContaining(["hyd-red", "hyd-blue"])
+      );
+    });
+
+    it("Kolkata: finds multi-transfer route between Blue Line and Green Line asserting stops from compiled legs", () => {
+      const graph = buildTransitGraph({ cityId: "kolkata" });
+      const fromSt = findStation(graph, "Kavi Subhash");
+      const toSt = findStation(graph, "Howrah Maidan");
+
+      const route = findRoute(graph, fromSt.id, toSt.id);
+      expect(route).not.toBeNull();
+      if (!route) return;
+
+      expect(route.totalTransfers).toBeGreaterThanOrEqual(1);
+      expect(route.totalTransfers).toBe(route.legs.length - 1);
+      expect(route.totalStops).toBe(
+        route.legs.reduce((acc, leg) => acc + leg.stopCount, 0)
+      );
+      expect(route.legs.map((l) => l.lineId)).toEqual(
+        expect.arrayContaining(["kol-blue", "kol-green"])
+      );
+    });
+
+    it("Branch Route: traverses Delhi Blue Line branch (Vaishali to Dwarka Sector 21) via Yamuna Bank with 0 line transfers", () => {
+      const graph = buildTransitGraph({ cityId: "delhi" });
+      const fromSt = findStation(graph, "Vaishali");
+      const toSt = findStation(graph, "Dwarka Sector 21");
+
+      const route = findRoute(graph, fromSt.id, toSt.id);
+      expect(route).not.toBeNull();
+      if (!route) return;
+
+      expect(route.totalTransfers).toBe(0);
+      expect(route.legs.length).toBe(1);
+      expect(route.legs[0].lineId).toBe("del-blue");
+      expect(route.legs[0].fromStation.id).toBe(fromSt.id);
+      expect(route.legs[0].toStation.id).toBe(toSt.id);
+      expect(
+        route.legs[0].intermediateStations.some((s) =>
+          s.name.toLowerCase().includes("yamuna bank")
+        )
+      ).toBe(true);
+      expect(route.totalStops).toBe(route.legs[0].stopCount);
+    });
+
+    it("No-Route Case: returns null between disconnected components in Mumbai (Chembur on Line 2B to Andheri on Line 1)", () => {
+      const graph = buildTransitGraph({ cityId: "mumbai" });
+      const fromSt = findStation(graph, "Chembur");
+      const toSt = findStation(graph, "Andheri");
+
+      const route = findRoute(graph, fromSt.id, toSt.id);
+      expect(route).toBeNull();
+    });
+  });
 });

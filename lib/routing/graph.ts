@@ -1,5 +1,4 @@
 import { haversineDistanceKm, lineSlice } from "@/lib/geo";
-import { getMetroData } from "@/lib/data";
 import { getSegmentStationOrder } from "./station-ordering";
 import { ROUTING_CONSTANTS } from "./constants";
 import type {
@@ -33,16 +32,26 @@ export interface TransitGraph {
   adj: Map<string, TransitEdge[]>;
 }
 
+import { getMetroData } from "@/lib/data";
+
 export function buildTransitGraph(options?: {
   cityId?: string;
+  allowedLineIds?: string[] | Set<string>;
   customSegments?: SegmentFeature[];
   customStations?: StationFeature[];
   customLines?: Line[];
 }): TransitGraph {
-  const data = getMetroData();
-  const segments = options?.customSegments ?? data.segments.features;
-  const stations = options?.customStations ?? data.stations.features;
-  const lines = options?.customLines ?? data.lines;
+  const allowedSet = options?.allowedLineIds
+    ? options.allowedLineIds instanceof Set
+      ? options.allowedLineIds
+      : new Set(options.allowedLineIds)
+    : null;
+
+  const segments =
+    options?.customSegments ?? getMetroData().segments.features;
+  const stations =
+    options?.customStations ?? getMetroData().stations.features;
+  const lines = options?.customLines ?? getMetroData().lines;
 
   const stationMap = new Map<string, RouteStation>();
   const lineMap = new Map<string, { id: string; name: string; color: string }>();
@@ -50,6 +59,7 @@ export function buildTransitGraph(options?: {
   const adj = new Map<string, TransitEdge[]>();
 
   for (const line of lines) {
+    if (allowedSet && !allowedSet.has(line.id)) continue;
     lineMap.set(line.id, {
       id: line.id,
       name: line.name,
@@ -61,7 +71,8 @@ export function buildTransitGraph(options?: {
   const operationalStations = stations.filter(
     (st) =>
       st.properties.status === "operational" &&
-      (!options?.cityId || st.properties.city_id === options.cityId)
+      (!options?.cityId || st.properties.city_id === options.cityId) &&
+      (!allowedSet || st.properties.line_ids.some((lid) => allowedSet.has(lid)))
   );
 
   for (const st of operationalStations) {
@@ -80,7 +91,8 @@ export function buildTransitGraph(options?: {
   const operationalSegments = segments.filter(
     (seg) =>
       seg.properties.status === "operational" &&
-      (!options?.cityId || seg.properties.city_id === options.cityId)
+      (!options?.cityId || seg.properties.city_id === options.cityId) &&
+      (!allowedSet || allowedSet.has(seg.properties.line_id))
   );
 
   const addEdge = (fromNode: string, edge: TransitEdge) => {

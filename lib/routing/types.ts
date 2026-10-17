@@ -41,7 +41,16 @@ export interface RouteResult {
   disclaimer: string;
 }
 
-export interface CityRoutability {
+export interface LineRoutability {
+  lineId: string;
   isRoutable: boolean;
   reason?: string;
+}
+
+export interface CityRoutability {
+  isRoutable: boolean;
+  status: "routable" | "partly_routable" | "non_routable";
+  reason?: string;
+  routableLineIds: string[];
+  unroutableLines: Array<{ id: string; name: string; reason: string }>;
 }

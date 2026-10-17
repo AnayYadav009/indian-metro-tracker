@@ -107,4 +107,51 @@ test.describe("M18 Route Finder", () => {
       "Origin and destination are the same station"
     );
   });
+
+  test("calculates route on routable Tier 1 big city network (Bengaluru)", async ({
+    page,
+  }) => {
+    await page.goto(
+      "/?city=bengaluru&from=blr-whitefield-kadugodi&to=blr-nadaprabhu-kempegowda-majestic"
+    );
+    await page.waitForLoadState("domcontentloaded");
+
+    const panel = page.locator('[data-testid="route-finder-panel"]');
+    await expect(panel).toBeVisible();
+
+    const originInput = page.locator('[data-testid="route-origin-input"]');
+    await expect(originInput).toHaveValue("Whitefield (Kadugodi)");
+
+    const destInput = page.locator('[data-testid="route-destination-input"]');
+    await expect(destInput).toHaveValue(
+      "Nadaprabhu Kempegowda, Majestic"
+    );
+
+    const resultsContainer = page.locator(
+      '[data-testid="route-results-container"]'
+    );
+    await expect(resultsContainer).toBeVisible();
+    await expect(resultsContainer).toContainText("Purple Line");
+  });
+
+  test("displays audit guard notice on guarded network (Bhopal)", async ({
+    page,
+  }) => {
+    await page.goto("/?city=bhopal");
+    await page.waitForLoadState("domcontentloaded");
+
+    const routeBtn = page.locator('[data-testid="find-route-btn"]');
+    await expect(routeBtn).toBeVisible();
+    await routeBtn.click();
+
+    const panel = page.locator('[data-testid="route-finder-panel"]');
+    await expect(panel).toBeVisible();
+
+    const guardNotice = page.locator('[data-testid="route-guard-notice"]');
+    await expect(guardNotice).toBeVisible();
+    await expect(guardNotice).toContainText(
+      "Routing is not available for this network yet"
+    );
+    await expect(guardNotice).toContainText("PRE-01");
+  });
 });

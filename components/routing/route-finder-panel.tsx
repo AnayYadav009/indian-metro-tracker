@@ -46,13 +46,20 @@ export function RouteFinderPanel() {
     [activeCityId]
   );
 
-  // Operational stations for the active city
+  // Operational stations for the active city (filtered to routable lines)
+  const routableLineSet = useMemo(
+    () => new Set(cityRoutability.routableLineIds),
+    [cityRoutability.routableLineIds]
+  );
+
   const cityOperationalStations = useMemo(() => {
     return dataset.stations.features
       .filter(
         (st) =>
           st.properties.city_id === activeCityId &&
-          st.properties.status === "operational"
+          st.properties.status === "operational" &&
+          (cityRoutability.routableLineIds.length === 0 ||
+            st.properties.line_ids.some((lid) => routableLineSet.has(lid)))
       )
       .map((st) => ({
         id: st.properties.station_id,
@@ -60,12 +67,18 @@ export function RouteFinderPanel() {
         lines: st.properties.line_ids,
       }))
       .sort((a, b) => a.name.localeCompare(b.name));
-  }, [dataset.stations.features, activeCityId]);
+  }, [dataset.stations.features, activeCityId, routableLineSet, cityRoutability.routableLineIds]);
 
-  // Build transit graph for active city
+  // Build transit graph for active city with allowed routable lines
   const graph = useMemo(() => {
-    return buildTransitGraph({ cityId: activeCityId });
-  }, [activeCityId]);
+    return buildTransitGraph({
+      cityId: activeCityId,
+      allowedLineIds:
+        cityRoutability.routableLineIds.length > 0
+          ? cityRoutability.routableLineIds
+          : undefined,
+    });
+  }, [activeCityId, cityRoutability.routableLineIds]);
 
   // Autocomplete / Search state
   const [originQuery, setOriginQuery] = useState("");
@@ -269,6 +282,21 @@ export function RouteFinderPanel() {
           </div>
         ) : (
           <>
+            {/* Partly Routable Notice */}
+            {cityRoutability.status === "partly_routable" && (
+              <div
+                data-testid="route-partly-routable-notice"
+                className="rounded-lg border border-sky-500/30 bg-sky-500/10 p-2.5 text-xs text-sky-200 flex items-start gap-2"
+              >
+                <Info className="h-4 w-4 shrink-0 text-sky-400 mt-0.5" />
+                <div className="text-[11px] leading-relaxed text-sky-200/90">
+                  <span className="font-semibold text-sky-300">Partial Network:</span>{" "}
+                  {cityRoutability.routableLineIds.length} verified lines available. Lines under review:{" "}
+                  {cityRoutability.unroutableLines.map((u) => u.name).join(", ")}.
+                </div>
+              </div>
+            )}
+
             {/* Origin & Destination Inputs */}
             <div className="space-y-2 relative">
               {/* Origin input */}
