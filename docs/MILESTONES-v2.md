@@ -33,11 +33,11 @@ Read before starting any milestone: `docs/BLUEPRINT.md`, `docs/DATA-STANDARDS.md
 | M12 | Interchange highlighting | Derived interchange clusters, distinct map marker, connecting-line chips | Complete |
 | M13 | Timeline slider | Year scrubber using existing `inaugurated_on` and `opened_on` | Complete |
 | M13.1 | UX hardening | Walkthrough UX issues, carry-over of the 10 Oct map fixes | In progress |
-| M14 | Stats and comparison | Static `/compare/` page | Not started |
+| M14 | Stats and comparison | Static `/compare/` page | Complete: merged in `c53574e`; 8 unit tests, 6 e2e tests |
 | M15 | Tier 2 onboarding | Batches A to C, same runbook as Tier 1 | Complete: all 12 candidate cities onboarded |
-| M16 | Nearest station | Client-side geolocation lookup | Not started |
-| M17 | City pages and SEO | `/city/[id]/` static pages, sitemap, metadata | Not started |
-| M18 | Route finder | Client-side graph search with transfers | Not started |
+| M16 | Nearest station | Client-side geolocation lookup | Complete: merged in `05ca6f3`; 8 unit tests, 6 e2e tests |
+| M17 | City pages and SEO | `/city/[id]/` static pages, sitemap, metadata | Complete: merged in `2ef19d9`; 8 unit tests, 7 e2e tests |
+| M18 | Route finder | Client-side graph search with transfers | Complete: merged into master; 42 unit tests, 7 e2e tests |
 
 **Known regressions:**
 - Chennai Corridor 3 (`che-corridor-3-seg-01`, 44.6 km under construction) was deleted in commit `4d41603` during geometry cleanup, dropping Chennai construction km from 74.9 km to 17.2 km.
@@ -279,6 +279,7 @@ Tier 1 = Delhi, Bengaluru, Mumbai, Chennai, Kolkata, Hyderabad.
 
 ## M14: Stats and comparison
 
+- **Status**: Complete. Merged in commit `c53574e`. Tests: 8 unit tests (`__tests__/compare-stats.test.ts`), 6 e2e tests (`e2e/compare.spec.ts`).
 - Static `/compare/` page. Table per city: operational, construction and planned km, stations, lines, interchanges, first-opened year. Sortable.
 - Bars drawn in plain SVG or CSS, no chart library.
 - Km values come from `length_km`. If `official_length_km` exists, show a data-quality flag when they differ by more than the audit tolerance.
@@ -316,6 +317,7 @@ Tier 1 = Delhi, Bengaluru, Mumbai, Chennai, Kolkata, Hyderabad.
 
 ## M16: Nearest station
 
+- **Status**: Complete. Merged in commit `05ca6f3`. Tests: 8 unit tests (`__tests__/nearest-station.test.ts`), 6 e2e tests (`e2e/nearest-station.spec.ts`).
 - MapLibre `GeolocateControl` for the position dot (no new dependency).
 - Haversine over operational stations in memory; top 3 to 5 with straight-line distance (labelled as such), lines served, interchange flag.
 - Location is never stored or sent anywhere.
@@ -326,6 +328,7 @@ Tier 1 = Delhi, Bengaluru, Mumbai, Chennai, Kolkata, Hyderabad.
 
 ## M17: City pages and SEO
 
+- **Status**: Complete. Merged in commit `2ef19d9`. Tests: 8 unit tests (`__tests__/city-seo.test.ts`), 7 e2e tests (`e2e/city-pages.spec.ts`).
 - `/city/[id]/` via `generateStaticParams` from `cities.json`. A new city needs no code change.
 - Static text (stats, lines, opening years) plus the map focused on the city. The URL is the single source of truth, no clash with `useUrlSync`.
 - `generateMetadata` per city, canonical URLs from `NEXT_PUBLIC_SITE_URL`, `sitemap.ts` and `robots.ts` marked force-static.
@@ -336,6 +339,7 @@ Tier 1 = Delhi, Bengaluru, Mumbai, Chennai, Kolkata, Hyderabad.
 
 ## M18: Route finder
 
+- **Status**: Complete. Merged into master. Tests: 42 unit tests (`__tests__/route-finder.test.ts`), 7 e2e tests (`e2e/route-finder.spec.ts`).
 - Prerequisite data: `ordered_station_ids` per line (from OSM route-relation order, geometry projection as fallback). Additive migration, audited. May be pulled forward into M10.3 if the owner decides so there.
 - Graph: nodes are stations; edges join adjacent stops (weight = distance divided by an assumed average speed); interchange edges carry a transfer penalty. Both constants are visibly labelled as estimates. Graphs are limited to a `network_id`. Cross-network interchanges from M10.3 are the only edges allowed to join networks, and only if the owner approves that in the plan.
 - Dijkstra with a small hand-written heap, "fastest" and "fewest transfers".

@@ -14,14 +14,14 @@ export function getCityDescription(cityId: string): string {
   const { city, stats, isUnderConstructionOnly, openingYearRange, hasAtLeast80PercentOpened } = data;
 
   if (isUnderConstructionOnly) {
-    return `${city.name} metro transit network overview: 0 operational stations currently open, with ${stats.constructionKm} km across ${stats.linesCount} lines under active construction. Grounded in verified geospatial data.`;
+    return `${city.name} metro transit network overview: 0 operational stations currently open, with ${stats.constructionKm} km across ${stats.linesCount} ${stats.linesCount === 1 ? "line" : "lines"} under active construction. Grounded in verified geospatial data.`;
   }
 
   const yearClause =
     hasAtLeast80PercentOpened && openingYearRange
       ? ` (opened ${openingYearRange})`
       : "";
-  return `${city.name} metro transit network overview: ${stats.operationalKm} km operational across ${stats.linesCount} lines and ${stats.operationalStations} stations${yearClause}. Verified geospatial data tracking operational, under-construction, and planned corridors.`;
+  return `${city.name} metro transit network overview: ${stats.operationalKm} km operational across ${stats.linesCount} ${stats.linesCount === 1 ? "line" : "lines"} and ${stats.operationalStations} stations${yearClause}. Verified geospatial data tracking operational, under-construction, and planned corridors.`;
 }
 
 export function generateCityMetadata(cityId: string): Metadata {

@@ -124,3 +124,32 @@ The audit engine (`scripts/audit/audit-engine.ts`) implements three hardcoded ex
 - **Owner Decision Needed**: Review and approve visual QA inspection packages for Delhi, Mumbai, Bengaluru, Chennai, Kolkata, and Hyderabad.
 - **Suggested Next Step**: Execute visual walkthroughs, fill out `docs/VISUAL_QA.md` checklists, and archive reference screenshots in `reports/data-audit/screenshots/`.
 - **Severity**: **Medium** (gating M10 completion).
+
+---
+
+## 11. Patna Operational Network and Routing Guard Reconciliation
+
+- **Context & Data Reconciled**:
+  - `data/lines.json`: Contains 1 line (`pat-blue`, "Blue Line (Corridor 2)", operator `PMRC`).
+  - `data/reference/patna.json`: Declares 1 line (`pat-blue`) with status `operational`, 5 operational stations, 5.28 km operational length, and two staged openings: Priority Corridor Stage 1 (New ISBT – Bhootnath, 3 stations, `opened_on: 2025-10-06`) and Stage 2 (Bhootnath – Malahi Pakri, 2 stations, `opened_on: 2026-07-02`).
+  - `data/stations.geojson`: Contains 5 operational stations on `pat-blue` (`New ISBT`, `Zero Mile`, `Bhootnath` opened `2025-10-06`; `Khemnichak`, `Malahi Pakri` opened `2026-07-02`).
+  - `/city/patna/`: Displays 5.3 km operational across 1 line and 5 operational stations (opening years 2025 – 2026).
+  - `/compare/`: Displays Patna as Tier 2 with 1 line, 5 stations, 5.3 operational km, and opened in 2025.
+  - Inconsistency: The routing guard (`lib/routing/city-guard.ts` and `scripts/verify-routing.ts`) reported `"no operational lines to verify"` due to an early hardcoded guard condition, even though Patna's 1 operational line (`pat-blue`) and 5 stations are fully declared and consistent across all dataset files.
+- **Decision**: Patna Metro routing enabled on Blue Line (`pat-blue`). It passed all topological and geometric checks (5 operational stations, 0 gaps > 5 km, max projection 12 m, terminals matched).
+- **Status**: **Resolved** (routing enabled).
+
+---
+
+## 12. Station-Count Discrepancies Between Routing Table and Audit Summary Tables
+
+- **Context**: The data audit CLI summary (`scripts/audit/consistency-report.ts`) counts *all* stations associated with a city (including under-construction, planned, and out-of-scope infill nodes), whereas the routing table (`scripts/verify-routing.ts` and `lib/routing/graph.ts`) strictly counts *operational* stations (`properties.status === "operational"`):
+  - **Mumbai**: Audit summary reports 88 stations; routing table counts 77 operational stations (11 stations are under construction across Line 2B and Line 3 extensions).
+  - **Ahmedabad**: Audit summary reports 54 stations; routing table counts 53 operational stations (1 station under construction / non-operational).
+  - **Bengaluru**: Audit summary reports 87 stations; routing table counts 83 operational stations (4 stations under construction, e.g. Jayadeva Interchange u/c on Yellow/Pink).
+  - **Delhi**: Audit summary reports 240 stations; routing table counts 231 operational stations (9 stations are under construction Phase 4 extensions or unverified infills).
+- **Decision**: Maintain strict separation between dataset inventory counts (all stations in `stations.geojson`) and operational transit graph counts (only `status === "operational"` with verified track edges).
+- **Suggested Next Step**: Add a subtitle or explanatory column in documentation/audit tables explicitly distinguishing "Total Stations Compiled" from "Operational Routable Stations".
+- **Severity**: **Low** (clarification and documentation alignment).
+
+
