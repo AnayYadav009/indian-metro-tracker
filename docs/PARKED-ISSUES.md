@@ -124,3 +124,13 @@ The audit engine (`scripts/audit/audit-engine.ts`) implements three hardcoded ex
 - **Owner Decision Needed**: Review and approve visual QA inspection packages for Delhi, Mumbai, Bengaluru, Chennai, Kolkata, and Hyderabad.
 - **Suggested Next Step**: Execute visual walkthroughs, fill out `docs/VISUAL_QA.md` checklists, and archive reference screenshots in `reports/data-audit/screenshots/`.
 - **Severity**: **Medium** (gating M10 completion).
+
+---
+
+## 11. Patna Operational Network Inconsistency (5 Operational Stations vs 0 Operational Lines)
+
+- **Context**: In `data/stations.geojson` and `data/segments.geojson`, Patna Metro has 5 compiled operational stations on the Priority Corridor (`patna-new-isbt`, `patna-zero-mile`, `patna-bhootnath`, `patna-khemnichak`, `patna-malahi-pakri`) and 1 operational track segment (`pat-blue-seg-01`). However, Patna Metro has not commenced full commercial revenue passenger service across a gazetted revenue line (operations are trial runs / priority corridor demonstration). As a result, the network compiles 5 operational stations but lacks an officially verified operational revenue line.
+- **Decision**: Patna Metro is classified as **non-routable** in `lib/routing/city-guard.ts` and `scripts/verify-routing.ts`, with the guard reporting `"no operational lines to verify"`.
+- **Suggested Next Step**: When PMRC launches formal commercial passenger revenue operations and issues the official schedule and fare table, verify and register the operational revenue line.
+- **Severity**: **Medium** (routing guard applied).
+

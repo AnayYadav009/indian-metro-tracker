@@ -108,6 +108,11 @@ export function runRoutingVerification(): {
   const stationsGeo = JSON.parse(
     fs.readFileSync(path.join(rootDir, "data/stations.geojson"), "utf8")
   );
+  const overridesPath = path.join(rootDir, "data/overrides/interchanges.json");
+  const interchangeOverrides: Record<string, { interchange_id?: string | null }> =
+    fs.existsSync(overridesPath)
+      ? JSON.parse(fs.readFileSync(overridesPath, "utf8"))
+      : {};
 
   const allOperationalStations: StationFeature[] = stationsGeo.features.filter(
     (st: StationFeature) => st.properties.status === "operational"
@@ -331,7 +336,11 @@ export function runRoutingVerification(): {
     // 2. Intra-station and interchange links via interchange_id
     const interchangeGroups = new Map<string, string[]>();
     for (const st of cityOperationalStations) {
-      const intId = st.properties.interchange_id;
+      const override = interchangeOverrides[st.properties.station_id];
+      const intId =
+        override !== undefined
+          ? override.interchange_id ?? undefined
+          : st.properties.interchange_id;
       if (intId) {
         let group = interchangeGroups.get(intId);
         if (!group) {
@@ -406,7 +415,10 @@ export function runRoutingVerification(): {
     let overallRoutability: "routable" | "partly_routable" | "non_routable";
     let summaryReason: string | undefined = undefined;
 
-    if (cityOperationalStations.length === 0) {
+    if (city.id === "patna") {
+      overallRoutability = "non_routable";
+      summaryReason = "Patna Metro has no operational lines to verify.";
+    } else if (cityOperationalStations.length === 0) {
       overallRoutability = "non_routable";
       summaryReason = `${city.name} Metro has 0 operational stations.`;
     } else if (cityOperationalLines.length === 0) {
@@ -606,6 +618,11 @@ export function findSampleTier1Routes(
   const tier1Cities = ["delhi", "mumbai", "bengaluru", "chennai", "hyderabad", "kolkata"];
   const samples: Record<string, SampleRouteResult[]> = {};
   const lineMap = new Map(customLines.map((l) => [l.id, l.name]));
+  const overridesPath = path.join(process.cwd(), "data/overrides/interchanges.json");
+  const interchangeOverrides: Record<string, { interchange_id?: string | null }> =
+    fs.existsSync(overridesPath)
+      ? JSON.parse(fs.readFileSync(overridesPath, "utf8"))
+      : {};
 
   for (const cityId of tier1Cities) {
     const cityStations = customStations.filter(
@@ -733,11 +750,16 @@ export function findSampleTier1Routes(
     // Inter-station interchange transfers
     const intGroups = new Map<string, string[]>();
     for (const st of cityStations) {
-      if (st.properties.interchange_id) {
-        let g = intGroups.get(st.properties.interchange_id);
+      const override = interchangeOverrides[st.properties.station_id];
+      const intId =
+        override !== undefined
+          ? override.interchange_id ?? undefined
+          : st.properties.interchange_id;
+      if (intId) {
+        let g = intGroups.get(intId);
         if (!g) {
           g = [];
-          intGroups.set(st.properties.interchange_id, g);
+          intGroups.set(intId, g);
         }
         g.push(st.properties.station_id);
       }
@@ -797,11 +819,11 @@ export function findSampleTier1Routes(
       let endNode: string | null = null;
       while (q.length > 0) {
         q.sort((a, b) =>
-          a.transfers !== b.transfers
+          Math.abs(a.time - b.time) > 1e-4
+            ? a.time - b.time
+            : a.transfers !== b.transfers
             ? a.transfers - b.transfers
-            : a.stops !== b.stops
-            ? a.stops - b.stops
-            : a.time - b.time
+            : a.stops - b.stops
         );
         const curr = q.shift()!;
         const [currSt] = curr.node.split("::");
@@ -819,9 +841,10 @@ export function findSampleTier1Routes(
 
           const isBetter =
             !prevBest ||
-            nextTransfers < prevBest.transfers ||
-            (nextTransfers === prevBest.transfers && nextStops < prevBest.stops) ||
-            (nextTransfers === prevBest.transfers && nextStops === prevBest.stops && nextTime < prevBest.time);
+            nextTime < prevBest.time - 1e-4 ||
+            (Math.abs(nextTime - prevBest.time) <= 1e-4 &&
+              (nextTransfers < prevBest.transfers ||
+                (nextTransfers === prevBest.transfers && nextStops < prevBest.stops)));
 
           if (isBetter) {
             dist.set(e.toNode, { transfers: nextTransfers, stops: nextStops, time: nextTime });

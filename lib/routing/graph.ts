@@ -8,6 +8,13 @@ import type {
   RouteResult,
 } from "./types";
 import type { SegmentFeature, StationFeature, Line } from "@/types/metro";
+import { getMetroData } from "@/lib/data";
+import rawInterchangeOverrides from "@/data/overrides/interchanges.json";
+
+const interchangeOverrides = rawInterchangeOverrides as Record<
+  string,
+  { interchange_id?: string | null; source?: string; date?: string }
+>;
 
 export interface TransitEdge {
   toNode: string;
@@ -31,8 +38,6 @@ export interface TransitGraph {
   stationLines: Map<string, Set<string>>;
   adj: Map<string, TransitEdge[]>;
 }
-
-import { getMetroData } from "@/lib/data";
 
 export function buildTransitGraph(options?: {
   cityId?: string;
@@ -254,7 +259,11 @@ export function buildTransitGraph(options?: {
   // 3. Inter-station interchange transfers via interchange_id
   const interchangeGroups = new Map<string, StationFeature[]>();
   for (const st of operationalStations) {
-    const intId = st.properties.interchange_id;
+    const override = interchangeOverrides[st.properties.station_id];
+    const intId =
+      override !== undefined
+        ? override.interchange_id ?? undefined
+        : st.properties.interchange_id;
     if (intId) {
       let group = interchangeGroups.get(intId);
       if (!group) {
@@ -333,14 +342,17 @@ interface Cost {
 }
 
 function compareCost(a: Cost, b: Cost): number {
+  if (Math.abs(a.timeMinutes - b.timeMinutes) > 1e-4) {
+    return a.timeMinutes - b.timeMinutes;
+  }
   if (a.transfers !== b.transfers) return a.transfers - b.transfers;
-  if (a.stops !== b.stops) return a.stops - b.stops;
-  return a.timeMinutes - b.timeMinutes;
+  return a.stops - b.stops;
 }
 
 /**
  * Finds the optimal route between origin and destination stations.
- * Objective: Fewest transfers first, then fewest stops, then shortest estimated time.
+ * Objective: Minimise estimated time (travel + dwell + transfer penalty) first,
+ * then fewest transfers, then fewest stops.
  */
 export function findRoute(
   graph: TransitGraph,

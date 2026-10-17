@@ -34,14 +34,19 @@ describe("M18 Route Finder", () => {
       expect(routability.reason).toContain("not found");
     });
 
-    it("permits verified routable networks (Kochi, Lucknow, Kanpur, Jaipur, Agra, Patna, Navi Mumbai)", () => {
+    it("permits verified routable networks (Kochi, Lucknow, Kanpur, Jaipur, Agra, Navi Mumbai)", () => {
       expect(getCityRoutability("kochi").isRoutable).toBe(true);
       expect(getCityRoutability("lucknow").isRoutable).toBe(true);
       expect(getCityRoutability("kanpur").isRoutable).toBe(true);
       expect(getCityRoutability("jaipur").isRoutable).toBe(true);
       expect(getCityRoutability("agra").isRoutable).toBe(true);
-      expect(getCityRoutability("patna").isRoutable).toBe(true);
       expect(getCityRoutability("navi-mumbai").isRoutable).toBe(true);
+    });
+
+    it("guards Patna reporting no operational lines to verify", () => {
+      const routability = getCityRoutability("patna");
+      expect(routability.isRoutable).toBe(false);
+      expect(routability.reason).toContain("no operational lines to verify");
     });
   });
 
@@ -243,8 +248,8 @@ describe("M18 Route Finder", () => {
 
   describe("Branch Routing (Delhi Blue Line)", () => {
     it("routes seamlessly across branch junction at Yamuna Bank with 0 transfers", () => {
-      // Build Delhi network graph
-      const graph = buildTransitGraph({ cityId: "delhi" });
+      // Build Delhi Blue Line graph
+      const graph = buildTransitGraph({ cityId: "delhi", allowedLineIds: ["del-blue"] });
 
       // Origin on Vaishali branch (del-vaishali) to Destination on Main line (del-dwarka-sector-21)
       const route = findRoute(graph, "del-vaishali", "del-dwarka-sector-21");
@@ -406,6 +411,18 @@ describe("M18 Route Finder", () => {
       expect(route.legs[0].lineId).toBe("line-direct");
     });
 
+    it("prioritizes shorter estimated time over fewest transfers when express transfer route is significantly faster", () => {
+      const graph = buildTransitGraph({ cityId: "delhi" });
+      const route = findRoute(graph, "del-vaishali", "del-dwarka-sector-21");
+
+      expect(route).not.toBeNull();
+      if (!route) return;
+
+      // Faster route via Airport Express takes 84 min (2 transfers) instead of direct Blue Line (105 min, 0 transfers)
+      expect(route.estimatedMinutes).toBeLessThan(100);
+      expect(route.legs.some((l) => l.lineId === "del-airport")).toBe(true);
+    });
+
     it("correctly links cross-network stations sharing interchange_id", () => {
       // Build graph covering both Delhi and Gurugram networks
       const graph = buildTransitGraph();
@@ -560,8 +577,8 @@ describe("M18 Route Finder", () => {
       );
     });
 
-    it("Branch Route: traverses Delhi Blue Line branch (Vaishali to Dwarka Sector 21) via Yamuna Bank with 0 line transfers", () => {
-      const graph = buildTransitGraph({ cityId: "delhi" });
+    it("Branch Route: traverses Delhi Blue Line branch (Vaishali to Dwarka Sector 21) via Yamuna Bank on Blue Line with 0 line transfers", () => {
+      const graph = buildTransitGraph({ cityId: "delhi", allowedLineIds: ["del-blue"] });
       const fromSt = findStation(graph, "Vaishali");
       const toSt = findStation(graph, "Dwarka Sector 21");
 
@@ -589,6 +606,161 @@ describe("M18 Route Finder", () => {
 
       const route = findRoute(graph, fromSt.id, toSt.id);
       expect(route).toBeNull();
+    });
+  });
+
+  describe("Tier 1 Verified Interchanges Regression Suite", () => {
+    it("Delhi: Kashmere Gate links Red, Yellow, and Violet lines (1 transfer)", () => {
+      const graph = buildTransitGraph({ cityId: "delhi" });
+      const route = findRoute(graph, "del-tis-hazari", "del-lal-quila");
+      expect(route).not.toBeNull();
+      expect(route?.totalTransfers).toBe(1);
+      expect(route?.transfers[0].station.id).toBe("del-kashmere-gate");
+    });
+
+    it("Delhi: Rajiv Chowk links Blue and Yellow lines (1 transfer)", () => {
+      const graph = buildTransitGraph({ cityId: "delhi" });
+      const route = findRoute(graph, "del-r-k-ashram-marg", "del-patel-chowk");
+      expect(route).not.toBeNull();
+      expect(route?.totalTransfers).toBe(1);
+      expect(route?.transfers[0].station.id).toBe("del-rajiv-chowk");
+    });
+
+    it("Delhi: Mandi House links Blue and Violet lines (1 transfer)", () => {
+      const graph = buildTransitGraph({ cityId: "delhi" });
+      const route = findRoute(graph, "del-supreme-court", "del-ito");
+      expect(route).not.toBeNull();
+      expect(route?.totalTransfers).toBe(1);
+      expect(route?.transfers[0].station.id).toBe("del-mandi-house");
+    });
+
+    it("Delhi: Central Secretariat links Yellow and Violet lines (1 transfer)", () => {
+      const graph = buildTransitGraph({ cityId: "delhi" });
+      const route = findRoute(graph, "del-udyog-bhawan", "del-khan-market");
+      expect(route).not.toBeNull();
+      expect(route?.totalTransfers).toBe(1);
+      expect(route?.transfers[0].station.id).toBe("del-central-secretariat");
+    });
+
+    it("Delhi: Rithala to Raja Nahar Singh needs exactly 1 transfer via Violet link", () => {
+      const graph = buildTransitGraph({
+        cityId: "delhi",
+        allowedLineIds: ["del-red", "del-violet"],
+      });
+      const route = findRoute(graph, "del-rithala", "del-raja-nahar-singh");
+      expect(route).not.toBeNull();
+      expect(route?.totalTransfers).toBe(1);
+      expect(route?.transfers[0].station.id).toBe("del-kashmere-gate");
+      expect(route?.legs[0].lineId).toBe("del-red");
+      expect(route?.legs[1].lineId).toBe("del-violet");
+    });
+
+    it("Mumbai: Western Express Highway and Gundavali link Line 1 and Line 7 (1 transfer)", () => {
+      const graph = buildTransitGraph({ cityId: "mumbai" });
+      const route = findRoute(graph, "mum-chakala-jb-nagar", "mum-mogra");
+      expect(route).not.toBeNull();
+      expect(route?.totalTransfers).toBe(1);
+      expect(route?.legs[0].lineId).toBe("mum-line-1");
+      expect(route?.legs[1].lineId).toBe("mum-line-7");
+    });
+
+    it("Mumbai: D.N. Nagar and Andheri West link Line 1 and Line 2A (1 transfer)", () => {
+      const graph = buildTransitGraph({ cityId: "mumbai" });
+      const route = findRoute(graph, "mum-azad-nagar", "mum-lower-oshiwara");
+      expect(route).not.toBeNull();
+      expect(route?.totalTransfers).toBe(1);
+      expect(route?.legs[0].lineId).toBe("mum-line-1");
+      expect(route?.legs[1].lineId).toBe("mum-line-2a");
+    });
+
+    it("Mumbai: Marol Naka links Line 1 and Line 3 (1 transfer)", () => {
+      const graph = buildTransitGraph({ cityId: "mumbai" });
+      const route = findRoute(graph, "mum-saki-naka", "mum-csmia-international-t2");
+      expect(route).not.toBeNull();
+      expect(route?.totalTransfers).toBe(1);
+      expect(route?.transfers[0].station.id).toBe("mum-marol-naka");
+    });
+
+    it("Mumbai: Dahisar East links Line 2A and Line 7 (1 transfer)", () => {
+      const graph = buildTransitGraph({ cityId: "mumbai" });
+      const route = findRoute(graph, "mum-anand-nagar", "mum-ovaripada");
+      expect(route).not.toBeNull();
+      expect(route?.totalTransfers).toBe(1);
+      expect(route?.transfers[0].station.id).toBe("mum-dahisar-east");
+    });
+
+    it("Chennai: Chennai Central links Blue and Green lines (1 transfer)", () => {
+      const graph = buildTransitGraph({ cityId: "chennai" });
+      const route = findRoute(graph, "chennai-high-court", "chennai-egmore");
+      expect(route).not.toBeNull();
+      expect(route?.totalTransfers).toBe(1);
+      expect(route?.transfers[0].station.id).toBe("chennai-chennai-central");
+    });
+
+    it("Chennai: Alandur links Blue and Green lines (1 transfer)", () => {
+      const graph = buildTransitGraph({ cityId: "chennai" });
+      const route = findRoute(graph, "chennai-meenambakkam", "chennai-st-thomas-mount");
+      expect(route).not.toBeNull();
+      expect(route?.totalTransfers).toBe(1);
+      expect(route?.transfers[0].station.id).toBe("chennai-alandur");
+    });
+
+    it("Hyderabad: Ameerpet links Blue and Red lines (1 transfer)", () => {
+      const graph = buildTransitGraph({ cityId: "hyderabad" });
+      const route = findRoute(graph, "hyderabad-madhura-nagar", "hyderabad-sr-nagar");
+      expect(route).not.toBeNull();
+      expect(route?.totalTransfers).toBe(1);
+      expect(route?.transfers[0].station.id).toBe("hyderabad-ameerpet");
+    });
+
+    it("Hyderabad: MG Bus Station links Red and Green lines (1 transfer)", () => {
+      const graph = buildTransitGraph({ cityId: "hyderabad" });
+      const route = findRoute(graph, "hyderabad-malakpet", "hyderabad-sultan-bazar");
+      expect(route).not.toBeNull();
+      expect(route?.totalTransfers).toBe(1);
+      expect(route?.transfers[0].station.id).toBe("hyderabad-mg-bus-station");
+    });
+
+    it("Hyderabad: Raidurg to Secunderabad West uses Parade Ground / JBS link (exactly 1 transfer)", () => {
+      const graph = buildTransitGraph({ cityId: "hyderabad" });
+      const route = findRoute(graph, "hyderabad-raidurg", "hyderabad-secunderabad-west");
+      expect(route).not.toBeNull();
+      expect(route?.totalTransfers).toBe(1);
+      expect(route?.legs.length).toBe(2);
+      expect(route?.legs[0].lineId).toBe("hyd-blue");
+      expect(route?.legs[1].lineId).toBe("hyd-green");
+    });
+
+    it("Kolkata: Esplanade links Blue and Green lines (1 transfer)", () => {
+      const graph = buildTransitGraph({ cityId: "kolkata" });
+      const route = findRoute(graph, "kolkata-chandni-chowk", "kolkata-howrah");
+      expect(route).not.toBeNull();
+      expect(route?.totalTransfers).toBe(1);
+      expect(route?.transfers[0].station.id).toBe("kolkata-esplanade");
+    });
+
+    it("Kolkata: Kavi Subhash links Blue and Orange lines (1 transfer)", () => {
+      const graph = buildTransitGraph({ cityId: "kolkata" });
+      const route = findRoute(graph, "kolkata-shahid-khudiram", "kolkata-satyajit-roy");
+      expect(route).not.toBeNull();
+      expect(route?.totalTransfers).toBe(1);
+      expect(route?.transfers[0].station.id).toBe("kolkata-kavi-subhash");
+    });
+
+    it("Bengaluru: Majestic links Purple and Green lines (1 transfer)", () => {
+      const graph = buildTransitGraph({ cityId: "bengaluru" });
+      const route = findRoute(graph, "blr-sir-m-visvesvaraya-stn-central-college", "blr-chickpete");
+      expect(route).not.toBeNull();
+      expect(route?.totalTransfers).toBe(1);
+      expect(route?.transfers[0].station.id).toBe("blr-nadaprabhu-kempegowda-majestic");
+    });
+
+    it("Bengaluru: RV Road links Green and Yellow lines (1 transfer)", () => {
+      const graph = buildTransitGraph({ cityId: "bengaluru" });
+      const route = findRoute(graph, "blr-banashankari", "blr-jayadeva-hospital");
+      expect(route).not.toBeNull();
+      expect(route?.totalTransfers).toBe(1);
+      expect(route?.transfers[0].station.id).toBe("blr-rashtreeya-vidyalaya-road");
     });
   });
 });

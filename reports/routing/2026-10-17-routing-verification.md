@@ -13,9 +13,9 @@
 | **Total Cities Evaluated** | **21** |
 | **Total Operational Lines** | **47** |
 | **Lines Passing All Verification Checks** | **41 / 47** |
-| **Fully Routable Cities** | **15** |
+| **Fully Routable Cities** | **14** |
 | **Partly Routable Cities** | **3** |
-| **Non-Routable Cities** | **3** |
+| **Non-Routable Cities** | **4** |
 
 ---
 
@@ -28,7 +28,7 @@
 | **Chennai** (`chennai`) | 41 | 2 | ✅ Routable | 1 | All lines passed terminal, count, gap, and projection checks. |
 | **Pune** (`pune`) | 28 | 2 | ✅ Routable | 1 | All lines passed terminal, count, gap, and projection checks. |
 | **Bengaluru** (`bengaluru`) | 83 | 3 | ✅ Routable | 1 | All lines passed terminal, count, gap, and projection checks. |
-| **Mumbai** (`mumbai`) | 77 | 6 | ⚠️ Partly Routable | 3 | 6 of 6 lines pass all verification checks. Failing lines: . Connected components: 3. |
+| **Mumbai** (`mumbai`) | 77 | 6 | ⚠️ Partly Routable | 2 | 6 of 6 lines pass all verification checks. Failing lines: . Connected components: 2. |
 | **Kolkata** (`kolkata`) | 55 | 5 | ⚠️ Partly Routable | 2 | 5 of 5 lines pass all verification checks. Failing lines: . Connected components: 2. |
 | **Hyderabad** (`hyderabad`) | 57 | 3 | ✅ Routable | 1 | All lines passed terminal, count, gap, and projection checks. |
 | **Ahmedabad** (`ahmedabad`) | 53 | 4 | ✅ Routable | 1 | All lines passed terminal, count, gap, and projection checks. |
@@ -43,7 +43,7 @@
 | **Kanpur** (`kanpur`) | 14 | 1 | ✅ Routable | 1 | All lines passed terminal, count, gap, and projection checks. |
 | **Agra** (`agra`) | 6 | 1 | ✅ Routable | 1 | All lines passed terminal, count, gap, and projection checks. |
 | **Jaipur** (`jaipur`) | 11 | 1 | ✅ Routable | 1 | All lines passed terminal, count, gap, and projection checks. |
-| **Patna** (`patna`) | 5 | 1 | ✅ Routable | 1 | All lines passed terminal, count, gap, and projection checks. |
+| **Patna** (`patna`) | 5 | 1 | ❌ Non-Routable | 1 | Patna Metro has no operational lines to verify. |
 
 ---
 
@@ -101,9 +101,8 @@ For each operational line, five critical topology and geometry criteria are audi
 | `mum-line-2b` | Line 2B (Yellow Ext) | linear | 6 / 6 | 1.51 km | 2 m | ✅ Yes | ✅ Pass | None |
 | `mum-line-9` | Line 9 (Red Line Ext) | linear | 4 / 4 | 1.48 km | 0 m | ✅ Yes | ✅ Pass | None |
 
-**Connected Components (3 disjoint groups):**
-- **Component 1** (38 stations, lines: `mum-line-1, mum-line-3`): Andheri, Azad Nagar, Western Express Highway, D. N. Nagar, Chakala - J.B. Nagar ... (+33 more)
-- **Component 3** (33 stations, lines: `mum-line-2a, mum-line-7, mum-line-9`): Lower Malad, Bangur Nagar, Malad West, Goregaon (West), Valnai-Meeth Chowky ... (+28 more)
+**Connected Components (2 disjoint groups):**
+- **Component 1** (71 stations, lines: `mum-line-1, mum-line-7, mum-line-2a, mum-line-3, mum-line-9`): Andheri, Azad Nagar, Western Express Highway, D. N. Nagar, Chakala - J.B. Nagar ... (+66 more)
 - **Component 2** (6 stations, lines: `mum-line-2b`): Chembur, Diamond Garden, Shivaji Chowk (Chembur), Deonar, Mankhurd ... (+1 more)
 
 ### 3.KOLKATA: Kolkata

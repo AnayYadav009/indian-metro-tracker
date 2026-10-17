@@ -17,5 +17,35 @@
   },
   "noi-noida-sector-51": {
     "interchange_id": "int-noida-sec51-52"
+  },
+  "mum-western-express-highway": {
+    "interchange_id": "int-mumbai-weh-gundavali",
+    "source": "https://mmrda.maharashtra.gov.in",
+    "date": "2026-10-17"
+  },
+  "mum-gundavali": {
+    "interchange_id": "int-mumbai-weh-gundavali",
+    "source": "https://mmrda.maharashtra.gov.in",
+    "date": "2026-10-17"
+  },
+  "mum-d-n-nagar": {
+    "interchange_id": "int-mumbai-dn-nagar-andheri-west",
+    "source": "https://mmrda.maharashtra.gov.in",
+    "date": "2026-10-17"
+  },
+  "mum-andheri-west": {
+    "interchange_id": "int-mumbai-dn-nagar-andheri-west",
+    "source": "https://mmrda.maharashtra.gov.in",
+    "date": "2026-10-17"
+  },
+  "hyderabad-parade-ground": {
+    "interchange_id": "int-hyderabad-parade-ground",
+    "source": "https://www.ltmetro.com",
+    "date": "2026-10-17"
+  },
+  "hyderabad-jbs-parade-ground": {
+    "interchange_id": "int-hyderabad-parade-ground",
+    "source": "https://www.ltmetro.com",
+    "date": "2026-10-17"
   }
 }
