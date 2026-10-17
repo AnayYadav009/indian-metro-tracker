@@ -1,6 +1,7 @@
 import { haversineDistanceKm, lineSlice } from "@/lib/geo";
 import { getSegmentStationOrder } from "./station-ordering";
 import { ROUTING_CONSTANTS, calculateTransferMinutes } from "./constants";
+import { getLineRoutability } from "./city-guard";
 import type {
   RouteStation,
   RouteLeg,
@@ -42,6 +43,7 @@ export interface TransitGraph {
 export function buildTransitGraph(options?: {
   cityId?: string;
   allowedLineIds?: string[] | Set<string>;
+  includeGuardedLines?: boolean;
   customSegments?: SegmentFeature[];
   customStations?: StationFeature[];
   customLines?: Line[];
@@ -51,6 +53,14 @@ export function buildTransitGraph(options?: {
       ? options.allowedLineIds
       : new Set(options.allowedLineIds)
     : null;
+
+  const isLinePermitted = (lineId: string): boolean => {
+    if (allowedSet && !allowedSet.has(lineId)) return false;
+    if (!options?.includeGuardedLines && !getLineRoutability(lineId).isRoutable) {
+      return false;
+    }
+    return true;
+  };
 
   const segments =
     options?.customSegments ?? getMetroData().segments.features;
@@ -63,8 +73,22 @@ export function buildTransitGraph(options?: {
   const stationLines = new Map<string, Set<string>>();
   const adj = new Map<string, TransitEdge[]>();
 
+  // Filter to operational segments on permitted lines
+  const operationalSegments = segments.filter(
+    (seg) =>
+      seg.properties.status === "operational" &&
+      (!options?.cityId || seg.properties.city_id === options.cityId) &&
+      isLinePermitted(seg.properties.line_id)
+  );
+
+  const operationalLineIds = new Set(
+    operationalSegments.map((s) => s.properties.line_id)
+  );
+
   for (const line of lines) {
-    if (allowedSet && !allowedSet.has(line.id)) continue;
+    if (options?.cityId && line.city_id !== options.cityId) continue;
+    if (!isLinePermitted(line.id)) continue;
+    if (!operationalLineIds.has(line.id)) continue;
     lineMap.set(line.id, {
       id: line.id,
       name: line.name,
@@ -72,12 +96,12 @@ export function buildTransitGraph(options?: {
     });
   }
 
-  // Filter to operational stations only
+  // Filter to operational stations that belong to permitted lines
   const operationalStations = stations.filter(
     (st) =>
       st.properties.status === "operational" &&
       (!options?.cityId || st.properties.city_id === options.cityId) &&
-      (!allowedSet || st.properties.line_ids.some((lid) => allowedSet.has(lid)))
+      st.properties.line_ids.some((lid) => isLinePermitted(lid))
   );
 
   for (const st of operationalStations) {
@@ -91,14 +115,6 @@ export function buildTransitGraph(options?: {
       stationLines.set(st.properties.station_id, new Set());
     }
   }
-
-  // Filter to operational segments only
-  const operationalSegments = segments.filter(
-    (seg) =>
-      seg.properties.status === "operational" &&
-      (!options?.cityId || seg.properties.city_id === options.cityId) &&
-      (!allowedSet || allowedSet.has(seg.properties.line_id))
-  );
 
   const addEdge = (fromNode: string, edge: TransitEdge) => {
     let list = adj.get(fromNode);

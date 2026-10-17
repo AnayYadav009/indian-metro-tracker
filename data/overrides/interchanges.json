@@ -21,31 +21,37 @@
   "mum-western-express-highway": {
     "interchange_id": "int-mumbai-weh-gundavali",
     "source": "https://www.mmmocl.co.in/assets/images/mumbai-metro-map2.jpg",
-    "date": "2026-10-17"
+    "date": "2026-10-17",
+    "note": "straight-line distance (222 m); operator map listed at https://www.mmmocl.co.in/assets/images/mumbai-metro-map2.jpg, not independently confirmed"
   },
   "mum-gundavali": {
     "interchange_id": "int-mumbai-weh-gundavali",
     "source": "https://www.mmmocl.co.in/assets/images/mumbai-metro-map2.jpg",
-    "date": "2026-10-17"
+    "date": "2026-10-17",
+    "note": "straight-line distance (222 m); operator map listed at https://www.mmmocl.co.in/assets/images/mumbai-metro-map2.jpg, not independently confirmed"
   },
   "mum-d-n-nagar": {
     "interchange_id": "int-mumbai-dn-nagar-andheri-west",
     "source": "https://www.mmmocl.co.in/assets/images/mumbai-metro-map2.jpg",
-    "date": "2026-10-17"
+    "date": "2026-10-17",
+    "note": "straight-line distance (128 m); operator map listed at https://www.mmmocl.co.in/assets/images/mumbai-metro-map2.jpg, not independently confirmed"
   },
   "mum-andheri-west": {
     "interchange_id": "int-mumbai-dn-nagar-andheri-west",
     "source": "https://www.mmmocl.co.in/assets/images/mumbai-metro-map2.jpg",
-    "date": "2026-10-17"
+    "date": "2026-10-17",
+    "note": "straight-line distance (128 m); operator map listed at https://www.mmmocl.co.in/assets/images/mumbai-metro-map2.jpg, not independently confirmed"
   },
   "hyderabad-parade-ground": {
     "interchange_id": "int-hyderabad-parade-ground",
     "source": "https://ltmetro.com/metro-network-map/",
-    "date": "2026-10-17"
+    "date": "2026-10-17",
+    "note": "straight-line distance (637 m); operator map listed at https://ltmetro.com/metro-network-map/, not independently confirmed"
   },
   "hyderabad-jbs-parade-ground": {
     "interchange_id": "int-hyderabad-parade-ground",
     "source": "https://ltmetro.com/metro-network-map/",
-    "date": "2026-10-17"
+    "date": "2026-10-17",
+    "note": "straight-line distance (637 m); operator map listed at https://ltmetro.com/metro-network-map/, not independently confirmed"
   }
 }

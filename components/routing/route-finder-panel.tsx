@@ -434,7 +434,7 @@ export function RouteFinderPanel() {
                 {/* Optimization objective label */}
                 <div className="flex items-center justify-between text-[11px] text-slate-400 px-0.5">
                   <span className="text-emerald-400 font-medium">Estimated fastest route</span>
-                  <span className="text-slate-500">Minimises time, then transfers, then stops</span>
+                  <span className="text-slate-500">Minimises time, then transfers, then stops • Fares not included</span>
                 </div>
 
                 {/* Stat summary cards */}

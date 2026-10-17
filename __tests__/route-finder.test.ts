@@ -269,7 +269,7 @@ describe("M18 Route Finder", () => {
 
   describe("Loop Routing (Gurugram Rapid Metro)", () => {
     it("correctly identifies loop segment and closes circuit from last station to first station", () => {
-      const graph = buildTransitGraph({ cityId: "gurugram" });
+      const graph = buildTransitGraph({ cityId: "gurugram", includeGuardedLines: true });
 
       // Traverse through the loop: Belvedere Towers -> DLF Phase 2 -> Sikanderpur
       const route = findRoute(graph, "gur-belvedere-towers", "gur-sikanderpur");
@@ -412,20 +412,20 @@ describe("M18 Route Finder", () => {
     });
 
     it("prioritizes shorter estimated time over fewest transfers when express transfer route is significantly faster", () => {
-      const graph = buildTransitGraph({ cityId: "delhi" });
+      const graph = buildTransitGraph({ cityId: "delhi", includeGuardedLines: true });
       const route = findRoute(graph, "del-vaishali", "del-dwarka-sector-21");
 
       expect(route).not.toBeNull();
       if (!route) return;
 
-      // Faster route via Airport Express takes 84 min (2 transfers) instead of direct Blue Line (105 min, 0 transfers)
+      // Faster route via Airport Express takes approx 92 min (2 transfers) instead of direct Blue Line (102 min, 0 transfers)
       expect(route.estimatedMinutes).toBeLessThan(100);
       expect(route.legs.some((l) => l.lineId === "del-airport")).toBe(true);
     });
 
     it("correctly links cross-network stations sharing interchange_id", () => {
       // Build graph covering both Delhi and Gurugram networks
-      const graph = buildTransitGraph();
+      const graph = buildTransitGraph({ includeGuardedLines: true });
 
       // Sikanderpur Rapid Metro to Sikanderpur Delhi Yellow Line share int-sikanderpur
       const route = findRoute(graph, "gur-cyber-city", "del-rajiv-chowk");
@@ -760,4 +760,60 @@ describe("M18 Route Finder", () => {
       expect(route?.transfers[0].station.id).toBe("blr-rashtreeya-vidyalaya-road");
     });
   });
+
+  describe("Guarded Lines Graph Exclusion", () => {
+    it("guarded lines (Airport Express, Green, Pink, Magenta, Gurugram, Bhopal) are excluded from the graph and cannot be used in routes", () => {
+      const delhiGraph = buildTransitGraph({ cityId: "delhi" });
+      const guardedLineIds = [
+        "del-airport",
+        "del-green",
+        "del-pink",
+        "del-magenta",
+        "gur-rapid",
+        "bho-orange",
+      ];
+
+      // 1. None of the guarded lines exist in graph.lines
+      for (const lineId of guardedLineIds) {
+        expect(delhiGraph.lines.has(lineId)).toBe(false);
+      }
+
+      // 2. No node or edge in graph.adj uses any guarded line
+      for (const [nodeKey, edges] of delhiGraph.adj.entries()) {
+        const [, lineId] = nodeKey.split("::");
+        expect(guardedLineIds).not.toContain(lineId);
+        for (const edge of edges) {
+          expect(guardedLineIds).not.toContain(edge.fromLineId);
+          expect(guardedLineIds).not.toContain(edge.toLineId);
+          expect(guardedLineIds).not.toContain(edge.lineId);
+        }
+      }
+
+      // 3. Test multiple cross-city routes and assert no leg uses any guarded line
+      const routesToTest = [
+        findRoute(delhiGraph, "del-rithala", "del-raja-nahar-singh"),
+        findRoute(delhiGraph, "del-vaishali", "del-dwarka-sector-21"),
+        findRoute(delhiGraph, "del-samaypur-badli", "del-millennium-city-centre-gurugram"),
+        findRoute(delhiGraph, "del-dwarka", "del-dhansa-bus-stand"),
+      ];
+      for (const route of routesToTest) {
+        expect(route).not.toBeNull();
+        for (const leg of route!.legs) {
+          expect(guardedLineIds).not.toContain(leg.lineId);
+        }
+      }
+
+      // 4. Stations that only belong to guarded lines cannot be routed to/from
+      const dhaulaKuanRoute = findRoute(delhiGraph, "del-new-delhi", "del-dhaula-kuan");
+      expect(dhaulaKuanRoute).toBeNull();
+
+      // 5. Gurugram and Bhopal default graphs have 0 operational routable lines
+      const gurugramGraph = buildTransitGraph({ cityId: "gurugram" });
+      expect(gurugramGraph.lines.size).toBe(0);
+
+      const bhopalGraph = buildTransitGraph({ cityId: "bhopal" });
+      expect(bhopalGraph.lines.size).toBe(0);
+    });
+  });
 });
+
