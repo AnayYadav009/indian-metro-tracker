@@ -64,6 +64,17 @@ export interface MetroStoreState {
   setIsNearestPanelOpen: (open: boolean) => void;
   setIsPickingLocation: (isPicking: boolean) => void;
   setUserLocation: (location: [number, number] | null) => void;
+
+  // Route finder state
+  isRoutePanelOpen: boolean;
+  routeOriginId: string | null;
+  routeDestinationId: string | null;
+  activeRoute: import("@/lib/routing/types").RouteResult | null;
+  setIsRoutePanelOpen: (open: boolean) => void;
+  setRouteOriginId: (id: string | null) => void;
+  setRouteDestinationId: (id: string | null) => void;
+  setActiveRoute: (route: import("@/lib/routing/types").RouteResult | null) => void;
+  clearRoute: () => void;
 }
 
 const DEFAULT_STATUSES: Status[] = ["operational", "construction", "planned"];
@@ -171,4 +182,20 @@ export const useMetroStore = create<MetroStoreState>((set) => ({
   setIsPickingLocation: (isPicking) => set({ isPickingLocation: isPicking }),
 
   setUserLocation: (location) => set({ userLocation: location }),
+
+  isRoutePanelOpen: false,
+  routeOriginId: null,
+  routeDestinationId: null,
+  activeRoute: null,
+
+  setIsRoutePanelOpen: (open) => set({ isRoutePanelOpen: open }),
+  setRouteOriginId: (id) => set({ routeOriginId: id }),
+  setRouteDestinationId: (id) => set({ routeDestinationId: id }),
+  setActiveRoute: (route) => set({ activeRoute: route }),
+  clearRoute: () =>
+    set({
+      routeOriginId: null,
+      routeDestinationId: null,
+      activeRoute: null,
+    }),
 }));

@@ -3,12 +3,13 @@
 import React, { useMemo } from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { BarChart3, Navigation, Building2, X } from "lucide-react";
+import { BarChart3, Navigation, Building2, Route, X } from "lucide-react";
 import citiesJson from "@/data/cities.json";
 import { MapSkeleton } from "@/components/map/map-skeleton";
 import { FilterPanel } from "@/components/filters/filter-panel";
 import { MetadataPanel } from "@/components/panels/metadata-panel";
 import { NearestStationPanel } from "@/components/panels/nearest-station-panel";
+import { RouteFinderPanel } from "@/components/routing/route-finder-panel";
 import { MapLegend } from "@/components/legend/map-legend";
 import { MockBanner } from "@/components/ui/mock-banner";
 import { NetworkStats } from "@/components/filters/network-stats";
@@ -36,6 +37,10 @@ export default function HomePage() {
   const setIsNearestPanelOpen = useMetroStore(
     (state) => state.setIsNearestPanelOpen
   );
+  const isRoutePanelOpen = useMetroStore((state) => state.isRoutePanelOpen);
+  const setIsRoutePanelOpen = useMetroStore(
+    (state) => state.setIsRoutePanelOpen
+  );
   const [isCityDirectoryOpen, setIsCityDirectoryOpen] = React.useState(false);
 
   return (
@@ -57,6 +62,19 @@ export default function HomePage() {
         <NetworkStats />
 
         <div className="flex items-center gap-2">
+          <button
+            onClick={() => setIsRoutePanelOpen(!isRoutePanelOpen)}
+            data-testid="find-route-btn"
+            className={`inline-flex items-center gap-1.5 rounded-lg border px-2.5 py-1 text-xs font-medium transition-colors ${
+              isRoutePanelOpen
+                ? "border-emerald-500 bg-emerald-500/20 text-emerald-300"
+                : "border-slate-700 bg-slate-800/80 text-slate-200 hover:border-slate-500 hover:bg-slate-700 hover:text-white"
+            }`}
+            title="Plan a metro route"
+          >
+            <Route className="h-3.5 w-3.5 text-emerald-400" />
+            <span className="hidden sm:inline">Route</span>
+          </button>
           <button
             onClick={() => setIsNearestPanelOpen(!isNearestPanelOpen)}
             data-testid="find-nearest-btn"
@@ -112,6 +130,7 @@ export default function HomePage() {
         <FilterPanel />
         <MetadataPanel />
         <NearestStationPanel />
+        <RouteFinderPanel />
         <EmptyFilterState />
         <TimelineSlider />
         <MapCanvas className="h-full w-full" />
