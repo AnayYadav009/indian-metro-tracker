@@ -12,6 +12,10 @@ vi.mock("react-map-gl/maplibre", () => {
       <div data-testid="mock-maplibre-map">{children}</div>
     ),
     NavigationControl: () => <div data-testid="mock-nav-control" />,
+    GeolocateControl: () => <div data-testid="mock-geolocate-control" />,
+    Marker: ({ children }: { children?: React.ReactNode }) => (
+      <div data-testid="mock-marker">{children}</div>
+    ),
     Source: ({ children }: { children?: React.ReactNode }) => (
       <div data-testid="mock-map-source">{children}</div>
     ),

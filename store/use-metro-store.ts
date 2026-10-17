@@ -56,6 +56,14 @@ export interface MetroStoreState {
   setIsPlayingTimeline: (isPlaying: boolean) => void;
   togglePlayTimeline: () => void;
   setIncludeFuture: (include: boolean) => void;
+
+  // Nearest station finder state
+  isNearestPanelOpen: boolean;
+  isPickingLocation: boolean;
+  userLocation: [number, number] | null;
+  setIsNearestPanelOpen: (open: boolean) => void;
+  setIsPickingLocation: (isPicking: boolean) => void;
+  setUserLocation: (location: [number, number] | null) => void;
 }
 
 const DEFAULT_STATUSES: Status[] = ["operational", "construction", "planned"];
@@ -149,4 +157,18 @@ export const useMetroStore = create<MetroStoreState>((set) => ({
     set((state) => ({ isPlayingTimeline: !state.isPlayingTimeline })),
 
   setIncludeFuture: (include) => set({ includeFuture: include }),
+
+  isNearestPanelOpen: false,
+  isPickingLocation: false,
+  userLocation: null,
+
+  setIsNearestPanelOpen: (open) =>
+    set({
+      isNearestPanelOpen: open,
+      ...(open ? {} : { isPickingLocation: false }),
+    }),
+
+  setIsPickingLocation: (isPicking) => set({ isPickingLocation: isPicking }),
+
+  setUserLocation: (location) => set({ userLocation: location }),
 }));
