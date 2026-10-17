@@ -1,6 +1,6 @@
 import { haversineDistanceKm, lineSlice } from "@/lib/geo";
 import { getSegmentStationOrder } from "./station-ordering";
-import { ROUTING_CONSTANTS } from "./constants";
+import { ROUTING_CONSTANTS, calculateTransferMinutes } from "./constants";
 import type {
   RouteStation,
   RouteLeg,
@@ -224,6 +224,9 @@ export function buildTransitGraph(options?: {
           const node1 = `${stId}::${l1}`;
           const node2 = `${stId}::${l2}`;
 
+          const walkKm = ROUTING_CONSTANTS.NOMINAL_INTRA_STATION_WALK_KM;
+          const transferMinutes = calculateTransferMinutes(walkKm);
+
           addEdge(node1, {
             toNode: node2,
             fromStationId: stId,
@@ -234,8 +237,8 @@ export function buildTransitGraph(options?: {
             isTransfer: true,
             transfersCost: 1,
             stopsCost: 0,
-            distanceKm: 0.1,
-            timeMinutes: ROUTING_CONSTANTS.TRANSFER_PENALTY_MINUTES,
+            distanceKm: walkKm,
+            timeMinutes: transferMinutes,
           });
 
           addEdge(node2, {
@@ -248,8 +251,8 @@ export function buildTransitGraph(options?: {
             isTransfer: true,
             transfersCost: 1,
             stopsCost: 0,
-            distanceKm: 0.1,
-            timeMinutes: ROUTING_CONSTANTS.TRANSFER_PENALTY_MINUTES,
+            distanceKm: walkKm,
+            timeMinutes: transferMinutes,
           });
         }
       }
@@ -288,6 +291,8 @@ export function buildTransitGraph(options?: {
             stB.geometry.coordinates as [number, number]
           );
 
+          const transferMinutes = calculateTransferMinutes(distKm);
+
           for (const lA of linesA) {
             for (const lB of linesB) {
               const nodeA = `${stA.properties.station_id}::${lA}`;
@@ -304,7 +309,7 @@ export function buildTransitGraph(options?: {
                 transfersCost: 1,
                 stopsCost: 0,
                 distanceKm: distKm,
-                timeMinutes: ROUTING_CONSTANTS.TRANSFER_PENALTY_MINUTES,
+                timeMinutes: transferMinutes,
               });
 
               addEdge(nodeB, {
@@ -318,7 +323,7 @@ export function buildTransitGraph(options?: {
                 transfersCost: 1,
                 stopsCost: 0,
                 distanceKm: distKm,
-                timeMinutes: ROUTING_CONSTANTS.TRANSFER_PENALTY_MINUTES,
+                timeMinutes: transferMinutes,
               });
             }
           }

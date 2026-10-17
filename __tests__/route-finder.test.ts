@@ -643,10 +643,7 @@ describe("M18 Route Finder", () => {
     });
 
     it("Delhi: Rithala to Raja Nahar Singh needs exactly 1 transfer via Violet link", () => {
-      const graph = buildTransitGraph({
-        cityId: "delhi",
-        allowedLineIds: ["del-red", "del-violet"],
-      });
+      const graph = buildTransitGraph({ cityId: "delhi" });
       const route = findRoute(graph, "del-rithala", "del-raja-nahar-singh");
       expect(route).not.toBeNull();
       expect(route?.totalTransfers).toBe(1);

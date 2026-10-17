@@ -433,7 +433,7 @@ export function RouteFinderPanel() {
               <div data-testid="route-results-container" className="space-y-3 pt-2">
                 {/* Optimization objective label */}
                 <div className="flex items-center justify-between text-[11px] text-slate-400 px-0.5">
-                  <span className="text-emerald-400 font-medium">Fastest Route</span>
+                  <span className="text-emerald-400 font-medium">Estimated fastest route</span>
                   <span className="text-slate-500">Minimises time, then transfers, then stops</span>
                 </div>
 
