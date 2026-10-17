@@ -29378,6 +29378,244 @@
         "last_verified": "2026-10-16",
         "retrieved_at": "2026-10-16"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.19957,
+          28.72983
+        ]
+      },
+      "properties": {
+        "station_id": "del-burari",
+        "name": "Burari",
+        "city_id": "delhi",
+        "city": "Delhi",
+        "line_ids": [
+          "del-pink"
+        ],
+        "status": "operational",
+        "phase": "IV",
+        "is_interchange": false,
+        "opened_on": "2026-03-08",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": null,
+        "layout_source": "unverified",
+        "source": "osm",
+        "references": [
+          "https://www.openstreetmap.org/node/5215706767",
+          "https://www.delhimetrorail.com/pages/about-us/present-network"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.224,
+          28.72112
+        ]
+      },
+      "properties": {
+        "station_id": "del-jagatpur-village",
+        "name": "Jagatpur Village",
+        "city_id": "delhi",
+        "city": "Delhi",
+        "line_ids": [
+          "del-pink"
+        ],
+        "status": "operational",
+        "phase": "IV",
+        "is_interchange": false,
+        "opened_on": "2026-03-08",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": null,
+        "layout_source": "unverified",
+        "source": "osm",
+        "references": [
+          "https://www.openstreetmap.org/node/5215706768",
+          "https://www.delhimetrorail.com/pages/about-us/present-network"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2545,
+          28.70526
+        ]
+      },
+      "properties": {
+        "station_id": "del-khajuri-khas",
+        "name": "Khajuri Khas",
+        "city_id": "delhi",
+        "city": "Delhi",
+        "line_ids": [
+          "del-pink"
+        ],
+        "status": "operational",
+        "phase": "IV",
+        "is_interchange": false,
+        "opened_on": "2026-03-08",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": null,
+        "layout_source": "unverified",
+        "source": "osm",
+        "references": [
+          "https://www.openstreetmap.org/node/5215706769",
+          "https://www.delhimetrorail.com/pages/about-us/present-network"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.27731,
+          28.70238
+        ]
+      },
+      "properties": {
+        "station_id": "del-yamuna-vihar",
+        "name": "Yamuna Vihar",
+        "city_id": "delhi",
+        "city": "Delhi",
+        "line_ids": [
+          "del-pink"
+        ],
+        "status": "operational",
+        "phase": "IV",
+        "is_interchange": false,
+        "opened_on": "2026-03-08",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": null,
+        "layout_source": "unverified",
+        "source": "osm",
+        "references": [
+          "https://www.openstreetmap.org/node/5215706770",
+          "https://www.delhimetrorail.com/pages/about-us/present-network"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.26265,
+          28.7036
+        ]
+      },
+      "properties": {
+        "station_id": "del-bhajanpura",
+        "name": "Bhajanpura",
+        "city_id": "delhi",
+        "city": "Delhi",
+        "line_ids": [
+          "del-pink"
+        ],
+        "status": "operational",
+        "phase": "IV",
+        "is_interchange": false,
+        "opened_on": "2026-03-08",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": null,
+        "layout_source": "unverified",
+        "source": "osm",
+        "references": [
+          "https://www.openstreetmap.org/node/5215706782",
+          "https://www.delhimetrorail.com/pages/about-us/present-network"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.22745,
+          28.71022
+        ]
+      },
+      "properties": {
+        "station_id": "del-soorghat",
+        "name": "Soorghat",
+        "city_id": "delhi",
+        "city": "Delhi",
+        "line_ids": [
+          "del-pink"
+        ],
+        "status": "operational",
+        "phase": "IV",
+        "is_interchange": false,
+        "opened_on": "2026-03-08",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": null,
+        "layout_source": "unverified",
+        "source": "osm",
+        "references": [
+          "https://www.openstreetmap.org/node/5215706793",
+          "https://www.delhimetrorail.com/pages/about-us/present-network"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.21367,
+          28.72486
+        ]
+      },
+      "properties": {
+        "station_id": "del-jharoda-majra",
+        "name": "Jharoda Majra",
+        "city_id": "delhi",
+        "city": "Delhi",
+        "line_ids": [
+          "del-pink"
+        ],
+        "status": "operational",
+        "phase": "IV",
+        "is_interchange": false,
+        "opened_on": "2026-03-08",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": null,
+        "layout_source": "unverified",
+        "source": "osm",
+        "references": [
+          "https://www.openstreetmap.org/node/13628489720",
+          "https://www.delhimetrorail.com/pages/about-us/present-network"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-16"
+      }
     }
   ]
 }

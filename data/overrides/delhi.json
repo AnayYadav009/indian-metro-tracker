@@ -364,6 +364,602 @@
       ]
     },
     {
+      "segment_id": "del-pink-seg-02",
+      "line_id": "del-pink",
+      "line_name": "Pink Line",
+      "phase": "IV",
+      "status": "operational",
+      "gauge": "standard",
+      "inaugurated_on": "2026-03-08",
+      "expected_completion": null,
+      "color": "#FC8EAC",
+      "city_id": "delhi",
+      "endpoint_station_ids": [
+        "del-majlis-park",
+        "del-maujpur-babarpur"
+      ],
+      "geometry_quality": "exact",
+      "last_verified": "2026-10-17",
+      "references": [
+        "https://delhimetrorail.com/pages/about-us/present-network",
+        "https://www.openstreetmap.org/way/1181394345"
+      ],
+      "coordinates": [
+        [
+          77.184133,
+          28.731106
+        ],
+        [
+          77.184439,
+          28.731197
+        ],
+        [
+          77.184731,
+          28.731244
+        ],
+        [
+          77.184991,
+          28.731253
+        ],
+        [
+          77.185236,
+          28.731237
+        ],
+        [
+          77.185515,
+          28.731186
+        ],
+        [
+          77.186537,
+          28.730927
+        ],
+        [
+          77.187355,
+          28.730711
+        ],
+        [
+          77.1879,
+          28.730563
+        ],
+        [
+          77.191687,
+          28.729639
+        ],
+        [
+          77.19192,
+          28.729587
+        ],
+        [
+          77.192119,
+          28.729559
+        ],
+        [
+          77.192291,
+          28.729544
+        ],
+        [
+          77.192443,
+          28.729537
+        ],
+        [
+          77.192588,
+          28.729535
+        ],
+        [
+          77.19291,
+          28.729547
+        ],
+        [
+          77.193184,
+          28.729573
+        ],
+        [
+          77.193433,
+          28.72962
+        ],
+        [
+          77.19365,
+          28.729676
+        ],
+        [
+          77.193884,
+          28.729763
+        ],
+        [
+          77.194136,
+          28.729867
+        ],
+        [
+          77.19442,
+          28.729984
+        ],
+        [
+          77.194758,
+          28.730107
+        ],
+        [
+          77.195257,
+          28.730278
+        ],
+        [
+          77.195445,
+          28.73033
+        ],
+        [
+          77.195611,
+          28.73037
+        ],
+        [
+          77.195812,
+          28.730401
+        ],
+        [
+          77.196172,
+          28.730429
+        ],
+        [
+          77.196545,
+          28.730422
+        ],
+        [
+          77.196735,
+          28.730403
+        ],
+        [
+          77.197188,
+          28.730318
+        ],
+        [
+          77.197749,
+          28.730205
+        ],
+        [
+          77.198478,
+          28.730064
+        ],
+        [
+          77.199837,
+          28.729798
+        ],
+        [
+          77.200302,
+          28.729707
+        ],
+        [
+          77.200817,
+          28.729601
+        ],
+        [
+          77.201364,
+          28.72946
+        ],
+        [
+          77.20192,
+          28.729286
+        ],
+        [
+          77.20244,
+          28.729091
+        ],
+        [
+          77.202974,
+          28.728872
+        ],
+        [
+          77.207654,
+          28.726981
+        ],
+        [
+          77.208183,
+          28.726785
+        ],
+        [
+          77.209038,
+          28.726494
+        ],
+        [
+          77.213683,
+          28.724905
+        ],
+        [
+          77.216678,
+          28.723881
+        ],
+        [
+          77.217798,
+          28.723528
+        ],
+        [
+          77.221821,
+          28.722143
+        ],
+        [
+          77.222343,
+          28.721958
+        ],
+        [
+          77.222857,
+          28.721739
+        ],
+        [
+          77.223355,
+          28.72148
+        ],
+        [
+          77.223944,
+          28.721169
+        ],
+        [
+          77.224874,
+          28.720677
+        ],
+        [
+          77.225365,
+          28.720383
+        ],
+        [
+          77.225796,
+          28.720061
+        ],
+        [
+          77.226447,
+          28.719555
+        ],
+        [
+          77.227048,
+          28.719037
+        ],
+        [
+          77.227223,
+          28.718809
+        ],
+        [
+          77.22777,
+          28.717859
+        ],
+        [
+          77.227873,
+          28.717555
+        ],
+        [
+          77.227929,
+          28.71728
+        ],
+        [
+          77.227965,
+          28.716887
+        ],
+        [
+          77.227936,
+          28.716631
+        ],
+        [
+          77.227844,
+          28.716244
+        ],
+        [
+          77.227617,
+          28.715522
+        ],
+        [
+          77.227535,
+          28.715267
+        ],
+        [
+          77.227094,
+          28.713572
+        ],
+        [
+          77.226996,
+          28.713196
+        ],
+        [
+          77.226921,
+          28.712746
+        ],
+        [
+          77.226879,
+          28.712304
+        ],
+        [
+          77.226895,
+          28.712078
+        ],
+        [
+          77.227005,
+          28.711619
+        ],
+        [
+          77.227338,
+          28.710717
+        ],
+        [
+          77.22752,
+          28.710282
+        ],
+        [
+          77.227534,
+          28.710249
+        ],
+        [
+          77.227717,
+          28.709813
+        ],
+        [
+          77.228025,
+          28.709214
+        ],
+        [
+          77.228391,
+          28.708832
+        ],
+        [
+          77.228919,
+          28.708567
+        ],
+        [
+          77.230251,
+          28.708355
+        ],
+        [
+          77.232464,
+          28.707867
+        ],
+        [
+          77.233244,
+          28.707676
+        ],
+        [
+          77.235484,
+          28.70714
+        ],
+        [
+          77.236244,
+          28.706965
+        ],
+        [
+          77.23673,
+          28.706943
+        ],
+        [
+          77.237158,
+          28.707026
+        ],
+        [
+          77.237712,
+          28.707245
+        ],
+        [
+          77.237982,
+          28.707411
+        ],
+        [
+          77.238259,
+          28.707643
+        ],
+        [
+          77.238874,
+          28.708402
+        ],
+        [
+          77.239165,
+          28.70871
+        ],
+        [
+          77.239469,
+          28.708917
+        ],
+        [
+          77.239868,
+          28.709059
+        ],
+        [
+          77.240328,
+          28.709131
+        ],
+        [
+          77.240798,
+          28.709144
+        ],
+        [
+          77.241309,
+          28.709105
+        ],
+        [
+          77.242523,
+          28.708759
+        ],
+        [
+          77.244328,
+          28.708244
+        ],
+        [
+          77.245954,
+          28.707797
+        ],
+        [
+          77.247584,
+          28.70731
+        ],
+        [
+          77.253636,
+          28.705486
+        ],
+        [
+          77.254483,
+          28.70522
+        ],
+        [
+          77.254836,
+          28.705109
+        ],
+        [
+          77.255872,
+          28.704829
+        ],
+        [
+          77.257134,
+          28.704551
+        ],
+        [
+          77.258391,
+          28.704173
+        ],
+        [
+          77.258879,
+          28.704045
+        ],
+        [
+          77.260495,
+          28.703752
+        ],
+        [
+          77.262644,
+          28.70362
+        ],
+        [
+          77.263128,
+          28.70359
+        ],
+        [
+          77.265879,
+          28.703371
+        ],
+        [
+          77.268652,
+          28.703137
+        ],
+        [
+          77.270786,
+          28.70295
+        ],
+        [
+          77.275917,
+          28.702528
+        ],
+        [
+          77.277308,
+          28.7024
+        ],
+        [
+          77.278635,
+          28.702279
+        ],
+        [
+          77.280288,
+          28.702275
+        ],
+        [
+          77.280971,
+          28.702259
+        ],
+        [
+          77.281304,
+          28.702322
+        ],
+        [
+          77.28177,
+          28.702372
+        ],
+        [
+          77.282027,
+          28.702376
+        ],
+        [
+          77.282308,
+          28.702369
+        ],
+        [
+          77.282613,
+          28.70233
+        ],
+        [
+          77.283217,
+          28.702153
+        ],
+        [
+          77.283542,
+          28.701989
+        ],
+        [
+          77.283891,
+          28.701667
+        ],
+        [
+          77.284065,
+          28.701359
+        ],
+        [
+          77.284171,
+          28.700861
+        ],
+        [
+          77.284167,
+          28.700409
+        ],
+        [
+          77.284083,
+          28.700047
+        ],
+        [
+          77.283895,
+          28.699671
+        ],
+        [
+          77.283497,
+          28.699129
+        ],
+        [
+          77.283058,
+          28.698795
+        ],
+        [
+          77.282624,
+          28.698242
+        ],
+        [
+          77.281312,
+          28.695743
+        ],
+        [
+          77.281097,
+          28.695317
+        ],
+        [
+          77.280935,
+          28.695011
+        ],
+        [
+          77.280804,
+          28.694747
+        ],
+        [
+          77.280627,
+          28.694342
+        ],
+        [
+          77.280505,
+          28.694081
+        ],
+        [
+          77.280331,
+          28.693752
+        ],
+        [
+          77.280131,
+          28.693368
+        ],
+        [
+          77.279824,
+          28.692779
+        ],
+        [
+          77.279527,
+          28.692149
+        ]
+      ]
+    },
+    {
       "osmId": 8385429,
       "segment_id": "del-magenta-seg-01",
       "line_id": "del-magenta",
@@ -536,7 +1132,8 @@
     "Dwarka - Kakrola": "Dwarka",
     "tughlkabad": "Tughlakabad",
     "Peera Garhi": "Peeragarhi",
-    "Badarpur border": "Badarpur Border"
+    "Badarpur border": "Badarpur Border",
+    "Jagatpur - Wazirabad": "Jagatpur Village"
   },
   "out_of_scope_line_ids": [],
   "out_of_scope_station_ids": [
@@ -561,15 +1158,8 @@
     "Sector 42-43",
     "Sector 53-54",
     "Sector 54 Chowk",
-    "Sector 55–56",
-    "del-burari",
-    "del-jagatpur-wazirabad",
-    "del-khajuri-khas",
-    "del-yamuna-vihar",
-    "del-bhajanpura",
-    "del-soorghat",
+    "Sector 55\u201356",
     "del-nanaksar-sonia-vihar",
-    "del-jharoda-majra",
     "del-krishna-park-extension",
     "del-noida-sector-143",
     "del-noida-sector-144",
@@ -1054,6 +1644,190 @@
         77.09278,
         28.48194
       ]
+    },
+    "del-burari": {
+      "line_ids": [
+        "del-pink"
+      ],
+      "phase": "IV",
+      "status": "operational",
+      "opened_on": "2026-03-08",
+      "expected_completion": null,
+      "layout": null,
+      "references": [
+        "https://www.openstreetmap.org/node/5215706767",
+        "https://www.delhimetrorail.com/pages/about-us/present-network"
+      ]
+    },
+    "del-jharoda-majra": {
+      "line_ids": [
+        "del-pink"
+      ],
+      "phase": "IV",
+      "status": "operational",
+      "opened_on": "2026-03-08",
+      "expected_completion": null,
+      "layout": null,
+      "references": [
+        "https://www.openstreetmap.org/node/13628489720",
+        "https://www.delhimetrorail.com/pages/about-us/present-network"
+      ]
+    },
+    "del-jagatpur-village": {
+      "line_ids": [
+        "del-pink"
+      ],
+      "phase": "IV",
+      "status": "operational",
+      "opened_on": "2026-03-08",
+      "expected_completion": null,
+      "layout": null,
+      "references": [
+        "https://www.openstreetmap.org/node/5215706768",
+        "https://www.delhimetrorail.com/pages/about-us/present-network"
+      ]
+    },
+    "del-soorghat": {
+      "line_ids": [
+        "del-pink"
+      ],
+      "phase": "IV",
+      "status": "operational",
+      "opened_on": "2026-03-08",
+      "expected_completion": null,
+      "layout": null,
+      "references": [
+        "https://www.openstreetmap.org/node/5215706793",
+        "https://www.delhimetrorail.com/pages/about-us/present-network"
+      ]
+    },
+    "del-khajuri-khas": {
+      "line_ids": [
+        "del-pink"
+      ],
+      "phase": "IV",
+      "status": "operational",
+      "opened_on": "2026-03-08",
+      "expected_completion": null,
+      "layout": null,
+      "references": [
+        "https://www.openstreetmap.org/node/5215706769",
+        "https://www.delhimetrorail.com/pages/about-us/present-network"
+      ]
+    },
+    "del-bhajanpura": {
+      "line_ids": [
+        "del-pink"
+      ],
+      "phase": "IV",
+      "status": "operational",
+      "opened_on": "2026-03-08",
+      "expected_completion": null,
+      "layout": null,
+      "references": [
+        "https://www.openstreetmap.org/node/5215706782",
+        "https://www.delhimetrorail.com/pages/about-us/present-network"
+      ]
+    },
+    "del-yamuna-vihar": {
+      "line_ids": [
+        "del-pink"
+      ],
+      "phase": "IV",
+      "status": "operational",
+      "opened_on": "2026-03-08",
+      "expected_completion": null,
+      "layout": null,
+      "references": [
+        "https://www.openstreetmap.org/node/5215706770",
+        "https://www.delhimetrorail.com/pages/about-us/present-network"
+      ]
     }
-  }
+  },
+  "additionalStations": [
+    {
+      "osmId": 5215706767,
+      "name": "Burari",
+      "coordinates": [
+        77.19957,
+        28.729829
+      ],
+      "lineRefs": [
+        "8241298"
+      ],
+      "status": "operational"
+    },
+    {
+      "osmId": 13628489720,
+      "name": "Jharoda Majra",
+      "coordinates": [
+        77.213712,
+        28.724965
+      ],
+      "lineRefs": [
+        "8241298"
+      ],
+      "status": "operational"
+    },
+    {
+      "osmId": 5215706768,
+      "name": "Jagatpur Village",
+      "coordinates": [
+        77.223995,
+        28.721116
+      ],
+      "lineRefs": [
+        "8241298"
+      ],
+      "status": "operational"
+    },
+    {
+      "osmId": 5215706793,
+      "name": "Soorghat",
+      "coordinates": [
+        77.227453,
+        28.710222
+      ],
+      "lineRefs": [
+        "8241298"
+      ],
+      "status": "operational"
+    },
+    {
+      "osmId": 5215706769,
+      "name": "Khajuri Khas",
+      "coordinates": [
+        77.254499,
+        28.705261
+      ],
+      "lineRefs": [
+        "8241298"
+      ],
+      "status": "operational"
+    },
+    {
+      "osmId": 5215706782,
+      "name": "Bhajanpura",
+      "coordinates": [
+        77.262647,
+        28.703599
+      ],
+      "lineRefs": [
+        "8241298"
+      ],
+      "status": "operational"
+    },
+    {
+      "osmId": 5215706770,
+      "name": "Yamuna Vihar",
+      "coordinates": [
+        77.277311,
+        28.702376
+      ],
+      "lineRefs": [
+        "8241298"
+      ],
+      "status": "operational"
+    }
+  ]
 }
