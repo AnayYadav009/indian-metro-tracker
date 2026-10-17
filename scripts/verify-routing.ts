@@ -415,10 +415,7 @@ export function runRoutingVerification(): {
     let overallRoutability: "routable" | "partly_routable" | "non_routable";
     let summaryReason: string | undefined = undefined;
 
-    if (city.id === "patna") {
-      overallRoutability = "non_routable";
-      summaryReason = "Patna Metro has no operational lines to verify.";
-    } else if (cityOperationalStations.length === 0) {
+    if (cityOperationalStations.length === 0) {
       overallRoutability = "non_routable";
       summaryReason = `${city.name} Metro has 0 operational stations.`;
     } else if (cityOperationalLines.length === 0) {

@@ -34,19 +34,23 @@ describe("M18 Route Finder", () => {
       expect(routability.reason).toContain("not found");
     });
 
-    it("permits verified routable networks (Kochi, Lucknow, Kanpur, Jaipur, Agra, Navi Mumbai)", () => {
+    it("permits verified routable networks (Kochi, Lucknow, Kanpur, Jaipur, Agra, Navi Mumbai, Patna)", () => {
       expect(getCityRoutability("kochi").isRoutable).toBe(true);
       expect(getCityRoutability("lucknow").isRoutable).toBe(true);
       expect(getCityRoutability("kanpur").isRoutable).toBe(true);
       expect(getCityRoutability("jaipur").isRoutable).toBe(true);
       expect(getCityRoutability("agra").isRoutable).toBe(true);
       expect(getCityRoutability("navi-mumbai").isRoutable).toBe(true);
+      expect(getCityRoutability("patna").isRoutable).toBe(true);
     });
 
-    it("guards Patna reporting no operational lines to verify", () => {
-      const routability = getCityRoutability("patna");
-      expect(routability.isRoutable).toBe(false);
-      expect(routability.reason).toContain("no operational lines to verify");
+    it("routes seamlessly on Patna Blue Line priority corridor (New ISBT to Malahi Pakri)", () => {
+      const graph = buildTransitGraph({ cityId: "patna" });
+      const route = findRoute(graph, "patna-new-isbt", "patna-malahi-pakri");
+      expect(route).not.toBeNull();
+      expect(route?.totalStops).toBe(4);
+      expect(route?.totalTransfers).toBe(0);
+      expect(route?.legs[0].lineId).toBe("pat-blue");
     });
   });
 

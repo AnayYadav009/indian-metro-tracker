@@ -63,23 +63,6 @@ export function getCityRoutability(
     };
   }
 
-  // Special guard for Patna: 5 operational stations compiled but 0 verified operational lines
-  if (cityId === "patna") {
-    return {
-      isRoutable: false,
-      status: "non_routable",
-      reason: "Patna Metro has no operational lines to verify.",
-      routableLineIds: [],
-      unroutableLines: [
-        {
-          id: "pat-blue",
-          name: "Blue Line (Corridor 2)",
-          reason: "no operational lines to verify",
-        },
-      ],
-    };
-  }
-
   // 1. Check operational stations in this city
   const operationalStations = data.stations.features.filter(
     (st: any) =>

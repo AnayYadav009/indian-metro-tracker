@@ -13,9 +13,9 @@
 | **Total Cities Evaluated** | **21** |
 | **Total Operational Lines** | **47** |
 | **Lines Passing All Verification Checks** | **41 / 47** |
-| **Fully Routable Cities** | **14** |
+| **Fully Routable Cities** | **15** |
 | **Partly Routable Cities** | **3** |
-| **Non-Routable Cities** | **4** |
+| **Non-Routable Cities** | **3** |
 
 ---
 
@@ -43,7 +43,7 @@
 | **Kanpur** (`kanpur`) | 14 | 1 | ✅ Routable | 1 | All lines passed terminal, count, gap, and projection checks. |
 | **Agra** (`agra`) | 6 | 1 | ✅ Routable | 1 | All lines passed terminal, count, gap, and projection checks. |
 | **Jaipur** (`jaipur`) | 11 | 1 | ✅ Routable | 1 | All lines passed terminal, count, gap, and projection checks. |
-| **Patna** (`patna`) | 5 | 1 | ❌ Non-Routable | 1 | Patna Metro has no operational lines to verify. |
+| **Patna** (`patna`) | 5 | 1 | ✅ Routable | 1 | All lines passed terminal, count, gap, and projection checks. |
 
 ---
 

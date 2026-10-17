@@ -136,9 +136,8 @@ The audit engine (`scripts/audit/audit-engine.ts`) implements three hardcoded ex
   - `/city/patna/`: Displays 5.3 km operational across 1 line and 5 operational stations (opening years 2025 – 2026).
   - `/compare/`: Displays Patna as Tier 2 with 1 line, 5 stations, 5.3 operational km, and opened in 2025.
   - Inconsistency: The routing guard (`lib/routing/city-guard.ts` and `scripts/verify-routing.ts`) reported `"no operational lines to verify"` due to an early hardcoded guard condition, even though Patna's 1 operational line (`pat-blue`) and 5 stations are fully declared and consistent across all dataset files.
-- **Decision**: Keep the route-finder guard active until commercial timetable and fare tables are officially published, but document that the underlying dataset files consistently compile 1 line and 5 operational stations.
-- **Suggested Next Step**: When PMRC issues published revenue service timetables, remove the special guard in `lib/routing/city-guard.ts` to allow Patna routing on `pat-blue`.
-- **Severity**: **Low** (routing guard documentation alignment).
+- **Decision**: Patna Metro routing enabled on Blue Line (`pat-blue`). It passed all topological and geometric checks (5 operational stations, 0 gaps > 5 km, max projection 12 m, terminals matched).
+- **Status**: **Resolved** (routing enabled).
 
 ---
 
