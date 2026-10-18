@@ -26,6 +26,8 @@ export interface MetroStoreState {
   selectedPhases: string[];
   searchQuery: string;
   showStations: boolean;
+  showWalkingCatchment: boolean;
+  toggleWalkingCatchment: () => void;
 
   // Interaction & selection state
   selectedFeature: SelectedFeature | null;
@@ -69,10 +71,13 @@ export interface MetroStoreState {
   isRoutePanelOpen: boolean;
   routeOriginId: string | null;
   routeDestinationId: string | null;
+  routeFocusTarget: "origin" | "destination" | null;
   activeRoute: import("@/lib/routing/types").RouteResult | null;
   setIsRoutePanelOpen: (open: boolean) => void;
   setRouteOriginId: (id: string | null) => void;
   setRouteDestinationId: (id: string | null) => void;
+  startRouteFromStation: (station: StationProperties) => void;
+  setRouteFocusTarget: (target: "origin" | "destination" | null) => void;
   setActiveRoute: (route: import("@/lib/routing/types").RouteResult | null) => void;
   clearRoute: () => void;
 }
@@ -85,6 +90,7 @@ export const useMetroStore = create<MetroStoreState>((set) => ({
   selectedPhases: [],
   searchQuery: "",
   showStations: true,
+  showWalkingCatchment: false,
   selectedFeature: null,
   hoveredFeature: null,
   selectedYear: null,
@@ -149,6 +155,9 @@ export const useMetroStore = create<MetroStoreState>((set) => ({
       };
     }),
 
+  toggleWalkingCatchment: () =>
+    set((state) => ({ showWalkingCatchment: !state.showWalkingCatchment })),
+
   setSelectedFeature: (feature) => set({ selectedFeature: feature }),
 
   clearSelectedFeature: () => set({ selectedFeature: null }),
@@ -174,10 +183,11 @@ export const useMetroStore = create<MetroStoreState>((set) => ({
   userLocation: null,
 
   setIsNearestPanelOpen: (open) =>
-    set({
+    set((state) => ({
       isNearestPanelOpen: open,
+      ...(open ? { isRoutePanelOpen: false } : {}),
       ...(open ? {} : { isPickingLocation: false }),
-    }),
+    })),
 
   setIsPickingLocation: (isPicking) => set({ isPickingLocation: isPicking }),
 
@@ -186,16 +196,32 @@ export const useMetroStore = create<MetroStoreState>((set) => ({
   isRoutePanelOpen: false,
   routeOriginId: null,
   routeDestinationId: null,
+  routeFocusTarget: null,
   activeRoute: null,
 
-  setIsRoutePanelOpen: (open) => set({ isRoutePanelOpen: open }),
+  setIsRoutePanelOpen: (open) =>
+    set({ isRoutePanelOpen: open, ...(open ? { isNearestPanelOpen: false } : {}) }),
   setRouteOriginId: (id) => set({ routeOriginId: id }),
   setRouteDestinationId: (id) => set({ routeDestinationId: id }),
+  startRouteFromStation: (station) =>
+    set({
+      selectedCityId: station.city_id,
+      selectedFeature: null,
+      isNearestPanelOpen: false,
+      isPickingLocation: false,
+      isRoutePanelOpen: true,
+      routeOriginId: station.station_id,
+      routeDestinationId: null,
+      routeFocusTarget: "destination",
+      activeRoute: null,
+    }),
+  setRouteFocusTarget: (target) => set({ routeFocusTarget: target }),
   setActiveRoute: (route) => set({ activeRoute: route }),
   clearRoute: () =>
     set({
       routeOriginId: null,
       routeDestinationId: null,
+      routeFocusTarget: null,
       activeRoute: null,
     }),
 }));

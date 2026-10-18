@@ -48,6 +48,34 @@ interface MapCanvasProps {
   className?: string;
 }
 
+const CATCHMENT_RADII = [500, 1000] as const;
+
+function buildWalkingCatchments(stations: ReturnType<typeof getMetroData>["stations"], cityId: string | null) {
+  const operational = stations.features.filter(({ properties }) =>
+    properties.status === "operational" && (!cityId || properties.city_id === cityId)
+  );
+  const features = operational.flatMap(({ geometry, properties }) =>
+    CATCHMENT_RADII.map((radius) => {
+      const [longitude, latitude] = geometry.coordinates;
+      const lat = latitude * Math.PI / 180;
+      const lon = longitude * Math.PI / 180;
+      const angularRadius = radius / 6_371_008.8;
+      const coordinates = Array.from({ length: 25 }, (_, index) => {
+        const bearing = index * Math.PI / 12;
+        const nextLat = Math.asin(Math.sin(lat) * Math.cos(angularRadius) + Math.cos(lat) * Math.sin(angularRadius) * Math.cos(bearing));
+        const nextLon = lon + Math.atan2(Math.sin(bearing) * Math.sin(angularRadius) * Math.cos(lat), Math.cos(angularRadius) - Math.sin(lat) * Math.sin(nextLat));
+        return [nextLon * 180 / Math.PI, nextLat * 180 / Math.PI];
+      });
+      return {
+        type: "Feature" as const,
+        properties: { station_id: properties.station_id, radius },
+        geometry: { type: "Polygon" as const, coordinates: [coordinates] },
+      };
+    })
+  );
+  return { type: "FeatureCollection" as const, features };
+}
+
 export function MapCanvas({ className = "" }: MapCanvasProps) {
   const mapRef = useRef<MapRef>(null);
   const [cursor, setCursor] = useState<string>("auto");
@@ -57,6 +85,14 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
   const selectedPhases = useMetroStore((state) => state.selectedPhases);
   const selectedFeature = useMetroStore((state) => state.selectedFeature);
   const setSelectedFeature = useMetroStore((state) => state.setSelectedFeature);
+  const isRoutePanelOpen = useMetroStore((state) => state.isRoutePanelOpen);
+  const routeOriginId = useMetroStore((state) => state.routeOriginId);
+  const routeDestinationId = useMetroStore((state) => state.routeDestinationId);
+  const routeFocusTarget = useMetroStore((state) => state.routeFocusTarget);
+  const setRouteOriginId = useMetroStore((state) => state.setRouteOriginId);
+  const setRouteDestinationId = useMetroStore((state) => state.setRouteDestinationId);
+  const setRouteFocusTarget = useMetroStore((state) => state.setRouteFocusTarget);
+  const setSelectedCity = useMetroStore((state) => state.setSelectedCity);
   const clearSelectedFeature = useMetroStore(
     (state) => state.clearSelectedFeature
   );
@@ -64,6 +100,7 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
   const selectedYear = useMetroStore((state) => state.selectedYear);
   const includeFuture = useMetroStore((state) => state.includeFuture);
   const showStations = useMetroStore((state) => state.showStations);
+  const showWalkingCatchment = useMetroStore((state) => state.showWalkingCatchment);
   const isPickingLocation = useMetroStore((state) => state.isPickingLocation);
   const setIsPickingLocation = useMetroStore(
     (state) => state.setIsPickingLocation
@@ -94,6 +131,10 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
       : null;
 
   const dataset = useMemo(() => getMetroData(), []);
+  const catchmentGeoJson = useMemo(
+    () => showWalkingCatchment ? buildWalkingCatchments(dataset.stations, selectedCityId) : null,
+    [dataset.stations, selectedCityId, showWalkingCatchment]
+  );
 
   const operationalFilter = useMemo(
     () =>
@@ -276,6 +317,16 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
         const matched = getStationById(stationId);
         if (matched) {
           setSelectionLocation(null);
+          if (isRoutePanelOpen) {
+            const target = routeFocusTarget || (!routeOriginId ? "origin" : !routeDestinationId ? "destination" : null);
+            if (target) {
+              setSelectedCity(matched.properties.city_id);
+              (target === "origin" ? setRouteOriginId : setRouteDestinationId)(stationId);
+              setRouteFocusTarget(target === "origin" ? "destination" : null);
+              clearSelectedFeature();
+              return;
+            }
+          }
           setSelectedFeature({
             type: "station",
             data: matched.properties,
@@ -315,6 +366,14 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
       setUserLocation,
       setIsPickingLocation,
       setIsNearestPanelOpen,
+      isRoutePanelOpen,
+      routeOriginId,
+      routeDestinationId,
+      routeFocusTarget,
+      setRouteOriginId,
+      setRouteDestinationId,
+      setRouteFocusTarget,
+      setSelectedCity,
       clearSelectedFeature,
       setSelectedFeature,
     ]
@@ -502,6 +561,20 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
             }
           }}
         />
+
+        {catchmentGeoJson && (
+          <Source id="walking-catchment-source" type="geojson" data={catchmentGeoJson}>
+            <Layer
+              id="walking-catchment-fill"
+              type="fill"
+              paint={{
+                "fill-color": ["match", ["get", "radius"], 500, "#34d399", "#38bdf8"],
+                "fill-opacity": 0.1,
+                "fill-outline-color": ["match", ["get", "radius"], 500, "#6ee7b7", "#7dd3fc"],
+              }}
+            />
+          </Source>
+        )}
 
         <Source id="metro-segments" type="geojson" data={dataset.segments}>
           <Layer {...getSelectedSegmentLayer(selectedSegmentId)} />

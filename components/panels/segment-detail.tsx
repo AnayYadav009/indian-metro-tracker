@@ -12,18 +12,18 @@ export function SegmentDetail({ segment }: SegmentDetailProps) {
   const knownIssueNotice = getKnownIssueNotice([segment.line_id]);
 
   return (
-    <div data-testid="segment-detail" className="flex flex-col gap-4 text-slate-200">
+    <div data-testid="segment-detail" className="flex flex-col gap-2.5 text-slate-200">
       {/* Line header & Color swatch */}
       <div className="flex items-center gap-3">
         <div
           data-testid="segment-color-indicator"
-          className="h-9 w-3 rounded-full shrink-0 shadow"
+          className="h-7 w-2.5 rounded-full shrink-0 shadow"
           style={{ backgroundColor: segment.color }}
         />
         <div className="flex-1 min-w-0">
           <h3
             title={segment.line_name}
-            className="text-base font-bold tracking-tight text-white leading-snug break-words"
+            className="text-sm font-bold tracking-tight text-white leading-snug break-words"
           >
             {segment.line_name}
           </h3>
@@ -34,7 +34,7 @@ export function SegmentDetail({ segment }: SegmentDetailProps) {
       </div>
 
       {/* Badges row: Status & Phase */}
-      <div className="flex flex-wrap items-center gap-2">
+      <div className="flex flex-wrap items-center gap-1.5">
         <StatusBadge status={segment.status} />
         <PhaseBadge phase={segment.phase} />
         {segment.geometry_quality === "schematic" && (
@@ -51,14 +51,14 @@ export function SegmentDetail({ segment }: SegmentDetailProps) {
         <p
           data-testid="known-issue-notice"
           role="status"
-          className="rounded-md border border-amber-400/30 bg-amber-400/10 px-3 py-2 text-xs leading-relaxed text-amber-100"
+          className="rounded-md border border-amber-400/30 bg-amber-400/10 px-2.5 py-1.5 text-[11px] leading-relaxed text-amber-100"
         >
           {knownIssueNotice}
         </p>
       )}
 
       {/* Detailed properties grid */}
-      <div className="grid grid-cols-2 gap-2.5 rounded-lg border border-slate-800 bg-slate-950/60 p-3 text-xs">
+      <div className="grid grid-cols-2 gap-x-2 gap-y-1.5 rounded-lg border border-slate-800 bg-slate-950/60 p-2.5 text-[11px]">
         <div>
           <span className="text-slate-400">City</span>
           <p className="font-semibold text-slate-100">{segment.city}</p>
@@ -106,9 +106,9 @@ export function SegmentDetail({ segment }: SegmentDetailProps) {
 
       {/* References links */}
       {segment.references && segment.references.length > 0 && (
-        <div data-testid="segment-references" className="rounded-lg border border-slate-800 bg-slate-950/60 p-3 text-xs">
-          <span className="text-slate-400 font-medium block mb-1.5">References & Citations</span>
-          <ul className="flex flex-col gap-1">
+        <div data-testid="segment-references" className="rounded-lg border border-slate-800 bg-slate-950/60 p-2.5 text-[11px]">
+          <span className="text-slate-400 font-medium block mb-1">References & Citations</span>
+          <ul className="flex flex-col gap-0.5">
             {segment.references.map((url, idx) => (
               <li key={idx} className="truncate">
                 <a
@@ -129,7 +129,7 @@ export function SegmentDetail({ segment }: SegmentDetailProps) {
       <ReportIssueButton target={{ type: "segment", data: segment }} />
 
       {/* Provenance footer */}
-      <div className="flex items-center justify-between border-t border-slate-800/80 pt-3 text-[11px] text-slate-400">
+      <div className="flex items-center justify-between border-t border-slate-800/80 pt-2 text-[10px] text-slate-400">
         <span className="flex items-center gap-1.5">
           <span>Source:</span>
           <span

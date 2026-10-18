@@ -172,13 +172,14 @@
       "city_id": "delhi",
       "city_name": "Delhi",
       "lines": 10,
-      "segments": 16,
-      "stations": 240,
+      "segments": 17,
+      "stations": 247,
       "segmentSources": {
-        "osm": 16
+        "osm": 16,
+        "manual": 1
       },
       "stationSources": {
-        "osm": 240
+        "osm": 247
       },
       "lineSources": {
         "osm+dmrc": 9,
@@ -1140,6 +1141,34 @@
     },
     {
       "city_id": "bengaluru",
+      "rule": "line-terminal-missing",
+      "severity": "error",
+      "subject": "blr-green|blr-madavara",
+      "message": "Terminal station 'Madavara' is 3142 m away from nearest segment end of line 'blr-green' (threshold: 300 m)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "blr-chikkabidarakallu",
+      "message": "Station is 1411 m from nearest segment of line 'blr-green' (threshold: 250 m)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "blr-madavara",
+      "message": "Station is 3141 m from nearest segment of line 'blr-green' (threshold: 250 m)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "station-far-from-all-segments",
+      "severity": "error",
+      "subject": "blr-manjunathanagara",
+      "message": "Station is 660 m from nearest segment of line 'blr-green' (threshold: 250 m)"
+    },
+    {
+      "city_id": "bengaluru",
       "rule": "future-date-unconfirmed",
       "severity": "warn",
       "subject": "blr-blue-seg-01",
@@ -1172,6 +1201,13 @@
       "severity": "warn",
       "subject": "blr-jayadeva-interchange-uc",
       "message": "Future station has no source reference"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "ground-truth-length",
+      "severity": "warn",
+      "subject": "blr-green",
+      "message": "Operational length: computed 29.97 km vs reference 33.46 km (10.4%)"
     },
     {
       "city_id": "bengaluru",
@@ -2290,6 +2326,13 @@
       "city_id": "bengaluru",
       "rule": "station-gap",
       "severity": "warn",
+      "subject": "blr-green|blr-dasarahalli|blr-madavara",
+      "message": "Stations are 4583 m apart (threshold: 3000 m)"
+    },
+    {
+      "city_id": "bengaluru",
+      "rule": "station-gap",
+      "severity": "warn",
       "subject": "blr-pink|blr-jayadeva-interchange-uc|blr-nagawara",
       "message": "Stations are 14218 m apart (threshold: 3000 m)"
     },
@@ -2666,6 +2709,13 @@
     },
     {
       "city_id": "delhi",
+      "rule": "segment-parallel-duplicate",
+      "severity": "error",
+      "subject": "del-pink-seg-01|del-pink-seg-02",
+      "message": "Segments run parallel within 60 m for ~1199 m (twin tracks)"
+    },
+    {
+      "city_id": "delhi",
       "rule": "consecutive-segment-gap",
       "severity": "warn",
       "subject": "del-blue-seg-01|del-blue-seg-02",
@@ -2712,13 +2762,6 @@
       "severity": "warn",
       "subject": "del-red-seg-01|del-red-seg-02",
       "message": "Segments of line 'del-red' have nearest endpoint gap of 776 m (threshold: 150 m)"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "coverage-gap",
-      "severity": "warn",
-      "subject": "del-pink|Phase 4 extension (Majlis Park - Maujpur-Babarpur)",
-      "message": "Declared under construction stretch is tracked as a coverage gap: Phase 4 elevated extension corridor (12.3 km, 7 stations) completing the Ring Metro; route geometry and station nodes are not yet compiled in the OSM dataset."
     },
     {
       "city_id": "delhi",
@@ -3046,6 +3089,13 @@
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
       "severity": "warn",
+      "subject": "del-bhajanpura",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
       "subject": "del-bhalaswa",
       "message": "Station has unverified layout (requires operator station list verification)"
     },
@@ -3068,6 +3118,13 @@
       "rule": "layout/suspect-default-elevated",
       "severity": "warn",
       "subject": "del-brigadier-hoshiyar-singh",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-burari",
       "message": "Station has unverified layout (requires operator station list verification)"
     },
     {
@@ -3354,6 +3411,13 @@
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
       "severity": "warn",
+      "subject": "del-jagatpur-village",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
       "subject": "del-jahangirpuri",
       "message": "Station has unverified layout (requires operator station list verification)"
     },
@@ -3397,6 +3461,13 @@
       "rule": "layout/suspect-default-elevated",
       "severity": "warn",
       "subject": "del-jhandewalan",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-jharoda-majra",
       "message": "Station has unverified layout (requires operator station list verification)"
     },
     {
@@ -3474,6 +3545,13 @@
       "rule": "layout/suspect-default-elevated",
       "severity": "warn",
       "subject": "del-keshav-puram",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-khajuri-khas",
       "message": "Station has unverified layout (requires operator station list verification)"
     },
     {
@@ -4208,6 +4286,13 @@
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
       "severity": "warn",
+      "subject": "del-soorghat",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
       "subject": "del-south-extension",
       "message": "Station has unverified layout (requires operator station list verification)"
     },
@@ -4356,6 +4441,13 @@
       "rule": "layout/suspect-default-elevated",
       "severity": "warn",
       "subject": "del-yamuna-bank",
+      "message": "Station has unverified layout (requires operator station list verification)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "layout/suspect-default-elevated",
+      "severity": "warn",
+      "subject": "del-yamuna-vihar",
       "message": "Station has unverified layout (requires operator station list verification)"
     },
     {
@@ -6386,7 +6478,7 @@
       "rule": "last-verified-distribution",
       "severity": "info",
       "subject": "delhi",
-      "message": "last_verified distribution: 2026-10-08: 38; 2026-10-10: 2; 2026-10-13: 1; missing: 215"
+      "message": "last_verified distribution: 2026-10-08: 38; 2026-10-10: 2; 2026-10-13: 1; 2026-10-17: 1; missing: 222"
     },
     {
       "city_id": "gurugram",
@@ -6457,6 +6549,20 @@
       "severity": "warn",
       "subject": "hyd-red",
       "message": "Operational length: computed 28.02 km vs reference 29.21 km (4.1%)"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "interchange-consistency",
+      "severity": "warn",
+      "subject": "hyderabad-jbs-parade-ground",
+      "message": "is_interchange is true but station is on only 1 line(s)"
+    },
+    {
+      "city_id": "hyderabad",
+      "rule": "interchange-consistency",
+      "severity": "warn",
+      "subject": "hyderabad-parade-ground",
+      "message": "is_interchange is true but station is on only 1 line(s)"
     },
     {
       "city_id": "hyderabad",
@@ -7897,6 +8003,13 @@
       "city_id": "mumbai",
       "rule": "interchange-consistency",
       "severity": "warn",
+      "subject": "mum-andheri-west",
+      "message": "is_interchange is true but station is on only 1 line(s)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "interchange-consistency",
+      "severity": "warn",
       "subject": "mum-chhatrapati-shivaji-maharaj-terminus",
       "message": "is_interchange is true but station is on only 1 line(s)"
     },
@@ -7904,7 +8017,28 @@
       "city_id": "mumbai",
       "rule": "interchange-consistency",
       "severity": "warn",
+      "subject": "mum-d-n-nagar",
+      "message": "is_interchange is true but station is on only 1 line(s)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "interchange-consistency",
+      "severity": "warn",
       "subject": "mum-dadar",
+      "message": "is_interchange is true but station is on only 1 line(s)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "interchange-consistency",
+      "severity": "warn",
+      "subject": "mum-gundavali",
+      "message": "is_interchange is true but station is on only 1 line(s)"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "interchange-consistency",
+      "severity": "warn",
+      "subject": "mum-western-express-highway",
       "message": "is_interchange is true but station is on only 1 line(s)"
     },
     {

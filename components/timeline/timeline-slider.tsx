@@ -168,19 +168,18 @@ export function TimelineSlider() {
       data-testid="timeline-slider-container"
       role="region"
       aria-label="Network timeline scrubber"
-      className="absolute bottom-20 left-1/2 -translate-x-1/2 z-30 w-[94vw] max-w-lg rounded-xl border border-slate-800 bg-slate-900/95 p-2.5 text-slate-100 shadow-2xl backdrop-blur-md transition-all sm:bottom-4 sm:p-3 sm:max-w-xl"
+      className="absolute bottom-20 left-1/2 z-30 w-[94vw] max-w-6xl -translate-x-1/2 rounded-xl border border-slate-800 bg-slate-950/85 px-3 py-2 text-slate-100 shadow-2xl backdrop-blur-md transition-all sm:bottom-4"
     >
-      <div className="flex flex-col gap-2">
-        {/* Top row: Header, Year, Stats, Controls */}
-        <div className="flex items-center justify-between gap-2">
-          <div className="flex items-center gap-2">
+      <div className="flex flex-col gap-1.5 lg:flex-row lg:items-center lg:gap-3">
+        <div className="flex items-center justify-between gap-2 lg:shrink-0">
+          <div className="flex items-center gap-1.5">
             <button
               type="button"
               data-testid="timeline-play-btn"
               onClick={handleTogglePlay}
               aria-label={isPlaying ? "Pause timeline" : "Play timeline"}
               title={isPlaying ? "Pause (Space)" : "Play (Space)"}
-              className="flex h-8 w-8 items-center justify-center rounded-lg border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 transition-colors hover:bg-emerald-500/20 hover:text-emerald-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
+              className="flex h-7 w-7 items-center justify-center rounded-lg border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 transition-colors hover:bg-emerald-500/20 hover:text-emerald-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
             >
               {isPlaying ? (
                 <Pause className="h-4 w-4 fill-current" />
@@ -196,7 +195,7 @@ export function TimelineSlider() {
               aria-pressed={showStations}
               aria-label={showStations ? "Hide stations" : "Show stations"}
               title={showStations ? "Hide stations" : "Show stations"}
-              className={`flex items-center gap-1 rounded-md px-2 py-1 text-[11px] font-medium border transition-colors ${
+              className={`flex items-center gap-1 rounded-md px-1.5 py-0.5 text-[10px] font-medium border transition-colors ${
                 showStations
                   ? "border-sky-500/30 bg-sky-500/10 text-sky-300"
                   : "border-slate-700 bg-slate-800 text-slate-400 hover:text-slate-200"
@@ -210,25 +209,24 @@ export function TimelineSlider() {
               <span className="hidden sm:inline">Stations</span>
             </button>
 
-            <div className="flex items-baseline gap-1.5">
-              <span className="text-xs font-semibold text-slate-400 flex items-center gap-1">
+            <div className="flex items-baseline gap-1">
+              <span className="flex items-center gap-1 text-[10px] font-semibold text-slate-400">
                 <Calendar className="h-3 w-3 text-emerald-400" />
                 Year:
               </span>
               <span
                 data-testid="timeline-current-year"
-                className="text-base font-bold text-white tracking-tight font-mono"
+                className="text-sm font-bold font-mono tracking-tight text-white"
               >
                 {currentYear}
               </span>
-              <span className="text-[11px] text-slate-400 font-medium">
+              <span className="whitespace-nowrap text-[10px] font-medium text-slate-400">
                 ({currentKm} km open)
               </span>
             </div>
           </div>
 
-          {/* Right actions: Include Future toggle, Reset */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5">
             <button
               type="button"
               data-testid="timeline-future-toggle"
@@ -239,7 +237,7 @@ export function TimelineSlider() {
                   ? "Hide construction and planned lines"
                   : "Show construction and planned lines"
               }
-              className={`flex items-center gap-1 rounded-md px-2 py-1 text-[11px] font-medium border transition-colors ${
+              className={`flex items-center gap-1 rounded-md px-1.5 py-0.5 text-[10px] font-medium border transition-colors ${
                 includeFuture
                   ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-300"
                   : "border-slate-700 bg-slate-800 text-slate-400 hover:text-slate-200"
@@ -253,28 +251,26 @@ export function TimelineSlider() {
               <span className="hidden sm:inline">Include Future</span>
             </button>
 
-            {isFiltered && (
-              <button
-                type="button"
-                data-testid="timeline-reset-btn"
-                onClick={handleResetTimeline}
-                title="Reset timeline (show all up to current year)"
-                className="flex items-center gap-1 rounded bg-slate-800 px-2 py-1 text-[11px] font-medium text-slate-300 hover:bg-slate-700 hover:text-white"
-              >
-                <RotateCcw className="h-3 w-3" />
-                <span className="hidden sm:inline">Reset</span>
-              </button>
-            )}
+            <button
+              type="button"
+              data-testid="timeline-reset-btn"
+              onClick={handleResetTimeline}
+              disabled={!isFiltered}
+              title="Reset timeline (show all up to current year)"
+              className="flex items-center gap-1 rounded bg-slate-800 px-1.5 py-0.5 text-[10px] font-medium text-slate-300 hover:bg-slate-700 hover:text-white disabled:cursor-default disabled:opacity-40"
+            >
+              <RotateCcw className="h-3 w-3" />
+              <span className="hidden sm:inline">Reset</span>
+            </button>
           </div>
         </div>
 
-        {/* Middle row: Interactive Range Slider & Mini SVG Chart */}
-        <div className="flex items-center gap-3">
-          <span className="text-[10px] text-slate-500 font-mono">
+        <div className="flex min-w-0 flex-1 items-center gap-1.5">
+          <span className="font-mono text-[9px] text-slate-500">
             {minYear}
           </span>
 
-          <div className="relative flex-1 flex flex-col justify-center">
+          <div className="relative flex min-w-0 flex-1 flex-col justify-center">
             <input
               type="range"
               role="slider"
@@ -294,14 +290,14 @@ export function TimelineSlider() {
             />
           </div>
 
-          <span className="text-[10px] text-slate-500 font-mono">
+          <span className="font-mono text-[9px] text-slate-500">
             {maxYear}
           </span>
 
           {/* Mini Cumulative km sparkline (SVG) */}
           <div
             data-testid="timeline-sparkline-chart"
-            className="hidden sm:flex items-center shrink-0 border border-slate-800 rounded px-1.5 py-0.5 bg-slate-950/60"
+            className="hidden shrink-0 items-center rounded border border-slate-800 bg-slate-950/60 px-1 py-0.5 sm:flex"
             title="Cumulative operational km over time"
           >
             <svg
@@ -326,22 +322,16 @@ export function TimelineSlider() {
               />
             </svg>
           </div>
-        </div>
-
-        {/* Bottom row: Undated operational records indicator (if applicable) */}
-        {isFiltered && undatedCounts.undatedOperationalStations > 0 && (
-          <div
+          <span
             data-testid="timeline-undated-indicator"
-            className="flex items-center justify-between text-[10px] text-slate-400 pt-0.5 border-t border-slate-800/60"
+            title={`Network as of end of ${currentYear}; ${undatedCounts.undatedOperationalStations} stations undated`}
+            className="flex shrink-0 items-center gap-1 border-l border-slate-800/60 pl-2 text-[9px] text-slate-500"
           >
-            <span>
-              Network as of end of <strong className="text-slate-200">{currentYear}</strong>
-            </span>
-            <span className="text-amber-400/90 font-medium">
-              {undatedCounts.undatedOperationalStations} stations undated
-            </span>
-          </div>
-        )}
+            <span>As of</span>
+            <strong className="text-slate-300">{currentYear}</strong>
+            <span>· {undatedCounts.undatedOperationalStations} undated</span>
+          </span>
+        </div>
       </div>
     </div>
   );

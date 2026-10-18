@@ -11,6 +11,7 @@ import {
   ShieldCheck,
   Building2,
   RefreshCw,
+  ArrowRight,
 } from "lucide-react";
 import { useMetroStore } from "@/store/use-metro-store";
 import {
@@ -32,6 +33,10 @@ export function NearestStationPanel() {
   const setUserLocation = useMetroStore((state) => state.setUserLocation);
   const setSelectedFeature = useMetroStore((state) => state.setSelectedFeature);
   const setSelectedCity = useMetroStore((state) => state.setSelectedCity);
+  const startRouteFromStation = useMetroStore((state) => state.startRouteFromStation);
+  const selectedFeature = useMetroStore((state) => state.selectedFeature);
+  const showWalkingCatchment = useMetroStore((state) => state.showWalkingCatchment);
+  const toggleWalkingCatchment = useMetroStore((state) => state.toggleWalkingCatchment);
 
   const [includeConstruction, setIncludeConstruction] = useState(false);
   const [isLocating, setIsLocating] = useState(false);
@@ -109,7 +114,7 @@ export function NearestStationPanel() {
   return (
     <div
       data-testid="nearest-station-panel"
-      className="absolute top-16 right-4 z-30 flex max-h-[calc(100dvh-5rem)] w-[calc(100vw-2rem)] max-w-md flex-col rounded-xl border border-slate-700/80 bg-slate-900/95 shadow-2xl backdrop-blur-md sm:right-6"
+      className={`absolute top-16 right-4 z-30 flex max-h-[calc(100vh-8.5rem)] w-[calc(100vw-2rem)] max-w-md flex-col overflow-y-auto rounded-xl border border-slate-700/80 bg-slate-900/95 shadow-2xl backdrop-blur-md sm:right-6 ${selectedFeature ? "md:hidden" : ""}`}
     >
       {/* Header */}
       <div className="flex items-center justify-between border-b border-slate-800 px-4 py-3">
@@ -165,6 +170,11 @@ export function NearestStationPanel() {
             <span>{isPickingLocation ? "Click map to set..." : "Pick on Map"}</span>
           </button>
         </div>
+
+        <label className="flex cursor-pointer items-center gap-2 rounded-lg border border-slate-800 bg-slate-950/50 px-2.5 py-2 text-[11px] text-slate-300 hover:border-slate-700">
+          <input type="checkbox" checked={showWalkingCatchment} onChange={toggleWalkingCatchment} data-testid="toggle-walking-catchment" className="h-3.5 w-3.5 accent-emerald-500" />
+          <span>Show Walking Catchment (500m / 1km)</span>
+        </label>
 
         {/* Picking Location Banner */}
         {isPickingLocation && (
@@ -372,7 +382,14 @@ export function NearestStationPanel() {
                     )}
 
                     {/* View on map action */}
-                    <div className="mt-2 pt-2 border-t border-slate-700/40 flex justify-end">
+                    <div className="mt-2 flex items-center justify-between border-t border-slate-700/40 pt-2">
+                      <button
+                        type="button"
+                        onClick={() => startRouteFromStation(res.station.properties)}
+                        className="inline-flex items-center gap-1 text-[11px] font-medium text-emerald-300 hover:text-emerald-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
+                      >
+                        Route from here <ArrowRight className="h-3 w-3" />
+                      </button>
                       <button
                         onClick={() => {
                           setSelectedCity(res.cityId);

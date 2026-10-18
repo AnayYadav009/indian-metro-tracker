@@ -63,7 +63,7 @@ export function MapLegend({ className = "" }: MapLegendProps) {
       {isExpanded && (
         <div
           data-testid="legend-content"
-          className="flex flex-col gap-3.5 border-t border-slate-800/80 p-3.5 pt-3 text-xs text-slate-300"
+          className="flex max-h-[calc(100dvh-16rem)] flex-col gap-3.5 overflow-y-auto border-t border-slate-800/80 p-3.5 pt-3 text-xs text-slate-300"
         >
           <div>
             <h4 className="mb-2 text-[10px] font-bold uppercase tracking-wider text-slate-400">
