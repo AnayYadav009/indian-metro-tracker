@@ -1,12 +1,11 @@
 import { describe, it, expect } from "vitest";
 import { mergeCityOverrides, type CityOverrideData } from "@/scripts/pipeline/merge-overrides";
 import { normalizeOverpassCity } from "@/scripts/pipeline/normalize";
-import type { OverpassResponse } from "@/types/overpass";
 
 describe("Endpoint Station Trimming", () => {
   // Polyline running west to east: (77.0, 28.0) -> (77.1, 28.0) -> (77.2, 28.0) -> (77.3, 28.0) -> (77.4, 28.0)
   // Station Alpha at 77.1, Beta at 77.2, Gamma at 77.3, Delta at 77.4
-  const rawOverpass: OverpassResponse = {
+  const rawOverpass = {
     version: 0.6,
     generator: "test",
     osm3s: { timestamp_osm_base: "2026-10-17T00:00:00Z" },
