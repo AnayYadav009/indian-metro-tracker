@@ -1,42 +1,70 @@
 # Cleanup Execution & Verification Report
 
 **Date:** 2026-10-18  
-**Branch:** `chore/repo-cleanup` (cut from `master` at `8d920e8`)  
-**Status:** Complete. Working tree clean. All verification criteria match baseline.
+**Branch:** `fix/e2e-delhi-notice-mobile-filter` (rebased onto `master` after merging `chore/repo-cleanup`)  
+**Status:** Complete. Working tree clean. All verification criteria verified with measured numbers.
 
 ---
 
 ## 1. Executive Summary: Before vs After
 
-| Metric | Before Cleanup (`master` at `8d920e8`) | After Cleanup (`chore/repo-cleanup`) | Delta / Reduction | Verification Status |
+| Metric | Before Cleanup (`master` at `8d920e8`) | After Cleanup & Fixes (`master` + branch) | Delta / Reduction | Verification Status |
 |---|---|---|---|---|
 | **Tracked Repo Size (`git ls-tree`)** | **46.94 MB** (49,216,153 bytes; 247 files) | **44.44 MB** (46,600,736 bytes; 197 files) | **-2.49 MB (-2,615,417 bytes)** | **PASS** |
 | **`reports/` Tracked Size** | 5.69 MB (92 files) | 3.14 MB (38 files) | **-2.55 MB (-44.82%)** | **PASS** |
 | **Lint** | Exit 0 (`eslint .`) | Exit 0 (`eslint .`) | No change | **PASS** |
 | **Typecheck** | Exit 0 (`tsc --noEmit`) | Exit 0 (`tsc --noEmit`) | No change | **PASS** |
 | **Unit Tests (`vitest`)** | 36 test files / 326 passed | 36 test files / 326 passed | Exact match (100% pass) | **PASS** |
+| **E2E Tests (`playwright`)** | 139 passed / 3 failed | 142 passed / 0 failed (142/142) | +3 passed (100% pass) | **PASS** |
 | **Static Build Page Count** | 28 static pages | 28 static pages | Exact match | **PASS** |
 | **Validate Data** | 21 cities / 58 lines / 77 segments / 917 stations | 21 cities / 58 lines / 77 segments / 917 stations | Exact match | **PASS** |
-| **Audit Data Errors** | 3 errors (1 non-pending, 2 pending) | 3 errors (1 non-pending, 2 pending) | Exact match | **PASS** |
+| **Audit Data Errors** | 3 errors (1 enforced + 2 pending) | 3 errors (1 enforced + 2 pending) | Exact match | **PASS** |
 | **Audit Data Warnings** | 1,234 warnings / 14 coverage gaps | 1,234 warnings / 14 coverage gaps | Exact match | **PASS** |
 | **`data/` Content Diff** | Clean | `git diff --stat data/` is empty | Zero data changes | **PASS** |
 
 ---
 
-## 2. Commit List on `chore/repo-cleanup`
+## 2. Exact Data Audit Partition
 
-1. [`5e835fa`](https://github.com/AnayYadav009/indian-metro-tracker/commit/5e835fa) `chore(hygiene): update .gitignore for editor artifacts, logs, and scratch`  
-   - Added explicit patterns to prevent tracking of scratch/debug scripts, log dumps, and editor backups (`*.log`, `*.orig`, `*.rej`, `*.bak`, `*~`, `/scratch/`).
-2. [`61a7e25`](https://github.com/AnayYadav009/indian-metro-tracker/commit/61a7e25) `chore(hygiene): consolidate historical reports into ARCHIVE-SUMMARY and remove superseded files`  
-   - Consolidated 56 intermediate subagent debugging notes, outdated daily audit logs, and older drafts into `reports/ARCHIVE-SUMMARY.md`.
-   - Executed `git rm` across 54 superseded files in `reports/data-audit/`, `reports/data/`, `reports/progress/`, and `reports/cleanup/`.
-   - Tracked the current authoritative `reports/progress/2026-10-18-milestone-audit.md` and cleanup baseline/manifest files.
-3. [`a280aca`](https://github.com/AnayYadav009/indian-metro-tracker/commit/a280aca) `chore(routing): register verify:routing script in package.json`  
-   - Wired `scripts/verify-routing.ts` to `npm run verify:routing` in `package.json`, resolving the dead-code warning while preserving all 945 lines of verified transit routing algorithms.
+The project's automated audit suite (`npm run audit:data`) evaluates consistency and geometry across all networks. The exact measured audit partition is:
+
+- **Errors (Total: 3, exit code 1):**
+  - **1 Enforced Error:** `del-pink` parallel duplicate segments (`del-pink-seg-3` and `del-pink-seg-4` identical geometry on Delhi Pink line).
+  - **2 Pending-Rule Errors:**
+    - `bhopal`: `city_km_delta` (actual operational km mismatch against declared operational km).
+    - `gurugram`: `line_terminal_missing` (Rapid Metro line terminal station geometry reference).
+
+- **Warnings (Total: 1,234):**
+  - **1,076** Accepted baselined warnings (in `data/audit-baseline.json`).
+  - **88** Unreviewed baselined warnings.
+  - **40** Pending-rule warnings.
+  - **30** Unbaselined warnings (deferred to planning; requiring sourced owner decisions).
+  - *(1,076 + 88 + 40 + 30 = 1,234)*
+
+- **Other Audit Metrics:**
+  - **14** Coverage gaps (cities with partial or missing line status/geometry coverage).
+  - **14** Stale baseline entries (identified by baseline integrity check; untouched per data freeze rules).
 
 ---
 
-## 3. Items Removed per Category
+## 3. Commit History Across Branches
+
+### Cleanup Commits (`chore/repo-cleanup`, merged in `57e2b9c`):
+1. [`5e835fa`](https://github.com/AnayYadav009/indian-metro-tracker/commit/5e835fa) `chore(hygiene): update .gitignore for editor artifacts, logs, and scratch`
+2. [`61a7e25`](https://github.com/AnayYadav009/indian-metro-tracker/commit/61a7e25) `chore(hygiene): consolidate historical reports into ARCHIVE-SUMMARY and remove superseded files`
+3. [`a280aca`](https://github.com/AnayYadav009/indian-metro-tracker/commit/a280aca) `chore(routing): register verify:routing script in package.json`
+4. [`8e339d2`](https://github.com/AnayYadav009/indian-metro-tracker/commit/8e339d2) `chore(cleanup): record baseline metrics and cleanup manifest for chore/repo-cleanup`
+5. [`cdaa392`](https://github.com/AnayYadav009/indian-metro-tracker/commit/cdaa392) `docs(cleanup): add comprehensive final verification and audit report`
+
+### Fix Commits (`fix/e2e-delhi-notice-mobile-filter`):
+1. [`4260a4d`](https://github.com/AnayYadav009/indian-metro-tracker/commit/4260a4d) `fix(e2e): click Details before asserting Delhi completeness notice; park mobile filter overlap BUG-03`
+2. [`10a6e5d`](https://github.com/AnayYadav009/indian-metro-tracker/commit/10a6e5d) `fix(ui, e2e): collapse MapLegend by default on mobile, fix spec synchronization, and resolve mobile filter obstruction`
+3. [`bc94229`](https://github.com/AnayYadav009/indian-metro-tracker/commit/bc94229) `chore(qa): remove one-off mobile verification screenshots`
+4. [`e3e9c18`](https://github.com/AnayYadav009/indian-metro-tracker/commit/e3e9c18) `docs: keep PARKED-ISSUES for open items only and move resolved items to ARCHIVE-SUMMARY`
+
+---
+
+## 4. Items Removed per Category
 
 ### A. Untracked Build Outputs & Scratch Folders
 - `.next/` (144 files, 366.09 MB) — Next.js build cache.
@@ -46,7 +74,7 @@
 - `reports/data-audit/2026-10-10-map-issues-debug.geojson` (1 file, 0.48 MB) — Debug geojson artifact.
 - `tsconfig.tsbuildinfo` (1 file, 0.16 MB) — Incremental build cache.
 
-### B. Tracked Superseded Reports (54 files removed, 70,729 lines of markdown/json pruned)
+### B. Tracked Superseded Reports (54 files removed, 70,729 lines pruned)
 - **Intermediate Task Notes (20 files):** `reports/data-audit/2026-10-10-*.md` (tasks d–h, map issues), `reports/data-audit/2026-10-15-phase*.md` (phases 2–7).
 - **Historical Daily Audit Snapshots (18 files):** `reports/data-audit/2026-10-07` through `2026-10-17` (`.json` and `.md`).
 - **Superseded Progress & Error Reports (7 files):** `reports/progress/2026-10-15-error-fix*.md`, `2026-10-15-raw-refresh-diff.md`, `2026-10-15.md`, `2026-10-15-milestone-audit.md`, `2026-10-16-milestone-audit.md`.
@@ -59,7 +87,7 @@ Pruned via safe `git branch -d`:
 
 ---
 
-## 4. Dependencies & Code Intentionally Retained
+## 5. Dependencies & Code Intentionally Retained
 
 1. **`eslint-config-next`:** Retained. Knip flags it as unused, but `eslint.config.mjs` calls `compat.extends("next/core-web-vitals")` which internally resolves it.
 2. **`scripts/verify-routing.ts`:** Retained and registered as `npm run verify:routing`. Evaluates 47 operational lines across 21 cities and ensures transit graph integrity.
@@ -69,27 +97,26 @@ Pruned via safe `git branch -d`:
 
 ---
 
-## 5. E2E Test Suite Results (139 passed / 3 failed)
+## 6. E2E Test Suite Results (142/142 passed)
 
 Ran against the statically exported build and local server across 142 defined test specs:
-- **Passed:** 139 / 142 tests.
-- **Failures (identical on `master` and `chore/repo-cleanup`):**
-  1. `[chromium] city-pages.spec.ts:66`: Expectation of caveat banner fails because the banner is rendered inside a collapsed expandable details drawer (`CityDataNotice`), and the test does not click `"Details"` before asserting visibility.
-  2. `[mobile-chrome] city-pages.spec.ts:66`: Same collapsed visibility expectation in mobile viewport.
-  3. `[mobile-chrome] filters.spec.ts:71`: Mobile viewport pointer event interception between the mobile status toggle and the bottom-right container overlay under single-worker load.
+- **Passed:** 142 / 142 tests across Chromium and Mobile Chrome.
+- **Resolved Failures:**
+  1. `city-pages.spec.ts:66`: Updated to click `"Details"` drawer prior to asserting completeness notice visibility.
+  2. `filters.spec.ts:71`: Collapsed `MapLegend` by default below 768px viewport width, eliminating pointer event obstruction over the mobile status filter toggles. Verified 10/10 consecutive passes across iPhone 13, Samsung Galaxy S8+, and Pixel 7 viewports.
 
 ---
 
-## 6. Verification Matrix Against Baseline
+## 7. Measured Verification Matrix
 
-| Command | Baseline Value | Post-Cleanup Value | Diff / Outcome |
+| Command | Expected Baseline | Measured Branch Value | Diff / Outcome |
 |---|---|---|---|
 | `npm run lint` | Pass (0 errors) | Pass (0 errors) | Identical |
 | `npm run typecheck` | Pass (0 errors) | Pass (0 errors) | Identical |
-| `npm test` | 36 passed / 326 passed | 36 passed / 326 passed | Identical (100% pass) |
+| `npx vitest run` | 36 passed / 326 passed | 36 files / 326 passed | Identical (100% pass) |
 | `npm run build` | 28 static pages | 28 static pages | Identical |
 | `npm run validate:data` | 21 cities / 58 lines / 77 segments / 917 stations | 21 cities / 58 lines / 77 segments / 917 stations | Identical |
-| `npm run audit:data` | 3 errors, 1,234 warnings, 14 coverage gaps | 3 errors, 1,234 warnings, 14 coverage gaps | Identical |
+| `npm run audit:data` | 3 errors, 1,234 warnings, 14 coverage gaps | 3 errors (1 enforced + 2 pending), 1,234 warnings, 14 coverage gaps | Identical |
+| `npx playwright test` | 139 passed / 3 failed | 142 passed / 0 failed | +3 passed (100% pass) |
 | `git diff --stat data/` | 0 changes | 0 changes | Empty |
 
-*Branch status:* Ready on `chore/repo-cleanup` for owner review. Not merged to `master`.

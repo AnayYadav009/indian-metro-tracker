@@ -152,25 +152,4 @@ The audit engine (`scripts/audit/audit-engine.ts`) implements three hardcoded ex
 - **Suggested Next Step**: Add a subtitle or explanatory column in documentation/audit tables explicitly distinguishing "Total Stations Compiled" from "Operational Routable Stations".
 - **Severity**: **Low** (clarification and documentation alignment).
 
----
-
-## 13. BUG-01: Station Deduplication Geometry Calculation Inlines Haversine
-
-- **File**: `scripts/audit/dedupe-report.ts`
-- **Line(s)**: Lines 14–25 & 100–115
-- **Description**: `dedupe-report.ts` duplicates its own incomplete Haversine distance formula locally instead of importing canonical `haversineDistanceM` from `lib/geo.ts`. Furthermore, its station parsing logic relies on raw node structure assumptions that diverge from the pipeline's normalized station representation in `scripts/pipeline/normalize.ts`.
-- **Severity**: **Low** (audit/report tooling inconsistency).
-- **Status**: **Open** (parked for subsequent audit refactor).
-
----
-
-## 14. BUG-02: `useUrlSync` Hardcodes Year Lower Bound (1984)
-
-- **File**: `hooks/use-url-sync.ts`
-- **Line(s)**: Line 89
-- **Description**: Verification check: `MIN_DATASET_YEAR` is defined in `lib/timeline-utils.ts` (`export const MIN_DATASET_YEAR = 1984;`). Inspection of `hooks/use-url-sync.ts` (lines 6 & 89) confirms that `MIN_DATASET_YEAR` was already imported and used (`if (!Number.isNaN(yr) && yr >= MIN_DATASET_YEAR)`), committed in `4398c75` ("chore(cleanup): centralize constants and eliminate magic values (Batch 2)"). There is no remaining hardcoded `1984` literal in `hooks/use-url-sync.ts`.
-- **Severity**: **Informational** (audit verification).
-- **Status**: **Resolved** (already fixed in `4398c75`).
-
-
 
