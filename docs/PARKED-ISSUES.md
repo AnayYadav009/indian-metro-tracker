@@ -152,4 +152,25 @@ The audit engine (`scripts/audit/audit-engine.ts`) implements three hardcoded ex
 - **Suggested Next Step**: Add a subtitle or explanatory column in documentation/audit tables explicitly distinguishing "Total Stations Compiled" from "Operational Routable Stations".
 - **Severity**: **Low** (clarification and documentation alignment).
 
+---
+
+## 13. BUG-01: Station Deduplication Geometry Calculation Inlines Haversine
+
+- **File**: `scripts/audit/dedupe-report.ts`
+- **Line(s)**: Lines 14–25 & 100–115
+- **Description**: `dedupe-report.ts` duplicates its own incomplete Haversine distance formula locally instead of importing canonical `haversineDistanceM` from `lib/geo.ts`. Furthermore, its station parsing logic relies on raw node structure assumptions that diverge from the pipeline's normalized station representation in `scripts/pipeline/normalize.ts`.
+- **Severity**: **Low** (audit/report tooling inconsistency).
+- **Status**: **Open** (parked for subsequent audit refactor).
+
+---
+
+## 14. BUG-02: `useUrlSync` Hardcodes Year Lower Bound (1984)
+
+- **File**: `hooks/use-url-sync.ts`
+- **Line(s)**: Line 88
+- **Description**: `hooks/use-url-sync.ts` validates the URL `year` parameter with `if (!Number.isNaN(yr) && yr >= 1984)` using a hardcoded numeric literal instead of importing the canonical constant `MIN_DATASET_YEAR` from `@/lib/timeline-utils`. If historical networks or earlier stages are added to the tracker, URL parameter hydration will silently reject valid years prior to 1984.
+- **Severity**: **Low** (code hygiene / constant synchronization).
+- **Status**: **Open** (parked for subsequent UI refactor).
+
+
 
