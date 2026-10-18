@@ -167,10 +167,10 @@ The audit engine (`scripts/audit/audit-engine.ts`) implements three hardcoded ex
 ## 14. BUG-02: `useUrlSync` Hardcodes Year Lower Bound (1984)
 
 - **File**: `hooks/use-url-sync.ts`
-- **Line(s)**: Line 88
-- **Description**: `hooks/use-url-sync.ts` validates the URL `year` parameter with `if (!Number.isNaN(yr) && yr >= 1984)` using a hardcoded numeric literal instead of importing the canonical constant `MIN_DATASET_YEAR` from `@/lib/timeline-utils`. If historical networks or earlier stages are added to the tracker, URL parameter hydration will silently reject valid years prior to 1984.
-- **Severity**: **Low** (code hygiene / constant synchronization).
-- **Status**: **Open** (parked for subsequent UI refactor).
+- **Line(s)**: Line 89
+- **Description**: Verification check: `MIN_DATASET_YEAR` is defined in `lib/timeline-utils.ts` (`export const MIN_DATASET_YEAR = 1984;`). Inspection of `hooks/use-url-sync.ts` (lines 6 & 89) confirms that `MIN_DATASET_YEAR` was already imported and used (`if (!Number.isNaN(yr) && yr >= MIN_DATASET_YEAR)`), committed in `4398c75` ("chore(cleanup): centralize constants and eliminate magic values (Batch 2)"). There is no remaining hardcoded `1984` literal in `hooks/use-url-sync.ts`.
+- **Severity**: **Informational** (audit verification).
+- **Status**: **Resolved** (already fixed in `4398c75`).
 
 
 
