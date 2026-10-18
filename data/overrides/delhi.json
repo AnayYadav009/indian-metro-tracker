@@ -232,6 +232,7 @@
       "expected_completion": null,
       "color": "#FC8EAC",
       "city_id": "delhi",
+      "trim_to_endpoints": true,
       "endpoint_station_ids": [
         "del-shiv-vihar",
         "del-majlis-park"

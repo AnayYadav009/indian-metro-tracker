@@ -107,6 +107,7 @@ export interface CityOverrideData {
     geometry_quality?: "exact" | "schematic";
     shared_corridor?: SharedCorridor;
     endpoint_station_ids?: string[];
+    trim_to_endpoints?: boolean;
     stations_not_published?: boolean;
   }>;
   interchangeStationNames?: string[];
@@ -555,7 +556,11 @@ export function mergeCityOverrides(
       haversineDistanceM(coords[0], coords[coords.length - 1]) <= 50;
 
     const endpointIds = iseg.segOverride.endpoint_station_ids;
-    if (endpointIds && endpointIds.length === 2) {
+    if (
+      iseg.segOverride.trim_to_endpoints &&
+      endpointIds &&
+      endpointIds.length === 2
+    ) {
       const st1 = stationsWithLines.find((sw) => sw.st.id === endpointIds[0]);
       const st2 = stationsWithLines.find((sw) => sw.st.id === endpointIds[1]);
       if (st1 && st2) {
