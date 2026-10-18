@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import { ChevronDown, ChevronUp, Layers } from "lucide-react";
 import { useMetroStore } from "@/store/use-metro-store";
 import { getMetroData } from "@/lib/data";
@@ -13,6 +13,16 @@ interface MapLegendProps {
 
 export function MapLegend({ className = "" }: MapLegendProps) {
   const [isExpanded, setIsExpanded] = useState(true);
+
+  useEffect(() => {
+    if (
+      typeof window !== "undefined" &&
+      typeof window.matchMedia === "function" &&
+      window.matchMedia("(max-width: 767px)").matches
+    ) {
+      setIsExpanded(false);
+    }
+  }, []);
   const selectedCityId = useMetroStore((state) => state.selectedCityId);
 
   const dataset = useMemo(() => getMetroData(), []);
