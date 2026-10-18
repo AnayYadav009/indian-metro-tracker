@@ -39,9 +39,12 @@ yarn-error.log*
 .env
 .env*.local
 
-# generated audit debug artifacts
+# generated audit debug artifacts and dated snapshots
 /reports/data-audit/*-debug.geojson
+reports/data-audit/20??-??-??.json
+reports/data-audit/20??-??-??.md
 
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
