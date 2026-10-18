@@ -2,6 +2,7 @@
 
 import React, { useMemo, useCallback } from "react";
 import type { StationProperties } from "@/types/schema";
+import { ArrowRight } from "lucide-react";
 import { getMetroData, getSegments } from "@/lib/data";
 import { useMetroStore } from "@/store/use-metro-store";
 import {
@@ -23,6 +24,7 @@ interface StationDetailProps {
 export function StationDetail({ station, coordinates }: StationDetailProps) {
   const dataset = useMemo(() => getMetroData(), []);
   const setSelectedFeature = useMetroStore((s) => s.setSelectedFeature);
+  const startRouteFromStation = useMetroStore((s) => s.startRouteFromStation);
 
   // Map line_ids to full line info (names and colors)
   // For cross-network or clustered interchanges, aggregate lines from all stations sharing interchange_id
@@ -74,13 +76,13 @@ export function StationDetail({ station, coordinates }: StationDetailProps) {
   const knownIssueNotice = getKnownIssueNotice(station.line_ids);
 
   return (
-    <div data-testid="station-detail" className="flex flex-col gap-4 text-slate-200">
+    <div data-testid="station-detail" className="flex flex-col gap-2.5 text-slate-200">
       {/* Station Name Header & Interchange Badge */}
       <div className="flex items-start justify-between gap-2">
         <div className="min-w-0 flex-1">
           <h3
             title={station.name}
-            className="text-base font-bold tracking-tight text-white leading-snug break-words"
+            className="text-sm font-bold tracking-tight text-white leading-snug break-words"
           >
             {station.name}
           </h3>
@@ -92,7 +94,7 @@ export function StationDetail({ station, coordinates }: StationDetailProps) {
       </div>
 
       {/* Badges row: Status, Phase, Layout */}
-      <div className="flex flex-wrap items-center gap-2">
+      <div className="flex flex-wrap items-center gap-1.5">
         <StatusBadge status={station.status} />
         <PhaseBadge phase={station.phase} />
         <LayoutBadge layout={station.layout} />
@@ -102,7 +104,7 @@ export function StationDetail({ station, coordinates }: StationDetailProps) {
         <p
           data-testid="known-issue-notice"
           role="status"
-          className="rounded-md border border-amber-400/30 bg-amber-400/10 px-3 py-2 text-xs leading-relaxed text-amber-100"
+          className="rounded-md border border-amber-400/30 bg-amber-400/10 px-2.5 py-1.5 text-[11px] leading-relaxed text-amber-100"
         >
           {knownIssueNotice}
         </p>
@@ -112,19 +114,19 @@ export function StationDetail({ station, coordinates }: StationDetailProps) {
       {isInterchange && connectedLines.length > 1 ? (
         <div
           data-testid="interchange-lines-section"
-          className="flex flex-col gap-1.5 rounded-lg border border-amber-400/20 bg-amber-400/5 p-3 text-xs"
+          className="flex flex-col gap-1 rounded-lg border border-amber-400/20 bg-amber-400/5 p-2.5 text-[11px]"
         >
           <span className="text-amber-300 font-semibold">
             Interchange — connects
           </span>
-          <div className="flex flex-wrap gap-2 pt-0.5">
+          <div className="flex flex-wrap gap-1.5 pt-0.5">
             {connectedLines.map((line) => (
               <button
                 key={line.id}
                 type="button"
                 data-testid={`connected-line-${line.id}`}
                 onClick={() => handleLineChipClick(line.id)}
-                className="inline-flex items-center gap-1.5 rounded-full border border-slate-700 bg-slate-900 px-2.5 py-1 text-xs font-semibold text-slate-100 shadow-sm transition-all hover:border-slate-500 hover:bg-slate-800 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
+                className="inline-flex items-center gap-1 rounded-full border border-slate-700 bg-slate-900 px-2 py-0.5 text-[11px] font-semibold text-slate-100 shadow-sm transition-all hover:border-slate-500 hover:bg-slate-800 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
               >
                 <span
                   data-testid={`interchange-line-chip-${line.id}`}
@@ -146,14 +148,14 @@ export function StationDetail({ station, coordinates }: StationDetailProps) {
           </div>
         </div>
       ) : (
-        <div className="flex flex-col gap-1.5 rounded-lg border border-slate-800 bg-slate-950/60 p-3 text-xs">
+        <div className="flex flex-col gap-1 rounded-lg border border-slate-800 bg-slate-950/60 p-2.5 text-[11px]">
           <span className="text-slate-400 font-medium">Connected Lines</span>
-          <div className="flex flex-wrap gap-2 pt-1">
+          <div className="flex flex-wrap gap-1.5 pt-0.5">
             {connectedLines.map((line) => (
               <span
                 key={line.id}
                 data-testid={`connected-line-${line.id}`}
-                className="inline-flex items-center gap-1.5 rounded-full border border-slate-800 bg-slate-900 px-2.5 py-1 text-xs font-semibold text-slate-100 shadow-sm"
+                className="inline-flex items-center gap-1 rounded-full border border-slate-800 bg-slate-900 px-2 py-0.5 text-[11px] font-semibold text-slate-100 shadow-sm"
               >
                 <span
                   className="h-2 w-2 rounded-full shrink-0"
@@ -172,7 +174,7 @@ export function StationDetail({ station, coordinates }: StationDetailProps) {
       )}
 
       {/* Grid metadata */}
-      <div className="grid grid-cols-2 gap-2.5 rounded-lg border border-slate-800 bg-slate-950/60 p-3 text-xs">
+      <div className="grid grid-cols-2 gap-x-2 gap-y-1.5 rounded-lg border border-slate-800 bg-slate-950/60 p-2.5 text-[11px]">
         <div>
           <span className="text-slate-400">City</span>
           <p className="font-semibold text-slate-100">{station.city}</p>
@@ -199,11 +201,19 @@ export function StationDetail({ station, coordinates }: StationDetailProps) {
         )}
       </div>
 
+      <button
+        type="button"
+        onClick={() => startRouteFromStation(station)}
+        className="inline-flex w-fit items-center gap-1.5 rounded-md border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-1.5 text-[11px] font-medium text-emerald-300 transition-colors hover:bg-emerald-500/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
+      >
+        Route from here <ArrowRight className="h-3 w-3" />
+      </button>
+
       {/* Report an Issue Button */}
       <ReportIssueButton target={{ type: "station", data: station, coordinates }} />
 
       {/* Provenance footer */}
-      <div className="flex items-center justify-between border-t border-slate-800/80 pt-3 text-[11px] text-slate-400">
+      <div className="flex items-center justify-between border-t border-slate-800/80 pt-2 text-[10px] text-slate-400">
         <span className="flex items-center gap-1.5">
           <span>Source:</span>
           <span

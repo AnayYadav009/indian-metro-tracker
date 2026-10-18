@@ -7,6 +7,8 @@ describe("useMetroStore Zustand State Management", () => {
     useMetroStore.getState().resetFilters();
     useMetroStore.getState().clearSelectedFeature();
     useMetroStore.getState().setHoveredFeature(null);
+    useMetroStore.getState().setIsNearestPanelOpen(false);
+    useMetroStore.getState().setIsRoutePanelOpen(false);
     if (!useMetroStore.getState().showStations) {
       useMetroStore.getState().toggleStations();
     }
@@ -59,6 +61,16 @@ describe("useMetroStore Zustand State Management", () => {
     useMetroStore.getState().setSelectedCity("delhi");
     expect(useMetroStore.getState().selectedCityId).toBe("delhi");
     expect(useMetroStore.getState().selectedPhases).toEqual([]);
+  });
+
+  it("keeps the route and nearest panels mutually exclusive", () => {
+    useMetroStore.getState().setIsNearestPanelOpen(true);
+    expect(useMetroStore.getState().isNearestPanelOpen).toBe(true);
+    expect(useMetroStore.getState().isRoutePanelOpen).toBe(false);
+
+    useMetroStore.getState().setIsRoutePanelOpen(true);
+    expect(useMetroStore.getState().isRoutePanelOpen).toBe(true);
+    expect(useMetroStore.getState().isNearestPanelOpen).toBe(false);
   });
 
   it("clears selectedFeature when switching to a city that does not own the feature", () => {

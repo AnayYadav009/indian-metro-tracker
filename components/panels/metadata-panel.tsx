@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useMemo } from "react";
-import { X } from "lucide-react";
+import { ArrowLeft, X } from "lucide-react";
 import { useMetroStore } from "@/store/use-metro-store";
 import { SegmentDetail } from "./segment-detail";
 import { StationDetail } from "./station-detail";
@@ -10,6 +10,9 @@ import { getStationById } from "@/lib/data";
 
 export function MetadataPanel() {
   const selectedFeature = useMetroStore((state) => state.selectedFeature);
+  const isNearestPanelOpen = useMetroStore((state) => state.isNearestPanelOpen);
+  const isRoutePanelOpen = useMetroStore((state) => state.isRoutePanelOpen);
+  const setSelectedFeature = useMetroStore((state) => state.setSelectedFeature);
   const clearSelectedFeature = useMetroStore(
     (state) => state.clearSelectedFeature
   );
@@ -30,16 +33,29 @@ export function MetadataPanel() {
   return (
     <div
       data-testid="metadata-panel"
-      className="fixed inset-x-0 bottom-0 z-40 flex max-h-[80vh] flex-col rounded-t-2xl border-t border-slate-800 bg-slate-900/95 p-5 shadow-2xl backdrop-blur-md transition-all duration-200 md:absolute md:top-4 md:right-14 md:bottom-auto md:inset-x-auto md:w-96 md:max-h-[calc(100vh-6rem)] md:rounded-xl md:border md:border-slate-800"
+      className="fixed inset-x-0 bottom-0 z-40 flex max-h-[80vh] flex-col overflow-y-auto rounded-t-2xl border-t border-slate-800 bg-slate-900/95 p-5 shadow-2xl backdrop-blur-md transition-all duration-200 md:absolute md:top-4 md:right-14 md:bottom-auto md:inset-x-auto md:w-96 md:max-h-[calc(100vh-8.5rem)] md:rounded-xl md:border md:border-slate-800"
     >
       <div className="mx-auto mb-2 h-1 w-12 rounded-full bg-slate-700 md:hidden" />
 
-      <div className="flex items-center justify-between border-b border-slate-800/80 pb-3">
-        <div className="flex items-center gap-2">
-          <span className="flex h-2 w-2 rounded-full bg-sky-400" />
-          <h2 className="text-sm font-semibold tracking-wide text-slate-200 uppercase">
-            {title}
-          </h2>
+      <div className="flex items-center justify-between gap-2 border-b border-slate-800/80 pb-2">
+        <div className="flex min-w-0 items-center gap-2">
+          <span className="flex h-2 w-2 shrink-0 rounded-full bg-sky-400" />
+          <div className="min-w-0">
+            {(isNearestPanelOpen || isRoutePanelOpen) && (
+              <button
+                type="button"
+                onClick={() => setSelectedFeature(null)}
+                aria-label={`Back to ${isNearestPanelOpen ? "Nearest" : "Route"}`}
+                className="mb-0.5 inline-flex items-center gap-1 text-[10px] font-medium text-emerald-300 hover:text-emerald-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
+              >
+                <ArrowLeft className="h-3 w-3" />
+                Back to {isNearestPanelOpen ? "Nearest" : "Route"}
+              </button>
+            )}
+            <h2 className="text-sm font-semibold tracking-wide text-slate-200 uppercase">
+              {title}
+            </h2>
+          </div>
         </div>
 
         <button
@@ -53,7 +69,7 @@ export function MetadataPanel() {
         </button>
       </div>
 
-      <div className="overflow-y-auto pt-4 pr-1">
+      <div className="min-h-0 flex-1 overflow-y-auto pt-3 pr-1">
         {isSegment ? (
           <SegmentDetail segment={selectedFeature.data} />
         ) : (
