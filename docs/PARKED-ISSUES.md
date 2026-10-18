@@ -152,27 +152,4 @@ The audit engine (`scripts/audit/audit-engine.ts`) implements three hardcoded ex
 - **Suggested Next Step**: Add a subtitle or explanatory column in documentation/audit tables explicitly distinguishing "Total Stations Compiled" from "Operational Routable Stations".
 - **Severity**: **Low** (clarification and documentation alignment).
 
----
-
-## 13. BUG-01: Station Deduplication Geometry Calculation Inlines Haversine — **Resolved** (already fixed in `5816e50`)
-
-## 14. BUG-02: `useUrlSync` Hardcodes Year Lower Bound (1984) — **Resolved** (already fixed in `4398c75`)
-
----
-
-## 15. BUG-04: Mobile Viewport (390x844) Pointer Event Interception on Filter Controls
-
-- **File**: `components/legend/map-legend.tsx` & `components/filters/filter-panel.tsx`
-- **Context & Evidence**:
-  - In `filters.spec.ts:71` on `mobile-chrome` (viewport 390×844), clicking `<button data-testid="status-toggle-operational">` fails because `<div data-testid="bottom-right-container">` / `<div data-testid="legend-content">` intercepts pointer events.
-  - Measured bounding boxes at 390×844:
-    - `filter-panel`: `{ x: 16, y: 72, width: 379, height: 409 }` (bottom: `y = 481`).
-    - `status-toggle-operational`: `{ x: 29, y: 400, width: 349, height: 39.25 }`.
-    - `bottom-right-container` (expanded legend): `{ x: 96.6, y: 301, width: 307.4, height: 458 }`.
-  - The expanded MapLegend spans from `y = 301` to `y = 759`, completely covering `y = 400..439` where `status-toggle-operational` sits.
-  - A real human user tapping the screen over the "Operational" toggle directly touches the semi-opaque MapLegend backdrop instead of the toggle button.
-  - Naively elevating `filter-panel` from `z-20` to `z-30` causes the expanded filter panel to intercept touches meant for the MapLegend collapse toggle (`toggle-legend-btn`), breaking `attribution.spec.ts` and `legend.spec.ts`.
-- **Severity**: **Medium** (mobile responsive UX layout conflict).
-- **Status**: **Open** (requires responsive drawer redesign or mobile-specific positioning).
-
 

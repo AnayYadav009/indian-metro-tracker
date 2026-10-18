@@ -48,3 +48,30 @@ During Delhi Pink Phase 4 onboarding on branch `data/delhi-pink-phase4-v2`, draf
 
 ### E. Early Task 0 Cleanup Inventory (Oct 10)
 Early cleanup scratch documents (`inventory.md`, `CLEANUP-PLAN.md`, `CLEANUP-LOG.md`, `BUGS-FOUND.md`, `baseline.md`) from October 10 documented git status on commit `3117dcd`. They are completely superseded by the October 18 cleanup baseline [`reports/cleanup/baseline.txt`](cleanup/baseline.txt) and manifest [`reports/cleanup/manifest.md`](cleanup/manifest.md).
+
+---
+
+## 2. Resolved Items Since Cleanup
+
+The following defects, code hygiene bugs, and responsive layout conflicts were triaged and resolved:
+
+1. **BUG-01: Station Deduplication Geometry Calculation Inlines Haversine**
+   - *File*: `scripts/audit/dedupe-report.ts` (lines 4 & 85)
+   - *Resolution*: Replaced local haversine implementation with `haversineDistanceM` from `lib/geo.ts`.
+   - *Fixing Commit*: `5816e50` ("chore(cleanup): extract buildFilterCriteria helper, dedupe haversine, fix mobile-chrome E2E slider test (Batch 3)")
+
+2. **BUG-02: `useUrlSync` Hardcodes Year Lower Bound (1984)**
+   - *File*: `hooks/use-url-sync.ts` (lines 6 & 89)
+   - *Resolution*: Centralized timeline year constant; imported and hydrated using `MIN_DATASET_YEAR` from `@/lib/timeline-utils`.
+   - *Fixing Commit*: `4398c75` ("chore(cleanup): centralize constants and eliminate magic values (Batch 2)")
+
+3. **BUG-03: `scripts/audit/generate-triage-report.ts` Unhandled Missing Temporary File**
+   - *File*: `scripts/audit/generate-triage-report.ts` (referenced in historical `BUGS-FOUND.md`)
+   - *Resolution*: Ephemeral triage script removed during cleanup manifest execution.
+   - *Fixing Commit*: `61a7e25` ("chore(hygiene): consolidate historical reports into ARCHIVE-SUMMARY and remove superseded files")
+
+4. **BUG-04: Mobile Viewport (390x844) Pointer Event Interception on Filter Controls**
+   - *File*: `components/legend/map-legend.tsx` & `e2e/legend.spec.ts` & `e2e/attribution.spec.ts`
+   - *Resolution*: Collapsed MapLegend by default on viewports below 768px via client `useEffect` after mount; synchronized E2E specs for mobile legend toggle.
+   - *Fixing Commit*: `10a6e5d` ("fix(ui, e2e): collapse MapLegend by default on mobile, fix spec synchronization, and resolve mobile filter obstruction")
+
