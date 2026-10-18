@@ -154,23 +154,25 @@ The audit engine (`scripts/audit/audit-engine.ts`) implements three hardcoded ex
 
 ---
 
-## 13. BUG-01: Station Deduplication Geometry Calculation Inlines Haversine
+## 13. BUG-01: Station Deduplication Geometry Calculation Inlines Haversine — **Resolved** (already fixed in `5816e50`)
 
-- **File**: `scripts/audit/dedupe-report.ts`
-- **Line(s)**: Lines 14–25 & 100–115
-- **Description**: `dedupe-report.ts` duplicates its own incomplete Haversine distance formula locally instead of importing canonical `haversineDistanceM` from `lib/geo.ts`. Furthermore, its station parsing logic relies on raw node structure assumptions that diverge from the pipeline's normalized station representation in `scripts/pipeline/normalize.ts`.
-- **Severity**: **Low** (audit/report tooling inconsistency).
-- **Status**: **Open** (parked for subsequent audit refactor).
+## 14. BUG-02: `useUrlSync` Hardcodes Year Lower Bound (1984) — **Resolved** (already fixed in `4398c75`)
 
 ---
 
-## 14. BUG-02: `useUrlSync` Hardcodes Year Lower Bound (1984)
+## 15. BUG-04: Mobile Viewport (390x844) Pointer Event Interception on Filter Controls
 
-- **File**: `hooks/use-url-sync.ts`
-- **Line(s)**: Line 89
-- **Description**: Verification check: `MIN_DATASET_YEAR` is defined in `lib/timeline-utils.ts` (`export const MIN_DATASET_YEAR = 1984;`). Inspection of `hooks/use-url-sync.ts` (lines 6 & 89) confirms that `MIN_DATASET_YEAR` was already imported and used (`if (!Number.isNaN(yr) && yr >= MIN_DATASET_YEAR)`), committed in `4398c75` ("chore(cleanup): centralize constants and eliminate magic values (Batch 2)"). There is no remaining hardcoded `1984` literal in `hooks/use-url-sync.ts`.
-- **Severity**: **Informational** (audit verification).
-- **Status**: **Resolved** (already fixed in `4398c75`).
-
+- **File**: `components/legend/map-legend.tsx` & `components/filters/filter-panel.tsx`
+- **Context & Evidence**:
+  - In `filters.spec.ts:71` on `mobile-chrome` (viewport 390×844), clicking `<button data-testid="status-toggle-operational">` fails because `<div data-testid="bottom-right-container">` / `<div data-testid="legend-content">` intercepts pointer events.
+  - Measured bounding boxes at 390×844:
+    - `filter-panel`: `{ x: 16, y: 72, width: 379, height: 409 }` (bottom: `y = 481`).
+    - `status-toggle-operational`: `{ x: 29, y: 400, width: 349, height: 39.25 }`.
+    - `bottom-right-container` (expanded legend): `{ x: 96.6, y: 301, width: 307.4, height: 458 }`.
+  - The expanded MapLegend spans from `y = 301` to `y = 759`, completely covering `y = 400..439` where `status-toggle-operational` sits.
+  - A real human user tapping the screen over the "Operational" toggle directly touches the semi-opaque MapLegend backdrop instead of the toggle button.
+  - Naively elevating `filter-panel` from `z-20` to `z-30` causes the expanded filter panel to intercept touches meant for the MapLegend collapse toggle (`toggle-legend-btn`), breaking `attribution.spec.ts` and `legend.spec.ts`.
+- **Severity**: **Medium** (mobile responsive UX layout conflict).
+- **Status**: **Open** (requires responsive drawer redesign or mobile-specific positioning).
 
 
