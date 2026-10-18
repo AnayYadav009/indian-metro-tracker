@@ -22,6 +22,11 @@
 .DS_Store
 *.pem
 /scratch/
+*.log
+*.orig
+*.rej
+*.bak
+*~
 /public/maplibre-gl-worker.mjs
 /public/maplibre-gl-shared.mjs
 
