@@ -1,4 +1,4 @@
-import type { FareRule, ServiceHours } from "../types/metro";
+import type { FareDayScope, FareRule, ServiceHours } from "../types/metro";
 
 export interface FareEstimate {
   fare_inr: number;
@@ -7,6 +7,7 @@ export interface FareEstimate {
   rule_id: string;
   near_boundary: boolean;
   alternative_fare_inr?: number;
+  day_scope: FareDayScope;
 }
 
 export interface RouteLegInput {
@@ -24,6 +25,7 @@ export interface RouteFareGroupEstimate {
   band_index: number;
   near_boundary: boolean;
   alternative_fare_inr?: number;
+  day_scope: FareDayScope;
 }
 
 export interface RouteFareEstimate {
@@ -31,6 +33,7 @@ export interface RouteFareEstimate {
   total_fare_inr: number;
   separate_tickets: boolean;
   any_near_boundary: boolean;
+  day_scope: FareDayScope;
 }
 
 export interface FareCalculationOptions {
@@ -135,6 +138,7 @@ export function estimateFare(
     rule_id: rule.id,
     near_boundary,
     alternative_fare_inr,
+    day_scope: rule.day_scope,
   };
 }
 
@@ -201,18 +205,21 @@ export function estimateRouteFare(
       band_index: estimate.band_index,
       near_boundary: estimate.near_boundary,
       alternative_fare_inr: estimate.alternative_fare_inr,
+      day_scope: g.rule.day_scope,
     };
   });
 
   const total_fare_inr = groupEstimates.reduce((sum, g) => sum + g.fare_inr, 0);
   const any_near_boundary = groupEstimates.some((g) => g.near_boundary);
   const separate_tickets = groupEstimates.length > 1;
+  const day_scope: FareDayScope = groupEstimates[0]?.day_scope ?? "all";
 
   return {
     groups: groupEstimates,
     total_fare_inr,
     separate_tickets,
     any_near_boundary,
+    day_scope,
   };
 }
 

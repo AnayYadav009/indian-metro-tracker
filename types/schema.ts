@@ -388,6 +388,9 @@ export const FareBandSchema = z.object({
 });
 export type FareBand = z.infer<typeof FareBandSchema>;
 
+export const FareDayScopeSchema = z.enum(["mon_sat", "sun_holiday", "all"]);
+export type FareDayScope = z.infer<typeof FareDayScopeSchema>;
+
 export const FareRuleSchema = z
   .object({
     id: z.string().min(1),
@@ -397,6 +400,7 @@ export const FareRuleSchema = z
     ticket_type: z.literal("single_journey"),
     currency: z.literal("INR"),
     distance_basis: z.literal("computed_route_km"),
+    day_scope: FareDayScopeSchema,
     bands: z.array(FareBandSchema).min(1),
     effective_from: z
       .string()
@@ -405,14 +409,17 @@ export const FareRuleSchema = z
     provenance: ProvenanceSchema,
   })
   .superRefine((rule, ctx) => {
-    // Verified FareRule requires effective_from and allowlisted official source_url host
+    // Verified FareRule requires allowlisted official source_url host.
+    // effective_from is optional if the official page states none; if absent, a non-empty note is required.
     if (rule.provenance.status === "verified") {
       if (!rule.effective_from) {
-        ctx.addIssue({
-          code: z.ZodIssueCode.custom,
-          message: "verified FareRule requires effective_from date",
-          path: ["effective_from"],
-        });
+        if (!rule.provenance.note || rule.provenance.note.trim() === "") {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            message: "verified FareRule without effective_from requires a non-empty note explaining that the official page states none",
+            path: ["provenance", "note"],
+          });
+        }
       }
       if (rule.provenance.source_url) {
         try {

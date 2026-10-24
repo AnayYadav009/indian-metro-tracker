@@ -122,6 +122,7 @@ Rules
 ### 13.1 Scope and Base Fare Model
 - Only standard adult single-journey base fares (`ticket_type: "single_journey"`, `currency: "INR"`) are modeled. Smart-card discounts, return tokens, passes, tourist cards, off-peak rates, and concession fares are out of scope.
 - Fares are distance-based (`distance_basis: "computed_route_km"`). The distance basis is derived from our vector geometry, NOT the operator's official tariff distance table. Because geometric route distance may differ slightly from revenue-metered track chains, fares are estimates and include boundary tolerance indicators.
+- **Day Scope (`day_scope`)**: Every `FareRule` has a required descriptive field `day_scope: "mon_sat" | "sun_holiday" | "all"`. This is descriptive metadata only: the one-rule-per-line constraint stays, and Sunday/holiday discounted fares are NOT modeled. Because Sunday and holiday discount fares are not modeled, any UI that displays an estimated fare must explicitly label the fare with its day scope (e.g. "Monday–Saturday").
 
 ### 13.2 Band Rules
 - Each `FareRule` contains ordered distance bands `[{ min_km, max_km, fare_inr }]`.
@@ -135,7 +136,7 @@ Rules
 - Verified `FareRule` and `ServiceHours` require `provenance.status === "verified"`.
 - A verified record MUST cite a specific page `source_url` whose path is not empty or `/`. Bare domain homepages are rejected.
 - The `source_url` hostname for verified records must be on the official-host allowlist (`lib/official-source-hosts.ts`), restricted strictly to transit operator domains and official government transport portals. News, blogs, forums, and unofficial trackers (e.g. `themetrorailguy.com`) are never permitted.
-- Verified `FareRule` records require an `effective_from` date (YYYY-MM-DD).
+- `effective_from` is optional for a verified `FareRule` when the official publication states none. If absent, a non-empty `provenance.note` stating that the official page states no effective date is mandatory. If present, it must be a valid calendar date format (YYYY-MM-DD) read directly from the page.
 - Unverified records (`status: "unverified"`) may omit source URLs or use non-allowlisted references during staging, but are never treated as sourced data.
 
 ### 13.4 Hidden-When-Unsourced Rule

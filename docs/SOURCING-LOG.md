@@ -101,3 +101,88 @@ For manual owner verification by eye against the live official publication:
 | Record ID | Official Source URL | Value 1 | Value 2 | Value 3 |
 | :--- | :--- | :--- | :--- | :--- |
 | `del-fare-dmrc` | [delhimetrorail.com/fare](https://delhimetrorail.com/fare) | **0–2 km**: Rs 11/- (Mon–Sat) | **5–12 km**: Rs 32/- (Mon–Sat) | **>32 km**: Rs 64/- (Mon–Sat) |
+
+---
+
+## 4. Re-capture: DMRC Evidence Re-Capture (Milestone M21c)
+
+> **Notice**: This section supersedes the earlier M21b entries above for `del-fare-dmrc` and `fare-for-airport-express-line`. In M21b, the earlier hashes recorded were of the raw client app shell (`6,117` bytes) and of a DOM captured prior to switching the site language toggle to English. The re-capture below was performed in ONE unified Playwright session with language explicitly set to English, capturing the full rendered DOM, the backing API responses, and their cryptographic SHA-256 digests.
+
+### 4.1 Standard Fare Page Render (`delhimetrorail.com/fare`)
+
+- **Requested URL**: `https://delhimetrorail.com/fare`
+- **Final URL**: `https://delhimetrorail.com/fare`
+- **Render Timestamp (UTC)**: `2026-10-24T18:08:27.710Z`
+- **Language Shown**: English (`"Distance (in KMs)"`, `"FARE"`, `"Time Limit (in Mins.)"`, `"Monday to Saturday"`, `"Sunday & National Holidays"`)
+- **Saved Rendered DOM File**: `C:/Users/anayy/AppData/Local/Temp/dmrc-fare-rendered-english.html` (outside repo)
+- **Rendered DOM Byte Length**: `76,249` bytes
+- **Rendered DOM SHA-256**: `1dacc1cbb95679f08754d1a5816606ab1f0c7d74b61885934ee57cd1090737fb`
+
+### 4.2 Network Response Carrying Fare Table Data
+
+- **API URL**: `https://backend.delhimetrorail.com/api/v2/en/passenger/fare/`
+- **HTTP Status**: `200 OK`
+- **Content-Type**: `application/json`
+- **Byte Length**: `1,533` bytes
+- **Saved API JSON File**: `C:/Users/anayy/AppData/Local/Temp/dmrc-fare-api.json` (outside repo)
+- **Saved API SHA-256**: `8838c5f2cba57fa1764c338ec67d5079677f7cebf4047da2872182542d4103ae`
+- **Agreement**: Scripted comparison (`extract-and-compare.cjs`) verified that the rendered DOM table rows and the backend API JSON rows agree identically across all columns and distance bands.
+
+### 4.3 Script-Extracted Fare Table Rows (All Columns)
+
+| Distance Band (in KMs) | Monday to Saturday Fare | Sunday & National Holidays Fare | Time Limit (in Mins.) |
+| :--- | :--- | :--- | :--- |
+| `0-2` | Rs 11/- | Rs 11/- | 65 |
+| `2-5` | Rs 21/- | Rs. 11/- | - |
+| `5-12` | Rs 32/- | Rs 21/- | - |
+| `12-21` | Rs. 43/- | Rs. 32/- | 100 |
+| `21-32` | Rs 54/- | Rs 43/- | 180 |
+| `More than 32` | Rs 64/- | Rs 54/- | - |
+
+### 4.4 Scripted Comparison with `data/fares.json` (`del-fare-dmrc`)
+
+Scripted comparison against `data/fares.json` (rule `del-fare-dmrc`, `city_id: "delhi"`, `day_scope: "mon_sat"`):
+
+| Band Index | Published Wording | Min Km (Page vs Data) | Max Km (Page vs Data) | Base Fare INR (Page vs Data) | Result |
+| :---: | :--- | :---: | :---: | :---: | :---: |
+| 0 | `0-2` | `0` vs `0` | `2` vs `2` | `11` (Rs 11/-) vs `11` | MATCH |
+| 1 | `2-5` | `2` vs `2` | `5` vs `5` | `21` (Rs 21/-) vs `21` | MATCH |
+| 2 | `5-12` | `5` vs `5` | `12` vs `12` | `32` (Rs 32/-) vs `32` | MATCH |
+| 3 | `12-21` | `12` vs `12` | `21` vs `21` | `43` (Rs. 43/-) vs `43` | MATCH |
+| 4 | `21-32` | `21` vs `21` | `32` vs `32` | `54` (Rs 54/-) vs `54` | MATCH |
+| 5 | `More than 32` | `32` vs `32` | `null` vs `null` | `64` (Rs 64/-) vs `64` | MATCH |
+
+Overall match: **All bands match identically**.
+
+### 4.5 Airport Express Page Re-capture (`fare-for-airport-express-line`)
+
+- **Requested URL**: `https://delhimetrorail.com/fare-for-airport-express-line`
+- **Final URL**: `https://delhimetrorail.com/fare-for-airport-express-line`
+- **Render Timestamp (UTC)**: `2026-10-24T18:08:31.985Z`
+- **Language Shown**: English
+- **Saved Rendered DOM File**: `C:/Users/anayy/AppData/Local/Temp/dmrc-airport-rendered-english.html` (outside repo)
+- **Rendered DOM Byte Length**: `81,573` bytes
+- **Rendered DOM SHA-256**: `cc640aab0f2c6b97ab0b2fde7e8e806d6071ea33a21cbc74e5278782e00a0869`
+- **Single Journey Token Matrix (7 Stations)**:
+  - Stations: New Delhi, Shivaji Stadium, Dhaula Kuan, Delhi Aerocity, IGI Airport, Dwarka Sec 21, Yashobhoomi Dwarka Sector - 25.
+  - New Delhi to Shivaji Stadium: Rs 21
+  - New Delhi to Dhaula Kuan: Rs 43
+  - New Delhi to Delhi Aerocity: Rs 54
+  - New Delhi to IGI Airport: Rs 64
+  - New Delhi to Dwarka Sec 21: Rs 64
+  - New Delhi to Yashobhoomi Dwarka Sector 25: Rs 75
+  - Minimum fare between adjacent stations: Rs 11 (e.g. Aerocity to IGI Airport).
+- **Reason for Exclusion**: Origin-destination matrix tariff model; excluded per owner decision B.
+
+### 4.6 Updated Owner Spot-Check List (M21c)
+
+- **URL**: [https://delhimetrorail.com/fare](https://delhimetrorail.com/fare)
+- **How to switch to English**:
+  1. Open `https://delhimetrorail.com/fare` in a browser.
+  2. If the interface loads in Hindi, click the language switch link in the top header (`English` / `हिन्दी`) or set `localStorage.setItem('lang', 'en')` and refresh.
+  3. Verify the main table heading reads: `"Distance (in KMs) | FARE | Time Limit (in Mins.)"` with subheaders `"Monday to Saturday"` and `"Sunday & National Holidays"`.
+- **Values to compare**:
+  1. **2–5 km band**: Monday to Saturday fare is **Rs 21/-**, contrasted with Sunday & National Holidays fare of **Rs. 11/-** (Rs 10 discount on Sundays).
+  2. **12–21 km band**: Monday to Saturday fare is **Rs. 43/-**, contrasted with Sunday & Holidays fare of **Rs. 32/-**.
+  3. **More than 32 km band**: Monday to Saturday fare is **Rs 64/-**, contrasted with Sunday & Holidays fare of **Rs 54/-**.
+

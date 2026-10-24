@@ -280,10 +280,35 @@ Explicitly skipped for now: live train tracking and real-time arrivals (no free 
 5. **Allowlist Host Review**:
    - All pages fetched (`https://delhimetrorail.com/fare`, `https://delhimetrorail.com/fare-for-airport-express-line`) reside on `delhimetrorail.com`, which is already on the allowlist in `lib/official-source-hosts.ts`.
    - No new host required addition.
-6. **Missing Effective Date and Unverified Status**:
-   - The official fare page `https://delhimetrorail.com/fare` does not state an effective date (`effective_from`).
-   - Per milestone rules ("effective_from ONLY if the page states an effective date. If it does not, the record cannot be verified: load it as 'unverified' or do not load it"), `del-fare-dmrc` is loaded with `provenance.status = "unverified"` and no `effective_from`.
-   - Consequently, `hasSourcedFares("delhi")` returns `false` and the fare feature remains hidden in user-facing UI for Delhi until an official source page publishes an effective date.
+6. **Missing Effective Date and Unverified Status (Superseded by M21c)**:
+   - In M21b, `del-fare-dmrc` was loaded as `unverified` because the official page lacked an `effective_from` date.
+   - In M21c, under Owner Decision A, `effective_from` was made optional for verified FareRules when the official page states none, provided a non-empty explanatory note is given. With complete evidence re-capture (DOM hash, API hash, scripted verification), `del-fare-dmrc` is now `verified`.
+
+---
+
+## M21c Parked Issues: Fares, Timings, and Caveats (Delhi Re-capture)
+
+1. **Sunday and Holiday Fares Not Modeled**:
+   - DMRC publishes a discounted tariff schedule for Sundays and National Holidays (Rs 11 for 0–5 km, Rs 21 for 5–12 km, Rs 32 for 12–21 km, Rs 43 for 21–32 km, Rs 54 for >32 km).
+   - The data model maintains a strict one-rule-per-line constraint; Sunday and holiday fares are NOT modeled as active calculation rules.
+   - Per data standards, `day_scope` is recorded as `"mon_sat"`. Any future UI must explicitly label estimated fares with their day scope so users understand the quote applies to Monday through Saturday travel only.
+2. **Band-Edge Ambiguity**:
+   - The official publication labels distance bands as `"0-2"`, `"2-5"`, `"5-12"`, `"12-21"`, `"21-32"`, `"More than 32"`.
+   - The text does not define whether the boundary values (e.g. exactly 2.0 km or 5.0 km) belong to the upper or lower band.
+   - The engine models bands as closed-open `[min_km, max_km)` with `near_boundary` detection when route distance falls within 0.5 km of an edge, providing an alternative fare hint.
+3. **del-pink Phase 4 Caveat**:
+   - `del-pink` is included in `del-fare-dmrc` as DMRC operates the entire Pink Line under unified fare rules.
+   - However, the Phase 4 extension alignment carries open geometric uncertainty. Distance-derived fare estimates on routes involving those stations are less reliable than surveyed operational segments.
+4. **Airport Express Origin-Destination Matrix (7 Stations)**:
+   - Airport Express uses an origin-destination matrix between 7 stations (New Delhi, Shivaji Stadium, Dhaula Kuan, Delhi Aerocity, IGI Airport, Dwarka Sec 21, Yashobhoomi Dwarka Sector 25) with fares from Rs 11 to Rs 75.
+   - Distance bands cannot represent this matrix. Parked as a future model candidate if station-to-station pricing tables are introduced.
+5. **DMRC Timings Not Loadable**:
+   - DMRC first/last train timings are available only via dynamic frontend queries on the `#first-and-last` modal.
+   - There are no static terminal timetables published by DMRC that can be reliably captured as fixed data records. Service hours for Delhi remain empty.
+6. **Staleness Rule for Old last_verified Fares (M26)**:
+   - Operators revise fares infrequently, but pages can change or fares can increase without URL changes.
+   - In Milestone M26, an audit rule should be designed to flag `last_verified` dates older than an agreed threshold (e.g. 1 year or 2 years) to require recurring provenance re-checks.
+
 
 
 

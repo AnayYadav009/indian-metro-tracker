@@ -104,6 +104,7 @@ describe("M21a Fare and Timing Data Model & Validator", () => {
     ticket_type: "single_journey",
     currency: "INR",
     distance_basis: "computed_route_km",
+    day_scope: "mon_sat",
     bands: [
       { min_km: 0, max_km: 2, fare_inr: 10 },
       { min_km: 2, max_km: 5, fare_inr: 20 },
@@ -120,6 +121,13 @@ describe("M21a Fare and Timing Data Model & Validator", () => {
       note: "Mock verified single journey fare chart",
     },
   };
+
+  function createMockFareRule(overrides: Partial<FareRule> = {}): FareRule {
+    return {
+      ...validVerifiedFareRule,
+      ...overrides,
+    };
+  }
 
   const validServiceHours: ServiceHours = {
     id: "mock-timing-red-rithala-weekday",
@@ -516,15 +524,47 @@ describe("M21a Fare and Timing Data Model & Validator", () => {
       }
     });
 
-    it("25. Rejects verified FareRule missing effective_from", () => {
-      const missingEffective = {
+    it("25. Accepts verified FareRule without effective_from when note is present, rejects when note is absent", () => {
+      // Accepted with a note
+      const acceptedWithNote = {
         ...validVerifiedFareRule,
         effective_from: undefined,
+        provenance: {
+          ...validVerifiedFareRule.provenance,
+          note: "Official page states no effective date",
+        },
       };
-      const res = FareRuleSchema.safeParse(missingEffective);
-      expect(res.success).toBe(false);
-      if (!res.success) {
-        expect(res.error.issues.some((i) => i.message.includes("verified FareRule requires effective_from date"))).toBe(true);
+      const resAccepted = FareRuleSchema.safeParse(acceptedWithNote);
+      expect(resAccepted.success).toBe(true);
+
+      // Rejected without a note
+      const rejectedNoNote = {
+        ...validVerifiedFareRule,
+        effective_from: undefined,
+        provenance: {
+          ...validVerifiedFareRule.provenance,
+          note: undefined,
+        },
+      };
+      const resNoNote = FareRuleSchema.safeParse(rejectedNoNote);
+      expect(resNoNote.success).toBe(false);
+      if (!resNoNote.success) {
+        expect(resNoNote.error.issues.some((i) => i.message.includes("requires a non-empty note"))).toBe(true);
+      }
+
+      // Rejected with empty whitespace note
+      const rejectedEmptyNote = {
+        ...validVerifiedFareRule,
+        effective_from: undefined,
+        provenance: {
+          ...validVerifiedFareRule.provenance,
+          note: "   ",
+        },
+      };
+      const resEmpty = FareRuleSchema.safeParse(rejectedEmptyNote);
+      expect(resEmpty.success).toBe(false);
+      if (!resEmpty.success) {
+        expect(resEmpty.error.issues.some((i) => i.message.includes("requires a non-empty note"))).toBe(true);
       }
     });
 
@@ -626,6 +666,7 @@ describe("M21a Fare and Timing Data Model & Validator", () => {
       expect(res.band_index).toBe(0);
       expect(res.fare_inr).toBe(10);
       expect(res.near_boundary).toBe(false);
+      expect(res.day_scope).toBe("mon_sat");
     });
 
     it("31. Matches exact band boundary at [min_km, max_km)", () => {
@@ -689,15 +730,16 @@ describe("M21a Fare and Timing Data Model & Validator", () => {
       const res = estimateRouteFare(legs, [validVerifiedFareRule]);
       expect(res).not.toBeNull();
       expect(res?.groups).toHaveLength(1);
+      expect(res?.groups[0].day_scope).toBe("mon_sat");
+      expect(res?.day_scope).toBe("mon_sat");
       expect(res?.total_fare_inr).toBe(30); // 8.5 km falls in [5, 12) -> 30 INR
       expect(res?.separate_tickets).toBe(false);
     });
 
     it("39. Groups consecutive legs sharing the same fare rule", () => {
-      const ruleShared: FareRule = {
-        ...validVerifiedFareRule,
+      const ruleShared: FareRule = createMockFareRule({
         applies_to_line_ids: ["mock-line-red", "mock-line-blue"],
-      };
+      });
       // Leg 1: 3 km, Leg 2: 4 km -> total consecutive distance 7 km in [5, 12) -> 30 INR
       const legs = [
         { line_id: "mock-line-red", distance_km: 3.0 },
@@ -708,20 +750,22 @@ describe("M21a Fare and Timing Data Model & Validator", () => {
       expect(res?.groups).toHaveLength(1);
       expect(res?.groups[0].distance_km).toBe(7.0);
       expect(res?.groups[0].line_ids).toEqual(["mock-line-red", "mock-line-blue"]);
+      expect(res?.groups[0].day_scope).toBe("mon_sat");
+      expect(res?.day_scope).toBe("mon_sat");
       expect(res?.total_fare_inr).toBe(30);
       expect(res?.separate_tickets).toBe(false);
     });
 
     it("40. Splits non-consecutive or different fare rules into separate groups", () => {
-      const rule2: FareRule = {
-        ...validVerifiedFareRule,
+      const rule2: FareRule = createMockFareRule({
         id: "mock-fare-delhi-airport",
         applies_to_line_ids: ["mock-line-blue"],
+        day_scope: "all",
         bands: [
           { min_km: 0, max_km: 10, fare_inr: 50 },
           { min_km: 10, max_km: null, fare_inr: 100 },
         ],
-      };
+      });
       const legs = [
         { line_id: "mock-line-red", distance_km: 3.0 }, // rule 1: 3 km in [2, 5) -> 20 INR
         { line_id: "mock-line-blue", distance_km: 12.0 }, // rule 2: 12 km in [10, null) -> 100 INR
@@ -729,6 +773,8 @@ describe("M21a Fare and Timing Data Model & Validator", () => {
       const res = estimateRouteFare(legs, [validVerifiedFareRule, rule2]);
       expect(res).not.toBeNull();
       expect(res?.groups).toHaveLength(2);
+      expect(res?.groups[0].day_scope).toBe("mon_sat");
+      expect(res?.groups[1].day_scope).toBe("all");
       expect(res?.total_fare_inr).toBe(120);
       expect(res?.separate_tickets).toBe(true);
     });
@@ -817,7 +863,7 @@ describe("M21a Fare and Timing Data Model & Validator", () => {
       }
     });
 
-    // b. every verified real FareRule and ServiceHours has a non-root source_url, an allowlisted host, last_verified, and (for fares) effective_from
+    // b. every verified real FareRule and ServiceHours has a non-root source_url, an allowlisted host, last_verified, and (for fares) effective_from or non-empty note
     it("47. every verified real FareRule and ServiceHours has non-root source_url, allowlisted host, last_verified, and effective_from", () => {
       const typedFares = realFares as FareRule[];
       const typedTimings = realTimings as ServiceHours[];
@@ -826,7 +872,12 @@ describe("M21a Fare and Timing Data Model & Validator", () => {
         if (rule.provenance.status === "verified") {
           expect(rule.provenance.source_url).toBeDefined();
           expect(rule.provenance.last_verified).toBeDefined();
-          expect(rule.effective_from).toBeDefined();
+          if (!rule.effective_from) {
+            expect(rule.provenance.note).toBeDefined();
+            expect(rule.provenance.note!.trim().length).toBeGreaterThan(0);
+          } else {
+            expect(rule.effective_from).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+          }
 
           const parsedUrl = new URL(rule.provenance.source_url!);
           expect(parsedUrl.pathname).not.toBe("/");
@@ -851,18 +902,24 @@ describe("M21a Fare and Timing Data Model & Validator", () => {
     // c. estimateRouteFare returns null for a route that uses a line without a verified rule (build the route from real line ids)
     it("48. estimateRouteFare returns null for a route using real lines without a verified rule", () => {
       const typedFares = realFares as FareRule[];
-      const realLineIds = (realLines as Line[]).map((l) => l.id);
-      expect(realLineIds).toContain("del-red");
-      expect(realLineIds).toContain("del-yellow");
+      const typedLines = realLines as Line[];
 
-      const routeWithUnverifiedLine = [
-        { line_id: "del-red", distance_km: 4.5 },
-        { line_id: "del-yellow", distance_km: 6.2 },
-      ];
+      const linesWithoutVerifiedRule = typedLines.filter(
+        (l) => !getFareRuleForLine(l.id, typedFares)
+      );
 
-      // Since del-red and del-yellow have an unverified FareRule, estimateRouteFare must return null
-      const estimate = estimateRouteFare(routeWithUnverifiedLine, typedFares);
-      expect(estimate).toBeNull();
+      if (linesWithoutVerifiedRule.length > 0) {
+        // e.g. del-airport or lines from other cities
+        const chosenLine = linesWithoutVerifiedRule[0];
+        const route = [{ line_id: chosenLine.id, distance_km: 5.0 }];
+        const estimate = estimateRouteFare(route, typedFares);
+        expect(estimate).toBeNull();
+      } else {
+        console.log("Notice: No unverified lines exist in real data; keeping mock-based unverified coverage.");
+        const mockRoute = [{ line_id: "mock-unverified-line", distance_km: 5.0 }];
+        const estimate = estimateRouteFare(mockRoute, typedFares);
+        expect(estimate).toBeNull();
+      }
     });
   });
 });
