@@ -62,3 +62,12 @@ Always-on rules for every agent session. If you have an older version of this fi
 - Show assumptions in one line instead of guessing silently.
 - If a requirement conflicts with these rules or with the data standards, stop and ask.
 - Keep final summaries short: what changed, what was verified, what is left.
+
+## Public-usability plan rules
+
+- Never add fares, timings or interchange links without a specific official source.
+- If a city's fares are unsourced, hide the fare feature for that city entirely. No placeholder and no estimates.
+- Use mock data while testing; load real data only when it is usable and sourced.
+- Do not claim verification you did not run. Paste real command output or counts.
+- Report real unit and e2e counts, build page count, `validate:data` result and `audit:data` summary after every milestone.
+- If a path or definition is ambiguous (for example, what counts as Tier 1), report it instead of guessing.

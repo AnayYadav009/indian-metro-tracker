@@ -152,4 +152,26 @@ The audit engine (`scripts/audit/audit-engine.ts`) implements three hardcoded ex
 - **Suggested Next Step**: Add a subtitle or explanatory column in documentation/audit tables explicitly distinguishing "Total Stations Compiled" from "Operational Routable Stations".
 - **Severity**: **Low** (clarification and documentation alignment).
 
+---
 
+## Public-usability plan: owner decisions (2026-10-24)
+
+Recorded decisions. See `docs/PLAN-PUBLIC-USABILITY.md` for milestones M19-M26.
+
+1. Fare and timing data covers Tier 1 cities first.
+2. Where a city's fares are not officially sourced, the fare feature is hidden entirely for that city. No "not available" placeholder and no estimates.
+3. M8, M8.1, M9 and M10.x (data quality) run in parallel with the new plan.
+4. Data rules unchanged: no unsourced data; every interchange link needs a specific source; mock data while testing; real data only when usable.
+5. Agents must not claim verification they did not perform and must report real test counts.
+
+Explicitly skipped for now: live train tracking and real-time arrivals (no free public feeds; a wrong "live" claim is worse than none).
+
+### New open items
+
+- Tier 1 definition: confirm the exact city list from the M10 Tier 1 visual QA work before M21 starts. Do not guess.
+- Fare and timing sources: for each Tier 1 city, identify the operator's official fare and first/last train publication. Cities without one get the fare feature hidden.
+- Provenance backfill (M19): existing displayed values need `source_url`, `last_verified` and status. Decide whether values without a source are marked "unverified" or the feature is hidden, once the validator rule exists.
+- M22 design brief requires owner sign-off before M23 starts.
+- Golden Line (renamed from Silver) is not yet onboarded.
+- Live site: GitHub Pages deploy failed with 404 on 2026-10-17. Treated as a prerequisite for the public plan. Recheck and record the real HTTP status.
+- Last known baseline to compare against: 326 unit, 142 e2e, 28 pages, `validate:data` pass, `audit:data` exit 1 (1 enforced error, 2 pending-rule errors, 30 unbaselined warnings, 14 coverage gaps). Replace with the M18.9 observed numbers once reported.

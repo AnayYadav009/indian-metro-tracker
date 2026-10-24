@@ -363,3 +363,16 @@ Ideas that fit the hard constraints (static, free, no new dependency unless appr
 - PWA and offline use of the static export.
 - Embeddable map view.
 - Inline-SVG growth chart of km over time (optional part of M13).
+
+
+- M18.9 Planning and doc prep (docs only)
+- M19 Provenance layer
+- M20 Report-an-error button
+- M21 Fare and timing data model (Tier 1)
+- M22 UI design brief (owner sign-off)
+- M23 UI shell implementation
+- M24 Route finder v2
+- M25 Nearest station and interchange highlighting
+- M26 Acceptance pass
+
+Details: `docs/PLAN-PUBLIC-USABILITY.md`
