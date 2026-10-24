@@ -237,6 +237,10 @@
         "del-shiv-vihar",
         "del-majlis-park"
       ],
+      "references": [
+        "https://delhimetrorail.com/static/media/DMRC-Network-Map-Hindi-English-VA-23032026.00317293.pdf",
+        "https://www.openstreetmap.org/relation/8241298"
+      ],
       "orderedWayIds": [
         {
           "id": 642636563,
@@ -1216,7 +1220,294 @@
         "https://www.openstreetmap.org/way/538930435"
       ],
       "last_verified": "2026-10-10",
-      "geometry_quality": "exact"
+      "geometry_quality": "schematic",
+      "coordinates": [
+        [
+          77.12124,
+          28.54799
+        ],
+        [
+          77.123782,
+          28.547143
+        ],
+        [
+          77.125176,
+          28.546541
+        ],
+        [
+          77.127518,
+          28.54543
+        ],
+        [
+          77.127891,
+          28.54522
+        ],
+        [
+          77.128092,
+          28.544937
+        ],
+        [
+          77.128726,
+          28.543124
+        ],
+        [
+          77.128857,
+          28.542751
+        ],
+        [
+          77.129176,
+          28.541985
+        ],
+        [
+          77.129413,
+          28.54173
+        ],
+        [
+          77.129679,
+          28.541499
+        ],
+        [
+          77.129896,
+          28.541311
+        ],
+        [
+          77.130534,
+          28.540664
+        ],
+        [
+          77.131044,
+          28.540108
+        ],
+        [
+          77.132402,
+          28.539233
+        ],
+        [
+          77.133459,
+          28.538523
+        ],
+        [
+          77.133987,
+          28.538304
+        ],
+        [
+          77.134716,
+          28.538195
+        ],
+        [
+          77.136393,
+          28.538003
+        ],
+        [
+          77.137368,
+          28.53783
+        ],
+        [
+          77.138461,
+          28.537511
+        ],
+        [
+          77.13929,
+          28.537256
+        ],
+        [
+          77.139801,
+          28.536955
+        ],
+        [
+          77.140393,
+          28.536381
+        ],
+        [
+          77.141541,
+          28.535106
+        ],
+        [
+          77.142188,
+          28.534368
+        ],
+        [
+          77.142944,
+          28.533511
+        ],
+        [
+          77.143573,
+          28.532974
+        ],
+        [
+          77.144493,
+          28.532272
+        ],
+        [
+          77.14627,
+          28.531105
+        ],
+        [
+          77.147318,
+          28.530185
+        ],
+        [
+          77.148348,
+          28.529283
+        ],
+        [
+          77.149797,
+          28.528463
+        ],
+        [
+          77.151227,
+          28.527588
+        ],
+        [
+          77.152612,
+          28.526823
+        ],
+        [
+          77.15387,
+          28.525948
+        ],
+        [
+          77.155337,
+          28.524791
+        ],
+        [
+          77.156211,
+          28.523798
+        ],
+        [
+          77.156877,
+          28.523105
+        ],
+        [
+          77.157451,
+          28.522868
+        ],
+        [
+          77.161248,
+          28.521809
+        ],
+        [
+          77.164722,
+          28.520845
+        ],
+        [
+          77.165633,
+          28.520927
+        ],
+        [
+          77.168002,
+          28.521984
+        ],
+        [
+          77.171724,
+          28.523838
+        ],
+        [
+          77.173278,
+          28.524627
+        ],
+        [
+          77.173669,
+          28.524813
+        ],
+        [
+          77.174199,
+          28.525064
+        ],
+        [
+          77.175237,
+          28.525174
+        ],
+        [
+          77.176522,
+          28.524745
+        ],
+        [
+          77.178204,
+          28.523996
+        ],
+        [
+          77.183461,
+          28.521656
+        ],
+        [
+          77.183489,
+          28.521643
+        ],
+        [
+          77.185033,
+          28.520809
+        ],
+        [
+          77.186117,
+          28.52059
+        ],
+        [
+          77.186892,
+          28.520672
+        ],
+        [
+          77.188113,
+          28.521265
+        ],
+        [
+          77.189917,
+          28.522258
+        ],
+        [
+          77.190764,
+          28.522677
+        ],
+        [
+          77.191466,
+          28.522868
+        ],
+        [
+          77.192067,
+          28.522832
+        ],
+        [
+          77.192924,
+          28.522613
+        ],
+        [
+          77.193452,
+          28.522504
+        ],
+        [
+          77.194327,
+          28.522322
+        ],
+        [
+          77.203038,
+          28.52039
+        ],
+        [
+          77.218219,
+          28.517346
+        ],
+        [
+          77.227823,
+          28.51536
+        ],
+        [
+          77.243924,
+          28.512216
+        ],
+        [
+          77.279292,
+          28.504221
+        ],
+        [
+          77.290823,
+          28.501574
+        ],
+        [
+          77.29924,
+          28.50236
+        ]
+      ],
+      "stations_not_published": true
     },
     {
       "osmId": 538930423,
@@ -1267,8 +1558,37 @@
     "tughlkabad": "Tughlakabad",
     "Peera Garhi": "Peeragarhi",
     "Badarpur border": "Badarpur Border",
-    "Jagatpur - Wazirabad": "Jagatpur Village"
+    "Jagatpur - Wazirabad": "Jagatpur Village",
+    "Aerocity": "Delhi Aerocity"
   },
+  "centerlineSections": [
+    {
+      "primary_segment_id": "del-pink-seg-01",
+      "secondary_segment_id": "del-pink-seg-02",
+      "primary_start": [
+        77.28455933934623,
+        28.700204186969273
+      ],
+      "secondary_start": [
+        77.28417,
+        28.70041
+      ],
+      "primary_end": [
+        77.27969,
+        28.69209
+      ],
+      "secondary_end": [
+        77.27969,
+        28.69209
+      ],
+      "source_urls": [
+        "https://delhimetrorail.com/static/media/DMRC-Network-Map-Hindi-English-VA-23032026.00317293.pdf",
+        "https://www.openstreetmap.org/relation/8241298",
+        "https://www.openstreetmap.org/way/1184476784"
+      ],
+      "reason": "The aligned Pink Line approach to Maujpur is represented in both phase geometries; preserve one midpoint centreline and count the shared approach once."
+    }
+  ],
   "out_of_scope_line_ids": [],
   "out_of_scope_station_ids": [
     "del-belvedere-towers",
@@ -1372,7 +1692,9 @@
     "del-vasantkunj-sector-d",
     "del-west-enclave",
     "del-tughlakabad-2",
-    "tughlkabad"
+    "tughlkabad",
+    "del-domestic-airport",
+    "Domestic Airport"
   ],
   "stationOverrides": {
     "Azadpur": {
@@ -1625,12 +1947,16 @@
       "last_verified": "2026-10-08"
     },
     "Delhi Aerocity": {
+      "status": "operational",
       "layout": "underground",
+      "line_ids": [
+        "del-airport",
+        "del-golden"
+      ],
       "references": [
         "https://www.delhimetrorail.com/network_map"
       ],
-      "last_verified": "2026-10-08",
-      "status": "operational"
+      "last_verified": "2026-10-08"
     },
     "Airport (T-3)": {
       "layout": "underground",
@@ -1693,9 +2019,16 @@
       "last_verified": "2026-10-08"
     },
     "Tughlakabad": {
+      "status": "operational",
+      "layout": "elevated",
       "line_ids": [
-        "del-violet"
-      ]
+        "del-violet",
+        "del-golden"
+      ],
+      "references": [
+        "https://www.delhimetrorail.com/network_map"
+      ],
+      "last_verified": "2026-10-08"
     },
     "Madhuban Chowk": {
       "line_ids": [
@@ -1876,6 +2209,22 @@
         "https://www.openstreetmap.org/node/5215706770",
         "https://www.delhimetrorail.com/pages/about-us/present-network"
       ]
+    },
+    "Andrews Ganj": {
+      "coordinates": [
+        77.232392,
+        28.562312
+      ],
+      "line_ids": [
+        "del-golden"
+      ],
+      "status": "planned",
+      "phase": "IV",
+      "references": [
+        "https://delhimetrorail.com/",
+        "https://themetrorailguy.com/2024/01/27/delhi-metros-silver-line-renamed-to-golden-line-line-10/"
+      ],
+      "last_verified": "2026-10-10"
     }
   },
   "additionalStations": [

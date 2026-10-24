@@ -55,6 +55,30 @@ export const AUDIT_THRESHOLDS = {
   terminalToSegmentEndMaxM: 300,
   /** Construction stretch endpoint to segment endpoint distance threshold (m) */
   constructionStretchEndMaxM: 300,
+  /** Future station distance to its line geometry (m) */
+  futureStationToSegmentMaxM: 75,
+  /** Cross-network station proximity threshold (m) */
+  crossNetworkInterchangeMaxM: 250,
+  /** Same-name cross-network station proximity threshold (m) */
+  crossNetworkSameNameMaxM: 1000,
 } as const;
 
 export type AuditThresholds = typeof AUDIT_THRESHOLDS;
+
+export const CITY_AUDIT_THRESHOLD_KEYS = [
+  "parallelDuplicateMaxDistM",
+  "parallelDuplicateMinSharedM",
+  "hairpinAngleDeg",
+  "hairpinSpanM",
+  "sparseVertexMaxChordM",
+  "cityKmVsReferenceErrorPct",
+  "terminalToSegmentEndMaxM",
+  "constructionStretchEndMaxM",
+  "futureStationToSegmentMaxM",
+  "crossNetworkInterchangeMaxM",
+  "crossNetworkSameNameMaxM",
+] as const;
+
+export type CityAuditThresholdOverrides = {
+  [Key in (typeof CITY_AUDIT_THRESHOLD_KEYS)[number]]?: number;
+};

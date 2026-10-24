@@ -77,7 +77,7 @@ Rules
 
 ## 6. Geometry Conventions
 
-- One centreline per line. Where OSM has one way per direction, the pipeline merges them (method decided in M10.1 and recorded here).
+- One centreline per line. Where OSM supplies aligned track traces for the same corridor, use their sampled midpoint as the centreline; where the traces diverge, keep the single cited source trace for each route. A documented shared section is emitted once so segment lengths do not double-count it. The source override must name both segment IDs, the aligned endpoints, source URLs and reason; the pipeline rejects missing segments, mismatched lines, distant anchors or materially different shared lengths.
 - `geometry_quality: exact` is only for surveyed or construction-stage geometry. Anything drawn from station positions or by hand is `schematic`, and the legend note that future routes are schematic stays visible.
 - Spikes that double back are removed in the pipeline unless listed as intentional in overrides.
 
@@ -104,3 +104,15 @@ Rules
 ## 11. Line Ordering and Topological Sequence
 
 - `ordered_station_ids` in `LineSchema`: pulled forward into M10.3 (decided in M10.3: Option A) as an additive optional field. It defines the authoritative sequence of station IDs along a line from start terminal to end terminal. Used for route calculation, topology integrity, and unambiguous stage mapping.
+
+## 12. Owner Decisions for M8 and M10 (2026-10-19)
+
+- **Bhopal Orange Line length:** retain the official 6.22 km figure as the reference basis. The 5.58 km geometry measurement remains an explicit variance for sourced reconciliation; do not replace the official figure with the measured geometry solely to silence the audit.
+- **Gurugram Rapid Metro loop:** retain current geometry while treating the loop terminal convention as a documented topology exception. Do not move or extend the endpoint without authoritative terminal evidence.
+- **Chennai Corridor 3:** retain the declared construction coverage gap until sourced alignment and terminal coordinates are available. Do not draw a schematic connector from unsupported coordinates.
+- **Delhi Pink Phase 4:** treat Maujpur as the existing/shared station. Add only stations confirmed as new by the official project source; do not count Maujpur as a new station.
+- **Operational station opening dates:** backfill only when an official opening date maps unambiguously to the station. Otherwise keep `opened_on: null` and record the reason where the record is reviewed.
+- **Geometry exceptions:** retain only individually documented, evidence-based shared-corridor or loop exceptions. Each exception must name the affected geometry, reason, and authoritative evidence.
+- **Audit baseline:** do not baseline unreviewed warnings. Keep them visible until repaired or individually reviewed and accepted with a reason. Never baseline findings that conceal missing line ends, missing terminals, lines without stations, or doubled geometry.
+- **Stale baseline entries:** prune an entry only after confirming that its finding is no longer active.
+- **New coverage findings from the Tier 2 and Chennai source review:** add proposed or construction stretches to references only after the applicable milestone's owner review. A DPR/feasibility study alone is not evidence that construction has started; use `planned` only where an official proposal or sanction meets the status definition in section 3. Unknown alignments, station coordinates, and completion dates remain unknown.

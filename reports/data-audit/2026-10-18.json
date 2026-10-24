@@ -2667,10 +2667,24 @@
     },
     {
       "city_id": "delhi",
-      "rule": "segment-parallel-duplicate",
+      "rule": "orphan-future-station",
       "severity": "error",
-      "subject": "del-pink-seg-01|del-pink-seg-02",
-      "message": "Segments run parallel within 60 m for ~1199 m (twin tracks)"
+      "subject": "del-aerocity",
+      "message": "Future station is 88 m from nearest segment of line 'del-airport' (threshold: 75 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "orphan-future-station",
+      "severity": "error",
+      "subject": "del-andrews-ganj",
+      "message": "Future station is 195 m from nearest segment of line 'del-violet' (threshold: 75 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "orphan-future-station",
+      "severity": "error",
+      "subject": "del-domestic-airport",
+      "message": "Future station is 138 m from nearest segment of line 'del-magenta' (threshold: 75 m)"
     },
     {
       "city_id": "delhi",
@@ -4461,13 +4475,6 @@
       "city_id": "delhi",
       "rule": "operational-no-reference",
       "severity": "warn",
-      "subject": "del-pink-seg-01",
-      "message": "Operational segment has no references"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "operational-no-reference",
-      "severity": "warn",
       "subject": "del-red-seg-01",
       "message": "Operational segment has no references"
     },
@@ -6134,6 +6141,13 @@
       "city_id": "delhi",
       "rule": "segment-end-far-from-station",
       "severity": "warn",
+      "subject": "del-pink-seg-02",
+      "message": "Segment end is 291 m from nearest station of line 'del-pink' (threshold: 150 m)"
+    },
+    {
+      "city_id": "delhi",
+      "rule": "segment-end-far-from-station",
+      "severity": "warn",
       "subject": "del-red-seg-02",
       "message": "Segment start is 776 m from nearest station of line 'del-red' (threshold: 150 m)"
     },
@@ -7746,6 +7760,13 @@
       "severity": "info",
       "subject": "lucknow",
       "message": "last_verified distribution: 2026-10-16: 22"
+    },
+    {
+      "city_id": "mumbai",
+      "rule": "orphan-future-station",
+      "severity": "error",
+      "subject": "mum-eeh",
+      "message": "Future station is 90 m from nearest segment of line 'mum-line-4' (threshold: 75 m)"
     },
     {
       "city_id": "mumbai",

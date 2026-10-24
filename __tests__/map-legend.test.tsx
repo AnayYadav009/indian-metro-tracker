@@ -54,7 +54,7 @@ describe("MapLegend Component", () => {
     });
     expect(interchange).toHaveStyle({
       backgroundColor: "#ffffff",
-      border: "3px solid #0f172a",
+      border: "2.4px solid #0f172a",
     });
   });
 

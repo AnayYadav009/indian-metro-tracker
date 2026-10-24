@@ -12,6 +12,7 @@ export interface ApplyBaselineResult {
   unreviewed: Finding[];
   knownDefects: Finding[];
   pending: Finding[];
+  documentedCoverageGaps: Finding[];
   staleAccepted: BaselineEntry[];
   staleUnreviewed: BaselineEntry[];
   staleKnownDefects: KnownDefectEntry[];
@@ -43,10 +44,21 @@ export function applyBaseline(
   const unreviewed: Finding[] = [];
   const knownDefects: Finding[] = [];
   const pending: Finding[] = [];
+  const documentedCoverageGaps: Finding[] = [];
 
   for (const f of findings) {
     if (pendingRulesSet.has(f.rule)) {
+      const key = `${f.city_id}|${f.rule}|${f.subject}`;
+      if (acceptedKeys.has(key)) matchedAcceptedKeys.add(key);
+      if (unreviewedKeys.has(key)) matchedUnreviewedKeys.add(key);
+      if (knownDefectKeys.has(key)) matchedKnownDefectKeys.add(key);
       pending.push(f);
+      continue;
+    }
+
+    // Coverage gaps are reviewed through coverage-gaps.json, not the warning baseline.
+    if (f.rule === "coverage-gap") {
+      documentedCoverageGaps.push(f);
       continue;
     }
 
@@ -86,6 +98,7 @@ export function applyBaseline(
     unreviewed,
     knownDefects,
     pending,
+    documentedCoverageGaps,
     staleAccepted,
     staleUnreviewed,
     staleKnownDefects,
@@ -193,12 +206,13 @@ export function formatMarkdownReport(result: AuditResult, baseline?: BaselineFil
   lines.push("");
 
   if (baseline) {
-    const { accepted, unreviewed, knownDefects, staleAccepted, staleUnreviewed, staleKnownDefects } =
+    const { accepted, unreviewed, knownDefects, documentedCoverageGaps, staleAccepted, staleUnreviewed, staleKnownDefects } =
       applyBaseline(result.findings, baseline);
 
     lines.push(`- **Accepted warnings (reviewed):** ${accepted.length}`);
     lines.push(`- **Unreviewed warnings (awaiting city review):** ${unreviewed.length}`);
     lines.push(`- **Known defects tracked (active backlog):** ${knownDefects.length}`);
+    lines.push(`- **Documented coverage gaps (visible, tracked separately):** ${documentedCoverageGaps.length}`);
     lines.push("");
 
     const totalStale = staleAccepted.length + staleUnreviewed.length + staleKnownDefects.length;

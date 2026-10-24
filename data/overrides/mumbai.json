@@ -2934,7 +2934,6 @@
       ],
       "city_id": "mumbai"
     },
-
     {
       "segment_id": "mum-line-9-schematic-01",
       "line_id": "mum-line-9",
@@ -3343,8 +3342,13 @@
       "line_ids": [
         "mum-line-1"
       ],
+      "layout": "elevated",
       "status": "operational",
-      "phase": "1"
+      "phase": "1",
+      "references": [
+        "https://mmrda.maharashtra.gov.in/"
+      ],
+      "last_verified": "2026-10-08"
     },
     "Lower Oshiwara": {
       "line_ids": [
@@ -3404,6 +3408,19 @@
       "references": [
         "https://mmrda.maharashtra.gov.in/en/projects/transport/metro-line-2b/overview"
       ]
+    },
+    "EEH": {
+      "coordinates": [
+        72.887562,
+        19.056585
+      ],
+      "layout": "elevated",
+      "status": "construction",
+      "phase": "4",
+      "references": [
+        "https://mmrda.maharashtra.gov.in/"
+      ],
+      "last_verified": "2026-10-08"
     }
   },
   "out_of_scope_station_ids": [

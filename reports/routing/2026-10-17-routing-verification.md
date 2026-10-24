@@ -33,7 +33,7 @@
 | **Hyderabad** (`hyderabad`) | 57 | 3 | ✅ Routable | 1 | All lines passed terminal, count, gap, and projection checks. |
 | **Ahmedabad** (`ahmedabad`) | 53 | 4 | ✅ Routable | 1 | All lines passed terminal, count, gap, and projection checks. |
 | **Noida** (`noida`) | 21 | 1 | ✅ Routable | 1 | All lines passed terminal, count, gap, and projection checks. |
-| **Delhi** (`delhi`) | 231 | 9 | ⚠️ Partly Routable | 1 | 5 of 9 lines pass all verification checks. Failing lines: Green Line, Airport Express, Pink Line, Magenta Line. Connected components: 1. |
+| **Delhi** (`delhi`) | 238 | 9 | ⚠️ Partly Routable | 1 | 5 of 9 lines pass all verification checks. Failing lines: Green Line, Airport Express, Pink Line, Magenta Line. Connected components: 1. |
 | **Indore** (`indore`) | 16 | 1 | ✅ Routable | 1 | All lines passed terminal, count, gap, and projection checks. |
 | **Bhopal** (`bhopal`) | 8 | 1 | ❌ Non-Routable | 1 | All operational lines fail verification checks: Orange Line (Line 2) (Missing reference terminal(s) at segment ends: Karond Circle) |
 | **Nagpur** (`nagpur`) | 37 | 2 | ✅ Routable | 1 | All lines passed terminal, count, gap, and projection checks. |
@@ -152,7 +152,7 @@ For each operational line, five critical topology and geometry criteria are audi
 | `del-green` | Green Line | branched | 24 / 24 | 2.05 km | 154 m | ✅ Yes | ❌ Fail | 1 station(s) projecting > 150 m from track (e.g. Punjabi Bagh West: 154 m) |
 | `del-violet` | Violet Line | linear | 34 / 34 | 2.26 km | 20 m | ✅ Yes | ✅ Pass | None |
 | `del-airport` | Airport Express | linear | 7 / 7 | 6.36 km | 25 m | ✅ Yes | ❌ Fail | Consecutive station gap > 5 km: 6.36 km (Dhaula Kuan to Shivaji Stadium) |
-| `del-pink` | Pink Line | linear | 38 / 38 | 3.56 km | 229 m | ✅ Yes | ❌ Fail | 3 station(s) projecting > 150 m from track (e.g. Rajouri Garden: 229 m) |
+| `del-pink` | Pink Line | linear | 45 / 45 | 3.56 km | 229 m | ✅ Yes | ❌ Fail | 3 station(s) projecting > 150 m from track (e.g. Rajouri Garden: 229 m) |
 | `del-magenta` | Magenta Line | linear | 25 / 25 | 3.04 km | 212 m | ✅ Yes | ❌ Fail | 1 station(s) projecting > 150 m from track (e.g. Kalkaji Mandir: 212 m) |
 | `del-grey` | Grey Line | linear | 4 / 4 | 2.39 km | 0 m | ✅ Yes | ✅ Pass | None |
 
@@ -236,9 +236,9 @@ Sample routes across all Tier 1 cities (3 routes each) demonstrating multi-trans
 
 | City | Route # | Origin | Destination | Stops | Transfers | Estimated Time | Traversed Lines |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **DELHI** | #1 | Dwarka Sector 12 | Yashobhoomi Dwarka Sector 25 | 6 | 1 | 20 min | Blue Line ➔ Airport Express |
-| **DELHI** | #2 | Dwarka Sector 12 | Shaheed Sthal | 39 | 2 | 111 min | Blue Line ➔ Green Line ➔ Red Line |
-| **DELHI** | #3 | Dwarka Sector 12 | Najafgarh | 5 | 1 | 19 min | Blue Line ➔ Grey Line |
+| **DELHI** | #1 | Dwarka Sector 12 | Jharoda Majra | 22 | 1 | 68 min | Blue Line ➔ Pink Line |
+| **DELHI** | #2 | Dwarka Sector 12 | Yashobhoomi Dwarka Sector 25 | 6 | 1 | 20 min | Blue Line ➔ Airport Express |
+| **DELHI** | #3 | Dwarka Sector 12 | Shaheed Sthal | 39 | 2 | 111 min | Blue Line ➔ Green Line ➔ Red Line |
 | **MUMBAI** | #1 | Andheri | Aarey JVLR | 7 | 1 | 21 min | Line 1 (Blue) ➔ Line 3 (Aqua) |
 | **MUMBAI** | #2 | Andheri | Sahar Road | 6 | 1 | 17 min | Line 1 (Blue) ➔ Line 3 (Aqua) |
 | **MUMBAI** | #3 | Andheri | CSMIA Domestic | 7 | 1 | 21 min | Line 1 (Blue) ➔ Line 3 (Aqua) |

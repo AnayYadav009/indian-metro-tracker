@@ -570,16 +570,28 @@ describe("Audit Engine", () => {
 
     it("segregates pending rules into pending list without failing CI", () => {
       const findings: Finding[] = [
-        { city_id: "a", rule: "segment-parallel-duplicate", severity: "error", subject: "s1", message: "m1" },
+        { city_id: "a", rule: "future-segment-no-stations", severity: "warn", subject: "s1", message: "m1" },
       ];
       const baseline: BaselineFile = {
-        accepted_warnings: [],
-        pending_rules: ["segment-parallel-duplicate"],
+        accepted_warnings: [
+          { city_id: "a", rule: "future-segment-no-stations", subject: "s1", reason: "awaiting M10.3 repair" },
+        ],
+        pending_rules: ["future-segment-no-stations"],
       };
-      const { unbaselined, pending } = applyBaseline(findings, baseline);
+      const { unbaselined, pending, staleAccepted } = applyBaseline(findings, baseline);
       expect(unbaselined.length).toBe(0);
       expect(pending.length).toBe(1);
-      expect(pending[0].rule).toBe("segment-parallel-duplicate");
+      expect(pending[0].rule).toBe("future-segment-no-stations");
+      expect(staleAccepted).toHaveLength(0);
+    });
+
+    it("tracks documented coverage gaps separately from warning baselines", () => {
+      const findings: Finding[] = [
+        { city_id: "a", rule: "coverage-gap", severity: "warn", subject: "line-x|north extension", message: "Geometry not available" },
+      ];
+      const { unbaselined, documentedCoverageGaps } = applyBaseline(findings, { accepted_warnings: [] });
+      expect(unbaselined).toEqual([]);
+      expect(documentedCoverageGaps).toEqual(findings);
     });
   });
 
@@ -1088,6 +1100,15 @@ describe("Audit Engine", () => {
       const passResult = runAudit(makeDataset({ segments: [segSchematic], stations: [] }), AUDIT_OPTIONS);
       const passHits = findByRule(passResult.findings, "segment-sparse-vertices");
       expect(passHits.length).toBe(0);
+
+      const cityOverrideResult = runAudit(
+        makeDataset({ segments: [segChord], stations: [] }),
+        {
+          ...AUDIT_OPTIONS,
+          cityThresholdOverrides: { "test-city": { sparseVertexMaxChordM: 2000 } },
+        }
+      );
+      expect(findByRule(cityOverrideResult.findings, "segment-sparse-vertices")).toHaveLength(0);
     });
 
     it("orphan-future-station: flags future station with no nearby segment", () => {
@@ -1117,6 +1138,22 @@ describe("Audit Engine", () => {
       const passResult = runAudit(makeDataset({ stations: [futureNear] }), AUDIT_OPTIONS);
       const passHits = findByRule(passResult.findings, "orphan-future-station");
       expect(passHits.length).toBe(0);
+
+      const nearBeyondDefault = makeStation({
+        station_id: "st-future-near-default-limit",
+        status: "construction",
+        expected_completion: "2028-12",
+        opened_on: null,
+        line_ids: ["tc-red"],
+        coordinates: [77.5, 12.5009], // ~100 m away; beyond the 75 m default
+      });
+      const nearData = makeDataset({ stations: [nearBeyondDefault] });
+      expect(findByRule(runAudit(nearData, AUDIT_OPTIONS).findings, "orphan-future-station")).toHaveLength(1);
+      const overridden = runAudit(nearData, {
+        ...AUDIT_OPTIONS,
+        cityThresholdOverrides: { "test-city": { futureStationToSegmentMaxM: 150 } },
+      });
+      expect(findByRule(overridden.findings, "orphan-future-station")).toHaveLength(0);
     });
 
     it("line-terminal-missing: flags reference terminal station not near segment end", () => {
@@ -1275,12 +1312,12 @@ describe("Audit Engine", () => {
         makeStation({ station_id: "schematic-a", name: "Station A", coordinates: [77.5, 12.5], line_ids: ["tc-red"] }),
         makeStation({ station_id: "schematic-b", name: "Station B", coordinates: [77.51, 12.5], line_ids: ["tc-red"] }),
       ];
-      const segment = (end: number) => makeSegment({
+      const segment = (end: number, geometryQuality: "schematic" | "exact" = "schematic") => makeSegment({
         segment_id: "tc-red-schematic",
         status: "construction",
         inaugurated_on: null,
         expected_completion: "2028",
-        geometry_quality: "schematic",
+        geometry_quality: geometryQuality,
         references: ["https://tcrl.org/official-alignment"],
         geometry: { type: "LineString", coordinates: [[77.5, 12.5], [end, 12.5]] },
       });
@@ -1293,11 +1330,14 @@ describe("Audit Engine", () => {
       expect(findByRule(passing.findings, "reference-construction-stretch-missing")).toHaveLength(0);
 
       const failing = runAudit(
-        makeDataset({ stations, segments: [segment(77.53)] }),
+        makeDataset({ stations, segments: [segment(77.53, "exact")] }),
         { ...AUDIT_OPTIONS, referenceDir: tmpDir }
       );
-      expect(findByRule(failing.findings, "schematic-segment-incomplete")).toHaveLength(1);
-      expect(findByRule(failing.findings, "declared-not-compiled")).toHaveLength(1);
+      expect(findByRule(failing.findings, "schematic-segment-incomplete")).toHaveLength(0);
+      expect(findByRule(failing.findings, "declared-not-compiled")).toHaveLength(0);
+      expect(failing.findings.map(({ rule, subject }) => ({ rule, subject }))).toEqual(
+        expect.arrayContaining([{ rule: "reference-construction-stretch-missing", subject: "tc-red|Station A - Station B" }])
+      );
       fs.rmSync(tmpDir, { recursive: true, force: true });
     });
 
@@ -1342,3 +1382,4 @@ describe("Audit Engine", () => {
     });
   });
 });
+
