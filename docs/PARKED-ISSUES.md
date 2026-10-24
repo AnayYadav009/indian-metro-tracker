@@ -309,6 +309,35 @@ Explicitly skipped for now: live train tracking and real-time arrivals (no free 
    - Operators revise fares infrequently, but pages can change or fares can increase without URL changes.
    - In Milestone M26, an audit rule should be designed to flag `last_verified` dates older than an agreed threshold (e.g. 1 year or 2 years) to require recurring provenance re-checks.
 
+---
+
+## M22 Parked Issues: UI Inventory Findings
+
+1. **Station Search Placeholder Misrepresentation**:
+   - `components/filters/filter-panel.tsx` features an input with placeholder `"Search lines, phases, stations..."` (`filter-search-input`).
+   - However, in `lib/filter-utils.ts` (`matchesSegmentFilter`), the query only checks `[props.line_name, props.city, props.phase, ...lineAliases]`.
+   - Stations are completely unindexed by this filter. Users searching for a station receive zero matching segments and an empty map. A dedicated, working station search index must be introduced in M23.
+
+2. **Mobile Panel Overlap and Map Occlusion**:
+   - On Pixel 7 mobile viewport (412×915 px), selecting a station causes the `MetadataPanel` (`top: 168px`, height: 671px) to overlap the collapsed `FilterPanel` (`top: 72px`, height: 59px).
+   - Together, the two panels consume 730px of vertical space (80% of the viewport), occluding the map canvas and pushing the timeline slider off-screen.
+   - Replacing stacked panels with a unified 3-state bottom sheet is required in M23.
+
+3. **Sprawling City Selection Chips**:
+   - The filter panel currently renders 22 city chips ("All Cities" + 21 cities) which consume over 300px of vertical scrolling height on mobile devices.
+   - This pushes operational status checkboxes and phase filters below the fold. A searchable combobox/picker is needed in M23.
+
+4. **Header Markup Duplication Across Pages**:
+   - `app/page.tsx`, `app/compare/page.tsx`, and `app/city/[id]/page.tsx` each maintain separate, custom `<header>` implementations with diverging navigation styles, differing back links, and duplicate metadata badges.
+   - Must be unified into a single shared `AppHeader` component in M23.1.
+
+5. **Inaccurate Verification Claims in User-Facing Copy**:
+   - The dataset metadata badge renders `"Data: Oct 2026 (MANUAL, OSM)"` or `"Data: Oct 2026 (DMRC, BMRCL, OSM)"`, creating an impression that all lines from those agencies are verified.
+   - `app/compare/page.tsx` references `"comprehensive verified geospatial statistics"` and `lib/city-seo.ts` claims `"verified track alignments"`, while `app/city/[id]/page.tsx` displays `"≥80% stations verified"` (meaning opened).
+   - `components/routing/route-finder-panel.tsx` uses `"verified lines"` to mean graph connectivity validation.
+   - All these claims must be cleaned up in M23 to adhere strictly to the project rule forbidding unsubstantiated verification claims.
+
+
 
 
 

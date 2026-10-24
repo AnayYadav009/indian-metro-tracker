@@ -54,9 +54,10 @@ Trust first (fares and timings are new claims that need a source and a verified 
 
 ### Phase C: Interface simplification
 
-**M22 Design brief (no code, needs owner sign-off)**
+**M22 Design brief (no code, needs owner sign-off)** (Status: Brief drafted, awaiting owner sign-off)
 - Scope: landing view is a city picker plus station search, then the map. Timeline, comparison and filters move behind a "Layers / More" menu. Mobile uses a single bottom sheet instead of stacked panels. A searchable city dropdown replaces the 20 chips.
 - Done when: the owner signs off on the brief.
+- Outcome: Completed UI inventory across desktop and Pixel 7 viewports (20 screenshots saved in `docs/design/m22/current/`, all <500 KB). Measured 43–44 visible interactive controls on first load and 163px panel overlap on mobile. Documented comprehensive design brief (`docs/DESIGN-BRIEF-M22.md`) covering key journeys, ASCII wireframes, 3-state bottom sheet physics, trust presentation, copy fixes, performance budgets, header consolidation plan, and 8 owner sign-off questions.
 
 **M23 UI shell implementation**
 - Scope: new top bar, city selector and panel structure from M22, with existing features reattached unchanged.
