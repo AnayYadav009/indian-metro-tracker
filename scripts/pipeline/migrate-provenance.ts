@@ -22,8 +22,14 @@ export function migrateProvenanceData() {
     lines: { verified: 0, schematic: 0, unverified: 0, with_source_url: 0 },
   };
 
-  const allCities: City[] = [];
-  const allLines: Line[] = [];
+  // Load existing data/cities.json and data/lines.json to preserve original array ordering
+  const existingCitiesPath = path.join(DATA_DIR, "cities.json");
+  const existingLinesPath = path.join(DATA_DIR, "lines.json");
+  const existingCities: City[] = fs.existsSync(existingCitiesPath) ? readJsonFile<City[]>(existingCitiesPath) : [];
+  const existingLines: Line[] = fs.existsSync(existingLinesPath) ? readJsonFile<Line[]>(existingLinesPath) : [];
+
+  const cityMap = new Map<string, City>();
+  const lineMap = new Map<string, Line>();
 
   for (const file of overrideFiles) {
     const filePath = path.join(overridesDir, file);
@@ -36,7 +42,7 @@ export function migrateProvenanceData() {
     statusCounts.cities[data.city.provenance.status as "unverified"]++;
     if (data.city.provenance.source_url) statusCounts.cities.with_source_url++;
     cityCount++;
-    allCities.push(data.city);
+    cityMap.set(data.city.id, data.city);
 
     // Lines provenance
     if (Array.isArray(data.lines)) {
@@ -47,15 +53,39 @@ export function migrateProvenanceData() {
         statusCounts.lines[line.provenance.status as "unverified"]++;
         if (line.provenance.source_url) statusCounts.lines.with_source_url++;
         lineCount++;
-        allLines.push({
+        const lineWithCity = {
           ...line,
           city_id: line.city_id || data.city.id,
-        });
+        };
+        lineMap.set(line.id, lineWithCity);
       }
     }
 
     // Write updated override file back with 2 spaces
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2) + "\n", "utf-8");
+  }
+
+  // Preserve existing array order, appending any new records at the end
+  const allCities: City[] = [];
+  for (const c of existingCities) {
+    if (cityMap.has(c.id)) {
+      allCities.push(cityMap.get(c.id)!);
+      cityMap.delete(c.id);
+    }
+  }
+  for (const remaining of cityMap.values()) {
+    allCities.push(remaining);
+  }
+
+  const allLines: Line[] = [];
+  for (const l of existingLines) {
+    if (lineMap.has(l.id)) {
+      allLines.push(lineMap.get(l.id)!);
+      lineMap.delete(l.id);
+    }
+  }
+  for (const remaining of lineMap.values()) {
+    allLines.push(remaining);
   }
 
   console.log(`✅ Migrated ${cityCount} city overrides and ${lineCount} lines in data/overrides/`);

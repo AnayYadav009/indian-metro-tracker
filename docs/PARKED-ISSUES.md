@@ -172,9 +172,10 @@ Explicitly skipped for now: live train tracking and real-time arrivals (no free 
 - Fare and timing sources: for each Tier 1 city, identify the operator's official fare and first/last train publication. Cities without one get the fare feature hidden.
 - Provenance backfill (M19 implemented): All 21 cities and 58 lines currently default to `unverified` status with `source_url: null` and `last_verified: null`. No real-world values were invented. Official operator URLs and verification dates will be progressively sourced starting in M21 (Tier 1 fare and timing data).
 - M22 design brief requires owner sign-off before M23 starts.
-- Golden Line (renamed from Silver) is not yet onboarded.
+- Golden Line (renamed from Silver): Alignment geometry exists in `data/segments.geojson` (`del-golden-seg-01` construction, `del-golden-branch-01` planned) with 4 stations in `data/stations.geojson` and line entry in `data/lines.json`. Closed in M10.2 (F-02). Note: earlier note stating "not yet onboarded" was obsolete.
 - Live site: GitHub Pages deploy failed with 404 on 2026-10-17. Treated as a prerequisite for the public plan. Recheck and record the real HTTP status.
 - M19 observed baseline: 341 unit tests pass (up from 328), 150 e2e tests pass (up from 142), 28 static build pages, `validate:data` passes (0 errors), `audit:data` exit 1 (0 enforced errors, 2 pending-rule errors, 21 unbaselined warnings, 14 coverage gaps).
+- Pipeline regeneration verification (M19.4): `npm run pipeline:build` runs `build-real-data.ts`. When run offline against cached `data/raw`, it regenerates identical data facts. Generated data is not committed as part of audit verification. Array ordering in `data/cities.json` and `data/lines.json` was restored to exact master order in M19.4.
 - M19 Provenance audit and test artifacts in `reports/`: `audit:data` and visual QA tests generate/touch tracked files under `reports/` (e.g. `reports/data-audit/*.png`), which must be reverted with `git checkout -- reports/` after running to keep git working trees clean.
 - Interchange records lacking official source (4 total in `data/overrides/interchanges.json` forming 2 cross-network pairs):
   1. `del-sikanderpur` <-> `gur-sikanderpur` (Delhi Metro Yellow Line <-> Gurugram Rapid Metro)
@@ -194,7 +195,47 @@ Explicitly skipped for now: live train tracking and real-time arrivals (no free 
 - M20 Route state URL limitation: Active route origin, destination, and calculated routes are managed in the client Zustand store and are not currently synchronized to browser URL parameters. In accordance with milestone rule i, route issue reports prefill with the city page URL (`/city/[id]`). Deep linking for specific route queries can be introduced in a future routing milestone to supply direct route permalinks.
 - M20 Issue template structure: GitHub Issue Forms (`data-correction.yml`) receive the markdown diagnostics via `?body=` into the `body` field (`Prefilled Feature Diagnostics`). All four contexts (Station, Segment, Route, City) share the single official issue template without requiring new templates or schema alterations.
 - M19.3 Audit — Station source vs last_verified semantic conflict: 495 of 915 stations have a non-null `last_verified` date and non-empty `references` array, but retain `source: "osm"`. `docs/DATA-STANDARDS.md:61` states: "OSM-only records carry retrieved_at only." No validation or audit rule currently enforces this conflict. Owner decision needed on whether to update station `source` to reflect the cited operator/news sources (e.g., `osm+operator` or `manual`) or formalize a separate geometry source vs attribute verification standard.
-- M19.3 Audit — Interchange primaryLine arbitrary selection: For multi-line stations (e.g. `del-kashmere-gate` connected to `del-violet`, `del-red`, `del-yellow`), `station-detail.tsx:31` picks the first line matching `station.line_ids` found in `dataset.lines` order (`del-red`). For interchanges connecting lines with differing provenance status, only one line's status is shown. Owner decision needed on whether to display all connected lines' provenance or define a deterministic priority rule.
+- M19.3 Audit — Interchange primaryLine arbitrary selection: Resolved in M19.4. Station detail footer displays the weakest provenance status among connected lines (`unverified < schematic < verified`) labelled as "Lines" (or "Line" for single line), and the GitHub issue reporting body lists every connected line's individual provenance.
 - M19.3 Audit — User-visible "official" claims in UI: `components/city/city-data-notice.tsx:37` displays "Official Length Variance" when computed km diverges from reference km by > 3%, and `components/panels/provenance-footer.tsx:111` displays "No official source link" for unverified records.
 - M19.3 Audit — Tier 1 line count reconciliation: `data/lines.json` contains exactly 35 lines across Tier 1 cities (Delhi: 10, Mumbai: 7, Bengaluru: 5, Chennai: 5, Kolkata: 5, Hyderabad: 3). The earlier mention of 34 lines in M19.2 documentation was an undercount of 1 line.
+
+### M19.4 Verification & Audit Gap Findings (2026-10-24)
+
+- **Compare-Page Text Verification (Step 3)**:
+  - Grep across `app/`, `components/`, `lib/` confirms the sentence *"Data is aggregated from OpenStreetMap and official operator records"* does **NOT** exist in code or in the rendered DOM of `/compare`.
+  - The rendered `/compare` route contains no footer element; the only data attribution in code exists on individual city pages (`app/city/[id]/page.tsx:267`: *"Data verified from transit agency publications and OpenStreetMap vectors. Free and open data under ODbL."*) and OSM copyright tags in `lib/map-config.ts`.
+- **`last_verified` Distribution & Reference URL Analysis (Step 4)**:
+  - **Stations with `last_verified` (495 total)**:
+    - Distinct verification dates: `2026-10-08`: 270, `2026-10-15`: 132, `2026-10-16`: 82, `2026-08-31`: 6, `2026-10-13`: 3, `2026-10-10`: 2.
+    - Tier 1 dates: Delhi (41: 39 on `2026-10-08`, 1 on `2026-10-13`, 1 on `2026-10-10`), Mumbai (38: 32 on `2026-10-08`, 6 on `2026-08-31`), Bengaluru (5: all 5 on `2026-10-08`), Chennai (41: all 41 on `2026-10-08`), Kolkata (23: 21 on `2026-10-08`, 2 on `2026-10-13`), Hyderabad (57: all 57 on `2026-10-08`).
+    - Distinct reference URLs: 28 unique URLs. 361 station records point to a root/bare homepage URL (path empty or `/`).
+    - Top 10 most-shared URLs: `https://hmrl.co.in` (57), `https://ltmetro.com` (57), `https://chennaimetrorail.org` (41), `https://upmetrorail.com` (41), `https://www.delhimetrorail.com/network_map` (39), `https://www.metrorailnagpur.com` (37), `https://www.gujaratmetrorail.com` (36), `https://mmrda.maharashtra.gov.in` (30), `https://www.punemetrorail.org` (29), `https://kochimetro.org` (25).
+    - Hostname categorization (allowlist: `operator`, `government`, `news`, `blog`, `other`):
+      - `operator`: 345 stations (`chennaimetrorail.org`, `delhimetrorail.com`, `www.delhimetrorail.com`, `english.bmrc.co.in`, `hmrl.co.in`, `ltmetro.com`, `kochimetro.org`, `mmrcl.com`, `www.metrorailnagpur.com`, `www.mpmetrorail.com`, `www.nmrcnoida.com`, `www.punemetrorail.org`, `upmetrorail.com`, `patnametrorail.com`, `www.gujaratmetrorail.com`).
+      - `government`: 72 stations (`mmrda.maharashtra.gov.in`, `mtp.indianrailways.gov.in`, `pmrda.gov.in`, `transport.rajasthan.gov.in`).
+      - `news`: 42 stations (`www.thehindu.com`).
+      - `blog`: 35 stations (`themetrorailguy.com`).
+      - `other`: 0 stations (`www.openstreetmap.org`).
+      - `mixed`: 1 station (references span multiple categories).
+      - Unmapped hostnames: 0. Total = 495.
+  - **Segments with `last_verified` (34 total)**:
+    - Distinct verification dates: `2026-10-15`: 11, `2026-10-08`: 6, `2026-10-16`: 6, `2026-10-13`: 3, `2026-10-10`: 3, `2026-10-06`: 2, `2026-08-31`: 1, `2026-10-07`: 1, `2026-10-17`: 1.
+    - Tier 1 dates: Delhi (3: 2 on `2026-10-10`, 1 on `2026-10-17`), Mumbai (7: 3 on `2026-10-08`, 1 on `2026-08-31`, 1 on `2026-10-06`, 1 on `2026-10-10`, 1 on `2026-10-13`), Bengaluru (3: 2 on `2026-10-13`, 1 on `2026-10-06`), Hyderabad (1: on `2026-10-07`), Chennai (0), Kolkata (0).
+    - Hostname categorization:
+      - `operator`: 14 segments
+      - `government`: 4 segments
+      - `news`: 2 segments
+      - `blog`: 2 segments
+      - `other`: 0 segments
+      - `mixed`: 12 segments
+      - Unmapped hostnames: 0. Total = 34.
+- **Golden Line Status Verification (Step 5)**:
+  - `data/lines.json` entry: `id: "del-golden"`, `name: "Golden Line"`, `city: "Delhi"`, `city_id: "delhi"`, `color: "#B8860B"`, `operator: "DMRC"`, `source: "dmrc+news"`, `aliases: ["Silver Line", "Gold Line"]`, `provenance: { "status": "unverified" }`.
+  - Segments in `data/segments.geojson`:
+    - `del-golden-seg-01`: status `"construction"`, phase `"IV"`, 3 stations, LineString with 71 coordinate vertices.
+    - `del-golden-branch-01`: status `"planned"`, phase `"IV"`, 1 station, LineString with 55 coordinate vertices.
+  - Stations in `data/stations.geojson`: 4 stations (`del-delhi-aerocity`, `del-tughlakabad`, `del-saket`, `del-andrews-ganj`).
+  - Geometry exists: **Yes** (both segments carry full continuous LineString geometry).
+  - Obsolete documentation: The note in `docs/PARKED-ISSUES.md:175` stating "not yet onboarded" was identified and corrected; F-02 was closed in M10.2.
+
 

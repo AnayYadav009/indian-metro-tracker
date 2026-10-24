@@ -77,7 +77,9 @@ test.describe("M20 Report-an-Error Expansion", () => {
     expect(body).toContain("del-kashmere-gate");
     expect(body).toContain("Network Provenance");
     expect(body).toContain("City Provenance Status:** unverified");
-    expect(body).toContain("Line Provenance Status:** unverified");
+    expect(body).toContain("Line Provenance (Violet Line):** unverified");
+    expect(body).toContain("Line Provenance (Red Line):** unverified");
+    expect(body).toContain("Line Provenance (Yellow Line):** unverified");
     expect(body).toContain("Map Permalink");
     expect(body).toContain("selected=station%3Adel-kashmere-gate");
 

@@ -33,6 +33,10 @@ export type IssueTarget =
       coordinates?: [number, number];
       cityProvenance?: Provenance | null;
       lineProvenance?: Provenance | null;
+      lineProvenances?: Array<{
+        name: string;
+        provenance?: Provenance | null;
+      }>;
     }
   | {
       type: "route";
@@ -134,9 +138,17 @@ export function generateIssueBody(target: IssueTarget, siteUrl?: string): string
     lines.push(`- **City Provenance Status:** ${target.cityProvenance?.status || "unverified"}`);
     lines.push(`- **City Source URL:** ${target.cityProvenance?.source_url || "None"}`);
     lines.push(`- **City Last Verified:** ${target.cityProvenance?.last_verified || "Not recorded"}`);
-    lines.push(`- **Line Provenance Status:** ${target.lineProvenance?.status || "unverified"}`);
-    lines.push(`- **Line Source URL:** ${target.lineProvenance?.source_url || "None"}`);
-    lines.push(`- **Line Last Verified:** ${target.lineProvenance?.last_verified || "Not recorded"}`);
+
+    if (target.type === "station" && target.lineProvenances && target.lineProvenances.length > 0) {
+      for (const lp of target.lineProvenances) {
+        const prov = lp.provenance || { status: "unverified" };
+        lines.push(`- **Line Provenance (${lp.name}):** ${prov.status || "unverified"} (Source: ${prov.source_url || "None"}, Last Verified: ${prov.last_verified || "Not recorded"})`);
+      }
+    } else {
+      lines.push(`- **Line Provenance Status:** ${target.lineProvenance?.status || "unverified"}`);
+      lines.push(`- **Line Source URL:** ${target.lineProvenance?.source_url || "None"}`);
+      lines.push(`- **Line Last Verified:** ${target.lineProvenance?.last_verified || "Not recorded"}`);
+    }
 
     lines.push("");
     lines.push("### Map Permalink");

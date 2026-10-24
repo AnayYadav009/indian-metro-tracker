@@ -52,7 +52,7 @@ test.describe("M19 Provenance Layer Display", () => {
     const footer = stationDetail.getByTestId("provenance-footer");
     await expect(footer).toBeVisible();
     await expect(footer).toContainText("City:");
-    await expect(footer).toContainText("Line:");
+    await expect(footer).toContainText("Lines:");
     await expect(footer).toContainText("Unverified");
 
     const disclaimer = footer.getByTestId("provenance-disclaimer-notice");

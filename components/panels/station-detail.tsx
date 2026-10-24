@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useMemo, useCallback } from "react";
-import type { StationProperties } from "@/types/schema";
+import type { StationProperties, Provenance } from "@/types/schema";
 import { ArrowRight } from "lucide-react";
 import { getMetroData, getSegments } from "@/lib/data";
 import { useMetroStore } from "@/store/use-metro-store";
@@ -57,9 +57,49 @@ export function StationDetail({ station, coordinates }: StationDetailProps) {
         name: line?.name || lineId,
         color: line?.color || DEFAULT_LINE_FALLBACK_COLOR,
         statusLabels: getLineStatusLabels(lineSegs.map((s) => s.properties.status)),
+        provenance: line?.provenance ?? { status: "unverified" },
       };
     });
   }, [station.line_ids, station.interchange_id, dataset.stations, dataset.lines, dataset.segments]);
+
+  const { weakestLineProvenance, lineProvenanceLabel } = useMemo<{
+    weakestLineProvenance: Provenance;
+    lineProvenanceLabel: string;
+  }>(() => {
+    const defaultProv: Provenance = { status: "unverified" };
+    if (connectedLines.length === 0) {
+      return {
+        weakestLineProvenance: primaryLine?.provenance ?? defaultProv,
+        lineProvenanceLabel: "Line",
+      };
+    }
+
+    const rank = (status?: string): number => {
+      if (status === "verified") return 3;
+      if (status === "schematic") return 2;
+      return 1; // unverified or missing
+    };
+
+    let weakest: Provenance = connectedLines[0].provenance ?? defaultProv;
+    let allSameStatus = true;
+    const firstStatus = connectedLines[0].provenance?.status || "unverified";
+
+    for (const cl of connectedLines) {
+      const currentProv = cl.provenance ?? defaultProv;
+      const currentStatus = currentProv.status || "unverified";
+      if (currentStatus !== firstStatus) {
+        allSameStatus = false;
+      }
+      if (rank(currentStatus) < rank(weakest.status)) {
+        weakest = currentProv;
+      }
+    }
+
+    return {
+      weakestLineProvenance: weakest,
+      lineProvenanceLabel: connectedLines.length > 1 ? "Lines" : "Line",
+    };
+  }, [connectedLines, primaryLine]);
 
   /** Clicking a line chip selects the first operational segment of that line */
   const handleLineChipClick = useCallback(
@@ -241,7 +281,11 @@ export function StationDetail({ station, coordinates }: StationDetailProps) {
           data: station,
           coordinates,
           cityProvenance: city?.provenance,
-          lineProvenance: primaryLine?.provenance,
+          lineProvenance: weakestLineProvenance,
+          lineProvenances: connectedLines.map((cl) => ({
+            name: cl.name,
+            provenance: cl.provenance,
+          })),
         }}
       />
 
@@ -249,7 +293,7 @@ export function StationDetail({ station, coordinates }: StationDetailProps) {
       <ProvenanceFooter
         items={[
           { label: "City", provenance: city?.provenance },
-          { label: "Line", provenance: primaryLine?.provenance },
+          { label: lineProvenanceLabel, provenance: weakestLineProvenance },
         ]}
       />
     </div>
