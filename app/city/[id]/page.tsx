@@ -11,6 +11,7 @@ import { getAllCities, getCityPageData } from "@/lib/city-page-data";
 import { generateCityMetadata, generateCityJsonLd } from "@/lib/city-seo";
 import { CityDataNotice } from "@/components/city/city-data-notice";
 import { CityLinesTable } from "@/components/city/city-lines-table";
+import { ReportIssueButton } from "@/components/panels/report-issue-button";
 
 interface CityPageProps {
   params: Promise<{ id: string }>;
@@ -142,6 +143,19 @@ export default async function CityPage({ params }: CityPageProps) {
             variance={stats.lengthVariancePercent ?? undefined}
             provenance={city.provenance}
           />
+
+          <div className="w-full sm:w-fit">
+            <ReportIssueButton
+              target={{
+                type: "city",
+                data: {
+                  cityId: city.id,
+                  cityName: city.name,
+                  provenance: city.provenance,
+                },
+              }}
+            />
+          </div>
 
           {/* Network Key Metrics Grid */}
           <section className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">

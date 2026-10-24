@@ -14,6 +14,7 @@ export function SegmentDetail({ segment }: SegmentDetailProps) {
   const knownIssueNotice = getKnownIssueNotice([segment.line_id]);
   const dataset = getMetroData();
   const line = dataset.lines.find((l) => l.id === segment.line_id);
+  const city = dataset.cities.find((c) => c.id === segment.city_id);
 
   return (
     <div data-testid="segment-detail" className="flex flex-col gap-2.5 text-slate-200">
@@ -151,7 +152,14 @@ export function SegmentDetail({ segment }: SegmentDetailProps) {
        </div>
 
       {/* Report an Issue Button */}
-      <ReportIssueButton target={{ type: "segment", data: segment }} />
+      <ReportIssueButton
+        target={{
+          type: "segment",
+          data: segment,
+          cityProvenance: city?.provenance,
+          lineProvenance: line?.provenance,
+        }}
+      />
 
       {/* Provenance footer */}
       <ProvenanceFooter

@@ -36,10 +36,11 @@ Trust first (fares and timings are new claims that need a source and a verified 
 - Done when: `validate:data` fails if any displayed value lacks provenance; unit and e2e tests cover the display.
 - Outcome: Provenance schema added; validator enforces status, https, and non-future dates; 21 cities and 58 lines migrated to unverified; ProvenanceFooter component rendered across city, station, and segment views; 13 unit tests and 8 e2e tests added.
 
-**M20 Report-an-error button**
+**M20 Report-an-error button** (Status: Implemented, pending owner review)
 - Scope: no backend. Opens a prefilled GitHub issue with city, line or station, and page URL.
 - Files likely touched: info panels (`components/panels/station-detail.tsx`, `components/panels/segment-detail.tsx`, `components/panels/report-issue-button.tsx`, `lib/issue-url.ts`), route view (`components/routing/route-finder-panel.tsx`).
 - Done when: the button appears on station, line and route views and the generated link is tested.
+- Outcome: Extended ReportIssueButton to route finder results and city pages; expanded issue-url.ts for route and city diagnostics; added distinct network provenance section to station and segment issue templates; enforced 7,400-char URL cap with station list truncation; added unit, component, and desktop/mobile e2e tests.
 
 ### Phase B, part 1: Fare and timing data
 

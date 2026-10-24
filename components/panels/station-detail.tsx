@@ -235,7 +235,15 @@ export function StationDetail({ station, coordinates }: StationDetailProps) {
       </div>
 
       {/* Report an Issue Button */}
-      <ReportIssueButton target={{ type: "station", data: station, coordinates }} />
+      <ReportIssueButton
+        target={{
+          type: "station",
+          data: station,
+          coordinates,
+          cityProvenance: city?.provenance,
+          lineProvenance: primaryLine?.provenance,
+        }}
+      />
 
       {/* Provenance footer */}
       <ProvenanceFooter

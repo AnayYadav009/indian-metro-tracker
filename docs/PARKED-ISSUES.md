@@ -191,3 +191,6 @@ Explicitly skipped for now: live train tracking and real-time arrivals (no free 
   - Stations with non-null `last_verified`:
     - Total: 495 of 915 stations
     - Tier 1: 205 stations (Delhi: 41, Mumbai: 38, Bengaluru: 5, Chennai: 41, Kolkata: 23, Hyderabad: 57)
+- M20 Route state URL limitation: Active route origin, destination, and calculated routes are managed in the client Zustand store and are not currently synchronized to browser URL parameters. In accordance with milestone rule i, route issue reports prefill with the city page URL (`/city/[id]`). Deep linking for specific route queries can be introduced in a future routing milestone to supply direct route permalinks.
+- M20 Issue template structure: GitHub Issue Forms (`data-correction.yml`) receive the markdown diagnostics via `?body=` into the `body` field (`Prefilled Feature Diagnostics`). All four contexts (Station, Segment, Route, City) share the single official issue template without requiring new templates or schema alterations.
+
