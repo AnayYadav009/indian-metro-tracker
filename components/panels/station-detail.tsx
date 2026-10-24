@@ -12,6 +12,7 @@ import {
   InterchangeBadge,
 } from "./badge-indicators";
 import { ReportIssueButton } from "./report-issue-button";
+import { ProvenanceFooter } from "./provenance-footer";
 import { DEFAULT_LINE_FALLBACK_COLOR } from "@/lib/metro-styles";
 import { getKnownIssueNotice } from "@/lib/known-issue-notices";
 import { getLineStatusLabels } from "@/lib/line-status";
@@ -25,6 +26,9 @@ export function StationDetail({ station, coordinates }: StationDetailProps) {
   const dataset = useMemo(() => getMetroData(), []);
   const setSelectedFeature = useMetroStore((s) => s.setSelectedFeature);
   const startRouteFromStation = useMetroStore((s) => s.startRouteFromStation);
+
+  const city = useMemo(() => dataset.cities.find((c) => c.id === station.city_id), [dataset.cities, station.city_id]);
+  const primaryLine = useMemo(() => dataset.lines.find((l) => station.line_ids.includes(l.id)), [dataset.lines, station.line_ids]);
 
   // Map line_ids to full line info (names and colors)
   // For cross-network or clustered interchanges, aggregate lines from all stations sharing interchange_id
@@ -209,13 +213,10 @@ export function StationDetail({ station, coordinates }: StationDetailProps) {
         Route from here <ArrowRight className="h-3 w-3" />
       </button>
 
-      {/* Report an Issue Button */}
-      <ReportIssueButton target={{ type: "station", data: station, coordinates }} />
-
-      {/* Provenance footer */}
+      {/* Station Feature Source */}
       <div className="flex items-center justify-between border-t border-slate-800/80 pt-2 text-[10px] text-slate-400">
         <span className="flex items-center gap-1.5">
-          <span>Source:</span>
+          <span>Feature source:</span>
           <span
             className={`rounded px-1.5 py-0.5 font-medium ${
               station.source === "mock"
@@ -228,10 +229,21 @@ export function StationDetail({ station, coordinates }: StationDetailProps) {
         </span>
         <span>
           {station.last_verified
-            ? `Verified: ${station.last_verified}`
-            : "Not verified (OSM data)"}
+            ? `Feature data date: ${station.last_verified}`
+            : "Feature data date: Unrecorded (OSM data)"}
         </span>
       </div>
+
+      {/* Report an Issue Button */}
+      <ReportIssueButton target={{ type: "station", data: station, coordinates }} />
+
+      {/* Provenance footer */}
+      <ProvenanceFooter
+        items={[
+          { label: "City", provenance: city?.provenance },
+          { label: "Line", provenance: primaryLine?.provenance },
+        ]}
+      />
     </div>
   );
 }

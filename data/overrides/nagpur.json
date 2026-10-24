@@ -6,14 +6,17 @@
       78.98,
       21.03,
       79.17,
-      21.20
+      21.2
     ],
     "operator": "Maha Metro",
     "phases": [
       "1",
       "2"
     ],
-    "network_id": "nagpur-metro"
+    "network_id": "nagpur-metro",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   "lines": [
     {
@@ -24,7 +27,10 @@
       "color": "#F97316",
       "operator": "Maha Metro",
       "source": "osm+mahametro",
-      "notes": "North-South Corridor from Automotive Square to Khapri (19.66 km, 18 stations). Phase 1 fully operational."
+      "notes": "North-South Corridor from Automotive Square to Khapri (19.66 km, 18 stations). Phase 1 fully operational.",
+      "provenance": {
+        "status": "unverified"
+      }
     },
     {
       "id": "nag-aqua",
@@ -34,7 +40,10 @@
       "color": "#06B6D4",
       "operator": "Maha Metro",
       "source": "osm+mahametro",
-      "notes": "East-West Corridor from Lokmanya Nagar to Prajapati Nagar (18.56 km, 20 stations). Phase 1 fully operational."
+      "notes": "East-West Corridor from Lokmanya Nagar to Prajapati Nagar (18.56 km, 20 stations). Phase 1 fully operational.",
+      "provenance": {
+        "status": "unverified"
+      }
     }
   ],
   "segments": [

@@ -12,7 +12,10 @@
     "phases": [
       "1"
     ],
-    "network_id": "jaipur-metro"
+    "network_id": "jaipur-metro",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   "lines": [
     {
@@ -23,7 +26,10 @@
       "color": "#ff748c",
       "operator": "JMRC",
       "source": "osm+jmrc",
-      "notes": "Pink Line connects Mansarovar to Badi Chaupar (11.97 km, 11 stations). Phase 1 fully operational."
+      "notes": "Pink Line connects Mansarovar to Badi Chaupar (11.97 km, 11 stations). Phase 1 fully operational.",
+      "provenance": {
+        "status": "unverified"
+      }
     }
   ],
   "segments": [

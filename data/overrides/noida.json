@@ -13,7 +13,10 @@
       "1",
       "2"
     ],
-    "network_id": "noida-metro"
+    "network_id": "noida-metro",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   "lines": [
     {
@@ -23,7 +26,10 @@
       "city_id": "noida",
       "color": "#00CED1",
       "operator": "NMRC",
-      "source": "osm+nmrc"
+      "source": "osm+nmrc",
+      "provenance": {
+        "status": "unverified"
+      }
     }
   ],
   "segments": [

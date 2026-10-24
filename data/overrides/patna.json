@@ -12,7 +12,10 @@
     "phases": [
       "1"
     ],
-    "network_id": "patna-metro"
+    "network_id": "patna-metro",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   "lines": [
     {
@@ -23,7 +26,10 @@
       "color": "#4169E1",
       "operator": "PMRC",
       "source": "osm+pmrc",
-      "notes": "Blue Line priority corridor connects New ISBT to Malahi Pakri (5.28 km, 5 stations). Elevated priority corridor fully operational."
+      "notes": "Blue Line priority corridor connects New ISBT to Malahi Pakri (5.28 km, 5 stations). Elevated priority corridor fully operational.",
+      "provenance": {
+        "status": "unverified"
+      }
     }
   ],
   "segments": [

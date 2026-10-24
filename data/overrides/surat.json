@@ -12,7 +12,10 @@
     "phases": [
       "1"
     ],
-    "network_id": "surat-metro"
+    "network_id": "surat-metro",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   "lines": [
     {
@@ -23,7 +26,10 @@
       "operator": "GMRC",
       "city_id": "surat",
       "source": "osm+gmrc",
-      "notes": "Corridor 1 (Diamond Corridor) from Sarthana to Dream City (21.61 km, 21 stations). Under construction."
+      "notes": "Corridor 1 (Diamond Corridor) from Sarthana to Dream City (21.61 km, 21 stations). Under construction.",
+      "provenance": {
+        "status": "unverified"
+      }
     },
     {
       "id": "sur-green",
@@ -33,7 +39,10 @@
       "operator": "GMRC",
       "city_id": "surat",
       "source": "osm+gmrc",
-      "notes": "Corridor 2 (Textile Corridor) from Bhesan to Saroli (18.74 km, 18 stations). Under construction."
+      "notes": "Corridor 2 (Textile Corridor) from Bhesan to Saroli (18.74 km, 18 stations). Under construction.",
+      "provenance": {
+        "status": "unverified"
+      }
     }
   ],
   "segments": [

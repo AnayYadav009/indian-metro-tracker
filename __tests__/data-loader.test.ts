@@ -98,6 +98,7 @@ describe("Metro Data Loader & Dataset Invariants", () => {
             bbox: [80.8, 26.7, 81.1, 27.0] as [number, number, number, number],
             operator: "MTC",
             phases: ["Phase 1", "Phase 2"],
+            provenance: { status: "unverified" },
           },
         ],
         lines: [
@@ -110,6 +111,7 @@ describe("Metro Data Loader & Dataset Invariants", () => {
             color: "#ED1C24",
             operator: "MTC",
             source: "mock",
+            provenance: { status: "unverified" },
           },
         ],
         segments: {

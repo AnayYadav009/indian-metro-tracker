@@ -25,6 +25,7 @@ describe("Schema Validation Tests", () => {
       bbox: [76.84, 28.4, 77.35, 28.88] as [number, number, number, number],
       operator: "DMRC",
       phases: ["I", "II", "III", "IV"],
+      provenance: { status: "unverified" },
     };
     expect(CitySchema.safeParse(validCity).success).toBe(true);
 
@@ -44,6 +45,7 @@ describe("Schema Validation Tests", () => {
       color: "#FFD700",
       operator: "DMRC",
       source: "osm+dmrc",
+      provenance: { status: "unverified" },
     };
     expect(LineSchema.safeParse(validLine).success).toBe(true);
 
@@ -232,6 +234,7 @@ describe("Schema Validation Tests", () => {
         bbox: [76.84, 28.4, 77.35, 28.88] as [number, number, number, number],
         operator: "DMRC",
         phases: ["I", "II"],
+        provenance: { status: "unverified" },
       },
     ];
 
@@ -244,6 +247,7 @@ describe("Schema Validation Tests", () => {
         color: "#FFD700",
         operator: "DMRC",
         source: "osm+dmrc",
+        provenance: { status: "unverified" },
       },
     ];
 
@@ -305,6 +309,7 @@ describe("Schema Validation Tests", () => {
         bbox: [76.84, 28.4, 77.35, 28.88] as [number, number, number, number],
         operator: "DMRC",
         phases: ["I", "II"],
+        provenance: { status: "unverified" },
       },
     ];
 
@@ -317,6 +322,7 @@ describe("Schema Validation Tests", () => {
         color: "#FFD700",
         operator: "DMRC",
         source: "osm+dmrc",
+        provenance: { status: "unverified" },
       },
     ];
 
@@ -369,6 +375,7 @@ describe("Schema Validation Tests", () => {
         bbox: [76.84, 28.4, 77.35, 28.88] as [number, number, number, number],
         operator: "DMRC",
         phases: ["I", "II"],
+        provenance: { status: "unverified" },
       },
     ];
 
@@ -381,6 +388,7 @@ describe("Schema Validation Tests", () => {
         color: "#FFD700",
         operator: "DMRC",
         source: "osm+dmrc",
+        provenance: { status: "unverified" },
       },
     ];
 
@@ -407,6 +415,7 @@ describe("Schema Validation Tests", () => {
         bbox: [77.45, 12.8, 77.78, 13.15] as [number, number, number, number],
         operator: "BMRCL",
         phases: ["1", "2"],
+        provenance: { status: "unverified" },
       },
     ];
     const testLines = [
@@ -418,6 +427,7 @@ describe("Schema Validation Tests", () => {
         color: "#800080",
         operator: "BMRCL",
         source: "osm+bmrcl",
+        provenance: { status: "unverified" },
       },
     ];
 
@@ -498,6 +508,7 @@ describe("Schema Validation Tests", () => {
         bbox: [76.84, 28.4, 77.35, 28.88] as [number, number, number, number],
         operator: "DMRC",
         phases: ["IV"],
+        provenance: { status: "unverified" },
       },
     ];
     const testLines = [
@@ -509,6 +520,7 @@ describe("Schema Validation Tests", () => {
         color: "#CC338B",
         operator: "DMRC",
         source: "osm",
+        provenance: { status: "unverified" },
       },
     ];
 
@@ -563,6 +575,7 @@ describe("Schema Validation Tests", () => {
         bbox: [76.84, 28.4, 77.35, 28.88] as [number, number, number, number],
         operator: "DMRC",
         phases: ["IV"],
+        provenance: { status: "unverified" },
       },
     ];
     const testLines = [
@@ -574,6 +587,7 @@ describe("Schema Validation Tests", () => {
         color: "#CC338B",
         operator: "DMRC",
         source: "osm",
+        provenance: { status: "unverified" },
       },
     ];
 
@@ -650,6 +664,7 @@ describe("Schema Validation Tests", () => {
         bbox: [76.84, 28.4, 77.35, 28.88] as [number, number, number, number],
         operator: "DMRC",
         phases: ["I"],
+        provenance: { status: "unverified" },
       },
     ];
     const testLines = [
@@ -661,6 +676,7 @@ describe("Schema Validation Tests", () => {
         color: "#E31837",
         operator: "DMRC",
         source: "osm",
+        provenance: { status: "unverified" },
       },
     ];
 
@@ -711,6 +727,7 @@ describe("Schema Validation Tests", () => {
       bbox: [77, 12, 78, 13] as [number, number, number, number],
       operator: "SCRL",
       phases: ["1"],
+      provenance: { status: "unverified" },
     };
     const line = {
       id: "sc-red",
@@ -720,6 +737,7 @@ describe("Schema Validation Tests", () => {
       color: "#FF0000",
       operator: "SCRL",
       source: "official",
+      provenance: { status: "unverified" },
     };
     const station = (id: string, name: string, lng: number) => ({
       type: "Feature" as const,
@@ -793,6 +811,7 @@ describe("Schema Validation Tests", () => {
       bbox: [77, 12, 78, 13] as [number, number, number, number],
       operator: "SCRL",
       phases: ["1"],
+      provenance: { status: "unverified" },
     };
     const line = {
       id: "sc-red",
@@ -802,6 +821,7 @@ describe("Schema Validation Tests", () => {
       color: "#FF0000",
       operator: "SCRL",
       source: "official",
+      provenance: { status: "unverified" },
     };
     const shared = {
       segment_ids: ["sc-a", "sc-b"],

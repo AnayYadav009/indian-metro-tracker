@@ -12,7 +12,10 @@
     "phases": [
       "1"
     ],
-    "network_id": "kochi-metro"
+    "network_id": "kochi-metro",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   "lines": [
     {
@@ -23,7 +26,10 @@
       "color": "#0284C7",
       "operator": "KMRL",
       "source": "osm+kmrl",
-      "notes": "Line 1 connects Aluva to Thrippunithura Terminal (28.12 km, 25 elevated stations). Fully operational."
+      "notes": "Line 1 connects Aluva to Thrippunithura Terminal (28.12 km, 25 elevated stations). Fully operational.",
+      "provenance": {
+        "status": "unverified"
+      }
     }
   ],
   "segments": [

@@ -15,7 +15,10 @@
       "2A",
       "2B",
       "3"
-    ]
+    ],
+    "provenance": {
+      "status": "unverified"
+    }
   },
   "lines": [
     {
@@ -25,7 +28,10 @@
       "color": "#800080",
       "operator": "BMRCL",
       "city_id": "bengaluru",
-      "source": "osm+bmrcl"
+      "source": "osm+bmrcl",
+      "provenance": {
+        "status": "unverified"
+      }
     },
     {
       "id": "blr-green",
@@ -34,7 +40,10 @@
       "color": "#009933",
       "operator": "BMRCL",
       "city_id": "bengaluru",
-      "source": "osm+bmrcl"
+      "source": "osm+bmrcl",
+      "provenance": {
+        "status": "unverified"
+      }
     },
     {
       "id": "blr-yellow",
@@ -43,7 +52,10 @@
       "color": "#FFCC00",
       "operator": "BMRCL",
       "city_id": "bengaluru",
-      "source": "osm+bmrcl"
+      "source": "osm+bmrcl",
+      "provenance": {
+        "status": "unverified"
+      }
     },
     {
       "id": "blr-blue",
@@ -52,7 +64,10 @@
       "color": "#1E90FF",
       "operator": "BMRCL",
       "city_id": "bengaluru",
-      "source": "osm+bmrcl"
+      "source": "osm+bmrcl",
+      "provenance": {
+        "status": "unverified"
+      }
     },
     {
       "id": "blr-pink",
@@ -61,7 +76,10 @@
       "color": "#FF69B4",
       "operator": "BMRCL",
       "city_id": "bengaluru",
-      "source": "osm+bmrcl"
+      "source": "osm+bmrcl",
+      "provenance": {
+        "status": "unverified"
+      }
     }
   ],
   "segments": [

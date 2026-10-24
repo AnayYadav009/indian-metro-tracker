@@ -13,7 +13,10 @@
       "1",
       "1A",
       "1B"
-    ]
+    ],
+    "provenance": {
+      "status": "unverified"
+    }
   },
   "lines": [
     {
@@ -23,7 +26,10 @@
       "color": "#800080",
       "operator": "Maha Metro",
       "city_id": "pune",
-      "source": "osm+maha_metro"
+      "source": "osm+maha_metro",
+      "provenance": {
+        "status": "unverified"
+      }
     },
     {
       "id": "pun-aqua",
@@ -32,7 +38,10 @@
       "color": "#00FFFF",
       "operator": "Maha Metro",
       "city_id": "pune",
-      "source": "osm+maha_metro"
+      "source": "osm+maha_metro",
+      "provenance": {
+        "status": "unverified"
+      }
     },
     {
       "id": "pun-line-3",
@@ -41,7 +50,10 @@
       "color": "#FF69B4",
       "operator": "Pune IT City Metro Rail Limited",
       "city_id": "pune",
-      "source": "osm+pmrda"
+      "source": "osm+pmrda",
+      "provenance": {
+        "status": "unverified"
+      }
     }
   ],
   "segments": [

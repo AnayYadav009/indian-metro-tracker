@@ -12,7 +12,10 @@
     "phases": [
       "1"
     ],
-    "network_id": "lucknow-metro"
+    "network_id": "lucknow-metro",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   "lines": [
     {
@@ -23,7 +26,10 @@
       "color": "#EF4444",
       "operator": "UPMRC",
       "source": "osm+upmrc",
-      "notes": "Red Line connects CCS Airport to Munshipulia (22.88 km, 21 stations). Fully operational."
+      "notes": "Red Line connects CCS Airport to Munshipulia (22.88 km, 21 stations). Fully operational.",
+      "provenance": {
+        "status": "unverified"
+      }
     }
   ],
   "segments": [

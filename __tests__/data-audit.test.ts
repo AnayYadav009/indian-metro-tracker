@@ -16,6 +16,7 @@ function makeCity(overrides?: Partial<Record<string, unknown>>) {
     bbox: [77.0, 12.0, 78.0, 13.0],
     operator: "TCRL",
     phases: ["1", "2"],
+    provenance: { status: "unverified" },
     ...overrides,
   };
 }
@@ -29,6 +30,7 @@ function makeLine(overrides?: Partial<Record<string, unknown>>) {
     color: "#FF0000",
     operator: "TCRL",
     source: "osm",
+    provenance: { status: "unverified" },
     ...overrides,
   };
 }

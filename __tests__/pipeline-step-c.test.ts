@@ -390,6 +390,7 @@ describe("Step C Pipeline Code & Rules", () => {
         bbox: [76.84, 28.4, 77.35, 28.88],
         operator: "DMRC",
         phases: ["I", "II"],
+        provenance: { status: "unverified" },
       },
     ];
 
@@ -402,6 +403,7 @@ describe("Step C Pipeline Code & Rules", () => {
         color: "#FF0000",
         operator: "Wrong Operator", // Mismatch against reference (DMRC)
         source: "osm",
+        provenance: { status: "unverified" },
       },
     ];
 
@@ -428,6 +430,7 @@ describe("Step C Pipeline Code & Rules", () => {
         bbox: [76.84, 28.4, 77.35, 28.88],
         operator: "DMRC",
         phases: ["I"],
+        provenance: { status: "unverified" },
       },
     ];
 
@@ -440,6 +443,7 @@ describe("Step C Pipeline Code & Rules", () => {
         color: "#FF0000",
         operator: "DMRC",
         source: "osm",
+        provenance: { status: "unverified" },
       },
     ];
 

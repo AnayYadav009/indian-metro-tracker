@@ -15,7 +15,10 @@
       "2B",
       "3",
       "4"
-    ]
+    ],
+    "provenance": {
+      "status": "unverified"
+    }
   },
   "lines": [
     {
@@ -25,7 +28,10 @@
       "color": "#0072CE",
       "operator": "MMOPL",
       "city_id": "mumbai",
-      "source": "osm+mmrda"
+      "source": "osm+mmrda",
+      "provenance": {
+        "status": "unverified"
+      }
     },
     {
       "id": "mum-line-2a",
@@ -34,7 +40,10 @@
       "color": "#FFD700",
       "operator": "MMMOCL",
       "city_id": "mumbai",
-      "source": "osm+mmrda"
+      "source": "osm+mmrda",
+      "provenance": {
+        "status": "unverified"
+      }
     },
     {
       "id": "mum-line-7",
@@ -43,7 +52,10 @@
       "color": "#ED1C24",
       "operator": "MMMOCL",
       "city_id": "mumbai",
-      "source": "osm+mmrda"
+      "source": "osm+mmrda",
+      "provenance": {
+        "status": "unverified"
+      }
     },
     {
       "id": "mum-line-3",
@@ -52,7 +64,10 @@
       "color": "#00A3E0",
       "operator": "MMRCL",
       "city_id": "mumbai",
-      "source": "osm+mmrda"
+      "source": "osm+mmrda",
+      "provenance": {
+        "status": "unverified"
+      }
     },
     {
       "id": "mum-line-4",
@@ -61,7 +76,10 @@
       "color": "#00B140",
       "operator": "MMMOCL",
       "city_id": "mumbai",
-      "source": "osm+mmrda"
+      "source": "osm+mmrda",
+      "provenance": {
+        "status": "unverified"
+      }
     },
     {
       "id": "mum-line-2b",
@@ -70,7 +88,10 @@
       "color": "#FFC72C",
       "operator": "MMMOCL",
       "city_id": "mumbai",
-      "source": "osm+mmrda"
+      "source": "osm+mmrda",
+      "provenance": {
+        "status": "unverified"
+      }
     },
     {
       "id": "mum-line-9",
@@ -79,7 +100,10 @@
       "color": "#D32F2F",
       "operator": "MMMOCL",
       "city_id": "mumbai",
-      "source": "osm+mmrda"
+      "source": "osm+mmrda",
+      "provenance": {
+        "status": "unverified"
+      }
     }
   ],
   "segments": [

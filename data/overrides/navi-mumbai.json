@@ -12,7 +12,10 @@
     "phases": [
       "1"
     ],
-    "network_id": "navi-mumbai-metro"
+    "network_id": "navi-mumbai-metro",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   "lines": [
     {
@@ -23,7 +26,10 @@
       "color": "#77248b",
       "operator": "Maha Metro",
       "source": "osm+cidco",
-      "notes": "Owned by CIDCO; operated and maintained by Maha Metro under a 10-year contract signed in 2021. OSM tags operator as CIDCO creating a documented source conflict."
+      "notes": "Owned by CIDCO; operated and maintained by Maha Metro under a 10-year contract signed in 2021. OSM tags operator as CIDCO creating a documented source conflict.",
+      "provenance": {
+        "status": "unverified"
+      }
     }
   ],
   "segments": [

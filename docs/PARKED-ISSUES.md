@@ -170,8 +170,24 @@ Explicitly skipped for now: live train tracking and real-time arrivals (no free 
 
 - Tier 1 definition: confirm the exact city list from the M10 Tier 1 visual QA work before M21 starts. Do not guess.
 - Fare and timing sources: for each Tier 1 city, identify the operator's official fare and first/last train publication. Cities without one get the fare feature hidden.
-- Provenance backfill (M19): existing displayed values need `source_url`, `last_verified` and status. Decide whether values without a source are marked "unverified" or the feature is hidden, once the validator rule exists.
+- Provenance backfill (M19 implemented): All 21 cities and 58 lines currently default to `unverified` status with `source_url: null` and `last_verified: null`. No real-world values were invented. Official operator URLs and verification dates will be progressively sourced starting in M21 (Tier 1 fare and timing data).
 - M22 design brief requires owner sign-off before M23 starts.
 - Golden Line (renamed from Silver) is not yet onboarded.
 - Live site: GitHub Pages deploy failed with 404 on 2026-10-17. Treated as a prerequisite for the public plan. Recheck and record the real HTTP status.
-- Last known baseline to compare against: 326 unit, 142 e2e, 28 pages, `validate:data` pass, `audit:data` exit 1 (1 enforced error, 2 pending-rule errors, 30 unbaselined warnings, 14 coverage gaps). Replace with the M18.9 observed numbers once reported.
+- M19 observed baseline: 341 unit tests pass (up from 328), 150 e2e tests pass (up from 142), 28 static build pages, `validate:data` passes (0 errors), `audit:data` exit 1 (0 enforced errors, 2 pending-rule errors, 21 unbaselined warnings, 14 coverage gaps).
+- M19 Provenance audit and test artifacts in `reports/`: `audit:data` and visual QA tests generate/touch tracked files under `reports/` (e.g. `reports/data-audit/*.png`), which must be reverted with `git checkout -- reports/` after running to keep git working trees clean.
+- Interchange records lacking official source (4 total in `data/overrides/interchanges.json` forming 2 cross-network pairs):
+  1. `del-sikanderpur` <-> `gur-sikanderpur` (Delhi Metro Yellow Line <-> Gurugram Rapid Metro)
+  2. `del-noida-sector-52` <-> `noi-noida-sector-51` (Delhi Metro Blue Line <-> Noida Metro Aqua Line dedicated walkway)
+  Sourced entries exist for Mumbai and Hyderabad, but these two Delhi-Gurugram and Delhi-Noida cross-network links lack specific official URLs.
+- Feature-level vs line-level provenance juxtaposition: Stations and segments already display feature-level source metadata (`Feature source: osm/mock`, `Feature data date: <date>` or `Feature data date: Unrecorded (OSM data)`). The M19 line/city provenance footer renders right below it. Where a station has verified coordinates (e.g. `Feature data date: 2026-10-08`) but its line has unverified commercial details (e.g. `Unverified`, `Not verified`), users see both in the same panel. Owner decision needed on whether to merge these into a single unified provenance section or retain distinct feature geometry vs network operational provenance.
+- Sourcing inventory counts (M19 baseline):
+  - Lines per `source` tag value (Total 58 lines across 21 cities):
+    - Overall: `osm+dmrc` (9), `osm+mmrda` (7), `osm+gmrc` (6), `osm+bmrcl` (5), `osm+mtp` (4), `osm+upmrc` (3), `osm+mpmrcl` (3), `cmrl` (3), `osm+ltmrhl` (3), `osm+cmrl` (2), `osm+mahametro` (2), `osm+maha_metro` (2), `dmrc+news` (1), `osm+rmgl` (1), `osm+jmrc` (1), `osm+kmrl` (1), `osm+kmrc` (1), `osm+cidco` (1), `osm+nmrc` (1), `osm+pmrc` (1), `osm+pmrda` (1).
+    - Tier 1 cities (34 lines): Delhi (10: 9 `osm+dmrc`, 1 `dmrc+news`), Mumbai (7: `osm+mmrda`), Bengaluru (5: `osm+bmrcl`), Chennai (5: 3 `cmrl`, 2 `osm+cmrl`), Kolkata (5: 4 `osm+mtp`, 1 `osm+kmrc`), Hyderabad (3: `osm+ltmrhl`).
+  - Segments with non-empty `references` array:
+    - Total: 62 of 77 segments
+    - Tier 1: 34 segments (Delhi: 7, Mumbai: 8, Bengaluru: 4, Chennai: 4, Kolkata: 7, Hyderabad: 4)
+  - Stations with non-null `last_verified`:
+    - Total: 495 of 915 stations
+    - Tier 1: 205 stations (Delhi: 41, Mumbai: 38, Bengaluru: 5, Chennai: 41, Kolkata: 23, Hyderabad: 57)

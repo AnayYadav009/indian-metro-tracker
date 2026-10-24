@@ -12,7 +12,10 @@
     "phases": [
       "1"
     ],
-    "network_id": "indore-metro"
+    "network_id": "indore-metro",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   "lines": [
     {
@@ -23,7 +26,10 @@
       "color": "#FBBF24",
       "operator": "MPMRCL",
       "source": "osm+mpmrcl",
-      "notes": "Line 3 circular ring line covering 33.53 km across 29 stations."
+      "notes": "Line 3 circular ring line covering 33.53 km across 29 stations.",
+      "provenance": {
+        "status": "unverified"
+      }
     }
   ],
   "segments": [

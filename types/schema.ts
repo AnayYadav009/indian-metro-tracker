@@ -22,6 +22,59 @@ export const BoundingBoxSchema = z.tuple([
 ]);
 export type BoundingBox = z.infer<typeof BoundingBoxSchema>;
 
+export const ProvenanceStatusSchema = z.enum(["verified", "schematic", "unverified"]);
+export type ProvenanceStatus = z.infer<typeof ProvenanceStatusSchema>;
+
+export const ProvenanceSchema = z
+  .object({
+    status: ProvenanceStatusSchema,
+    source_url: z
+      .string()
+      .regex(/^https:\/\//, "source_url must be an https URL")
+      .optional(),
+    last_verified: z
+      .string()
+      .regex(/^\d{4}-\d{2}-\d{2}$/, "last_verified must be YYYY-MM-DD")
+      .optional(),
+    note: z.string().optional(),
+  })
+  .superRefine((val, ctx) => {
+    if (val.status === "verified") {
+      if (!val.source_url) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: "verified status requires source_url",
+          path: ["source_url"],
+        });
+      }
+      if (!val.last_verified) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: "verified status requires last_verified",
+          path: ["last_verified"],
+        });
+      }
+    }
+    if (val.last_verified) {
+      const parts = val.last_verified.split("-").map(Number);
+      const [y, m, d] = parts;
+      const date = new Date(Date.UTC(y, m - 1, d));
+      if (
+        isNaN(date.getTime()) ||
+        date.getUTCFullYear() !== y ||
+        date.getUTCMonth() !== m - 1 ||
+        date.getUTCDate() !== d
+      ) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: "last_verified must be a valid calendar date",
+          path: ["last_verified"],
+        });
+      }
+    }
+  });
+export type Provenance = z.infer<typeof ProvenanceSchema>;
+
 export const CitySchema = z.object({
   id: z.string().min(1),
   name: z.string().min(1),
@@ -37,6 +90,7 @@ export const CitySchema = z.object({
     .string()
     .regex(/^\d{4}-\d{2}-\d{2}$/, "Format must be YYYY-MM-DD")
     .optional(),
+  provenance: ProvenanceSchema,
 });
 export type City = z.infer<typeof CitySchema>;
 
@@ -56,6 +110,7 @@ export const LineSchema = z.object({
     .string()
     .regex(/^\d{4}-\d{2}-\d{2}$/, "Format must be YYYY-MM-DD")
     .optional(),
+  provenance: ProvenanceSchema,
 });
 export type Line = z.infer<typeof LineSchema>;
 

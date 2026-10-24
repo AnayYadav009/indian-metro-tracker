@@ -140,6 +140,7 @@ export default async function CityPage({ params }: CityPageProps) {
             caveat={stats.hasCompletenessCaveat ? stats.completenessCaveatText ?? undefined : undefined}
             lengthNote={stats.hasLengthMismatch ? stats.lengthMismatchNote ?? undefined : undefined}
             variance={stats.lengthVariancePercent ?? undefined}
+            provenance={city.provenance}
           />
 
           {/* Network Key Metrics Grid */}

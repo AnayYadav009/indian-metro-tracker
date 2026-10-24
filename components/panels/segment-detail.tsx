@@ -2,7 +2,9 @@ import React from "react";
 import type { SegmentProperties } from "@/types/schema";
 import { StatusBadge, PhaseBadge } from "./badge-indicators";
 import { ReportIssueButton } from "./report-issue-button";
+import { ProvenanceFooter } from "./provenance-footer";
 import { getKnownIssueNotice } from "@/lib/known-issue-notices";
+import { getMetroData } from "@/lib/data";
 
 interface SegmentDetailProps {
   segment: SegmentProperties;
@@ -10,6 +12,8 @@ interface SegmentDetailProps {
 
 export function SegmentDetail({ segment }: SegmentDetailProps) {
   const knownIssueNotice = getKnownIssueNotice([segment.line_id]);
+  const dataset = getMetroData();
+  const line = dataset.lines.find((l) => l.id === segment.line_id);
 
   return (
     <div data-testid="segment-detail" className="flex flex-col gap-2.5 text-slate-200">
@@ -125,29 +129,36 @@ export function SegmentDetail({ segment }: SegmentDetailProps) {
         </div>
       )}
 
+      {/* Segment Feature Source */}
+      <div className="flex items-center justify-between border-t border-slate-800/80 pt-2 text-[10px] text-slate-400">
+         <span className="flex items-center gap-1.5">
+           <span>Feature source:</span>
+           <span
+             className={`rounded px-1.5 py-0.5 font-medium ${
+               segment.source === "mock"
+                 ? "bg-amber-500/10 text-amber-300 border border-amber-500/20"
+                 : "bg-slate-800 text-slate-300"
+             }`}
+           >
+             {segment.source}
+           </span>
+         </span>
+         <span>
+           {segment.last_verified
+             ? `Feature data date: ${segment.last_verified}`
+             : "Feature data date: Unrecorded (OSM data)"}
+         </span>
+       </div>
+
       {/* Report an Issue Button */}
       <ReportIssueButton target={{ type: "segment", data: segment }} />
 
       {/* Provenance footer */}
-      <div className="flex items-center justify-between border-t border-slate-800/80 pt-2 text-[10px] text-slate-400">
-        <span className="flex items-center gap-1.5">
-          <span>Source:</span>
-          <span
-            className={`rounded px-1.5 py-0.5 font-medium ${
-              segment.source === "mock"
-                ? "bg-amber-500/10 text-amber-300 border border-amber-500/20"
-                : "bg-slate-800 text-slate-300"
-            }`}
-          >
-            {segment.source}
-          </span>
-        </span>
-        <span>
-          {segment.last_verified
-            ? `Verified: ${segment.last_verified}`
-            : "Not verified (OSM data)"}
-        </span>
-      </div>
+      <ProvenanceFooter
+        items={[
+          { label: "Line", provenance: line?.provenance },
+        ]}
+      />
     </div>
   );
 }

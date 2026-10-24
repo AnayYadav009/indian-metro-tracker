@@ -30,10 +30,11 @@ Trust first (fares and timings are new claims that need a source and a verified 
 
 ### Phase A: Data trust
 
-**M19 Provenance layer**
+**M19 Provenance layer** (Status: Implemented, pending owner review)
 - Scope: add `source_url`, `last_verified` and status (verified / schematic / unverified) at line and city level. Show a source and date footer in line, station and city panels plus a short "unofficial, estimates only" notice.
 - Files likely touched: data schema and types (`types/schema.ts`, `types/metro.ts`), `validate:data` (`scripts/validate-data.ts`, `lib/data-validator.ts`), info panels (`components/panels/station-detail.tsx`, `components/panels/segment-detail.tsx`, `components/panels/metadata-panel.tsx`, `components/city/city-data-notice.tsx`, `components/city/city-lines-table.tsx`, `app/city/[id]/page.tsx`).
 - Done when: `validate:data` fails if any displayed value lacks provenance; unit and e2e tests cover the display.
+- Outcome: Provenance schema added; validator enforces status, https, and non-future dates; 21 cities and 58 lines migrated to unverified; ProvenanceFooter component rendered across city, station, and segment views; 13 unit tests and 8 e2e tests added.
 
 **M20 Report-an-error button**
 - Scope: no backend. Opens a prefilled GitHub issue with city, line or station, and page URL.
