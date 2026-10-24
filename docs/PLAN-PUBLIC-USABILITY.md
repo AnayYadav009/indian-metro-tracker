@@ -44,10 +44,11 @@ Trust first (fares and timings are new claims that need a source and a verified 
 
 ### Phase B, part 1: Fare and timing data
 
-**M21 Fare and timing data model (Tier 1 only)**
+**M21 Fare and timing data model (Tier 1 only)** (Status: M21a implemented (model, validator, calculator, mock tests); M21b (real Tier 1 data) pending)
 - Scope: fare rules per city (slabs or distance bands) and first/last train times per line terminal, each from the operator's official publication. Fare feature hidden for cities without sourced fares. Build and test with mock data first; load real data only once sourced.
 - Files likely touched: schema (`types/schema.ts`, `types/metro.ts`), Tier 1 per-city data files (`data/reference/{delhi,mumbai,bengaluru,chennai,kolkata,hyderabad}.json`, `data/overrides/{delhi,mumbai,bengaluru,chennai,kolkata,hyderabad}.json`), validator (`scripts/validate-data.ts`, `lib/data-validator.ts`), fare calculator (`lib/fare-calculator.ts` or `lib/routing/fare.ts`).
 - Done when: schema validates and the fare calculator has unit tests against sourced examples.
+- Outcome M21a: Zod schemas and types for FareRule and ServiceHours; official-host allowlist seeded from M19.4; dataset validator for fare bands, service timings, and relational integrity; pure calculator and gating functions in lib/fares.ts; real data files initialized empty; 45 unit tests covering validator, band rules, provenance allowlist, calculator, and route fares with mock fixtures. Real Tier 1 data pending M21b.
 
 ### Phase C: Interface simplification
 

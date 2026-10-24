@@ -23,8 +23,8 @@ describe("ReportIssueButton Component", () => {
       last_verified: null,
       retrieved_at: "2026-10-08",
     },
-    cityProvenance: { status: "unverified", source_url: null, last_verified: null },
-    lineProvenance: { status: "unverified", source_url: null, last_verified: null },
+    cityProvenance: { status: "unverified" },
+    lineProvenance: { status: "unverified" },
   };
 
   const mockRouteTarget: IssueTarget = {
@@ -45,7 +45,7 @@ describe("ReportIssueButton Component", () => {
     data: {
       cityId: "delhi",
       cityName: "Delhi",
-      provenance: { status: "unverified", source_url: null, last_verified: null },
+      provenance: { status: "unverified" },
     },
   };
 

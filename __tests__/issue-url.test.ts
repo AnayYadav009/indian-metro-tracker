@@ -80,7 +80,7 @@ describe("Issue URL and Permalink Generator", () => {
       const target: IssueTarget = {
         type: "segment",
         data: sampleSegment,
-        cityProvenance: { status: "unverified", source_url: null, last_verified: null },
+        cityProvenance: { status: "unverified" },
         lineProvenance: { status: "verified", source_url: "https://dmrc.in", last_verified: "2026-10-15" },
       };
       const body = generateIssueBody(target);

@@ -2,6 +2,8 @@ import citiesJson from "@/data/cities.json";
 import linesJson from "@/data/lines.json";
 import segmentsGeoJson from "@/data/segments.geojson";
 import stationsGeoJson from "@/data/stations.geojson";
+import faresJson from "@/data/fares.json";
+import timingsJson from "@/data/timings.json";
 
 import type {
   City,
@@ -13,6 +15,8 @@ import type {
   StationFeature,
   StationFeatureCollection,
   StationFilterOptions,
+  FareRule,
+  ServiceHours,
 } from "@/types/metro";
 
 export type DataSourceState = "mock" | "real" | "mixed";
@@ -76,6 +80,8 @@ export function getMetroData(): MetroDataset {
     lines: linesJson as Line[],
     segments: segmentsGeoJson as unknown as SegmentFeatureCollection,
     stations: stationsGeoJson as unknown as StationFeatureCollection,
+    fareRules: faresJson as FareRule[],
+    serviceHours: timingsJson as ServiceHours[],
   };
 
   // Build O(1) indexed lookup maps for performance
@@ -90,6 +96,20 @@ export function getMetroData(): MetroDataset {
   }
 
   return cachedDataset;
+}
+
+/**
+ * Get all available fare rules.
+ */
+export function getFareRules(): FareRule[] {
+  return getMetroData().fareRules || [];
+}
+
+/**
+ * Get all available service hours.
+ */
+export function getAllServiceHours(): ServiceHours[] {
+  return getMetroData().serviceHours || [];
 }
 
 /**

@@ -137,7 +137,7 @@ describe("M19 Provenance Validator", () => {
       {
         provenance: {
           status: "verified",
-          source_url: "https://delhimetrorail.com",
+          source_url: "https://delhimetrorail.com/corporate",
           last_verified: "2026-10-20",
           note: "Official DMRC website",
         },
@@ -153,5 +153,46 @@ describe("M19 Provenance Validator", () => {
     const res = validateMetroDataset(ds, { currentDate: clock });
     expect(res.valid).toBe(true);
     expect(res.errors).toHaveLength(0);
+  });
+
+  it("10. Rejects verified status with bare homepage source_url (root path)", () => {
+    const dsRootCity = makeDataset({
+      provenance: {
+        status: "verified",
+        source_url: "https://delhimetrorail.com",
+        last_verified: "2026-10-20",
+      },
+    });
+    const resCity = validateMetroDataset(dsRootCity, { currentDate: clock });
+    expect(resCity.valid).toBe(false);
+    expect(
+      resCity.errors.some(
+        (e) =>
+          e.includes("City 'delhi'") &&
+          (e.includes("bare homepages are not allowed") ||
+            e.includes("non-root"))
+      )
+    ).toBe(true);
+
+    const dsRootLine = makeDataset(
+      {},
+      {
+        provenance: {
+          status: "verified",
+          source_url: "https://delhimetrorail.com/",
+          last_verified: "2026-10-20",
+        },
+      }
+    );
+    const resLine = validateMetroDataset(dsRootLine, { currentDate: clock });
+    expect(resLine.valid).toBe(false);
+    expect(
+      resLine.errors.some(
+        (e) =>
+          e.includes("Line 'del-red'") &&
+          (e.includes("bare homepages are not allowed") ||
+            e.includes("non-root"))
+      )
+    ).toBe(true);
   });
 });

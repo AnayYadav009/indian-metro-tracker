@@ -116,3 +116,34 @@ Rules
 - **Audit baseline:** do not baseline unreviewed warnings. Keep them visible until repaired or individually reviewed and accepted with a reason. Never baseline findings that conceal missing line ends, missing terminals, lines without stations, or doubled geometry.
 - **Stale baseline entries:** prune an entry only after confirming that its finding is no longer active.
 - **New coverage findings from the Tier 2 and Chennai source review:** add proposed or construction stretches to references only after the applicable milestone's owner review. A DPR/feasibility study alone is not evidence that construction has started; use `planned` only where an official proposal or sanction meets the status definition in section 3. Unknown alignments, station coordinates, and completion dates remain unknown.
+
+## 13. Fares and Timings (Milestone M21a)
+
+### 13.1 Scope and Base Fare Model
+- Only standard adult single-journey base fares (`ticket_type: "single_journey"`, `currency: "INR"`) are modeled. Smart-card discounts, return tokens, passes, tourist cards, off-peak rates, and concession fares are out of scope.
+- Fares are distance-based (`distance_basis: "computed_route_km"`). The distance basis is derived from our vector geometry, NOT the operator's official tariff distance table. Because geometric route distance may differ slightly from revenue-metered track chains, fares are estimates and include boundary tolerance indicators.
+
+### 13.2 Band Rules
+- Each `FareRule` contains ordered distance bands `[{ min_km, max_km, fare_inr }]`.
+- First band `min_km` must be exactly 0.
+- Bands must be sorted, strictly contiguous, and non-overlapping: each band's `min_km` must equal the preceding band's `max_km`.
+- For every intermediate band, `max_km > min_km`.
+- Only the final band has `max_km: null` representing the open-ended distance cap.
+- `fare_inr` must be a non-negative integer and non-decreasing with distance.
+
+### 13.3 Official-Host and Provenance Rules
+- Verified `FareRule` and `ServiceHours` require `provenance.status === "verified"`.
+- A verified record MUST cite a specific page `source_url` whose path is not empty or `/`. Bare domain homepages are rejected.
+- The `source_url` hostname for verified records must be on the official-host allowlist (`lib/official-source-hosts.ts`), restricted strictly to transit operator domains and official government transport portals. News, blogs, forums, and unofficial trackers (e.g. `themetrorailguy.com`) are never permitted.
+- Verified `FareRule` records require an `effective_from` date (YYYY-MM-DD).
+- Unverified records (`status: "unverified"`) may omit source URLs or use non-allowlisted references during staging, but are never treated as sourced data.
+
+### 13.4 Hidden-When-Unsourced Rule
+- Fares and timings are strictly gated on provenance. If a city does not have at least one verified `FareRule`, the fare feature is hidden entirely for that city. No placeholders, default tariffs, or synthetic estimates may ever be displayed.
+- Multi-leg routes: if any leg on a journey lacks a verified fare rule, the fare calculation for the entire route returns `null` (hidden).
+
+### 13.5 Service Hours (First and Last Train)
+- Service hours model first and last train departures at terminal stations on a line.
+- First and last train times are formatted in 24-hour time `HH:MM`.
+- `last_train_crosses_midnight` is boolean and strictly validated: if `last_train` is chronologically earlier than `first_train`, `last_train_crosses_midnight` must be `true`; otherwise it must be `false`.
+

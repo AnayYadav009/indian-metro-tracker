@@ -9,6 +9,7 @@ describe("saveActiveDataset pre-save validation", () => {
     bbox: [76.84, 28.4, 77.35, 28.88],
     operator: "DMRC",
     phases: ["Phase 1"],
+    provenance: { status: "unverified" },
   };
 
   const cityBengaluru: City = {
@@ -17,6 +18,7 @@ describe("saveActiveDataset pre-save validation", () => {
     bbox: [77.45, 12.82, 77.78, 13.15],
     operator: "BMRCL",
     phases: ["Phase 1"],
+    provenance: { status: "unverified" },
   };
 
   const lineDelhi: Line = {
@@ -27,6 +29,7 @@ describe("saveActiveDataset pre-save validation", () => {
     color: "#FF0000",
     operator: "DMRC",
     source: "osm",
+    provenance: { status: "unverified" },
   };
 
   const lineBengaluru: Line = {
@@ -37,6 +40,7 @@ describe("saveActiveDataset pre-save validation", () => {
     color: "#800080",
     operator: "BMRCL",
     source: "osm",
+    provenance: { status: "unverified" },
   };
 
   const segmentDelhi: SegmentFeature = {

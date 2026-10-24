@@ -1,6 +1,13 @@
 import fs from "node:fs";
 import path from "node:path";
-import type { City, Line, SegmentFeatureCollection, StationFeatureCollection } from "../../types/metro";
+import type {
+  City,
+  Line,
+  SegmentFeatureCollection,
+  StationFeatureCollection,
+  FareRule,
+  ServiceHours,
+} from "../../types/metro";
 
 export function readJsonFile<T>(filePath: string, fallback?: T): T {
   try {
@@ -16,6 +23,8 @@ export interface LoadedDataset {
   lines: Line[];
   segments: SegmentFeatureCollection;
   stations: StationFeatureCollection;
+  fareRules?: FareRule[];
+  serviceHours?: ServiceHours[];
 }
 
 /**
@@ -31,6 +40,8 @@ export function loadMetroDatasetFromDisk(customDataDir?: string): LoadedDataset 
   const linesPath = path.join(dataDir, "lines.json");
   const segmentsPath = path.join(dataDir, "segments.geojson");
   const stationsPath = path.join(dataDir, "stations.geojson");
+  const faresPath = path.join(dataDir, "fares.json");
+  const timingsPath = path.join(dataDir, "timings.json");
 
   const requiredFiles = [
     { name: "cities.json", path: citiesPath },
@@ -50,6 +61,12 @@ export function loadMetroDatasetFromDisk(customDataDir?: string): LoadedDataset 
   const lines = JSON.parse(fs.readFileSync(linesPath, "utf-8")) as Line[];
   const segments = JSON.parse(fs.readFileSync(segmentsPath, "utf-8")) as SegmentFeatureCollection;
   const stations = JSON.parse(fs.readFileSync(stationsPath, "utf-8")) as StationFeatureCollection;
+  const fareRules = fs.existsSync(faresPath)
+    ? (JSON.parse(fs.readFileSync(faresPath, "utf-8")) as FareRule[])
+    : [];
+  const serviceHours = fs.existsSync(timingsPath)
+    ? (JSON.parse(fs.readFileSync(timingsPath, "utf-8")) as ServiceHours[])
+    : [];
 
-  return { cities, lines, segments, stations };
+  return { cities, lines, segments, stations, fareRules, serviceHours };
 }

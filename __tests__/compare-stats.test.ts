@@ -116,10 +116,10 @@ describe("M14 Compare Stats Calculation", () => {
 
   it("handles custom fixture data purely in calculateCityCompareStats", () => {
     const mockCities = [
-      { id: "test-city", name: "Test City", bbox: [77, 28, 78, 29] as [number, number, number, number], operator: "TMR", phases: ["1"] },
+      { id: "test-city", name: "Test City", bbox: [77, 28, 78, 29] as [number, number, number, number], operator: "TMR", phases: ["1"], provenance: { status: "unverified" as const } },
     ];
     const mockLines = [
-      { id: "t-line1", name: "Line 1", city_id: "test-city", city: "Test City", color: "#FF0000", operator: "TMR", source: "osm" },
+      { id: "t-line1", name: "Line 1", city_id: "test-city", city: "Test City", color: "#FF0000", operator: "TMR", source: "osm", provenance: { status: "unverified" as const } },
     ];
     const mockSegments = {
       type: "FeatureCollection" as const,

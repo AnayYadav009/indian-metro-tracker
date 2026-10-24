@@ -238,4 +238,26 @@ Explicitly skipped for now: live train tracking and real-time arrivals (no free 
   - Geometry exists: **Yes** (both segments carry full continuous LineString geometry).
   - Obsolete documentation: The note in `docs/PARKED-ISSUES.md:175` stating "not yet onboarded" was identified and corrected; F-02 was closed in M10.2.
 
+### M21a Open Items & Findings (2026-10-24)
+
+- **Overclaiming UI Text (Item a)**: `app/compare/page.tsx:357` ("All figures computed from verified geospatial vectors") and `lib/city-seo.ts:17` and `:24` ("verified geospatial data") overclaim verification while every city and line in the dataset currently carries `unverified` provenance. Needs rewording in a future pass.
+- **Routing Status Terminology Collision (Item b)**: `components/routing/route-finder-panel.tsx:308` and `lib/routing/city-guard.ts` use "verified lines" to denote topological routing verification, which collides with the provenance data status "verified". Rename to "routable lines" or "lines passing topology checks" in M24.
+- **Station Verification Threshold Label (Item c)**: `app/city/[id]/page.tsx:220` displays the label `"≥80% stations verified"`. Reword to remove "verified" (e.g. `"≥80% stations with recorded dates"`).
+- **Pipeline Trailing Newline Convention (Item d)**: `build-real-data.ts` atomically writes `data/cities.json` and `data/lines.json` without a trailing newline, while git-committed files expect one, dirtying files on every run. A repository-wide formatting convention should be enforced.
+- **Flaky E2E Test Candidate (Item e)**: `e2e/m13-1-ux.spec.ts:128` ("switches to every city and renders its network") timed out once under heavy parallel load during M19.4. Passed cleanly on standalone run and subsequent full runs.
+- **Station `last_verified` Distribution (Item f)**: 495 stations carry `last_verified` across 6 distinct dates (270 on `2026-10-08`, 132 on `2026-10-15`, 82 on `2026-10-16`), 28 distinct reference URLs, and 361 point to bare homepages (empty or `/` path). Treated as unproven; the neutral feature date label stays. Sourcing cleanup to be determined after Tier 1 review.
+- **Pipeline Skipped Segments (Item g)**: Pipeline logs show `che-corridor-3-seg-01` and `kol-pink-seg-01` skipped with "no valid coordinates". Confirmed as expected (Chennai Corridor 3 is already parked; Kolkata Pink has no coordinate geometry in OSM).
+- **Cross-Network Interchanges Without Source (Item h)**: 4 interchange records in `data/overrides/interchanges.json` lack an official reference URL (`del-sikanderpur` <-> `gur-sikanderpur`, `del-noida-sector-52` <-> `noi-noida-sector-51`). Parked for M25.
+- **Live Site & Static Export CI (Item i)**: Live GitHub Pages site returned 404 on 2026-10-17 and M9 (CI static export validation) is pending. Proceeding with offline validation by owner decision.
+- **Typecheck Baseline & `lastVerifiedFormatted` Usage (Item j)**:
+  - `npm run typecheck` passes with exit code 0 after adding `provenance: { status: "unverified" }` to mock test fixtures (`compare-stats.test.ts`, `issue-url.test.ts`, `pipeline-merge-validation.test.ts`, `report-issue-button.test.tsx`, `route-finder.test.ts`).
+  - `lastVerifiedFormatted` from `lib/data.ts:208` is computed in `getDatasetMetadataSummary()` and formatted as part of `badgeLabel` (`Data: <Month Year> (<Sources>)`). It is rendered at `app/page.tsx:192` (`<span data-testid="data-last-updated">{metadataSummary.badgeLabel}</span>` in map bottom-right bar) and at `app/compare/page.tsx:157` (`{metadataSummary.badgeLabel}` in header badge).
+- **Next Step: Milestone M21b (Real Tier 1 Fare and Timing Data)**:
+  - Load real fares and service hours for Tier 1 cities (`delhi`, `mumbai`, `bengaluru`, `chennai`, `kolkata`, `hyderabad`).
+  - Rule: each city is sourced separately from official operator publications with specific non-root URLs (`source_url`) and verified dates (`last_verified`, `effective_from`).
+  - Unverified cities remain with empty fare rules (fare feature hidden for that city entirely).
+  - No synthetic estimates, no placeholders, no unverified records marked "verified".
+
+
+
 

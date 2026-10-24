@@ -4,9 +4,17 @@ import { loadMetroDatasetFromDisk } from "./lib/load-dataset";
 function runValidation() {
   console.log("🔍 Validating Indian Metro Network Tracker datasets...");
 
-  const { cities, lines, segments, stations } = loadMetroDatasetFromDisk();
+  const { cities, lines, segments, stations, fareRules, serviceHours } =
+    loadMetroDatasetFromDisk();
 
-  const result = validateMetroDataset({ cities, lines, segments, stations });
+  const result = validateMetroDataset({
+    cities,
+    lines,
+    segments,
+    stations,
+    fareRules,
+    serviceHours,
+  });
 
   if (result.warnings.length > 0) {
     console.warn(`\n⚠️  Warnings (${result.warnings.length}):`);
@@ -24,6 +32,8 @@ function runValidation() {
   console.log(`   • Lines loaded: ${result.dataset.lines.length}`);
   console.log(`   • Segments loaded: ${result.dataset.segments.features.length}`);
   console.log(`   • Stations loaded: ${result.dataset.stations.features.length}`);
+  console.log(`   • Fare rules loaded: ${result.dataset.fareRules?.length ?? 0}`);
+  console.log(`   • Service hours loaded: ${result.dataset.serviceHours?.length ?? 0}`);
   console.log("\nAll schema and relational integrity checks passed.");
 }
 
