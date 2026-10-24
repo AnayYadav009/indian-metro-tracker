@@ -258,6 +258,34 @@ Explicitly skipped for now: live train tracking and real-time arrivals (no free 
   - Unverified cities remain with empty fare rules (fare feature hidden for that city entirely).
   - No synthetic estimates, no placeholders, no unverified records marked "verified".
 
+### M21b Delhi Fare and Timing Sourcing Findings (2026-10-24)
+
+1. **Excluded Lines and Reasons**:
+   - `del-golden`: Excluded from `del-fare-dmrc`. Entirely under construction and planned (`del-golden-seg-01` construction, `del-golden-branch-01` planned); 0 operational segments open to public service.
+   - `del-airport` (Airport Express Line): Excluded from standard DMRC distance-band FareRule. DMRC publishes an origin-destination station-to-station fare matrix (`https://delhimetrorail.com/fare-for-airport-express-line`) with fares ranging from Rs 11 to Rs 75 between pairs, rather than distance bands. Per project rules, we do not force non-band published structures into distance bands, and load nothing for this line group pending owner decision on station-to-station fare modeling.
+2. **Band-Edge Ambiguities & Published Wording**:
+   - The published DMRC fare table lists bands as `0-2`, `2-5`, `5-12`, `12-21`, `21-32`, and `More than 32` (`32 से अधिक` in Hindi).
+   - In our schema, bands are modeled as half-open intervals `[min_km, max_km)`. The published numbers are retained without modification (`0-2`, `2-5`, `5-12`, `12-21`, `21-32`, `32-null`).
+   - Wording is documented in `del-fare-dmrc.provenance.note`.
+3. **Excluded Discount Products**:
+   - Sunday and National Holiday discounted fares (e.g. Rs 11 for 0-5 km, Rs 21 for 5-12 km, Rs 32 for 12-21 km, Rs 43 for 21-32 km, Rs 54 for >32 km).
+   - Smart card discounts (10% standard discount, additional 10% off-peak discount during non-peak hours 06:00-08:00, 12:00-17:00, 21:00-close).
+   - Tourist card unlimited travel passes (1-day Rs 200, 3-day Rs 500).
+   - Trip cards on Airport Express (10-trip and 30-trip discounted cards).
+   - Rapid Metro flat Rs 20 single token fare.
+   - All excluded per base single-journey Monday-Saturday fare scope.
+4. **Timings Not Loaded**:
+   - DMRC does not publish static first/last train timetables for line terminals. The official website only provides an interactive search form (`#first-and-last` modal) that queries station pairs dynamically.
+   - Because official static terminal service hours cannot be read reliably without ambiguous scraping of interactive form permutations, 0 ServiceHours records were loaded (`data/timings.json` remains `[]`).
+5. **Allowlist Host Review**:
+   - All pages fetched (`https://delhimetrorail.com/fare`, `https://delhimetrorail.com/fare-for-airport-express-line`) reside on `delhimetrorail.com`, which is already on the allowlist in `lib/official-source-hosts.ts`.
+   - No new host required addition.
+6. **Missing Effective Date and Unverified Status**:
+   - The official fare page `https://delhimetrorail.com/fare` does not state an effective date (`effective_from`).
+   - Per milestone rules ("effective_from ONLY if the page states an effective date. If it does not, the record cannot be verified: load it as 'unverified' or do not load it"), `del-fare-dmrc` is loaded with `provenance.status = "unverified"` and no `effective_from`.
+   - Consequently, `hasSourcedFares("delhi")` returns `false` and the fare feature remains hidden in user-facing UI for Delhi until an official source page publishes an effective date.
+
+
 
 
 

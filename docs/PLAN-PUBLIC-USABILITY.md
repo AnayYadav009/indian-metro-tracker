@@ -44,11 +44,12 @@ Trust first (fares and timings are new claims that need a source and a verified 
 
 ### Phase B, part 1: Fare and timing data
 
-**M21 Fare and timing data model (Tier 1 only)** (Status: M21a implemented (model, validator, calculator, mock tests); M21b (real Tier 1 data) pending)
+**M21 Fare and timing data model (Tier 1 only)** (Status: M21a implemented; M21b Delhi loaded (1 fare rule, 0 timings))
 - Scope: fare rules per city (slabs or distance bands) and first/last train times per line terminal, each from the operator's official publication. Fare feature hidden for cities without sourced fares. Build and test with mock data first; load real data only once sourced.
 - Files likely touched: schema (`types/schema.ts`, `types/metro.ts`), Tier 1 per-city data files (`data/reference/{delhi,mumbai,bengaluru,chennai,kolkata,hyderabad}.json`, `data/overrides/{delhi,mumbai,bengaluru,chennai,kolkata,hyderabad}.json`), validator (`scripts/validate-data.ts`, `lib/data-validator.ts`), fare calculator (`lib/fare-calculator.ts` or `lib/routing/fare.ts`).
 - Done when: schema validates and the fare calculator has unit tests against sourced examples.
-- Outcome M21a: Zod schemas and types for FareRule and ServiceHours; official-host allowlist seeded from M19.4; dataset validator for fare bands, service timings, and relational integrity; pure calculator and gating functions in lib/fares.ts; real data files initialized empty; 45 unit tests covering validator, band rules, provenance allowlist, calculator, and route fares with mock fixtures. Real Tier 1 data pending M21b.
+- Outcome M21a: Zod schemas and types for FareRule and ServiceHours; official-host allowlist seeded from M19.4; dataset validator for fare bands, service timings, and relational integrity; pure calculator and gating functions in lib/fares.ts; real data files initialized empty; 45 unit tests covering validator, band rules, provenance allowlist, calculator, and route fares with mock fixtures.
+- Outcome M21b (Delhi): Sourced real fare table from official page https://delhimetrorail.com/fare. Loaded 1 FareRule (`del-fare-dmrc`) covering 8 lines (`del-red`, `del-yellow`, `del-blue`, `del-green`, `del-violet`, `del-pink`, `del-magenta`, `del-grey`) with 6 distance bands [0-2 km: Rs 11, 2-5 km: Rs 21, 5-12 km: Rs 32, 12-21 km: Rs 43, 21-32 km: Rs 54, >32 km: Rs 64]. Status is `unverified` because official page lacks a published effective date (`effective_from`). ServiceHours: 0 loaded (timings only available via interactive search, no static readable timetables). Airport Express Line excluded (station-to-station matrix). Golden Line excluded (0 operational segments). Sourced evidence documented in `docs/SOURCING-LOG.md`. 48 unit tests pass. Real fare feature remains hidden for Delhi per gating rules.
 
 ### Phase C: Interface simplification
 

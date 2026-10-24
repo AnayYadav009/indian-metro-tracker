@@ -1,1 +1,58 @@
-[]
+[
+  {
+    "id": "del-fare-dmrc",
+    "city_id": "delhi",
+    "operator": "DMRC",
+    "applies_to_line_ids": [
+      "del-red",
+      "del-yellow",
+      "del-blue",
+      "del-green",
+      "del-violet",
+      "del-pink",
+      "del-magenta",
+      "del-grey"
+    ],
+    "ticket_type": "single_journey",
+    "currency": "INR",
+    "distance_basis": "computed_route_km",
+    "bands": [
+      {
+        "min_km": 0,
+        "max_km": 2,
+        "fare_inr": 11
+      },
+      {
+        "min_km": 2,
+        "max_km": 5,
+        "fare_inr": 21
+      },
+      {
+        "min_km": 5,
+        "max_km": 12,
+        "fare_inr": 32
+      },
+      {
+        "min_km": 12,
+        "max_km": 21,
+        "fare_inr": 43
+      },
+      {
+        "min_km": 21,
+        "max_km": 32,
+        "fare_inr": 54
+      },
+      {
+        "min_km": 32,
+        "max_km": null,
+        "fare_inr": 64
+      }
+    ],
+    "provenance": {
+      "status": "unverified",
+      "source_url": "https://delhimetrorail.com/fare",
+      "last_verified": "2026-10-24",
+      "note": "Base single-journey fare (Monday to Saturday) read from official DMRC fare table rendered at https://delhimetrorail.com/fare. Published distance bands: 0-2 km (Rs 11), 2-5 km (Rs 21), 5-12 km (Rs 32), 12-21 km (Rs 43), 21-32 km (Rs 54), More than 32 km (Rs 64). Band edges are published as closed-open [min, max). No effective date is published on the official page, so effective_from is omitted and the record is loaded with provenance status unverified per milestone rules. Sunday & national holiday discounted fares (Rs 11-54), smart card discounts (10-20%), and time limits (65, 100, 180 min) are excluded per base single-journey scope. Airport Express Line is excluded due to station-to-station fare matrix structure."
+    }
+  }
+]

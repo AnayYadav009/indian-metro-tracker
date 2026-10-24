@@ -16,6 +16,11 @@ import {
   hasSourcedFares,
 } from "../lib/fares";
 import type { City, Line, FareRule, ServiceHours, StationFeature } from "../types/metro";
+import { isOfficialSourceHost } from "../lib/official-source-hosts";
+import realCities from "../data/cities.json";
+import realLines from "../data/lines.json";
+import realFares from "../data/fares.json";
+import realTimings from "../data/timings.json";
 
 describe("M21a Fare and Timing Data Model & Validator", () => {
   const clock = "2026-10-24";
@@ -799,4 +804,66 @@ describe("M21a Fare and Timing Data Model & Validator", () => {
       expect(getServiceHours("mock-line-red", "other-station", hours)).toHaveLength(0);
     });
   });
+
+  describe("M21b Real Data Gating & Verification Tests", () => {
+    // a. for every city in the dataset, hasSourcedFares(city) equals whether a verified FareRule exists for it in the real data
+    it("46. for every city in dataset, hasSourcedFares(city.id) matches whether verified FareRule exists in real data", () => {
+      const typedFares = realFares as FareRule[];
+      for (const city of realCities as City[]) {
+        const hasVerifiedRule = typedFares.some(
+          (rule) => rule.city_id === city.id && rule.provenance?.status === "verified"
+        );
+        expect(hasSourcedFares(city.id, typedFares)).toBe(hasVerifiedRule);
+      }
+    });
+
+    // b. every verified real FareRule and ServiceHours has a non-root source_url, an allowlisted host, last_verified, and (for fares) effective_from
+    it("47. every verified real FareRule and ServiceHours has non-root source_url, allowlisted host, last_verified, and effective_from", () => {
+      const typedFares = realFares as FareRule[];
+      const typedTimings = realTimings as ServiceHours[];
+
+      for (const rule of typedFares) {
+        if (rule.provenance.status === "verified") {
+          expect(rule.provenance.source_url).toBeDefined();
+          expect(rule.provenance.last_verified).toBeDefined();
+          expect(rule.effective_from).toBeDefined();
+
+          const parsedUrl = new URL(rule.provenance.source_url!);
+          expect(parsedUrl.pathname).not.toBe("/");
+          expect(parsedUrl.pathname).not.toBe("");
+          expect(isOfficialSourceHost(parsedUrl.hostname)).toBe(true);
+        }
+      }
+
+      for (const sh of typedTimings) {
+        if (sh.provenance.status === "verified") {
+          expect(sh.provenance.source_url).toBeDefined();
+          expect(sh.provenance.last_verified).toBeDefined();
+
+          const parsedUrl = new URL(sh.provenance.source_url!);
+          expect(parsedUrl.pathname).not.toBe("/");
+          expect(parsedUrl.pathname).not.toBe("");
+          expect(isOfficialSourceHost(parsedUrl.hostname)).toBe(true);
+        }
+      }
+    });
+
+    // c. estimateRouteFare returns null for a route that uses a line without a verified rule (build the route from real line ids)
+    it("48. estimateRouteFare returns null for a route using real lines without a verified rule", () => {
+      const typedFares = realFares as FareRule[];
+      const realLineIds = (realLines as Line[]).map((l) => l.id);
+      expect(realLineIds).toContain("del-red");
+      expect(realLineIds).toContain("del-yellow");
+
+      const routeWithUnverifiedLine = [
+        { line_id: "del-red", distance_km: 4.5 },
+        { line_id: "del-yellow", distance_km: 6.2 },
+      ];
+
+      // Since del-red and del-yellow have an unverified FareRule, estimateRouteFare must return null
+      const estimate = estimateRouteFare(routeWithUnverifiedLine, typedFares);
+      expect(estimate).toBeNull();
+    });
+  });
 });
+
