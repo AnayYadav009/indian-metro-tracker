@@ -264,7 +264,7 @@ export default async function CityPage({ params }: CityPageProps) {
       {/* Footer */}
       <footer className="border-t border-slate-800 bg-slate-900/60 px-4 py-6 text-center text-xs text-slate-400 md:px-8">
         <p>
-          Data verified from transit agency publications and OpenStreetMap vectors. Free and open data under ODbL.
+          Compiled from OpenStreetMap (ODbL) and public operator information. Unofficial. See the provenance status above.
         </p>
       </footer>
     </div>
