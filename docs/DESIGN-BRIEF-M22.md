@@ -31,37 +31,44 @@
 
 Comparison of user steps and tap counts between today's Playwright-measured UI (Part 1b) and the proposed M23/M24 design:
 
-| Journey | Today's Measured Path (Playwright 1b Log) | Today Actions (Clicks/Taps/Typing) | Proposed Path (M23/M24) | Proposed Actions |
+| Journey | Today's Measured Path (Playwright Log) | Today Actions (Clicks / Selects / Typing) | Proposed Path (M23/M24) | Proposed Actions |
 | :--- | :--- | :---: | :--- | :---: |
-| **(a) Route from A to B in my city** | 1. Load `/`<br>2. Click `[data-testid='find-route-btn']`<br>3. Select `delhi` in `[data-testid='route-city-select']`<br>4. Click `[data-testid='route-origin-input']`<br>5. Type "Kashmere Gate"<br>6. Click "Kashmere Gate" in `[data-testid='origin-suggestions-list']`<br>7. Click `[data-testid='route-destination-input']`<br>8. Type "Rajiv Chowk"<br>9. Click "Rajiv Chowk" in `[data-testid='dest-suggestions-list']` | **8 actions** (7 clicks + 2 text inputs) | 1. Tap Search box on bottom sheet<br>2. Type station name (or select "Route")<br>3. Pick destination from sheet | **3 actions** |
-| **(b) Nearest station to me** | 1. Load `/`<br>2. Click `[data-testid='find-nearest-btn']` in header | **1 action** | 1. Tap "Nearby" shortcut button on sheet | **1 action** |
-| **(c) Check station details** | 1. Load `/`<br>2. Click `[data-testid='city-select-delhi']`<br>3. Click station marker on canvas (coordinates of Kashmere Gate) | **2 actions** | 1. Type station name in universal search box<br>2. Tap result (auto-centers map & opens Half sheet) | **2 actions** |
-| **(d) Fare estimate & first/last train** | *Not available in UI yet* (Model ready in M21c). Today: 0 | N/A | Calculated automatically in Journey (a) route result card. For Delhi, shows band estimate (e.g. ₹43); for unverified cities, row is completely hidden. | **0 extra actions** |
-| **(e) Report an error** | 1. Load `/`<br>2. Click `[data-testid='city-select-delhi']`<br>3. Click station marker (Kashmere Gate) to open panel<br>4. Click `[data-testid='report-issue-button']` | **3 actions** | 1. Open station or route card (1–2)<br>2. Tap persistent flag icon "Report error" at bottom of sheet (1) | **2 actions** |
-| **(f) Seeing a provenance footer** | 1. Load `/`<br>2. Click `[data-testid='city-select-delhi']`<br>3. Click station marker (Kashmere Gate) to open panel<br>4. Scroll station panel to bottom to bring `[data-testid='provenance-footer']` into view | **3 actions** (2 clicks + 1 scroll) | 1. Open station or route card (1–2)<br>2. Tap "About this data" disclosure at bottom of sheet | **2 actions** |
-| **(g) Compare cities (secondary)** | 1. Load `/`<br>2. Click `[data-testid='nav-to-compare']` in top header nav pill | **1 action** | 1. Tap "Layers / More" icon<br>2. Tap "Compare Networks" | **2 actions** (demoted to secondary) |
+| **(a) Route from A to B in my city** | 1. Load `/`<br>2. Click `[data-testid='find-route-btn']` (1 click)<br>3. Select `delhi` in `[data-testid='route-city-select']` (1 select)<br>4. Click `[data-testid='route-origin-input']` (1 click)<br>5. Type "Kashmere Gate" (1 typing)<br>6. Click "Kashmere Gate" in `[data-testid='origin-suggestions-list']` (1 click)<br>7. Click `[data-testid='route-destination-input']` (1 click)<br>8. Type "Rajiv Chowk" (1 typing)<br>9. Click "Rajiv Chowk" in `[data-testid='dest-suggestions-list']` (1 click) | **8 actions** (5 clicks + 1 select + 2 typing) | 1. Tap Search box on bottom sheet<br>2. Type station name (or select "Route")<br>3. Pick destination from sheet | **3 actions** |
+| **(b) Nearest station to me** | 1. Load `/`<br>2. Click `[data-testid='find-nearest-btn']` in header (1 click) | **1 action** (1 click) | 1. Tap "Nearby" shortcut button on sheet | **1 action** |
+| **(c) Check station details** | 1. Load `/`<br>2. Click `[data-testid='city-select-delhi']` (1 click)<br>3. Click station marker on canvas (coordinates of Kashmere Gate) (1 click) | **2 actions** (2 clicks) | 1. Type station name in universal search box<br>2. Tap result (auto-centers map & opens Half sheet) | **2 actions** |
+| **(d) Fare estimate & first/last train** | *Not available in UI yet* (Model verified in M21c). Today: route results explicitly display *"Fares not included"*. | N/A | Calculated automatically in Journey (a) route result card. For Delhi, shows band estimate (e.g. ₹43); for unverified cities, row is completely hidden. | **0 extra actions** |
+| **(e) Report an error** | 1. Load `/`<br>2. Click `[data-testid='city-select-delhi']` (1 click)<br>3. Click station marker (Kashmere Gate) to open panel (1 click)<br>4. Click `[data-testid='report-issue-button']` (1 click) | **3 actions** (3 clicks) | 1. Open station or route card (1–2)<br>2. Tap persistent flag icon "Report error" at bottom of sheet (1) | **2 actions** |
+| **(f) Seeing a provenance footer** | 1. Load `/`<br>2. Click `[data-testid='city-select-delhi']` (1 click)<br>3. Click station marker (Kashmere Gate) to open panel (1 click)<br>4. Scroll station panel to bottom to bring `[data-testid='provenance-footer']` into view (1 scroll) | **3 actions** (2 clicks + 1 scroll) | 1. Open station or route card (1–2)<br>2. Tap "About this data" disclosure at bottom of sheet | **2 actions** |
+| **(g) Compare cities (secondary)** | 1. Load `/`<br>2. Click `[data-testid='nav-to-compare']` in top header nav pill (1 click) | **1 action** (1 click) | 1. Tap "Layers / More" icon<br>2. Tap "Compare Networks" | **2 actions** (demoted to secondary) |
 
 ---
 
 ## 3. Information Architecture & Feature Map
 
 ### Measured Default States on Mobile (Pixel 7 / 412 × 915)
-From Part 1c DOM measurement of components on first load and with a station selected:
+From DOM measurement of components on first load and with a station selected (height = 915 px):
 - **Filter Panel (`[data-testid="filter-panel"]`)**:
-  - *First Load*: **Expanded** by default (covers **48.7%** of viewport height, `top: 72px`, `height: 409px`).
-  - *Station Selected*: **Collapsed** automatically via `useEffect` in `components/filters/filter-panel.tsx:26` (`top: 72px`, `height: 59px`, **7.0%** viewport height).
+  - *First Load*: **Expanded** by default (covers **44.7%** of viewport height, `top: 72px`, `height: 409px` out of 915px). Center point `(206, 277)` is topmost element.
+  - *Station Selected*: **Collapsed** automatically via `useEffect` in `components/filters/filter-panel.tsx:26` (`top: 72px`, `height: 59px`, **6.4%** viewport height). Center point `(206, 102)` is topmost element.
 - **Metadata Panel (`[data-testid="metadata-panel"]`)**:
   - *First Load*: Absent from DOM (`null`).
-  - *Station Selected*: **Visible**, slides over bottom/center (`top: 168px` to `839px`, `height: 671px`, covering **80.0%** of viewport height). Overlaps filter panel and completely occludes the map canvas and timeline scrubber.
+  - *Station Selected*: **Visible**, fixed bottom overlay (`top: 223px`, `height: 692px`, covering **75.6%** of viewport height). Center point `(206, 569)` is topmost element.
 - **Map Legend (`[data-testid="map-legend"]`)**:
-  - *First Load*: **Collapsed** by default (`top: 663px`, `height: 34px`, covering **4.1%** of viewport height, toggle button only).
-  - *Station Selected*: Collapsed, occluded beneath MetadataPanel.
+  - *First Load*: **Collapsed** button (`top: 739px`, `height: 34px`, covering **3.7%** of viewport height). Center point `(329, 756)` is topmost element.
+  - *Station Selected*: Present in DOM at `top: 739px`, but covered by `<div testid="station-detail">` of MetadataPanel.
 - **Timeline Slider (`[data-testid="timeline-slider-container"]`)**:
-  - *First Load*: **Expanded** by default at bottom overlay (`top: 694px`, `height: 66px`, covering **7.8%** of viewport height).
-  - *Station Selected*: Present in DOM, but visually covered by MetadataPanel.
+  - *First Load*: **Expanded** by default at bottom overlay (`top: 770px`, `height: 66px`, covering **7.2%** of viewport height). Center point `(206, 802)` is topmost element.
+  - *Station Selected*: Present in DOM at `top: 770px`, but covered by `<div testid="provenance-item-1">` of MetadataPanel.
 - **Data Badge (`[data-testid="data-last-updated"]`)**:
-  - *First Load*: **Visible**, rendered by `app/page.tsx:192` inside `bottom-right-container` above OSM attribution (`top: 708px`, `height: 14px`, covering **1.6%** of viewport height).
-  - *Station Selected*: Covered by MetadataPanel.
+  - *First Load*: Rendered at `top: 784px`, `height: 14px` (**1.5%** of viewport height) inside `bottom-right-container`. Covered at center `(221, 791)` by sibling text `<span class="whitespace-nowrap text-[10px] font-medium text-slate-400">`.
+  - *Station Selected*: Present in DOM, but covered by `<span testid="provenance-last-verified">` of MetadataPanel.
+- **Attribution (`[data-testid="osm-attribution"]`)**:
+  - *First Load*: Rendered at `top: 809px`, `height: 27px` (**3.0%** of viewport height). Covered at center `(250, 822)` by sibling text `<span class="font-mono text-[9px] text-slate-500">`.
+  - *Station Selected*: Present in DOM, but covered by MetadataPanel.
+
+#### Visual Inspection of Pixel 7 Screenshots
+- **`home-first-load-pixel-7.png`**: The expanded Filter Panel (`top: 72px`, `height: 409px`) covers the upper 45% of the viewport. In the lower 25% of the screen, the Map Legend toggle button (`Map Legend ^`) sits directly above the Timeline Slider (`Year: 2026`). The map canvas is visible only through a narrow ~250px band across the middle of the screen.
+- **`station-panel-pixel-7.png`**: When Kashmere Gate is selected, the Metadata Panel covers the entire bottom 75.6% of the screen (`top: 223px` to bottom). The Filter Panel auto-collapses to a single header row at the top (`top: 72px`, `height: 59px`). Between the collapsed filter panel and the metadata sheet, only a narrow slit of the map canvas (~90px high) is visible. The Timeline Slider and Map Legend remain rendered in the DOM beneath the metadata sheet (`z-30` vs `z-40`), but are 100% occluded visually by the metadata panel. This reconciles why the timeline was reported absent in visual walkthroughs: it was never unmounted, but completely covered.
 
 ---
 
@@ -288,18 +295,17 @@ Today, the filter panel renders 22 raw city chips (`All Cities` + 21 cities) dir
 1. **Searchable Combobox / Modal Sheet**:
    - Replaces the 22 static chips in the top bar and sheet header with a clean trigger button: `[ Delhi Metro (DMRC) v ]`.
    - Tapping opens a quick-filter combobox with a search input: `Search 21 metro networks...`.
-2. **Proposed Ordering**:
-   - **Tier 1 Major Networks First** (sorted by operational route length / ridership):
+2. **Proposed Ordering (Owner Decision)**:
+   - **Tier 1 Major Networks First** (strictly aligned with `TIER_1_CITY_IDS` in `lib/compare-stats.ts` and `docs/MILESTONES-v2.md`):
      1. Delhi (DMRC)
-     2. Bengaluru (Namma Metro / BMRCL)
-     3. Mumbai (MMRDA)
-     4. Kolkata (Metro Railway)
-     5. Chennai (CMRL)
+     2. Mumbai (MMRDA)
+     3. Bengaluru (Namma Metro / BMRCL)
+     4. Chennai (CMRL)
+     5. Kolkata (Metro Railway)
      6. Hyderabad (L&T Metro)
-     7. Ahmedabad (GMRC)
-     8. Pune (Maha Metro)
    - **Tier 2 Networks Alphabetical**:
-     Agra, Bhopal, Gurugram, Indore, Jaipur, Kanpur, Kochi, Lucknow, Nagpur, Navi Mumbai, Noida, Patna, Surat.
+     Agra, Ahmedabad (GMRC), Bhopal, Gurugram (Rapid Metro), Indore, Jaipur, Kanpur, Kochi, Lucknow, Nagpur, Navi Mumbai (CIDCO), Noida (NMRC), Patna, Pune (Maha Metro), Surat.
+   *(Note: Ahmedabad and Pune belong to Tier 2 in the project specification, not Tier 1).*
 3. **Clean Transit Nomenclature**:
    - Remove raw legal operator entity strings (`RAPID METRO GURGAON LTD`, `METRO RAILWAY, KOLKATA`).
    - Use clean public branding: `City (Transit Name / Operator Abbr)`, e.g. `Delhi (Delhi Metro / DMRC)`, `Kolkata (Kolkata Metro)`, `Gurugram (Rapid Metro / RMGL)`.
@@ -381,27 +387,50 @@ Audit of all user-visible text requiring correction in M23:
 
 | Location | Current Text | Proposed Wording | Reason |
 | :--- | :--- | :--- | :--- |
-| `app/page.tsx:192` (`data-last-updated`), `app/compare/page.tsx:154` | `Data: Oct 2026 (MANUAL, OSM)` / `(DMRC, BMRCL, OSM)` | `Data updated: Oct 2026` (Clicking opens Data Sources list) | Current badge implies all data from those operators is verified, which is false. |
+| `app/page.tsx:192` (`data-last-updated`), `app/compare/page.tsx:154` | `Data: Oct 2026 (MANUAL, OSM)` / `(DMRC, BMRCL, OSM)` | `Data retrieved: Oct 2026` or `Data: Oct 2026` (Clicking opens Data Sources list) | Derived from dataset `retrieved_at: "2026-10-16"`. Replaces ambiguous agency tags with dataset fetch date; clicking opens popover listing OpenStreetMap (ODbL) and public operator data. |
 | `app/compare/page.tsx:280` | `...comprehensive verified geospatial statistics...` | `...compiled transit statistics and geospatial alignment data...` | Violates hard rule: only a fraction of data is verified. |
 | `lib/city-seo.ts:35` | `...verified track alignments and station counts...` | `...mapped track alignments and station counts...` | Removes false claim in meta descriptions. |
 | `app/city/[id]/page.tsx:220` | `≥80% stations verified` | `≥80% stations opened for commercial service` | Conflates "opened" with "verified provenance". |
 | `components/routing/route-finder-panel.tsx:14` | `verified lines` | `routable lines` | Refers to topological graph connectivity, not operator provenance verification. |
-| `components/panels/station-detail.tsx`, `segment-detail.tsx` | `Feature data date: Oct 2026` | `Record retrieved: Oct 2026` | Clarifies machine scrape date vs official publication date. |
+| `components/panels/station-detail.tsx`, `segment-detail.tsx` | `Feature data date: Oct 2026` | `Record retrieved: Oct 2026` | Clarifies machine scrape date (`retrieved_at`) vs official publication date (`last_verified`). |
 | `components/filters/filter-panel.tsx:90` | Placeholder: `Search lines, phases, stations...` | Placeholder: `Search lines, phases...` | Interim fix: current search does NOT search stations at all. |
 
 ---
 
 ## 11. Accessibility (a11y) Specifications
 
-### Measured Baseline (Part 1a Audit)
-On first load, measured via Playwright DOM inspection:
-- **Desktop (1280 × 800)**: **62 of 66** visible interactive elements have width < 44px OR height < 44px.
-- **Pixel 7 (412 × 915)**: **64 of 65** visible interactive elements have width < 44px OR height < 44px.
-  - Specifically, all 22 city chips are `height: 24px`.
-  - Header mode buttons (`find-route-btn`, `find-nearest-btn`, `city-directory-btn`, `nav-to-compare`) are `width: 38px, height: 26px`.
-  - Filter collapse button is `24 × 24 px`.
-  - Timeline controls (`timeline-play-btn`, `toggle-stations-btn`, `timeline-reset-btn`) are `16px–28px` in height.
-- **Accessible Names**: All 65/66 elements have an accessible name when falling back to `title` or `innerText`. However, on mobile, `<button data-testid="find-route-btn">`, `find-nearest-btn`, and `city-directory-btn` hide their inner text via `hidden sm:inline` and rely solely on the HTML `title` attribute. This is an accessibility antipattern on touchscreens (where `title` tooltips do not show without long-press). Explicit `aria-label` attributes must be enforced.
+### Measured Baseline (Part 1 Audit)
+On first load, measured via Playwright DOM inspection (excluding 21 visually hidden `h-[1px]` crawler links in `crawlable-city-directory` and the MapLibre `<canvas>` background):
+- **Desktop (1280 × 800)**: **43 visible interactive controls**, of which **39 (90.7%)** fail the 44px touch target requirement (`width < 44px` OR `height < 44px`).
+  - *Reconciliation*: Total interactive elements in DOM = 65 (21 in crawler directory + 1 map canvas + 43 visible controls). Previous draft reported 65 failing out of 66 total because it included the hidden 1px crawler links and canvas; excluding them yields 43 visible controls, of which 39 fail < 44px.
+- **Pixel 7 (412 × 915)**: **43 visible interactive controls**, of which **42 (97.7%)** fail the 44px touch target requirement.
+- **Measured Control Dimensions**:
+  - **Header Buttons**:
+    - `find-route-btn`: `68.6 × 26 px` on desktop, `38 × 26 px` on Pixel 7
+    - `find-nearest-btn`: `77.1 × 26 px` on desktop, `38 × 26 px` on Pixel 7
+    - `city-directory-btn`: `66.1 × 26 px` on desktop, `38 × 26 px` on Pixel 7
+    - `nav-to-compare`: `79.4 × 26 px` on desktop, `38 × 26 px` on Pixel 7
+  - **City Chips**:
+    - `city-select-*` (e.g. Delhi): `169.5 × 24 px` on desktop, `181.5 × 24 px` on Pixel 7 (height fails)
+  - **Filter Collapse Button**:
+    - `collapse-filter-btn`: `24 × 24 px` on both viewports
+  - **Timeline Controls**:
+    - `timeline-play-btn`: `28 × 28 px`
+    - `toggle-stations-btn`: `77.9 × 18 px` on desktop, `26 × 18 px` on Pixel 7
+    - `timeline-future-toggle`: `100.9 × 18 px` on desktop, `26 × 18 px` on Pixel 7
+    - `timeline-reset-btn`: `54.4 × 16 px` on desktop, `24 × 16 px` on Pixel 7
+    - `timeline-range-slider`: height `6 px`
+  - **Status Toggles**:
+    - `status-toggle-*`: `349 × 39.3 px` (height fails 44px threshold)
+  - **Legend Toggle Button**:
+    - `toggle-legend-btn`: `286 × 32 px` on desktop, `148 × 32 px` on Pixel 7
+  - **Map Zoom Controls**:
+    - `.maplibregl-ctrl-zoom-in`, `.maplibregl-ctrl-zoom-out`: `29 × 29 px`
+  - **Attribution Links**:
+    - OpenFreeMap: `69.4 × 15 px`
+    - OSM contributors: `152.1 × 15 px`
+    - ODbL: `154 × 16 px`
+- **Accessible Names**: All 43 visible controls have an accessible name when falling back to `title` or `innerText`. However, on mobile, `<button data-testid="find-route-btn">`, `find-nearest-btn`, and `city-directory-btn` hide their inner text via `hidden sm:inline` and rely solely on the HTML `title` attribute. Explicit `aria-label` attributes must be enforced.
 
 ### M23 Accessibility Requirements
 1. **Touch Targets**: All primary interactive touch targets (buttons, links, search triggers, city selector items) must be at least **44 × 44 CSS pixels** on mobile.
@@ -468,64 +497,74 @@ Currently, `app/page.tsx`, `app/compare/page.tsx`, and `app/city/[id]/page.tsx` 
 
 ## 14. Blast Radius (Rebuilt Audit over `e2e/` and `__tests__/`)
 
-### Grep Command
-```powershell
-rg -e 'data-testid' -e 'toContainText' -e 'toHaveText' e2e/ __tests__/
-```
+### Grep Scope
+Targeting testids and visible strings belonging to the features being restructured:
+- Header controls: `find-route-btn`, `find-nearest-btn`, `city-directory-btn`, `nav-to-compare`, `nav-to-map`
+- Filter panel & city select: `filter-panel`, `city-select-`, `status-toggle-`, `phase-filter-`, `collapse-filter-btn`, `filter-search-input`, `city-directory-modal`
+- Metadata, station & segment panels: `metadata-panel`, `station-detail`, `segment-detail`, `close-metadata-panel`, `report-issue-button`, `Report an issue`
+- Provenance footer: `provenance-footer`, `provenance-status-badge`, `provenance-disclaimer-notice`
+- Route finder panel: `route-finder-panel`, `route-city-select`, `route-origin-input`, `route-destination-input`, `route-results-container`, `route-guard-notice`
+- Nearest station panel: `nearest-station-panel`, `city-fallback-select`
+- Timeline & Legend: `timeline-slider-container`, `timeline-range-slider`, `timeline-play-btn`, `timeline-reset-btn`, `timeline-future-toggle`, `toggle-stations-btn`, `map-legend`, `toggle-legend-btn`
+- Data badge & Attribution: `data-last-updated`, `data-badge`, `osm-attribution`
 
-### Affected Files and Assertion Counts (Total: 716 matches across 49 files)
+### UI Component & E2E Test Files (219 matches across 31 files)
 
-| File | Matching Assertions / Selectors Count | Key Features Asserted |
+| File | Matching Assertions / Selectors Count | Key UI Selectors / Assertions |
 |---|:---:|---|
-| `__tests__/fares.test.ts` | **69** | Route, Cities, verified |
-| `__tests__/route-finder.test.ts` | **54** | Route, verified |
-| `__tests__/schema.test.ts` | **54** | verified, Cities, Operational |
-| `__tests__/provenance-validator.test.ts` | **32** | verified |
-| `__tests__/station-detail-provenance.test.tsx` | **32** | station-detail, verified, provenance-footer, report-issue-button |
-| `e2e/nearest-station.spec.ts` | **31** | Nearest, find-nearest-btn, nearest-station-panel, city-fallback-select, Operational, Under Construction |
-| `e2e/route-finder.spec.ts` | **27** | Route, find-route-btn, route-finder-panel, route-city-select, route-guard-notice, route-origin-input |
-| `e2e/report-issue.spec.ts` | **21** | metadata-panel, report-issue-button, Report an issue, verified, route-results-container, Route |
-| `__tests__/issue-url.test.ts` | **21** | Route, verified, Data: |
-| `__tests__/metadata-panel.test.tsx` | **21** | metadata-panel, verified, Operational, Feature data date, Report an issue, report-issue-button |
-| `e2e/m13-1-ux.spec.ts` | **20** | metadata-panel, segment-detail, city-select-, collapse-filter-btn, filter-search-input |
-| `__tests__/pipeline-step-c.test.ts` | **20** | verified, Operational |
-| `e2e/provenance.spec.ts` | **19** | provenance-footer, verified, provenance-disclaimer-notice, metadata-panel, segment-detail, station-detail |
-| `__tests__/data-loader.test.ts` | **19** | Cities, verified, Data:, Operational |
-| `__tests__/filter-panel.test.tsx` | **19** | filter-panel, city-select-, status-toggle-, filter-search-input, collapse-filter-btn, phase-filter- |
-| `__tests__/compare-stats.test.ts` | **18** | Compare, Cities, verified, Operational |
-| `__tests__/provenance-footer.test.tsx` | **18** | provenance-footer, verified, provenance-disclaimer-notice |
-| `e2e/filters.spec.ts` | **17** | filter-panel, city-select-, status-toggle-, phase-filter-, collapse-filter-btn |
-| `e2e/timeline.spec.ts` | **15** | timeline-slider-container, timeline-range-slider, timeline-current-year, timeline-play-btn, timeline-reset-btn, timeline-future-toggle |
-| `__tests__/report-issue-button.test.tsx` | **15** | report-issue-button, verified, Route, Report an issue |
-| `__tests__/fixtures/mock-tier1-acceptance.test.ts` | **13** | verified |
-| `__tests__/data-audit.test.ts` | **12** | verified |
-| `__tests__/metro-store.test.ts` | **12** | Nearest, Route, verified |
-| `__tests__/nearest-station.test.ts` | **12** | Nearest |
-| `__tests__/timeline.test.ts` | **12** | Operational, verified |
-| `e2e/interchange.spec.ts` | **9** | metadata-panel, station-detail, Operational, Under Construction, Planned, segment-detail |
-| `__tests__/map-legend.test.tsx` | **8** | map-legend, Operational, Under Construction, Planned, toggle-legend-btn |
-| `e2e/city-pages.spec.ts` | **7** | Cities, Under Construction, Compare, city-directory-btn |
-| `e2e/compare.spec.ts` | **7** | Operational, Under Construction, Planned, Cities, nav-to-map, nav-to-compare |
-| `__tests__/pipeline-merge-validation.test.ts` | **7** | verified |
-| `e2e/interactions.spec.ts` | **6** | data-last-updated, metadata-panel, city-select- |
-| `__tests__/city-seo.test.ts` | **6** | Cities, verified |
-| `__tests__/map-canvas.test.tsx` | **6** | mock-maplibre-map |
-| `e2e/agra-qa.spec.ts` | **5** | filter-panel, city-select-, collapse-filter-btn, map-legend, metadata-panel |
-| `e2e/chennai-qa.spec.ts` | **5** | filter-panel, city-select-, collapse-filter-btn, map-legend, metadata-panel |
-| `e2e/jaipur-qa.spec.ts` | **5** | filter-panel, city-select-, collapse-filter-btn, map-legend, metadata-panel |
-| `e2e/kanpur-qa.spec.ts` | **5** | filter-panel, city-select-, collapse-filter-btn, map-legend, metadata-panel |
-| `e2e/kochi-qa.spec.ts` | **5** | filter-panel, city-select-, collapse-filter-btn, map-legend, metadata-panel |
-| `e2e/kolkata-qa.spec.ts` | **5** | filter-panel, city-select-, collapse-filter-btn, map-legend, metadata-panel |
-| `e2e/lucknow-qa.spec.ts` | **5** | filter-panel, city-select-, collapse-filter-btn, map-legend, metadata-panel |
-| `e2e/patna-qa.spec.ts` | **5** | filter-panel, city-select-, collapse-filter-btn, map-legend, metadata-panel |
-| `__tests__/interchange-clusters.test.ts` | **5** | verified |
-| `e2e/attribution.spec.ts` | **3** | map-legend, toggle-legend-btn, metadata-panel |
-| `e2e/legend.spec.ts` | **2** | map-legend, toggle-legend-btn |
-| `__tests__/app-header.test.tsx` | **2** | data-last-updated |
-| `__tests__/migrate-schema-v2.test.ts` | **2** | verified |
-| `e2e/home.spec.ts` | **1** | data-last-updated |
-| `__tests__/dedupe-regression.test.ts` | **1** | Data: |
-| `__tests__/line-status.test.ts` | **1** | Operational, Under Construction |
+| `e2e/route-finder.spec.ts` | **20** | `find-route-btn`, `route-finder-panel`, `route-city-select`, `route-guard-notice`, `route-origin-input`, `route-destination-input` |
+| `__tests__/filter-panel.test.tsx` | **19** | `filter-panel`, `city-select-`, `status-toggle-`, `filter-search-input`, `collapse-filter-btn`, `phase-filter-` |
+| `e2e/filters.spec.ts` | **17** | `filter-panel`, `city-select-`, `status-toggle-`, `phase-filter-`, `collapse-filter-btn` |
+| `e2e/nearest-station.spec.ts` | **16** | `find-nearest-btn`, `nearest-station-panel`, `city-fallback-select` |
+| `e2e/m13-1-ux.spec.ts` | **15** | `metadata-panel`, `segment-detail`, `city-select-`, `collapse-filter-btn`, `filter-search-input` |
+| `e2e/report-issue.spec.ts` | **13** | `metadata-panel`, `report-issue-button`, `Report an issue`, `route-results-container` |
+| `e2e/provenance.spec.ts` | **12** | `provenance-footer`, `provenance-disclaimer-notice`, `metadata-panel`, `segment-detail`, `station-detail` |
+| `e2e/timeline.spec.ts` | **11** | `timeline-slider-container`, `timeline-range-slider`, `timeline-play-btn`, `timeline-reset-btn`, `timeline-future-toggle`, `toggle-stations-btn` |
+| `__tests__/metadata-panel.test.tsx` | **9** | `metadata-panel`, `Report an issue`, `report-issue-button`, `close-metadata-panel` |
+| `__tests__/station-detail-provenance.test.tsx` | **9** | `station-detail`, `provenance-footer`, `report-issue-button` |
+| `e2e/interactions.spec.ts` | **7** | `data-last-updated`, `metadata-panel`, `close-metadata-panel`, `city-select-` |
+| `e2e/attribution.spec.ts` | **6** | `osm-attribution`, `map-legend`, `toggle-legend-btn`, `metadata-panel` |
+| `e2e/interchange.spec.ts` | **6** | `metadata-panel`, `station-detail`, `segment-detail` |
+| `__tests__/report-issue-button.test.tsx` | **6** | `report-issue-button`, `Report an issue` |
+| `e2e/agra-qa.spec.ts` | **5** | `filter-panel`, `city-select-`, `collapse-filter-btn`, `map-legend`, `metadata-panel` |
+| `e2e/chennai-qa.spec.ts` | **5** | `filter-panel`, `city-select-`, `collapse-filter-btn`, `map-legend`, `metadata-panel` |
+| `e2e/jaipur-qa.spec.ts` | **5** | `filter-panel`, `city-select-`, `collapse-filter-btn`, `map-legend`, `metadata-panel` |
+| `e2e/kanpur-qa.spec.ts` | **5** | `filter-panel`, `city-select-`, `collapse-filter-btn`, `map-legend`, `metadata-panel` |
+| `e2e/kochi-qa.spec.ts` | **5** | `filter-panel`, `city-select-`, `collapse-filter-btn`, `map-legend`, `metadata-panel` |
+| `e2e/kolkata-qa.spec.ts` | **5** | `filter-panel`, `city-select-`, `collapse-filter-btn`, `map-legend`, `metadata-panel` |
+| `e2e/lucknow-qa.spec.ts` | **5** | `filter-panel`, `city-select-`, `collapse-filter-btn`, `map-legend`, `metadata-panel` |
+| `e2e/patna-qa.spec.ts` | **5** | `filter-panel`, `city-select-`, `collapse-filter-btn`, `map-legend`, `metadata-panel` |
+| `e2e/compare.spec.ts` | **3** | `nav-to-map`, `nav-to-compare` |
+| `e2e/home.spec.ts` | **3** | `data-last-updated`, `osm-attribution` |
+| `__tests__/map-legend.test.tsx` | **3** | `map-legend`, `toggle-legend-btn` |
+| `e2e/city-pages.spec.ts` | **2** | `city-directory-btn`, `city-directory-modal` |
+| `e2e/legend.spec.ts` | **2** | `map-legend`, `toggle-legend-btn` |
+| `__tests__/osm-attribution.test.tsx` | **2** | `osm-attribution` |
+| `__tests__/provenance-footer.test.tsx` | **2** | `provenance-footer`, `provenance-disclaimer-notice` |
+| `e2e/mobile-viewport.spec.ts` | **1** | `osm-attribution` |
+| `__tests__/app-header.test.tsx` | **1** | `data-last-updated` |
+
+### Excluded Pure Function Test Files (19 files)
+Files testing mathematical, algorithmic, schema, or store logic without DOM component assertions are excluded from the UI blast radius:
+- `__tests__/fares.test.ts`: Tests pure fare calculation algorithms, distance tier matching, and fare rule validation.
+- `__tests__/route-finder.test.ts`: Tests Dijkstra routing graph construction and pathfinding algorithms.
+- `__tests__/schema.test.ts`: Tests Zod schema data validation contracts on raw datasets.
+- `__tests__/provenance-validator.test.ts`: Tests provenance rule verification and status checkers.
+- `__tests__/data-loader.test.ts`: Tests geojson loader, city indexer, and data access functions.
+- `__tests__/compare-stats.test.ts`: Tests mathematical aggregation and statistical computation for city comparisons.
+- `__tests__/nearest-station.test.ts`: Tests Haversine distance math and coordinate sorting algorithms.
+- `__tests__/timeline.test.ts`: Tests cumulative operational kilometer math and year scrubber ranges.
+- `__tests__/city-seo.test.ts`: Tests SEO metadata generators and structured JSON-LD schemas.
+- `__tests__/interchange-clusters.test.ts`: Tests spatial clustering algorithms for interchange nodes.
+- `__tests__/line-status.test.ts`: Tests line operational status categorization rules.
+- `__tests__/data-audit.test.ts`: Tests data audit validation pipeline rules.
+- `__tests__/dedupe-regression.test.ts`: Tests pipeline segment and station deduplication functions.
+- `__tests__/migrate-schema-v2.test.ts`: Tests database schema migration transformers.
+- `__tests__/pipeline-step-c.test.ts`: Tests pipeline step C topological graph generation.
+- `__tests__/pipeline-merge-validation.test.ts`: Tests pipeline merge integrity validator.
+- `__tests__/fixtures/mock-tier1-acceptance.test.ts`: Tests acceptance criteria against mock data fixture.
+- `__tests__/metro-store.test.ts`: Tests Zustand store actions and state transitions in memory.
+- `__tests__/issue-url.test.ts`: Tests GitHub issue URL template query parameter builders.
 
 ---
 
@@ -603,8 +642,9 @@ Ordered, independently mergeable steps:
 - [ ] **Q5: Station Search Placeholder Interim Fix**: In M23.1, before the full station search index is built in M23.5, should we update the misleading placeholder in `components/filters/filter-panel.tsx:90` from `"Search lines, phases, stations..."` to `"Search lines, phases..."`?  
   *Recommendation*: Yes. The current filter searches only line names, cities, phases, and aliases. Claiming stations search when typing stations yields 0 results is a major user defect.
 
-- [ ] **Q6: City Picker Ordering**: How should the 21 cities be ordered in the searchable combobox (replacing the arbitrary array order Gurugram 1st, Navi Mumbai 2nd...)?  
-  *Recommendation*: Tier 1 major networks first (Delhi, Bengaluru, Mumbai, Kolkata, Chennai, Hyderabad, Ahmedabad, Pune), followed by alphabetical for remaining Tier 2 cities.
+- [ ] **Q6: City Picker Ordering (Owner Decision)**: How should the 21 cities be ordered in the searchable combobox (replacing the arbitrary array order Gurugram 1st, Navi Mumbai 2nd...)?  
+  *Proposal*: Tier 1 major networks first (Delhi, Mumbai, Bengaluru, Chennai, Kolkata, Hyderabad — matching `TIER_1_CITY_IDS` in `lib/compare-stats.ts` and `docs/MILESTONES-v2.md`), followed by alphabetical for the remaining Tier 2 cities (Agra, Ahmedabad, Bhopal, Gurugram, Indore, Jaipur, Kanpur, Kochi, Lucknow, Nagpur, Navi Mumbai, Noida, Patna, Pune, Surat). Mark as owner decision.  
+  *Recommendation*: Approve Tier 1 first, then alphabetical. Note: Ahmedabad and Pune are classified as Tier 2 in the project specification.
 
 - [ ] **Q7: Fare Boundary Qualifier Wording**: For routes within 500m of a fare band edge, should the qualifier wording dynamically reference the calculator's `alternative_fare_inr` (e.g. *"Near a fare boundary: estimated ₹X or ₹Y"*), rather than a fixed rupee offset?  
   *Recommendation*: Yes, dynamic wording driven by `alternative_fare_inr` avoids hard-coding any rupee amounts in the design.

@@ -367,6 +367,34 @@ Explicitly skipped for now: live train tracking and real-time arrivals (no free 
    - The dataset last-updated badge (`data-last-updated`) is rendered at `app/page.tsx:192` within the bottom-right container, not in the top header as previously logged.
    - The badge text `"Data: Oct 2026 (MANUAL, OSM)"` suggests dataset-wide verification. In M23, it must be simplified to `"Data updated: Oct 2026"` with an accessible click disclosure listing specific sources.
 
+---
+
+## M22.2 Parked Issues: Inventory Reconciliations, Layout Occlusion, and City Ordering
+
+1. **Control Counts and Crawlable Nav Reconciliation**:
+   - The interactive element audit previously counted 66 desktop elements with 65 failing < 44 px, while the summary cited 62.
+   - Re-running the measurement with explicit classification revealed that 21 elements are `<a>` tags inside `[data-testid="crawlable-city-directory"]` (`h-[1px]`, `overflow: hidden`, for search engine crawlers only) and 1 is the MapLibre `<canvas>` background.
+   - Excluding visually hidden crawler links and the map canvas isolates exactly **43 visible-to-user controls** on first load on both Desktop and Pixel 7.
+   - On Desktop (1280x800), **39 of 43 (90.7%)** visible controls fail the 44 px minimum in either width or height.
+   - On Pixel 7 (412x915), **42 of 43 (97.7%)** visible controls fail < 44 px.
+
+2. **Pixel 7 Viewport Height (915 px) and Panel Occlusion**:
+   - Using the exact Pixel 7 viewport height (915 px), on first load the expanded Filter Panel covers **44.7%** (`top: 72px`, `height: 409px`), while the Timeline Slider covers **7.2%** (`top: 770px`, `height: 66px`).
+   - With a station selected (`/?city=delhi&selected=station:del-kashmere-gate`), the fixed Metadata Panel covers **75.6%** (`top: 223px`, `height: 692px`).
+   - `document.elementFromPoint` testing confirms that when a station is selected, the Metadata Panel visually occludes the Timeline Slider, Map Legend, Data Badge, and Attribution. The Timeline Slider remains mounted in the DOM (`z-30` vs `z-40`), but is 100% covered by the metadata panel.
+
+3. **Journey Steps and Routing Fare Status**:
+   - Route calculation in today's UI produces 8 total actions (5 clicks + 1 select + 2 typing) or 6 inputs.
+   - Raw `innerText` of `[data-testid="route-results-container"]` displays `"Minimises time, then transfers, then stops • Fares not included"`. Real fare rules (verified for Delhi in M21c) are not wired to the routing UI yet; UI integration is scheduled for M24.
+   - Verified that the report-an-error button testid is `report-issue-button` (linking to GitHub data correction template).
+
+4. **Tier 1 City Scope and City Ordering**:
+   - Clarified that `TIER_1_CITY_IDS` in `lib/compare-stats.ts` and `docs/MILESTONES-v2.md` strictly comprises 6 cities: Delhi, Mumbai, Bengaluru, Chennai, Kolkata, Hyderabad.
+   - Neither Ahmedabad nor Pune is in Tier 1. They are placed in Tier 2 (alphabetical). City combobox ordering will list the 6 Tier 1 networks first, followed by alphabetical for the remaining 15 Tier 2 cities, marked as an owner decision.
+
+5. **Dataset Retrieval Date Wording**:
+   - The data badge proposal is updated to reflect the machine dataset fetch date (`retrieved_at: "2026-10-16"`): proposed wording is `"Data retrieved: Oct 2026"` or `"Data: Oct 2026"`, with a popover disclosure identifying OpenStreetMap (ODbL) and public operator information.
+
 
 
 
