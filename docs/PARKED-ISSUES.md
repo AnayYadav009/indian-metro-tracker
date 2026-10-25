@@ -337,6 +337,37 @@ Explicitly skipped for now: live train tracking and real-time arrivals (no free 
    - `components/routing/route-finder-panel.tsx` uses `"verified lines"` to mean graph connectivity validation.
    - All these claims must be cleaned up in M23 to adhere strictly to the project rule forbidding unsubstantiated verification claims.
 
+---
+
+## M22.1 Parked Issues: Measured Accessibility, Search, and Copy Discrepancies
+
+1. **Station Search Indexing Mismatch & Interim Fix**:
+   - The search input inside `components/filters/filter-panel.tsx` promises station search via placeholder `"Search lines, phases, stations..."`.
+   - `lib/filter-utils.ts:138` filters only line names, cities, phases, and aliases. Stations are never searched or returned.
+   - In M23.1, an interim fix must adjust the placeholder to `"Search lines, phases..."` until M23.5 builds the client-side station search index against `data/stations.geojson` and overrides aliases.
+
+2. **Header, Mode, and Chip Touch Targets Under 44 px**:
+   - Playwright Part 1a DOM measurement revealed that **64 out of 65** visible interactive elements on Pixel 7 mobile (and **62 of 66** on desktop) fail the standard WCAG / Android touch-target minimum of 44 × 44 px.
+   - Specifically:
+     - All 22 city chips are `height: 24px` (`width: 169.5px`).
+     - Header mode buttons (`find-route-btn`, `find-nearest-btn`, `city-directory-btn`, `nav-to-compare`) are `38 × 26 px`.
+     - Filter panel collapse button is `24 × 24 px`.
+     - Timeline controls range from `16px` to `28px` in height.
+   - M23 shell redesign must pad all primary mobile targets to at least 44 × 44 px.
+
+3. **Accessible Name Evaluation on Mobile**:
+   - Part 1a verified that while 0 elements have a strictly empty name under fallback evaluation, mobile navigation buttons (`find-route-btn`, `find-nearest-btn`, `city-directory-btn`) hide their text labels (`hidden sm:inline`) and rely solely on `title`.
+   - On touchscreen devices without hover states, `title` does not expose tooltips. Explicit `aria-label` attributes must be added to all icon-only buttons.
+
+4. **Arbitrary City Array Ordering**:
+   - Currently, the 22 city chips render in raw `data/cities.json` array order (Gurugram 1st, Navi Mumbai 2nd, ..., Delhi 11th, Patna 22nd) with verbose operator legal names.
+   - M23 must introduce structured ordering (Tier 1 major networks by ridership/size first, followed by alphabetical for Tier 2) with public-facing transit branding.
+
+5. **Data Badge Placement and Copy**:
+   - The dataset last-updated badge (`data-last-updated`) is rendered at `app/page.tsx:192` within the bottom-right container, not in the top header as previously logged.
+   - The badge text `"Data: Oct 2026 (MANUAL, OSM)"` suggests dataset-wide verification. In M23, it must be simplified to `"Data updated: Oct 2026"` with an accessible click disclosure listing specific sources.
+
+
 
 
 
