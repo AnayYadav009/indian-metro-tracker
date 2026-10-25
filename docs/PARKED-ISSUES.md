@@ -410,11 +410,16 @@ Explicitly skipped for now: live train tracking and real-time arrivals (no free 
    - When run in parallel across multiple workers on machines under load, this test can exceed default timeouts.
    - Retains a `test.setTimeout(120_000)` timeout override and should be kept in mind during CI runs.
 
+3. **MapLibre Layer Filter Snapshot Churn (`__tests__/__snapshots__/map-filter-snapshots.test.ts.snap`)**:
+   - `__tests__/map-filter-snapshots.test.ts` generates snapshot churn during test execution due to newline/formatting differences on Windows (`LF` vs `CRLF` working copy touch).
+   - Parked to clean up or convert to exact deep assertion characterization tests in a subsequent milestone.
 
+4. **Layout Dependency in E2E Specs**:
+   - Out of the 24 E2E test specs, 23 depend on the layout and UI components (using layout-owned elements or helpers). Only `worker.spec.ts` does not depend on the layout (isolated MapLibre worker verification with zero unpkg requests).
 
+5. **DOM Scraping for City IDs in `e2e/m13-1-ux.spec.ts`**:
+   - `e2e/m13-1-ux.spec.ts` currently scrapes the DOM for city chips and filters out `city-select-all` to discover city IDs. After M23, it should read directly from `data/cities.json` instead of querying button elements in the DOM.
 
-
-
-
-
+6. **Allowlist Line Number Fragility**:
+   - `e2e/layout-drift-allowlist.json` currently stores line numbers for entries, which break whenever lines are added or removed above them in `e2e/m13-1-ux.spec.ts`. It should be keyed by file and testid only.
 
