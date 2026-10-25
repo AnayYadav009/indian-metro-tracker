@@ -1,31 +1,40 @@
 import { test, expect } from "@playwright/test";
+import {
+  gotoHome,
+  filterPanel,
+  cityChip,
+  filterToggle,
+  phasePill,
+  mapLegend,
+  metadataPanel,
+} from "./helpers";
 
 test.describe("Kolkata Visual & Interaction QA (Step 5)", () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto("/");
+    await gotoHome(page);
   });
 
   test("verifies Kolkata in city selector, phases, line legend, and station panel", async ({
     page,
   }) => {
-    const filterPanel = page.getByTestId("filter-panel");
-    await expect(filterPanel).toBeVisible();
+    const panel = filterPanel(page);
+    await expect(panel).toBeVisible();
 
     // 1. Verify Kolkata button is present and click it
-    const kolkataBtn = page.getByTestId("city-select-kolkata");
+    const kolkataBtn = cityChip(page, "kolkata");
     await expect(kolkataBtn).toBeVisible();
     await kolkataBtn.click();
-    const filterToggle = page.getByTestId("collapse-filter-btn");
-    if ((await filterToggle.getAttribute("aria-expanded")) === "false") {
-      await filterToggle.click({ force: true });
+    const toggle = filterToggle(page);
+    if ((await toggle.getAttribute("aria-expanded")) === "false") {
+      await toggle.click({ force: true });
     }
 
     // 2. Verify dynamic phases for Kolkata render
-    await expect(page.getByTestId("phase-pill-1")).toBeVisible();
-    await expect(page.getByTestId("phase-pill-2")).toBeVisible();
+    await expect(phasePill(page, "1")).toBeVisible();
+    await expect(phasePill(page, "2")).toBeVisible();
 
     // 3. Verify lines in legend or controls
-    const legend = page.getByTestId("map-legend");
+    const legend = mapLegend(page);
     await expect(legend).toBeVisible();
 
     // 4. Test searching or selecting Kolkata station
@@ -38,9 +47,9 @@ test.describe("Kolkata Visual & Interaction QA (Step 5)", () => {
       await searchResult.click();
 
       // Check metadata panel
-      const metadataPanel = page.getByTestId("metadata-panel");
-      await expect(metadataPanel).toBeVisible();
-      await expect(metadataPanel.getByText(/Esplanade/i).first()).toBeVisible();
+      const metaPanel = metadataPanel(page);
+      await expect(metaPanel).toBeVisible();
+      await expect(metaPanel.getByText(/Esplanade/i).first()).toBeVisible();
     }
 
     // 5. Take screenshot of Kolkata network view

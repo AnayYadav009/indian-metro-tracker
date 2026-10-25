@@ -59,6 +59,11 @@ Trust first (fares and timings are new claims that need a source and a verified 
 - Done when: the owner signs off on the brief.
 - Outcome: Completed UI inventory across desktop and Pixel 7 viewports (20 screenshots saved in `docs/design/m22/current/`, all <500 KB). Measured 43–44 visible interactive controls on first load and 163px panel overlap on mobile. Documented comprehensive design brief (`docs/DESIGN-BRIEF-M22.md`) covering key journeys, ASCII wireframes, 3-state bottom sheet physics, trust presentation, copy fixes, performance budgets, header consolidation plan, and 8 owner sign-off questions.
 
+**M23.0 Decouple E2E tests from current layout (tests only, no UI change)** (Status: Implemented, pending owner review)
+- Scope: decouple all 23 E2E test specs from raw layout-owned `data-testid` values, direct chips/button locators, and floating panel selectors into a centralized helper module (`e2e/helpers.ts`) without modifying product code or assertions.
+- Files touched: `e2e/helpers.ts`, all 23 E2E spec files under `e2e/`, `e2e/layout-drift-allowlist.json`, `__tests__/e2e-layout-drift-guard.test.ts`, `docs/TESTING-HELPERS.md`, `docs/PLAN-PUBLIC-USABILITY.md`.
+- Outcome: Centralized typed helper layer with 40+ helper functions/locators; migrated 23 specs; added Vitest drift guard `__tests__/e2e-layout-drift-guard.test.ts` with explicit allowlist `e2e/layout-drift-allowlist.json`; 405 unit tests pass (+2 drift guard tests); 154 E2E tests pass.
+
 **M23 UI shell implementation**
 - Scope: new top bar, city selector and panel structure from M22, with existing features reattached unchanged.
 - Files likely touched: top bar (`app/page.tsx`, `app/compare/page.tsx`, `app/city/[id]/page.tsx`), city selector (`components/filters/city-select.tsx`), panels (`components/filters/filter-panel.tsx`, `components/panels/station-detail.tsx`, `components/panels/segment-detail.tsx`, `components/panels/nearest-station-panel.tsx`), timeline components (`components/timeline/timeline-slider.tsx`, `lib/timeline-utils.ts`).

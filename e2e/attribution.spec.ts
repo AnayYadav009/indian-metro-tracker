@@ -1,4 +1,13 @@
 import { test, expect } from "@playwright/test";
+import {
+  gotoHome,
+  attribution,
+  attributionMobile,
+  mapLegend,
+  toggleLegendButton,
+  legendContent,
+  metadataPanel,
+} from "./helpers";
 
 function rectIntersects(
   r1: { x: number; y: number; width: number; height: number },
@@ -26,11 +35,11 @@ test.describe("OSM Attribution Visibility & Zero-Intersection (Phase 6)", () => 
       await page.setViewportSize({ width: vp.width, height: vp.height });
 
       // 1. Test without feature selected (Legend expanded and collapsed)
-      await page.goto("/");
-      const attribution = page.getByTestId("osm-attribution").first();
-      await expect(attribution).toBeVisible();
+      await gotoHome(page);
+      const attr = attribution(page).first();
+      await expect(attr).toBeVisible();
 
-      let attrBox = await attribution.boundingBox();
+      let attrBox = await attr.boundingBox();
       expect(attrBox).not.toBeNull();
       if (!attrBox) return;
 
@@ -41,11 +50,11 @@ test.describe("OSM Attribution Visibility & Zero-Intersection (Phase 6)", () => 
       expect(attrBox.y + attrBox.height).toBeLessThanOrEqual(vp.height + 1);
 
       // Check legend intersection (expanded)
-      const legend = page.getByTestId("map-legend");
-      const toggleBtn = page.getByTestId("toggle-legend-btn");
+      const legend = mapLegend(page);
+      const toggleBtn = toggleLegendButton(page);
 
       // On mobile viewports legend defaults to collapsed; expand it first to test expanded intersection
-      if (!(await page.getByTestId("legend-content").isVisible())) {
+      if (!(await legendContent(page).isVisible())) {
         await toggleBtn.click();
         await page.waitForTimeout(200);
       }
@@ -60,7 +69,7 @@ test.describe("OSM Attribution Visibility & Zero-Intersection (Phase 6)", () => 
       await toggleBtn.click();
       await page.waitForTimeout(200);
 
-      attrBox = await attribution.boundingBox();
+      attrBox = await attr.boundingBox();
       legendBox = await legend.boundingBox();
       expect(attrBox).not.toBeNull();
       expect(legendBox).not.toBeNull();
@@ -69,15 +78,18 @@ test.describe("OSM Attribution Visibility & Zero-Intersection (Phase 6)", () => 
       }
 
       // 2. Test with feature selected (MetadataPanel open)
-      await page.goto("/?city=delhi&selected=station:del-ramesh-nagar");
-      const metaPanel = page.getByTestId("metadata-panel");
+      await gotoHome(page, {
+        city: "delhi",
+        selected: "station:del-ramesh-nagar",
+      });
+      const metaPanel = metadataPanel(page);
       await expect(metaPanel).toBeVisible();
 
       // On mobile viewports, the attribution is docked inside the sheet footer; on desktop it is in the bottom-right container
       const activeAttr =
         vp.width < 768
-          ? page.getByTestId("osm-attribution-mobile")
-          : page.getByTestId("osm-attribution");
+          ? attributionMobile(page)
+          : attribution(page);
 
       await expect(activeAttr).toBeVisible();
       attrBox = await activeAttr.boundingBox();

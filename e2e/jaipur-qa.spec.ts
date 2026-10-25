@@ -1,30 +1,39 @@
 import { test, expect } from "@playwright/test";
+import {
+  gotoHome,
+  filterPanel,
+  cityChip,
+  filterToggle,
+  phasePill,
+  mapLegend,
+  metadataPanel,
+} from "./helpers";
 
 test.describe("Jaipur Visual & Interaction QA (M15)", () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto("/");
+    await gotoHome(page);
   });
 
   test("verifies Jaipur in city selector, phases, line legend, and station panel", async ({
     page,
   }) => {
-    const filterPanel = page.getByTestId("filter-panel");
-    await expect(filterPanel).toBeVisible();
+    const panel = filterPanel(page);
+    await expect(panel).toBeVisible();
 
     // 1. Verify Jaipur button is present and click it
-    const jaipurBtn = page.getByTestId("city-select-jaipur");
+    const jaipurBtn = cityChip(page, "jaipur");
     await expect(jaipurBtn).toBeVisible();
     await jaipurBtn.click();
-    const filterToggle = page.getByTestId("collapse-filter-btn");
-    if ((await filterToggle.getAttribute("aria-expanded")) === "false") {
-      await filterToggle.click({ force: true });
+    const toggle = filterToggle(page);
+    if ((await toggle.getAttribute("aria-expanded")) === "false") {
+      await toggle.click({ force: true });
     }
 
     // 2. Verify dynamic phases for Jaipur render
-    await expect(page.getByTestId("phase-pill-1")).toBeVisible();
+    await expect(phasePill(page, "1")).toBeVisible();
 
     // 3. Verify lines in legend
-    const legend = page.getByTestId("map-legend");
+    const legend = mapLegend(page);
     await expect(legend).toBeVisible();
 
     // 4. Test searching or selecting Badi Chaupar station
@@ -37,10 +46,10 @@ test.describe("Jaipur Visual & Interaction QA (M15)", () => {
       await searchResult.click();
 
       // Check metadata panel
-      const metadataPanel = page.getByTestId("metadata-panel");
-      await expect(metadataPanel).toBeVisible();
-      await expect(metadataPanel.getByText(/Badi Chaupar/i).first()).toBeVisible();
-      await expect(metadataPanel.getByText(/JMRC/i).first()).toBeVisible();
+      const metaPanel = metadataPanel(page);
+      await expect(metaPanel).toBeVisible();
+      await expect(metaPanel.getByText(/Badi Chaupar/i).first()).toBeVisible();
+      await expect(metaPanel.getByText(/JMRC/i).first()).toBeVisible();
     }
 
     // 5. Take screenshot of Jaipur network view

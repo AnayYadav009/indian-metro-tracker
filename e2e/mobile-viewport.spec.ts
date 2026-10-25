@@ -1,4 +1,5 @@
 import { test, expect } from "@playwright/test";
+import { gotoHome, mapContainer, attribution } from "./helpers";
 
 test.describe("Mobile Viewport Height (Task 2.7)", () => {
   test("renders full layout within dynamic viewport height without overflow", async ({
@@ -6,7 +7,7 @@ test.describe("Mobile Viewport Height (Task 2.7)", () => {
   }) => {
     // Mobile viewport (iPhone 13 size: 390x844)
     await page.setViewportSize({ width: 390, height: 844 });
-    await page.goto("/");
+    await gotoHome(page);
 
     // Verify main root container uses h-dvh and matches viewport height
     const rootContainer = page.locator(".bg-slate-950").first();
@@ -20,9 +21,9 @@ test.describe("Mobile Viewport Height (Task 2.7)", () => {
     }
 
     // Verify map canvas fills available vertical space
-    const mapContainer = page.getByTestId("map-container");
-    await expect(mapContainer).toBeVisible();
-    const mapBox = await mapContainer.boundingBox();
+    const map = mapContainer(page);
+    await expect(map).toBeVisible();
+    const mapBox = await map.boundingBox();
     expect(mapBox).not.toBeNull();
     if (mapBox) {
       expect(mapBox.height).toBeGreaterThan(700);
@@ -32,6 +33,6 @@ test.describe("Mobile Viewport Height (Task 2.7)", () => {
     await expect(
       page.getByRole("heading", { name: "Indian Metro Network Tracker" })
     ).toBeVisible();
-    await expect(page.getByTestId("osm-attribution")).toBeVisible();
+    await expect(attribution(page)).toBeVisible();
   });
 });

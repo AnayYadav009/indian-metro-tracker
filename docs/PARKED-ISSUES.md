@@ -395,6 +395,22 @@ Explicitly skipped for now: live train tracking and real-time arrivals (no free 
 5. **Dataset Retrieval Date Wording**:
    - The data badge proposal is updated to reflect the machine dataset fetch date (`retrieved_at: "2026-10-16"`): proposed wording is `"Data retrieved: Oct 2026"` or `"Data: Oct 2026"`, with a popover disclosure identifying OpenStreetMap (ODbL) and public operator information.
 
+---
+
+## M23.0 Parked Issues: E2E Test Decoupling & In-Browser Evaluates
+
+1. **In-Browser DOM Query Evaluations in `e2e/m13-1-ux.spec.ts`**:
+   - `e2e/m13-1-ux.spec.ts` performs geometric bounding-box overlap checks inside `page.evaluate()` and `page.waitForFunction()` (`document.querySelector('[data-testid="metadata-panel"]')` and `document.querySelector('[data-testid="map-container"]')`) to ensure that selected stations and segments are panned away from floating details panels.
+   - These in-browser evaluate scripts execute inside the Chromium JavaScript context rather than through Playwright Locator handles.
+   - Additionally, `m13-1-ux.spec.ts` reads the `data-testid` attribute off chip elements to filter out `"city-select-all"` and collect city IDs dynamically.
+   - These 9 evaluate references are explicitly allowlisted in `e2e/layout-drift-allowlist.json` and documented so the drift guard (`__tests__/e2e-layout-drift-guard.test.ts`) verifies that all Playwright locator code outside this spec uses `e2e/helpers.ts`. When M23 redesigns the details panel into a bottom sheet, the evaluate bounding-rect functions will be updated to test against the bottom sheet drawer.
+
+2. **Flaky E2E Test Under Heavy Parallel Load (`e2e/m13-1-ux.spec.ts:140`)**:
+   - The test `"switches to every city and renders its network"` loops sequentially through all 21 cities and waits for MapLibre WebGL line layers to render.
+   - When run in parallel across multiple workers on machines under load, this test can exceed default timeouts.
+   - Retains a `test.setTimeout(120_000)` timeout override and should be kept in mind during CI runs.
+
+
 
 
 

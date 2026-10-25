@@ -1,4 +1,23 @@
 import { test, expect } from "@playwright/test";
+import {
+  gotoHome,
+  openNearestStation,
+  nearestStationButton,
+  nearestStationPanel,
+  privacyNote,
+  nearestStationItem,
+  straightLineDistance,
+  stationLineBadge,
+  geoPermissionDenied,
+  pickPointButton,
+  cityFallbackSelect,
+  tooFarMessage,
+  noOperationalMessage,
+  toggleConstruction,
+  notYetOpenBadge,
+  pickingLocationBanner,
+  userLocationMarker,
+} from "./helpers";
 
 test.describe("M16 Nearest Station Finder", () => {
   test("renders nearest station button and opens panel with privacy note", async ({
@@ -8,20 +27,20 @@ test.describe("M16 Nearest Station Finder", () => {
     await context.grantPermissions(["geolocation"]);
     await context.setGeolocation({ longitude: 77.2183, latitude: 28.6328 });
 
-    await page.goto("/");
+    await gotoHome(page);
     await page.waitForLoadState("domcontentloaded");
 
-    const nearestBtn = page.locator('[data-testid="find-nearest-btn"]');
+    const nearestBtn = nearestStationButton(page);
     await expect(nearestBtn).toBeVisible();
     await nearestBtn.click();
 
-    const panel = page.locator('[data-testid="nearest-station-panel"]');
+    const panel = nearestStationPanel(page);
     await expect(panel).toBeVisible();
 
     // Verify client-side privacy note
-    const privacyNote = page.locator('[data-testid="privacy-note"]');
-    await expect(privacyNote).toBeVisible();
-    await expect(privacyNote).toContainText("Client-Side Only");
+    const note = privacyNote(page);
+    await expect(note).toBeVisible();
+    await expect(note).toContainText("Client-Side Only");
   });
 
   test("calculates nearest operational stations when geolocation is granted", async ({
@@ -32,24 +51,24 @@ test.describe("M16 Nearest Station Finder", () => {
     await context.grantPermissions(["geolocation"]);
     await context.setGeolocation({ longitude: 77.2183, latitude: 28.6328 });
 
-    await page.goto("/");
+    await gotoHome(page);
     await page.waitForLoadState("domcontentloaded");
 
-    await page.locator('[data-testid="find-nearest-btn"]').click();
-    const panel = page.locator('[data-testid="nearest-station-panel"]');
+    await openNearestStation(page);
+    const panel = nearestStationPanel(page);
     await expect(panel).toBeVisible();
 
     // Wait for locate-me action or automatic request to populate nearest stations list
-    const stationItems = page.locator('[data-testid="nearest-station-item"]');
+    const stationItems = nearestStationItem(page);
     await expect(stationItems.first()).toBeVisible({ timeout: 10000 });
 
     // Verify distance is labelled as straight-line
-    const firstDistance = stationItems.first().locator('[data-testid="straight-line-distance"]');
+    const firstDistance = straightLineDistance(stationItems.first());
     await expect(firstDistance).toBeVisible();
     await expect(firstDistance).toContainText("straight-line");
 
     // Verify station lines are displayed
-    const lineBadges = stationItems.first().locator('[data-testid="station-line-badge"]');
+    const lineBadges = stationLineBadge(stationItems.first());
     await expect(lineBadges.first()).toBeVisible();
 
     // Verify closest station name (Rajiv Chowk or adjacent central station)
@@ -81,25 +100,25 @@ test.describe("M16 Nearest Station Finder", () => {
       });
     });
 
-    await page.goto("/");
+    await gotoHome(page);
     await page.waitForLoadState("domcontentloaded");
 
-    await page.locator('[data-testid="find-nearest-btn"]').click();
+    await openNearestStation(page);
 
     // Expect permission denied banner
-    const deniedBanner = page.locator('[data-testid="geo-permission-denied"]');
+    const deniedBanner = geoPermissionDenied(page);
     await expect(deniedBanner).toBeVisible({ timeout: 10000 });
     await expect(deniedBanner).toContainText("Location access was denied");
 
     // Verify manual fallbacks are present
-    await expect(page.locator('[data-testid="pick-point-btn"]')).toBeVisible();
-    await expect(page.locator('[data-testid="city-fallback-select"]')).toBeVisible();
+    await expect(pickPointButton(page)).toBeVisible();
+    await expect(cityFallbackSelect(page)).toBeVisible();
 
     // Test city search / jump fallback
-    await page.locator('[data-testid="city-fallback-select"]').selectOption({ label: "Kolkata" });
+    await cityFallbackSelect(page).selectOption({ label: "Kolkata" });
 
     // Once a city is selected, nearest stations list appears for that city
-    const stationItems = page.locator('[data-testid="nearest-station-item"]');
+    const stationItems = nearestStationItem(page);
     await expect(stationItems.first()).toBeVisible();
     await expect(stationItems.first()).toContainText("Kolkata");
   });
@@ -112,15 +131,15 @@ test.describe("M16 Nearest Station Finder", () => {
     await context.grantPermissions(["geolocation"]);
     await context.setGeolocation({ longitude: 71.0, latitude: 26.5 });
 
-    await page.goto("/");
+    await gotoHome(page);
     await page.waitForLoadState("domcontentloaded");
 
-    await page.locator('[data-testid="find-nearest-btn"]').click();
+    await openNearestStation(page);
 
-    const tooFarMessage = page.locator('[data-testid="too-far-message"]');
-    await expect(tooFarMessage).toBeVisible({ timeout: 10000 });
-    await expect(tooFarMessage).toContainText("Metro Service Out of Range (>50 km)");
-    await expect(tooFarMessage).toContainText("out of range (> 50 km)");
+    const tooFar = tooFarMessage(page);
+    await expect(tooFar).toBeVisible({ timeout: 10000 });
+    await expect(tooFar).toContainText("Metro Service Out of Range (>50 km)");
+    await expect(tooFar).toContainText("out of range (> 50 km)");
   });
 
   test("informs user when in a city with no operational metro network (Surat)", async ({
@@ -131,25 +150,25 @@ test.describe("M16 Nearest Station Finder", () => {
     await context.grantPermissions(["geolocation"]);
     await context.setGeolocation({ longitude: 72.83, latitude: 21.17 });
 
-    await page.goto("/");
+    await gotoHome(page);
     await page.waitForLoadState("domcontentloaded");
 
-    await page.locator('[data-testid="find-nearest-btn"]').click();
+    await openNearestStation(page);
 
-    const noOpMessage = page.locator('[data-testid="no-operational-message"]');
-    await expect(noOpMessage).toBeVisible({ timeout: 10000 });
-    await expect(noOpMessage).toContainText("No Operational Metro Yet");
-    await expect(noOpMessage).toContainText("Surat metro is currently under construction");
+    const noOp = noOperationalMessage(page);
+    await expect(noOp).toBeVisible({ timeout: 10000 });
+    await expect(noOp).toContainText("No Operational Metro Yet");
+    await expect(noOp).toContainText("Surat metro is currently under construction");
 
     // Toggle construction stations
-    const toggleConstruction = page.locator('[data-testid="toggle-construction"]');
-    await toggleConstruction.check();
+    const toggle = toggleConstruction(page);
+    await toggle.check();
 
     // After checking, under construction stations are shown with tag
-    const stationItems = page.locator('[data-testid="nearest-station-item"]');
+    const stationItems = nearestStationItem(page);
     await expect(stationItems.first()).toBeVisible();
-    await expect(page.locator('[data-testid="not-yet-open-badge"]').first()).toBeVisible();
-    await expect(page.locator('[data-testid="not-yet-open-badge"]').first()).toContainText(
+    await expect(notYetOpenBadge(page).first()).toBeVisible();
+    await expect(notYetOpenBadge(page).first()).toContainText(
       "Under Construction (Not yet open)"
     );
   });
@@ -178,17 +197,17 @@ test.describe("M16 Nearest Station Finder", () => {
       });
     });
 
-    await page.goto("/");
+    await gotoHome(page);
     await page.waitForLoadState("domcontentloaded");
     await page.waitForFunction(() => !!(window as any)._mapLibreInstance, undefined, { timeout: 15000 });
 
-    await page.locator('[data-testid="find-nearest-btn"]').click();
+    await openNearestStation(page);
 
     // Click pick-on-map button
-    const pickBtn = page.locator('[data-testid="pick-point-btn"]');
+    const pickBtn = pickPointButton(page);
     await pickBtn.click();
 
-    const banner = page.locator('[data-testid="picking-location-banner"]');
+    const banner = pickingLocationBanner(page);
     await expect(banner).toBeVisible();
 
     // Dispatch click on the map canvas at Delhi coordinates
@@ -207,11 +226,11 @@ test.describe("M16 Nearest Station Finder", () => {
     });
 
     // The picked point marker appears on the map canvas
-    const userMarker = page.locator('[data-testid="user-location-marker"]');
+    const userMarker = userLocationMarker(page);
     await expect(userMarker).toBeVisible();
 
     // Nearest station results populate with nearby Delhi stations
-    const stationItems = page.locator('[data-testid="nearest-station-item"]');
+    const stationItems = nearestStationItem(page);
     await expect(stationItems.first()).toBeVisible({ timeout: 10000 });
   });
 });

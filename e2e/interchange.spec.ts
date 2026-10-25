@@ -1,4 +1,15 @@
 import { test, expect } from "@playwright/test";
+import {
+  openStation,
+  gotoHome,
+  metadataPanel,
+  stationDetail,
+  interchangeBadge,
+  interchangeSection,
+  interchangeLineChips,
+  segmentDetail,
+  mapContainer,
+} from "./helpers";
 
 /**
  * M12 Interchange Highlighting E2E tests.
@@ -11,35 +22,35 @@ test.describe("M12 Interchange Highlighting", () => {
     page,
   }) => {
     // Navigate to a known interchange station
-    await page.goto("/?city=delhi&selected=station:del-kashmere-gate");
+    await openStation(page, "delhi", "del-kashmere-gate");
 
-    const panel = page.getByTestId("metadata-panel");
+    const panel = metadataPanel(page);
     await expect(panel).toBeVisible();
 
-    const stationDetail = panel.getByTestId("station-detail");
-    await expect(stationDetail).toBeVisible();
+    const detail = stationDetail(page);
+    await expect(detail).toBeVisible();
 
     // Interchange badge should be visible
-    const interchangeBadge = stationDetail.getByTestId("interchange-badge");
-    await expect(interchangeBadge).toBeVisible();
+    const badge = interchangeBadge(detail);
+    await expect(badge).toBeVisible();
 
     // Interchange lines section should be present
-    const interchangeSection = stationDetail.getByTestId("interchange-lines-section");
-    await expect(interchangeSection).toBeVisible();
-    await expect(interchangeSection).toContainText("Interchange");
-    await expect(interchangeSection).toContainText("connects");
+    const section = interchangeSection(detail);
+    await expect(section).toBeVisible();
+    await expect(section).toContainText("Interchange");
+    await expect(section).toContainText("connects");
   });
 
   test("interchange line chips are present and contain line names", async ({
     page,
   }) => {
-    await page.goto("/?city=delhi&selected=station:del-kashmere-gate");
+    await openStation(page, "delhi", "del-kashmere-gate");
 
-    const stationDetail = page.getByTestId("station-detail");
-    await expect(stationDetail).toBeVisible();
+    const detail = stationDetail(page);
+    await expect(detail).toBeVisible();
 
     // There should be at least one interchange line chip
-    const chips = page.locator('[data-testid^="interchange-line-chip-"]');
+    const chips = interchangeLineChips(page);
     const count = await chips.count();
     expect(count).toBeGreaterThanOrEqual(2);
     await expect(chips.first()).toContainText(
@@ -58,13 +69,13 @@ test.describe("M12 Interchange Highlighting", () => {
   test("clicking a line chip changes the selected feature to that line's segment", async ({
     page,
   }) => {
-    await page.goto("/?city=delhi&selected=station:del-kashmere-gate");
+    await openStation(page, "delhi", "del-kashmere-gate");
 
-    const stationDetail = page.getByTestId("station-detail");
-    await expect(stationDetail).toBeVisible();
+    const detail = stationDetail(page);
+    await expect(detail).toBeVisible();
 
     // Get all line chips
-    const chips = page.locator('[data-testid^="interchange-line-chip-"]');
+    const chips = interchangeLineChips(page);
     const count = await chips.count();
     if (count === 0) {
       test.skip();
@@ -75,8 +86,8 @@ test.describe("M12 Interchange Highlighting", () => {
     await chips.first().click();
 
     // After clicking, the panel should now show a segment detail (not station)
-    const segmentDetail = page.getByTestId("segment-detail");
-    await expect(segmentDetail).toBeVisible({ timeout: 3000 });
+    const segDetail = segmentDetail(page);
+    await expect(segDetail).toBeVisible({ timeout: 3000 });
   });
 
   test("non-interchange station does not show interchange section", async ({
@@ -84,38 +95,38 @@ test.describe("M12 Interchange Highlighting", () => {
   }) => {
     // Navigate to Delhi then select a station that is on only one line
     // Use URL for a known single-line station (green line terminal, for example)
-    await page.goto("/?city=delhi");
+    await gotoHome(page, { city: "delhi" });
 
     // Wait for the map to load, then check that with no selection there's no interchange section
-    const interchangeSection = page.getByTestId("interchange-lines-section");
-    await expect(interchangeSection).not.toBeVisible();
+    const section = interchangeSection(page);
+    await expect(section).not.toBeVisible();
   });
 
   test("interchange station panel: no walking time or duration claims", async ({
     page,
   }) => {
-    await page.goto("/?city=delhi&selected=station:del-kashmere-gate");
+    await openStation(page, "delhi", "del-kashmere-gate");
 
-    const stationDetail = page.getByTestId("station-detail");
-    await expect(stationDetail).toBeVisible();
+    const detail = stationDetail(page);
+    await expect(detail).toBeVisible();
 
-    const panelText = await stationDetail.textContent();
+    const panelText = await detail.textContent();
     expect(panelText).not.toMatch(/\d+\s*(min|minute|minutes|walk)/i);
   });
 
   test("map shows interchange marker layer (interchange-points) in DOM", async ({
     page,
   }) => {
-    await page.goto("/?city=delhi");
+    await gotoHome(page, { city: "delhi" });
 
     // Wait for map canvas
-    const mapContainer = page.getByTestId("map-container");
-    await expect(mapContainer).toBeVisible();
+    const map = mapContainer(page);
+    await expect(map).toBeVisible();
 
     // The map canvas renders via WebGL/canvas, not DOM elements per station.
     // We verify the layer was wired correctly by checking the page has no JS errors
     // and the map-container is present and non-empty.
-    const canvas = mapContainer.locator("canvas");
+    const canvas = map.locator("canvas");
     await expect(canvas).toBeVisible({ timeout: 5000 });
   });
 });
