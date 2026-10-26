@@ -41,7 +41,7 @@ describe("Metro Data Loader & Dataset Invariants", () => {
   it("derives dynamic dataset metadata summary with last verified date and sources", () => {
     const summary = getDatasetMetadataSummary();
     expect(summary).toBeDefined();
-    expect(summary.badgeLabel).toMatch(/^Data: [A-Z][a-z]{2} \d{4} \(.+\)$/);
+    expect(summary.badgeLabel).toMatch(/^Data retrieved: [A-Z][a-z]{2} \d{4}$/);
     expect(summary.badgeLabel).not.toContain("MoHUA");
   });
 

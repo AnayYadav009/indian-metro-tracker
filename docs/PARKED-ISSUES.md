@@ -345,6 +345,7 @@ Explicitly skipped for now: live train tracking and real-time arrivals (no free 
    - The search input inside `components/filters/filter-panel.tsx` promises station search via placeholder `"Search lines, phases, stations..."`.
    - `lib/filter-utils.ts:138` filters only line names, cities, phases, and aliases. Stations are never searched or returned.
    - In M23.1, an interim fix must adjust the placeholder to `"Search lines, phases..."` until M23.5 builds the client-side station search index against `data/stations.geojson` and overrides aliases.
+   - *Resolved (2026-10-26, M23.1)*: Placeholder and aria-label in `components/filters/filter-panel.tsx` updated to `"Search lines, phases..."`.
 
 2. **Header, Mode, and Chip Touch Targets Under 44 px**:
    - Playwright Part 1a DOM measurement revealed that **64 out of 65** visible interactive elements on Pixel 7 mobile (and **62 of 66** on desktop) fail the standard WCAG / Android touch-target minimum of 44 × 44 px.
@@ -366,6 +367,7 @@ Explicitly skipped for now: live train tracking and real-time arrivals (no free 
 5. **Data Badge Placement and Copy**:
    - The dataset last-updated badge (`data-last-updated`) is rendered at `app/page.tsx:192` within the bottom-right container, not in the top header as previously logged.
    - The badge text `"Data: Oct 2026 (MANUAL, OSM)"` suggests dataset-wide verification. In M23, it must be simplified to `"Data updated: Oct 2026"` with an accessible click disclosure listing specific sources.
+   - *Resolved (2026-10-26, M23.1)*: Dataset metadata summary in `lib/data.ts` simplified to use latest `retrieved_at` (`"Data retrieved: Oct 2026"` or `"Data date not recorded"`) and removed ambiguous agency source tags.
 
 ---
 
@@ -422,4 +424,7 @@ Explicitly skipped for now: live train tracking and real-time arrivals (no free 
 
 6. **Allowlist Line Number Fragility**:
    - `e2e/layout-drift-allowlist.json` currently stores line numbers for entries, which break whenever lines are added or removed above them in `e2e/m13-1-ux.spec.ts`. It should be keyed by file and testid only.
+   - *Resolved (2026-10-26, M23.1)*: `e2e/layout-drift-allowlist.json` keyed by `{ file, testid, reason }` without line numbers; verified by `__tests__/e2e-layout-drift-guard.test.ts`.
 
+
+- *History note (2026-10-26, M23.1)*: The M23.1 commits were re-created from 17d1c7f after a type error, and that typecheck, validate:data and audit:data from the first pass were run on the pre-rewrite tree.

@@ -217,7 +217,7 @@ export default async function CityPage({ params }: CityPageProps) {
               </div>
               <div className="text-[11px] text-slate-400">
                 {hasAtLeast80PercentOpened
-                  ? "≥80% stations verified"
+                  ? "≥80% of stations have opening dates"
                   : openedStationsCount > 0
                   ? "<80% stations dated"
                   : "no dates recorded"}

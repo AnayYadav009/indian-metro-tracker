@@ -1,61 +1,21 @@
 [
   {
     "file": "e2e/m13-1-ux.spec.ts",
-    "line": 24,
     "testid": "metadata-panel",
     "reason": "In-browser evaluate function querying bounding rect to verify station clear of panel"
   },
   {
     "file": "e2e/m13-1-ux.spec.ts",
-    "line": 25,
     "testid": "map-container",
     "reason": "In-browser evaluate function querying bounding rect of map container"
   },
   {
     "file": "e2e/m13-1-ux.spec.ts",
-    "line": 40,
-    "testid": "metadata-panel",
-    "reason": "In-browser evaluate function querying bounding rect to verify station clear of panel"
-  },
-  {
-    "file": "e2e/m13-1-ux.spec.ts",
-    "line": 41,
-    "testid": "map-container",
-    "reason": "In-browser evaluate function querying bounding rect of map container"
-  },
-  {
-    "file": "e2e/m13-1-ux.spec.ts",
-    "line": 77,
-    "testid": "metadata-panel",
-    "reason": "In-browser evaluate function querying bounding rect to verify segment clear of panel"
-  },
-  {
-    "file": "e2e/m13-1-ux.spec.ts",
-    "line": 78,
-    "testid": "map-container",
-    "reason": "In-browser evaluate function querying bounding rect of map container"
-  },
-  {
-    "file": "e2e/m13-1-ux.spec.ts",
-    "line": 94,
-    "testid": "metadata-panel",
-    "reason": "In-browser evaluate function querying bounding rect to verify segment clear of panel"
-  },
-  {
-    "file": "e2e/m13-1-ux.spec.ts",
-    "line": 95,
-    "testid": "map-container",
-    "reason": "In-browser evaluate function querying bounding rect of map container"
-  },
-  {
-    "file": "e2e/m13-1-ux.spec.ts",
-    "line": 146,
     "testid": "city-select-all",
     "reason": "Filtering out the 'all' option when collecting dynamic city IDs from chip elements"
   },
   {
     "file": "e2e/m13-1-ux.spec.ts",
-    "line": 146,
     "testid": "getAttribute(data-testid)",
     "reason": "Extracting data-testid attribute string from chip buttons to collect dynamic city IDs"
   }

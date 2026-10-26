@@ -229,17 +229,23 @@ export function getDatasetMetadataSummary(): {
   sourcesFormatted: string;
   badgeLabel: string;
 } {
-  const { segments, stations } = getMetroData();
+  const { lines, segments, stations } = getMetroData();
 
   let latestDateStr = "";
-  const sourceTokens = new Set<string>();
 
-  [...segments.features, ...stations.features].forEach(({ properties: props }) => {
-    if (props.last_verified && props.last_verified > latestDateStr) latestDateStr = props.last_verified;
-    props.source?.split(/[+,]/).map((part) => part.trim().toLowerCase()).filter(Boolean).forEach((part) => sourceTokens.add(part));
-  });
+  const allRecords: Array<{ retrieved_at?: string | null; last_verified?: string | null }> = [
+    ...lines,
+    ...segments.features.map((f) => f.properties),
+    ...stations.features.map((f) => f.properties),
+  ];
 
-  let dateFormatted = "Unknown";
+  for (const record of allRecords) {
+    if (record.retrieved_at && record.retrieved_at > latestDateStr) {
+      latestDateStr = record.retrieved_at;
+    }
+  }
+
+  let dateFormatted = "";
   if (latestDateStr) {
     try {
       const [year, month] = latestDateStr.split("-");
@@ -258,29 +264,13 @@ export function getDatasetMetadataSummary(): {
     }
   }
 
-  const formattedSources = Array.from(sourceTokens).map((tok) => {
-    switch (tok) {
-      case "osm":
-        return "OSM";
-      case "dmrc":
-        return "DMRC";
-      case "bmrcl":
-        return "BMRCL";
-      case "mmrda":
-        return "MMRDA";
-      case "mock":
-        return "Mock";
-      default:
-        return tok.toUpperCase();
-    }
-  });
-
-  const sourcesStr = formattedSources.length > 0 ? formattedSources.join(", ") : "OSM";
-  const badgeLabel = `Data: ${dateFormatted} (${sourcesStr})`;
+  const badgeLabel = dateFormatted
+    ? `Data retrieved: ${dateFormatted}`
+    : "Data date not recorded";
 
   return {
     lastVerifiedFormatted: dateFormatted,
-    sourcesFormatted: sourcesStr,
+    sourcesFormatted: "",
     badgeLabel,
   };
 }
