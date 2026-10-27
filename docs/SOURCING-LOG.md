@@ -186,3 +186,65 @@ Overall match: **All bands match identically**.
   2. **12–21 km band**: Monday to Saturday fare is **Rs. 43/-**, contrasted with Sunday & Holidays fare of **Rs. 32/-**.
   3. **More than 32 km band**: Monday to Saturday fare is **Rs 64/-**, contrasted with Sunday & Holidays fare of **Rs 54/-**.
 
+---
+
+## 5. Hyderabad L&T Metro Rail Fares (`hyd-fare-ltmrhl`, Milestone M21d)
+
+- **Record ID**: `hyd-fare-ltmrhl`
+- **City ID**: `hyderabad`
+- **Operator**: `LTMRHL` (L&T Metro Rail Hyderabad Limited)
+- **Lines Covered**: `hyd-red` (Red Line / Corridor I), `hyd-blue` (Blue Line / Corridor III), `hyd-green` (Green Line / Corridor II)
+- **Requested URL**: `https://ltmetro.com/wp-content/uploads/2025/05/Hyderabad-Metro-Rail-Revised-Fare-Chart-Final.pdf`
+- **Final URL**: `https://ltmetro.com/wp-content/uploads/2025/05/Hyderabad-Metro-Rail-Revised-Fare-Chart-Final.pdf`
+- **HTTP Status**: `200 OK`
+- **Content-Type**: `application/pdf`
+- **Server Date**: `Tue, 27 Oct 2026 06:24:01 GMT` (Server header `Date: Tue, 27 Oct 2026 06:24:01 GMT`)
+- **Last-Modified**: `Fri, 23 May 2025 06:42:25 GMT`
+- **Byte Length**: `181,686` bytes
+- **SHA-256**: `be81481098626bedf7eabb3b3470bb446bef330e59341fa712fa849c4014e0ad`
+- **TLS Verification Result**: Host `ltmetro.com` returned TLS error code `UNABLE_TO_VERIFY_LEAF_SIGNATURE` (*"unable to verify the first certificate; if the root CA is installed locally, try running Node.js with --use-system-ca"*). Per Step 1c, downloaded twice with TLS verification bypass for capture only. Both passes produced identical byte length (181,686 bytes) and cryptographic hash (`be81481098626bedf7eabb3b3470bb446bef330e59341fa712fa849c4014e0ad`).
+- **Circular Document Citation**: Press Release issued by L&TMRHL - Corporate Communication Department - `L&TMRHL/CCD/PR/189/23-05-2025` dated `23rd MAY 2025`.
+- **Effective From**: `2025-05-24` (*"This will come to effect from 24th May 2025 and will be applicable, across all fare media (Paper QR/Token, Digital Tickets, Smart Cards)."*)
+- **Saved Evidence File**: `C:\Anay\evidence\fares\hyderabad\Hyderabad-Metro-Rail-Revised-Fare-Chart-Final.pdf` (outside repo)
+
+### 5.1 Verbatim Extracted Fare Table (pdfplumber)
+
+```text
+Fare Zone | Revised FFC Recommended Fare Zone (in Kms) | Fare After Discount (INR)*
+1         | Up to 2                                   | 11.00
+2         | More than 2 up to 4                       | 17.00
+3         | More than 4 up to 6                       | 28.00
+4         | More than 6 up to 9                       | 37.00
+5         | More than 9 up to 12                      | 47.00
+6         | More than 12 up to 15                     | 51.00
+7         | More than 15 up to 18                     | 56.00
+8         | More than 18 up to 21                     | 61.00
+9         | More than 21 up to 24                     | 65.00
+10        | More than 24                              | 69.00
+```
+
+### 5.2 Key Statements from Official Circular
+
+- **Rounding**: `"* Decimals rounded off to the nearest rupee."`
+- **10% Discount Explanation**: `"As a token of appreciation for our valued passengers, these fares reflect a 10% discount applied to the percentage increase determined by the Fare Fixation Committee (FFC) fare zone wise."`
+- **Effective Date & Media**: `"This will come to effect from 24th May 2025 and will be applicable, across all fare media (Paper QR/Token, Digital Tickets, Smart Cards). We encourage all our valued passengers to travel smartly by using smart cards and digital platforms."`
+- **Discount End Date**: None stated in the circular.
+- **Superseded Rates**: Supersedes the earlier 17 May 2025 chart (₹12 to ₹75).
+
+### 5.3 Comparison Table with `data/fares.json` (`hyd-fare-ltmrhl`)
+
+| Band Index | Document Zone / Range (in Kms) | Min Km (Page vs Data) | Max Km (Page vs Data) | Fare INR (Page vs Data) | Result |
+| :---: | :--- | :---: | :---: | :---: | :---: |
+| 0 | `Up to 2` | `0` vs `0` | `2` vs `2` | `11.00` vs `11` | MATCH |
+| 1 | `More than 2 up to 4` | `2` vs `2` | `4` vs `4` | `17.00` vs `17` | MATCH |
+| 2 | `More than 4 up to 6` | `4` vs `4` | `6` vs `6` | `28.00` vs `28` | MATCH |
+| 3 | `More than 6 up to 9` | `6` vs `6` | `9` vs `9` | `37.00` vs `37` | MATCH |
+| 4 | `More than 9 up to 12` | `9` vs `9` | `12` vs `12` | `47.00` vs `47` | MATCH |
+| 5 | `More than 12 up to 15` | `12` vs `12` | `15` vs `15` | `51.00` vs `51` | MATCH |
+| 6 | `More than 15 up to 18` | `15` vs `15` | `18` vs `18` | `56.00` vs `56` | MATCH |
+| 7 | `More than 18 up to 21` | `18` vs `18` | `21` vs `21` | `61.00` vs `61` | MATCH |
+| 8 | `More than 21 up to 24` | `21` vs `21` | `24` vs `24` | `65.00` vs `65` | MATCH |
+| 9 | `More than 24` | `24` vs `24` | `null` vs `null` | `69.00` vs `69` | MATCH |
+
+Overall match: **All 10 distance bands match identically**.
+

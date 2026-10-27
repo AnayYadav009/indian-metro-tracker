@@ -368,7 +368,7 @@ Ideas that fit the hard constraints (static, free, no new dependency unless appr
 - M18.9 Planning and doc prep (docs only)
 - M19 Provenance layer
 - M20 Report-an-error button
-- M21 Fare and timing data model (Tier 1)
+- M21 Fare and timing data model (Tier 1): M21a schema/validator done; M21b/c Delhi DMRC verified (del-fare-dmrc); M21d Hyderabad L&TMRHL verified (hyd-fare-ltmrhl).
 - M22 UI design brief (owner sign-off)
 - M23 UI shell implementation
 - M24 Route finder v2
