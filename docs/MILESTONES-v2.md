@@ -23,7 +23,7 @@ Read before starting any milestone: `docs/BLUEPRINT.md`, `docs/DATA-STANDARDS.md
 | # | Milestone | Scope change | Status |
 |---|---|---|---|
 | M8 | Data audit and repair | Build `audit:data`, audit all existing cities, fix inconsistencies at the source | In progress: 0 errors; un-baselined warnings gate remains |
-| M8.1 | Audit blind-spot closure | Find out why the audit missed the walkthrough defects, add the missing rules in report-only mode | In progress: 4 of 11 rules implemented, 0 unit-tested, 7 not implemented |
+| M8.1 | Audit blind-spot closure | Explain the walkthrough misses and add the missing rules | In progress: all 11 rules have fixtures; root-cause review and live-data closure remain |
 | M9 | Data foundation v2 | Additive schema changes, geo helpers, size budget, export e2e in CI | In progress: size budget baseline gate remains |
 | M10 | Tier 1 completion | Onboard Chennai, Hyderabad, Kolkata (and any Tier 1 city M8 finds still mock or incomplete), one city per PR | In progress |
 | M10.1 | Geometry cleanup | Twin-track merge, hairpin and chord fixes in the pipeline, km totals corrected | In progress: pipeline fixes exist, rules not implemented, Chennai Corridor 3 deleted, no VISUAL_QA |
@@ -90,7 +90,7 @@ Tier 1 = Delhi, Bengaluru, Mumbai, Chennai, Kolkata, Hyderabad.
 2. **Root-cause table (read-only).** For every finding F-01 to F-22 name the existing audit rule that should have caught it and why it did not. Possible reasons: rule missing, threshold too loose, rule only checks vertices or only operational records, reference file missing or `confidence: unverified` (downgraded to warn), reference counts wrong or incomplete (for example a branched line with only two terminals listed), warning baselined, rule exempted. Also list every entry in `data/audit-baseline.json` and the exemption lists that masks a real defect. Output `reports/data-audit/blind-spots-<date>.md`.
 3. **STOP.** Owner reviews the root-cause table.
 4. **Add or strengthen rules**, each with a failing fixture shaped like the real defect and a passing fixture (table below).
-5. **Report-only mode.** New rules ship with a `pendingRules` list in `data/audit-baseline.json`. Pending rules appear in the report with their severity but do not fail CI. Each rule is switched to enforcing in the milestone named in the table, once its findings are fixed.
+5. **Fail-closed pending rules.** Pending rules remain listed in `data/audit-baseline.json`, appear with their severity, and keep `audit:data` failing while findings remain. Remove a rule from `pending_rules` only after its target milestone repairs pass; do not use a report-only CI override.
 6. Re-run the audit on current data and report new findings per city per rule. Do not baseline them. Do not fix data.
 7. Update `docs/DATA_AUDIT.md` (text in `docs/DOC-PATCHES.md`).
 
@@ -112,7 +112,7 @@ Tier 1 = Delhi, Bengaluru, Mumbai, Chennai, Kolkata, Hyderabad.
 - Root-cause table delivered and approved.
 - Every rule has a failing and a passing fixture; thresholds are constants in one place and tunable per city in overrides.
 - The audit run lists at least one finding for each of F-01 to F-22 that is a data defect, or the report explains why not.
-- CI stays green (pending rules are report-only).
+- Audit findings remain visible and blocking until repaired or individually source-reviewed; do not blanket-accept pending findings.
 - `lint`, `typecheck`, `test`, `validate:data` pass.
 
 **Out of scope:** data repair, UI changes, new cities.
@@ -368,8 +368,8 @@ Ideas that fit the hard constraints (static, free, no new dependency unless appr
 - M18.9 Planning and doc prep (docs only)
 - M19 Provenance layer
 - M20 Report-an-error button
-- M21 Fare and timing data model (Tier 1): M21a schema/validator done; M21b/c Delhi DMRC verified (del-fare-dmrc); M21d Hyderabad L&TMRHL verified (hyd-fare-ltmrhl); M21e-1 station-count schema, validator & calculator done.
-- M22 UI design brief (owner sign-off)
+- M21 Fare and timing data model (Tier 1): schema, validator, calculator, Delhi (`del-fare-dmrc`), Hyderabad (`hyd-fare-ltmrhl`), and M21e-1 station-count basis implemented. Owner approved on 2026-10-28 retaining those bases and leaving matrix-only tariffs unpriced. Tier 1 coverage remains partial (verified fares in 2/6 cities; 0 timing records); see `docs/PLAN-PUBLIC-USABILITY.md`.
+- M22 UI design brief: owner-approved recommendations Q1–Q10 recorded 2026-10-28; see `docs/DESIGN-BRIEF-M22.md`.
 - M23 UI shell implementation
 - M24 Route finder v2
 - M25 Nearest station and interchange highlighting

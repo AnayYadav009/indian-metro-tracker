@@ -15,7 +15,7 @@ import {
   getServiceHours,
   hasSourcedFares,
 } from "../lib/fares";
-import type { City, Line, FareRule, ServiceHours, StationFeature } from "../types/metro";
+import type { City, Line, FareRule, FareRuleKm, ServiceHours, StationFeature } from "../types/metro";
 import { isOfficialSourceHost } from "../lib/official-source-hosts";
 import { buildTransitGraph, findRoute } from "../lib/routing/graph";
 import realCities from "../data/cities.json";
@@ -97,7 +97,7 @@ describe("M21a Fare and Timing Data Model & Validator", () => {
     },
   };
 
-  const validVerifiedFareRule: FareRule = {
+  const validVerifiedFareRule: FareRuleKm = {
     id: "mock-fare-delhi-standard",
     city_id: "mock-city-delhi",
     operator: "Mock DMRC",
@@ -123,7 +123,7 @@ describe("M21a Fare and Timing Data Model & Validator", () => {
     },
   };
 
-  function createMockFareRule(overrides: Partial<FareRule> = {}): FareRule {
+  function createMockFareRule(overrides: Partial<FareRuleKm> = {}): FareRuleKm {
     return {
       ...validVerifiedFareRule,
       ...overrides,
