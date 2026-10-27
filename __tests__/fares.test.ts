@@ -17,6 +17,7 @@ import {
 } from "../lib/fares";
 import type { City, Line, FareRule, ServiceHours, StationFeature } from "../types/metro";
 import { isOfficialSourceHost } from "../lib/official-source-hosts";
+import { buildTransitGraph, findRoute } from "../lib/routing/graph";
 import realCities from "../data/cities.json";
 import realLines from "../data/lines.json";
 import realFares from "../data/fares.json";
@@ -1033,6 +1034,231 @@ describe("M21a Fare and Timing Data Model & Validator", () => {
         ];
         const res = estimateRouteFare(mixedRoute, typedFares);
         expect(res).toBeNull();
+      });
+    });
+
+    describe("M21e-1 Station-Count Fare Basis & Calculator Tests", () => {
+      const syntheticStationRule: FareRule = {
+        id: "mock-fare-bmrcl-synthetic",
+        city_id: "bengaluru",
+        operator: "BMRCL",
+        applies_to_line_ids: ["blr-purple", "blr-green"],
+        ticket_type: "single_journey",
+        currency: "INR",
+        distance_basis: "station_count",
+        day_scope: "all",
+        same_station_fare_inr: 10,
+        bands: [
+          { min_stations: 1, max_stations: 2, fare_inr: 10 },
+          { min_stations: 3, max_stations: 4, fare_inr: 20 },
+          { min_stations: 5, max_stations: 6, fare_inr: 30 },
+          { min_stations: 7, max_stations: 8, fare_inr: 40 },
+          { min_stations: 9, max_stations: 10, fare_inr: 50 },
+          { min_stations: 11, max_stations: 15, fare_inr: 60 },
+          { min_stations: 16, max_stations: 20, fare_inr: 70 },
+          { min_stations: 21, max_stations: 25, fare_inr: 80 },
+          { min_stations: 26, max_stations: 30, fare_inr: 90 },
+          { min_stations: 31, max_stations: null, fare_inr: 90 },
+        ],
+        provenance: {
+          status: "unverified",
+        },
+      };
+
+      it("55. Schema: accepts valid 10-slab station-count rule with same-station fare and flat tail", () => {
+        const res = FareRuleSchema.safeParse(syntheticStationRule);
+        expect(res.success).toBe(true);
+      });
+
+      it("56. Schema: rejects invalid station bands (min!=1, gaps, overlaps, intermediate null, missing tail null, decreasing fares)", () => {
+        // First min != 1
+        expect(
+          FareRuleSchema.safeParse({
+            ...syntheticStationRule,
+            bands: [
+              { min_stations: 2, max_stations: 4, fare_inr: 10 },
+              { min_stations: 5, max_stations: null, fare_inr: 20 },
+            ],
+          }).success
+        ).toBe(false);
+
+        // Gap between bands (1-2 followed by 4-5)
+        expect(
+          FareRuleSchema.safeParse({
+            ...syntheticStationRule,
+            bands: [
+              { min_stations: 1, max_stations: 2, fare_inr: 10 },
+              { min_stations: 4, max_stations: null, fare_inr: 20 },
+            ],
+          }).success
+        ).toBe(false);
+
+        // Overlap (1-3 followed by 3-5)
+        expect(
+          FareRuleSchema.safeParse({
+            ...syntheticStationRule,
+            bands: [
+              { min_stations: 1, max_stations: 3, fare_inr: 10 },
+              { min_stations: 3, max_stations: null, fare_inr: 20 },
+            ],
+          }).success
+        ).toBe(false);
+
+        // Non-last band has max_stations null
+        expect(
+          FareRuleSchema.safeParse({
+            ...syntheticStationRule,
+            bands: [
+              { min_stations: 1, max_stations: null, fare_inr: 10 },
+              { min_stations: 2, max_stations: null, fare_inr: 20 },
+            ],
+          }).success
+        ).toBe(false);
+
+        // Last band missing null max_stations
+        expect(
+          FareRuleSchema.safeParse({
+            ...syntheticStationRule,
+            bands: [
+              { min_stations: 1, max_stations: 2, fare_inr: 10 },
+              { min_stations: 3, max_stations: 5, fare_inr: 20 },
+            ],
+          }).success
+        ).toBe(false);
+
+        // Fares decreasing
+        expect(
+          FareRuleSchema.safeParse({
+            ...syntheticStationRule,
+            bands: [
+              { min_stations: 1, max_stations: 2, fare_inr: 20 },
+              { min_stations: 3, max_stations: null, fare_inr: 10 },
+            ],
+          }).success
+        ).toBe(false);
+      });
+
+      it("57. Schema: rejects mixed fields between km and station rules", () => {
+        // Km bands on station_count rule
+        const mixedOnStation = {
+          ...syntheticStationRule,
+          distance_basis: "station_count",
+          bands: [{ min_km: 0, max_km: 2, fare_inr: 10 }],
+        };
+        expect(FareRuleSchema.safeParse(mixedOnStation).success).toBe(false);
+
+        // Station bands on computed_route_km rule
+        const mixedOnKm = {
+          ...syntheticStationRule,
+          distance_basis: "computed_route_km",
+          bands: [{ min_stations: 1, max_stations: 2, fare_inr: 10 }],
+        };
+        expect(FareRuleSchema.safeParse(mixedOnKm).success).toBe(false);
+      });
+
+      it("58. Calculator: evaluates both ends of every slab on synthetic 10-slab station rule", () => {
+        // Slab 1: 1-2 -> ₹10
+        expect(estimateFare(syntheticStationRule, { stop_count: 1 }).fare_inr).toBe(10);
+        expect(estimateFare(syntheticStationRule, { stop_count: 2 }).fare_inr).toBe(10);
+
+        // Slab 2: 3-4 -> ₹20
+        expect(estimateFare(syntheticStationRule, { stop_count: 3 }).fare_inr).toBe(20);
+        expect(estimateFare(syntheticStationRule, { stop_count: 4 }).fare_inr).toBe(20);
+
+        // Slab 3: 5-6 -> ₹30
+        expect(estimateFare(syntheticStationRule, { stop_count: 5 }).fare_inr).toBe(30);
+        expect(estimateFare(syntheticStationRule, { stop_count: 6 }).fare_inr).toBe(30);
+
+        // Slab 4: 7-8 -> ₹40
+        expect(estimateFare(syntheticStationRule, { stop_count: 7 }).fare_inr).toBe(40);
+        expect(estimateFare(syntheticStationRule, { stop_count: 8 }).fare_inr).toBe(40);
+
+        // Slab 5: 9-10 -> ₹50
+        expect(estimateFare(syntheticStationRule, { stop_count: 9 }).fare_inr).toBe(50);
+        expect(estimateFare(syntheticStationRule, { stop_count: 10 }).fare_inr).toBe(50);
+
+        // Slab 6: 11-15 -> ₹60
+        expect(estimateFare(syntheticStationRule, { stop_count: 11 }).fare_inr).toBe(60);
+        expect(estimateFare(syntheticStationRule, { stop_count: 15 }).fare_inr).toBe(60);
+
+        // Slab 7: 16-20 -> ₹70
+        expect(estimateFare(syntheticStationRule, { stop_count: 16 }).fare_inr).toBe(70);
+        expect(estimateFare(syntheticStationRule, { stop_count: 20 }).fare_inr).toBe(70);
+
+        // Slab 8: 21-25 -> ₹80
+        expect(estimateFare(syntheticStationRule, { stop_count: 21 }).fare_inr).toBe(80);
+        expect(estimateFare(syntheticStationRule, { stop_count: 25 }).fare_inr).toBe(80);
+
+        // Slab 9: 26-30 -> ₹90
+        expect(estimateFare(syntheticStationRule, { stop_count: 26 }).fare_inr).toBe(90);
+        expect(estimateFare(syntheticStationRule, { stop_count: 30 }).fare_inr).toBe(90);
+
+        // Slab 10: 31+ -> ₹90
+        expect(estimateFare(syntheticStationRule, { stop_count: 31 }).fare_inr).toBe(90);
+        expect(estimateFare(syntheticStationRule, { stop_count: 50 }).fare_inr).toBe(90);
+      });
+
+      it("59. Calculator: evaluates same-station entry and exit (0 stops) with and without same_station_fare_inr", () => {
+        // With explicit same_station_fare_inr: 10
+        const withSame = estimateFare(syntheticStationRule, { stop_count: 0 });
+        expect(withSame.fare_inr).toBe(10);
+        expect(withSame.station_count).toBe(0);
+
+        // Without same_station_fare_inr: falls back to bands[0].fare_inr
+        const ruleWithoutSame: FareRule = {
+          ...syntheticStationRule,
+          same_station_fare_inr: undefined,
+        };
+        const withoutSame = estimateFare(ruleWithoutSame, { stop_count: 0 });
+        expect(withoutSame.fare_inr).toBe(10);
+        expect(withoutSame.station_count).toBe(0);
+      });
+
+      it("60. Calculator: throws clear error if required measure is missing or invalid", () => {
+        // Calling station_count rule with missing stop_count
+        expect(() =>
+          estimateFare(syntheticStationRule, { distance_km: 5.0 })
+        ).toThrow(/requires an integer stop_count/);
+
+        // Calling station_count rule with negative or float stops
+        expect(() =>
+          estimateFare(syntheticStationRule, { stop_count: -1 })
+        ).toThrow(/requires an integer stop_count/);
+        expect(() =>
+          estimateFare(syntheticStationRule, { stop_count: 2.5 })
+        ).toThrow(/requires an integer stop_count/);
+      });
+
+      it("61. Real-network routing test: Bengaluru Purple to Green journey through Majestic", () => {
+        const graph = buildTransitGraph({ cityId: "bengaluru" });
+        expect(graph).toBeDefined();
+
+        const originId = "blr-indiranagar";
+        const destId = "blr-south-end-circle";
+
+        const route = findRoute(graph, originId, destId);
+        expect(route).not.toBeNull();
+
+        // Trace stations visited in order
+        const visitedStationIds: string[] = [];
+        route!.legs.forEach((leg, idx) => {
+          if (idx === 0) visitedStationIds.push(leg.fromStation.id);
+          leg.intermediateStations.forEach((st) => visitedStationIds.push(st.id));
+          visitedStationIds.push(leg.toStation.id);
+        });
+
+        // The sequence has origin, intermediate stations, interchange station (once per leg), and destination
+        const distinctStationIds = Array.from(new Set(visitedStationIds));
+
+        // Output actual sequence and stop count for report
+        console.log("Bengaluru route station IDs:", visitedStationIds);
+        console.log("Distinct station count:", distinctStationIds.length);
+        console.log("Route totalStops:", route!.totalStops);
+
+        // Assert totalStops equals distinct stations on path minus 1 (origin excluded)
+        expect(route!.totalStops).toBe(distinctStationIds.length - 1);
+        expect(route!.totalTransfers).toBe(1);
+        expect(route!.transfers[0].station.id).toBe("blr-nadaprabhu-kempegowda-majestic");
       });
     });
   });

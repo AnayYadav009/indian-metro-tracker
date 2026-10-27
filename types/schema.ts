@@ -378,36 +378,63 @@ export type StationFeatureCollection = z.infer<
 >;
 
 /* ==========================================================================
-   Fare and Timing Schemas (Milestone M21a)
+   Fare and Timing Schemas (Milestone M21a, M21e-1)
    ========================================================================== */
 
-export const FareBandSchema = z.object({
+export const FareKmBandSchema = z.object({
   min_km: z.number().nonnegative(),
   max_km: z.number().positive().nullable(),
   fare_inr: z.number().int().nonnegative(),
 });
-export type FareBand = z.infer<typeof FareBandSchema>;
+export type FareKmBand = z.infer<typeof FareKmBandSchema>;
+
+// Alias for backward compatibility with M21a
+export const FareBandSchema = FareKmBandSchema;
+export type FareBand = FareKmBand;
+
+export const FareStationBandSchema = z.object({
+  min_stations: z.number().int().positive(),
+  max_stations: z.number().int().positive().nullable(),
+  fare_inr: z.number().int().nonnegative(),
+});
+export type FareStationBand = z.infer<typeof FareStationBandSchema>;
 
 export const FareDayScopeSchema = z.enum(["mon_sat", "sun_holiday", "all"]);
 export type FareDayScope = z.infer<typeof FareDayScopeSchema>;
 
+const BaseFareRuleSchema = z.object({
+  id: z.string().min(1),
+  city_id: z.string().min(1),
+  operator: z.string().min(1),
+  applies_to_line_ids: z.array(z.string().min(1)).min(1),
+  ticket_type: z.literal("single_journey"),
+  currency: z.literal("INR"),
+  day_scope: FareDayScopeSchema,
+  effective_from: z
+    .string()
+    .regex(/^\d{4}-\d{2}-\d{2}$/, "effective_from must be YYYY-MM-DD")
+    .optional(),
+  provenance: ProvenanceSchema,
+});
+
+export const FareRuleKmSchema = BaseFareRuleSchema.extend({
+  distance_basis: z.literal("computed_route_km"),
+  bands: z.array(FareKmBandSchema).min(1),
+});
+export type FareRuleKm = z.infer<typeof FareRuleKmSchema>;
+
+export const FareRuleStationCountSchema = BaseFareRuleSchema.extend({
+  distance_basis: z.literal("station_count"),
+  same_station_fare_inr: z.number().int().nonnegative().optional(),
+  bands: z.array(FareStationBandSchema).min(1),
+});
+export type FareRuleStationCount = z.infer<typeof FareRuleStationCountSchema>;
+
 export const FareRuleSchema = z
-  .object({
-    id: z.string().min(1),
-    city_id: z.string().min(1),
-    operator: z.string().min(1),
-    applies_to_line_ids: z.array(z.string().min(1)).min(1),
-    ticket_type: z.literal("single_journey"),
-    currency: z.literal("INR"),
-    distance_basis: z.literal("computed_route_km"),
-    day_scope: FareDayScopeSchema,
-    bands: z.array(FareBandSchema).min(1),
-    effective_from: z
-      .string()
-      .regex(/^\d{4}-\d{2}-\d{2}$/, "effective_from must be YYYY-MM-DD")
-      .optional(),
-    provenance: ProvenanceSchema,
-  })
+  .discriminatedUnion("distance_basis", [
+    FareRuleKmSchema,
+    FareRuleStationCountSchema,
+  ])
   .superRefine((rule, ctx) => {
     // Verified FareRule requires allowlisted official source_url host.
     // effective_from is optional if the official page states none; if absent, a non-empty note is required.
@@ -416,7 +443,8 @@ export const FareRuleSchema = z
         if (!rule.provenance.note || rule.provenance.note.trim() === "") {
           ctx.addIssue({
             code: z.ZodIssueCode.custom,
-            message: "verified FareRule without effective_from requires a non-empty note explaining that the official page states none",
+            message:
+              "verified FareRule without effective_from requires a non-empty note explaining that the official page states none",
             path: ["provenance", "note"],
           });
         }
@@ -455,67 +483,137 @@ export const FareRuleSchema = z
       }
     }
 
-    // Band rules:
-    // 1. first min_km is 0
-    if (rule.bands.length > 0 && rule.bands[0].min_km !== 0) {
-      ctx.addIssue({
-        code: z.ZodIssueCode.custom,
-        message: "first band min_km must be 0",
-        path: ["bands", 0, "min_km"],
-      });
-    }
-
-    for (let i = 0; i < rule.bands.length; i++) {
-      const band = rule.bands[i];
-      const isLast = i === rule.bands.length - 1;
-
-      // 2. only the last band has max_km null
-      if (band.max_km === null && !isLast) {
+    if (rule.distance_basis === "computed_route_km") {
+      // Km band validation
+      // 1. first min_km is 0
+      if (rule.bands.length > 0 && rule.bands[0].min_km !== 0) {
         ctx.addIssue({
           code: z.ZodIssueCode.custom,
-          message: "only the last band can have max_km null",
-          path: ["bands", i, "max_km"],
+          message: "first band min_km must be 0",
+          path: ["bands", 0, "min_km"],
         });
       }
 
-      // 3. max_km > min_km if not null
-      if (band.max_km !== null && band.max_km <= band.min_km) {
+      for (let i = 0; i < rule.bands.length; i++) {
+        const band = rule.bands[i];
+        const isLast = i === rule.bands.length - 1;
+
+        // 2. only the last band has max_km null
+        if (band.max_km === null && !isLast) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            message: "only the last band can have max_km null",
+            path: ["bands", i, "max_km"],
+          });
+        }
+
+        // 3. max_km > min_km if not null
+        if (band.max_km !== null && band.max_km <= band.min_km) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            message: `max_km (${band.max_km}) must be strictly greater than min_km (${band.min_km})`,
+            path: ["bands", i, "max_km"],
+          });
+        }
+
+        // 4. contiguous and non-overlapping: each min_km equals previous max_km
+        if (i > 0) {
+          const prevBand = rule.bands[i - 1];
+          if (prevBand.max_km !== null && band.min_km !== prevBand.max_km) {
+            ctx.addIssue({
+              code: z.ZodIssueCode.custom,
+              message: `band ${i} min_km (${band.min_km}) must equal previous band max_km (${prevBand.max_km})`,
+              path: ["bands", i, "min_km"],
+            });
+          }
+
+          // 5. fares are non-decreasing with distance
+          if (band.fare_inr < prevBand.fare_inr) {
+            ctx.addIssue({
+              code: z.ZodIssueCode.custom,
+              message: `fares must be non-decreasing with distance (band ${i} fare ${band.fare_inr} < previous ${prevBand.fare_inr})`,
+              path: ["bands", i, "fare_inr"],
+            });
+          }
+        }
+      }
+
+      const lastBand = rule.bands[rule.bands.length - 1];
+      if (lastBand && lastBand.max_km !== null) {
         ctx.addIssue({
           code: z.ZodIssueCode.custom,
-          message: `max_km (${band.max_km}) must be strictly greater than min_km (${band.min_km})`,
-          path: ["bands", i, "max_km"],
+          message:
+            "only the last band can have max_km null, and the last band max_km must be null",
+          path: ["bands", rule.bands.length - 1, "max_km"],
+        });
+      }
+    } else if (rule.distance_basis === "station_count") {
+      // Station count band validation
+      // 1. first min_stations is 1
+      if (rule.bands.length > 0 && rule.bands[0].min_stations !== 1) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: "first band min_stations must be 1",
+          path: ["bands", 0, "min_stations"],
         });
       }
 
-      // 4. contiguous and non-overlapping: each min_km equals previous max_km
-      if (i > 0) {
-        const prevBand = rule.bands[i - 1];
-        if (prevBand.max_km !== null && band.min_km !== prevBand.max_km) {
+      for (let i = 0; i < rule.bands.length; i++) {
+        const band = rule.bands[i];
+        const isLast = i === rule.bands.length - 1;
+
+        // 2. only the last band has max_stations null
+        if (band.max_stations === null && !isLast) {
           ctx.addIssue({
             code: z.ZodIssueCode.custom,
-            message: `band ${i} min_km (${band.min_km}) must equal previous band max_km (${prevBand.max_km})`,
-            path: ["bands", i, "min_km"],
+            message: "only the last band can have max_stations null",
+            path: ["bands", i, "max_stations"],
           });
         }
 
-        // 5. fares are non-decreasing with distance
-        if (band.fare_inr < prevBand.fare_inr) {
+        // 3. max_stations >= min_stations if not null
+        if (band.max_stations !== null && band.max_stations < band.min_stations) {
           ctx.addIssue({
             code: z.ZodIssueCode.custom,
-            message: `fares must be non-decreasing with distance (band ${i} fare ${band.fare_inr} < previous ${prevBand.fare_inr})`,
-            path: ["bands", i, "fare_inr"],
+            message: `max_stations (${band.max_stations}) must be greater than or equal to min_stations (${band.min_stations})`,
+            path: ["bands", i, "max_stations"],
           });
+        }
+
+        // 4. contiguous: each min_stations equals previous max_stations + 1
+        if (i > 0) {
+          const prevBand = rule.bands[i - 1];
+          if (
+            prevBand.max_stations !== null &&
+            band.min_stations !== prevBand.max_stations + 1
+          ) {
+            ctx.addIssue({
+              code: z.ZodIssueCode.custom,
+              message: `band ${i} min_stations (${band.min_stations}) must equal previous band max_stations + 1 (${prevBand.max_stations + 1})`,
+              path: ["bands", i, "min_stations"],
+            });
+          }
+
+          // 5. fares are non-decreasing
+          if (band.fare_inr < prevBand.fare_inr) {
+            ctx.addIssue({
+              code: z.ZodIssueCode.custom,
+              message: `fares must be non-decreasing with station count (band ${i} fare ${band.fare_inr} < previous ${prevBand.fare_inr})`,
+              path: ["bands", i, "fare_inr"],
+            });
+          }
         }
       }
-    }
 
-    const lastBand = rule.bands[rule.bands.length - 1];
-    if (lastBand && lastBand.max_km !== null) {
-      ctx.addIssue({
-        code: z.ZodIssueCode.custom,
-        message: "only the last band can have max_km null, and the last band max_km must be null",
-        path: ["bands", rule.bands.length - 1, "max_km"],
-      });
+      const lastBand = rule.bands[rule.bands.length - 1];
+      if (lastBand && lastBand.max_stations !== null) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message:
+            "only the last band can have max_stations null, and the last band max_stations must be null",
+          path: ["bands", rule.bands.length - 1, "max_stations"],
+        });
+      }
     }
   });
 export type FareRule = z.infer<typeof FareRuleSchema>;
