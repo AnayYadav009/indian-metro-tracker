@@ -55,5 +55,78 @@
       "last_verified": "2026-10-24",
       "note": "Base single-journey fare (Monday to Saturday column) read from DMRC fare table at https://delhimetrorail.com/fare. Published bands: '0-2', '2-5', '5-12', '12-21', '21-32', 'More than 32'. Band edge wording is ambiguous versus our [min,max) bands. Official page states no effective date. Sunday/holiday discounted fares, smart cards, and Airport Express (station-to-station matrix) excluded. Caveat: del-pink Phase 4 distance estimates are unreliable."
     }
+  },
+  {
+    "id": "hyd-fare-ltmrhl",
+    "city_id": "hyderabad",
+    "operator": "LTMRHL",
+    "applies_to_line_ids": [
+      "hyd-red",
+      "hyd-blue",
+      "hyd-green"
+    ],
+    "ticket_type": "single_journey",
+    "currency": "INR",
+    "distance_basis": "computed_route_km",
+    "day_scope": "all",
+    "bands": [
+      {
+        "min_km": 0,
+        "max_km": 2,
+        "fare_inr": 11
+      },
+      {
+        "min_km": 2,
+        "max_km": 4,
+        "fare_inr": 17
+      },
+      {
+        "min_km": 4,
+        "max_km": 6,
+        "fare_inr": 28
+      },
+      {
+        "min_km": 6,
+        "max_km": 9,
+        "fare_inr": 37
+      },
+      {
+        "min_km": 9,
+        "max_km": 12,
+        "fare_inr": 47
+      },
+      {
+        "min_km": 12,
+        "max_km": 15,
+        "fare_inr": 51
+      },
+      {
+        "min_km": 15,
+        "max_km": 18,
+        "fare_inr": 56
+      },
+      {
+        "min_km": 18,
+        "max_km": 21,
+        "fare_inr": 61
+      },
+      {
+        "min_km": 21,
+        "max_km": 24,
+        "fare_inr": 65
+      },
+      {
+        "min_km": 24,
+        "max_km": null,
+        "fare_inr": 69
+      }
+    ],
+    "effective_from": "2025-05-24",
+    "provenance": {
+      "status": "verified",
+      "source_url": "https://ltmetro.com/wp-content/uploads/2025/05/Hyderabad-Metro-Rail-Revised-Fare-Chart-Final.pdf",
+      "last_verified": "2026-10-27",
+      "note": "Standard single-journey fare table (Fare After Discount column) from official press release L&TMRHL/CCD/PR/189/23-05-2025 published by L&T Metro Rail (Hyderabad) Limited, effective 2025-05-24 across all fare media (Paper QR/Token, Digital Tickets, Smart Cards). Slabs reflect a 10% discount on the FFC percentage increase with rounding to nearest rupee; superseded 17 May 2025 chart is not used. Band boundary semantics in document are upper-inclusive ('Up to 2', 'More than 2 up to 4', etc.) whereas calculator uses half-open [min, max) intervals; computed_route_km approximates actual chainage distance."
+    }
   }
 ]

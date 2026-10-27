@@ -921,6 +921,120 @@ describe("M21a Fare and Timing Data Model & Validator", () => {
         expect(estimate).toBeNull();
       }
     });
+
+    describe("M21d Hyderabad (L&TMRHL) Fare Rule Tests", () => {
+      const typedFares = realFares as FareRule[];
+      const hydRule = typedFares.find((r) => r.id === "hyd-fare-ltmrhl");
+
+      it("49. hyd-fare-ltmrhl is present, verified, allowlisted, and covers operational Hyderabad lines", () => {
+        expect(hydRule).toBeDefined();
+        expect(hydRule!.city_id).toBe("hyderabad");
+        expect(hydRule!.operator).toBe("LTMRHL");
+        expect(hydRule!.provenance.status).toBe("verified");
+        expect(hydRule!.effective_from).toBe("2025-05-24");
+        expect(hydRule!.applies_to_line_ids).toEqual(["hyd-red", "hyd-blue", "hyd-green"]);
+        expect(hydRule!.bands).toHaveLength(10);
+      });
+
+      it("50. Evaluates Hyderabad fare bands at interior points", () => {
+        expect(hydRule).toBeDefined();
+        // Band 0: [0, 2) -> 1.0 km -> ₹11
+        expect(estimateFare(hydRule!, 1.0).fare_inr).toBe(11);
+        // Band 1: [2, 4) -> 3.0 km -> ₹17
+        expect(estimateFare(hydRule!, 3.0).fare_inr).toBe(17);
+        // Band 2: [4, 6) -> 5.0 km -> ₹28
+        expect(estimateFare(hydRule!, 5.0).fare_inr).toBe(28);
+        // Band 3: [6, 9) -> 7.5 km -> ₹37
+        expect(estimateFare(hydRule!, 7.5).fare_inr).toBe(37);
+        // Band 4: [9, 12) -> 10.5 km -> ₹47
+        expect(estimateFare(hydRule!, 10.5).fare_inr).toBe(47);
+        // Band 5: [12, 15) -> 13.5 km -> ₹51
+        expect(estimateFare(hydRule!, 13.5).fare_inr).toBe(51);
+        // Band 6: [15, 18) -> 16.5 km -> ₹56
+        expect(estimateFare(hydRule!, 16.5).fare_inr).toBe(56);
+        // Band 7: [18, 21) -> 19.5 km -> ₹61
+        expect(estimateFare(hydRule!, 19.5).fare_inr).toBe(61);
+        // Band 8: [21, 24) -> 22.5 km -> ₹65
+        expect(estimateFare(hydRule!, 22.5).fare_inr).toBe(65);
+        // Band 9: [24, null) -> 30.0 km -> ₹69
+        expect(estimateFare(hydRule!, 30.0).fare_inr).toBe(69);
+      });
+
+      it("51. Evaluates Hyderabad fare bands at exact band boundaries (half-open [min, max) semantics)", () => {
+        expect(hydRule).toBeDefined();
+        // At 0 km: enters Band 0 -> ₹11
+        const at0 = estimateFare(hydRule!, 0.0);
+        expect(at0.fare_inr).toBe(11);
+        expect(at0.band_index).toBe(0);
+
+        // At 2.0 km: in [2, 4) Band 1 -> ₹17 (under half-open semantics, 2.0 is in Band 1)
+        const at2 = estimateFare(hydRule!, 2.0);
+        expect(at2.fare_inr).toBe(17);
+        expect(at2.band_index).toBe(1);
+        expect(at2.near_boundary).toBe(true);
+
+        // Just below 2.0 km: 1.99 km is in Band 0 -> ₹11
+        const below2 = estimateFare(hydRule!, 1.99);
+        expect(below2.fare_inr).toBe(11);
+        expect(below2.band_index).toBe(0);
+        expect(below2.near_boundary).toBe(true);
+
+        // At 4.0 km: in [4, 6) Band 2 -> ₹28
+        expect(estimateFare(hydRule!, 4.0).fare_inr).toBe(28);
+        expect(estimateFare(hydRule!, 3.99).fare_inr).toBe(17);
+
+        // At 6.0 km: in [6, 9) Band 3 -> ₹37
+        expect(estimateFare(hydRule!, 6.0).fare_inr).toBe(37);
+
+        // At 9.0 km: in [9, 12) Band 4 -> ₹47
+        expect(estimateFare(hydRule!, 9.0).fare_inr).toBe(47);
+
+        // At 12.0 km: in [12, 15) Band 5 -> ₹51
+        expect(estimateFare(hydRule!, 12.0).fare_inr).toBe(51);
+
+        // At 15.0 km: in [15, 18) Band 6 -> ₹56
+        expect(estimateFare(hydRule!, 15.0).fare_inr).toBe(56);
+
+        // At 18.0 km: in [18, 21) Band 7 -> ₹61
+        expect(estimateFare(hydRule!, 18.0).fare_inr).toBe(61);
+
+        // At 21.0 km: in [21, 24) Band 8 -> ₹65
+        expect(estimateFare(hydRule!, 21.0).fare_inr).toBe(65);
+
+        // At 24.0 km: in [24, null) Band 9 -> ₹69
+        expect(estimateFare(hydRule!, 24.0).fare_inr).toBe(69);
+      });
+
+      it("52. Rejects routes using an excluded line (e.g. non-existent or other city line) with null", () => {
+        // Excluded line: Bangalore, Chennai, or non-existent line
+        const excludedRoute = [{ line_id: "blr-purple", distance_km: 8.0 }];
+        const result = estimateRouteFare(excludedRoute, typedFares);
+        expect(result).toBeNull();
+      });
+
+      it("53. Successfully calculates multi-leg route across operational Hyderabad lines", () => {
+        // Leg 1 on hyd-red (4.5 km) and Leg 2 on hyd-blue (3.5 km) -> total 8.0 km
+        // Grouped together under same rule hyd-fare-ltmrhl -> 8.0 km -> Band 3 [6, 9) -> ₹37
+        const route = [
+          { line_id: "hyd-red", distance_km: 4.5 },
+          { line_id: "hyd-blue", distance_km: 3.5 },
+        ];
+        const res = estimateRouteFare(route, typedFares);
+        expect(res).not.toBeNull();
+        expect(res!.total_fare_inr).toBe(37);
+        expect(res!.separate_tickets).toBe(false);
+        expect(res!.groups[0].rule_id).toBe("hyd-fare-ltmrhl");
+      });
+
+      it("54. Returns null for not-covered route combining a covered line and an unverified line", () => {
+        const mixedRoute = [
+          { line_id: "hyd-red", distance_km: 4.5 },
+          { line_id: "che-blue", distance_km: 3.5 },
+        ];
+        const res = estimateRouteFare(mixedRoute, typedFares);
+        expect(res).toBeNull();
+      });
+    });
   });
 });
 
