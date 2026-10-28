@@ -3,7 +3,7 @@ import { isOfficialSourceHost } from "../lib/official-source-hosts";
 
 export const StatusSchema = z.enum(["operational", "construction", "planned"]);
 
-export const SharedCorridorSchema = z.object({
+const SharedCorridorSchema = z.object({
   segment_ids: z.array(z.string().min(1)).length(2),
   shared_station_ids: z.array(z.string().min(1)).min(2),
   reason: z.string().trim().min(1),
@@ -12,10 +12,10 @@ export const SharedCorridorSchema = z.object({
 export type SharedCorridor = z.infer<typeof SharedCorridorSchema>;
 export type Status = z.infer<typeof StatusSchema>;
 
-export const LayoutSchema = z.enum(["underground", "elevated", "at-grade"]);
+const LayoutSchema = z.enum(["underground", "elevated", "at-grade"]);
 export type Layout = z.infer<typeof LayoutSchema>;
 
-export const BoundingBoxSchema = z.tuple([
+const BoundingBoxSchema = z.tuple([
   z.number(), // minLng
   z.number(), // minLat
   z.number(), // maxLng
@@ -277,7 +277,7 @@ export type SegmentFeatureCollection = z.infer<
   typeof SegmentFeatureCollectionSchema
 >;
 
-export const StationPropertiesSchema = z
+const StationPropertiesSchema = z
   .object({
     station_id: z.string().min(1),
     name: z.string().min(1),

@@ -155,7 +155,7 @@ export function haversineDistanceM(
  * Finds the nearest projected point on a line segment to a query point.
  * Returns the nearest coordinate [lng, lat], distance in metres, and fractional parameter t [0, 1].
  */
-export function nearestPointOnSegment(
+function nearestPointOnSegment(
   point: [number, number],
   segStart: [number, number],
   segEnd: [number, number]

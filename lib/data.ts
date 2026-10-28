@@ -99,20 +99,6 @@ export function getMetroData(): MetroDataset {
 }
 
 /**
- * Get all available fare rules.
- */
-export function getFareRules(): FareRule[] {
-  return getMetroData().fareRules || [];
-}
-
-/**
- * Get all available service hours.
- */
-export function getAllServiceHours(): ServiceHours[] {
-  return getMetroData().serviceHours || [];
-}
-
-/**
  * Get all available cities.
  */
 export function getCities(): City[] {

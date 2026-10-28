@@ -1,0 +1,5 @@
+# Auto detect text files and normalize line endings
+* text=auto
+
+# Ensure snapshot files always use LF line endings across all platforms
+*.snap text eol=lf

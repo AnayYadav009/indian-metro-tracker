@@ -119,11 +119,12 @@ Trust first (fares and timings are new claims that need a source and a verified 
 - Done when: real test counts are reported, static export generates all 28 HTML/SSG pages cleanly, and all e2e specs pass across desktop Chromium and mobile viewports.
 - Acceptance evidence (2026-10-28):
   • Full static export: `npm run build` generates 28 prerendered pages (home, compare, 21 static city pages, not-found, robots, sitemap) with 0 errors.
-  • Static export E2E: 42 passed across Chromium and Mobile Chrome running against `node scripts/serve.mjs` on port 3005 (`e2e/route-finder.spec.ts`, `e2e/nearest-station.spec.ts`, `e2e/interchange.spec.ts`).
-  • Core UX E2E: 68 passed across Chromium and Mobile Chrome (`e2e/city-picker.spec.ts`, `e2e/layers-drawer.spec.ts`, `e2e/m13-1-ux.spec.ts`, `e2e/route-finder.spec.ts`, `e2e/nearest-station.spec.ts`, `e2e/interchange.spec.ts`, `e2e/home.spec.ts`).
+  • Full Playwright E2E suite: 170 passed (8.4m) across desktop Chromium and Mobile Chrome with 0 failures; verified layout clearance across BottomSheet peek, half, and full snaps on 375x812 viewport.
+  • Layout clearance fix: resolved stacking order between `BottomSheet` and `LayersDrawer` (rendering `LayersDrawer` after `BottomSheet` at `z-30`), ensuring drawer content (`MapLegend`, attribution) is never occluded or pointer-intercepted by `BottomSheet` handle, while preserving `AppHeader` (`z-40`) and city picker combobox (`z-50`) precedence.
   • Unit test suite: 441 passed across 49 test files with 0 failures.
   • Schema validation: `npm run validate:data` passed (21 cities, 58 lines, 77 segments, 915 stations, 2 fare rules, 0 service hours).
   • Code quality: `npm run lint` and `npm run typecheck` passed with 0 errors.
+  • Static size budget: `dataGzipBytes` measured at 145,393 bytes (vs 143,587 byte baseline limit; deferred for baseline reconciliation).
 
 ## Parallel track
 
