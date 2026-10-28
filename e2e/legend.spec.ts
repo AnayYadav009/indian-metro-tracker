@@ -8,6 +8,9 @@ import {
   legendStatus,
   legendStation,
   openLayersDrawer,
+  closeLayersDrawer,
+  attribution,
+  bottomSheetSnapButton,
 } from "./helpers";
 
 test.describe("Map Legend and Data Source Status", () => {
@@ -54,5 +57,35 @@ test.describe("Map Legend and Data Source Status", () => {
     // Re-expand
     await toggleBtn.click();
     await expect(legendContent(page)).toBeVisible();
+  });
+});
+
+test.describe("Mobile BottomSheet Layout Clearance", () => {
+  test("legend toggle and attribution are clickable without occlusion across peek, half, and full sheet snaps at 375x812", async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width: 375, height: 812 });
+    await gotoHome(page);
+
+    const snaps = ["peek", "half", "full"] as const;
+    for (const snap of snaps) {
+      await bottomSheetSnapButton(page, snap).click();
+      await page.waitForTimeout(200);
+
+      await openLayersDrawer(page);
+
+      const toggleBtn = toggleLegendButton(page);
+      await expect(toggleBtn).toBeVisible();
+      await toggleBtn.click();
+      await page.waitForTimeout(100);
+      await toggleBtn.click();
+      await page.waitForTimeout(100);
+
+      const attr = attribution(page).first();
+      await expect(attr).toBeVisible();
+
+      await closeLayersDrawer(page);
+      await page.waitForTimeout(100);
+    }
   });
 });

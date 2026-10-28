@@ -22,7 +22,7 @@ export function LayersDrawer({ open, onClose }: LayersDrawerProps) {
       id="layers-drawer"
       data-testid="layers-drawer"
       aria-label="Layers and settings"
-      className="absolute inset-x-2 top-2 z-30 flex max-h-[calc(100vh_-_5rem)] flex-col overflow-hidden rounded-xl border border-slate-700 bg-slate-950/95 text-slate-100 shadow-2xl backdrop-blur-md sm:inset-x-auto sm:right-4 sm:w-[min(28rem,calc(100%_-_2rem))]"
+      className="absolute inset-x-2 top-2 z-40 flex max-h-[calc(100vh_-_5rem)] flex-col overflow-hidden rounded-xl border border-slate-700 bg-slate-950/95 text-slate-100 shadow-2xl backdrop-blur-md sm:inset-x-auto sm:right-4 sm:w-[min(28rem,calc(100%_-_2rem))]"
       style={{ display: open ? "flex" : "none" }}
     >
       {open && (
