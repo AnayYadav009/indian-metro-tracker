@@ -150,7 +150,6 @@ export default function HomePage() {
         <RouteFinderPanel />
         <EmptyFilterState />
         <MapCanvas className="h-full w-full" />
-        <LayersDrawer open={isLayersOpen} onClose={() => setIsLayersOpen(false)} />
 
         {/* Universal Transit BottomSheet */}
         <BottomSheet
@@ -166,6 +165,8 @@ export default function HomePage() {
             />
           </div>
         </BottomSheet>
+
+        <LayersDrawer open={isLayersOpen} onClose={() => setIsLayersOpen(false)} />
 
         {/* City Directory Modal */}
         {isCityDirectoryOpen && (
