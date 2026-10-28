@@ -42,8 +42,11 @@ When Milestone M23 restructures the user interface, only `e2e/helpers.ts` will n
 - `filterToggle(page: Page): Locator`
 - `collapseFilters(page: Page): Promise<void>`
 - `expandFilters(page: Page): Promise<void>`
-- `cityChip(page: Page, cityId: string): Locator`
-- `allCityChips(page: Page): Locator`
+- `cityPickerTrigger(page: Page): Locator`
+- `cityPickerSearch(page: Page): Locator`
+- `openCityPicker(page: Page): Promise<void>`
+- `cityOption(page: Page, cityId: string): Locator`
+- `allCityOptions(page: Page): Locator`
 - `selectCity(page: Page, cityId: string): Promise<void>`
 - `statusToggle(page: Page, status: "operational" | "construction" | "planned"): Locator`
 - `resetFiltersBtn(page: Page): Locator`

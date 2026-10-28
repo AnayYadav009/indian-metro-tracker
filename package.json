@@ -8,6 +8,8 @@
     "postinstall": "node scripts/copy-maplibre-worker.mjs",
     "dev": "next dev",
     "build": "next build",
+    "measure:size": "node scripts/measure-static-size.mjs",
+    "measure:size:update-baseline": "node scripts/measure-static-size.mjs --write-baseline",
     "start": "node scripts/serve.mjs",
     "lint": "eslint .",
     "format": "prettier --write .",

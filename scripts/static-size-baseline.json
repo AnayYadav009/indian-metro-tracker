@@ -1,0 +1,5 @@
+{
+  "method": "gzip level 9; sum of each runtime data file and homepage initial JS asset",
+  "dataGzipBytes": 143587,
+  "initialJsGzipBytes": 308081
+}

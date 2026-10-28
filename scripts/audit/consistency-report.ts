@@ -3,8 +3,7 @@
  *
  * Read-only — never modifies data files.
  * Writes reports to reports/data-audit/<date>.{md,json}.
- * Exit code 1 if any error exists or any warn is not baselined.
- * Set AUDIT_WARNINGS=report-only to keep warnings visible without failing CI.
+ * Exit code 1 if errors, pending findings, or unreviewed warnings remain.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -179,12 +178,11 @@ function main() {
 
   const unbaselinedErrors = unbaselined.filter((f) => f.severity === "error").length;
   const unbaselinedWarns = unbaselined.filter((f) => f.severity === "warn").length;
-  const warningsReportOnly = process.env.AUDIT_WARNINGS === "report-only";
 
   console.log(`✅ Accepted warnings (reviewed): ${accepted.length}`);
   console.log(`📋 Unreviewed warnings (awaiting city review): ${unreviewed.length}`);
   console.log(`🚨 Known walkthrough defects tracked: ${knownDefects.length}`);
-  console.log(`⏳ Pending rules (report-only): ${pending.length}`);
+  console.log(`⏳ Pending-rule findings (blocking): ${pending.length}`);
   console.log(`🗺️ Documented coverage gaps (visible, tracked separately): ${documentedCoverageGaps.length}`);
 
   const totalStale = staleAccepted.length + staleUnreviewed.length + staleKnownDefects.length;
@@ -198,19 +196,16 @@ function main() {
     ].forEach((entry) => console.log(`   • ${entry}`));
   }
 
-  if (unbaselinedErrors > 0 || (unbaselinedWarns > 0 && !warningsReportOnly)) {
+  if (unbaselinedErrors > 0 || unbaselinedWarns > 0 || pending.length > 0) {
     console.log("");
-    console.log(`❌ ${unbaselinedErrors} errors and ${unbaselinedWarns} un-baselined warnings remain:`);
+    console.log(`❌ ${unbaselinedErrors} errors, ${unbaselinedWarns} un-baselined warnings, and ${pending.length} pending-rule findings remain:`);
+    for (const finding of pending) {
+      console.log(`   • [pending ${finding.severity}] ${finding.city_id} | ${finding.rule} | ${finding.subject} | ${finding.message}`);
+    }
     for (const u of unbaselined) {
       console.log(`   • [${u.severity}] ${u.city_id} | ${u.rule} | ${u.subject} | ${u.message}`);
     }
     process.exit(1);
-  } else if (warningsReportOnly && unbaselinedWarns > 0) {
-    console.log("");
-    console.log(
-      `⚠️ ${unbaselinedWarns} un-baselined warnings remain; report-only mode ignores warnings for the exit code.`
-    );
-    process.exit(0);
   } else {
     console.log("");
     console.log("✅ All checks pass (no errors, all warnings baselined or tracked).");

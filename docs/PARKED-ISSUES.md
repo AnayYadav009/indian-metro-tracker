@@ -6,7 +6,7 @@ This document logs all deferred issues, pending-rule findings, unreviewed warnin
 
 ## 1. Pending-Rule Errors
 
-These two findings violate audit rules currently classified as `pending_rules` in `data/audit-baseline.json`. They are reported in audit summaries but run in report-only mode until official ground-truth reconciliation is completed.
+These findings violate audit rules currently classified as `pending_rules` in `data/audit-baseline.json`. They remain visible and keep the audit gate failing until repaired or individually reviewed and cleared.
 
 | ID | City | Rule | Current Finding | Owner Decision Needed | Suggested Next Step | Severity |
 | :--- | :--- | :--- | :--- | :--- | :--- | :---: |
@@ -168,7 +168,7 @@ Explicitly skipped for now: live train tracking and real-time arrivals (no free 
 
 ### New open items
 
-- Tier 1 definition: confirm the exact city list from the M10 Tier 1 visual QA work before M21 starts. Do not guess.
+- **Resolved 2026-10-28:** M21 Tier 1 cities are Delhi, Mumbai, Bengaluru, Chennai, Kolkata, and Hyderabad (`TIER_1_CITY_IDS` in `lib/compare-stats.ts`).
 - Fare and timing sources: for each Tier 1 city, identify the operator's official fare and first/last train publication. Cities without one get the fare feature hidden.
 - Provenance backfill (M19 implemented): All 21 cities and 58 lines currently default to `unverified` status with `source_url: null` and `last_verified: null`. No real-world values were invented. Official operator URLs and verification dates will be progressively sourced starting in M21 (Tier 1 fare and timing data).
 - M22 design brief requires owner sign-off before M23 starts.
@@ -181,7 +181,7 @@ Explicitly skipped for now: live train tracking and real-time arrivals (no free 
   1. `del-sikanderpur` <-> `gur-sikanderpur` (Delhi Metro Yellow Line <-> Gurugram Rapid Metro)
   2. `del-noida-sector-52` <-> `noi-noida-sector-51` (Delhi Metro Blue Line <-> Noida Metro Aqua Line dedicated walkway)
   Sourced entries exist for Mumbai and Hyderabad, but these two Delhi-Gurugram and Delhi-Noida cross-network links lack specific official URLs.
-- Feature-level vs line-level provenance juxtaposition: Stations and segments already display feature-level source metadata (`Feature source: osm/mock`, `Feature data date: <date>` or `Feature data date: Unrecorded (OSM data)`). The M19 line/city provenance footer renders right below it. Where a station has verified coordinates (e.g. `Feature data date: 2026-10-08`) but its line has unverified commercial details (e.g. `Unverified`, `Not verified`), users see both in the same panel. Owner decision needed on whether to merge these into a single unified provenance section or retain distinct feature geometry vs network operational provenance.
+- **Resolved 2026-10-27 (owner decision):** Keep feature geometry provenance separate from city/line attribute provenance. The UI labels geometry source and OSM retrieval date independently from the line/city `last_verified` status and official reference. An OSM geometry source does not claim that station attributes are OSM-only.
 - Sourcing inventory counts (M19 baseline):
   - Lines per `source` tag value (Total 58 lines across 21 cities):
     - Overall: `osm+dmrc` (9), `osm+mmrda` (7), `osm+gmrc` (6), `osm+bmrcl` (5), `osm+mtp` (4), `osm+upmrc` (3), `osm+mpmrcl` (3), `cmrl` (3), `osm+ltmrhl` (3), `osm+cmrl` (2), `osm+mahametro` (2), `osm+maha_metro` (2), `dmrc+news` (1), `osm+rmgl` (1), `osm+jmrc` (1), `osm+kmrl` (1), `osm+kmrc` (1), `osm+cidco` (1), `osm+nmrc` (1), `osm+pmrc` (1), `osm+pmrda` (1).
@@ -194,7 +194,7 @@ Explicitly skipped for now: live train tracking and real-time arrivals (no free 
     - Tier 1: 205 stations (Delhi: 41, Mumbai: 38, Bengaluru: 5, Chennai: 41, Kolkata: 23, Hyderabad: 57)
 - M20 Route state URL limitation: Active route origin, destination, and calculated routes are managed in the client Zustand store and are not currently synchronized to browser URL parameters. In accordance with milestone rule i, route issue reports prefill with the city page URL (`/city/[id]`). Deep linking for specific route queries can be introduced in a future routing milestone to supply direct route permalinks.
 - M20 Issue template structure: GitHub Issue Forms (`data-correction.yml`) receive the markdown diagnostics via `?body=` into the `body` field (`Prefilled Feature Diagnostics`). All four contexts (Station, Segment, Route, City) share the single official issue template without requiring new templates or schema alterations.
-- M19.3 Audit — Station source vs last_verified semantic conflict: 495 of 915 stations have a non-null `last_verified` date and non-empty `references` array, but retain `source: "osm"`. `docs/DATA-STANDARDS.md:61` states: "OSM-only records carry retrieved_at only." No validation or audit rule currently enforces this conflict. Owner decision needed on whether to update station `source` to reflect the cited operator/news sources (e.g., `osm+operator` or `manual`) or formalize a separate geometry source vs attribute verification standard.
+- **Resolved 2026-10-27 (owner decision):** For 495 station records, retain `source: "osm"` as geometry origin; `references` and `last_verified` describe separately checked attributes. `docs/DATA-STANDARDS.md` now defines these semantics. No bulk source-tag rewrite is needed.
 - M19.3 Audit — Interchange primaryLine arbitrary selection: Resolved in M19.4. Station detail footer displays the weakest provenance status among connected lines (`unverified < schematic < verified`) labelled as "Lines" (or "Line" for single line), and the GitHub issue reporting body lists every connected line's individual provenance.
 - M19.3 Audit — User-visible "official" claims in UI: `components/city/city-data-notice.tsx:37` displays "Official Length Variance" when computed km diverges from reference km by > 3%, and `components/panels/provenance-footer.tsx:111` displays "No official source link" for unverified records.
 - M19.3 Audit — Tier 1 line count reconciliation: `data/lines.json` contains exactly 35 lines across Tier 1 cities (Delhi: 10, Mumbai: 7, Bengaluru: 5, Chennai: 5, Kolkata: 5, Hyderabad: 3). The earlier mention of 34 lines in M19.2 documentation was an undercount of 1 line.
@@ -240,29 +240,27 @@ Explicitly skipped for now: live train tracking and real-time arrivals (no free 
 
 ### M21a Open Items & Findings (2026-10-24)
 
-- **Overclaiming UI Text (Item a)**: `app/compare/page.tsx:357` ("All figures computed from verified geospatial vectors") and `lib/city-seo.ts:17` and `:24` ("verified geospatial data") overclaim verification while every city and line in the dataset currently carries `unverified` provenance. Needs rewording in a future pass.
-- **Routing Status Terminology Collision (Item b)**: `components/routing/route-finder-panel.tsx:308` and `lib/routing/city-guard.ts` use "verified lines" to denote topological routing verification, which collides with the provenance data status "verified". Rename to "routable lines" or "lines passing topology checks" in M24.
-- **Station Verification Threshold Label (Item c)**: `app/city/[id]/page.tsx:220` displays the label `"≥80% stations verified"`. Reword to remove "verified" (e.g. `"≥80% stations with recorded dates"`).
+- **Resolved 2026-10-24 (M19.5):** Overclaiming "verified geospatial" wording was removed from the compare page and city SEO descriptions. Current wording refers to computed geometry, open geospatial data, or operator information without claiming verified geospatial vectors.
+- **Resolved 2026-10-26 (M23.1; Item b):** Routing UI and city guard use "routable lines" for topology-checked routes, avoiding collision with provenance status "verified".
+- **Resolved 2026-10-26 (M23.1; Item c):** City page threshold label now says `"≥80% stations dated"`, describing available date fields without claiming provenance verification.
 - **Pipeline Trailing Newline Convention (Item d)**: `build-real-data.ts` atomically writes `data/cities.json` and `data/lines.json` without a trailing newline, while git-committed files expect one, dirtying files on every run. A repository-wide formatting convention should be enforced.
 - **Flaky E2E Test Candidate (Item e)**: `e2e/m13-1-ux.spec.ts:128` ("switches to every city and renders its network") timed out once under heavy parallel load during M19.4. Passed cleanly on standalone run and subsequent full runs.
-- **Station `last_verified` Distribution (Item f)**: 495 stations carry `last_verified` across 6 distinct dates (270 on `2026-10-08`, 132 on `2026-10-15`, 82 on `2026-10-16`), 28 distinct reference URLs, and 361 point to bare homepages (empty or `/` path). Treated as unproven; the neutral feature date label stays. Sourcing cleanup to be determined after Tier 1 review.
+- **Station `last_verified` Distribution (Item f)**: 495 stations carry `last_verified` across 6 distinct dates (270 on `2026-10-08`, 132 on `2026-10-15`, 82 on `2026-10-16`), 28 distinct reference URLs, and 361 point to bare homepages (empty or `/` path). The 2026-10-27 owner decision defines these references/dates as attribute checks, separate from OSM geometry provenance. Specific-source quality remains subject to Tier 1 review; the UI uses `retrieved_at` for geometry retrieval dates.
 - **Pipeline Skipped Segments (Item g)**: Pipeline logs show `che-corridor-3-seg-01` and `kol-pink-seg-01` skipped with "no valid coordinates". Confirmed as expected (Chennai Corridor 3 is already parked; Kolkata Pink has no coordinate geometry in OSM).
 - **Cross-Network Interchanges Without Source (Item h)**: 4 interchange records in `data/overrides/interchanges.json` lack an official reference URL (`del-sikanderpur` <-> `gur-sikanderpur`, `del-noida-sector-52` <-> `noi-noida-sector-51`). Parked for M25.
 - **Live Site & Static Export CI (Item i)**: Live GitHub Pages site returned 404 on 2026-10-17 and M9 (CI static export validation) is pending. Proceeding with offline validation by owner decision.
 - **Typecheck Baseline & `lastVerifiedFormatted` Usage (Item j)**:
   - `npm run typecheck` passes with exit code 0 after adding `provenance: { status: "unverified" }` to mock test fixtures (`compare-stats.test.ts`, `issue-url.test.ts`, `pipeline-merge-validation.test.ts`, `report-issue-button.test.tsx`, `route-finder.test.ts`).
   - `lastVerifiedFormatted` from `lib/data.ts:208` is computed in `getDatasetMetadataSummary()` and formatted as part of `badgeLabel` (`Data: <Month Year> (<Sources>)`). It is rendered at `app/page.tsx:192` (`<span data-testid="data-last-updated">{metadataSummary.badgeLabel}</span>` in map bottom-right bar) and at `app/compare/page.tsx:157` (`{metadataSummary.badgeLabel}` in header badge).
-- **Next Step: Milestone M21b (Real Tier 1 Fare and Timing Data)**:
-  - Load real fares and service hours for Tier 1 cities (`delhi`, `mumbai`, `bengaluru`, `chennai`, `kolkata`, `hyderabad`).
-  - Rule: each city is sourced separately from official operator publications with specific non-root URLs (`source_url`) and verified dates (`last_verified`, `effective_from`).
-  - Unverified cities remain with empty fare rules (fare feature hidden for that city entirely).
-  - No synthetic estimates, no placeholders, no unverified records marked "verified".
+- **M21 Tier 1 coverage audit (2026-10-28):** Verified fare rules are loaded for Delhi (`del-fare-dmrc`) and Hyderabad (`hyd-fare-ltmrhl`); Mumbai, Bengaluru, Chennai, and Kolkata have none. `data/timings.json` is empty. Uncovered fare features remain hidden; no estimates or unverified rules were added.
+- **Resolved 2026-10-28 — M21 owner decision on station-to-station fares:** Owner approved keeping the existing distance-band and station-count-band model and leaving matrix-only tariffs unpriced. Do not approximate matrices. Delhi Airport Express, CMRL matrix routes, and matrix-priced Kolkata routes remain unpriced unless a published fare can be represented by an existing basis without approximation and is independently verified. CMRL's official table ([table](https://chennaimetrorail.org/cmrl-fare-table/), [PDF](https://chennaimetrorail.org/wp-content/uploads/2026/10/Fare-Table.pdf)) and Kolkata's fare publication ([PDF](https://mtp.indianrailways.gov.in/uploads/files/1716366283247-Fare%20Matrix%20all%20Corridors.pdf)) informed the decision. This resolves the modeling policy; it does not resolve missing Tier 1 fare or timing coverage.
+- **M21 sourcing findings:** BMRCL's official tickets page routes fare lookup through station selection and lists revised fare details separately ([tickets](https://english.bmrc.co.in/tickets/)); no reproducible current tariff was added. No current official tariff evidence for Mumbai was captured in this audit. Keep both cities unpriced until exact, reviewable source records are captured.
 
 ### M21b Delhi Fare and Timing Sourcing Findings (2026-10-24)
 
 1. **Excluded Lines and Reasons**:
    - `del-golden`: Excluded from `del-fare-dmrc`. Entirely under construction and planned (`del-golden-seg-01` construction, `del-golden-branch-01` planned); 0 operational segments open to public service.
-   - `del-airport` (Airport Express Line): Excluded from standard DMRC distance-band FareRule. DMRC publishes an origin-destination station-to-station fare matrix (`https://delhimetrorail.com/fare-for-airport-express-line`) with fares ranging from Rs 11 to Rs 75 between pairs, rather than distance bands. Per project rules, we do not force non-band published structures into distance bands, and load nothing for this line group pending owner decision on station-to-station fare modeling.
+   - `del-airport` (Airport Express Line): Excluded from standard DMRC distance-band FareRule. DMRC publishes an origin-destination station-to-station fare matrix (`https://delhimetrorail.com/fare-for-airport-express-line`) with fares ranging from Rs 11 to Rs 75 between pairs, rather than distance bands. Per the owner decision recorded 2026-10-28, matrix-only fares stay unpriced under the current model; they are not approximated with distance or station-count bands.
 2. **Band-Edge Ambiguities & Published Wording**:
    - The published DMRC fare table lists bands as `0-2`, `2-5`, `5-12`, `12-21`, `21-32`, and `More than 32` (`32 से अधिक` in Hindi).
    - In our schema, bands are modeled as half-open intervals `[min_km, max_km)`. The published numbers are retained without modification (`0-2`, `2-5`, `5-12`, `12-21`, `21-32`, `32-null`).

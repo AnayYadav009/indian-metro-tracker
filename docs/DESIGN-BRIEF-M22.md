@@ -1,7 +1,7 @@
 # M22 UI Design Brief: Public Usability & Mobile-First Shell
 
 - **Author**: Antigravity (Pair Programming Agent)
-- **Status**: Brief drafted, awaiting owner sign-off (M22 / M22.1)
+- **Status**: Owner-approved (2026-10-28); recommendations Q1–Q10 approved for M23 implementation
 - **Target Implementation**: Milestone M23 (UI Shell) through M26 (Acceptance)
 - **Audience**: General public across India, predominantly using mid-range Android devices on variable 4G/slow mobile data.
 - **Constraints**: 100% static export (Next.js SSG, no backend, no serverless functions, no paid services). Free basemap (OpenFreeMap + OSM attribution). High-performance geospatial rendering with MapLibre GL JS (<100ms filter latency). Zero unverified claims.
@@ -603,15 +603,17 @@ Zero duplicate hashes remain. `filters-desktop.png` is visually and cryptographi
 
 Ordered, independently mergeable steps:
 
-| Step | Scope | Files Touched | Tests Added / Updated |
+These are sequential M23 shell steps, not M23.x sub-milestone numbers. M23.0 test-helper decoupling and M23.1 trust-copy/hygiene are prerequisite workstreams tracked in `docs/PLAN-PUBLIC-USABILITY.md` and have owner approval. Shell steps 1 (shared `AppHeader`), 2 (searchable city picker), and 3 (responsive three-state bottom sheet container) are implemented; step 4 (Layers & Timeline drawer) is next.
+
+| Shell step | Scope | Files Touched | Tests Added / Updated |
 | :---: | :--- | :--- | :--- |
-| **M23.1** | Extract shared `AppHeader` component across all 3 pages; apply interim placeholder fix | `components/layout/app-header.tsx`, `components/filters/filter-panel.tsx`, `app/page.tsx`, `app/compare/page.tsx`, `app/city/[id]/page.tsx` | Unit tests for `AppHeader`. Verify existing `home.spec.ts` and `compare.spec.ts`. |
-| **M23.2** | Implement searchable City Picker dropdown (replacing 22 chips; Tier 1 first) | `components/filters/city-select.tsx`, `components/filters/city-picker-combobox.tsx` | Unit test for search filtering & ordering. E2E test for city selection on desktop & mobile. |
-| **M23.3** | Build responsive 3-state `BottomSheet` container | `components/sheet/bottom-sheet.tsx` | Component test for Peek/Half/Full states and touch gestures. |
-| **M23.4** | Extract "Layers & Timeline" into secondary drawer | `components/layers/layers-drawer.tsx`, `components/timeline/timeline-slider.tsx` | Verify timeline tests pass in new drawer container. |
-| **M23.5** | Integrate universal station search into bottom sheet & top bar | `components/search/station-search-input.tsx`, `lib/station-search.ts` | Unit tests for station fuzzy search & ranking. E2E test for selecting station from sheet. |
-| **M23.6** | Re-mount Station & Segment details into bottom sheet | `components/panels/station-detail.tsx`, `components/panels/segment-detail.tsx` | Mobile viewport E2E test verifying zero overlap with map. |
-| **M23.7** | Copy cleanup & provenance disclosure polish | All affected files from Section 10 | Update snapshot and text assertion tests. |
+| **1** | Extract shared `AppHeader` component across all 3 pages | `components/layout/app-header.tsx`, `app/page.tsx`, `app/compare/page.tsx`, `app/city/[id]/page.tsx` | Unit tests for `AppHeader`. Verify existing `home.spec.ts` and `compare.spec.ts`. |
+| **2** | Implement searchable City Picker dropdown in the shared map header (replacing 22 chips; Tier 1 first) | `components/filters/city-select.tsx`, `lib/city-order.ts`, `components/filters/filter-panel.tsx`, `app/page.tsx`, E2E helpers | Unit tests for search, selection, and ordering. E2E test for city selection on desktop & mobile. |
+| **3** | Build responsive 3-state `BottomSheet` container | `components/sheet/bottom-sheet.tsx` | `__tests__/bottom-sheet.test.tsx`: Peek/Half/Full states and upward/downward pointer gestures. |
+| **4** | Extract "Layers & Timeline" into secondary drawer | `components/layers/layers-drawer.tsx`, `components/timeline/timeline-slider.tsx` | Verify timeline tests pass in new drawer container. |
+| **5** | Integrate universal station search into bottom sheet & top bar | `components/search/station-search-input.tsx`, `lib/station-search.ts` | Unit tests for station fuzzy search & ranking. E2E test for selecting station from sheet. |
+| **6** | Re-mount Station & Segment details into bottom sheet | `components/panels/station-detail.tsx`, `components/panels/segment-detail.tsx` | Mobile viewport E2E test verifying zero overlap with map. |
+| **7** | Copy cleanup & provenance disclosure polish | All affected files from Section 10 | Update snapshot and text assertion tests. |
 
 ---
 
@@ -626,36 +628,36 @@ Ordered, independently mergeable steps:
 
 ### Open Questions for Owner Decision (Checklist)
 
-- [ ] **Q1: City Selection Default & `localStorage`**: Should the app remember the user's last selected city across sessions, or stay 100% stateless (defaulting to Nationwide overview on each fresh visit)?  
-  *Context*: Per project rules in `.agents/rules/project.md:33` (*"No `localStorage` or `sessionStorage` use unless the owner approves it for a specific feature"*) and `docs/MILESTONES-v2.md:272` (*"Constraints: no new dependency, no `localStorage`..."*), client storage is forbidden without explicit owner sign-off.  
+- [x] **Q1: City Selection Default & `localStorage`**: Should the app remember the user's last selected city across sessions, or stay 100% stateless (defaulting to Nationwide overview on each fresh visit)?
+  *Context*: Per project rules in `.agents/rules/project.md:33` (*"No `localStorage` or `sessionStorage` use unless the owner approves it for a specific feature"*) and `docs/MILESTONES-v2.md:272` (*"Constraints: no new dependency, no `localStorage`..."*), client storage is forbidden without explicit owner sign-off.
   *Recommendation*: Stay stateless unless `?city=` query param is present in the URL; do NOT use `localStorage`.
 
-- [ ] **Q2: Timeline Scrubber Placement**: Should the historical timeline scrubber live entirely inside the "Layers / More" menu, or retain a floating icon button on the desktop map?  
+- [x] **Q2: Timeline Scrubber Placement**: Should the historical timeline scrubber live entirely inside the "Layers / More" menu, or retain a floating icon button on the desktop map?
   *Recommendation*: Move inside "Layers / More" on mobile; show a floating icon button on desktop.
 
-- [ ] **Q3: Nationwide View vs Single City on First Load**: Should first load default to showing Delhi (the flagship network with verified fares), or the nationwide map with all 21 cities?  
+- [x] **Q3: Nationwide View vs Single City on First Load**: Should first load default to showing Delhi (the flagship network with verified fares), or the nationwide map with all 21 cities?
   *Recommendation*: Nationwide overview on first load with top cities highlighted, prompting user to pick a city.
 
-- [ ] **Q4: Station Search Scope & Ranking**: Should the universal search box search across all cities simultaneously, or scope to the currently selected city?  
+- [x] **Q4: Station Search Scope & Ranking**: Should the universal search box search across all cities simultaneously, or scope to the currently selected city?
   *Recommendation*: If a city is active, rank that city's stations first, with other cities grouped below.
 
-- [ ] **Q5: Station Search Placeholder Interim Fix**: In M23.1, before the full station search index is built in M23.5, should we update the misleading placeholder in `components/filters/filter-panel.tsx:90` from `"Search lines, phases, stations..."` to `"Search lines, phases..."`?  
+- [x] **Q5: Station Search Placeholder Interim Fix**: In M23.1, before the full station search index is built in M23.5, should we update the misleading placeholder in `components/filters/filter-panel.tsx:90` from `"Search lines, phases, stations..."` to `"Search lines, phases..."`?
   *Recommendation*: Yes. The current filter searches only line names, cities, phases, and aliases. Claiming stations search when typing stations yields 0 results is a major user defect.
 
-- [ ] **Q6: City Picker Ordering (Owner Decision)**: How should the 21 cities be ordered in the searchable combobox (replacing the arbitrary array order Gurugram 1st, Navi Mumbai 2nd...)?  
-  *Proposal*: Tier 1 major networks first (Delhi, Mumbai, Bengaluru, Chennai, Kolkata, Hyderabad — matching `TIER_1_CITY_IDS` in `lib/compare-stats.ts` and `docs/MILESTONES-v2.md`), followed by alphabetical for the remaining Tier 2 cities (Agra, Ahmedabad, Bhopal, Gurugram, Indore, Jaipur, Kanpur, Kochi, Lucknow, Nagpur, Navi Mumbai, Noida, Patna, Pune, Surat). Mark as owner decision.  
+- [x] **Q6: City Picker Ordering (Owner Decision)**: How should the 21 cities be ordered in the searchable combobox (replacing the arbitrary array order Gurugram 1st, Navi Mumbai 2nd...)?
+  *Proposal*: Tier 1 major networks first (Delhi, Mumbai, Bengaluru, Chennai, Kolkata, Hyderabad — matching `TIER_1_CITY_IDS` in `lib/compare-stats.ts` and `docs/MILESTONES-v2.md`), followed by alphabetical for the remaining Tier 2 cities (Agra, Ahmedabad, Bhopal, Gurugram, Indore, Jaipur, Kanpur, Kochi, Lucknow, Nagpur, Navi Mumbai, Noida, Patna, Pune, Surat). Mark as owner decision.
   *Recommendation*: Approve Tier 1 first, then alphabetical. Note: Ahmedabad and Pune are classified as Tier 2 in the project specification.
 
-- [ ] **Q7: Fare Boundary Qualifier Wording**: For routes within 500m of a fare band edge, should the qualifier wording dynamically reference the calculator's `alternative_fare_inr` (e.g. *"Near a fare boundary: estimated ₹X or ₹Y"*), rather than a fixed rupee offset?  
+- [x] **Q7: Fare Boundary Qualifier Wording**: For routes within 500m of a fare band edge, should the qualifier wording dynamically reference the calculator's `alternative_fare_inr` (e.g. *"Near a fare boundary: estimated ₹X or ₹Y"*), rather than a fixed rupee offset?
   *Recommendation*: Yes, dynamic wording driven by `alternative_fare_inr` avoids hard-coding any rupee amounts in the design.
 
-- [ ] **Q8: Mobile Bottom Sheet Snap Points**: Do you approve the 3 snap heights: Peek (64px), Half (45vh), Full (85vh)?  
+- [x] **Q8: Mobile Bottom Sheet Snap Points**: Do you approve the 3 snap heights: Peek (64px), Half (45vh), Full (85vh)?
   *Recommendation*: Yes, standard Android Material You snap ratios.
 
-- [ ] **Q9: Shared Top Bar Extraction**: Do you approve consolidating the headers of `/`, `/compare`, and `/city/[id]` into a single shared `AppHeader` component?  
+- [x] **Q9: Shared Top Bar Extraction**: Do you approve consolidating the headers of `/`, `/compare`, and `/city/[id]` into a single shared `AppHeader` component?
   *Recommendation*: Yes, eliminates duplicate markup and enforces consistent safe-area layout.
 
-- [ ] **Q10: Phase Filter Retention**: Is the Phase filter (Phase I, II, III, IV) used frequently enough by the general public to keep in the "Layers" menu, or should it be removed from the primary UI?  
+- [x] **Q10: Phase Filter Retention**: Is the Phase filter (Phase I, II, III, IV) used frequently enough by the general public to keep in the "Layers" menu, or should it be removed from the primary UI?
   *Recommendation*: Keep in "Layers" drawer under "Advanced Filters" for transit enthusiasts and researchers.
 
 ---
@@ -664,12 +666,14 @@ Ordered, independently mergeable steps:
 
 Before proceeding to Milestone M23 (UI Shell Implementation), the project owner must verify and sign off on:
 
-- [ ] Goals and non-goals approved.
-- [ ] Key journeys and tap reductions approved.
-- [ ] Wireframes and bottom sheet 3-state physics approved.
-- [ ] Universal station search specification approved.
-- [ ] City picker ordering and naming conventions approved.
-- [ ] Trust presentation and "weakest status" provenance rule approved.
-- [ ] Copy changes and removal of "verified geospatial" claims approved.
-- [ ] Performance budget (+15 kB max First Load JS) approved.
-- [ ] Owner decisions on Q1–Q10 recorded.
+- [x] Goals and non-goals approved.
+- [x] Key journeys and tap reductions approved.
+- [x] Wireframes and bottom sheet 3-state physics approved.
+- [x] Universal station search specification approved.
+- [x] City picker ordering and naming conventions approved.
+- [x] Trust presentation and "weakest status" provenance rule approved.
+- [x] Copy changes and removal of "verified geospatial" claims approved.
+- [x] Performance budget (+15 kB max First Load JS) approved.
+- [x] Owner decisions on Q1–Q10 recorded as the brief's recommendations (2026-10-28).
+
+Owner approval recorded from the project owner on 2026-10-28: use the recommendations in this brief for Q1–Q10 as the design basis for M23. No persistent browser storage is authorized; the app remains stateless except for URL query state.

@@ -82,7 +82,7 @@ Yashobhoomi Dwarka Sec - 25 | Rs. 75    | Rs. 75          | Rs. 64      | Rs. 43
 ```
 
 ### Note on Exclusion
-Airport Express Line tariff is published as an origin-destination matrix between individual stations rather than standard distance bands. Per milestone rules: *"If the operator publishes station-to-station fares instead of distance bands, or the band model cannot represent the published structure, do NOT force it: load nothing for that line group, describe the published structure in the report, and stop for an owner decision."*
+Airport Express Line tariff is published as an origin-destination matrix between individual stations rather than standard distance bands. Per the owner decision recorded 2026-10-28, retain the distance-band and station-count model; do not force matrix tariffs into those bases. No Airport Express fare rule is loaded. This is a settled exclusion policy, not an outstanding owner decision.
 
 ---
 

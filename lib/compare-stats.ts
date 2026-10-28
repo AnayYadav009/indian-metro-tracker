@@ -26,16 +26,9 @@ import puneRef from "@/data/reference/pune.json";
 import suratRef from "@/data/reference/surat.json";
 
 import { getKnownIssueNotice } from "@/lib/known-issue-notices";
+import { TIER_1_CITY_IDS } from "@/lib/city-order";
+export { TIER_1_CITY_IDS } from "@/lib/city-order";
 import type { City, Line, SegmentFeatureCollection, StationFeatureCollection } from "@/types/metro";
-
-export const TIER_1_CITY_IDS: ReadonlySet<string> = new Set([
-  "delhi",
-  "mumbai",
-  "bengaluru",
-  "chennai",
-  "kolkata",
-  "hyderabad",
-]);
 
 interface ReferenceLine {
   operational_length_km?: number | null;

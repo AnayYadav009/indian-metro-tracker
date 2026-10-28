@@ -86,7 +86,7 @@ Compare each city against `data/reference/<city>.json`.
 
 ### E. Blind-spot rules (added 2026-10-12)
 
-These rules close gaps found in the walkthrough review. They are introduced in report-only mode: each rule id is listed under `pendingRules` in `data/audit-baseline.json`, appears in the report with its severity, and does not fail CI until the milestone named below switches it to enforcing and removes it from `pendingRules`. Thresholds are defaults, tunable per city in overrides.
+These rules close gaps found in the walkthrough review. Pending-rule findings remain visible and fail the audit gate until repaired or individually reviewed and cleared; no report-only environment override is used. Rule IDs stay in `pending_rules` only while their named repair milestone is open. Thresholds are defaults, tunable per city in overrides.
 
 | Rule id | Check | Severity | Enforced in |
 |---|---|---|---|

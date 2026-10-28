@@ -370,8 +370,8 @@ Ideas that fit the hard constraints (static, free, no new dependency unless appr
 - M20 Report-an-error button
 - M21 Fare and timing data model (Tier 1): schema, validator, calculator, Delhi (`del-fare-dmrc`), Hyderabad (`hyd-fare-ltmrhl`), and M21e-1 station-count basis implemented. Owner approved on 2026-10-28 retaining those bases and leaving matrix-only tariffs unpriced. Tier 1 coverage remains partial (verified fares in 2/6 cities; 0 timing records); see `docs/PLAN-PUBLIC-USABILITY.md`.
 - M22 UI design brief: owner-approved recommendations Q1–Q10 recorded 2026-10-28; see `docs/DESIGN-BRIEF-M22.md`.
-- M23 UI shell implementation
-- M24 Route finder v2
+- M23 UI shell implementation: Complete. Owner-approved M23.0 test-helpers and M23.1 copy hygiene; shell steps 1–7 (shared AppHeader, searchable header city picker, responsive 3-state bottom sheet, layers drawer, universal station search, clear map-to-panel geometry, and copy/provenance polish) implemented and verified. Current evidence: `docs/PLAN-PUBLIC-USABILITY.md`.
+- M24 Route finder v2: Complete. Sourced fare estimates (Delhi, Hyderabad), fare omission for unsourced networks, unverified timings operating window caveats, step-by-step intermediate station collapsibles, and clear interchange guidance verified across 440 unit tests and 18 desktop/mobile E2E tests.
 - M25 Nearest station and interchange highlighting
 - M26 Acceptance pass
 

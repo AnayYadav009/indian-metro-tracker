@@ -56,9 +56,9 @@ Rules
 | `other_connections` | Optional array of non-metro connections (suburban rail, monorail, regional rail) with reference details. |
 | `effective opening date` | Derived rule: a station's effective opening date is `opened_on ?? inaugurated_on` (from its segment). This is derived at runtime and never stored as a separate duplicate field. |
 | `geometry_quality` | `"exact"` \| `"schematic"` in the current schema. Exact is reserved for surveyed or construction-stage geometry; construction and planned stretches without sourced geometry use schematic connectors built from ordered stations. A future `"approximate"` value would require an additive schema and renderer change before use. Operational geometry is never schematic. |
-| `source` | `osm`, `manual` or `osm+<operator>`; `mock` only in mock data. |
-| `retrieved_at` | Date the raw OSM data was fetched (machine date). |
-| `last_verified` | Date a human or agent last checked this record against an official source. Never set automatically by the pipeline. `last_verified` requires an official or government reference. OSM-only records carry `retrieved_at` only. |
+| `source` | For station and segment features, geometry origin: `osm`, `manual` or `osm+<operator>`; `mock` only in mock data. For lines, records the contributing source tags. |
+| `retrieved_at` | Date the raw OSM data was fetched (machine date); it does not indicate attribute verification. |
+| `last_verified` | Date a human or agent last checked the record's sourced attributes against an official source. Never set automatically by the pipeline. It requires an official or government reference and does not change the geometry `source`. OSM-derived geometry may therefore retain `source: "osm"` while sourced attributes have `references` and `last_verified`. |
 
 ## 4. Operators and Lines
 
