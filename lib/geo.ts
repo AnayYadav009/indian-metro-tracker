@@ -64,6 +64,20 @@ export function checkLengthMismatch(
     isMismatch: mismatchPct > thresholdPct,
   };
 }
+/**
+ * Builds an external Google Maps walking directions URL between two coordinates.
+ * Coordinate order: [longitude, latitude] (WGS84).
+ * Query format: origin=lat,lng&destination=lat,lng&travelmode=walking
+ */
+export function getGoogleMapsWalkingUrl(
+  originCoords: [number, number],
+  destinationCoords: [number, number]
+): string {
+  const [origLon, origLat] = originCoords;
+  const [destLon, destLat] = destinationCoords;
+  return "https://www.google.com/maps/dir/?api=1&origin=" + origLat + "," + origLon + "&destination=" + destLat + "," + destLon + "&travelmode=walking";
+}
+
 
 /**
  * Distance in metres from a point to a line segment, using equirectangular

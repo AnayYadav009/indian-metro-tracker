@@ -15,6 +15,7 @@ import {
   noOperationalMessage,
   toggleConstruction,
   notYetOpenBadge,
+  walkDirectionsLink,
   pickingLocationBanner,
   userLocationMarker,
 } from "./helpers";
@@ -74,6 +75,13 @@ test.describe("M16 Nearest Station Finder", () => {
     // Verify closest station name (Rajiv Chowk or adjacent central station)
     const panelText = await stationItems.first().textContent();
     expect(panelText).toMatch(/Rajiv Chowk|Barakhamba|Janpath|Shivaji Stadium/i);
+    // M25: Walking directions link with travelmode=walking
+    const walkLink = walkDirectionsLink(stationItems.first());
+    await expect(walkLink).toBeVisible();
+    const href = await walkLink.getAttribute("href");
+    expect(href).toContain("google.com/maps/dir/?api=1");
+    expect(href).toContain("travelmode=walking");
+    expect(href).toContain("origin=28.6328,77.2183");
   });
 
   test("handles geolocation permission denied gracefully with fallback options", async ({

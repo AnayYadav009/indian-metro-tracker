@@ -12,6 +12,7 @@ import {
   Building2,
   RefreshCw,
   ArrowRight,
+  ExternalLink,
 } from "lucide-react";
 import { useMetroStore } from "@/store/use-metro-store";
 import {
@@ -19,6 +20,7 @@ import {
   type NearestStationOutcome,
 } from "@/lib/nearest-station";
 import { getCities } from "@/lib/data";
+import { getGoogleMapsWalkingUrl } from "@/lib/geo";
 
 export function NearestStationPanel() {
   const isNearestPanelOpen = useMetroStore((state) => state.isNearestPanelOpen);
@@ -390,6 +392,22 @@ export function NearestStationPanel() {
                       >
                         Route from here <ArrowRight className="h-3 w-3" />
                       </button>
+                      {userLocation && (
+                        <a
+                          href={getGoogleMapsWalkingUrl(
+                            userLocation,
+                            res.station.geometry.coordinates as [number, number]
+                          )}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          data-testid="walk-directions-link"
+                          className="inline-flex items-center gap-1 text-[10.5px] text-slate-400 hover:text-slate-200 hover:underline"
+                          title="Open walking directions in Google Maps"
+                        >
+                          <span>Walk directions</span>
+                          <ExternalLink className="h-2.5 w-2.5" />
+                        </a>
+                      )}
                       <button
                         onClick={() => {
                           setSelectedCity(res.cityId);

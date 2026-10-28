@@ -6,6 +6,7 @@ import {
   haversineDistanceM,
   nearestPointOnPolyline,
   lineSlice,
+  getGoogleMapsWalkingUrl,
 } from "../lib/geo";
 
 describe("pointToSegmentDistanceM", () => {
@@ -158,5 +159,16 @@ describe("nearestPointOnPolyline & lineSlice", () => {
     expect(sliced.length).toBe(2);
     expect(sliced[0][0]).toBeCloseTo(77.12, 4);
     expect(sliced[1][0]).toBeCloseTo(77.18, 4);
+  });
+});
+
+describe("getGoogleMapsWalkingUrl", () => {
+  it("constructs valid Google Maps walking directions URL", () => {
+    const origin: [number, number] = [77.209, 28.6139];
+    const destination: [number, number] = [77.215, 28.62];
+    const url = getGoogleMapsWalkingUrl(origin, destination);
+    expect(url).toBe(
+      "https://www.google.com/maps/dir/?api=1&origin=28.6139,77.209&destination=28.62,77.215&travelmode=walking"
+    );
   });
 });
