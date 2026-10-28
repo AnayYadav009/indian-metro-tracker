@@ -7,6 +7,7 @@ import {
   closeMetadataPanel,
   openStation,
   selectCity,
+  openLayersDrawer,
 } from "./helpers";
 
 test.describe("Interactions & Metadata Panels", () => {
@@ -18,6 +19,7 @@ test.describe("Interactions & Metadata Panels", () => {
     page,
   }) => {
     await expect(page.getByRole("heading", { name: "Indian Metro Network Tracker" })).toBeVisible();
+    await openLayersDrawer(page);
 
     const map = mapContainer(page);
     await expect(map).toBeVisible();

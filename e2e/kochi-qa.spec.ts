@@ -2,16 +2,19 @@ import { test, expect } from "@playwright/test";
 import {
   gotoHome,
   filterPanel,
-  cityChip,
+  cityOption,
+  openCityPicker,
   filterToggle,
   phasePill,
   mapLegend,
   metadataPanel,
+  openLayersDrawer,
 } from "./helpers";
 
 test.describe("Kochi Visual & Interaction QA (M15)", () => {
   test.beforeEach(async ({ page }) => {
     await gotoHome(page);
+    await openLayersDrawer(page);
   });
 
   test("verifies Kochi in city selector, phases, line legend, and station panel", async ({
@@ -21,7 +24,8 @@ test.describe("Kochi Visual & Interaction QA (M15)", () => {
     await expect(panel).toBeVisible();
 
     // 1. Verify Kochi button is present and click it
-    const kochiBtn = cityChip(page, "kochi");
+    await openCityPicker(page);
+    const kochiBtn = cityOption(page, "kochi");
     await expect(kochiBtn).toBeVisible();
     await kochiBtn.click();
     const toggle = filterToggle(page);

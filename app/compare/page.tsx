@@ -24,6 +24,7 @@ import {
   CityCompareStats,
 } from "@/lib/compare-stats";
 import { getDatasetMetadataSummary } from "@/lib/data";
+import { AppHeader } from "@/components/layout/app-header";
 
 type SortKey =
   | "cityName"
@@ -128,7 +129,7 @@ export default function ComparePage() {
       className="min-h-screen bg-slate-950 text-slate-100 flex flex-col"
     >
       {/* Top Header Bar */}
-      <header className="z-20 flex h-14 shrink-0 items-center justify-between border-b border-slate-800 bg-slate-900/90 px-4 backdrop-blur md:px-6">
+      <AppHeader variant="compact">
         <div className="flex items-center gap-3">
           <Link
             href="/"
@@ -157,7 +158,7 @@ export default function ComparePage() {
             {metadataSummary.badgeLabel}
           </span>
         </div>
-      </header>
+      </AppHeader>
 
       {/* Main Content Area */}
       <main className="flex-1 overflow-y-auto px-4 py-6 md:px-8 max-w-7xl mx-auto w-full flex flex-col gap-6">

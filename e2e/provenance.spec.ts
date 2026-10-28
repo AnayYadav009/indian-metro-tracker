@@ -42,6 +42,8 @@ test.describe("M19 Provenance Layer Display", () => {
 
     const footer = provenanceFooter(detail);
     await expect(footer).toBeVisible();
+    await expect(detail).toContainText("Geometry source:");
+    await expect(detail).toContainText("Geometry retrieved: 2026-10-16");
     await expect(footer).toContainText("Unverified");
     await expect(footer).toContainText("No official source link");
     await expect(footer).toContainText("Not verified");
@@ -62,6 +64,8 @@ test.describe("M19 Provenance Layer Display", () => {
 
     const footer = provenanceFooter(detail);
     await expect(footer).toBeVisible();
+    await expect(detail).toContainText("Geometry source:");
+    await expect(detail).toContainText("Geometry retrieved:");
     await expect(footer).toContainText("City:");
     await expect(footer).toContainText("Lines:");
     await expect(footer).toContainText("Unverified");

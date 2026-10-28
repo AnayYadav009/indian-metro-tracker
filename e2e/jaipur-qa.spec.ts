@@ -2,16 +2,19 @@ import { test, expect } from "@playwright/test";
 import {
   gotoHome,
   filterPanel,
-  cityChip,
+  cityOption,
+  openCityPicker,
   filterToggle,
   phasePill,
   mapLegend,
   metadataPanel,
+  openLayersDrawer,
 } from "./helpers";
 
 test.describe("Jaipur Visual & Interaction QA (M15)", () => {
   test.beforeEach(async ({ page }) => {
     await gotoHome(page);
+    await openLayersDrawer(page);
   });
 
   test("verifies Jaipur in city selector, phases, line legend, and station panel", async ({
@@ -21,7 +24,8 @@ test.describe("Jaipur Visual & Interaction QA (M15)", () => {
     await expect(panel).toBeVisible();
 
     // 1. Verify Jaipur button is present and click it
-    const jaipurBtn = cityChip(page, "jaipur");
+    await openCityPicker(page);
+    const jaipurBtn = cityOption(page, "jaipur");
     await expect(jaipurBtn).toBeVisible();
     await jaipurBtn.click();
     const toggle = filterToggle(page);

@@ -12,6 +12,7 @@ import { generateCityMetadata, generateCityJsonLd } from "@/lib/city-seo";
 import { CityDataNotice } from "@/components/city/city-data-notice";
 import { CityLinesTable } from "@/components/city/city-lines-table";
 import { ReportIssueButton } from "@/components/panels/report-issue-button";
+import { AppHeader } from "@/components/layout/app-header";
 
 interface CityPageProps {
   params: Promise<{ id: string }>;
@@ -55,7 +56,7 @@ export default async function CityPage({ params }: CityPageProps) {
       )}
 
       {/* Top Header */}
-      <header className="sticky top-0 z-20 border-b border-slate-800 bg-slate-900/90 backdrop-blur px-4 py-3 md:px-8">
+      <AppHeader variant="page">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <Link
@@ -91,7 +92,7 @@ export default async function CityPage({ params }: CityPageProps) {
             </Link>
           </div>
         </div>
-      </header>
+      </AppHeader>
 
       {/* Main Content Container */}
       <main className="flex-1 px-4 py-6 md:px-8 md:py-10">

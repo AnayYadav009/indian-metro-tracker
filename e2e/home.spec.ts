@@ -1,11 +1,12 @@
 import { test, expect } from "@playwright/test";
-import { dataBadge, mapContainer, attribution, gotoHome } from "./helpers";
+import { dataBadge, mapContainer, attribution, gotoHome, openLayersDrawer } from "./helpers";
 
 test.describe("Home Page and Map Integration", () => {
   test("loads page and displays main title and data badges", async ({
     page,
   }) => {
     await gotoHome(page);
+    await openLayersDrawer(page);
     await expect(
       page.getByRole("heading", { name: "Indian Metro Network Tracker" })
     ).toBeVisible();
@@ -17,6 +18,7 @@ test.describe("Home Page and Map Integration", () => {
     page,
   }) => {
     await gotoHome(page);
+    await openLayersDrawer(page);
     await expect(mapContainer(page)).toBeVisible();
     await expect(attribution(page)).toBeVisible();
     await expect(attribution(page)).toContainText(

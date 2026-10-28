@@ -2,16 +2,19 @@ import { test, expect } from "@playwright/test";
 import {
   gotoHome,
   filterPanel,
-  cityChip,
+  cityOption,
+  openCityPicker,
   filterToggle,
   phasePill,
   mapLegend,
   metadataPanel,
+  openLayersDrawer,
 } from "./helpers";
 
 test.describe("Kanpur Visual & Interaction QA (M15)", () => {
   test.beforeEach(async ({ page }) => {
     await gotoHome(page);
+    await openLayersDrawer(page);
   });
 
   test("verifies Kanpur in city selector, phases, line legend, and station panel", async ({
@@ -21,7 +24,8 @@ test.describe("Kanpur Visual & Interaction QA (M15)", () => {
     await expect(panel).toBeVisible();
 
     // 1. Verify Kanpur button is present and click it
-    const kanpurBtn = cityChip(page, "kanpur");
+    await openCityPicker(page);
+    const kanpurBtn = cityOption(page, "kanpur");
     await expect(kanpurBtn).toBeVisible();
     await kanpurBtn.click();
     const toggle = filterToggle(page);

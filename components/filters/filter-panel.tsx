@@ -2,12 +2,11 @@
 
 import React, { useEffect, useState } from "react";
 import { useMetroStore } from "@/store/use-metro-store";
-import { CitySelect } from "./city-select";
 import { StatusFilter } from "./status-filter";
 import { PhaseFilter } from "./phase-filter";
 import { SlidersHorizontal, RotateCcw, ChevronDown, ChevronUp, Search, X } from "lucide-react";
 
-export function FilterPanel() {
+export function FilterPanel({ embedded = false }: { embedded?: boolean }) {
   const [isCollapsed, setIsCollapsed] = useState(false);
 
   const selectedCityId = useMetroStore((state) => state.selectedCityId);
@@ -36,7 +35,7 @@ export function FilterPanel() {
   return (
     <div
       data-testid="filter-panel"
-      className="absolute top-4 left-4 z-20 w-[92vw] max-w-sm rounded-xl border border-slate-800 bg-slate-900/95 p-3 text-slate-100 shadow-2xl backdrop-blur-md transition-all sm:w-96"
+      className={`${embedded ? "relative w-full max-w-none shadow-none" : "absolute top-4 left-4 z-20 w-[92vw] max-w-sm shadow-2xl sm:w-96"} rounded-xl border border-slate-800 bg-slate-900/95 p-3 text-slate-100 backdrop-blur-md transition-all`}
     >
       <div className="flex items-center justify-between pb-2 border-b border-slate-800/80">
         <div className="flex items-center gap-2">
@@ -102,8 +101,6 @@ export function FilterPanel() {
               </button>
             )}
           </div>
-
-          <CitySelect />
 
           <StatusFilter />
 

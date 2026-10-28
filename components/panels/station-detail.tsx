@@ -256,7 +256,7 @@ export function StationDetail({ station, coordinates }: StationDetailProps) {
       {/* Station Feature Source */}
       <div className="flex items-center justify-between border-t border-slate-800/80 pt-2 text-[10px] text-slate-400">
         <span className="flex items-center gap-1.5">
-          <span>Feature source:</span>
+          <span>Geometry source:</span>
           <span
             className={`rounded px-1.5 py-0.5 font-medium ${
               station.source === "mock"
@@ -268,9 +268,9 @@ export function StationDetail({ station, coordinates }: StationDetailProps) {
           </span>
         </span>
         <span>
-          {station.last_verified
-            ? `Feature data date: ${station.last_verified}`
-            : "Feature data date: Unrecorded (OSM data)"}
+          {station.retrieved_at
+            ? `Geometry retrieved: ${station.retrieved_at}`
+            : "Geometry retrieval date: Unrecorded"}
         </span>
       </div>
 

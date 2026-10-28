@@ -2,16 +2,19 @@ import { test, expect } from "@playwright/test";
 import {
   gotoHome,
   filterPanel,
-  cityChip,
+  cityOption,
+  openCityPicker,
   filterToggle,
   phasePill,
   mapLegend,
   metadataPanel,
+  openLayersDrawer,
 } from "./helpers";
 
 test.describe("Kolkata Visual & Interaction QA (Step 5)", () => {
   test.beforeEach(async ({ page }) => {
     await gotoHome(page);
+    await openLayersDrawer(page);
   });
 
   test("verifies Kolkata in city selector, phases, line legend, and station panel", async ({
@@ -21,7 +24,8 @@ test.describe("Kolkata Visual & Interaction QA (Step 5)", () => {
     await expect(panel).toBeVisible();
 
     // 1. Verify Kolkata button is present and click it
-    const kolkataBtn = cityChip(page, "kolkata");
+    await openCityPicker(page);
+    const kolkataBtn = cityOption(page, "kolkata");
     await expect(kolkataBtn).toBeVisible();
     await kolkataBtn.click();
     const toggle = filterToggle(page);

@@ -1,23 +1,23 @@
 "use client";
 
-import React, { useMemo } from "react";
+import React from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { BarChart3, Navigation, Building2, Route, X } from "lucide-react";
+import { BarChart3, Navigation, Building2, Route, X, Layers } from "lucide-react";
 import citiesJson from "@/data/cities.json";
 import { MapSkeleton } from "@/components/map/map-skeleton";
-import { FilterPanel } from "@/components/filters/filter-panel";
 import { MetadataPanel } from "@/components/panels/metadata-panel";
 import { NearestStationPanel } from "@/components/panels/nearest-station-panel";
 import { RouteFinderPanel } from "@/components/routing/route-finder-panel";
-import { MapLegend } from "@/components/legend/map-legend";
 import { MockBanner } from "@/components/ui/mock-banner";
 import { NetworkStats } from "@/components/filters/network-stats";
+import { AppHeader } from "@/components/layout/app-header";
+import { CitySelect } from "@/components/filters/city-select";
 import { EmptyFilterState } from "@/components/map/empty-state";
 import { OsmAttribution } from "@/components/map/osm-attribution";
-import { TimelineSlider } from "@/components/timeline/timeline-slider";
-import { BASEMAP_CONFIG } from "@/lib/map-config";
-import { getDatasetMetadataSummary } from "@/lib/data";
+import { LayersDrawer } from "@/components/layers/layers-drawer";
+import { BottomSheet, type BottomSheetSnap } from "@/components/sheet/bottom-sheet";
+import { StationSearchInput } from "@/components/search/station-search-input";
 import { useMetroStore } from "@/store/use-metro-store";
 
 import { useUrlSync } from "@/hooks/use-url-sync";
@@ -32,7 +32,6 @@ const MapCanvas = dynamic(
 
 export default function HomePage() {
   useUrlSync();
-  const metadataSummary = useMemo(() => getDatasetMetadataSummary(), []);
   const isNearestPanelOpen = useMetroStore((state) => state.isNearestPanelOpen);
   const setIsNearestPanelOpen = useMetroStore(
     (state) => state.setIsNearestPanelOpen
@@ -42,20 +41,31 @@ export default function HomePage() {
     (state) => state.setIsRoutePanelOpen
   );
   const [isCityDirectoryOpen, setIsCityDirectoryOpen] = React.useState(false);
+  const [isLayersOpen, setIsLayersOpen] = React.useState(false);
+  const selectedFeature = useMetroStore((state) => state.selectedFeature);
+  const [sheetSnap, setSheetSnap] = React.useState<BottomSheetSnap>("peek");
+
+  // Snap to half when a feature is selected
+  React.useEffect(() => {
+    if (selectedFeature) {
+      setSheetSnap("half");
+    }
+  }, [selectedFeature]);
 
   return (
     <div className="flex h-dvh w-screen flex-col overflow-hidden bg-slate-950 text-slate-100">
       {/* Header bar */}
-      <header className="relative z-20 flex h-14 shrink-0 items-center justify-between border-b border-slate-800 bg-slate-900/90 px-4 backdrop-blur md:px-6">
+      <AppHeader variant="compact">
         <div className="flex items-center gap-3">
           <div className="flex h-8 w-8 items-center justify-center rounded-lg border border-emerald-500/20 bg-emerald-500/10 text-sm font-bold text-emerald-400">
             IM
           </div>
-          <div>
+          <div className="sr-only sm:not-sr-only sm:block">
             <h1 className="text-sm font-semibold tracking-tight text-slate-100 md:text-base">
               Indian Metro Network Tracker
             </h1>
           </div>
+          <CitySelect />
         </div>
 
         <nav aria-label="Network modes" className="absolute left-1/2 flex -translate-x-1/2 items-center rounded-full border border-slate-700/80 bg-slate-950/80 p-1 shadow-inner backdrop-blur max-lg:static max-lg:translate-x-0">
@@ -114,22 +124,48 @@ export default function HomePage() {
             <BarChart3 className="h-3.5 w-3.5 text-emerald-400" />
             <span className="hidden sm:inline">Compare</span>
           </Link>
+          <button
+            type="button"
+            data-testid="layers-drawer-trigger"
+            aria-controls="layers-drawer"
+            aria-expanded={isLayersOpen}
+            aria-label="Layers and settings"
+            onClick={() => setIsLayersOpen((open) => !open)}
+            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-slate-200 transition-colors hover:bg-slate-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
+            title="Layers and settings"
+          >
+            <Layers className="h-4 w-4 text-emerald-400" />
+          </button>
         </nav>
         <NetworkStats />
-      </header>
+      </AppHeader>
 
       {/* Mandatory Mock Data Warning Banner whenever DATA_SOURCE === "mock" */}
       <MockBanner />
 
       {/* Interactive Map Area with Floating Filter Panel, Legend, and Metadata Panel */}
       <main className="relative h-full w-full flex-1 overflow-hidden">
-        <FilterPanel />
         <MetadataPanel />
         <NearestStationPanel />
         <RouteFinderPanel />
         <EmptyFilterState />
-        <TimelineSlider />
         <MapCanvas className="h-full w-full" />
+        <LayersDrawer open={isLayersOpen} onClose={() => setIsLayersOpen(false)} />
+
+        {/* Universal Transit BottomSheet */}
+        <BottomSheet
+          title="Explore Network"
+          snap={sheetSnap}
+          onSnapChange={setSheetSnap}
+          testId="transit-bottom-sheet"
+        >
+          <div className="space-y-4">
+            <StationSearchInput
+              placeholder="Search stations, lines..."
+              onSelectStation={() => setSheetSnap("half")}
+            />
+          </div>
+        </BottomSheet>
 
         {/* City Directory Modal */}
         {isCityDirectoryOpen && (
@@ -182,19 +218,11 @@ export default function HomePage() {
           </ul>
         </nav>
 
-        {/* Bottom-right unified container: Legend stacked above Attribution */}
-        <div
-          data-testid="bottom-right-container"
-          className="absolute bottom-20 right-2 z-20 flex flex-col items-end gap-1.5 pointer-events-none sm:bottom-2"
-        >
-          <MapLegend />
-          <div className="flex items-center gap-1.5 rounded-full border border-slate-700/80 bg-slate-950/75 px-2 py-1 text-[9px] font-medium text-slate-400 shadow backdrop-blur-sm sm:text-[10px]">
-            <span data-testid="data-last-updated">{metadataSummary.badgeLabel}</span>
-            <span aria-hidden="true" className="text-slate-600">·</span>
-            <span>{BASEMAP_CONFIG.name}</span>
+        {!isLayersOpen && (
+          <div data-testid="bottom-right-container" className="absolute bottom-20 right-2 z-20 sm:bottom-2">
+            <OsmAttribution />
           </div>
-          <OsmAttribution />
-        </div>
+        )}
       </main>
     </div>
   );

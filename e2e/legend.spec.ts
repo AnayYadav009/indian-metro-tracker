@@ -7,11 +7,13 @@ import {
   legendContent,
   legendStatus,
   legendStation,
+  openLayersDrawer,
 } from "./helpers";
 
 test.describe("Map Legend and Data Source Status", () => {
   test.beforeEach(async ({ page }) => {
     await gotoHome(page);
+    await openLayersDrawer(page);
   });
 
   test("verifies mock banner is hidden when real data pipeline is active", async ({

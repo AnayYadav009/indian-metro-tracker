@@ -47,6 +47,25 @@ export async function goToMap(page: Page): Promise<void> {
   await page.goto("/");
 }
 
+export async function openLayersDrawer(page: Page): Promise<void> {
+  const drawer = page.getByTestId("layers-drawer");
+  if (!(await drawer.isVisible())) {
+    await page.getByTestId("layers-drawer-trigger").click();
+  }
+}
+
+export function layersDrawer(page: Page): Locator {
+  return page.getByTestId("layers-drawer");
+}
+
+export function layersDrawerTrigger(page: Page): Locator {
+  return page.getByTestId("layers-drawer-trigger");
+}
+
+export async function closeLayersDrawer(page: Page): Promise<void> {
+  await page.getByRole("button", { name: "Close layers and settings" }).click();
+}
+
 // ----------------------------------------------------------------------------
 // Filter Panel & City Selection
 // ----------------------------------------------------------------------------
@@ -57,6 +76,10 @@ export function filterPanel(page: Page): Locator {
 
 export function filterToggle(page: Page): Locator {
   return page.getByTestId("collapse-filter-btn");
+}
+
+export function mapLoadingStatus(page: Page): Locator {
+  return page.getByRole("status").filter({ hasText: "Updating map" });
 }
 
 export async function collapseFilters(page: Page): Promise<void> {
@@ -73,17 +96,32 @@ export async function expandFilters(page: Page): Promise<void> {
   }
 }
 
-export function cityChip(page: Page, cityId: string): Locator {
+export function cityOption(page: Page, cityId: string): Locator {
   return page.getByTestId(`city-select-${cityId}`);
 }
 
-export function allCityChips(page: Page): Locator {
+export function cityPickerTrigger(page: Page): Locator {
+  return page.getByTestId("city-picker-trigger");
+}
+
+export function cityPickerSearch(page: Page): Locator {
+  return page.getByTestId("city-picker-search");
+}
+
+export async function openCityPicker(page: Page): Promise<void> {
+  const trigger = cityPickerTrigger(page);
+  if ((await trigger.getAttribute("aria-expanded")) !== "true") {
+    await trigger.click();
+  }
+}
+
+export function allCityOptions(page: Page): Locator {
   return page.locator('[data-testid^="city-select-"]');
 }
 
 export async function selectCity(page: Page, cityId: string): Promise<void> {
-  const chip = cityChip(page, cityId);
-  await chip.click();
+  await openCityPicker(page);
+  await cityOption(page, cityId).click();
 }
 
 export function statusToggle(
@@ -234,6 +272,18 @@ export function routeSameStationNotice(page: Page): Locator {
   return page.locator('[data-testid="route-same-station-notice"]');
 }
 
+export function routeFareCard(page: Page): Locator {
+  return page.locator('[data-testid="route-fare-summary-card"]');
+}
+
+export function routeFareDetails(page: Page): Locator {
+  return page.locator('[data-testid="route-fare-details"]');
+}
+
+export function routeTimingsNotice(page: Page): Locator {
+  return page.locator('[data-testid="route-timings-unverified-notice"]');
+}
+
 export async function openRouteFinder(page: Page): Promise<void> {
   await routeFinderButton(page).click();
 }
@@ -312,6 +362,10 @@ export function noOperationalMessage(page: Page): Locator {
 
 export function toggleConstruction(page: Page): Locator {
   return page.locator('[data-testid="toggle-construction"]');
+}
+
+export function walkDirectionsLink(parent: Page | Locator): Locator {
+  return parent.locator('[data-testid="walk-directions-link"]');
 }
 
 export function notYetOpenBadge(parent: Page | Locator): Locator {

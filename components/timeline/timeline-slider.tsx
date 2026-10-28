@@ -20,7 +20,7 @@ import {
   MapPinOff,
 } from "lucide-react";
 
-export function TimelineSlider() {
+export function TimelineSlider({ embedded = false }: { embedded?: boolean }) {
   const selectedYear = useMetroStore((state) => state.selectedYear);
   const isPlaying = useMetroStore((state) => state.isPlayingTimeline);
   const includeFuture = useMetroStore((state) => state.includeFuture);
@@ -168,9 +168,9 @@ export function TimelineSlider() {
       data-testid="timeline-slider-container"
       role="region"
       aria-label="Network timeline scrubber"
-      className="absolute bottom-20 left-1/2 z-30 w-[94vw] max-w-6xl -translate-x-1/2 rounded-xl border border-slate-800 bg-slate-950/85 px-3 py-2 text-slate-100 shadow-2xl backdrop-blur-md transition-all sm:bottom-4"
+      className={`${embedded ? "relative w-full max-w-none" : "absolute bottom-20 left-1/2 z-30 w-[94vw] max-w-6xl -translate-x-1/2 shadow-2xl sm:bottom-4"} rounded-xl border border-slate-800 bg-slate-950/85 px-3 py-2 text-slate-100 backdrop-blur-md transition-all`}
     >
-      <div className="flex flex-col gap-1.5 lg:flex-row lg:items-center lg:gap-3">
+      <div className={`${embedded ? "flex flex-col gap-1.5" : "flex flex-col gap-1.5 lg:flex-row lg:items-center lg:gap-3"}`}>
         <div className="flex items-center justify-between gap-2 lg:shrink-0">
           <div className="flex items-center gap-1.5">
             <button
