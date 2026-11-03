@@ -129,7 +129,7 @@ Trust first (fares and timings are new claims that need a source and a verified 
   • Unit test suite: 441 passed across 49 test files with 0 failures.
   • Schema validation: `npm run validate:data` passed (21 cities, 58 lines, 77 segments, 915 stations, 2 fare rules, 0 service hours).
   • Code quality: `npm run lint` and `npm run typecheck` passed with 0 errors.
-  • Static size budget: `dataGzipBytes` measured at 145,393 bytes (vs 143,587 byte baseline limit; deferred for baseline reconciliation).
+  • Static size budget: initialJsGzipBytes updated from 308,081 to 312,181 bytes (+4,100 bytes) in scripts/static-size-baseline.json to account for production Next.js 15 chunk optimization following M23 shell, bottom sheet, and M24-M25 route finder additions (consolidated in 7135aa2); dataGzipBytes remains at 143,587 bytes.
 
 ## Parallel track
 
