@@ -71,3 +71,22 @@ Always-on rules for every agent session. If you have an older version of this fi
 - Do not claim verification you did not run. Paste real command output or counts.
 - Report real unit and e2e counts, build page count, `validate:data` result and `audit:data` summary after every milestone.
 - If a path or definition is ambiguous (for example, what counts as Tier 1), report it instead of guessing.
+
+
+## Code and UI Quality (Skills Integration)
+
+### 1. Minimal Complete Change & Code Hygiene (`ponytail`, `concise-coder`, `code-pruner`)
+- **Smallest complete change**: Solve the core problem with the least new code. Deletion beats addition. Never introduce speculative abstractions, wrappers, config options, or "for later" code.
+- **Blast radius mapping**: Before editing shared utilities or components, inspect all callers, tests, fixtures, and exports. Fix root causes once at the source rather than patching symptoms at multiple call sites.
+- **Net-line reduction on refactors**: Refactored files must be leaner than their baseline. Prune unused exports, obsolete schemas, and dead code.
+- **Comment hygiene**: Comment only the non-obvious "why" in one line. If a temporary shortcut is required, document it as `shortcut: <limit>, <when to upgrade>`.
+
+### 2. Safe UI Refactoring & Layout (`safe-ui-refactor`, `ui-declutter`, `frontend-design`)
+- **Selector lock**: Preserve all `data-testid`, `aria-label`, `role`, placeholder, and button text asserted in `__tests__/` and `e2e/`. Never break E2E selectors during redesigns.
+- **State & URL sync integrity**: Preserve Zustand store contracts in `store/use-metro-store.ts` and serialization invariants in `hooks/use-url-sync.ts`.
+- **Canvas-first layout**: Keep >80% of the map canvas unobstructed on both desktop and mobile viewports.
+- **Zero overlapping panels**: Never stack floating modals or drawers. Use a single-slot contextual drawer (`LayersDrawer`) and unified responsive bottom sheet (`BottomSheet`).
+
+### 3. React Performance & Static Export (`vercel-react-best-practices`)
+- **Static export fidelity**: All pages and routing must remain fully compatible with Next.js static export (`output: "export"`), zero-backend execution, and no unapproved runtime network requests.
+- **Render performance**: Memoize heavy route, search, and geometry operations; avoid inline component definitions in render trees; keep filter and layer updates strictly under 100 ms.
