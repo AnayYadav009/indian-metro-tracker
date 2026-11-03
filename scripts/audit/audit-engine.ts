@@ -46,6 +46,7 @@ export interface BaselineEntry {
   rule: string;
   subject: string;
   reason: string;
+  review_by?: string;
 }
 
 export interface KnownDefectEntry {
