@@ -62,11 +62,11 @@ These stretches represent sanctioned, under-construction, or planned transit cor
 
 ## 5. Undated Operational Stations (588 Stations with `null` `opened_on`)
 
-- **Context**: 588 operational stations across the 8 primary cities lack an exact `opened_on` date in `stations.geojson`.
-- **Owner Decision Needed**:
-  - Decide whether to bulk-backfill station `opened_on` dates from known line opening packages where the mapping between opening stages and stations is unambiguous, or keep them `null` and baseline them with historical explanations.
-- **Suggested Next Step**: Pull forward `ordered_station_ids` (planned for M18/M10.3) to allow unambiguous sequential mapping from line opening stages to stations.
-- **Severity**: **Low** (informational, does not block routing or map rendering).
+- **Context**: 588 operational stations across the primary networks lack an exact `opened_on` date in `stations.geojson`.
+- **Audit Impact**: These 588 `operational-station-no-opened-on` findings constitute the bulk of the 630 blocking pending-rule findings and are the primary reason `npm run audit:data` exits with code 1 in local runs and CI.
+- **Owner Decision (2026-11-04, Decision D3)**: Baseline them with a documented accepted rule in `data/audit-baseline.json` (Option B), rather than blocking CI or hand-editing without official sources.
+- **Suggested Next Step**: Implement the accepted baseline entry for `operational-station-no-opened-on` in Stage 4 with an explicit review-by date.
+- **Severity**: **Medium** (blocks CI audit gate; operational data remains unaffected).
 
 ---
 
@@ -97,23 +97,22 @@ The audit engine (`scripts/audit/audit-engine.ts`) implements three hardcoded ex
 
 ---
 
-## 8. Data Audit Exit Code vs 88 Unreviewed Warnings Discrepancy
+## 8. Data Audit Exit Code vs Blocking Pending Findings
 
-- **Context**: Running `npm run audit:data` exits with code 1 despite zero enforced errors, because 18 unbaselined warnings remain (15 coverage gaps + 3 minor length deltas).
-- **Owner Decision Needed**: Decide whether coverage-gap findings should be accepted in `data/audit-baseline.json` so that CI passes with exit code 0, or remain unbaselined warnings yielding exit code 1 until M10 signoff.
-- **Suggested Next Step**: Add reviewed baseline entries for known coverage gaps or configure CI to use `AUDIT_WARNINGS=report-only`.
-- **Severity**: **Medium** (affects automated CI pipelines).
+- **Context**: Running `npm run audit:data` exits with code 1 due to 630 blocking pending-rule findings (588 `operational-station-no-opened-on`, 40 `segment-sparse-vertices`, 1 `city-km-vs-reference` in Bhopal, and 1 `line-terminal-missing` in Gurugram), 2 errors, and 81 unreviewed warnings.
+- **Owner Decision (2026-11-04)**: Baseline the 588 undated operational stations under Decision D3 (Option B) in Stage 4; keep Bhopal (PRE-01) and Gurugram (PRE-02) as tracked pending items pending surveyed alignments or owner exemptions.
+- **Suggested Next Step**: Baseline the accepted undated stations in Stage 4 to clear the exit code 1 blocker in CI.
+- **Severity**: **High** (blocks automated CI and Pages deployment).
 
 ---
 
-## 9. Stale Baseline Entries (14)
+## 9. Stale Baseline Entries (33)
 
-- **Context**: `data/audit-baseline.json` contains 14 entries that no longer match any active warning or defect in the compiled dataset:
-  - 7 accepted warnings (e.g., Delhi Pink station gap, Kolkata Yellow dates, Noida Aqua segment gaps).
-  - 6 unreviewed warnings (e.g., Delhi Grey hooks, Chennai Corridor 5 hook).
-  - 1 known defect (Defect F-06 hook on Pune Line 3, cleanly resolved in commit `f5e9a46`).
-- **Owner Decision Needed**: Approve pruning stale entries from `data/audit-baseline.json`.
-- **Suggested Next Step**: Prune stale entries during M10.2 per-city defect triage.
+- **Context**: `data/audit-baseline.json` contains **33 stale entries** (19 accepted warnings and 14 unreviewed warnings) that no longer match any active warning or defect in the compiled dataset:
+  - 19 stale accepted warnings across Delhi, Kolkata, Mumbai, Noida, and Pune (e.g., resolved future date/record notices, suspect default elevated layouts, and segment gaps).
+  - 14 stale unreviewed warnings across Delhi, Chennai, and Mumbai (e.g., resolved hooks, far station notices, and length deltas).
+- **Owner Decision Needed**: Approve pruning stale entries from `data/audit-baseline.json` during Stage 4.
+- **Suggested Next Step**: Prune all 33 stale entries matching zero active findings during Stage 4 baseline reconciliation.
 - **Severity**: **Low** (cleanliness).
 
 ---
@@ -127,27 +126,26 @@ The audit engine (`scripts/audit/audit-engine.ts`) implements three hardcoded ex
 
 ---
 
-## 11. Patna Operational Network and Routing Guard Reconciliation
+## 11. Patna Operational Network and Routing (Resolved)
 
 - **Context & Data Reconciled**:
   - `data/lines.json`: Contains 1 line (`pat-blue`, "Blue Line (Corridor 2)", operator `PMRC`).
   - `data/reference/patna.json`: Declares 1 line (`pat-blue`) with status `operational`, 5 operational stations, 5.28 km operational length, and two staged openings: Priority Corridor Stage 1 (New ISBT – Bhootnath, 3 stations, `opened_on: 2025-10-06`) and Stage 2 (Bhootnath – Malahi Pakri, 2 stations, `opened_on: 2026-07-02`).
   - `data/stations.geojson`: Contains 5 operational stations on `pat-blue` (`New ISBT`, `Zero Mile`, `Bhootnath` opened `2025-10-06`; `Khemnichak`, `Malahi Pakri` opened `2026-07-02`).
-  - `/city/patna/`: Displays 5.3 km operational across 1 line and 5 operational stations (opening years 2025 – 2026).
-  - `/compare/`: Displays Patna as Tier 2 with 1 line, 5 stations, 5.3 operational km, and opened in 2025.
-  - Inconsistency: The routing guard (`lib/routing/city-guard.ts` and `scripts/verify-routing.ts`) reported `"no operational lines to verify"` due to an early hardcoded guard condition, even though Patna's 1 operational line (`pat-blue`) and 5 stations are fully declared and consistent across all dataset files.
-- **Decision**: Patna Metro routing enabled on Blue Line (`pat-blue`). It passed all topological and geometric checks (5 operational stations, 0 gaps > 5 km, max projection 12 m, terminals matched).
+  - `/city/patna/`: Displays 5.3 km operational across 1 line and 5 operational stations.
+  - `/compare/`: Displays Patna as Tier 2 with 1 line, 5 stations, 5.3 operational km.
+- **Resolution**: Patna Metro routing enabled on Blue Line (`pat-blue`). It passed all topological and geometric checks (5 operational stations, 0 gaps > 5 km, max projection 12 m, terminals matched).
 - **Status**: **Resolved** (routing enabled).
 
 ---
 
-## 12. Station-Count Discrepancies Between Routing Table and Audit Summary Tables
+## 12. Station-Count Discrepancies Between Routing Table and Audit Summary Tables (Open)
 
-- **Context**: The data audit CLI summary (`scripts/audit/consistency-report.ts`) counts *all* stations associated with a city (including under-construction, planned, and out-of-scope infill nodes), whereas the routing table (`scripts/verify-routing.ts` and `lib/routing/graph.ts`) strictly counts *operational* stations (`properties.status === "operational"`):
+- **Context**: Patna routing is resolved, but station-count discrepancies remain open between the data audit CLI inventory summary (`scripts/audit/consistency-report.ts`, counting all compiled stations in `stations.geojson`) and the routing table (`scripts/verify-routing.ts` and `lib/routing/graph.ts`, counting strictly operational routable stations):
   - **Mumbai**: Audit summary reports 88 stations; routing table counts 77 operational stations (11 stations are under construction across Line 2B and Line 3 extensions).
   - **Ahmedabad**: Audit summary reports 54 stations; routing table counts 53 operational stations (1 station under construction / non-operational).
   - **Bengaluru**: Audit summary reports 87 stations; routing table counts 83 operational stations (4 stations under construction, e.g. Jayadeva Interchange u/c on Yellow/Pink).
-  - **Delhi**: Audit summary reports 240 stations; routing table counts 231 operational stations (9 stations are under construction Phase 4 extensions or unverified infills).
+  - **Delhi**: Audit summary reports 245 stations; routing table counts 231 operational stations (14 stations are under construction Phase 4 extensions or unverified infills).
 - **Decision**: Maintain strict separation between dataset inventory counts (all stations in `stations.geojson`) and operational transit graph counts (only `status === "operational"` with verified track edges).
 - **Suggested Next Step**: Add a subtitle or explanatory column in documentation/audit tables explicitly distinguishing "Total Stations Compiled" from "Operational Routable Stations".
 - **Severity**: **Low** (clarification and documentation alignment).
@@ -171,9 +169,11 @@ Explicitly skipped for now: live train tracking and real-time arrivals (no free 
 - **Resolved 2026-10-28:** M21 Tier 1 cities are Delhi, Mumbai, Bengaluru, Chennai, Kolkata, and Hyderabad (`TIER_1_CITY_IDS` in `lib/compare-stats.ts`).
 - Fare and timing sources: for each Tier 1 city, identify the operator's official fare and first/last train publication. Cities without one get the fare feature hidden.
 - Provenance backfill (M19 implemented): All 21 cities and 58 lines currently default to `unverified` status with `source_url: null` and `last_verified: null`. No real-world values were invented. Official operator URLs and verification dates will be progressively sourced starting in M21 (Tier 1 fare and timing data).
-- M22 design brief requires owner sign-off before M23 starts.
+- M22 design brief: Owner sign-off on recommendations Q1–Q10 recorded 2026-10-28.
 - Golden Line (renamed from Silver): Alignment geometry exists in `data/segments.geojson` (`del-golden-seg-01` construction, `del-golden-branch-01` planned) with 4 stations in `data/stations.geojson` and line entry in `data/lines.json`. Closed in M10.2 (F-02). Note: earlier note stating "not yet onboarded" was obsolete.
-- Live site: GitHub Pages deploy failed with 404 on 2026-10-17. Treated as a prerequisite for the public plan. Recheck and record the real HTTP status.
+- Live site: GitHub Pages 404 root cause confirmed (2026-11-03):
+  1. GitHub Actions failure: recent runs on master (e.g. 40699663826) fail at 'Run data audit' step (exit code 1 due to 630 blocking pending findings and 2 pending errors). Static export deployment is never reached.
+  2. Repository setting disabled: GitHub REST API confirms 'has_pages: false' for AnayYadav009/indian-metro-tracker. Pages must be enabled with source 'GitHub Actions' in repo Settings -> Pages.
 - M19 observed baseline: 341 unit tests pass (up from 328), 150 e2e tests pass (up from 142), 28 static build pages, `validate:data` passes (0 errors), `audit:data` exit 1 (0 enforced errors, 2 pending-rule errors, 21 unbaselined warnings, 14 coverage gaps).
 - Pipeline regeneration verification (M19.4): `npm run pipeline:build` runs `build-real-data.ts`. When run offline against cached `data/raw`, it regenerates identical data facts. Generated data is not committed as part of audit verification. Array ordering in `data/cities.json` and `data/lines.json` was restored to exact master order in M19.4.
 - M19 Provenance audit and test artifacts in `reports/`: `audit:data` and visual QA tests generate/touch tracked files under `reports/` (e.g. `reports/data-audit/*.png`), which must be reverted with `git checkout -- reports/` after running to keep git working trees clean.

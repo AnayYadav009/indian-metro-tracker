@@ -11,6 +11,11 @@ Status: planning. Paths below marked TBD are confirmed during M18.9.
 3. A simpler interface.
 
 Prerequisite (not part of this plan): the site is live, fast and mobile-friendly.
+
+### GitHub Pages Status and 404 Root Cause (Confirmed 2026-11-03)
+The GitHub Pages 404 on `https://anayyadav009.github.io/indian-metro-tracker/` is confirmed by inspection of GitHub Actions and repository settings:
+1. **GitHub Actions pipeline failure**: All recent runs on `master` (e.g. run `40699663826`) failed at the `Run data audit` step (`npm run audit:data` exit code 1 due to 630 blocking pending-rule findings and 2 errors). The workflow short-circuited before reaching `Build static site`, `Upload Pages artifact`, or the `deploy` job.
+2. **Repository Pages setting disabled**: The GitHub REST API confirms `has_pages: false` on repository `AnayYadav009/indian-metro-tracker`. GitHub Pages has not yet been enabled or configured with "GitHub Actions" as its deployment source in repository Settings -> Pages.
 Skipped: live tracking and real-time arrivals.
 Later: Tier 2 city onboarding, Hindi and regional languages, PWA/offline, WhatsApp link previews.
 
@@ -54,9 +59,9 @@ Trust first (fares and timings are new claims that need a source and a verified 
 - Outcome M21b (Delhi): Sourced real fare table from official page https://delhimetrorail.com/fare. Loaded 1 FareRule (`del-fare-dmrc`) covering 8 lines (`del-red`, `del-yellow`, `del-blue`, `del-green`, `del-violet`, `del-pink`, `del-magenta`, `del-grey`) with 6 distance bands [0-2 km: Rs 11, 2-5 km: Rs 21, 5-12 km: Rs 32, 12-21 km: Rs 43, 21-32 km: Rs 54, >32 km: Rs 64]. Status is `unverified` because official page lacks a published effective date (`effective_from`). ServiceHours: 0 loaded (timings only available via interactive search, no static readable timetables). Airport Express Line excluded (station-to-station matrix). Golden Line excluded (0 operational segments). Sourced evidence documented in `docs/SOURCING-LOG.md`. 48 unit tests pass. Real fare feature remains hidden for Delhi per gating rules.
 - Outcome M21c (Delhi Re-capture & Model Updates): Re-captured official fare evidence with language switch to English in a unified session. Recorded rendered English DOM (76,249 bytes, SHA-256 `1dacc1...`), backend API response (1,533 bytes, SHA-256 `8838c5...`), and Airport Express DOM (81,573 bytes, SHA-256 `cc640a...`). Scripted comparison verified all 6 distance bands against `data/fares.json`. Enacted model changes: added required `day_scope` ("mon_sat" | "sun_holiday" | "all"), made `effective_from` optional for verified rules when accompanied by an explanatory note, made test 48 dynamic across real unverified lines, and verified `del-fare-dmrc` as `status: "verified"`. ServiceHours remain 0 (timings only queryable via interactive widget). Delhi fare feature enabled for DMRC standard lines. Fares labeled with `day_scope: "mon_sat"`.
 
-**Outcome M21d (Hyderabad):** Official LTMRHL fare chart loaded as `hyd-fare-ltmrhl`, verified against the published 2025-05-24 schedule.
+**Outcome M21d (Hyderabad):** Official LTMRHL fare chart loaded as `hyd-fare-ltmrhl`, verified against the published 2025-05-24 schedule. Bengaluru (station-count slabs) and Chennai (51×51 matrix) have been sourced from official documents but are not loadable under the current `FareRule` schema; Mumbai has no consolidated official fare table found in official sources; Kolkata uses per-corridor origin-destination matrices.
 
-**Outcome M21e-1:** Station-count fare basis schema, validator, calculator, and tests added.
+**Outcome M21e-1 (Schema Only):** Station-count fare basis schema, validator, calculator, and unit tests added. Production data (`data/fares.json`) remains distance-band only; M21e-1 is schema-only with zero live station-count fare rules loaded.
 
 **Coverage audit (2026-10-28):** `data/fares.json` has verified rules for Delhi and Hyderabad only; Mumbai, Bengaluru, Chennai, and Kolkata have no loaded fare rules. `data/timings.json` is empty. The owner approved retaining distance-band and station-count fare bases and leaving matrix-only tariffs unpriced; no approximation or new fare values were added. Delhi Airport Express, CMRL matrix routes, and matrix-priced Kolkata routes remain unpriced unless a tariff is independently representable by an existing supported basis and verified from an official source. BMRCL and Mumbai remain unpriced pending reproducible official fare evidence. Timing features remain unavailable until official, reviewable terminal schedules are sourced. This resolves the model-policy decision but not Tier 1 coverage.
 
@@ -128,4 +133,48 @@ Trust first (fares and timings are new claims that need a source and a verified 
 
 ## Parallel track
 
-M8 (gate), M8.1 (rules), M9 (CI static export validation), M10 / M10.3 (Tier 1 visual QA). Needs owner decisions on Bhopal/Gurugram exemptions, Delhi Pink Phase 4 stations and the audit exit-code policy.
+- **M8 Gate & M8.1 Rules**: Rules defined; live closure blocked by 630 pending findings.
+- **M9 Data Foundation v2 & CI Validation**: Real scope is CI static export validation (prerendered SSG export verification, size budget baseline enforcement), currently incomplete by owner decision (static size budget baseline and audit gates keep automated CI failing).
+- **M10 / M10.3 (Tier 1 visual QA)**: Needs visual QA completion across Tier 1 cities. Needs owner decisions on Bhopal/Gurugram exemptions, Delhi Pink Phase 4 stations, and the audit exit-code policy.
+
+## Milestone Ledger (Verified Commits M1–M26)
+
+Verified from Git history on `master` at HEAD `7135aa2`. Commits marked **NOT FOUND** were squashed or unmerged and are not present on `master`.
+
+| Milestone | Milestone Name | Commit(s) on `master` | Previous Ledger Hashes (if not on master) | Scope & Verification Notes |
+|:---|:---|:---|:---|:---|
+| **M1** | Project setup and architecture | `2ec73c8` | — | Initial boilerplate, Tailwind, Next.js static export |
+| **M2** | Map foundation and attribution | `d968c2a` | — | MapLibre GL canvas, OpenFreeMap basemap, ODbL attribution |
+| **M3** | Core data model and validator | `3fa03ff` | — | Zod schemas, data loader, dataset validator |
+| **M4** | Map rendering and filters | `8c2c4f3` | — | WebGL layer styling, Zustand store, filter UI |
+| **M5** | Hover tooltips & inspect panel | `57b36bc` | — | Metadata inspector panels, URL hydration |
+| **M6** | Non-color legend & status bar | `5decfc2` | — | Accessible non-color legend, live stats bar |
+| **M7** | Overpass pipeline & Tier 1 data | `2987e69`, `b56519d` | — | Overpass pipeline, real Tier 1 datasets loaded |
+| **M8** | Data audit and repair | `4507954` | — | Shared commit with M9/M10; audit engine built |
+| **M8.1** | Audit blind-spot closure | `4f25618`, `0a42643` | — | Shared commit `0a42643` with M21e-1; fail-closed rules |
+| **M9** | CI static export validation | `4507954` | — | Shared commit with M8/M10; real scope: CI static export validation (incomplete by owner decision) |
+| **M10** | Tier 1 completion | `4507954`, `d60d022` | — | Shared commit `4507954`; repaired in `d60d022` |
+| **M10.1** | Geometry cleanup | `4d41603` | — | Twin-track merge, hairpin/spur elimination |
+| **M10.2** | Per-city defect repair | `5a806ed`, `3edb031`, `1067726`, `d065edf`, `36f22e2` | — | City-by-city defect repairs (Delhi, Mumbai, Bengaluru, Kolkata, Ahmedabad) |
+| **M10.3** | Metadata integrity & links | `c118bf3`, `f91c8a9` | — | Cross-network links and metadata integrity |
+| **M11** | Report-an-error button | `b776b0e` | — | Prefilled GitHub issue reporting |
+| **M12** | Interchange highlighting | `2d69e82` | — | Interchange clusters, white-ring styling |
+| **M13** | Timeline slider | `5decfc2`, `3117dcd`, `aa852d0` | — | Inaugurated/opened year scrubber |
+| **M13.1** | UX hardening | `aa852d0`, `874034c`, `a17cdd7` | — | Map and panel mobile UX hardening |
+| **M14** | Stats and comparison | `dc6ee54`, `c53574e` | — | Static `/compare/` dashboard |
+| **M15** | Tier 2 onboarding | `21c34c8`, `b86a9b7` | — | 12 Tier 2 candidate cities onboarded |
+| **M16** | Nearest station | `a58cb90`, `05ca6f3` | — | Geolocation lookup and fallback |
+| **M17** | City pages and SEO | `50f9cb8`, `e1680cc`, `2ef19d9` | — | 21 static `/city/[id]/` pages and SEO metadata |
+| **M18** | Route finder | `8d201bd`, `66534b6`, `3e607d7` | — | Client-side Dijkstra route finder |
+| **M18.9** | Plan & usability prep | `59ef21f` | — | Usability plan and baseline prep |
+| **M19** | Provenance layer | `cb865c1`, `c48376b`, `b53bdf6` | — | Line/city provenance schema, footer component |
+| **M20** | Report-an-error expansion | `d0bf432` | — | Route and city diagnostics in error reporting |
+| **M21** | Fare and timing model | `4f05230`, `e5882ae`, `a26c920`, `cac68d6` | — | Delhi (`del-fare-dmrc`) and Hyderabad (`hyd-fare-ltmrhl`) loaded |
+| **M21e-1** | Station-count fare schema | `9747966`, `0a42643` | — | Shared commit `0a42643` with M8.1; schema-only |
+| **M22** | UI design brief | `b0f434c`, `542a51e`, `1937611` | — | Design brief; Q1–Q10 signed off by owner 2026-10-28 |
+| **M23.0** | Decouple E2E tests | `41677a5`, `d4bee83` | — | Decouple 23 E2E specs into `e2e/helpers.ts` |
+| **M23.1** | Trust copy fixes & hygiene | `ebe8482` | `7042bfd` (**NOT FOUND** — unmerged branch `m23-1-copy-fixes`) | User-facing copy cleanup and allowlist hygiene |
+| **M23** | UI shell implementation | `b3815f8` | — | Unified AppHeader, city picker, BottomSheet, LayersDrawer |
+| **M24** | Route finder v2 | `5766359` | — | Sourced fare cards, transfers, intermediate stops |
+| **M25** | Nearest station walking links | `9da5847` | — | Navigation walking links out to Google Maps |
+| **M26** | Acceptance pass | `d7b33eb`, `7135aa2` | `e4d95f4`, `929e636`, `3913df9`, `348d712`, `d8ff54f`, `749b603`, `aae4172` (**NOT FOUND** on `master` — consolidated into `7135aa2`) | Acceptance pass and master consolidation |
