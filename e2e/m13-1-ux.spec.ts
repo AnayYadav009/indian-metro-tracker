@@ -1,3 +1,4 @@
+import citiesJson from "../data/cities.json";
 import { test, expect } from "@playwright/test";
 import {
   gotoHome,
@@ -15,6 +16,7 @@ import {
   openLayersDrawer,
   filterSearchInput,
   mapLoadingStatus,
+  cityPickerTrigger,
 } from "./helpers";
 
 async function expectSelectedAnchorOutsidePanel(
@@ -122,6 +124,7 @@ test.describe("M13.1 map and panel UX", () => {
     test.setTimeout(120_000);
     await gotoHome(page);
     await openCityPicker(page);
+    const cities = citiesJson;
     const cityIds = await allCityOptions(page).evaluateAll(
       (buttons) =>
         buttons
@@ -131,7 +134,21 @@ test.describe("M13.1 map and panel UX", () => {
     );
 
     for (const cityId of cityIds) {
+      const city = cities.find((c) => c.id === cityId);
       await selectCity(page, cityId);
+
+      // Deterministic signal 1: Dropdown closed after selection
+      await expect(cityPickerTrigger(page)).toHaveAttribute("aria-expanded", "false");
+
+      // Deterministic signal 2: Trigger displays the selected city name in aria-label
+      if (city) {
+        await expect(cityPickerTrigger(page)).toHaveAttribute(
+          "aria-label",
+          `Select city. Current: ${city.name}`
+        );
+      }
+
+      // Deterministic signal 3: Map camera movement completes and city network renders
       await page.waitForFunction((id) => {
         const map = (window as any)._mapLibreInstance;
         if (!map || map.isMoving()) {
