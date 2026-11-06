@@ -128,7 +128,7 @@
       "color": "#FFD100",
       "stations_not_published": false,
       "references": [
-        "https://chennaimetrorail.org",
+        "https://chennaimetrorail.org/wp-content/uploads/2026/10/Fare-Table.pdf",
         "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/",
         "https://www.dtnext.in/news/chennai/commercial-metro-operations-from-poonamallee-to-vadapalani-will-commence-from-4-pm-on-sunday"
       ]
@@ -145,8 +145,7 @@
       "expected_completion": "2027",
       "color": "#702082",
       "references": [
-        "https://chennaimetrorail.org",
-        "https://pib.gov.in/PressReleasePage.aspx?PRID=2061557"
+        "https://chennaimetrorail.org"
       ],
       "city_id": "chennai"
     },
@@ -173,8 +172,7 @@
       "color": "#ED1C24",
       "stations_not_published": true,
       "references": [
-        "https://chennaimetrorail.org",
-        "https://pib.gov.in/PressReleasePage.aspx?PRID=2061557"
+        "https://chennaimetrorail.org"
       ],
       "city_id": "chennai"
     }
@@ -472,8 +470,9 @@
         "che-corridor-4"
       ],
       "references": [
-        "https://chennaimetrorail.org",
-        "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/"
+        "https://chennaimetrorail.org/wp-content/uploads/2026/10/Fare-Table.pdf",
+        "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/",
+        "https://www.dtnext.in/news/chennai/commercial-metro-operations-from-poonamallee-to-vadapalani-will-commence-from-4-pm-on-sunday"
       ],
       "last_verified": "2026-10-08"
     },
@@ -482,8 +481,9 @@
       "status": "operational",
       "opened_on": "2026-10-11",
       "references": [
-        "https://chennaimetrorail.org",
-        "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/"
+        "https://chennaimetrorail.org/wp-content/uploads/2026/10/Fare-Table.pdf",
+        "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/",
+        "https://www.dtnext.in/news/chennai/commercial-metro-operations-from-poonamallee-to-vadapalani-will-commence-from-4-pm-on-sunday"
       ]
     },
     "Poonamallee Bus Stand": {
@@ -491,8 +491,9 @@
       "status": "operational",
       "opened_on": "2026-10-11",
       "references": [
-        "https://chennaimetrorail.org",
-        "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/"
+        "https://chennaimetrorail.org/wp-content/uploads/2026/10/Fare-Table.pdf",
+        "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/",
+        "https://www.dtnext.in/news/chennai/commercial-metro-operations-from-poonamallee-to-vadapalani-will-commence-from-4-pm-on-sunday"
       ]
     },
     "Poonamallee Government Hospital": {
@@ -500,8 +501,9 @@
       "status": "operational",
       "opened_on": "2026-10-11",
       "references": [
-        "https://chennaimetrorail.org",
-        "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/"
+        "https://chennaimetrorail.org/wp-content/uploads/2026/10/Fare-Table.pdf",
+        "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/",
+        "https://www.dtnext.in/news/chennai/commercial-metro-operations-from-poonamallee-to-vadapalani-will-commence-from-4-pm-on-sunday"
       ]
     },
     "Karayanchavadi": {
@@ -509,8 +511,9 @@
       "status": "operational",
       "opened_on": "2026-10-11",
       "references": [
-        "https://chennaimetrorail.org",
-        "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/"
+        "https://chennaimetrorail.org/wp-content/uploads/2026/10/Fare-Table.pdf",
+        "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/",
+        "https://www.dtnext.in/news/chennai/commercial-metro-operations-from-poonamallee-to-vadapalani-will-commence-from-4-pm-on-sunday"
       ]
     },
     "Kumananchavadi": {
@@ -518,8 +521,9 @@
       "status": "operational",
       "opened_on": "2026-10-11",
       "references": [
-        "https://chennaimetrorail.org",
-        "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/"
+        "https://chennaimetrorail.org/wp-content/uploads/2026/10/Fare-Table.pdf",
+        "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/",
+        "https://www.dtnext.in/news/chennai/commercial-metro-operations-from-poonamallee-to-vadapalani-will-commence-from-4-pm-on-sunday"
       ]
     },
     "Kattupakkam": {
@@ -527,8 +531,9 @@
       "status": "operational",
       "opened_on": "2026-10-11",
       "references": [
-        "https://chennaimetrorail.org",
-        "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/"
+        "https://chennaimetrorail.org/wp-content/uploads/2026/10/Fare-Table.pdf",
+        "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/",
+        "https://www.dtnext.in/news/chennai/commercial-metro-operations-from-poonamallee-to-vadapalani-will-commence-from-4-pm-on-sunday"
       ]
     },
     "Iyyappanthangal": {
@@ -536,8 +541,9 @@
       "status": "operational",
       "opened_on": "2026-10-11",
       "references": [
-        "https://chennaimetrorail.org",
-        "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/"
+        "https://chennaimetrorail.org/wp-content/uploads/2026/10/Fare-Table.pdf",
+        "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/",
+        "https://www.dtnext.in/news/chennai/commercial-metro-operations-from-poonamallee-to-vadapalani-will-commence-from-4-pm-on-sunday"
       ]
     },
     "Thelliyaragaram": {
@@ -545,8 +551,9 @@
       "status": "operational",
       "opened_on": "2026-10-11",
       "references": [
-        "https://chennaimetrorail.org",
-        "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/"
+        "https://chennaimetrorail.org/wp-content/uploads/2026/10/Fare-Table.pdf",
+        "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/",
+        "https://www.dtnext.in/news/chennai/commercial-metro-operations-from-poonamallee-to-vadapalani-will-commence-from-4-pm-on-sunday"
       ]
     },
     "Porur Bypass": {
@@ -554,8 +561,9 @@
       "status": "operational",
       "opened_on": "2026-10-11",
       "references": [
-        "https://chennaimetrorail.org",
-        "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/"
+        "https://chennaimetrorail.org/wp-content/uploads/2026/10/Fare-Table.pdf",
+        "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/",
+        "https://www.dtnext.in/news/chennai/commercial-metro-operations-from-poonamallee-to-vadapalani-will-commence-from-4-pm-on-sunday"
       ]
     },
     "Porur Junction": {
@@ -563,8 +571,9 @@
       "status": "operational",
       "opened_on": "2026-10-11",
       "references": [
-        "https://chennaimetrorail.org",
-        "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/"
+        "https://chennaimetrorail.org/wp-content/uploads/2026/10/Fare-Table.pdf",
+        "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/",
+        "https://www.dtnext.in/news/chennai/commercial-metro-operations-from-poonamallee-to-vadapalani-will-commence-from-4-pm-on-sunday"
       ]
     },
     "Ashok Nagar": {

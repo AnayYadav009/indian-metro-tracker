@@ -180,12 +180,12 @@
           "phase": "2",
           "expected_completion": "2027",
           "stations": 50,
-          "notes": "45.8 km North-South corridor linking Madhavaram to SIPCOT (Siruseri IT corridor) via Adyar, Nehru Nagar, and Sholinganallur. Cabinet approved in October 2024 as Central sector project.",
+          "notes": "45.8 km North-South corridor linking Madhavaram to SIPCOT (Siruseri IT corridor) via Adyar, Nehru Nagar, and Sholinganallur.",
           "source": {
-            "title": "Cabinet approves Chennai Metro Rail Project Phase II comprising three corridors",
-            "url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2061557",
+            "title": "CMRL Phase II Corridor 3 Project Details",
+            "url": "https://chennaimetrorail.org",
             "retrieved_at": "2026-10-07",
-            "kind": "government"
+            "kind": "official"
           }
         }
       ],
@@ -229,10 +229,10 @@
           "stations": 19,
           "notes": "Remaining underground and elevated stretch from Vadapalani to Light House via Nandanam and Alwarpet.",
           "source": {
-            "title": "Cabinet approves Chennai Metro Rail Project Phase II comprising three corridors",
-            "url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2061557",
-            "retrieved_at": "2026-10-07",
-            "kind": "government"
+            "title": "Chennai Metro opens first section of the Yellow Line as Phase II expansion gathers pace",
+            "url": "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/",
+            "retrieved_at": "2026-11-06",
+            "kind": "news"
           }
         }
       ],
@@ -262,10 +262,10 @@
           "stations": 48,
           "notes": "47.0 km circumferential corridor connecting Madhavaram to Sholinganallur via Kolathur, Koyambedu, Alandur, and Medavakkam.",
           "source": {
-            "title": "Cabinet approves Chennai Metro Rail Project Phase II comprising three corridors",
-            "url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2061557",
+            "title": "CMRL Phase II Corridor 5 Project Details",
+            "url": "https://chennaimetrorail.org",
             "retrieved_at": "2026-10-07",
-            "kind": "government"
+            "kind": "official"
           }
         }
       ],

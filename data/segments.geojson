@@ -5430,7 +5430,7 @@
         "stations_not_published": false,
         "source": "osm",
         "references": [
-          "https://chennaimetrorail.org",
+          "https://chennaimetrorail.org/wp-content/uploads/2026/10/Fare-Table.pdf",
           "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/",
           "https://www.dtnext.in/news/chennai/commercial-metro-operations-from-poonamallee-to-vadapalani-will-commence-from-4-pm-on-sunday"
         ],
@@ -5529,8 +5529,7 @@
         "stations_not_published": true,
         "source": "osm",
         "references": [
-          "https://chennaimetrorail.org",
-          "https://pib.gov.in/PressReleasePage.aspx?PRID=2061557"
+          "https://chennaimetrorail.org"
         ],
         "completion_unconfirmed": false,
         "last_verified": null,
