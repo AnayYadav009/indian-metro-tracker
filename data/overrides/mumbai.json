@@ -158,7 +158,7 @@
       "completion_unconfirmed": true,
       "color": "#00B140",
       "references": [
-        "https://mmrda.maharashtra.gov.in/"
+        "https://mmrda.maharashtra.gov.in/metro-line-4"
       ],
       "city_id": "mumbai",
       "coordinates": [
@@ -1746,7 +1746,7 @@
       "color": "#00B140",
       "stations_not_published": true,
       "references": [
-        "https://mmrda.maharashtra.gov.in/"
+        "https://mmrda.maharashtra.gov.in/metro-line-4"
       ],
       "last_verified": "2026-10-06",
       "coordinates": [
@@ -2954,7 +2954,7 @@
       "expected_completion": null,
       "color": "#D32F2F",
       "references": [
-        "https://mmrda.maharashtra.gov.in/"
+        "https://mmrda.maharashtra.gov.in/metro-line-9"
       ],
       "city_id": "mumbai"
     },
@@ -2970,7 +2970,7 @@
       "completion_unconfirmed": true,
       "color": "#D32F2F",
       "references": [
-        "https://mmrda.maharashtra.gov.in/"
+        "https://mmrda.maharashtra.gov.in/metro-line-9"
       ],
       "last_verified": "2026-10-10"
     }
@@ -3317,7 +3317,7 @@
       "expected_completion": "2027",
       "completion_unconfirmed": true,
       "references": [
-        "https://mmrda.maharashtra.gov.in/"
+        "https://mmrda.maharashtra.gov.in/metro-line-4"
       ]
     },
     "Bhakti Park Wadala": {
@@ -3330,7 +3330,7 @@
       "expected_completion": "2027",
       "completion_unconfirmed": true,
       "references": [
-        "https://mmrda.maharashtra.gov.in/"
+        "https://mmrda.maharashtra.gov.in/metro-line-4"
       ]
     },
     "mum-andheri-west": {
@@ -3349,7 +3349,8 @@
       "line_ids": [
         "mum-line-1"
       ],
-      "status": "operational"
+      "status": "operational",
+      "references": []
     },
     "Western Express Highway": {
       "line_ids": [
@@ -3359,7 +3360,7 @@
       "phase": "1",
       "layout": "elevated",
       "references": [
-        "https://mmrda.maharashtra.gov.in/"
+        "https://mmrda.maharashtra.gov.in/metro-line-1"
       ]
     },
     "D. N. Nagar": {
@@ -3370,7 +3371,7 @@
       "status": "operational",
       "phase": "1",
       "references": [
-        "https://mmrda.maharashtra.gov.in/"
+        "https://mmrda.maharashtra.gov.in/metro-line-1"
       ],
       "last_verified": "2026-10-08"
     },
@@ -3442,7 +3443,7 @@
       "status": "construction",
       "phase": "4",
       "references": [
-        "https://mmrda.maharashtra.gov.in/"
+        "https://mmrda.maharashtra.gov.in/metro-line-4"
       ],
       "last_verified": "2026-10-08"
     }

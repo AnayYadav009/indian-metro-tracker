@@ -21,18 +21,18 @@
         {
           "stretch": "Sarthana to Dream City via Majura Gate and Surat Railway Station",
           "phase": "1",
-          "expected_completion": "2027-12",
+          "expected_completion": "2026-12",
           "stations": 21,
-          "notes": "15.14 km elevated and 6.47 km underground. Key stations include Sarthana, Nature Park, Varachha, Kapodra, Surat Railway Station, Chowk Bazar, Majura Gate (interchange), VIP Road, Dream City.",
+          "notes": "15.14 km elevated and 6.47 km underground. 8.5 km priority section (Dream City to Althan Tenement, 7 stations) commenced technical trial runs on March 29, 2026 with commercial opening targeted for December 2026 (2026-12). Balance underground and elevated sections to Sarthana scheduled for December 2027.",
           "source": {
-            "title": "Surat Metro Phase 1 Corridor 1 Project Profile",
-            "url": "https://www.gujaratmetrorail.com",
+            "title": "Surat Metro Phase 1 Corridor 1 Project Profile and Trial Runs",
+            "url": "https://www.gujaratmetrorail.com/projects/surat-metro-rail-project-phase-i/",
             "retrieved_at": "2026-10-15",
             "kind": "official"
           }
         }
       ],
-      "notes": "Corridor 1 (Diamond Corridor) spans 21.61 km with 21 stations connecting Sarthana to Dream City. Under active construction across civil packages CS-01 through CS-06."
+      "notes": "Corridor 1 (Diamond Corridor) spans 21.61 km with 21 stations connecting Sarthana to Dream City. 8.5 km elevated priority stretch connecting Dream City to Althan Tenement (7 stations) began trial runs on March 29, 2026 targeting December 2026 commercial opening."
     },
     {
       "line_id": "sur-green",
@@ -58,7 +58,7 @@
           "notes": "18.74 km fully elevated corridor with 18 stations. Key stations include Bhesan, Botanical Garden, Palanpur Road, Adajan Gam, Athwa Chopati, Majura Gate (interchange), Udhna Darwaja, Saroli.",
           "source": {
             "title": "Surat Metro Phase 1 Corridor 2 Project Profile",
-            "url": "https://www.gujaratmetrorail.com",
+            "url": "https://www.gujaratmetrorail.com/projects/surat-metro-rail-project-phase-i/",
             "retrieved_at": "2026-10-15",
             "kind": "official"
           }

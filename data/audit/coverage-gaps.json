@@ -136,5 +136,33 @@
     "source_url": "https://www.punemetrorail.org",
     "reason": "Maha Metro Phase 1B southern underground extension (5.46 km) approved/tendered; alignment geometry is not yet present in the compiled dataset.",
     "review_date": "2027-01-15"
+  },
+  {
+    "city_id": "hyderabad",
+    "line_id": "hyd-green",
+    "stretch": "MG Bus Station - Chandrayangutta (via Falaknuma)",
+    "segment_id": "hyd-green-seg-02",
+    "status": "under_construction",
+    "source_url": "https://hmrl.co.in",
+    "reason": "Foundation stone laid March 8, 2024 for 7 km Old City expansion; pre-construction works underway while intermediate station surveyed geometry remains uncompiled in OSM cache.",
+    "review_date": "2027-01-15"
+  },
+  {
+    "city_id": "patna",
+    "line_id": "pat-blue",
+    "stretch": "Corridor 2 Underground (Patna Junction - Malahi Pakri)",
+    "status": "under_construction",
+    "source_url": "https://patnametrorail.com",
+    "reason": "7.9 km underground stretch with 7 stations; 7.4 km tunneling completed with multiple TBM breakthroughs; civil box structures and track-laying underway; alignment geometry not yet released in OSM.",
+    "review_date": "2027-01-15"
+  },
+  {
+    "city_id": "mumbai",
+    "line_id": "mum-line-4",
+    "stretch": "Thane Integral Ring Metro",
+    "status": "planned",
+    "source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2045952",
+    "reason": "Union Cabinet approved 29-km, 22-station Thane Integral Ring Metro Rail Project on August 16, 2024 (PRID 2045952) executed by Maha Metro; detailed surveyed alignment not yet compiled in OSM.",
+    "review_date": "2027-01-15"
   }
 ]
