@@ -206,18 +206,591 @@
       ]
     },
     {
-      "osmId": 610018735,
       "segment_id": "kol-orange-seg-02",
       "line_id": "kol-orange",
-      "line_name": "Orange Line Extension (Beleghata - Jai Hind Airport)",
+      "line_name": "Orange Line Extension (Beleghata - IT Centre)",
+      "phase": "6",
+      "status": "construction",
+      "gauge": "broad",
+      "inaugurated_on": null,
+      "expected_completion": "2026-12",
+      "completion_unconfirmed": true,
+      "color": "#FF8200",
+      "stations_count": 4,
+      "length_km": 4.5,
+      "endpoint_station_ids": [
+        "kolkata-beleghata",
+        "kolkata-it-centre"
+      ],
+      "references": [
+        "https://www.squareyards.com/blog/kolkata-metro-beleghata-it-centre",
+        "https://swarajyamag.com/news-brief/trial-runs-for-kolkata-metros-orange-line-extension-to-sector-v-scheduled-to-begin-10th-october-2026"
+      ],
+      "last_verified": "2026-11-06",
+      "coordinates": [
+        [
+          88.40401,
+          22.55068
+        ],
+        [
+          88.4052,
+          22.55169
+        ],
+        [
+          88.40618,
+          22.55231
+        ],
+        [
+          88.40723,
+          22.55267
+        ],
+        [
+          88.408,
+          22.55284
+        ],
+        [
+          88.40817,
+          22.55289
+        ],
+        [
+          88.40834,
+          22.55295
+        ],
+        [
+          88.4085,
+          22.55302
+        ],
+        [
+          88.40866,
+          22.55309
+        ],
+        [
+          88.40882,
+          22.55317
+        ],
+        [
+          88.40898,
+          22.55326
+        ],
+        [
+          88.40913,
+          22.55335
+        ],
+        [
+          88.40927,
+          22.55345
+        ],
+        [
+          88.40941,
+          22.55355
+        ],
+        [
+          88.40954,
+          22.55367
+        ],
+        [
+          88.40968,
+          22.55379
+        ],
+        [
+          88.4098,
+          22.55392
+        ],
+        [
+          88.40993,
+          22.55406
+        ],
+        [
+          88.41004,
+          22.5542
+        ],
+        [
+          88.41014,
+          22.55435
+        ],
+        [
+          88.41024,
+          22.5545
+        ],
+        [
+          88.41033,
+          22.55465
+        ],
+        [
+          88.41041,
+          22.55481
+        ],
+        [
+          88.41049,
+          22.55497
+        ],
+        [
+          88.41055,
+          22.55514
+        ],
+        [
+          88.4106,
+          22.55531
+        ],
+        [
+          88.41065,
+          22.55548
+        ],
+        [
+          88.41069,
+          22.55565
+        ],
+        [
+          88.41119,
+          22.55724
+        ],
+        [
+          88.41125,
+          22.55754
+        ],
+        [
+          88.4113,
+          22.55775
+        ],
+        [
+          88.41135,
+          22.55785
+        ],
+        [
+          88.41144,
+          22.55802
+        ],
+        [
+          88.41165,
+          22.55821
+        ],
+        [
+          88.41194,
+          22.55831
+        ],
+        [
+          88.41244,
+          22.55846
+        ],
+        [
+          88.41269,
+          22.55856
+        ],
+        [
+          88.413,
+          22.55879
+        ],
+        [
+          88.41347,
+          22.55937
+        ],
+        [
+          88.41384,
+          22.55987
+        ],
+        [
+          88.41435,
+          22.56056
+        ],
+        [
+          88.41477,
+          22.56132
+        ],
+        [
+          88.41509,
+          22.56197
+        ],
+        [
+          88.41585,
+          22.56338
+        ],
+        [
+          88.41701,
+          22.56559
+        ],
+        [
+          88.41813,
+          22.56769
+        ],
+        [
+          88.41892,
+          22.56919
+        ],
+        [
+          88.4196,
+          22.57049
+        ],
+        [
+          88.42072,
+          22.57265
+        ],
+        [
+          88.42175,
+          22.57471
+        ],
+        [
+          88.42281,
+          22.57656
+        ],
+        [
+          88.42314,
+          22.57694
+        ],
+        [
+          88.42361,
+          22.57733
+        ],
+        [
+          88.42451,
+          22.57785
+        ],
+        [
+          88.42535,
+          22.57835
+        ],
+        [
+          88.42727,
+          22.57948
+        ],
+        [
+          88.42976,
+          22.58095
+        ]
+      ]
+    },
+    {
+      "segment_id": "kol-orange-seg-03",
+      "line_id": "kol-orange",
+      "line_name": "Orange Line Extension (IT Centre - Jai Hind Airport)",
       "phase": "6",
       "status": "construction",
       "gauge": "broad",
       "inaugurated_on": null,
       "expected_completion": "2027",
       "color": "#FF8200",
+      "stations_count": 2,
+      "length_km": 5.7,
+      "endpoint_station_ids": [
+        "kolkata-it-centre",
+        "kolkata-mothers-wax-museum"
+      ],
       "references": [
         "https://mtp.indianrailways.gov.in"
+      ],
+      "last_verified": "2026-11-06",
+      "coordinates": [
+        [
+          88.42976,
+          22.58095
+        ],
+        [
+          88.43162,
+          22.58212
+        ],
+        [
+          88.4322,
+          22.5824
+        ],
+        [
+          88.43256,
+          22.5825
+        ],
+        [
+          88.43282,
+          22.58254
+        ],
+        [
+          88.43301,
+          22.58255
+        ],
+        [
+          88.43322,
+          22.58253
+        ],
+        [
+          88.43338,
+          22.5825
+        ],
+        [
+          88.43377,
+          22.58239
+        ],
+        [
+          88.43425,
+          22.5822
+        ],
+        [
+          88.43485,
+          22.58196
+        ],
+        [
+          88.43614,
+          22.5814
+        ],
+        [
+          88.43739,
+          22.58085
+        ],
+        [
+          88.43781,
+          22.58063
+        ],
+        [
+          88.43816,
+          22.58037
+        ],
+        [
+          88.43854,
+          22.58025
+        ],
+        [
+          88.43908,
+          22.58016
+        ],
+        [
+          88.43973,
+          22.58007
+        ],
+        [
+          88.44088,
+          22.58006
+        ],
+        [
+          88.44223,
+          22.58007
+        ],
+        [
+          88.44268,
+          22.58015
+        ],
+        [
+          88.4433,
+          22.58043
+        ],
+        [
+          88.44391,
+          22.5807
+        ],
+        [
+          88.44429,
+          22.58078
+        ],
+        [
+          88.44452,
+          22.58079
+        ],
+        [
+          88.44547,
+          22.58089
+        ],
+        [
+          88.44681,
+          22.581
+        ],
+        [
+          88.44859,
+          22.58114
+        ],
+        [
+          88.45102,
+          22.58138
+        ],
+        [
+          88.45263,
+          22.58159
+        ],
+        [
+          88.45352,
+          22.5816
+        ],
+        [
+          88.45451,
+          22.58154
+        ],
+        [
+          88.45581,
+          22.58132
+        ],
+        [
+          88.45861,
+          22.58082
+        ],
+        [
+          88.46119,
+          22.5804
+        ],
+        [
+          88.46456,
+          22.5798
+        ],
+        [
+          88.46737,
+          22.57928
+        ],
+        [
+          88.46916,
+          22.57901
+        ],
+        [
+          88.46959,
+          22.57899
+        ],
+        [
+          88.46976,
+          22.57899
+        ],
+        [
+          88.46993,
+          22.579
+        ],
+        [
+          88.4701,
+          22.57902
+        ],
+        [
+          88.47026,
+          22.57905
+        ],
+        [
+          88.47043,
+          22.57909
+        ],
+        [
+          88.47059,
+          22.57914
+        ],
+        [
+          88.47075,
+          22.57919
+        ],
+        [
+          88.47091,
+          22.57925
+        ],
+        [
+          88.47106,
+          22.57932
+        ],
+        [
+          88.4712,
+          22.5794
+        ],
+        [
+          88.47135,
+          22.57949
+        ],
+        [
+          88.47148,
+          22.57958
+        ],
+        [
+          88.47161,
+          22.57968
+        ],
+        [
+          88.47174,
+          22.57979
+        ],
+        [
+          88.47185,
+          22.5799
+        ],
+        [
+          88.47196,
+          22.58002
+        ],
+        [
+          88.47207,
+          22.58014
+        ],
+        [
+          88.47216,
+          22.58027
+        ],
+        [
+          88.47225,
+          22.5804
+        ],
+        [
+          88.47232,
+          22.58054
+        ],
+        [
+          88.4724,
+          22.58068
+        ],
+        [
+          88.47246,
+          22.58083
+        ],
+        [
+          88.47285,
+          22.58185
+        ],
+        [
+          88.47349,
+          22.58367
+        ],
+        [
+          88.47401,
+          22.58496
+        ],
+        [
+          88.47452,
+          22.58625
+        ],
+        [
+          88.47465,
+          22.5866
+        ],
+        [
+          88.47485,
+          22.58707
+        ],
+        [
+          88.47503,
+          22.58761
+        ],
+        [
+          88.47511,
+          22.58794
+        ],
+        [
+          88.47516,
+          22.58827
+        ],
+        [
+          88.47516,
+          22.5885
+        ],
+        [
+          88.47516,
+          22.58872
+        ],
+        [
+          88.47516,
+          22.58891
+        ],
+        [
+          88.47512,
+          22.58916
+        ],
+        [
+          88.47509,
+          22.58932
+        ],
+        [
+          88.47505,
+          22.58953
+        ],
+        [
+          88.47492,
+          22.58993
+        ],
+        [
+          88.47467,
+          22.59043
+        ]
       ]
     },
     {
@@ -263,7 +836,11 @@
     "Kolkata Airport": "Jai Hind",
     "Airport": "Jai Hind",
     "Netaji Subhash Chandra Bose International Airport": "Jai Hind",
-    "mothers wax museum": "Mother's Wax Museum"
+    "mothers wax museum": "Mother's Wax Museum",
+    "Gour Kishor Ghosh (Chingrighata)": "Gour Kishore Ghosh",
+    "Chingrighata": "Gour Kishore Ghosh",
+    "IT Centre (Sector V)": "IT Centre",
+    "IT Center": "IT Centre"
   },
   "stationOverrides": {
     "kolkata-park-street": {
@@ -324,7 +901,9 @@
       "status": "construction",
       "phase": "6",
       "references": [
-        "https://mtp.indianrailways.gov.in"
+        "https://mtp.indianrailways.gov.in",
+        "https://www.squareyards.com/blog/kolkata-metro-beleghata-it-centre",
+        "https://swarajyamag.com/news-brief/trial-runs-for-kolkata-metros-orange-line-extension-to-sector-v-scheduled-to-begin-10th-october-2026"
       ],
       "last_verified": "2026-10-13",
       "expected_completion": "2026-12"
@@ -466,6 +1045,45 @@
         "https://mtp.indianrailways.gov.in"
       ],
       "last_verified": "2026-10-08"
+    },
+    "kolkata-gour-kishore-ghosh": {
+      "line_ids": [
+        "kol-orange"
+      ],
+      "status": "construction",
+      "phase": "6",
+      "expected_completion": "2026-12",
+      "layout": "elevated",
+      "references": [
+        "https://www.squareyards.com/blog/kolkata-metro-beleghata-it-centre",
+        "https://swarajyamag.com/news-brief/trial-runs-for-kolkata-metros-orange-line-extension-to-sector-v-scheduled-to-begin-10th-october-2026"
+      ]
+    },
+    "kolkata-it-centre": {
+      "line_ids": [
+        "kol-orange"
+      ],
+      "status": "construction",
+      "phase": "6",
+      "expected_completion": "2026-12",
+      "layout": "elevated",
+      "references": [
+        "https://www.squareyards.com/blog/kolkata-metro-beleghata-it-centre",
+        "https://swarajyamag.com/news-brief/trial-runs-for-kolkata-metros-orange-line-extension-to-sector-v-scheduled-to-begin-10th-october-2026"
+      ]
+    },
+    "kolkata-beleghata": {
+      "line_ids": [
+        "kol-orange"
+      ],
+      "status": "operational",
+      "phase": "6",
+      "opened_on": "2025-08-22",
+      "layout": "elevated",
+      "references": [
+        "https://pib.gov.in/PressReleasePage.aspx?PRID=2159869"
+      ],
+      "last_verified": "2026-10-07"
     }
   },
   "out_of_scope_line_ids": [
@@ -475,6 +1093,33 @@
     "kol-green-seg-01"
   ],
   "intentionalBreaks": [
-    "kol-purple-seg-01|kol-purple-seg-02"
+    "kol-purple-seg-01|kol-purple-seg-02",
+    "kol-orange-seg-01|kol-orange-seg-03"
+  ],
+  "additionalStations": [
+    {
+      "osmId": 535333483,
+      "name": "Gour Kishore Ghosh",
+      "coordinates": [
+        88.41467,
+        22.56112
+      ],
+      "lineRefs": [
+        "kol-orange"
+      ],
+      "status": "construction"
+    },
+    {
+      "osmId": 535333500,
+      "name": "IT Centre",
+      "coordinates": [
+        88.42996,
+        22.58109
+      ],
+      "lineRefs": [
+        "kol-orange"
+      ],
+      "status": "construction"
+    }
   ]
 }

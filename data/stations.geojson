@@ -8815,14 +8815,16 @@
         "status": "operational",
         "phase": "6",
         "is_interchange": false,
-        "opened_on": null,
+        "opened_on": "2025-08-22",
         "expected_completion": null,
         "completion_unconfirmed": false,
-        "layout": null,
-        "layout_source": "unverified",
+        "layout": "elevated",
+        "layout_source": "operator",
         "source": "osm",
-        "references": [],
-        "last_verified": null,
+        "references": [
+          "https://pib.gov.in/PressReleasePage.aspx?PRID=2159869"
+        ],
+        "last_verified": "2026-10-07",
         "retrieved_at": "2026-10-16"
       }
     },
@@ -9784,7 +9786,7 @@
         ],
         "status": "operational",
         "phase": "2",
-        "is_interchange": false,
+        "is_interchange": true,
         "opened_on": null,
         "expected_completion": null,
         "completion_unconfirmed": false,
@@ -9793,7 +9795,8 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-16"
+        "retrieved_at": "2026-10-16",
+        "interchange_id": "int-kolkata-sector-v"
       }
     },
     {
@@ -9823,7 +9826,9 @@
         "layout_source": "unverified",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in",
+          "https://www.squareyards.com/blog/kolkata-metro-beleghata-it-centre",
+          "https://swarajyamag.com/news-brief/trial-runs-for-kolkata-metros-orange-line-extension-to-sector-v-scheduled-to-begin-10th-october-2026"
         ],
         "last_verified": "2026-10-13",
         "retrieved_at": "2026-10-16"
@@ -30783,6 +30788,75 @@
         ],
         "last_verified": "2026-11-06",
         "retrieved_at": "2026-11-06"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.41467,
+          22.56112
+        ]
+      },
+      "properties": {
+        "station_id": "kolkata-gour-kishore-ghosh",
+        "name": "Gour Kishore Ghosh",
+        "city_id": "kolkata",
+        "city": "Kolkata",
+        "line_ids": [
+          "kol-orange"
+        ],
+        "status": "construction",
+        "phase": "6",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2026-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.squareyards.com/blog/kolkata-metro-beleghata-it-centre",
+          "https://swarajyamag.com/news-brief/trial-runs-for-kolkata-metros-orange-line-extension-to-sector-v-scheduled-to-begin-10th-october-2026"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.42996,
+          22.58109
+        ]
+      },
+      "properties": {
+        "station_id": "kolkata-it-centre",
+        "name": "IT Centre",
+        "city_id": "kolkata",
+        "city": "Kolkata",
+        "line_ids": [
+          "kol-orange"
+        ],
+        "status": "construction",
+        "phase": "6",
+        "is_interchange": true,
+        "opened_on": null,
+        "expected_completion": "2026-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.squareyards.com/blog/kolkata-metro-beleghata-it-centre",
+          "https://swarajyamag.com/news-brief/trial-runs-for-kolkata-metros-orange-line-extension-to-sector-v-scheduled-to-begin-10th-october-2026"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-16",
+        "interchange_id": "int-kolkata-sector-v"
       }
     }
   ]

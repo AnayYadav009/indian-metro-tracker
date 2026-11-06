@@ -352,7 +352,7 @@
       "operator": "Metro Railway, Kolkata",
       "topology": "linear",
       "operational_stations": 9,
-      "operational_length_km": 9.80,
+      "operational_length_km": 9.8,
       "planned_length_km": 29.87,
       "terminals": [
         "Kavi Subhash",
@@ -393,8 +393,8 @@
           "stretch": "Beleghata - Salt Lake Sector V (IT Centre)",
           "phase": null,
           "expected_completion": "2026-12",
-          "stations": 2,
-          "notes": "4.4 km extension from Beleghata to Sector V following completion of the Chingrighata viaduct gap. Targeted for late 2026 commercial operations.",
+          "stations": 3,
+          "notes": "4.5 km extension from Beleghata to Sector V (IT Centre) following completion of the Chingrighata viaduct gap. Trial runs began on 2026-10-10, targeting December 2026 commercial operations.",
           "source": {
             "title": "Project Highlights - Orange Line - Metro Railway Kolkata",
             "url": "https://mtp.indianrailways.gov.in",
@@ -426,7 +426,7 @@
       "topology": "linear",
       "operational_stations": 0,
       "operational_length_km": 0,
-      "planned_length_km": 12.50,
+      "planned_length_km": 12.5,
       "terminals": [
         "Baranagar",
         "Barrackpore"
