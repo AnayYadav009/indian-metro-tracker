@@ -15575,7 +15575,7 @@
         "gauge": "standard",
         "inaugurated_on": "2025-08-10",
         "expected_completion": null,
-        "stations_count": 17,
+        "stations_count": 16,
         "color": "#FFCC00",
         "stations_not_published": false,
         "source": "osm",
@@ -18956,15 +18956,15 @@
         "gauge": "standard",
         "inaugurated_on": null,
         "expected_completion": null,
-        "stations_count": 4,
+        "stations_count": 7,
         "color": "#FF69B4",
         "stations_not_published": false,
         "source": "manual",
         "references": [
-          "https://english.bmrc.co.in/"
+          "https://english.bmrc.co.in/FileUploads/0091bf_Phase2.pdf"
         ],
         "completion_unconfirmed": true,
-        "last_verified": "2026-10-13",
+        "last_verified": "2026-10-15",
         "geometry_quality": "exact"
       }
     },

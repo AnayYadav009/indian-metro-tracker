@@ -837,12 +837,6 @@
     {
       "city_id": "bengaluru",
       "rule": "future-date-unconfirmed",
-      "subject": "blr-jayadeva-interchange-uc",
-      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
-    },
-    {
-      "city_id": "bengaluru",
-      "rule": "future-date-unconfirmed",
       "subject": "blr-pink-seg-01",
       "reason": "Expected completion date pending operator progress update or unconfirmed flag"
     },
@@ -851,12 +845,6 @@
       "rule": "future-date-unconfirmed",
       "subject": "blr-planned-seg-01",
       "reason": "Expected completion date pending operator progress update or unconfirmed flag"
-    },
-    {
-      "city_id": "bengaluru",
-      "rule": "future-record-no-reference",
-      "subject": "blr-jayadeva-interchange-uc",
-      "reason": "Future segment or station pending deep-link reference citation"
     },
     {
       "city_id": "bengaluru",
@@ -964,12 +952,6 @@
       "city_id": "bengaluru",
       "rule": "layout/suspect-default-elevated",
       "subject": "blr-jaya-prakash-nagar",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "bengaluru",
-      "rule": "layout/suspect-default-elevated",
-      "subject": "blr-jayadeva-interchange-uc",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -1264,18 +1246,6 @@
       "city_id": "bengaluru",
       "rule": "station-gap",
       "subject": "blr-blue|blr-central-silk-board|blr-krishnarajapura",
-      "reason": "Intermediate stations under construction pending surveyed route tagging"
-    },
-    {
-      "city_id": "bengaluru",
-      "rule": "station-gap",
-      "subject": "blr-pink|blr-jayadeva-interchange-uc|blr-nagawara",
-      "reason": "Intermediate stations under construction pending surveyed route tagging"
-    },
-    {
-      "city_id": "bengaluru",
-      "rule": "station-gap",
-      "subject": "blr-pink|blr-kalena-agrahara|blr-jayadeva-hospital",
       "reason": "Intermediate stations under construction pending surveyed route tagging"
     },
     {

@@ -2554,9 +2554,9 @@
       "completion_unconfirmed": true,
       "color": "#FF69B4",
       "references": [
-        "https://english.bmrc.co.in/"
+        "https://english.bmrc.co.in/FileUploads/0091bf_Phase2.pdf"
       ],
-      "last_verified": "2026-10-13",
+      "last_verified": "2026-10-15",
       "coordinates": [
         [
           77.592014,
@@ -3767,10 +3767,81 @@
       "phase": "2",
       "status": "construction",
       "layout": "elevated",
-      "expected_completion": "2026-12",
-      "completion_unconfirmed": true,
+      "expected_completion": "2026-11",
+      "completion_unconfirmed": false,
       "references": [
+        "https://www.thehansindia.com/karnataka/bengaluru-pink-line-metro-gets-statutory-safety-clearance-planned-inauguration-in-nov-1017124",
+        "https://swarajyamag.com/infrastructure/bengaluru-namma-metros-pink-line-set-for-cmrs-inspection-key-elevated-stretch-nears-completion"
+      ]
+    },
+    "Hulimavu": {
+      "line_ids": [
+        "blr-pink"
+      ],
+      "phase": "2",
+      "status": "construction",
+      "layout": "elevated",
+      "expected_completion": "2026-11",
+      "completion_unconfirmed": false,
+      "references": [
+        "https://www.thehansindia.com/karnataka/bengaluru-pink-line-metro-gets-statutory-safety-clearance-planned-inauguration-in-nov-1017124",
+        "https://swarajyamag.com/infrastructure/bengaluru-namma-metros-pink-line-set-for-cmrs-inspection-key-elevated-stretch-nears-completion"
+      ]
+    },
+    "IIMB": {
+      "line_ids": [
+        "blr-pink"
+      ],
+      "phase": "2",
+      "status": "construction",
+      "layout": "elevated",
+      "expected_completion": "2026-11",
+      "completion_unconfirmed": false,
+      "references": [
+        "https://www.thehansindia.com/karnataka/bengaluru-pink-line-metro-gets-statutory-safety-clearance-planned-inauguration-in-nov-1017124",
+        "https://swarajyamag.com/infrastructure/bengaluru-namma-metros-pink-line-set-for-cmrs-inspection-key-elevated-stretch-nears-completion"
+      ]
+    },
+    "JP Nagar 4th Phase": {
+      "line_ids": [
+        "blr-pink"
+      ],
+      "phase": "2",
+      "status": "construction",
+      "layout": "elevated",
+      "expected_completion": "2026-11",
+      "completion_unconfirmed": false,
+      "references": [
+        "https://www.thehansindia.com/karnataka/bengaluru-pink-line-metro-gets-statutory-safety-clearance-planned-inauguration-in-nov-1017124",
+        "https://swarajyamag.com/infrastructure/bengaluru-namma-metros-pink-line-set-for-cmrs-inspection-key-elevated-stretch-nears-completion"
+      ]
+    },
+    "Jayadeva Hospital": {
+      "line_ids": [
+        "blr-yellow",
+        "blr-pink"
+      ],
+      "phase": "2",
+      "status": "operational",
+      "is_interchange": true,
+      "layout": "elevated",
+      "references": [
+        "https://www.thehansindia.com/karnataka/bengaluru-pink-line-metro-gets-statutory-safety-clearance-planned-inauguration-in-nov-1017124",
         "https://english.bmrc.co.in/FileUploads/0091bf_Phase2.pdf"
+      ]
+    },
+    "Tavarekere": {
+      "line_ids": [
+        "blr-pink"
+      ],
+      "phase": "2",
+      "status": "construction",
+      "layout": "elevated",
+      "expected_completion": "2026-11",
+      "completion_unconfirmed": false,
+      "references": [
+        "https://www.thehansindia.com/karnataka/bengaluru-pink-line-metro-gets-statutory-safety-clearance-planned-inauguration-in-nov-1017124",
+        "https://swarajyamag.com/infrastructure/bengaluru-namma-metros-pink-line-set-for-cmrs-inspection-key-elevated-stretch-nears-completion"
       ]
     },
     "Nagawara": {
@@ -3828,8 +3899,12 @@
     "Vijayanagar": "Vijayanagara",
     "Sri Balagangadharanatha Swamiji, Hosahalli": "Sri Balagangadharanatha Swamiji Stn., Hosahalli",
     "Sri Balagangadharanatha Swamiji Station, Hosahalli": "Sri Balagangadharanatha Swamiji Stn., Hosahalli",
-    "Nagawara (Proposed)": "Nagawara"
+    "Nagawara (Proposed)": "Nagawara",
+    "Jayadeva Interchange (u/c)": "Jayadeva Hospital"
   },
+  "out_of_scope_station_ids": [
+    "blr-jayadeva-interchange-uc"
+  ],
   "additionalStations": [
     {
       "osmId": 99990501,
@@ -3837,6 +3912,46 @@
       "coordinates": [
         77.592014,
         12.866626
+      ],
+      "lineRefs": [],
+      "status": "construction"
+    },
+    {
+      "osmId": 9906325549,
+      "name": "Hulimavu",
+      "coordinates": [
+        77.59586,
+        12.880833
+      ],
+      "lineRefs": [],
+      "status": "construction"
+    },
+    {
+      "osmId": 9906325550,
+      "name": "IIMB",
+      "coordinates": [
+        77.599594,
+        12.895724
+      ],
+      "lineRefs": [],
+      "status": "construction"
+    },
+    {
+      "osmId": 9906325547,
+      "name": "JP Nagar 4th Phase",
+      "coordinates": [
+        77.600091,
+        12.909848
+      ],
+      "lineRefs": [],
+      "status": "construction"
+    },
+    {
+      "osmId": 9906325542,
+      "name": "Tavarekere",
+      "coordinates": [
+        77.600538,
+        12.929498
       ],
       "lineRefs": [],
       "status": "construction"

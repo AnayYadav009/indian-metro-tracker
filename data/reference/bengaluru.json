@@ -255,18 +255,18 @@
         {
           "stretch": "Reach 6 Elevated (Kalena Agrahara - Tavarekere)",
           "phase": "2",
-          "expected_completion": null,
+          "expected_completion": "2026-11",
           "stations": 6,
-          "notes": "CMRS statutory inspection scheduled October 6-8, 2026; opening targeted late 2026.",
+          "notes": "CMRS statutory safety clearance received following Oct 6-8, 2026 inspection; inauguration targeted November 2026.",
           "source": {
-            "kind": "official",
-            "url": "https://english.bmrc.co.in/FileUploads/0091bf_Phase2.pdf"
+            "kind": "news",
+            "url": "https://www.thehansindia.com/karnataka/bengaluru-pink-line-metro-gets-statutory-safety-clearance-planned-inauguration-in-nov-1017124"
           }
         },
         {
           "stretch": "Reach 6 Underground (Dairy Circle - Nagawara)",
           "phase": "2",
-          "expected_completion": null,
+          "expected_completion": "2027-03",
           "stations": 12,
           "notes": "Targeted completion March 2027.",
           "source": {

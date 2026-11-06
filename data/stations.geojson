@@ -4484,9 +4484,12 @@
         "expected_completion": null,
         "completion_unconfirmed": false,
         "layout": "elevated",
-        "layout_source": "osm-tag",
+        "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehansindia.com/karnataka/bengaluru-pink-line-metro-gets-statutory-safety-clearance-planned-inauguration-in-nov-1017124",
+          "https://english.bmrc.co.in/FileUploads/0091bf_Phase2.pdf"
+        ],
         "last_verified": null,
         "retrieved_at": "2026-10-10",
         "interchange_id": "blr-jayadeva-hospital"
@@ -5565,39 +5568,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          77.59998,
-          12.91673
-        ]
-      },
-      "properties": {
-        "station_id": "blr-jayadeva-interchange-uc",
-        "name": "Jayadeva Interchange (u/c)",
-        "city_id": "bengaluru",
-        "city": "Bengaluru",
-        "line_ids": [
-          "blr-yellow",
-          "blr-pink"
-        ],
-        "status": "construction",
-        "phase": "2",
-        "is_interchange": true,
-        "opened_on": null,
-        "expected_completion": null,
-        "completion_unconfirmed": true,
-        "layout": null,
-        "layout_source": "unverified",
-        "source": "osm",
-        "references": [],
-        "last_verified": null,
-        "retrieved_at": "2026-10-10",
-        "interchange_id": "blr-jayadeva-interchange-uc"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           77.49837,
           12.92424
         ]
@@ -5738,13 +5708,14 @@
         "phase": "2",
         "is_interchange": false,
         "opened_on": null,
-        "expected_completion": "2026-12",
+        "expected_completion": "2026-11",
         "completion_unconfirmed": false,
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://english.bmrc.co.in/FileUploads/0091bf_Phase2.pdf"
+          "https://www.thehansindia.com/karnataka/bengaluru-pink-line-metro-gets-statutory-safety-clearance-planned-inauguration-in-nov-1017124",
+          "https://swarajyamag.com/infrastructure/bengaluru-namma-metros-pink-line-set-for-cmrs-inspection-key-elevated-stretch-nears-completion"
         ],
         "last_verified": null,
         "retrieved_at": "2026-10-10"
@@ -30857,6 +30828,142 @@
         "last_verified": null,
         "retrieved_at": "2026-10-16",
         "interchange_id": "int-kolkata-sector-v"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.59586,
+          12.88083
+        ]
+      },
+      "properties": {
+        "station_id": "blr-hulimavu",
+        "name": "Hulimavu",
+        "city_id": "bengaluru",
+        "city": "Bengaluru",
+        "line_ids": [
+          "blr-pink"
+        ],
+        "status": "construction",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2026-11",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.thehansindia.com/karnataka/bengaluru-pink-line-metro-gets-statutory-safety-clearance-planned-inauguration-in-nov-1017124",
+          "https://swarajyamag.com/infrastructure/bengaluru-namma-metros-pink-line-set-for-cmrs-inspection-key-elevated-stretch-nears-completion"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-10"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.59959,
+          12.89572
+        ]
+      },
+      "properties": {
+        "station_id": "blr-iimb",
+        "name": "IIMB",
+        "city_id": "bengaluru",
+        "city": "Bengaluru",
+        "line_ids": [
+          "blr-pink"
+        ],
+        "status": "construction",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2026-11",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.thehansindia.com/karnataka/bengaluru-pink-line-metro-gets-statutory-safety-clearance-planned-inauguration-in-nov-1017124",
+          "https://swarajyamag.com/infrastructure/bengaluru-namma-metros-pink-line-set-for-cmrs-inspection-key-elevated-stretch-nears-completion"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-10"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.60009,
+          12.90985
+        ]
+      },
+      "properties": {
+        "station_id": "blr-jp-nagar-4th-phase",
+        "name": "JP Nagar 4th Phase",
+        "city_id": "bengaluru",
+        "city": "Bengaluru",
+        "line_ids": [
+          "blr-pink"
+        ],
+        "status": "construction",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2026-11",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.thehansindia.com/karnataka/bengaluru-pink-line-metro-gets-statutory-safety-clearance-planned-inauguration-in-nov-1017124",
+          "https://swarajyamag.com/infrastructure/bengaluru-namma-metros-pink-line-set-for-cmrs-inspection-key-elevated-stretch-nears-completion"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-10"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.60054,
+          12.9295
+        ]
+      },
+      "properties": {
+        "station_id": "blr-tavarekere",
+        "name": "Tavarekere",
+        "city_id": "bengaluru",
+        "city": "Bengaluru",
+        "line_ids": [
+          "blr-pink"
+        ],
+        "status": "construction",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2026-11",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.thehansindia.com/karnataka/bengaluru-pink-line-metro-gets-statutory-safety-clearance-planned-inauguration-in-nov-1017124",
+          "https://swarajyamag.com/infrastructure/bengaluru-namma-metros-pink-line-set-for-cmrs-inspection-key-elevated-stretch-nears-completion"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-10"
       }
     }
   ]
