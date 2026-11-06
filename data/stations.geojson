@@ -30376,6 +30376,414 @@
         "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.70888,
+          29.07233
+        ]
+      },
+      "properties": {
+        "station_id": "meerut-modipuram",
+        "name": "Modipuram",
+        "city_id": "meerut",
+        "city": "Meerut",
+        "line_ids": [
+          "mee-line-1"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-02-22",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://ncrtc.in/",
+          "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
+        ],
+        "last_verified": "2026-11-06",
+        "retrieved_at": "2026-11-06"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.70798,
+          29.06067
+        ]
+      },
+      "properties": {
+        "station_id": "meerut-meerut-north",
+        "name": "Meerut North",
+        "city_id": "meerut",
+        "city": "Meerut",
+        "line_ids": [
+          "mee-line-1"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-02-22",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://ncrtc.in/",
+          "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
+        ],
+        "last_verified": "2026-11-06",
+        "retrieved_at": "2026-11-06"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.67388,
+          28.94775
+        ]
+      },
+      "properties": {
+        "station_id": "meerut-shatabdi-nagar",
+        "name": "Shatabdi Nagar",
+        "city_id": "meerut",
+        "city": "Meerut",
+        "line_ids": [
+          "mee-line-1"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-02-22",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://ncrtc.in/",
+          "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
+        ],
+        "last_verified": "2026-11-06",
+        "retrieved_at": "2026-11-06"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.70462,
+          29.01596
+        ]
+      },
+      "properties": {
+        "station_id": "meerut-mes-colony",
+        "name": "MES Colony",
+        "city_id": "meerut",
+        "city": "Meerut",
+        "line_ids": [
+          "mee-line-1"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-02-22",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://ncrtc.in/",
+          "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
+        ],
+        "last_verified": "2026-11-06",
+        "retrieved_at": "2026-11-06"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.6906,
+          28.97287
+        ]
+      },
+      "properties": {
+        "station_id": "meerut-meerut-central",
+        "name": "Meerut Central",
+        "city_id": "meerut",
+        "city": "Meerut",
+        "line_ids": [
+          "mee-line-1"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-02-22",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "underground",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://ncrtc.in/",
+          "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
+        ],
+        "last_verified": "2026-11-06",
+        "retrieved_at": "2026-11-06"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.63284,
+          28.90473
+        ]
+      },
+      "properties": {
+        "station_id": "meerut-meerut-south",
+        "name": "Meerut South",
+        "city_id": "meerut",
+        "city": "Meerut",
+        "line_ids": [
+          "mee-line-1"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-02-22",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://ncrtc.in/",
+          "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
+        ],
+        "last_verified": "2026-11-06",
+        "retrieved_at": "2026-11-06"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.7056,
+          28.99674
+        ]
+      },
+      "properties": {
+        "station_id": "meerut-begumpul",
+        "name": "Begumpul",
+        "city_id": "meerut",
+        "city": "Meerut",
+        "line_ids": [
+          "mee-line-1"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-02-22",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "underground",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://ncrtc.in/",
+          "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
+        ],
+        "last_verified": "2026-11-06",
+        "retrieved_at": "2026-11-06"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.70686,
+          29.04071
+        ]
+      },
+      "properties": {
+        "station_id": "meerut-daurli",
+        "name": "Daurli",
+        "city_id": "meerut",
+        "city": "Meerut",
+        "line_ids": [
+          "mee-line-1"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-02-22",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://ncrtc.in/",
+          "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
+        ],
+        "last_verified": "2026-11-06",
+        "retrieved_at": "2026-11-06"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.66055,
+          28.93204
+        ]
+      },
+      "properties": {
+        "station_id": "meerut-rithani",
+        "name": "Rithani",
+        "city_id": "meerut",
+        "city": "Meerut",
+        "line_ids": [
+          "mee-line-1"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-02-22",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://ncrtc.in/",
+          "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
+        ],
+        "last_verified": "2026-11-06",
+        "retrieved_at": "2026-11-06"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.68481,
+          28.9603
+        ]
+      },
+      "properties": {
+        "station_id": "meerut-brahmpuri",
+        "name": "Brahmpuri",
+        "city_id": "meerut",
+        "city": "Meerut",
+        "line_ids": [
+          "mee-line-1"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-02-22",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://ncrtc.in/",
+          "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
+        ],
+        "last_verified": "2026-11-06",
+        "retrieved_at": "2026-11-06"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.65059,
+          28.92202
+        ]
+      },
+      "properties": {
+        "station_id": "meerut-partapur",
+        "name": "Partapur",
+        "city_id": "meerut",
+        "city": "Meerut",
+        "line_ids": [
+          "mee-line-1"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-02-22",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://ncrtc.in/",
+          "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
+        ],
+        "last_verified": "2026-11-06",
+        "retrieved_at": "2026-11-06"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.70032,
+          28.98809
+        ]
+      },
+      "properties": {
+        "station_id": "meerut-bhaisali",
+        "name": "Bhaisali",
+        "city_id": "meerut",
+        "city": "Meerut",
+        "line_ids": [
+          "mee-line-1"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-02-22",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "underground",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://ncrtc.in/",
+          "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
+        ],
+        "last_verified": "2026-11-06",
+        "retrieved_at": "2026-11-06"
+      }
     }
   ]
 }

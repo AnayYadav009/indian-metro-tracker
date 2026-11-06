@@ -10,9 +10,9 @@ import { getCityPageData, getAllCities } from "@/lib/city-page-data";
 import { SITE_CONFIG } from "@/lib/site-config";
 
 describe("M17 City SEO & Metadata Generation", () => {
-  it("provides data for all 21 cities in data/cities.json", () => {
+  it("provides data for all 22 cities in data/cities.json", () => {
     const allCities = getAllCities();
-    expect(allCities).toHaveLength(21);
+    expect(allCities).toHaveLength(22);
 
     for (const city of allCities) {
       const pageData = getCityPageData(city.id);
@@ -52,8 +52,8 @@ describe("M17 City SEO & Metadata Generation", () => {
       );
     }
 
-    expect(canonicals.size).toBe(21);
-    expect(titles.size).toBe(21);
+    expect(canonicals.size).toBe(22);
+    expect(titles.size).toBe(22);
   });
 
   it("handles cities with 0 operational stations (Surat) transparently in description", () => {

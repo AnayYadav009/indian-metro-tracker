@@ -713,5 +713,17 @@
     "provenance": {
       "status": "unverified"
     }
+  },
+  {
+    "id": "mee-line-1",
+    "name": "Line 1 (Meerut Metro)",
+    "city": "Meerut",
+    "city_id": "meerut",
+    "color": "#D8514D",
+    "operator": "NCRTC",
+    "source": "osm+ncrtc",
+    "provenance": {
+      "status": "unverified"
+    }
   }
 ]

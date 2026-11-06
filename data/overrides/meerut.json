@@ -1,0 +1,205 @@
+{
+  "city": {
+    "id": "meerut",
+    "name": "Meerut",
+    "bbox": [
+      77.58,
+      28.88,
+      77.76,
+      29.10
+    ],
+    "operator": "NCRTC",
+    "phases": [
+      "1"
+    ],
+    "network_id": "meerut-metro",
+    "provenance": {
+      "status": "unverified"
+    }
+  },
+  "lines": [
+    {
+      "id": "mee-line-1",
+      "name": "Line 1 (Meerut Metro)",
+      "city": "Meerut",
+      "city_id": "meerut",
+      "color": "#D8514D",
+      "operator": "NCRTC",
+      "source": "osm+ncrtc",
+      "provenance": {
+        "status": "unverified"
+      }
+    }
+  ],
+  "segments": [
+    {
+      "osmId": 16661918,
+      "segment_id": "mee-line-1-seg-01",
+      "line_id": "mee-line-1",
+      "line_name": "Line 1 (Meerut South - Modipuram)",
+      "phase": "1",
+      "status": "operational",
+      "gauge": "standard",
+      "inaugurated_on": "2026-02-22",
+      "expected_completion": null,
+      "color": "#D8514D",
+      "city_id": "meerut",
+      "stations_count": 12,
+      "stations_not_published": false,
+      "endpoint_station_ids": [
+        "mee-meerut-south",
+        "mee-modipuram"
+      ],
+      "references": [
+        "https://ncrtc.in/",
+        "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
+      ],
+      "last_verified": "2026-11-06"
+    }
+  ],
+  "stationAliases": {
+    "Bhainsali": "Bhaisali",
+    "Brahmapuri": "Brahmpuri"
+  },
+  "dedupeRadiusM": 900,
+  "stationOverrides": {
+    "Meerut Central": {
+      "layout": "underground",
+      "status": "operational",
+      "opened_on": "2026-02-22",
+      "references": [
+        "https://ncrtc.in/",
+        "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
+      ],
+      "last_verified": "2026-11-06"
+    },
+    "Bhaisali": {
+      "layout": "underground",
+      "status": "operational",
+      "opened_on": "2026-02-22",
+      "references": [
+        "https://ncrtc.in/",
+        "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
+      ],
+      "last_verified": "2026-11-06"
+    },
+    "Begumpul": {
+      "layout": "underground",
+      "status": "operational",
+      "opened_on": "2026-02-22",
+      "references": [
+        "https://ncrtc.in/",
+        "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
+      ],
+      "last_verified": "2026-11-06"
+    },
+    "Meerut South": {
+      "layout": "elevated",
+      "status": "operational",
+      "opened_on": "2026-02-22",
+      "references": [
+        "https://ncrtc.in/",
+        "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
+      ],
+      "last_verified": "2026-11-06"
+    },
+    "Partapur": {
+      "layout": "elevated",
+      "status": "operational",
+      "opened_on": "2026-02-22",
+      "references": [
+        "https://ncrtc.in/",
+        "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
+      ],
+      "last_verified": "2026-11-06"
+    },
+    "Rithani": {
+      "layout": "elevated",
+      "status": "operational",
+      "opened_on": "2026-02-22",
+      "references": [
+        "https://ncrtc.in/",
+        "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
+      ],
+      "last_verified": "2026-11-06"
+    },
+    "Shatabdi Nagar": {
+      "layout": "elevated",
+      "status": "operational",
+      "opened_on": "2026-02-22",
+      "references": [
+        "https://ncrtc.in/",
+        "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
+      ],
+      "last_verified": "2026-11-06"
+    },
+    "Brahmpuri": {
+      "layout": "elevated",
+      "status": "operational",
+      "opened_on": "2026-02-22",
+      "references": [
+        "https://ncrtc.in/",
+        "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
+      ],
+      "last_verified": "2026-11-06"
+    },
+    "MES Colony": {
+      "layout": "elevated",
+      "status": "operational",
+      "opened_on": "2026-02-22",
+      "references": [
+        "https://ncrtc.in/",
+        "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
+      ],
+      "last_verified": "2026-11-06"
+    },
+    "Daurli": {
+      "layout": "elevated",
+      "status": "operational",
+      "opened_on": "2026-02-22",
+      "references": [
+        "https://ncrtc.in/",
+        "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
+      ],
+      "last_verified": "2026-11-06"
+    },
+    "Meerut North": {
+      "layout": "elevated",
+      "status": "operational",
+      "opened_on": "2026-02-22",
+      "references": [
+        "https://ncrtc.in/",
+        "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
+      ],
+      "last_verified": "2026-11-06"
+    },
+    "Modipuram": {
+      "layout": "elevated",
+      "status": "operational",
+      "opened_on": "2026-02-22",
+      "references": [
+        "https://ncrtc.in/",
+        "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
+      ],
+      "last_verified": "2026-11-06"
+    }
+  },
+  "out_of_scope_station_ids": [
+    "7944688687",
+    "Gandhi Ashram",
+    "Shahpeer Gate",
+    "Sharadhapuri Phase 2",
+    "Tej Garhi",
+    "Rajban Bazar",
+    "Hapur Adda Chauraha",
+    "Baccha Park",
+    "Meerut Cantt. Railway"
+  ],
+  "out_of_scope_line_ids": [
+    "17337287",
+    "17337288",
+    "20268334",
+    "851795116",
+    "1034970851"
+  ]
+}
