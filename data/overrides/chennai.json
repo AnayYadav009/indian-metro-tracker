@@ -119,17 +119,18 @@
       "osmId": 12824987,
       "segment_id": "che-corridor-4-seg-01",
       "line_id": "che-corridor-4",
-      "line_name": "Corridor 4 (Poonamallee Bypass - Light House)",
+      "line_name": "Corridor 4 (Poonamallee Bypass - Vadapalani)",
       "phase": "2",
-      "status": "construction",
+      "status": "operational",
       "gauge": "standard",
-      "inaugurated_on": null,
-      "expected_completion": "2026-12",
+      "inaugurated_on": "2026-10-11",
+      "expected_completion": null,
       "color": "#FFD100",
-      "stations_not_published": true,
+      "stations_not_published": false,
       "references": [
         "https://chennaimetrorail.org",
-        "https://pib.gov.in/PressReleasePage.aspx?PRID=2061557"
+        "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/",
+        "https://www.dtnext.in/news/chennai/commercial-metro-operations-from-poonamallee-to-vadapalani-will-commence-from-4-pm-on-sunday"
       ]
     },
     {
@@ -193,7 +194,10 @@
     "Central Metro": "Chennai Central",
     "Puratchi Thalaivar Dr. M.G. Ramachandran Central Metro": "Chennai Central",
     "Egmore Metro": "Egmore",
-    "St. Thomas Mount Metro": "St. Thomas Mount"
+    "St. Thomas Mount Metro": "St. Thomas Mount",
+    "Poonamallee Bus Stand Metro": "Poonamallee Bus Stand",
+    "Poonamallee Government Hospital Metro": "Poonamallee Government Hospital",
+    "Iyappanthangal Metro": "Iyyappanthangal"
   },
   "stationOverrides": {
     "Sir Theagaraya College": {
@@ -464,12 +468,104 @@
     "Vadapalani": {
       "layout": "elevated",
       "line_ids": [
-        "che-green"
+        "che-green",
+        "che-corridor-4"
       ],
       "references": [
-        "https://chennaimetrorail.org"
+        "https://chennaimetrorail.org",
+        "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/"
       ],
       "last_verified": "2026-10-08"
+    },
+    "Poonamallee Bypass": {
+      "layout": "elevated",
+      "status": "operational",
+      "opened_on": "2026-10-11",
+      "references": [
+        "https://chennaimetrorail.org",
+        "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/"
+      ]
+    },
+    "Poonamallee Bus Stand": {
+      "layout": "elevated",
+      "status": "operational",
+      "opened_on": "2026-10-11",
+      "references": [
+        "https://chennaimetrorail.org",
+        "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/"
+      ]
+    },
+    "Poonamallee Government Hospital": {
+      "layout": "elevated",
+      "status": "operational",
+      "opened_on": "2026-10-11",
+      "references": [
+        "https://chennaimetrorail.org",
+        "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/"
+      ]
+    },
+    "Karayanchavadi": {
+      "layout": "elevated",
+      "status": "operational",
+      "opened_on": "2026-10-11",
+      "references": [
+        "https://chennaimetrorail.org",
+        "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/"
+      ]
+    },
+    "Kumananchavadi": {
+      "layout": "elevated",
+      "status": "operational",
+      "opened_on": "2026-10-11",
+      "references": [
+        "https://chennaimetrorail.org",
+        "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/"
+      ]
+    },
+    "Kattupakkam": {
+      "layout": "elevated",
+      "status": "operational",
+      "opened_on": "2026-10-11",
+      "references": [
+        "https://chennaimetrorail.org",
+        "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/"
+      ]
+    },
+    "Iyyappanthangal": {
+      "layout": "elevated",
+      "status": "operational",
+      "opened_on": "2026-10-11",
+      "references": [
+        "https://chennaimetrorail.org",
+        "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/"
+      ]
+    },
+    "Thelliyaragaram": {
+      "layout": "elevated",
+      "status": "operational",
+      "opened_on": "2026-10-11",
+      "references": [
+        "https://chennaimetrorail.org",
+        "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/"
+      ]
+    },
+    "Porur Bypass": {
+      "layout": "elevated",
+      "status": "operational",
+      "opened_on": "2026-10-11",
+      "references": [
+        "https://chennaimetrorail.org",
+        "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/"
+      ]
+    },
+    "Porur Junction": {
+      "layout": "elevated",
+      "status": "operational",
+      "opened_on": "2026-10-11",
+      "references": [
+        "https://chennaimetrorail.org",
+        "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/"
+      ]
     },
     "Ashok Nagar": {
       "layout": "elevated",
@@ -494,16 +590,6 @@
     }
   },
   "out_of_scope_station_ids": [
-    "Porur Junction",
-    "Poonamallee Bypass",
-    "Thelliyaragaram",
-    "Porur Bypass",
-    "Kumananchavadi",
-    "Poonamallee Government Hospital Metro",
-    "Poonamallee Bus Stand Metro",
-    "Kattupakkam",
-    "Karayanchavadi",
-    "Iyappanthangal Metro",
     "Madhavaram Milk Colony",
     "Sholinganallur Metro",
     "Kodambakkam Metro",
@@ -543,7 +629,6 @@
   ],
   "out_of_scope_line_ids": [
     "che-corridor-3",
-    "che-corridor-4",
     "che-corridor-5"
   ],
   "selfIntersectionExemptions": [

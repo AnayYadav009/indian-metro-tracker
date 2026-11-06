@@ -197,36 +197,37 @@
       "official_name": "Yellow Line (Corridor 4)",
       "operator": "CMRL",
       "topology": "linear",
-      "operational_stations": 0,
-      "operational_length_km": 0,
+      "operational_stations": 11,
+      "operational_length_km": 14.9,
       "planned_length_km": 26.10,
       "terminals": [
-        "Light House",
+        "Vadapalani",
         "Poonamallee Bypass"
       ],
-      "status": "under_construction",
+      "status": "operational",
       "disjoint_stretches": false,
-      "openings": [],
+      "openings": [
+        {
+          "stage": "Poonamallee Bypass - Vadapalani",
+          "phase": "2",
+          "opened_on": "2026-10-11",
+          "stations_added": 11,
+          "confidence": "sourced",
+          "source": {
+            "title": "Chennai Metro opens first section of the Yellow Line as Phase II expansion gathers pace",
+            "url": "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/",
+            "retrieved_at": "2026-11-06",
+            "kind": "news"
+          }
+        }
+      ],
       "construction": [
         {
-          "stretch": "Poonamallee Bypass - Porur Junction",
-          "phase": "2",
-          "expected_completion": "2026",
-          "stations": 10,
-          "notes": "Priority elevated stretch between Poonamallee Bypass and Porur Junction (approx 9.1 km). Trial runs conducted in 2025/2026.",
-          "source": {
-            "title": "CMRL Project Progress - Phase II Corridor 4 updates",
-            "url": "https://chennaimetrorail.org",
-            "retrieved_at": "2026-10-07",
-            "kind": "official"
-          }
-        },
-        {
-          "stretch": "Porur Junction - Light House",
+          "stretch": "Vadapalani - Light House",
           "phase": "2",
           "expected_completion": "2027",
-          "stations": 20,
-          "notes": "Remaining 17 km underground and elevated stretch from Porur to Light House via Vadapalani, Nandanam, and Alwarpet.",
+          "stations": 19,
+          "notes": "Remaining underground and elevated stretch from Vadapalani to Light House via Nandanam and Alwarpet.",
           "source": {
             "title": "Cabinet approves Chennai Metro Rail Project Phase II comprising three corridors",
             "url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2061557",
@@ -235,7 +236,7 @@
           }
         }
       ],
-      "notes": "Phase II Corridor 4 spanning 26.1 km with 30 stations connecting Light House on the Marina to Poonamallee Bypass. Under active construction.",
+      "notes": "Phase II Corridor 4: 14.9 km operational from Poonamallee Bypass to Vadapalani (11 elevated stations) opened 2026-10-11; remaining 11.2 km to Light House under construction.",
       "confidence": "sourced"
     },
     {

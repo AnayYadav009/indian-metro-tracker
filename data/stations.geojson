@@ -1306,11 +1306,12 @@
         "city_id": "chennai",
         "city": "Chennai",
         "line_ids": [
-          "che-green"
+          "che-green",
+          "che-corridor-4"
         ],
         "status": "operational",
         "phase": "1",
-        "is_interchange": false,
+        "is_interchange": true,
         "opened_on": null,
         "expected_completion": null,
         "completion_unconfirmed": false,
@@ -1318,10 +1319,12 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://chennaimetrorail.org"
+          "https://chennaimetrorail.org",
+          "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/"
         ],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-10"
+        "retrieved_at": "2026-10-10",
+        "interchange_id": "chennai-vadapalani"
       }
     },
     {
@@ -29566,6 +29569,346 @@
         ],
         "last_verified": "2026-10-10",
         "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.15676,
+          13.03586
+        ]
+      },
+      "properties": {
+        "station_id": "chennai-porur-junction",
+        "name": "Porur Junction",
+        "city_id": "chennai",
+        "city": "Chennai",
+        "line_ids": [
+          "che-corridor-4"
+        ],
+        "status": "operational",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": "2026-10-11",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://chennaimetrorail.org",
+          "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-10"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.08178,
+          13.04799
+        ]
+      },
+      "properties": {
+        "station_id": "chennai-poonamallee-bypass",
+        "name": "Poonamallee Bypass",
+        "city_id": "chennai",
+        "city": "Chennai",
+        "line_ids": [
+          "che-corridor-4"
+        ],
+        "status": "operational",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": "2026-10-11",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://chennaimetrorail.org",
+          "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-10"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.14186,
+          13.03686
+        ]
+      },
+      "properties": {
+        "station_id": "chennai-thelliyaragaram",
+        "name": "Thelliyaragaram",
+        "city_id": "chennai",
+        "city": "Chennai",
+        "line_ids": [
+          "che-corridor-4"
+        ],
+        "status": "operational",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": "2026-10-11",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://chennaimetrorail.org",
+          "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-10"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.14997,
+          13.03623
+        ]
+      },
+      "properties": {
+        "station_id": "chennai-porur-bypass",
+        "name": "Porur Bypass",
+        "city_id": "chennai",
+        "city": "Chennai",
+        "line_ids": [
+          "che-corridor-4"
+        ],
+        "status": "operational",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": "2026-10-11",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://chennaimetrorail.org",
+          "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-10"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.11891,
+          13.04468
+        ]
+      },
+      "properties": {
+        "station_id": "chennai-kumananchavadi",
+        "name": "Kumananchavadi",
+        "city_id": "chennai",
+        "city": "Chennai",
+        "line_ids": [
+          "che-corridor-4"
+        ],
+        "status": "operational",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": "2026-10-11",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://chennaimetrorail.org",
+          "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-10"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.102,
+          13.04971
+        ]
+      },
+      "properties": {
+        "station_id": "chennai-poonamallee-government-hospital",
+        "name": "Poonamallee Government Hospital",
+        "city_id": "chennai",
+        "city": "Chennai",
+        "line_ids": [
+          "che-corridor-4"
+        ],
+        "status": "operational",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": "2026-10-11",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://chennaimetrorail.org",
+          "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-10"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.09492,
+          13.05092
+        ]
+      },
+      "properties": {
+        "station_id": "chennai-poonamallee-bus-stand",
+        "name": "Poonamallee Bus Stand",
+        "city_id": "chennai",
+        "city": "Chennai",
+        "line_ids": [
+          "che-corridor-4"
+        ],
+        "status": "operational",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": "2026-10-11",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://chennaimetrorail.org",
+          "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-10"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.12538,
+          13.04198
+        ]
+      },
+      "properties": {
+        "station_id": "chennai-kattupakkam",
+        "name": "Kattupakkam",
+        "city_id": "chennai",
+        "city": "Chennai",
+        "line_ids": [
+          "che-corridor-4"
+        ],
+        "status": "operational",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": "2026-10-11",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://chennaimetrorail.org",
+          "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-10"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.11091,
+          13.04671
+        ]
+      },
+      "properties": {
+        "station_id": "chennai-karayanchavadi",
+        "name": "Karayanchavadi",
+        "city_id": "chennai",
+        "city": "Chennai",
+        "line_ids": [
+          "che-corridor-4"
+        ],
+        "status": "operational",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": "2026-10-11",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://chennaimetrorail.org",
+          "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-10"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.13499,
+          13.03818
+        ]
+      },
+      "properties": {
+        "station_id": "chennai-iyyappanthangal",
+        "name": "Iyyappanthangal",
+        "city_id": "chennai",
+        "city": "Chennai",
+        "line_ids": [
+          "che-corridor-4"
+        ],
+        "status": "operational",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": "2026-10-11",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://chennaimetrorail.org",
+          "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-10"
       }
     }
   ]

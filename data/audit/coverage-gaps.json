@@ -19,6 +19,15 @@
     "review_date": "2027-01-15"
   },
   {
+    "city_id": "chennai",
+    "line_id": "che-corridor-4",
+    "stretch": "Vadapalani - Light House",
+    "status": "under_construction",
+    "source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2061557",
+    "reason": "CMRL Phase II Corridor 4 eastern section (Vadapalani to Light House) is under active construction; alignment geometry not yet published in OSM cache.",
+    "review_date": "2027-01-15"
+  },
+  {
     "city_id": "noida",
     "line_id": "noi-aqua",
     "stretch": "Sector 142 to Botanical Garden",
