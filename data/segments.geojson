@@ -52050,8 +52050,136 @@
         "type": "LineString",
         "coordinates": [
           [
-            77.16809,
-            28.73696
+            77.18211,
+            28.72409
+          ],
+          [
+            77.18169,
+            28.72519
+          ],
+          [
+            77.1817,
+            28.726
+          ],
+          [
+            77.18184,
+            28.72909
+          ],
+          [
+            77.18195,
+            28.73024
+          ],
+          [
+            77.18194,
+            28.73039
+          ],
+          [
+            77.18192,
+            28.73054
+          ],
+          [
+            77.18189,
+            28.73069
+          ],
+          [
+            77.18186,
+            28.73083
+          ],
+          [
+            77.18181,
+            28.73098
+          ],
+          [
+            77.18176,
+            28.73112
+          ],
+          [
+            77.18169,
+            28.73126
+          ],
+          [
+            77.18162,
+            28.73139
+          ],
+          [
+            77.18154,
+            28.73152
+          ],
+          [
+            77.18145,
+            28.73165
+          ],
+          [
+            77.18136,
+            28.73177
+          ],
+          [
+            77.18125,
+            28.73189
+          ],
+          [
+            77.18115,
+            28.732
+          ],
+          [
+            77.18103,
+            28.73211
+          ],
+          [
+            77.1809,
+            28.73221
+          ],
+          [
+            77.18078,
+            28.7323
+          ],
+          [
+            77.18064,
+            28.73239
+          ],
+          [
+            77.1805,
+            28.73247
+          ],
+          [
+            77.18036,
+            28.73255
+          ],
+          [
+            77.18021,
+            28.73262
+          ],
+          [
+            77.17978,
+            28.73279
+          ],
+          [
+            77.17707,
+            28.73395
+          ],
+          [
+            77.17631,
+            28.73422
+          ],
+          [
+            77.17282,
+            28.73554
+          ],
+          [
+            77.17247,
+            28.73566
+          ],
+          [
+            77.17182,
+            28.73588
+          ],
+          [
+            77.17042,
+            28.73631
+          ],
+          [
+            77.1698,
+            28.73647
           ],
           [
             77.16807,
@@ -52378,26 +52506,27 @@
       "properties": {
         "segment_id": "del-magenta-seg-02",
         "line_id": "del-magenta",
-        "line_name": "Magenta Line (Ext Phase IV)",
+        "line_name": "Magenta Line (Deepali Chowk - Majlis Park)",
         "city_id": "delhi",
         "city": "Delhi",
         "operator": "DMRC",
-        "status": "construction",
+        "status": "operational",
         "phase": "IV",
-        "length_km": 7,
+        "length_km": 9.3,
         "gauge": "standard",
-        "inaugurated_on": null,
+        "inaugurated_on": "2026-03-08",
         "expected_completion": null,
-        "stations_count": 4,
+        "stations_count": 7,
         "color": "#CC338B",
         "stations_not_published": false,
         "source": "osm",
         "references": [
           "https://delhimetrorail.com/",
-          "https://www.openstreetmap.org/way/538930431"
+          "https://metrorailnews.in/modi-inaugurated-2-new-sections-of-delhi-metro/",
+          "https://www.tribuneindia.com/news/delhi/dmrc-begins-services-on-two-newly-inaugurated-corridors/"
         ],
-        "completion_unconfirmed": true,
-        "last_verified": null,
+        "completion_unconfirmed": false,
+        "last_verified": "2026-11-06",
         "retrieved_at": "2026-10-16",
         "geometry_quality": "exact"
       }
@@ -52963,7 +53092,7 @@
         "length_km": 19.2,
         "gauge": "standard",
         "inaugurated_on": null,
-        "expected_completion": null,
+        "expected_completion": "2026-12",
         "stations_count": 3,
         "color": "#B8860B",
         "stations_not_published": true,
@@ -52971,10 +53100,11 @@
         "references": [
           "https://delhimetrorail.com/",
           "https://themetrorailguy.com/2024/01/27/delhi-metros-silver-line-renamed-to-golden-line-line-10/",
+          "https://www.devdiscourse.com/article/business/3918126-dmrc-eyes-december-rollout-for-key-phase-4-corridors-fixes-target-for-phase-5-expansion",
           "https://www.openstreetmap.org/way/538930435"
         ],
         "completion_unconfirmed": true,
-        "last_verified": "2026-10-10",
+        "last_verified": "2026-11-06",
         "geometry_quality": "schematic"
       }
     },

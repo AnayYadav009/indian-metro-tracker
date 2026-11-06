@@ -17357,20 +17357,26 @@
         "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
-          "del-red"
+          "del-red",
+          "del-magenta"
         ],
         "status": "operational",
         "phase": "I",
-        "is_interchange": false,
+        "is_interchange": true,
         "opened_on": null,
         "expected_completion": null,
         "completion_unconfirmed": false,
-        "layout": null,
-        "layout_source": "unverified",
+        "layout": "elevated",
+        "layout_source": "operator",
         "source": "osm",
-        "references": [],
-        "last_verified": null,
-        "retrieved_at": "2026-10-16"
+        "references": [
+          "https://www.delhimetrorail.com/network_map",
+          "https://metrorailnews.in/modi-inaugurated-2-new-sections-of-delhi-metro/",
+          "https://www.tribuneindia.com/news/delhi/dmrc-begins-services-on-two-newly-inaugurated-corridors/"
+        ],
+        "last_verified": "2026-11-06",
+        "retrieved_at": "2026-10-16",
+        "interchange_id": "del-madhuban-chowk"
       }
     },
     {
@@ -20067,11 +20073,12 @@
         "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
-          "del-yellow"
+          "del-yellow",
+          "del-magenta"
         ],
         "status": "operational",
         "phase": "I",
-        "is_interchange": false,
+        "is_interchange": true,
         "opened_on": null,
         "expected_completion": null,
         "completion_unconfirmed": false,
@@ -20079,10 +20086,13 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://www.delhimetrorail.com/network_map"
+          "https://www.delhimetrorail.com/network_map",
+          "https://metrorailnews.in/modi-inaugurated-2-new-sections-of-delhi-metro/",
+          "https://www.tribuneindia.com/news/delhi/dmrc-begins-services-on-two-newly-inaugurated-corridors/"
         ],
-        "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-16"
+        "last_verified": "2026-11-06",
+        "retrieved_at": "2026-10-16",
+        "interchange_id": "del-haiderpur-badli-mor"
       }
     },
     {
@@ -21006,17 +21016,21 @@
         "line_ids": [
           "del-magenta"
         ],
-        "status": "construction",
+        "status": "operational",
         "phase": "IV",
         "is_interchange": false,
-        "opened_on": null,
+        "opened_on": "2026-03-08",
         "expected_completion": null,
-        "completion_unconfirmed": true,
-        "layout": null,
-        "layout_source": "unverified",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
         "source": "osm",
-        "references": [],
-        "last_verified": null,
+        "references": [
+          "https://delhimetrorail.com/",
+          "https://metrorailnews.in/modi-inaugurated-2-new-sections-of-delhi-metro/",
+          "https://www.tribuneindia.com/news/delhi/dmrc-begins-services-on-two-newly-inaugurated-corridors/"
+        ],
+        "last_verified": "2026-11-06",
         "retrieved_at": "2026-10-16"
       }
     },
@@ -21037,17 +21051,21 @@
         "line_ids": [
           "del-magenta"
         ],
-        "status": "construction",
+        "status": "operational",
         "phase": "IV",
         "is_interchange": false,
-        "opened_on": null,
+        "opened_on": "2026-03-08",
         "expected_completion": null,
-        "completion_unconfirmed": true,
-        "layout": null,
-        "layout_source": "unverified",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
         "source": "osm",
-        "references": [],
-        "last_verified": null,
+        "references": [
+          "https://delhimetrorail.com/",
+          "https://metrorailnews.in/modi-inaugurated-2-new-sections-of-delhi-metro/",
+          "https://www.tribuneindia.com/news/delhi/dmrc-begins-services-on-two-newly-inaugurated-corridors/"
+        ],
+        "last_verified": "2026-11-06",
         "retrieved_at": "2026-10-16"
       }
     },
@@ -21068,17 +21086,21 @@
         "line_ids": [
           "del-magenta"
         ],
-        "status": "construction",
+        "status": "operational",
         "phase": "IV",
         "is_interchange": false,
-        "opened_on": null,
+        "opened_on": "2026-03-08",
         "expected_completion": null,
-        "completion_unconfirmed": true,
-        "layout": null,
-        "layout_source": "unverified",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
         "source": "osm",
-        "references": [],
-        "last_verified": null,
+        "references": [
+          "https://delhimetrorail.com/",
+          "https://metrorailnews.in/modi-inaugurated-2-new-sections-of-delhi-metro/",
+          "https://www.tribuneindia.com/news/delhi/dmrc-begins-services-on-two-newly-inaugurated-corridors/"
+        ],
+        "last_verified": "2026-11-06",
         "retrieved_at": "2026-10-16"
       }
     },
@@ -21099,17 +21121,21 @@
         "line_ids": [
           "del-magenta"
         ],
-        "status": "construction",
+        "status": "operational",
         "phase": "IV",
         "is_interchange": false,
-        "opened_on": null,
+        "opened_on": "2026-03-08",
         "expected_completion": null,
-        "completion_unconfirmed": true,
-        "layout": null,
-        "layout_source": "unverified",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
         "source": "osm",
-        "references": [],
-        "last_verified": null,
+        "references": [
+          "https://delhimetrorail.com/",
+          "https://metrorailnews.in/modi-inaugurated-2-new-sections-of-delhi-metro/",
+          "https://www.tribuneindia.com/news/delhi/dmrc-begins-services-on-two-newly-inaugurated-corridors/"
+        ],
+        "last_verified": "2026-11-06",
         "retrieved_at": "2026-10-16"
       }
     },
@@ -21551,20 +21577,26 @@
         "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
-          "del-pink"
+          "del-pink",
+          "del-magenta"
         ],
         "status": "operational",
         "phase": "III",
-        "is_interchange": false,
+        "is_interchange": true,
         "opened_on": null,
         "expected_completion": null,
         "completion_unconfirmed": false,
-        "layout": null,
-        "layout_source": "unverified",
+        "layout": "elevated",
+        "layout_source": "operator",
         "source": "osm",
-        "references": [],
-        "last_verified": null,
-        "retrieved_at": "2026-10-16"
+        "references": [
+          "https://delhimetrorail.com/pages/about-us/present-network",
+          "https://metrorailnews.in/modi-inaugurated-2-new-sections-of-delhi-metro/",
+          "https://www.tribuneindia.com/news/delhi/dmrc-begins-services-on-two-newly-inaugurated-corridors/"
+        ],
+        "last_verified": "2026-11-06",
+        "retrieved_at": "2026-10-16",
+        "interchange_id": "del-majlis-park"
       }
     },
     {
