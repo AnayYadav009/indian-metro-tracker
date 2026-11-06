@@ -7749,92 +7749,8 @@
         "type": "LineString",
         "coordinates": [
           [
-            73.69539,
-            18.58434
-          ],
-          [
-            73.69562,
-            18.58447
-          ],
-          [
-            73.69584,
-            18.5846
-          ],
-          [
-            73.69657,
-            18.58509
-          ],
-          [
-            73.69772,
-            18.58586
-          ],
-          [
-            73.69791,
-            18.58598
-          ],
-          [
-            73.69815,
-            18.58609
-          ],
-          [
-            73.69843,
-            18.58619
-          ],
-          [
-            73.69894,
-            18.58634
-          ],
-          [
-            73.69917,
-            18.58642
-          ],
-          [
-            73.69939,
-            18.5865
-          ],
-          [
-            73.69961,
-            18.5866
-          ],
-          [
-            73.70034,
-            18.58693
-          ],
-          [
-            73.70072,
-            18.58712
-          ],
-          [
-            73.7011,
-            18.58732
-          ],
-          [
-            73.70134,
-            18.58745
-          ],
-          [
-            73.70158,
-            18.58758
-          ],
-          [
-            73.7019,
-            18.58774
-          ],
-          [
-            73.70208,
-            18.58782
-          ],
-          [
-            73.70225,
-            18.58789
-          ],
-          [
-            73.70242,
-            18.58796
-          ],
-          [
-            73.70269,
-            18.58807
+            73.70289,
+            18.5881
           ],
           [
             73.70294,
@@ -9565,31 +9481,32 @@
             18.53031
           ],
           [
-            73.85922,
-            18.52816
+            73.85775,
+            18.52672
           ]
         ]
       },
       "properties": {
         "segment_id": "pun-line-3-seg-01",
         "line_id": "pun-line-3",
-        "line_name": "Line 3 (Puneri Metro / Hinjawadi - Civil Court)",
+        "line_name": "Pink Line (Line 3: Hinjawadi - District Court)",
         "city_id": "pune",
         "city": "Pune",
         "operator": "Pune IT City Metro Rail Limited",
-        "status": "construction",
+        "status": "operational",
         "phase": "1",
-        "length_km": 21.3,
+        "length_km": 20.3,
         "gauge": "standard",
-        "inaugurated_on": null,
-        "expected_completion": "2026-12",
-        "stations_count": 1,
+        "inaugurated_on": "2026-11-03",
+        "expected_completion": null,
+        "stations_count": 13,
         "color": "#FF69B4",
         "stations_not_published": false,
         "source": "manual",
         "references": [
-          "https://www.punemetrorail.org",
-          "https://pmrda.gov.in"
+          "https://pmrda.gov.in",
+          "https://www.freepressjournal.in/pune/pune-metro-line-3-expected-to-carry-2-lakh-passengers-daily-four-new-corridors-worth-13500-crore-announced",
+          "https://www.punekarnews.in/pune-metro-line-3-17-stations-to-open-from-4th-november-balewadi-stations-by-december/"
         ],
         "completion_unconfirmed": false,
         "last_verified": "2026-10-08",

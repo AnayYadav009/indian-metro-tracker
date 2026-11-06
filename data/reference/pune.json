@@ -168,29 +168,40 @@
     },
     {
       "line_id": "pun-line-3",
-      "official_name": "Line 3 (Puneri Metro)",
+      "official_name": "Pink Line (Line 3)",
       "operator": "Pune IT City Metro Rail Limited",
       "topology": "linear",
-      "operational_stations": 0,
-      "operational_length_km": 0,
+      "operational_stations": 13,
+      "operational_stations_candidates": [
+        13,
+        17
+      ],
+      "operational_length_km": 21.3,
       "planned_length_km": 23.2,
       "terminals": [
         "Maan",
         "District Court"
       ],
-      "status": "under_construction",
+      "status": "operational",
       "disjoint_stretches": false,
-      "openings": [],
-      "construction": [
+      "openings": [
         {
-          "stretch": "Hinjawadi (Maan) - District Court (Civil Court)",
+          "stage": "Hinjawadi (Maan) - District Court",
           "phase": "1",
-          "expected_completion": "2026-12",
-          "stations": 23,
-          "notes": "23.2 km elevated PPP corridor connecting Rajiv Gandhi Infotech Park, Hinjawadi to District Court interchange."
+          "opened_on": "2026-11-03",
+          "stations_added": 13,
+          "confidence": "sourced",
+          "source": {
+            "title": "Pune Metro Line 3 expected to carry 2 lakh passengers daily; four new corridors announced",
+            "url": "https://www.freepressjournal.in/pune/pune-metro-line-3-expected-to-carry-2-lakh-passengers-daily-four-new-corridors-worth-13500-crore-announced",
+            "retrieved_at": "2026-11-06",
+            "kind": "news"
+          }
         }
       ],
-      "notes": "PPP corridor under PMRDA developed by Tata-Siemens consortium (SPV: Pune IT City Metro Rail Limited). 23 elevated stations; testing and CMRS safety clearance under way. Coverage review on 2026-10-13 confirmed Phase 1A/Phase 2 extensions (Swargate to Katraj underground, PCMC to Nigdi) are in pre-construction/tender stages; Line 3 is the only corridor with active physical construction."
+      "construction": [],
+      "notes": "PPP corridor under PMRDA developed by Tata-Siemens consortium (Pune IT City Metro Rail Limited). 23.2 km elevated corridor connecting Hinjawadi (Maan) to District Court interchange. Virtually inaugurated on 2026-11-03 by PM Narendra Modi; commercial passenger operations commenced on 2026-11-04 with 17 operational stations (13 published with OSM geometry, 4 awaiting surveyed geometry; 6 intermediate stations temporarily skipped pending completion by January 2027). Phase II four corridors (~44.4 km: Line 2A Vanaz-Chandani Chowk, Line 2B Ramwadi-Vitthalwadi, Line 4 Kharadi-Khadakwasla, Line 4A Nal Stop-Manik Baug) foundation stone laid on 2026-11-03.",
+      "confidence": "sourced"
     }
   ],
   "confidence": "sourced"

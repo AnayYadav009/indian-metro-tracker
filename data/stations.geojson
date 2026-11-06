@@ -2514,7 +2514,10 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://www.punemetrorail.org"
+          "https://www.punemetrorail.org",
+          "https://pmrda.gov.in",
+          "https://www.freepressjournal.in/pune/pune-metro-line-3-expected-to-carry-2-lakh-passengers-daily-four-new-corridors-worth-13500-crore-announced",
+          "https://www.punekarnews.in/pune-metro-line-3-17-stations-to-open-from-4th-november-balewadi-stations-by-december/"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16",
@@ -29920,6 +29923,426 @@
         ],
         "last_verified": null,
         "retrieved_at": "2026-10-10"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.76154,
+          18.57971
+        ]
+      },
+      "properties": {
+        "station_id": "pune-balewadi-stadium",
+        "name": "Balewadi Stadium",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-line-3"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-11-04",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://pmrda.gov.in",
+          "https://www.freepressjournal.in/pune/pune-metro-line-3-expected-to-carry-2-lakh-passengers-daily-four-new-corridors-worth-13500-crore-announced",
+          "https://www.punekarnews.in/pune-metro-line-3-17-stations-to-open-from-4th-november-balewadi-stations-by-december/"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.70289,
+          18.5881
+        ]
+      },
+      "properties": {
+        "station_id": "pune-maan",
+        "name": "Maan",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-line-3"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-11-04",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://pmrda.gov.in",
+          "https://www.freepressjournal.in/pune/pune-metro-line-3-expected-to-carry-2-lakh-passengers-daily-four-new-corridors-worth-13500-crore-announced",
+          "https://www.punekarnews.in/pune-metro-line-3-17-stations-to-open-from-4th-november-balewadi-stations-by-december/"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.70922,
+          18.59419
+        ]
+      },
+      "properties": {
+        "station_id": "pune-infosys",
+        "name": "Infosys",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-line-3"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-11-04",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://pmrda.gov.in",
+          "https://www.freepressjournal.in/pune/pune-metro-line-3-expected-to-carry-2-lakh-passengers-daily-four-new-corridors-worth-13500-crore-announced",
+          "https://www.punekarnews.in/pune-metro-line-3-17-stations-to-open-from-4th-november-balewadi-stations-by-december/"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.84149,
+          18.53301
+        ]
+      },
+      "properties": {
+        "station_id": "pune-agriculture-college",
+        "name": "Agriculture College",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-line-3"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-11-04",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://pmrda.gov.in",
+          "https://www.freepressjournal.in/pune/pune-metro-line-3-expected-to-carry-2-lakh-passengers-daily-four-new-corridors-worth-13500-crore-announced",
+          "https://www.punekarnews.in/pune-metro-line-3-17-stations-to-open-from-4th-november-balewadi-stations-by-december/"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.71716,
+          18.59659
+        ]
+      },
+      "properties": {
+        "station_id": "pune-wipro",
+        "name": "Wipro",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-line-3"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-11-04",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://pmrda.gov.in",
+          "https://www.freepressjournal.in/pune/pune-metro-line-3-expected-to-carry-2-lakh-passengers-daily-four-new-corridors-worth-13500-crore-announced",
+          "https://www.punekarnews.in/pune-metro-line-3-17-stations-to-open-from-4th-november-balewadi-stations-by-december/"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.75756,
+          18.5903
+        ]
+      },
+      "properties": {
+        "station_id": "pune-wakad-chowk",
+        "name": "Wakad Chowk",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-line-3"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-11-04",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://pmrda.gov.in",
+          "https://www.freepressjournal.in/pune/pune-metro-line-3-expected-to-carry-2-lakh-passengers-daily-four-new-corridors-worth-13500-crore-announced",
+          "https://www.punekarnews.in/pune-metro-line-3-17-stations-to-open-from-4th-november-balewadi-stations-by-december/"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.82717,
+          18.54235
+        ]
+      },
+      "properties": {
+        "station_id": "pune-savitribai-phule-pune-university",
+        "name": "Savitribai Phule Pune University",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-line-3"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-11-04",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://pmrda.gov.in",
+          "https://www.freepressjournal.in/pune/pune-metro-line-3-expected-to-carry-2-lakh-passengers-daily-four-new-corridors-worth-13500-crore-announced",
+          "https://www.punekarnews.in/pune-metro-line-3-17-stations-to-open-from-4th-november-balewadi-stations-by-december/"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.81967,
+          18.54632
+        ]
+      },
+      "properties": {
+        "station_id": "pune-yashada",
+        "name": "YASHADA",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-line-3"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-11-04",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://pmrda.gov.in",
+          "https://www.freepressjournal.in/pune/pune-metro-line-3-expected-to-carry-2-lakh-passengers-daily-four-new-corridors-worth-13500-crore-announced",
+          "https://www.punekarnews.in/pune-metro-line-3-17-stations-to-open-from-4th-november-balewadi-stations-by-december/"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.80823,
+          18.55027
+        ]
+      },
+      "properties": {
+        "station_id": "pune-krushi-anusandhan",
+        "name": "Krushi Anusandhan",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-line-3"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-11-04",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://pmrda.gov.in",
+          "https://www.freepressjournal.in/pune/pune-metro-line-3-expected-to-carry-2-lakh-passengers-daily-four-new-corridors-worth-13500-crore-announced",
+          "https://www.punekarnews.in/pune-metro-line-3-17-stations-to-open-from-4th-november-balewadi-stations-by-december/"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.76606,
+          18.57503
+        ]
+      },
+      "properties": {
+        "station_id": "pune-nicmar",
+        "name": "NICMAR",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-line-3"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-11-04",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://pmrda.gov.in",
+          "https://www.freepressjournal.in/pune/pune-metro-line-3-expected-to-carry-2-lakh-passengers-daily-four-new-corridors-worth-13500-crore-announced",
+          "https://www.punekarnews.in/pune-metro-line-3-17-stations-to-open-from-4th-november-balewadi-stations-by-december/"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.7463,
+          18.59097
+        ]
+      },
+      "properties": {
+        "station_id": "pune-jakat-naka",
+        "name": "Jakat Naka",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-line-3"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-11-04",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://pmrda.gov.in",
+          "https://www.freepressjournal.in/pune/pune-metro-line-3-expected-to-carry-2-lakh-passengers-daily-four-new-corridors-worth-13500-crore-announced",
+          "https://www.punekarnews.in/pune-metro-line-3-17-stations-to-open-from-4th-november-balewadi-stations-by-december/"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.73736,
+          18.59239
+        ]
+      },
+      "properties": {
+        "station_id": "pune-hinjawadi",
+        "name": "Hinjawadi",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-line-3"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-11-04",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://pmrda.gov.in",
+          "https://www.freepressjournal.in/pune/pune-metro-line-3-expected-to-carry-2-lakh-passengers-daily-four-new-corridors-worth-13500-crore-announced",
+          "https://www.punekarnews.in/pune-metro-line-3-17-stations-to-open-from-4th-november-balewadi-stations-by-december/"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-16"
       }
     }
   ]
