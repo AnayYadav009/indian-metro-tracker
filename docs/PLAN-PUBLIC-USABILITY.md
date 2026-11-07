@@ -65,6 +65,17 @@ Trust first (fares and timings are new claims that need a source and a verified 
 
 **Coverage audit (2026-10-28):** `data/fares.json` has verified rules for Delhi and Hyderabad only; Mumbai, Bengaluru, Chennai, and Kolkata have no loaded fare rules. `data/timings.json` is empty. The owner approved retaining distance-band and station-count fare bases and leaving matrix-only tariffs unpriced; no approximation or new fare values were added. Delhi Airport Express, CMRL matrix routes, and matrix-priced Kolkata routes remain unpriced unless a tariff is independently representable by an existing supported basis and verified from an official source. BMRCL and Mumbai remain unpriced pending reproducible official fare evidence. Timing features remain unavailable until official, reviewable terminal schedules are sourced. This resolves the model-policy decision but not Tier 1 coverage.
 
+**Phase 8 Audit & Verification (Network Expansions Integration, 2026-11-07):**
+- **Fare Rules Scope**: Audited `data/fares.json` (2 rules: `del-fare-dmrc`, `hyd-fare-ltmrhl`) across all 22 cities.
+- **Phases 1–7 Expansion Alignment**:
+  - *Delhi Magenta Extension (`del-magenta-seg-02`, Phase 3)*: 7 newly opened operational stations (Deepali Chowk to Majlis Park) inherit `del-fare-dmrc` distance-band calculation since `del-magenta` is an active member of `applies_to_line_ids`.
+  - *Chennai Yellow (`che-corridor-4`, Phase 1)*: CMRL uses a 51×51 station-to-station origin-destination fare matrix rather than distance slabs; kept unpriced and fare feature hidden per owner tariff policy and project rules.
+  - *Pune Line 3 (`pun-line-3`, Phase 2)*: Line 3 is operated by concessionaire (Pune IT City Metro Rail Limited / PMRDA); standard Maha Metro tariff does not apply; kept unpriced and fare feature hidden.
+  - *Kolkata Orange (`kol-orange`, Phase 5)*: Corridor uses origin-destination matrix pricing; kept unpriced.
+  - *All Remaining Cities*: 20 out of 22 cities have no loaded fare rules; `hasSourcedFares(cityId, rules)` evaluates to `false` and the fare card (`route-fare-summary-card`) is strictly omitted.
+- **Service Hours Scope**: `data/timings.json` maintains 0 records (`[]`). Dynamic notice `route-timings-unverified-notice` informs riders to verify operating hours directly with operators before late travel.
+- **Verification**: `npx vitest run __tests__/fares.test.ts` passes (61 tests); `npm run validate:data` passes (22 cities, 59 lines, 79 segments, 954 stations, 2 fare rules, 0 service hours).
+
 **Verification (2026-10-28):** `__tests__/fares.test.ts` passes (61 tests); `npm run validate:data` passes (21 cities, 58 lines, 77 segments, 915 stations, 2 fare rules, 0 service hours).
 
 ### Phase C: Interface simplification
