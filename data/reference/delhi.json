@@ -605,16 +605,15 @@
         {
           "stretch": "Phase 4 extension (Krishna Park Extension - Ramakrishna Ashram Marg)",
           "phase": "4",
-          "expected_completion": "2026-12",
           "stations": 15,
-          "notes": "Krishna Park Extension to RK Ashram Marg section. DMRC targeted December 2026 rollout; secondary sources (Wikipedia) indicate Majlis Park to RK Ashram Marg connection may extend to late 2027. Recorded as expected_completion 2026-12 with completion_unconfirmed true.",
+          "notes": "Krishna Park Extension to RK Ashram Marg section. A completion date is unconfirmed; no date is recorded without an official DMRC source.",
           "source": {
             "kind": "news",
             "url": "https://www.devdiscourse.com/article/business/3918126-dmrc-eyes-december-rollout-for-key-phase-4-corridors-fixes-target-for-phase-5-expansion"
           }
         }
       ],
-      "notes": "Operational corridor spanning 46.7 km with 32 stations across two sections (Botanical Garden to Janakpuri West, and Deepali Chowk to Majlis Park). Remaining Phase 4 extension (Krishna Park Extension to RK Ashram Marg) targeting December 2026. Phase V-A Central Vista corridor (RK Ashram Marg to Indraprastha, 9.9 km underground) foundation laid 2026-03-08."
+      "notes": "Operational corridor spanning 46.7 km with 32 stations across two sections (Botanical Garden to Janakpuri West, and Deepali Chowk to Majlis Park). The remaining Phase 4 extension has no confirmed completion date. Phase V-A Central Vista corridor (RK Ashram Marg to Indraprastha, 9.9 km underground) foundation laid 2026-03-08."
     },
     {
       "line_id": "del-grey",
@@ -674,16 +673,15 @@
         {
           "stretch": "Phase 4 main corridor (Delhi Aerocity - Tughlakabad)",
           "phase": "4",
-          "expected_completion": "2026-12",
           "stations": 15,
-          "notes": "23.62 km main corridor under construction with 15 stations. DMRC targets December 2026 rollout.",
+          "notes": "23.62 km main corridor under construction with 15 stations. A completion date is unconfirmed; no date is recorded without an official DMRC source.",
           "source": {
             "kind": "news",
             "url": "https://www.devdiscourse.com/article/business/3918126-dmrc-eyes-december-rollout-for-key-phase-4-corridors-fixes-target-for-phase-5-expansion"
           }
         }
       ],
-      "notes": "Phase 4 Aerocity to Tughlakabad corridor (23.62 km, 15 stations) under active construction targeting December 2026 rollout. Phase V-A extensions (Aerocity to IGI T1 2.26 km underground, Tughlakabad to Kalindi Kunj 3.9 km elevated) foundation stone laid 2026-03-08. Formerly designated Silver Line, officially re-branded Golden Line in 2024. Aliases del-silver retained.",
+      "notes": "Phase 4 Aerocity to Tughlakabad corridor (23.62 km, 15 stations) under active construction; its completion date is unconfirmed. Phase V-A extensions (Aerocity to IGI T1 2.26 km underground, Tughlakabad to Kalindi Kunj 3.9 km elevated) foundation stone laid 2026-03-08. Formerly designated Silver Line, officially re-branded Golden Line in 2024. Aliases del-silver retained.",
       "confidence": "unverified"
     }
   ]

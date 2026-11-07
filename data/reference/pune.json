@@ -22,52 +22,28 @@
           "phase": null,
           "opened_on": "2022-03-06",
           "stations_added": 5,
-          "confidence": "sourced",
-          "source": {
-            "title": "PM Modi inaugurates Pune Metro priority stretches",
-            "url": "https://www.punemetrorail.org",
-            "retrieved_at": "2026-10-08",
-            "kind": "official"
-          }
+          "confidence": "unverified"
         },
         {
           "stage": "Phugewadi - District Court (Civil Court)",
           "phase": null,
           "opened_on": "2023-08-01",
           "stations_added": 4,
-          "confidence": "sourced",
-          "source": {
-            "title": "Pune Metro Phugewadi to Civil Court stretch inaugurated",
-            "url": "https://www.punemetrorail.org",
-            "retrieved_at": "2026-10-08",
-            "kind": "official"
-          }
+          "confidence": "unverified"
         },
         {
           "stage": "District Court - Swargate (Underground)",
           "phase": null,
           "opened_on": "2024-09-29",
           "stations_added": 3,
-          "confidence": "sourced",
-          "source": {
-            "title": "Civil Court to Swargate underground metro stretch opens",
-            "url": "https://www.punemetrorail.org",
-            "retrieved_at": "2026-10-08",
-            "kind": "official"
-          }
+          "confidence": "unverified"
         },
         {
           "stage": "Khadki station infill opening",
           "phase": null,
           "opened_on": "2025-06-21",
           "stations_added": 1,
-          "confidence": "sourced",
-          "source": {
-            "title": "Khadki Metro station opens for commercial operations",
-            "url": "https://www.punemetrorail.org",
-            "retrieved_at": "2026-10-08",
-            "kind": "official"
-          }
+          "confidence": "unverified"
         }
       ],
       "construction": [
@@ -115,52 +91,28 @@
           "phase": null,
           "opened_on": "2022-03-06",
           "stations_added": 5,
-          "confidence": "sourced",
-          "source": {
-            "title": "PM Modi inaugurates Pune Metro priority stretches",
-            "url": "https://www.punemetrorail.org",
-            "retrieved_at": "2026-10-08",
-            "kind": "official"
-          }
+          "confidence": "unverified"
         },
         {
           "stage": "Garware College - Ruby Hall Clinic",
           "phase": null,
           "opened_on": "2023-08-01",
           "stations_added": 7,
-          "confidence": "sourced",
-          "source": {
-            "title": "Garware College to Ruby Hall Clinic stretch opened",
-            "url": "https://www.punemetrorail.org",
-            "retrieved_at": "2026-10-08",
-            "kind": "official"
-          }
+          "confidence": "unverified"
         },
         {
           "stage": "Ruby Hall Clinic - Ramwadi (except Yerawada)",
           "phase": null,
           "opened_on": "2024-03-06",
           "stations_added": 3,
-          "confidence": "sourced",
-          "source": {
-            "title": "Ruby Hall Clinic to Ramwadi stretch opened",
-            "url": "https://www.punemetrorail.org",
-            "retrieved_at": "2026-10-08",
-            "kind": "official"
-          }
+          "confidence": "unverified"
         },
         {
           "stage": "Yerawada station infill opening",
           "phase": null,
           "opened_on": "2024-08-21",
           "stations_added": 1,
-          "confidence": "sourced",
-          "source": {
-            "title": "Yerawada station opened for passenger operations",
-            "url": "https://www.punemetrorail.org",
-            "retrieved_at": "2026-10-08",
-            "kind": "official"
-          }
+          "confidence": "unverified"
         }
       ],
       "construction": [],

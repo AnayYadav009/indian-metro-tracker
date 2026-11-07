@@ -754,10 +754,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -787,10 +785,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -820,10 +816,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -853,10 +847,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -886,10 +878,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -919,10 +909,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -952,10 +940,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -985,10 +971,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1018,10 +1002,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1051,10 +1033,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1084,10 +1064,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1118,10 +1096,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10",
         "interchange_id": "chennai-alandur"
       }
@@ -1152,10 +1128,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1185,10 +1159,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1218,10 +1190,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1251,10 +1221,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1284,10 +1252,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1354,10 +1320,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1387,10 +1351,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1420,10 +1382,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1454,10 +1414,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10",
         "interchange_id": "chennai-chennai-central"
       }
@@ -1488,10 +1446,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1521,10 +1477,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1554,10 +1508,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1587,10 +1539,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1620,10 +1570,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1653,10 +1601,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1686,10 +1632,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1719,10 +1663,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1752,10 +1694,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1785,10 +1725,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1818,10 +1756,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1851,10 +1787,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1884,10 +1818,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1917,10 +1849,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1950,10 +1880,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1983,10 +1911,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -2016,10 +1942,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -2049,10 +1973,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -2082,10 +2004,8 @@
         "layout": "at-grade",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -2115,10 +2035,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2148,10 +2066,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2181,10 +2097,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2214,10 +2128,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2247,10 +2159,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2280,10 +2190,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2313,10 +2221,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2346,10 +2252,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2379,10 +2283,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2412,10 +2314,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2445,10 +2345,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2478,10 +2376,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2514,8 +2410,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://www.punemetrorail.org",
-          "https://pmrda.gov.in",
+          "https://www.pmrda.gov.in/en/pune-metro-line-3/",
           "https://www.freepressjournal.in/pune/pune-metro-line-3-expected-to-carry-2-lakh-passengers-daily-four-new-corridors-worth-13500-crore-announced",
           "https://www.punekarnews.in/pune-metro-line-3-17-stations-to-open-from-4th-november-balewadi-stations-by-december/"
         ],
@@ -2550,10 +2445,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2583,10 +2476,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2616,10 +2507,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2649,10 +2538,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2682,10 +2569,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2715,10 +2600,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2748,10 +2631,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2781,10 +2662,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2814,10 +2693,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2847,10 +2724,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2880,10 +2755,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2913,10 +2786,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2946,10 +2817,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2979,10 +2848,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -3012,10 +2879,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -3045,10 +2910,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -8605,7 +8468,7 @@
         "layout_source": "unverified",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-13",
         "retrieved_at": "2026-10-16"
@@ -8952,7 +8815,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16"
@@ -9016,7 +8879,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16"
@@ -9049,7 +8912,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16"
@@ -9270,7 +9133,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16"
@@ -9334,7 +9197,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16"
@@ -9367,7 +9230,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16"
@@ -9400,7 +9263,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16"
@@ -9433,7 +9296,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16"
@@ -9466,7 +9329,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16"
@@ -9499,7 +9362,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16"
@@ -9532,7 +9395,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16"
@@ -9566,7 +9429,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16",
@@ -9600,7 +9463,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16"
@@ -9633,7 +9496,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16"
@@ -9666,7 +9529,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16"
@@ -9699,7 +9562,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16"
@@ -9732,7 +9595,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16"
@@ -9797,7 +9660,7 @@
         "layout_source": "unverified",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in",
+          "https://mtp.indianrailways.gov.in/ministry/about-us",
           "https://www.squareyards.com/blog/kolkata-metro-beleghata-it-centre",
           "https://swarajyamag.com/news-brief/trial-runs-for-kolkata-metros-orange-line-extension-to-sector-v-scheduled-to-begin-10th-october-2026"
         ],
@@ -9987,7 +9850,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16"
@@ -10144,7 +10007,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16"
@@ -10177,7 +10040,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16"
@@ -10210,7 +10073,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16"
@@ -21002,7 +20865,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://delhimetrorail.com/",
+          "https://delhimetrorail.com/pages/about-us/present-network",
           "https://metrorailnews.in/modi-inaugurated-2-new-sections-of-delhi-metro/",
           "https://www.tribuneindia.com/news/delhi/dmrc-begins-services-on-two-newly-inaugurated-corridors/"
         ],
@@ -21037,7 +20900,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://delhimetrorail.com/",
+          "https://delhimetrorail.com/pages/about-us/present-network",
           "https://metrorailnews.in/modi-inaugurated-2-new-sections-of-delhi-metro/",
           "https://www.tribuneindia.com/news/delhi/dmrc-begins-services-on-two-newly-inaugurated-corridors/"
         ],
@@ -21072,7 +20935,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://delhimetrorail.com/",
+          "https://delhimetrorail.com/pages/about-us/present-network",
           "https://metrorailnews.in/modi-inaugurated-2-new-sections-of-delhi-metro/",
           "https://www.tribuneindia.com/news/delhi/dmrc-begins-services-on-two-newly-inaugurated-corridors/"
         ],
@@ -21107,7 +20970,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://delhimetrorail.com/",
+          "https://delhimetrorail.com/pages/about-us/present-network",
           "https://metrorailnews.in/modi-inaugurated-2-new-sections-of-delhi-metro/",
           "https://www.tribuneindia.com/news/delhi/dmrc-begins-services-on-two-newly-inaugurated-corridors/"
         ],
@@ -29576,7 +29439,7 @@
         "layout_source": "unverified",
         "source": "osm",
         "references": [
-          "https://delhimetrorail.com/",
+          "https://delhimetrorail.com/pages/about-us/present-network",
           "https://themetrorailguy.com/2024/01/27/delhi-metros-silver-line-renamed-to-golden-line-line-10/"
         ],
         "last_verified": "2026-10-10",
@@ -29960,7 +29823,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://pmrda.gov.in",
+          "https://www.pmrda.gov.in/en/pune-metro-line-3/",
           "https://www.freepressjournal.in/pune/pune-metro-line-3-expected-to-carry-2-lakh-passengers-daily-four-new-corridors-worth-13500-crore-announced",
           "https://www.punekarnews.in/pune-metro-line-3-17-stations-to-open-from-4th-november-balewadi-stations-by-december/"
         ],
@@ -29995,7 +29858,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://pmrda.gov.in",
+          "https://www.pmrda.gov.in/en/pune-metro-line-3/",
           "https://www.freepressjournal.in/pune/pune-metro-line-3-expected-to-carry-2-lakh-passengers-daily-four-new-corridors-worth-13500-crore-announced",
           "https://www.punekarnews.in/pune-metro-line-3-17-stations-to-open-from-4th-november-balewadi-stations-by-december/"
         ],
@@ -30030,7 +29893,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://pmrda.gov.in",
+          "https://www.pmrda.gov.in/en/pune-metro-line-3/",
           "https://www.freepressjournal.in/pune/pune-metro-line-3-expected-to-carry-2-lakh-passengers-daily-four-new-corridors-worth-13500-crore-announced",
           "https://www.punekarnews.in/pune-metro-line-3-17-stations-to-open-from-4th-november-balewadi-stations-by-december/"
         ],
@@ -30065,7 +29928,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://pmrda.gov.in",
+          "https://www.pmrda.gov.in/en/pune-metro-line-3/",
           "https://www.freepressjournal.in/pune/pune-metro-line-3-expected-to-carry-2-lakh-passengers-daily-four-new-corridors-worth-13500-crore-announced",
           "https://www.punekarnews.in/pune-metro-line-3-17-stations-to-open-from-4th-november-balewadi-stations-by-december/"
         ],
@@ -30100,7 +29963,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://pmrda.gov.in",
+          "https://www.pmrda.gov.in/en/pune-metro-line-3/",
           "https://www.freepressjournal.in/pune/pune-metro-line-3-expected-to-carry-2-lakh-passengers-daily-four-new-corridors-worth-13500-crore-announced",
           "https://www.punekarnews.in/pune-metro-line-3-17-stations-to-open-from-4th-november-balewadi-stations-by-december/"
         ],
@@ -30135,7 +29998,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://pmrda.gov.in",
+          "https://www.pmrda.gov.in/en/pune-metro-line-3/",
           "https://www.freepressjournal.in/pune/pune-metro-line-3-expected-to-carry-2-lakh-passengers-daily-four-new-corridors-worth-13500-crore-announced",
           "https://www.punekarnews.in/pune-metro-line-3-17-stations-to-open-from-4th-november-balewadi-stations-by-december/"
         ],
@@ -30170,7 +30033,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://pmrda.gov.in",
+          "https://www.pmrda.gov.in/en/pune-metro-line-3/",
           "https://www.freepressjournal.in/pune/pune-metro-line-3-expected-to-carry-2-lakh-passengers-daily-four-new-corridors-worth-13500-crore-announced",
           "https://www.punekarnews.in/pune-metro-line-3-17-stations-to-open-from-4th-november-balewadi-stations-by-december/"
         ],
@@ -30205,7 +30068,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://pmrda.gov.in",
+          "https://www.pmrda.gov.in/en/pune-metro-line-3/",
           "https://www.freepressjournal.in/pune/pune-metro-line-3-expected-to-carry-2-lakh-passengers-daily-four-new-corridors-worth-13500-crore-announced",
           "https://www.punekarnews.in/pune-metro-line-3-17-stations-to-open-from-4th-november-balewadi-stations-by-december/"
         ],
@@ -30240,7 +30103,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://pmrda.gov.in",
+          "https://www.pmrda.gov.in/en/pune-metro-line-3/",
           "https://www.freepressjournal.in/pune/pune-metro-line-3-expected-to-carry-2-lakh-passengers-daily-four-new-corridors-worth-13500-crore-announced",
           "https://www.punekarnews.in/pune-metro-line-3-17-stations-to-open-from-4th-november-balewadi-stations-by-december/"
         ],
@@ -30275,7 +30138,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://pmrda.gov.in",
+          "https://www.pmrda.gov.in/en/pune-metro-line-3/",
           "https://www.freepressjournal.in/pune/pune-metro-line-3-expected-to-carry-2-lakh-passengers-daily-four-new-corridors-worth-13500-crore-announced",
           "https://www.punekarnews.in/pune-metro-line-3-17-stations-to-open-from-4th-november-balewadi-stations-by-december/"
         ],
@@ -30310,7 +30173,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://pmrda.gov.in",
+          "https://www.pmrda.gov.in/en/pune-metro-line-3/",
           "https://www.freepressjournal.in/pune/pune-metro-line-3-expected-to-carry-2-lakh-passengers-daily-four-new-corridors-worth-13500-crore-announced",
           "https://www.punekarnews.in/pune-metro-line-3-17-stations-to-open-from-4th-november-balewadi-stations-by-december/"
         ],
@@ -30345,7 +30208,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://pmrda.gov.in",
+          "https://www.pmrda.gov.in/en/pune-metro-line-3/",
           "https://www.freepressjournal.in/pune/pune-metro-line-3-expected-to-carry-2-lakh-passengers-daily-four-new-corridors-worth-13500-crore-announced",
           "https://www.punekarnews.in/pune-metro-line-3-17-stations-to-open-from-4th-november-balewadi-stations-by-december/"
         ],
@@ -30380,11 +30243,11 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://ncrtc.in/",
+          "https://ncrtc.in/wp-content/uploads/2025/10/File-update-24.10.25.pdf",
           "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
         ],
         "last_verified": "2026-11-06",
-        "retrieved_at": "2026-11-06"
+        "retrieved_at": "2026-11-07"
       }
     },
     {
@@ -30414,11 +30277,11 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://ncrtc.in/",
+          "https://ncrtc.in/wp-content/uploads/2025/10/File-update-24.10.25.pdf",
           "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
         ],
         "last_verified": "2026-11-06",
-        "retrieved_at": "2026-11-06"
+        "retrieved_at": "2026-11-07"
       }
     },
     {
@@ -30448,11 +30311,11 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://ncrtc.in/",
+          "https://ncrtc.in/wp-content/uploads/2025/10/File-update-24.10.25.pdf",
           "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
         ],
         "last_verified": "2026-11-06",
-        "retrieved_at": "2026-11-06"
+        "retrieved_at": "2026-11-07"
       }
     },
     {
@@ -30482,11 +30345,11 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://ncrtc.in/",
+          "https://ncrtc.in/wp-content/uploads/2025/10/File-update-24.10.25.pdf",
           "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
         ],
         "last_verified": "2026-11-06",
-        "retrieved_at": "2026-11-06"
+        "retrieved_at": "2026-11-07"
       }
     },
     {
@@ -30516,11 +30379,11 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://ncrtc.in/",
+          "https://ncrtc.in/wp-content/uploads/2025/10/File-update-24.10.25.pdf",
           "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
         ],
         "last_verified": "2026-11-06",
-        "retrieved_at": "2026-11-06"
+        "retrieved_at": "2026-11-07"
       }
     },
     {
@@ -30550,11 +30413,11 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://ncrtc.in/",
+          "https://ncrtc.in/wp-content/uploads/2025/10/File-update-24.10.25.pdf",
           "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
         ],
         "last_verified": "2026-11-06",
-        "retrieved_at": "2026-11-06"
+        "retrieved_at": "2026-11-07"
       }
     },
     {
@@ -30584,11 +30447,11 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://ncrtc.in/",
+          "https://ncrtc.in/wp-content/uploads/2025/10/File-update-24.10.25.pdf",
           "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
         ],
         "last_verified": "2026-11-06",
-        "retrieved_at": "2026-11-06"
+        "retrieved_at": "2026-11-07"
       }
     },
     {
@@ -30618,11 +30481,11 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://ncrtc.in/",
+          "https://ncrtc.in/wp-content/uploads/2025/10/File-update-24.10.25.pdf",
           "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
         ],
         "last_verified": "2026-11-06",
-        "retrieved_at": "2026-11-06"
+        "retrieved_at": "2026-11-07"
       }
     },
     {
@@ -30652,11 +30515,11 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://ncrtc.in/",
+          "https://ncrtc.in/wp-content/uploads/2025/10/File-update-24.10.25.pdf",
           "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
         ],
         "last_verified": "2026-11-06",
-        "retrieved_at": "2026-11-06"
+        "retrieved_at": "2026-11-07"
       }
     },
     {
@@ -30686,11 +30549,11 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://ncrtc.in/",
+          "https://ncrtc.in/wp-content/uploads/2025/10/File-update-24.10.25.pdf",
           "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
         ],
         "last_verified": "2026-11-06",
-        "retrieved_at": "2026-11-06"
+        "retrieved_at": "2026-11-07"
       }
     },
     {
@@ -30720,11 +30583,11 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://ncrtc.in/",
+          "https://ncrtc.in/wp-content/uploads/2025/10/File-update-24.10.25.pdf",
           "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
         ],
         "last_verified": "2026-11-06",
-        "retrieved_at": "2026-11-06"
+        "retrieved_at": "2026-11-07"
       }
     },
     {
@@ -30754,11 +30617,11 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://ncrtc.in/",
+          "https://ncrtc.in/wp-content/uploads/2025/10/File-update-24.10.25.pdf",
           "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
         ],
         "last_verified": "2026-11-06",
-        "retrieved_at": "2026-11-06"
+        "retrieved_at": "2026-11-07"
       }
     },
     {

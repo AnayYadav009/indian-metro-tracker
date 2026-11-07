@@ -115,27 +115,27 @@
     "line_id": "pun-purple",
     "stretch": "Range Hill station infill",
     "status": "under_construction",
-    "source_url": "https://www.punemetrorail.org",
-    "reason": "Maha Metro infill station on operational corridor delayed by defence land clearance; station node and track alignment are not separately compiled.",
-    "review_date": "2027-01-15"
+    "reason": "Maha Metro’s official Line 1 profile lists Range Hill on the corridor; the compiled dataset has no coordinate-supported feature for this station. Its current operating status is unconfirmed.",
+    "review_date": "2027-01-15",
+    "source_url": "https://www.punemetrorail.org/Line_b.aspx?lang=en-US"
   },
   {
     "city_id": "pune",
     "line_id": "pun-purple",
     "stretch": "PCMC - Nigdi (Bhakti Shakti)",
     "status": "under_construction",
-    "source_url": "https://www.punemetrorail.org",
     "reason": "Maha Metro Phase 1A northern extension (4.41 km) is under construction; alignment geometry is not yet present in the compiled dataset.",
-    "review_date": "2027-01-15"
+    "review_date": "2027-01-15",
+    "source_url": "https://www.punemetrorail.org/Line_b.aspx?lang=en-US"
   },
   {
     "city_id": "pune",
     "line_id": "pun-purple",
     "stretch": "Swargate - Katraj",
     "status": "under_construction",
-    "source_url": "https://www.punemetrorail.org",
     "reason": "Maha Metro Phase 1B southern underground extension (5.46 km) approved/tendered; alignment geometry is not yet present in the compiled dataset.",
-    "review_date": "2027-01-15"
+    "review_date": "2027-01-15",
+    "source_url": "https://www.punemetrorail.org/Line_b.aspx?lang=en-US"
   },
   {
     "city_id": "hyderabad",
@@ -143,17 +143,8 @@
     "stretch": "MG Bus Station - Chandrayangutta (via Falaknuma)",
     "segment_id": "hyd-green-seg-02",
     "status": "under_construction",
-    "source_url": "https://hmrl.co.in",
+    "source_url": "https://hmrl.co.in/old-city-metro-rail-corridor-expansion-works-accelerated-hmrl-additional-md-mr-b-ajith-reddy-conducts-field-inspection/",
     "reason": "Foundation stone laid March 8, 2024 for 7 km Old City expansion; pre-construction works underway while intermediate station surveyed geometry remains uncompiled in OSM cache.",
-    "review_date": "2027-01-15"
-  },
-  {
-    "city_id": "patna",
-    "line_id": "pat-blue",
-    "stretch": "Corridor 2 Underground (Patna Junction - Malahi Pakri)",
-    "status": "under_construction",
-    "source_url": "https://patnametrorail.com",
-    "reason": "7.9 km underground stretch with 7 stations; 7.4 km tunneling completed with multiple TBM breakthroughs; civil box structures and track-laying underway; alignment geometry not yet released in OSM.",
     "review_date": "2027-01-15"
   },
   {

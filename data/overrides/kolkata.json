@@ -96,7 +96,7 @@
       "expected_completion": null,
       "color": "#0072CE",
       "references": [
-        "https://mtp.indianrailways.gov.in",
+        "https://mtp.indianrailways.gov.in/ministry/about-us",
         "https://pib.gov.in/PressReleasePage.aspx?PRID=1699923"
       ]
     },
@@ -171,7 +171,7 @@
       "color": "#702082",
       "stations_not_published": true,
       "references": [
-        "https://mtp.indianrailways.gov.in"
+        "https://mtp.indianrailways.gov.in/ministry/about-us"
       ]
     },
     {
@@ -475,7 +475,7 @@
         "kolkata-mothers-wax-museum"
       ],
       "references": [
-        "https://mtp.indianrailways.gov.in"
+        "https://mtp.indianrailways.gov.in/ministry/about-us"
       ],
       "last_verified": "2026-11-06",
       "coordinates": [
@@ -851,7 +851,7 @@
       "phase": "1",
       "layout": "underground",
       "references": [
-        "https://mtp.indianrailways.gov.in"
+        "https://mtp.indianrailways.gov.in/ministry/about-us"
       ],
       "last_verified": "2026-10-08"
     },
@@ -863,7 +863,7 @@
       "phase": "1",
       "layout": "underground",
       "references": [
-        "https://mtp.indianrailways.gov.in"
+        "https://mtp.indianrailways.gov.in/ministry/about-us"
       ],
       "last_verified": "2026-10-08"
     },
@@ -876,7 +876,7 @@
       "phase": "1",
       "layout": "underground",
       "references": [
-        "https://mtp.indianrailways.gov.in"
+        "https://mtp.indianrailways.gov.in/ministry/about-us"
       ],
       "last_verified": "2026-10-08"
     },
@@ -901,7 +901,7 @@
       "status": "construction",
       "phase": "6",
       "references": [
-        "https://mtp.indianrailways.gov.in",
+        "https://mtp.indianrailways.gov.in/ministry/about-us",
         "https://www.squareyards.com/blog/kolkata-metro-beleghata-it-centre",
         "https://swarajyamag.com/news-brief/trial-runs-for-kolkata-metros-orange-line-extension-to-sector-v-scheduled-to-begin-10th-october-2026"
       ],
@@ -915,7 +915,7 @@
       "status": "construction",
       "phase": "6",
       "references": [
-        "https://mtp.indianrailways.gov.in"
+        "https://mtp.indianrailways.gov.in/ministry/about-us"
       ],
       "last_verified": "2026-10-13",
       "expected_completion": "2027"
@@ -923,126 +923,126 @@
     "Belgachia": {
       "layout": "underground",
       "references": [
-        "https://mtp.indianrailways.gov.in"
+        "https://mtp.indianrailways.gov.in/ministry/about-us"
       ],
       "last_verified": "2026-10-08"
     },
     "Shyambazar": {
       "layout": "underground",
       "references": [
-        "https://mtp.indianrailways.gov.in"
+        "https://mtp.indianrailways.gov.in/ministry/about-us"
       ],
       "last_verified": "2026-10-08"
     },
     "Shobhabazar Sutanuti": {
       "layout": "underground",
       "references": [
-        "https://mtp.indianrailways.gov.in"
+        "https://mtp.indianrailways.gov.in/ministry/about-us"
       ],
       "last_verified": "2026-10-08"
     },
     "Girish Park": {
       "layout": "underground",
       "references": [
-        "https://mtp.indianrailways.gov.in"
+        "https://mtp.indianrailways.gov.in/ministry/about-us"
       ],
       "last_verified": "2026-10-08"
     },
     "Mahatma Gandhi Road": {
       "layout": "underground",
       "references": [
-        "https://mtp.indianrailways.gov.in"
+        "https://mtp.indianrailways.gov.in/ministry/about-us"
       ],
       "last_verified": "2026-10-08"
     },
     "Central": {
       "layout": "underground",
       "references": [
-        "https://mtp.indianrailways.gov.in"
+        "https://mtp.indianrailways.gov.in/ministry/about-us"
       ],
       "last_verified": "2026-10-08"
     },
     "Chandni Chowk": {
       "layout": "underground",
       "references": [
-        "https://mtp.indianrailways.gov.in"
+        "https://mtp.indianrailways.gov.in/ministry/about-us"
       ],
       "last_verified": "2026-10-08"
     },
     "Rabindra Sadan": {
       "layout": "underground",
       "references": [
-        "https://mtp.indianrailways.gov.in"
+        "https://mtp.indianrailways.gov.in/ministry/about-us"
       ],
       "last_verified": "2026-10-08"
     },
     "Netaji Bhavan": {
       "layout": "underground",
       "references": [
-        "https://mtp.indianrailways.gov.in"
+        "https://mtp.indianrailways.gov.in/ministry/about-us"
       ],
       "last_verified": "2026-10-08"
     },
     "Jatin Das Park": {
       "layout": "underground",
       "references": [
-        "https://mtp.indianrailways.gov.in"
+        "https://mtp.indianrailways.gov.in/ministry/about-us"
       ],
       "last_verified": "2026-10-08"
     },
     "Kalighat": {
       "layout": "underground",
       "references": [
-        "https://mtp.indianrailways.gov.in"
+        "https://mtp.indianrailways.gov.in/ministry/about-us"
       ],
       "last_verified": "2026-10-08"
     },
     "Rabindra Sarobar": {
       "layout": "underground",
       "references": [
-        "https://mtp.indianrailways.gov.in"
+        "https://mtp.indianrailways.gov.in/ministry/about-us"
       ],
       "last_verified": "2026-10-08"
     },
     "Mahanayak Uttam Kumar": {
       "layout": "underground",
       "references": [
-        "https://mtp.indianrailways.gov.in"
+        "https://mtp.indianrailways.gov.in/ministry/about-us"
       ],
       "last_verified": "2026-10-08"
     },
     "Howrah Maidan": {
       "layout": "underground",
       "references": [
-        "https://mtp.indianrailways.gov.in"
+        "https://mtp.indianrailways.gov.in/ministry/about-us"
       ],
       "last_verified": "2026-10-08"
     },
     "Howrah": {
       "layout": "underground",
       "references": [
-        "https://mtp.indianrailways.gov.in"
+        "https://mtp.indianrailways.gov.in/ministry/about-us"
       ],
       "last_verified": "2026-10-08"
     },
     "Mahakaran": {
       "layout": "underground",
       "references": [
-        "https://mtp.indianrailways.gov.in"
+        "https://mtp.indianrailways.gov.in/ministry/about-us"
       ],
       "last_verified": "2026-10-08"
     },
     "Sealdah": {
       "layout": "underground",
       "references": [
-        "https://mtp.indianrailways.gov.in"
+        "https://mtp.indianrailways.gov.in/ministry/about-us"
       ],
       "last_verified": "2026-10-08"
     },
     "Phoolbagan": {
       "layout": "underground",
       "references": [
-        "https://mtp.indianrailways.gov.in"
+        "https://mtp.indianrailways.gov.in/ministry/about-us"
       ],
       "last_verified": "2026-10-08"
     },

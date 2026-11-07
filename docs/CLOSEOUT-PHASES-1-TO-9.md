@@ -11,15 +11,15 @@ All data and pipeline changes strictly adhere to the project rules: zero invente
 | Phase | Description | Status | Active / Branch | Last Commit Hash | Evidence (Command / File) | Core Accomplishments |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Phase 0** | Pre-flight Audit & Decisions | **COMPLETE-VERIFIED** | `fix/audit-followups` | `7e25960` | `phase_0_preflight_and_execution_plan.md` | Pre-flight audit across all 21 cities; analyzed static size headroom; formulated Decisions D1–D4; established baseline change policy. |
-| **Phase 1 & 1.1** | Chennai Yellow Line Corridor 4 | **COMPLETE-VERIFIED** | `phase-1-chennai-yellow` | `2fafbb3` | `data/segments.geojson`, `data/stations.geojson` | Opened `che-corridor-4-seg-01` (14.9 km, 11 stations, inaugurated 2026-10-11); replaced PIB PRID 2061557 with official CMRL Fare-Table PDF. |
-| **Phase 2** | Pune Line 3 Hinjawadi to District Court | **COMPLETE-VERIFIED** | `phase-2-pune-line-3` | `6e4924f`<br>`0e0bc9d` | `data/segments.geojson`, `data/overrides/pune.json` | Opened `pun-line-3-seg-01` (20.3 km, 13 published operational stations, 10 intermediate under construction); updated size baseline. |
-| **Phase 3** | Delhi Magenta & Phase 4 Extensions | **COMPLETE-VERIFIED** | `phase-3-delhi-magenta` | `4d71985`<br>`dc030cd` | `data/reference/delhi.json`, `data/segments.geojson` | Opened `del-magenta-seg-02` (Deepali Chowk to Majlis Park, 9.3 km, 7 stations, inaugurated 2026-10-11); set `expected_completion: "2026-12"` for Phase 4. |
-| **Phase 4** | Meerut Metro Onboarding | **COMPLETE-VERIFIED** | `phase-4-meerut` | `c4f03a6`<br>`dbf4943` | `data/cities.json`, `data/lines.json` | Onboarded Meerut as 22nd city (`meerut-line-1`, 23 km, 13 stations, standard gauge); validated against NCRTC official project documentation. |
+| **Phase 1 & 1.1** | Chennai Yellow Line Corridor 4 | **DATE UNCONFIRMED** | `phase-1-chennai-yellow` | `2fafbb3` | `data/segments.geojson`, `data/stations.geojson` | The dataset maps 11 stations on `che-corridor-4-seg-01` (14.9 km). Its 2026-10-11 inauguration date remains marked unverified: fetched CMRL material confirms a February safety inspection, not an opening date. Replaced PIB PRID 2061557 with the official CMRL Fare-Table PDF. |
+| **Phase 2** | Pune Line 3 Hinjawadi to District Court | **PARTIAL DATA** | `phase-2-pune-line-3` | `6e4924f` | `data/segments.geojson`, `data/overrides/pune.json` | PMRDA describes a 23-station, 23.203 km corridor. The repository has 13 operational station features and 0 unopened station features; ten intermediate stations remain omitted because surveyed coordinates are unavailable. The feature commit title is corrected to describe the 13 published stations. |
+| **Phase 3** | Delhi Magenta & Phase 4 Extensions | **PARTIAL DATA** | `phase-3-delhi-magenta` | `4d71985` | `data/reference/delhi.json`, `data/segments.geojson` | DMRC lists Deepali Chowk–Majlis Park effective 2026-03-08. Phase 4 completion dates are unconfirmed and removed from the reference file. |
+| **Phase 4** | Meerut Metro Onboarding | **PARTIAL DATA** | `phase-4-meerut-metro` | `c4f03a6` | `data/cities.json`, `data/lines.json`, `data/segments.geojson`, `data/stations.geojson` | NCRTC’s project document describes 23 km and 13 stations. Repository GeoJSON currently has 12 station features and 21.3 km of geometry; the difference is a data coverage gap, not a coordinate to infer. |
 | **Phase 5** | Kolkata Orange Line Phased Split | **COMPLETE-VERIFIED** | `phase-5-kolkata-orange` | `e8fb79a`<br>`74c644e` | `data/segments.geojson`, `data/stations.geojson` | Split `kol-orange-seg-02` into Beleghata to IT Centre (4.5 km, 4 stations) and IT Centre to Mother's Wax Museum (5.7 km, 2 stations); linked Sector V footbridge interchange (`int-kolkata-sector-v`). |
-| **Phase 6** | Bengaluru Pink Line Elevated Stations | **COMPLETE-VERIFIED** | `phase-6-bengaluru-pink` | `9261912`<br>`397cb4c`<br>`10c2bab` | `data/stations.geojson`, `data/overrides/bengaluru.json` | Completed Reach 6 elevated stations (Kalena Agrahara, Hulimavu, IIMB, JP Nagar 4th Phase, Jayadeva Hospital, Tavarekere); retired duplicate `blr-jayadeva-interchange-uc` in favor of `blr-jayadeva-hospital`; closed F-13. |
-| **Phase 7** | Network Expansions (Ahmedabad, Hyderabad, Patna, Mumbai, Thane, Surat) | **COMPLETE-VERIFIED** | `phase-7-network-expansions` | `3ee7fe7`<br>`de201e9`<br>`883cfed` | `data/audit/coverage-gaps.json`, `data/reference/surat.json` | Audited Ahmedabad 2A/2B; documented Hyderabad Phase 2 (76.4 km across 5 corridors); documented Patna Corridor 2 underground (7.9 km); phased Mumbai Line 4 northern priority section; tracked Thane Ring Metro (29 km); recorded Surat trial runs (8.5 km priority section, 7 stations, target 2026-12); replaced bare homepage URLs; updated F-20. |
-| **Phase 8** | Fares & Timings Data Model & Audit | **COMPLETE-VERIFIED** | `phase-8-fares-timings` | `cc705e8` | `docs/PLAN-PUBLIC-USABILITY.md`, `__tests__/fares.test.ts` | Audited `data/fares.json` across 22 cities; confirmed Delhi Magenta inherits `del-fare-dmrc`; verified unpriced status for Chennai, Pune, and others per owner matrix policy; verified reviewable timings disclaimer; 61 fare tests passed. |
-| **Phase 9** | Full Regression & Close-Out | **COMPLETE-VERIFIED** | `phase-9-closeout` | HEAD | `docs/CLOSEOUT-PHASES-1-TO-9.md`, `reports/data-audit/` | Complete 8-part verification suite executed across entire repository; 441 unit tests passed; Next.js 29 static pages exported; static size budget enforced; findings updated. |
+| **Phase 6** | Bengaluru Pink Line Elevated Stations | **HELD / NOT OPEN** | `phase-6-bengaluru-pink` | `9261912` | `data/stations.geojson`, `data/overrides/bengaluru.json` | Six elevated stations are listed: Kalena Agrahara, Hulimavu, IIMB, JP Nagar 4th Phase, Jayadeva Hospital, and Tavarekere. The Pink Line segment remains `construction`; Jayadeva station is operational for its Yellow Line interchange. Commercial Pink Line opening is unconfirmed. |
+| **Phase 7** | Network Expansion Audits (Ahmedabad, Hyderabad, Patna, Mumbai, Thane, Surat) | **DOCUMENTED / NO GEOMETRY** | `phase-7-network-expansions` | `3ee7fe7` | `data/audit/coverage-gaps.json`, `data/reference/` | The phase adds no segment or station features for these six cities. It documents coverage gaps; it does not publish new geometry. Comparing feature IDs at `3ee7fe7` found zero added segment IDs and zero added station IDs for each city. |
+| **Phase 8** | Fares & Timings Data Model & Audit | **HELD / DOCS ONLY** | `phase-8-fares-timings` | `cc705e8` (consolidated) | `docs/PLAN-PUBLIC-USABILITY.md` | The original phase commit changed documentation only. The current fare test run passed 61 tests, but that does not establish a 22-city audit; no such claim is made here. |
+| **Phase 9** | Full Regression & Close-Out | **NOT REVALIDATED IN THIS RELEASE** | `phase-9-closeout` | `00e18ec` | `docs/CLOSEOUT-PHASES-1-TO-9.md`, `reports/data-audit/` | The fresh verification matrix below records this release run, including the audit and size-budget failures. |
 
 ---
 
@@ -33,7 +33,7 @@ Verified via `npm run validate:data` and Next.js static build:
 - **Stations**: 954
 - **Fare Rules**: 2 (`del-fare-dmrc`, `hyd-fare-ltmrhl`)
 - **Service Hours**: 0 (all routes display the reviewable operating window disclaimer)
-- **Documented Coverage Gaps**: 16 tracked in `data/audit/coverage-gaps.json`
+- **Documented Coverage Gaps**: 15 compiled entries in `data/audit/coverage-gaps.json`; Patna details were removed as unverified and are reported as declared-not-compiled by the audit.
 - **Static Pages Generated**: 29 static routes (`/`, `/_not-found`, `/compare`, `/robots.txt`, `/sitemap.xml`, and 22 `/city/[id]` routes)
 - **Unit Test Suite**: 49 test files passed, 441/441 tests passing (0 failures)
 - **Size Budget**:
@@ -50,11 +50,11 @@ Verified via `npm run validate:data` and Next.js static build:
 - **F-05 (Delhi/Gurugram Sikanderpur Link)**: Closed in M10.3.
 - **F-06 to F-09 (Pune Geometry & Length)**: Closed in M10.1.
 - **F-10 to F-12 (Mumbai Line 4 & Chords)**: Closed in M10.2.
-- **F-13 (Bengaluru Pink Line Stub)**: Closed in Phase 6 (`10c2bab`).
+- **F-13 (Bengaluru Pink Line Stub)**: The mapped Pink Line corridor has 7 station features, including Nagawara; six elevated stations are listed above. Jayadeva Hospital is operational on the Yellow Line, while the Pink Line remains under construction and commercial opening is held.
 - **F-15 (Bengaluru Purple Line)**: Closed in M10.2.
 - **F-16 (Hyderabad Blue Line)**: Closed in M10.2.
-- **F-17 (Future Segments with 0 Stations)**: Partial. Chennai Yellow Line opened with 11 stations (Phase 1); Kolkata Orange Line segmented with 4 stations compiled (Phase 5); Bengaluru Pink Line elevated stations compiled with 7 stations (Phase 6).
-- **F-20 (Network Coverage Gaps)**: Audited & documented in Phase 7 (`883cfed`) for Ahmedabad Phase 2B, Hyderabad Phase 2, Patna Corridor 2 underground, and Thane Ring Metro.
+- **F-17 (Future Segments with 0 Stations)**: Partial. Chennai Corridor 4 has 11 mapped stations; Kolkata Orange Line has 4 stations compiled for Beleghata–IT Centre; Bengaluru’s Pink Line has 7 station features: 6 elevated stations (including the operational Yellow Line interchange at Jayadeva Hospital) and the construction station Nagawara. These counts describe mapped features, not Pink Line commercial opening.
+- **F-20 (Network Coverage Gaps)**: Phase 7 documented gaps for Ahmedabad, Hyderabad, Patna, Mumbai, Thane, and Surat without adding geometry. Patna corridor details remain unverified where no fetchable official source was found.
 - **F-22 (Ahmedabad Violet Stub)**: Closed in M10.2.
 
 ---
@@ -64,10 +64,10 @@ Verified via `npm run validate:data` and Next.js static build:
 | Check | Tool / Script | Status | Evidence |
 | :--- | :--- | :--- | :--- |
 | **Data Schema & Relations** | `npm run validate:data` | **PASS** | 22 cities, 59 lines, 79 segments, 954 stations, 2 fare rules, 0 service hours |
-| **Audit Engine Consistency** | `npm run audit:data` | **PASS** | 0 new errors, 0 new unreviewed warnings, 16 documented coverage gaps |
+| **Audit Engine Consistency** | `npm run audit:data` | **FAIL** | Fresh run pending below; baselines unchanged |
 | **Unit Test Suite** | `npm run test` | **PASS** | 49 test files passed, 441/441 tests passed |
 | **Fares Test Suite** | `npx vitest run __tests__/fares.test.ts` | **PASS** | 1 test file passed, 61/61 tests passed |
 | **Type Check** | `npm run typecheck` | **PASS** | `tsc --noEmit` exited with code 0 |
 | **Lint** | `npm run lint` | **PASS** | ESLint exited with code 0 (0 errors, 0 warnings) |
 | **Static Export Build** | `npm run build` | **PASS** | Next.js 15.5.27: 29/29 static pages exported |
-| **Static Size Budget** | `npm run measure:size` | **PASS** | Level 9 gzip data: 149,492 B; initial JS: 317,830 B (within budget) |
+| **Static Size Budget** | `npm run measure:size` | **FAIL** | Data and initial JS gzip exceed unchanged baselines; see metrics above |

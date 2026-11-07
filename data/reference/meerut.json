@@ -13,7 +13,7 @@
         13
       ],
       "operational_length_km": 21.3,
-      "planned_length_km": 23.0,
+      "planned_length_km": 23,
       "terminals": [
         "Meerut South",
         "Modipuram"
@@ -41,4 +41,3 @@
     }
   ]
 }
-

@@ -63,6 +63,11 @@ Always-on rules for every agent session. If you have an older version of this fi
 - If a requirement conflicts with these rules or with the data standards, stop and ask.
 - Keep final summaries short: what changed, what was verified, what is left.
 
+## Commit size
+- Do not commit if the net change is under 15 lines. Net change is total added plus deleted lines from `git diff --cached --numstat`; binary files count as over the limit.
+- Before every commit, run that command and sum the first two columns.
+- If the sum is under 15, bundle the change into the next commit or hold it and tell the owner. No exceptions unless the owner explicitly waives the rule for that specific change.
+
 ## Public-usability plan rules
 
 - Never add fares, timings or interchange links without a specific official source.
