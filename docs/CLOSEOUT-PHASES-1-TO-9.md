@@ -19,7 +19,7 @@ All data and pipeline changes strictly adhere to the project rules: zero invente
 | **Phase 6** | Bengaluru Pink Line Elevated Stations | **HELD / NOT OPEN** | `phase-6-bengaluru-pink` | `9261912` | `data/stations.geojson`, `data/overrides/bengaluru.json` | Six elevated stations are listed: Kalena Agrahara, Hulimavu, IIMB, JP Nagar 4th Phase, Jayadeva Hospital, and Tavarekere. The Pink Line segment remains `construction`; Jayadeva station is operational for its Yellow Line interchange. Commercial Pink Line opening is unconfirmed. |
 | **Phase 7** | Network Expansion Audits (Ahmedabad, Hyderabad, Patna, Mumbai, Thane, Surat) | **DOCUMENTED / NO GEOMETRY** | `phase-7-network-expansions` | `3ee7fe7` | `data/audit/coverage-gaps.json`, `data/reference/` | The phase adds no segment or station features for these six cities. It documents coverage gaps; it does not publish new geometry. Comparing feature IDs at `3ee7fe7` found zero added segment IDs and zero added station IDs for each city. |
 | **Phase 8** | Fares & Timings Data Model & Audit | **HELD / DOCS ONLY** | `phase-8-fares-timings` | `cc705e8` (consolidated) | `docs/PLAN-PUBLIC-USABILITY.md` | The original phase commit changed documentation only. The current fare test run passed 61 tests, but that does not establish a 22-city audit; no such claim is made here. |
-| **Phase 9** | Full Regression & Close-Out | **NOT REVALIDATED IN THIS RELEASE** | `phase-9-closeout` | `00e18ec` | `docs/CLOSEOUT-PHASES-1-TO-9.md`, `reports/data-audit/` | The fresh verification matrix below records this release run, including the audit and size-budget failures. |
+| **Phase 9** | Full Regression & Close-Out | **REVALIDATED; AUDIT/BUDGET FAIL** | `phase-9-closeout` | `00e18ec` | `docs/CLOSEOUT-PHASES-1-TO-9.md`, `reports/data-audit/` | The fresh verification matrix below records this release run, including the audit and size-budget failures. |
 
 ---
 
@@ -37,8 +37,8 @@ Verified via `npm run validate:data` and Next.js static build:
 - **Static Pages Generated**: 29 static routes (`/`, `/_not-found`, `/compare`, `/robots.txt`, `/sitemap.xml`, and 22 `/city/[id]` routes)
 - **Unit Test Suite**: 49 test files passed, 441/441 tests passing (0 failures)
 - **Size Budget**:
-  - `dataGzipBytes`: 149,492 / 149,492 bytes
-  - `initialJsGzipBytes`: 317,830 / 317,830 bytes
+  - `dataGzipBytes`: 149,783 B measured / 149,492 B baseline (291 B over)
+  - `initialJsGzipBytes`: 318,062 B measured / 317,830 B baseline (232 B over)
 
 ---
 
@@ -64,10 +64,17 @@ Verified via `npm run validate:data` and Next.js static build:
 | Check | Tool / Script | Status | Evidence |
 | :--- | :--- | :--- | :--- |
 | **Data Schema & Relations** | `npm run validate:data` | **PASS** | 22 cities, 59 lines, 79 segments, 954 stations, 2 fare rules, 0 service hours |
-| **Audit Engine Consistency** | `npm run audit:data` | **FAIL** | Fresh run pending below; baselines unchanged |
+| **Audit Engine Consistency** | `npm run audit:data` | **FAIL** | 3 total errors (1 un-baselined: Patna declared-not-compiled), 1,207 warnings, 41 pending-rule findings, 15 coverage gaps; 23 stale baseline entries |
 | **Unit Test Suite** | `npm run test` | **PASS** | 49 test files passed, 441/441 tests passed |
 | **Fares Test Suite** | `npx vitest run __tests__/fares.test.ts` | **PASS** | 1 test file passed, 61/61 tests passed |
 | **Type Check** | `npm run typecheck` | **PASS** | `tsc --noEmit` exited with code 0 |
 | **Lint** | `npm run lint` | **PASS** | ESLint exited with code 0 (0 errors, 0 warnings) |
 | **Static Export Build** | `npm run build` | **PASS** | Next.js 15.5.27: 29/29 static pages exported |
-| **Static Size Budget** | `npm run measure:size` | **FAIL** | Data and initial JS gzip exceed unchanged baselines; see metrics above |
+| **Static Size Budget** | `npm run measure:size` | **FAIL** | 149,783 B data vs 149,492 B baseline; 318,062 B initial JS vs 317,830 B baseline. Baseline left unchanged. |
+
+## 5. Source Evidence Excerpts
+
+- DMRC confirms the Magenta extension: “with effect from 08th March 2026 (Phase-IV).” [DMRC present network](https://delhimetrorail.com/pages/about-us/present-network)
+- NCRTC states: “23 km stretch within the city” and “13 stations.” [NCRTC project update](https://ncrtc.in/wp-content/uploads/2025/10/File-update-24.10.25.pdf)
+- PMRDA describes Line 3 as “23.203 km” with “23 stations.” [PMRDA Line 3](https://www.pmrda.gov.in/en/pune-metro-line-3/)
+- CMRL’s February newsletter records a two-day statutory inspection of 11 Corridor 4 stations; it does not confirm the October 11 opening date. [CMRL February 2026 newsletter](https://chennaimetrorail.org/wp-content/uploads/2026/03/01_CMRL-News-Letter_Feb_2026.pdf)
