@@ -248,3 +248,15 @@ Fare Zone | Revised FFC Recommended Fare Zone (in Kms) | Fare After Discount (IN
 
 Overall match: **All 10 distance bands match identically**.
 
+---
+
+## 6. Phase 10 Official Source Sourcing Evidence (Sep–Nov 2026 Real-World Updates)
+
+This section records official transit and government sources verified in Phase 10:
+
+### 6.1 Chennai Metro Phase II Corridor 4 (Yellow Line)
+- **Authority**: Chennai Metro Rail Limited (CMRL)
+- **Official Source URL**: https://chennaimetrorail.org/wp-content/uploads/2026/10/Fare-Table.pdf
+- **Host**: chennaimetrorail.org (allowlisted transit operator)
+- **Status / Findings**: The CMRL Fare Table PDF supports official station names (*Poonamallee Bypass, Poonamallee Bus Stand, Poonamallee Government Hospital, Karayanchavadi, Kumananchavadi, Iyyappanthangal, Kattupakkam, Thelliyaragaram, Porur Bypass, Porur Junction, Vadapalani*) and distance-based fare structure (Rs 10 to Rs 40) only. Secondary news URLs (
+ailwaygazette.com, dtnext.in) were purged from runtime data records (data/overrides/chennai.json, data/segments.geojson, data/stations.geojson). The opened_on: 2026-10-11 date comes from news leads kept in data/reference/chennai.json marked confidence: unverified.
