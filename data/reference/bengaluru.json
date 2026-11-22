@@ -250,17 +250,34 @@
       ],
       "status": "under_construction",
       "disjoint_stretches": false,
-      "openings": [],
+      "openings": [
+        {
+          "stage": "Reach 6 Elevated (Kalena Agrahara - Tavarekere)",
+          "phase": "2",
+          "inaugurated_on": "2026-11-13",
+          "stations_added": 6,
+          "confidence": "unverified",
+          "notes": "Inaugurated on 2026-11-13 per PIB PRID=2335840; station count (6) is an unverified news lead not stated in PIB release. Commercial service circular on english.bmrc.co.in unconfirmed, so line status remains under_construction without runtime segment geometry changes.",
+          "source": {
+            "title": "PM inaugurates 7.5 km elevated stretch of Bengaluru Metro Pink Line from Kalena Agrahara to Tavarekere",
+            "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335840",
+            "retrieved_at": "2026-11-22",
+            "kind": "official"
+          }
+        }
+      ],
       "construction": [
         {
           "stretch": "Reach 6 Elevated (Kalena Agrahara - Tavarekere)",
           "phase": "2",
           "expected_completion": "2026-11",
           "stations": 6,
-          "notes": "CMRS statutory safety clearance received following Oct 6-8, 2026 inspection; inauguration targeted November 2026.",
+          "notes": "Inaugurated on 2026-11-13 by PM Narendra Modi per PIB PRID=2335840. Station count (6 elevated stations) is an unverified news lead not stated in PIB release. Commercial service launch circular unconfirmed on english.bmrc.co.in; runtime status remains under_construction.",
           "source": {
-            "kind": "news",
-            "url": "https://www.thehansindia.com/karnataka/bengaluru-pink-line-metro-gets-statutory-safety-clearance-planned-inauguration-in-nov-1017124"
+            "title": "PM inaugurates 7.5 km elevated stretch of Bengaluru Metro Pink Line from Kalena Agrahara to Tavarekere",
+            "kind": "official",
+            "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335840",
+            "retrieved_at": "2026-11-22"
           }
         },
         {

@@ -271,3 +271,49 @@ ailwaygazette.com, dtnext.in) were purged from runtime data records (data/overri
 - **Verification Rule**: Unofficial domains (e.g. 
 arendramodi.in, news portals, aggregators) remain strictly barred.
 
+### 7.2 Pune Metro Line 3 (Hinjawadi - District Court)
+- **Authority**: Press Information Bureau (PIB) / PMO / PMRDA
+- **Official Source URL**: https://www.pib.gov.in/PressReleasePage.aspx?PRID=2332011 (post-event inauguration release; PRID=2331557 was pre-event advisory)
+- **Host**: pib.gov.in (allowlisted central government portal)
+- **Status / Findings**: Verified official inauguration on 3rd November 2026 for Pune Metro Line 3 (~23 km elevated corridor from Hinjawadi to District Court) via post-event release PRID=2332011 ("Prime Minister Shri Narendra Modi inaugurated and laid the foundation stone for Pune Metro projects... today through video conferencing"). Commercial passenger service start date and operational station count are not stated on official pages (marked unverified news leads). Secondary news URLs (freepressjournal.in, punekarnews.in) were purged from data/reference/pune.json, data/overrides/pune.json, data/segments.geojson, and data/stations.geojson.
+
+### 7.3 Bengaluru Metro Pink Line (Reach 6 Elevated)
+- **Authority**: Press Information Bureau (PIB) / PMO
+- **Official Source URLs**:
+  - `https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335089` (pre-event advisory)
+  - `https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335840` (post-event dedication release)
+- **Host**: pib.gov.in (allowlisted central government portal)
+- **Status / Findings**: PRID 2335089 (sha256 980a33d6025333cbcc184b6d485ef6c867d257819eb938de4af4c60f587f47f2) is a pre-event advisory naming Kalena Agrahara-Tavarekere and ~₹3,470 crore; PRID 2335840 confirms the Pink Line was dedicated on 13 Nov 2026. However, `blr-pink-seg-01` in the repository is currently a single 21 km segment spanning both reaches (elevated and underground to Nagawara). Flipping `blr-pink-seg-01` directly to operational would add 21 km to the city's operational total (exceeding the reference threshold) and cause two `declared-not-compiled` construction errors, raising audit errors from 3 to 6. Therefore, runtime data is left unchanged; a split at Tavarekere is required and is deferred. Station count (6 elevated) and station names remain unverified news leads pending official BMRCL publication.
+
+### 7.4 Pune Metro Phase-2 (Line 4 and Line 4A)
+- **Authority**: Press Information Bureau (PIB) / Union Cabinet
+- **Official Source URL**: https://www.pib.gov.in/PressReleasePage.aspx?PRID=2194711
+- **Host**: pib.gov.in (allowlisted central government portal)
+- **Status / Findings**: Verified Union Cabinet approval on 26 November 2025 (PIB PRID=2194711) for Pune Metro Phase-2 comprising Line 4 (Kharadi to Khadakwasla, 25.52 km, 22 stations) and Line 4A (Nal Stop to Warje and Manik Baug, 6.12 km, 6 stations), totaling 31.636 km with 28 elevated stations at ₹9,857.85 crore. Recorded as planned coverage gap without geometry.
+
+### 7.5 Noida Metro Aqua Line Extension (Sector 51 to Greater Noida Sector 4)
+- **Authority**: Press Information Bureau (PIB) / Union Cabinet
+- **Official Source URL**: https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334971
+- **Host**: pib.gov.in (allowlisted central government portal)
+- **Status / Findings**: Verified Union Cabinet approval on 11 November 2026 for 8.449 km, 5 elevated stations extension of Noida Metro Aqua Line from Sector-51 to Greater Noida Sector-04. (Note: The ₹2,390 crore figure is from news leads and is not stated in PIB PRID=2334971). Recorded as planned coverage gap without geometry. Interchange pair noi-noida-sector-51 / del-noida-sector-52 left untouched.
+
+### 7.6 Jaipur Metro Phase-2 (Prahladpura to Todi Mod)
+- **Authority**: Press Information Bureau (PIB) / Union Cabinet
+- **Official Source URL**: https://www.pib.gov.in/PressReleasePage.aspx?PRID=2250040
+- **Host**: pib.gov.in (allowlisted central government portal)
+- **Status / Findings**: Verified Union Cabinet approval on April 8, 2026 for Jaipur Metro Phase-2 North-South corridor (Prahladpura to Todi Mod, 41 km, 36 stations, ₹13,037.66 crore). Recorded as planned coverage gap without geometry.
+
+### 7.7 Ahmedabad Metro Phase 2A (Koteshwar Road to Airport)
+- **Authority**: Press Information Bureau (PIB) / Union Cabinet
+- **Official Source URL**: https://www.pib.gov.in/PressReleasePage.aspx?PRID=2271058
+- **Host**: pib.gov.in (allowlisted central government portal)
+- **Byte Length**: 103965
+- **SHA-256**: 78883a6f948f3c06ba4a71c73889799f243d0b9be9b7e321ef646946cb426ab9
+- **Posted On**: 10 JUN 2026 3:34PM by PIB Delhi
+- **Status / Findings**: Verified Union Cabinet approval on 10 June 2026 for Ahmedabad Metro Rail project Phase 2A (Koteshwar Road to Airport corridor).
+  - Quoted text:
+    > "The Union Cabinet chaired by the Prime Minister Shri Narendra Modi has approved Phase 2(A) of Ahmedabad Metro Rail Project with corridor for a length of 6.032 Km with 05 stations (04 Elevated and 01 underground). On operationalisation of Phase 2(A), Ahmedabad-Gandhinagar will have 77.63 Km of active Metro Rail Network.  The names of stations in the Phase 2(A) Corridor are- Ashram Road, Koteshwar Prachin Mandir, Sabarmati River, Sardar Nagar and Airport."
+    > "The total completion cost including IDC (Interest during Construction) for the project will be Rs.2,169.04 crore."
+  - Recorded as planned coverage gap without geometry in `data/audit/coverage-gaps.json`; line assignment `ahm-yellow` is inferred from the existing Koteshwar Road station on the Yellow Line.
+
+

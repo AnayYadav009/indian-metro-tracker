@@ -140,9 +140,10 @@
         {
           "stage": "Hinjawadi (Maan) - District Court",
           "phase": "1",
-          "opened_on": "2026-11-03",
+          "opened_on": null,
+          "inaugurated_on": "2026-11-03",
           "stations_added": 13,
-          "confidence": "sourced",
+          "confidence": "unverified",
           "source": {
             "title": "Pune Metro Line 3 expected to carry 2 lakh passengers daily; four new corridors announced",
             "url": "https://www.freepressjournal.in/pune/pune-metro-line-3-expected-to-carry-2-lakh-passengers-daily-four-new-corridors-worth-13500-crore-announced",
@@ -152,9 +153,10 @@
         }
       ],
       "construction": [],
-      "notes": "PPP corridor under PMRDA developed by Tata-Siemens consortium (Pune IT City Metro Rail Limited). 23.2 km elevated corridor connecting Hinjawadi (Maan) to District Court interchange. Virtually inaugurated on 2026-11-03 by PM Narendra Modi; commercial passenger operations commenced on 2026-11-04 with 17 operational stations (13 published with OSM geometry, 4 awaiting surveyed geometry; 6 intermediate stations temporarily skipped pending completion by January 2027). Phase II four corridors (~44.4 km: Line 2A Vanaz-Chandani Chowk, Line 2B Ramwadi-Vitthalwadi, Line 4 Kharadi-Khadakwasla, Line 4A Nal Stop-Manik Baug) foundation stone laid on 2026-11-03.",
+      "notes": "PPP corridor under PMRDA developed by Tata-Siemens consortium (Pune IT City Metro Rail Limited). 23.2 km elevated corridor connecting Hinjawadi (Maan) to District Court interchange. Inaugurated on 2026-11-03 by PM Narendra Modi via video conferencing (post-event release PIB PRID=2332011); commercial passenger operations start date and station count unverified on official operator page (2026-11-04 start date and 13 stations are unverified news leads).",
       "confidence": "sourced"
     }
   ],
-  "confidence": "sourced"
+  "confidence": "sourced",
+  "notes": "Union Cabinet approved Pune Metro Phase-2 on 26 November 2025, comprising Line 4 from Kharadi to Khadakwasla (25.52 km, 22 stations) and Line 4A from Nal Stop to Warje and Manik Baug (6.12 km, 6 stations) totaling 31.636 km with 28 elevated stations at ₹9,857.85 crore (PIB PRID=2194711)."
 }
