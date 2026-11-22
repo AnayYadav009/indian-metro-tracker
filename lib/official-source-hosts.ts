@@ -26,6 +26,10 @@ export const OFFICIAL_SOURCE_HOSTS: readonly string[] = Object.freeze([
   // Government & Development Authorities
   "mmrda.maharashtra.gov.in",
   "mtp.indianrailways.gov.in",
+  "pib.gov.in",
+  "www.pib.gov.in",
+  "pmindia.gov.in",
+  "www.pmindia.gov.in",
   "pmrda.gov.in",
   "transport.rajasthan.gov.in",
 ]);

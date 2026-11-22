@@ -260,3 +260,14 @@ This section records official transit and government sources verified in Phase 1
 - **Host**: chennaimetrorail.org (allowlisted transit operator)
 - **Status / Findings**: The CMRL Fare Table PDF supports official station names (*Poonamallee Bypass, Poonamallee Bus Stand, Poonamallee Government Hospital, Karayanchavadi, Kumananchavadi, Iyyappanthangal, Kattupakkam, Thelliyaragaram, Porur Bypass, Porur Junction, Vadapalani*) and distance-based fare structure (Rs 10 to Rs 40) only. Secondary news URLs (
 ailwaygazette.com, dtnext.in) were purged from runtime data records (data/overrides/chennai.json, data/segments.geojson, data/stations.geojson). The opened_on: 2026-10-11 date comes from news leads kept in data/reference/chennai.json marked confidence: unverified.
+
+---
+
+## 7. Phase 11 Central Government Official Sourcing (PIB & PMO)
+
+### 7.1 Official Host Allowlist Additions
+- **Domains Added**: pib.gov.in, www.pib.gov.in, pmindia.gov.in, www.pmindia.gov.in
+- **Scope**: Union Cabinet approvals, Prime Ministerial project inaugurations, and central ministry (MoHUA) project notifications.
+- **Verification Rule**: Unofficial domains (e.g. 
+arendramodi.in, news portals, aggregators) remain strictly barred.
+
