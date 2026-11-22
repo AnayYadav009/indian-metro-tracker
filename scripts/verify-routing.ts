@@ -465,14 +465,16 @@ export function runRoutingVerification(): {
   };
 }
 
-export function generateVerificationMarkdown(data: ReturnType<typeof runRoutingVerification>): string {
-  const dateStr = "2026-10-17";
+export function generateVerificationMarkdown(
+  data: ReturnType<typeof runRoutingVerification>,
+  dateStr = new Date().toISOString().slice(0, 10)
+): string {
   const lines: string[] = [];
 
   lines.push(`# Operational Routing Verification Report`);
   lines.push(``);
   lines.push(`**Date:** ${dateStr}  `);
-  lines.push(`**Scope:** All 21 cities and ${data.summary.totalOperationalLines} operational metro lines in India  `);
+  lines.push(`**Scope:** All ${data.cities.length} cities and ${data.summary.totalOperationalLines} operational metro lines in India  `);
   lines.push(`**Auditor:** Automated Transit Topology & Geometric Routing Verifier  `);
   lines.push(``);
   lines.push(`---`);
@@ -940,9 +942,10 @@ if (process.argv[1]?.includes("verify-routing")) {
       );
     });
   }
+  const dateStr = new Date().toISOString().slice(0, 10);
   sampleMdLines.push(``);
   sampleMdLines.push(`---`);
-  sampleMdLines.push(`*Generated automatically by scripts/verify-routing.ts on 2026-10-17*`);
+  sampleMdLines.push(`*Generated automatically by scripts/verify-routing.ts on ${dateStr}*`);
 
   md = md + "\n" + sampleMdLines.join("\n");
 
@@ -950,7 +953,7 @@ if (process.argv[1]?.includes("verify-routing")) {
   if (!fs.existsSync(outDir)) {
     fs.mkdirSync(outDir, { recursive: true });
   }
-  const outFile = path.join(outDir, "2026-10-17-routing-verification.md");
+  const outFile = path.join(outDir, `${dateStr}-routing-verification.md`);
   fs.writeFileSync(outFile, md, "utf8");
 
   console.log(`\n=== ROUTING VERIFICATION COMPLETE ===`);

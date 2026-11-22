@@ -85,7 +85,7 @@ export default async function CityPage({ params }: CityPageProps) {
             <Link
               href="/compare"
               className="inline-flex items-center gap-1.5 rounded-lg border border-slate-700 bg-slate-800/80 px-3 py-1.5 text-xs font-medium text-slate-200 transition-colors hover:border-slate-500 hover:bg-slate-700 hover:text-white"
-              title="Compare all 21 Indian metro networks"
+              title={`Compare all ${getAllCities().length} Indian metro networks`}
             >
               <BarChart3 className="h-3.5 w-3.5 text-emerald-400" />
               <span className="hidden sm:inline">Compare</span>

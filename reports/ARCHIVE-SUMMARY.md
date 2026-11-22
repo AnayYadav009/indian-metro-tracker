@@ -75,3 +75,32 @@ The following defects, code hygiene bugs, and responsive layout conflicts were t
    - *Resolution*: Collapsed MapLegend by default on viewports below 768px via client `useEffect` after mount; synchronized E2E specs for mobile legend toggle.
    - *Fixing Commit*: `10a6e5d` ("fix(ui, e2e): collapse MapLegend by default on mobile, fix spec synchronization, and resolve mobile filter obstruction")
 
+---
+
+## 3. Consolidation of Milestone M10 Progress Notes & Diagnostic Reviews (Oct 19 – Oct 27, 2026)
+
+### A. M10 Milestone Execution & Defect Handover (Oct 19)
+Consolidates `reports/progress/2026-10-19-handover.md`, `2026-10-19-m10-2-delhi-complete.md`, `2026-10-19-m10-2-mumbai-complete.md`, and `2026-10-19-m10-final-handover.md`:
+- **M10.1 Geometry Consolidation**:
+  - Implemented single midpoint centerlines for twin-track traces on Delhi Pink Line (Maujpur approach), Pune Lines 1, 2, and 3, and Mumbai Line 4.
+  - Cleared artificial schematic connectors on Mumbai Line 3 and Line 2B.
+  - Preserved owner decisions: Bhopal official reference length 6.22 km retained (variance investigated without forcing geometry distortion) and Gurugram Rapid Metro loop exempted from terminal checks.
+- **M10.2 City-by-City Defect Repairs**:
+  - **Delhi (Finding F-02 Closed)**: Constructed continuous 19.16 km, 71-coordinate alignment for Golden Line (`del-golden-seg-01`) connecting Delhi Aerocity (`[77.12124, 28.54799]`) to Tughlakabad (`[77.29924, 28.50236]`) from surveyed OSM ways 538930435 and Phase 4 station coordinates. Reconciled 3 orphan future stations: aliased `del-aerocity` to operational `Delhi Aerocity` interchange; scoped out detached construction node `del-domestic-airport` in favor of operational `Terminal 1 IGI Airport`; snapped `del-andrews-ganj` to vertex `[77.232392, 28.562312]` on Golden Line branch. Delhi audit error count reached 0.
+  - **Mumbai**: Snapped Eastern Express Highway station (`mum-eeh`) coordinates to `[72.887562, 19.056585]` directly on Line 4 centerline (&le; 1 m distance), clearing `station-far-from-nearest-segment`. Verified `D. N. Nagar` layout as `elevated` with MMRDA citations while preserving Line 1 association. Mumbai audit error count reached 0.
+- **M10.3 Interchanges & Verification**:
+  - Verified cross-network interchanges in `data/overrides/interchanges.json`: Sikanderpur (`int-sikanderpur` connecting Delhi Yellow and Gurugram Rapid Metro), Noida Sector 51/52 (`int-noida-sec51-52`), Mumbai WEH/Gundavali, and DN Nagar/Andheri West.
+  - Verified 47 operational lines and 142/142 Playwright E2E tests passing.
+
+### B. Tier 2 and Chennai Corridor Source Review (Oct 19)
+Consolidates `reports/data-audit/2026-10-19-tier2-coverage-review.md`:
+- Inventoried official projects and references across 16 networks: Agra (Phase 1 Corridors 1 & 2), Ahmedabad (Phase 2A Airport and Phase 3 tenders), Chennai (Phase II C3/C4/C5, keeping C3 coverage gap per owner decision), Gurugram (Millennium City Centre–Cyber City corridor tenders), Jaipur (Phase 2 North-South 41 km approved corridor), Kanpur (remaining C1 and C2 sections), Kochi (Phase II ongoing), Lucknow (Phase 1B approved), Navi Mumbai (Routes 2, 3, 4 scopes), Patna (Corridor 2 under construction), Pune (Phase 2 extensions), Surat (Corridor II extension to HSR station).
+- Confirmed full existing reference representation for Bhopal, Nagpur, Noida, and Indore.
+
+### C. Audit Blind-Spots & Walkthrough Findings Root-Cause Mapping (Oct 19 & Oct 27)
+Consolidates `reports/data-audit/blind-spots-2026-10-19.md` and `reports/data-audit/blind-spots-2026-10-27.md`:
+- Comprehensive root-cause mapping of walkthrough findings F-01 through F-22 from `docs/FINDINGS-2026-10-12.md`.
+- Implemented and verified test fixture coverage for all 11 M8.1 audit rules in `__tests__/data-audit.test.ts`: `segment-parallel-duplicate`, `segment-hairpin`, `segment-sparse-vertices`, `city-km-vs-reference` (M10.1); `line-terminal-missing`, `reference-construction-stretch-missing`, `orphan-future-station` (M10.2); `future-segment-no-stations`, `cross-network-interchange`, `verified-without-official-source`, `operational-station-no-opened-on` (M10.3).
+- Established central audit thresholds in `scripts/audit/audit-config.ts` with per-city override capabilities.
+
+

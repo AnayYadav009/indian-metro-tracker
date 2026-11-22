@@ -108,7 +108,7 @@ export function CitySelect() {
               setActiveIndex(0);
             }}
             onKeyDown={handleSearchKeyDown}
-            placeholder="Search 21 cities"
+            placeholder={`Search ${cities.length} cities`}
             className="mb-2 h-10 w-full rounded-lg border border-slate-700 bg-slate-950 px-3 text-sm text-slate-100 placeholder:text-slate-500 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
           />
           <div

@@ -40,4 +40,4 @@ Snapshot source: generated `reports/data-audit/2026-10-15.json` and `data/audit/
 | Mumbai | Line 2B — Phase 2, Chembur–DN Nagar | Under construction | Matching route geometry is unavailable. | The remaining phase is not drawn. |
 | Noida | Aqua — Sector 142–Botanical Garden | Planned | Corridor is listed as upcoming; partial proposed geometry is not compiled. | The branch extension is not drawn as operational service. |
 
-For the two Kolkata Yellow stretches above, the status of Michael Nagar–New Barrackpore is not established by the cited PIB release and remains an owner/source question. Open owner decisions and the current error inventory are detailed in [`progress/2026-10-15-error-fix-3.md`](progress/2026-10-15-error-fix-3.md) and [`data-audit/2026-10-15.md`](data-audit/2026-10-15.md).
+For the two Kolkata Yellow stretches above, the status of Michael Nagar–New Barrackpore is not established by the cited PIB release and remains an owner/source question.

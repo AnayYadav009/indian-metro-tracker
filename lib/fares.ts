@@ -107,17 +107,11 @@ export function estimateFare(
     const tolerance =
       options?.boundaryToleranceKm ?? DEFAULT_BOUNDARY_TOLERANCE_KM;
 
-    let matchedIndex = -1;
-    for (let i = 0; i < rule.bands.length; i++) {
-      const band = rule.bands[i];
-      if (
+    const matchedIndex = rule.bands.findIndex(
+      (band) =>
         distanceKm >= band.min_km &&
         (band.max_km === null || distanceKm < band.max_km)
-      ) {
-        matchedIndex = i;
-        break;
-      }
-    }
+    );
 
     if (matchedIndex === -1) {
       throw new Error(
@@ -186,17 +180,11 @@ export function estimateFare(
       };
     }
 
-    let matchedIndex = -1;
-    for (let i = 0; i < rule.bands.length; i++) {
-      const band = rule.bands[i];
-      if (
+    const matchedIndex = rule.bands.findIndex(
+      (band) =>
         stopCount >= band.min_stations &&
         (band.max_stations === null || stopCount <= band.max_stations)
-      ) {
-        matchedIndex = i;
-        break;
-      }
-    }
+    );
 
     if (matchedIndex === -1) {
       throw new Error(

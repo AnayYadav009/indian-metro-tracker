@@ -39,20 +39,26 @@ export function determineDataSourceState(
     return envOverride;
   }
 
-  const allSources = [...(segments?.features ?? []), ...(stations?.features ?? [])]
-    .map((f) => f.properties?.source)
-    .filter((source): source is string => !!source)
-    .concat(Array.isArray(lines) ? lines.map((l) => l?.source).filter((source): source is string => !!source) : []);
+  const segs = segments?.features ?? [];
+  const stas = stations?.features ?? [];
+  const lns = Array.isArray(lines) ? lines : [];
 
-  if (allSources.length === 0) return "mock";
+  const isMock = (s?: string) => !!s && s.toLowerCase() === "mock";
+  const isReal = (s?: string) => !!s && s.toLowerCase() !== "mock";
 
-  const allMock = allSources.every((s) => s.toLowerCase() === "mock");
-  if (allMock) return "mock";
+  const hasMock =
+    segs.some((f) => isMock(f?.properties?.source)) ||
+    stas.some((f) => isMock(f?.properties?.source)) ||
+    lns.some((l) => isMock(l?.source));
 
-  const allReal = allSources.every((s) => s.toLowerCase() !== "mock");
-  if (allReal) return "real";
+  const hasReal =
+    segs.some((f) => isReal(f?.properties?.source)) ||
+    stas.some((f) => isReal(f?.properties?.source)) ||
+    lns.some((l) => isReal(l?.source));
 
-  return "mixed";
+  if (hasMock && hasReal) return "mixed";
+  if (hasReal) return "real";
+  return "mock";
 }
 
 export const DATA_SOURCE: DataSourceState = determineDataSourceState(
@@ -212,24 +218,21 @@ export function getMockCityNames(): string[] {
  */
 export function getDatasetMetadataSummary(): {
   lastVerifiedFormatted: string;
-  sourcesFormatted: string;
   badgeLabel: string;
 } {
   const { lines, segments, stations } = getMetroData();
 
   let latestDateStr = "";
 
-  const allRecords: Array<{ retrieved_at?: string | null; last_verified?: string | null }> = [
-    ...lines,
-    ...segments.features.map((f) => f.properties),
-    ...stations.features.map((f) => f.properties),
-  ];
-
-  for (const record of allRecords) {
-    if (record.retrieved_at && record.retrieved_at > latestDateStr) {
-      latestDateStr = record.retrieved_at;
+  const checkDate = (r?: { retrieved_at?: string | null }) => {
+    if (r?.retrieved_at && r.retrieved_at > latestDateStr) {
+      latestDateStr = r.retrieved_at;
     }
-  }
+  };
+
+  for (const l of lines) checkDate(l);
+  for (const f of segments.features) checkDate(f.properties);
+  for (const f of stations.features) checkDate(f.properties);
 
   let dateFormatted = "";
   if (latestDateStr) {
@@ -250,13 +253,8 @@ export function getDatasetMetadataSummary(): {
     }
   }
 
-  const badgeLabel = dateFormatted
-    ? `Data retrieved: ${dateFormatted}`
-    : "Data date not recorded";
-
   return {
     lastVerifiedFormatted: dateFormatted,
-    sourcesFormatted: "",
-    badgeLabel,
+    badgeLabel: dateFormatted ? `Data retrieved: ${dateFormatted}` : "Data date not recorded",
   };
 }
