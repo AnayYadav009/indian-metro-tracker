@@ -5831,11 +5831,13 @@
         "opened_on": null,
         "expected_completion": null,
         "completion_unconfirmed": false,
-        "layout": null,
-        "layout_source": "unverified",
+        "layout": "elevated",
+        "layout_source": "operator",
         "source": "osm",
-        "references": [],
-        "last_verified": null,
+        "references": [
+          "https://mmrda.maharashtra.gov.in/"
+        ],
+        "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10",
         "interchange_id": "int-mumbai-dn-nagar-andheri-west"
       }
@@ -6575,8 +6577,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          72.88706,
-          19.05724
+          72.88756,
+          19.05658
         ]
       },
       "properties": {
@@ -6593,11 +6595,13 @@
         "opened_on": null,
         "expected_completion": null,
         "completion_unconfirmed": true,
-        "layout": null,
-        "layout_source": "unverified",
+        "layout": "elevated",
+        "layout_source": "operator",
         "source": "osm",
-        "references": [],
-        "last_verified": null,
+        "references": [
+          "https://mmrda.maharashtra.gov.in/"
+        ],
+        "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
       }
     },
@@ -16840,20 +16844,24 @@
         "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
-          "del-violet"
+          "del-violet",
+          "del-golden"
         ],
         "status": "operational",
-        "phase": "II",
-        "is_interchange": false,
+        "phase": "IV",
+        "is_interchange": true,
         "opened_on": null,
         "expected_completion": null,
         "completion_unconfirmed": false,
-        "layout": null,
-        "layout_source": "unverified",
+        "layout": "elevated",
+        "layout_source": "operator",
         "source": "osm",
-        "references": [],
-        "last_verified": null,
-        "retrieved_at": "2026-10-16"
+        "references": [
+          "https://www.delhimetrorail.com/network_map"
+        ],
+        "last_verified": "2026-10-08",
+        "retrieved_at": "2026-10-16",
+        "interchange_id": "del-tughlakabad"
       }
     },
     {
@@ -18071,11 +18079,12 @@
         "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
-          "del-yellow"
+          "del-yellow",
+          "del-golden"
         ],
         "status": "operational",
         "phase": "I",
-        "is_interchange": false,
+        "is_interchange": true,
         "opened_on": null,
         "expected_completion": null,
         "completion_unconfirmed": false,
@@ -18086,7 +18095,8 @@
           "https://www.delhimetrorail.com/network_map"
         ],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-16"
+        "retrieved_at": "2026-10-16",
+        "interchange_id": "del-saket"
       }
     },
     {
@@ -20946,72 +20956,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          77.23239,
-          28.56231
-        ]
-      },
-      "properties": {
-        "station_id": "del-andrews-ganj",
-        "name": "Andrews Ganj",
-        "city_id": "delhi",
-        "city": "Delhi",
-        "line_ids": [
-          "del-violet",
-          "del-golden"
-        ],
-        "status": "construction",
-        "phase": "IV",
-        "is_interchange": true,
-        "opened_on": null,
-        "expected_completion": null,
-        "completion_unconfirmed": true,
-        "layout": null,
-        "layout_source": "unverified",
-        "source": "osm",
-        "references": [],
-        "last_verified": null,
-        "retrieved_at": "2026-10-16",
-        "interchange_id": "del-andrews-ganj"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          77.12153,
-          28.56325
-        ]
-      },
-      "properties": {
-        "station_id": "del-domestic-airport",
-        "name": "Domestic Airport",
-        "city_id": "delhi",
-        "city": "Delhi",
-        "line_ids": [
-          "del-magenta",
-          "del-golden"
-        ],
-        "status": "construction",
-        "phase": "IV",
-        "is_interchange": true,
-        "opened_on": null,
-        "expected_completion": null,
-        "completion_unconfirmed": true,
-        "layout": null,
-        "layout_source": "unverified",
-        "source": "osm",
-        "references": [],
-        "last_verified": null,
-        "retrieved_at": "2026-10-16",
-        "interchange_id": "del-domestic-airport"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           77.09456,
           28.67894
         ]
@@ -21395,39 +21339,6 @@
         ],
         "last_verified": null,
         "retrieved_at": "2026-10-16"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          77.12124,
-          28.54799
-        ]
-      },
-      "properties": {
-        "station_id": "del-aerocity",
-        "name": "Aerocity",
-        "city_id": "delhi",
-        "city": "Delhi",
-        "line_ids": [
-          "del-airport",
-          "del-golden"
-        ],
-        "status": "construction",
-        "phase": "IV",
-        "is_interchange": true,
-        "opened_on": null,
-        "expected_completion": null,
-        "completion_unconfirmed": true,
-        "layout": null,
-        "layout_source": "unverified",
-        "source": "osm",
-        "references": [],
-        "last_verified": null,
-        "retrieved_at": "2026-10-16",
-        "interchange_id": "del-aerocity"
       }
     },
     {
@@ -29620,6 +29531,40 @@
           "https://patnametrorail.com"
         ],
         "last_verified": "2026-10-16",
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.23239,
+          28.56231
+        ]
+      },
+      "properties": {
+        "station_id": "del-andrews-ganj",
+        "name": "Andrews Ganj",
+        "city_id": "delhi",
+        "city": "Delhi",
+        "line_ids": [
+          "del-golden"
+        ],
+        "status": "planned",
+        "phase": "IV",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": null,
+        "completion_unconfirmed": true,
+        "layout": null,
+        "layout_source": "unverified",
+        "source": "osm",
+        "references": [
+          "https://delhimetrorail.com/",
+          "https://themetrorailguy.com/2024/01/27/delhi-metros-silver-line-renamed-to-golden-line-line-10/"
+        ],
+        "last_verified": "2026-10-10",
         "retrieved_at": "2026-10-16"
       }
     }

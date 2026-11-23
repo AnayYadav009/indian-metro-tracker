@@ -26,6 +26,7 @@ import {
   nearestPointOnPolyline,
 } from "../../lib/geo";
 import { AUDIT_THRESHOLDS } from "./audit-config";
+import type { CityAuditThresholdOverrides } from "./audit-config";
 import { segmentsIntersect as segmentsIntersectHelper } from "../lib/geometry";
 
 // ─── Types ──────────────────────────────────────────────────────────────────
@@ -303,9 +304,14 @@ export function runAudit(
     outOfScopeLineIds?: string[];
     declarations?: AuditDeclarations;
     coverageGaps?: CoverageGap[];
+    cityThresholdOverrides?: Record<string, CityAuditThresholdOverrides>;
   }
 ): AuditResult {
   const cfg = AUDIT_THRESHOLDS;
+  const thresholdsForCity = (cityId: string) => ({
+    ...cfg,
+    ...options?.cityThresholdOverrides?.[cityId],
+  });
   const today = options?.currentDate || new Date().toISOString().slice(0, 10);
   const selfIntersectExempt = new Set(
     options?.selfIntersectionExemptions || []
@@ -1782,6 +1788,7 @@ export function runAudit(
       const p2 = s2.properties;
 
       if (p1.city_id === p2.city_id) continue;
+      const cityCfg = thresholdsForCity(p1.city_id);
 
       const c1 = s1.geometry.coordinates as [number, number];
       const c2 = s2.geometry.coordinates as [number, number];
@@ -1789,8 +1796,10 @@ export function runAudit(
       const sameName =
         normalizeForInterchange(p1.name) === normalizeForInterchange(p2.name);
 
-      // Only evaluate stations in adjacent/same region (within 1000m or 250m)
-      if (distM <= 300 || (distM <= 1000 && sameName)) {
+      if (
+        distM <= cityCfg.crossNetworkInterchangeMaxM ||
+        (distM <= cityCfg.crossNetworkSameNameMaxM && sameName)
+      ) {
         const shareCluster =
           Boolean(p1.interchange_id) &&
           Boolean(p2.interchange_id) &&
@@ -1872,6 +1881,7 @@ export function runAudit(
     const line = lineById.get(lineId);
     const cityId = line?.city_id || lineSegs[0]?.properties.city_id;
     if (!cityId) continue;
+    const cityCfg = thresholdsForCity(cityId);
 
     // A. Inter-segment parallel check
     if (lineSegs.length >= 2) {
@@ -1890,7 +1900,7 @@ export function runAudit(
 
           const bboxA = segmentBbox(coordsA);
           const bboxB = segmentBbox(coordsB);
-          const marginDeg = (cfg.parallelDuplicateMaxDistM / 111_000) * 2;
+          const marginDeg = (cityCfg.parallelDuplicateMaxDistM / 111_000) * 2;
           if (!bboxOverlap(bboxA, bboxB, marginDeg)) continue;
 
           const lenAKm = calculateLineStringLengthKm(coordsA);
@@ -1903,7 +1913,7 @@ export function runAudit(
             const t = s / numSamples;
             const pt = interpolatePolyline(coordsA, t);
             const distM = pointToPolylineDistanceM(pt, coordsB);
-            if (distM <= cfg.parallelDuplicateMaxDistM) {
+            if (distM <= cityCfg.parallelDuplicateMaxDistM) {
               parallelCount++;
             }
           }
@@ -1937,7 +1947,7 @@ export function runAudit(
               (dEndAToB <= 50 && dStartAToB > 500));
 
           if (
-            sharedParallelM >= cfg.parallelDuplicateMinSharedM &&
+            sharedParallelM >= cityCfg.parallelDuplicateMinSharedM &&
             !isBranchJunctionApproach &&
             !overlapMatchesSharedCorridor(segA, segB, sharedParallelM)
           ) {
@@ -1946,7 +1956,7 @@ export function runAudit(
               "segment-parallel-duplicate",
               "error",
               `${segA.properties.segment_id}|${segB.properties.segment_id}`,
-              `Segments run parallel within ${cfg.parallelDuplicateMaxDistM} m for ~${Math.round(sharedParallelM)} m (twin tracks)`
+              `Segments run parallel within ${cityCfg.parallelDuplicateMaxDistM} m for ~${Math.round(sharedParallelM)} m (twin tracks)`
             );
           }
         }
@@ -1967,7 +1977,7 @@ export function runAudit(
 
       const segLenKm = calculateLineStringLengthKm(coords);
       const segLenM = segLenKm * 1000;
-      if (segLenM < cfg.parallelDuplicateMinSharedM * 2) continue;
+      if (segLenM < cityCfg.parallelDuplicateMinSharedM * 2) continue;
 
       // Sample along the segment and check distance to non-adjacent parts of itself
       const stepM = 30;
@@ -1989,9 +1999,9 @@ export function runAudit(
         // Check distance to points that are at least parallelDuplicateMinSharedM away along-track
         for (let other = 0; other < samplePoints.length; other++) {
           const op = samplePoints[other];
-          if (Math.abs(sp.distAlongM - op.distAlongM) >= cfg.parallelDuplicateMinSharedM) {
+        if (Math.abs(sp.distAlongM - op.distAlongM) >= cityCfg.parallelDuplicateMinSharedM) {
             const d = haversineDistanceKm(sp.pt, op.pt) * 1000;
-            if (d <= cfg.parallelDuplicateMaxDistM) {
+            if (d <= cityCfg.parallelDuplicateMaxDistM) {
               foldedParallelCount++;
               break;
             }
@@ -2000,13 +2010,13 @@ export function runAudit(
       }
 
       const foldedSharedM = (foldedParallelCount / samplePoints.length) * segLenM;
-      if (foldedSharedM >= cfg.parallelDuplicateMinSharedM) {
+      if (foldedSharedM >= cityCfg.parallelDuplicateMinSharedM) {
         add(
           cityId,
           "segment-parallel-duplicate",
           "error",
           seg.properties.segment_id,
-          `Segment polyline folds back on itself running parallel within ${cfg.parallelDuplicateMaxDistM} m for ~${Math.round(foldedSharedM)} m`
+          `Segment polyline folds back on itself running parallel within ${cityCfg.parallelDuplicateMaxDistM} m for ~${Math.round(foldedSharedM)} m`
         );
       }
     }
@@ -2016,6 +2026,7 @@ export function runAudit(
   // A turn sharper than ~150 degrees within ~300 m (a spike that doubles back)
   for (const seg of segments.features) {
     const p = seg.properties;
+    const cityCfg = thresholdsForCity(p.city_id);
     const coords = seg.geometry.coordinates as [number, number][];
     if (coords.length < 3) continue;
 
@@ -2036,13 +2047,13 @@ export function runAudit(
       const spanM =
         haversineDistanceKm(a, b) * 1000 + haversineDistanceKm(b, c) * 1000;
 
-      if (interiorAngleDeg >= cfg.hairpinAngleDeg && spanM <= cfg.hairpinSpanM) {
+      if (interiorAngleDeg >= cityCfg.hairpinAngleDeg && spanM <= cityCfg.hairpinSpanM) {
         add(
           p.city_id,
           "segment-hairpin",
           "error",
           `${p.segment_id}|v${i}`,
-          `Segment contains hairpin turn of ${Math.round(interiorAngleDeg)}° within ${Math.round(spanM)} m span (threshold: ${cfg.hairpinAngleDeg}° / ${cfg.hairpinSpanM} m)`
+          `Segment contains hairpin turn of ${Math.round(interiorAngleDeg)}° within ${Math.round(spanM)} m span (threshold: ${cityCfg.hairpinAngleDeg}° / ${cityCfg.hairpinSpanM} m)`
         );
       }
     }
@@ -2052,19 +2063,20 @@ export function runAudit(
   // A leg longer than ~1 km in a segment not marked schematic (straight chord across a curve)
   for (const seg of segments.features) {
     const p = seg.properties;
+    const cityCfg = thresholdsForCity(p.city_id);
     if (p.geometry_quality === "schematic") continue;
     const coords = seg.geometry.coordinates as [number, number][];
     if (coords.length < 2) continue;
 
     for (let i = 0; i < coords.length - 1; i++) {
       const legDistM = haversineDistanceKm(coords[i], coords[i + 1]) * 1000;
-      if (legDistM > cfg.sparseVertexMaxChordM) {
+      if (legDistM > cityCfg.sparseVertexMaxChordM) {
         add(
           p.city_id,
           "segment-sparse-vertices",
           "warn",
           `${p.segment_id}|leg-${i}-${i + 1}`,
-          `Segment has a leg of ${Math.round(legDistM)} m without vertices (threshold: ${cfg.sparseVertexMaxChordM} m for non-schematic segments)`
+          `Segment has a leg of ${Math.round(legDistM)} m without vertices (threshold: ${cityCfg.sparseVertexMaxChordM} m for non-schematic segments)`
         );
       }
     }
@@ -2074,6 +2086,7 @@ export function runAudit(
   // Construction or planned stations must also pass the orphan and 75 m / 250 m checks
   for (const st of stations.features) {
     const p = st.properties;
+    const cityCfg = thresholdsForCity(p.city_id);
     if (p.status !== "construction" && p.status !== "planned") continue;
 
     const stCoord = st.geometry.coordinates as [number, number];
@@ -2092,13 +2105,13 @@ export function runAudit(
         if (d < minDistAnyLineSeg) minDistAnyLineSeg = d;
       }
 
-      if (lineSegs.length > 0 && minDistThisLine > cfg.stationFarFromAllSegmentsM) {
+      if (lineSegs.length > 0 && minDistThisLine > cityCfg.futureStationToSegmentMaxM) {
         add(
           p.city_id,
           "orphan-future-station",
           "error",
           p.station_id,
-          `Future station is ${Math.round(minDistThisLine)} m from nearest segment of line '${lineId}' (threshold: ${cfg.stationFarFromAllSegmentsM} m)`
+          `Future station is ${Math.round(minDistThisLine)} m from nearest segment of line '${lineId}' (threshold: ${cityCfg.futureStationToSegmentMaxM} m)`
         );
       }
     }
@@ -2119,6 +2132,7 @@ export function runAudit(
   const refDir =
     options?.referenceDir || path.resolve(process.cwd(), "data/reference");
   for (const city of cities) {
+    const cityCfg = thresholdsForCity(city.id);
     const refPath = path.join(refDir, `${city.id}.json`);
     if (!fs.existsSync(refPath)) {
       add(
@@ -2259,9 +2273,9 @@ export function runAudit(
             haversineDistanceKm(stCoord, coords[0]) * 1000,
             haversineDistanceKm(stCoord, coords.at(-1)!) * 1000);
         }, Infinity);
-        if (minEndDistM > cfg.terminalToSegmentEndMaxM)
+        if (minEndDistM > cityCfg.terminalToSegmentEndMaxM)
           add(city.id, "line-terminal-missing", "error", `${refLine.line_id}|${termStation.properties.station_id}`,
-            `Terminal station '${terminal}' is ${Math.round(minEndDistM)} m away from nearest segment end of line '${refLine.line_id}' (threshold: ${cfg.terminalToSegmentEndMaxM} m)`);
+            `Terminal station '${terminal}' is ${Math.round(minEndDistM)} m away from nearest segment end of line '${refLine.line_id}' (threshold: ${cityCfg.terminalToSegmentEndMaxM} m)`);
       }
 
       // Reference self-check: openings chronological, stage sums only when every stage has a non-null count
@@ -2352,11 +2366,11 @@ export function runAudit(
                 const segEnd = coords[coords.length - 1];
 
                 const matchDirect =
-                  haversineDistanceKm(ptA, segStart) * 1000 <= cfg.constructionStretchEndMaxM &&
-                  haversineDistanceKm(ptB, segEnd) * 1000 <= cfg.constructionStretchEndMaxM;
+                  haversineDistanceKm(ptA, segStart) * 1000 <= cityCfg.constructionStretchEndMaxM &&
+                  haversineDistanceKm(ptB, segEnd) * 1000 <= cityCfg.constructionStretchEndMaxM;
                 const matchReverse =
-                  haversineDistanceKm(ptA, segEnd) * 1000 <= cfg.constructionStretchEndMaxM &&
-                  haversineDistanceKm(ptB, segStart) * 1000 <= cfg.constructionStretchEndMaxM;
+                  haversineDistanceKm(ptA, segEnd) * 1000 <= cityCfg.constructionStretchEndMaxM &&
+                  haversineDistanceKm(ptB, segStart) * 1000 <= cityCfg.constructionStretchEndMaxM;
                 return matchDirect || matchReverse;
               });
 
@@ -2366,7 +2380,7 @@ export function runAudit(
                   "reference-construction-stretch-missing",
                   "error",
                   `${refLine.line_id}|${con.stretch}`,
-                  `Construction stretch '${con.stretch}' endpoints ('${stretchParts[0]}', '${stretchParts[1]}') do not match endpoints of any construction segment within ${cfg.constructionStretchEndMaxM} m`
+                  `Construction stretch '${con.stretch}' endpoints ('${stretchParts[0]}', '${stretchParts[1]}') do not match endpoints of any construction segment within ${cityCfg.constructionStretchEndMaxM} m`
                 );
               }
             }
@@ -2461,13 +2475,13 @@ export function runAudit(
 
     if (cityRefOpKm > 0) {
       const cityKmDiff = Math.abs(cityDataOpKm - cityRefOpKm) / cityRefOpKm;
-      if (cityKmDiff > cfg.cityKmVsReferenceErrorPct) {
+      if (cityKmDiff > cityCfg.cityKmVsReferenceErrorPct) {
         add(
           city.id,
           "city-km-vs-reference",
           "error",
           city.id,
-          `City operational km differs from reference by ${(cityKmDiff * 100).toFixed(1)}%: computed ${cityDataOpKm.toFixed(2)} km vs reference ${cityRefOpKm.toFixed(2)} km (threshold: ${cfg.cityKmVsReferenceErrorPct * 100}%)`
+          `City operational km differs from reference by ${(cityKmDiff * 100).toFixed(1)}%: computed ${cityDataOpKm.toFixed(2)} km vs reference ${cityRefOpKm.toFixed(2)} km (threshold: ${cityCfg.cityKmVsReferenceErrorPct * 100}%)`
         );
       }
     }

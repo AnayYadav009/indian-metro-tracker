@@ -135,8 +135,51 @@ export interface CityOverrideData {
       references?: string[];
     }
   >;
+  centerlineSections?: Array<{
+    primary_segment_id: string;
+    secondary_segment_id: string;
+    primary_start: Coordinate;
+    secondary_start: Coordinate;
+    primary_end: Coordinate;
+    secondary_end: Coordinate;
+    source_urls: string[];
+    reason: string;
+  }>;
   out_of_scope_station_ids?: string[];
   out_of_scope_line_ids?: string[];
+}
+
+function resampleLine(coords: Coordinate[], count: number): Coordinate[] {
+  const lengths = coords.slice(1).map((point, index) =>
+    haversineDistanceM(coords[index], point)
+  );
+  const total = lengths.reduce((sum, length) => sum + length, 0);
+  if (total === 0) return Array.from({ length: count }, () => coords[0]);
+
+  return Array.from({ length: count }, (_, index) => {
+    const target = (total * index) / (count - 1);
+    let covered = 0;
+    for (let leg = 0; leg < lengths.length; leg++) {
+      const length = lengths[leg];
+      if (covered + length >= target || leg === lengths.length - 1) {
+        const t = length === 0 ? 0 : (target - covered) / length;
+        return [
+          coords[leg][0] + (coords[leg + 1][0] - coords[leg][0]) * t,
+          coords[leg][1] + (coords[leg + 1][1] - coords[leg][1]) * t,
+        ];
+      }
+      covered += length;
+    }
+    return coords[coords.length - 1];
+  });
+}
+
+function joinLines(...parts: Coordinate[][]): Coordinate[] {
+  return parts.flatMap((part, partIndex) =>
+    partIndex && part.length && parts[partIndex - 1].length
+      ? part.slice(1)
+      : part
+  );
 }
 
 /**
@@ -615,6 +658,94 @@ export function mergeCityOverrides(
         }
       }
     }
+  }
+
+  // 4a. Collapse documented parallel track overlap to one midpoint centreline.
+  for (const section of overrides.centerlineSections || []) {
+    const primary = intermediateSegments.find(
+      ({ segOverride }) => segOverride.segment_id === section.primary_segment_id
+    );
+    const secondary = intermediateSegments.find(
+      ({ segOverride }) => segOverride.segment_id === section.secondary_segment_id
+    );
+    if (!primary?.coords || !secondary?.coords) {
+      throw new Error(
+        `Centerline correction requires both segments: ${section.primary_segment_id}, ${section.secondary_segment_id}`
+      );
+    }
+    if (
+      primary.segOverride.line_id !== secondary.segOverride.line_id ||
+      !section.reason.trim() ||
+      section.source_urls.length === 0 ||
+      section.source_urls.some((url) => !/^https?:\/\//i.test(url))
+    ) {
+      throw new Error(
+        `Centerline correction requires a documented same-line pair: ${section.primary_segment_id}|${section.secondary_segment_id}`
+      );
+    }
+
+    const primaryStart = nearestPointOnPolyline(section.primary_start, primary.coords);
+    const secondaryStart = nearestPointOnPolyline(section.secondary_start, secondary.coords);
+    const primaryEnd = nearestPointOnPolyline(section.primary_end, primary.coords);
+    const secondaryEnd = nearestPointOnPolyline(section.secondary_end, secondary.coords);
+    if (
+      primaryStart.distanceM > 60 || secondaryStart.distanceM > 60 ||
+      primaryEnd.distanceM > 60 || secondaryEnd.distanceM > 60
+    ) {
+      throw new Error(
+        `Centerline correction anchors exceed 60 m for ${section.primary_segment_id}|${section.secondary_segment_id}`
+      );
+    }
+    const position = (projection: typeof primaryStart) =>
+      projection.segmentIndex + projection.t;
+    if (
+      position(primaryStart) >= position(primaryEnd) ||
+      position(secondaryStart) >= position(secondaryEnd)
+    ) {
+      throw new Error(
+        `Centerline correction anchors must follow segment order for ${section.primary_segment_id}|${section.secondary_segment_id}`
+      );
+    }
+
+    const primaryShared = lineSlice(primaryStart.point, primaryEnd.point, primary.coords);
+    const secondaryShared = lineSlice(secondaryStart.point, secondaryEnd.point, secondary.coords);
+    const primaryLengthM = calculateLineStringLengthKm(primaryShared) * 1000;
+    const secondaryLengthM = calculateLineStringLengthKm(secondaryShared) * 1000;
+    if (
+      primaryLengthM < 300 || secondaryLengthM < 300 ||
+      Math.abs(primaryLengthM - secondaryLengthM) / Math.max(primaryLengthM, secondaryLengthM) > 0.15
+    ) {
+      throw new Error(
+        `Centerline correction paths do not match for ${section.primary_segment_id}|${section.secondary_segment_id}`
+      );
+    }
+
+    const sampleCount = Math.max(2, Math.ceil(Math.max(primaryLengthM, secondaryLengthM) / 25) + 1);
+    const primarySamples = resampleLine(primaryShared, sampleCount);
+    const secondarySamples = resampleLine(secondaryShared, sampleCount);
+    const maxOffsetM = Math.max(
+      ...primarySamples.map((point, index) =>
+        haversineDistanceM(point, secondarySamples[index])
+      )
+    );
+    if (maxOffsetM > 60) {
+      throw new Error(
+        `Centerline correction traces diverge by ${Math.round(maxOffsetM)} m for ${section.primary_segment_id}|${section.secondary_segment_id}`
+      );
+    }
+    const centerline = primarySamples.map(([lng, lat], index) => [
+      (lng + secondarySamples[index][0]) / 2,
+      (lat + secondarySamples[index][1]) / 2,
+    ] as Coordinate);
+    const primaryBefore = lineSlice(primary.coords[0], primaryStart.point, primary.coords);
+    const primaryAfter = lineSlice(primaryEnd.point, primary.coords[primary.coords.length - 1], primary.coords);
+    const secondaryBefore = lineSlice(secondary.coords[0], secondaryStart.point, secondary.coords);
+    primaryBefore[primaryBefore.length - 1] = centerline[0];
+    primaryAfter[0] = centerline[centerline.length - 1];
+    secondaryBefore[secondaryBefore.length - 1] = centerline[0];
+
+    primary.coords = joinLines(primaryBefore, centerline, primaryAfter);
+    secondary.coords = secondaryBefore;
   }
 
   // 5. Finalize Segments and compute dynamic stations_count

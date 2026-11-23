@@ -128,11 +128,11 @@ describe("M17 City SEO & Metadata Generation", () => {
     expect(kochiData?.openingYearRange).toBe("2017 – 2024");
     expect(getCityDescription("kochi")).toContain("(opened 2017 – 2024)");
 
-    // Delhi: 8 of 247 stations have opened_on (3.2% < 80%) -> shows disclosure
+    // Delhi: 8 of 245 stations have opened_on (3.3% < 80%) -> shows disclosure
     const delhiData = getCityPageData("delhi");
     expect(delhiData?.hasAtLeast80PercentOpened).toBe(false);
     expect(delhiData?.openingYearRange).toBe(
-      "Opening dates recorded for 8 of 247 stations"
+      "Opening dates recorded for 8 of 245 stations"
     );
     expect(getCityDescription("delhi")).not.toContain("(opened");
 

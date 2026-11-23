@@ -550,6 +550,80 @@ describe("Step C Pipeline Code & Rules", () => {
     expect(seg.coordinates[2]).toEqual([73.84, 18.60]);
   });
 
+  it("collapses a documented shared track section to a midpoint and counts it once", () => {
+    const overrides: CityOverrideData = {
+      ...baseCityOverride,
+      segments: [
+        {
+          segment_id: "phase-3",
+          line_id: "test-line-1",
+          line_name: "Line 1",
+          phase: "Phase 1",
+          status: "operational",
+          gauge: "standard",
+          inaugurated_on: "2024-01-01",
+          expected_completion: null,
+          color: "#FF0000",
+          stations_count: 2,
+          last_verified: "2026-10-19",
+          references: ["https://example.com/route-map"],
+          coordinates: [[77.1, 28.1], [77.11, 28.1], [77.12, 28.1]],
+        },
+        {
+          segment_id: "phase-4",
+          line_id: "test-line-1",
+          line_name: "Line 1",
+          phase: "Phase 2",
+          status: "operational",
+          gauge: "standard",
+          inaugurated_on: "2024-01-01",
+          expected_completion: null,
+          color: "#FF0000",
+          stations_count: 2,
+          last_verified: "2026-10-19",
+          references: ["https://example.com/route-map"],
+          coordinates: [[77.1, 28.10018], [77.11, 28.10018], [77.12, 28.10018], [77.13, 28.1]],
+        },
+      ],
+      centerlineSections: [{
+        primary_segment_id: "phase-3",
+        secondary_segment_id: "phase-4",
+        primary_start: [77.11, 28.1],
+        secondary_start: [77.11, 28.10018],
+        primary_end: [77.12, 28.1],
+        secondary_end: [77.12, 28.10018],
+        source_urls: ["https://example.com/route-map"],
+        reason: "The source map shows the two phases using the same approach track.",
+      }],
+    };
+    const result = mergeCityOverrides(
+      { cityId: "testcity", cityName: "Test City", segments: [], stations: [] },
+      overrides
+    );
+    const phase3 = result.segments.find((segment) => segment.properties.segment_id === "phase-3")!;
+    const phase4 = result.segments.find((segment) => segment.properties.segment_id === "phase-4")!;
+    const phase3Midpoint = phase3.geometry.coordinates.find(
+      ([, lat]) => Math.abs(lat - 28.10009) < 0.00002
+    );
+
+    expect(phase3Midpoint).toBeDefined();
+    expect(phase4.geometry.coordinates.at(-1)?.[1]).toBeCloseTo(28.10009, 4);
+    expect(phase4.properties.length_km).toBeLessThan(phase3.properties.length_km);
+
+    const divergingOverrides = structuredClone(overrides);
+    divergingOverrides.segments[1].coordinates = [
+      [77.1, 28.10018],
+      [77.11, 28.10018],
+      [77.115, 28.102],
+      [77.12, 28.10018],
+      [77.13, 28.1],
+    ];
+    expect(() => mergeCityOverrides(
+      { cityId: "testcity", cityName: "Test City", segments: [], stations: [] },
+      divergingOverrides
+    )).toThrow(/traces diverge/);
+  });
+
   it("orders relation ways from an explicit source override", () => {
     const raw = {
       elements: [{

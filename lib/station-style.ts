@@ -9,11 +9,11 @@ export const STATION_STYLE = {
   } satisfies Record<Status, string>,
   strokeWidth: {
     standard: 1.5,
-    interchange: 3,
+    interchange: 2.4,
   },
   radius: {
     standard: 4,
-    interchange: 8,
+    interchange: 6.4,
   },
 } as const;
 

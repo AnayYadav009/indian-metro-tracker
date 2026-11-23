@@ -16,6 +16,8 @@ import {
 } from "./audit-engine";
 import type { AuditDeclarations, BaselineFile, CoverageGap } from "./audit-engine";
 import { loadMetroDatasetFromDisk, readJsonFile } from "../lib/load-dataset";
+import { CITY_AUDIT_THRESHOLD_KEYS } from "./audit-config";
+import type { CityAuditThresholdOverrides } from "./audit-config";
 
 function main() {
   const dataDir = path.resolve(process.cwd(), "data");
@@ -28,6 +30,7 @@ function main() {
   const intentionalBreaks: string[] = [];
   const outOfScopeStations: Record<string, string[]> = {};
   const outOfScopeLineIds: string[] = [];
+  const cityThresholdOverrides: Record<string, CityAuditThresholdOverrides> = {};
   const declarations: AuditDeclarations = { segments: [], lines: [] };
   const coverageGapsPath = path.join(dataDir, "audit", "coverage-gaps.json");
   let coverageGaps: CoverageGap[] = [];
@@ -67,6 +70,17 @@ function main() {
         intentionalBreaks.push(...(override.intentionalBreaks || []));
         if (override.out_of_scope_station_ids) outOfScopeStations[cityId] = override.out_of_scope_station_ids;
         outOfScopeLineIds.push(...(override.out_of_scope_line_ids || []));
+        const thresholds = override.audit_thresholds;
+        if (thresholds && typeof thresholds === "object" && !Array.isArray(thresholds)) {
+          const valid: CityAuditThresholdOverrides = {};
+          for (const key of CITY_AUDIT_THRESHOLD_KEYS) {
+            const value = thresholds[key];
+            if (typeof value === "number" && Number.isFinite(value) && value > 0) {
+              valid[key] = value;
+            }
+          }
+          if (Object.keys(valid).length > 0) cityThresholdOverrides[cityId] = valid;
+        }
       } catch {
         // Skip malformed override files
       }
@@ -100,6 +114,7 @@ function main() {
       outOfScopeLineIds,
       declarations,
       coverageGaps,
+      cityThresholdOverrides,
     }
   );
 
@@ -156,6 +171,7 @@ function main() {
     unreviewed,
     knownDefects,
     pending,
+    documentedCoverageGaps,
     staleAccepted,
     staleUnreviewed,
     staleKnownDefects,
@@ -169,7 +185,7 @@ function main() {
   console.log(`📋 Unreviewed warnings (awaiting city review): ${unreviewed.length}`);
   console.log(`🚨 Known walkthrough defects tracked: ${knownDefects.length}`);
   console.log(`⏳ Pending rules (report-only): ${pending.length}`);
-  console.log(`🗺️ Coverage gaps: ${result.findings.filter((f) => f.rule === "coverage-gap").length}`);
+  console.log(`🗺️ Documented coverage gaps (visible, tracked separately): ${documentedCoverageGaps.length}`);
 
   const totalStale = staleAccepted.length + staleUnreviewed.length + staleKnownDefects.length;
   if (totalStale > 0) {
