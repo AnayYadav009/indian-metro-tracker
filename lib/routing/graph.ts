@@ -10,6 +10,7 @@ import type {
 } from "./types";
 import type { SegmentFeature, StationFeature, Line } from "@/types/metro";
 import { getMetroData } from "@/lib/data";
+import { getRegionMemberCityIds, isRegionId } from "@/lib/regions";
 import rawInterchangeOverrides from "@/data/overrides/interchanges.json";
 
 const interchangeOverrides = rawInterchangeOverrides as Record<
@@ -73,11 +74,17 @@ export function buildTransitGraph(options?: {
   const stationLines = new Map<string, Set<string>>();
   const adj = new Map<string, TransitEdge[]>();
 
+  const memberCityIds = isRegionId(options?.cityId)
+    ? getRegionMemberCityIds(options?.cityId)
+    : options?.cityId
+    ? [options.cityId]
+    : null;
+
   // Filter to operational segments on permitted lines
   const operationalSegments = segments.filter(
     (seg) =>
       seg.properties.status === "operational" &&
-      (!options?.cityId || seg.properties.city_id === options.cityId) &&
+      (!memberCityIds || memberCityIds.includes(seg.properties.city_id)) &&
       isLinePermitted(seg.properties.line_id)
   );
 
@@ -86,7 +93,7 @@ export function buildTransitGraph(options?: {
   );
 
   for (const line of lines) {
-    if (options?.cityId && line.city_id !== options.cityId) continue;
+    if (memberCityIds && !memberCityIds.includes(line.city_id)) continue;
     if (!isLinePermitted(line.id)) continue;
     if (!operationalLineIds.has(line.id)) continue;
     lineMap.set(line.id, {
@@ -100,7 +107,7 @@ export function buildTransitGraph(options?: {
   const operationalStations = stations.filter(
     (st) =>
       st.properties.status === "operational" &&
-      (!options?.cityId || st.properties.city_id === options.cityId) &&
+      (!memberCityIds || memberCityIds.includes(st.properties.city_id)) &&
       st.properties.line_ids.some((lid) => isLinePermitted(lid))
   );
 
@@ -279,10 +286,15 @@ export function buildTransitGraph(options?: {
   const interchangeGroups = new Map<string, StationFeature[]>();
   for (const st of operationalStations) {
     const override = interchangeOverrides[st.properties.station_id];
-    const intId =
-      override !== undefined
-        ? override.interchange_id ?? undefined
-        : st.properties.interchange_id;
+    let intId: string | undefined;
+    if (override !== undefined) {
+      // Reject interchange links that lack an explicit, verified source URL
+      if (override.interchange_id && override.source) {
+        intId = override.interchange_id;
+      }
+    } else {
+      intId = st.properties.interchange_id;
+    }
     if (intId) {
       let group = interchangeGroups.get(intId);
       if (!group) {

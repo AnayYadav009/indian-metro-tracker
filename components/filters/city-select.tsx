@@ -6,12 +6,16 @@ import { Check, ChevronDown, MapPin } from "lucide-react";
 import { getCities } from "@/lib/data";
 import { searchAndOrderCities } from "@/lib/city-order";
 import { useMetroStore } from "@/store/use-metro-store";
+import { getRegion } from "@/lib/regions";
 
 export function CitySelect() {
   const selectedCityId = useMetroStore((state) => state.selectedCityId);
   const setSelectedCity = useMetroStore((state) => state.setSelectedCity);
   const cities = useMemo(() => getCities(), []);
-  const selectedCity = cities.find((city) => city.id === selectedCityId);
+  const selectedRegion = getRegion(selectedCityId);
+  const selectedCity = selectedRegion
+    ? { id: selectedRegion.id, name: selectedRegion.name }
+    : cities.find((city) => city.id === selectedCityId);
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [activeIndex, setActiveIndex] = useState(0);
@@ -135,6 +139,28 @@ export function CitySelect() {
               >
                 <span>All Cities</span>
                 {selectedCityId === null && <Check aria-hidden="true" className="h-4 w-4" />}
+              </button>
+            )}
+            {(!query.trim() || "ncr national capital region delhi noida gurugram meerut namo bharat".includes(query.toLowerCase())) && (
+              <button
+                type="button"
+                role="option"
+                id="city-option-ncr"
+                data-testid="city-select-ncr"
+                aria-selected={selectedCityId === "ncr"}
+                onMouseDown={(event) => event.preventDefault()}
+                onClick={() => chooseCity("ncr")}
+                className={`flex min-h-11 w-full items-center justify-between rounded-lg px-3 text-left text-sm ${
+                  selectedCityId === "ncr"
+                    ? "bg-emerald-500/15 text-emerald-200"
+                    : "text-slate-200 hover:bg-slate-800"
+                }`}
+              >
+                <div className="flex flex-col min-w-0 pr-2">
+                  <span className="truncate font-semibold text-amber-300">National Capital Region (NCR)</span>
+                  <span className="truncate text-[10px] text-slate-400">Delhi • Gurugram • Noida • Meerut • Namo Bharat</span>
+                </div>
+                {selectedCityId === "ncr" && <Check aria-hidden="true" className="h-4 w-4 shrink-0 text-emerald-400" />}
               </button>
             )}
             {options.map((city, index) => (

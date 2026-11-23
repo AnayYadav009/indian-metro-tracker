@@ -1,4 +1,5 @@
 import { test, expect } from "@playwright/test";
+import citiesJson from "../data/cities.json";
 import {
   goToCompare,
   comparePage,
@@ -35,7 +36,7 @@ test.describe("M14 Stats & Comparison Dashboard (/compare/)", () => {
     await expect(summary).toBeVisible();
 
     // Check key aggregate values
-    await expect(summary).toContainText("21");
+    await expect(summary).toContainText("23");
     await expect(summary).toContainText("Operational");
     await expect(summary).toContainText("Under Construction");
     await expect(summary).toContainText("Planned Corridor");
@@ -57,7 +58,7 @@ test.describe("M14 Stats & Comparison Dashboard (/compare/)", () => {
     await expect(cityRow(page, "agra")).toBeVisible();
 
     // Verify total row at bottom
-    await expect(table).toContainText("Total (21 Cities)");
+    await expect(table).toContainText("Total (22 Cities)");
   });
 
   test("supports sorting table by city name and operational km", async ({

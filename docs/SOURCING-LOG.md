@@ -316,4 +316,53 @@ arendramodi.in, news portals, aggregators) remain strictly barred.
     > "The total completion cost including IDC (Interest during Construction) for the project will be Rs.2,169.04 crore."
   - Recorded as planned coverage gap without geometry in `data/audit/coverage-gaps.json`; line assignment `ahm-yellow` is inferred from the existing Koteshwar Road station on the Yellow Line.
 
+---
+
+## 8. Phase 12 Sourcing Additions (2026-11-23)
+
+### 8.1 Bengaluru Metro Pink Line Reach 6 (Kalena Agrahara to Tavarekere)
+- **Authority**: Press Information Bureau (PIB) / Prime Minister's Office
+- **Official Source URL**: https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335840
+- **Host**: pib.gov.in
+- **Status / Findings**: Inaugurated on 13 November 2026 by Prime Minister Shri Narendra Modi, with commercial passenger service beginning 14 November 2026. Sourced elevated stretch length of 7.14 km with 6 operational stations (Kalena Agrahara, Hulimavu, IIMB, JP Nagar 4th Phase, Jayadeva Hospital, Tavarekere).
+
+### 8.2 Gurugram Metro Rail Limited (GMRL) Millennium City Centre to Cyber City
+- **Authority**: Press Information Bureau (PIB) / Union Cabinet
+- **Official Source URL**: https://www.pib.gov.in/PressReleasePage.aspx?PRID=1930452
+- **Host**: pib.gov.in
+- **Status / Findings**: Approved on 7 June 2023. Standard-gauge elevated corridor of 28.5 km with 27 stations forming a ring connecting Millennium City Centre to Cyber City Gurugram with a spur to Dwarka Expressway. Documented as coverage gap without geometry.
+
+### 8.3 Patna Metro Rail Project Corridors 1 and 2
+- **Authority**: Press Information Bureau (PIB) / Union Cabinet
+- **Official Source URL**: https://www.pib.gov.in/PressReleasePage.aspx?PRID=1564352
+- **Host**: pib.gov.in
+- **Status / Findings**: Approved on 13 February 2019. Corridor 1 (Danapur to Khemnichak, 17.93 km: 7.39 km elevated, 10.54 km underground) and Corridor 2 (Patna Railway Station to New ISBT, 14.56 km: 6.64 km elevated, 7.92 km underground). Balance underground sections documented as coverage gaps.
+
+### 8.4 Nagpur Metro Phase 2
+- **Authority**: Press Information Bureau (PIB) / Union Cabinet
+- **Official Source URL**: https://www.pib.gov.in/PressReleasePage.aspx?PRID=1882434
+- **Host**: pib.gov.in
+- **Status / Findings**: Approved on 11 December 2022. 43.8 km with 32 stations across 4 Reaches (Reach 1A, Reach 2B, Reach 3A, Reach 4A). Sourced facts updated in reference data.
+
+### 8.5 Lucknow Metro Phase 1B (East-West Corridor)
+- **Authority**: Press Information Bureau (PIB) / Union Cabinet
+- **Official Source URL**: https://www.pib.gov.in/PressReleasePage.aspx?PRID=2032137
+- **Host**: pib.gov.in
+- **Status / Findings**: Approved on 10 July 2024. Charbagh to Vasant Kunj (11.165 km: 4.286 km elevated, 6.879 km underground with 12 stations).
+
+### 8.6 Chennai Metro Phase 2 (Corridors 3, 4, 5)
+- **Authority**: Press Information Bureau (PIB) / Union Cabinet
+- **Official Source URL**: https://www.pib.gov.in/PressReleasePage.aspx?PRID=2061653
+- **Host**: pib.gov.in
+- **Status / Findings**: Central sector approval on 3 October 2024 for 118.9 km and 128 stations across Corridors 3, 4, and 5.
+
+### 8.7 Namo Bharat (Delhi–Ghaziabad–Meerut RRTS)
+- **Authority**: Press Information Bureau (PIB) / Prime Minister's Office
+- **Official Source URLs**:
+  - https://www.pib.gov.in/PressReleasePage.aspx?PRID=1969248 (Priority Section 17 km Sahibabad to Duhai inauguration, 20 October 2023)
+  - https://www.pib.gov.in/PressReleasePage.aspx?PRID=2012028 (Duhai to Modinagar North 17 km inauguration, 6 March 2024)
+- **Host**: pib.gov.in
+- **Status / Findings**: Sourced 82.15 km alignment, 25 total stations (16 Namo Bharat stops + 9 Meerut Metro-only stops), and 42.04 km operational section (Sahibabad to Meerut South across 8 stations).
+
+
 

@@ -40,8 +40,22 @@
           }
         }
       ],
-      "construction": [],
-      "notes": "11.7 km operational elevated network connecting Cyber City and Golf Course Road. Built by Rapid Metro Gurgaon Ltd (RMGL); operations taken over by DMRC on 2019-10-22."
+      "construction": [
+        {
+          "stretch": "Millennium City Centre to Cyber City (GMRL)",
+          "status": "planned",
+          "phase": "1",
+          "expected_completion": "2028-12",
+          "stations": 27,
+          "source": {
+            "title": "Cabinet approves Metro Connectivity from Millennium City Centre to Cyber City Gurugram",
+            "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1930452",
+            "retrieved_at": "2026-11-23",
+            "kind": "official"
+          }
+        }
+      ],
+      "notes": "11.7 km operational elevated network connecting Cyber City and Golf Course Road. Built by Rapid Metro Gurgaon Ltd (RMGL); operations taken over by DMRC on 2019-10-22. Union Cabinet approved 28.5 km GMRL extension from Millennium City Centre to Cyber City across 27 elevated stations (PIB PRID=1930452)."
     }
   ],
   "confidence": "sourced"

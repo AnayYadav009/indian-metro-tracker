@@ -101,7 +101,7 @@ export interface CoverageGap {
   line_id: string;
   stretch: string;
   segment_id?: string;
-  status: "under_construction" | "planned";
+  status: "under_construction" | "planned" | "operational";
   source_url: string;
   reason: string;
   review_date: string;
@@ -2199,7 +2199,10 @@ export function runAudit(
         const lineStations = (
           stationsByLineId.get(refLine.line_id) || []
         ).filter((s) => s.properties.status === "operational");
-        if (lineStations.length !== refLine.operational_stations) {
+        const candidateMatches =
+          lineStations.length === refLine.operational_stations ||
+          Boolean(refLine.operational_stations_candidates?.includes(lineStations.length));
+        if (!candidateMatches) {
           const isUnverified = refLine.confidence === "unverified";
           const sev: Severity = isUnverified ? "warn" : "error";
           const label = isUnverified ? " (unverified reference)" : "";

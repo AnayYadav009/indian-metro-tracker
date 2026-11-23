@@ -123,8 +123,10 @@
       "inaugurated_on": "2026-10-11",
       "expected_completion": null,
       "color": "#FFD100",
+      "stations_count": 17,
       "stations_not_published": false,
       "references": [
+        "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2061653",
         "https://chennaimetrorail.org/wp-content/uploads/2026/10/Fare-Table.pdf"
       ]
     },
@@ -488,6 +490,84 @@
       "layout": "elevated",
       "references": [],
       "last_verified": null
+    },
+    "Alapakkam": {
+      "line_ids": [
+        "che-corridor-4"
+      ],
+      "phase": "2",
+      "status": "construction",
+      "layout": "elevated",
+      "expected_completion": "2027",
+      "references": [
+        "https://chennaimetrorail.org/wp-content/uploads/2026/10/Fare-Table.pdf"
+      ],
+      "last_verified": "2026-11-23"
+    },
+    "Karambakkam": {
+      "line_ids": [
+        "che-corridor-4"
+      ],
+      "phase": "2",
+      "status": "construction",
+      "layout": "elevated",
+      "expected_completion": "2027",
+      "references": [
+        "https://chennaimetrorail.org/wp-content/uploads/2026/10/Fare-Table.pdf"
+      ],
+      "last_verified": "2026-11-23"
+    },
+    "Valasaravakkam": {
+      "line_ids": [
+        "che-corridor-4"
+      ],
+      "phase": "2",
+      "status": "construction",
+      "layout": "elevated",
+      "expected_completion": "2027",
+      "references": [
+        "https://chennaimetrorail.org/wp-content/uploads/2026/10/Fare-Table.pdf"
+      ],
+      "last_verified": "2026-11-23"
+    },
+    "Alwarthirunagar": {
+      "line_ids": [
+        "che-corridor-4"
+      ],
+      "phase": "2",
+      "status": "construction",
+      "layout": "elevated",
+      "expected_completion": "2027",
+      "references": [
+        "https://chennaimetrorail.org/wp-content/uploads/2026/10/Fare-Table.pdf"
+      ],
+      "last_verified": "2026-11-23"
+    },
+    "Virugambakkam South": {
+      "line_ids": [
+        "che-corridor-4"
+      ],
+      "phase": "2",
+      "status": "construction",
+      "layout": "elevated",
+      "expected_completion": "2027",
+      "references": [
+        "https://chennaimetrorail.org/wp-content/uploads/2026/10/Fare-Table.pdf"
+      ],
+      "last_verified": "2026-11-23"
+    },
+    "Saligramam": {
+      "line_ids": [
+        "che-corridor-4"
+      ],
+      "phase": "2",
+      "status": "construction",
+      "layout": "elevated",
+      "expected_completion": "2027",
+      "references": [
+        "https://chennaimetrorail.org/wp-content/uploads/2026/10/Fare-Table.pdf"
+      ],
+      "last_verified": "2026-11-23"
     }
   },
   "out_of_scope_station_ids": [
@@ -504,12 +584,6 @@
     "Madhavaram Depot",
     "Royapettah Metro",
     "Kodambakkam Powerhouse",
-    "Alwarthirunagar",
-    "Valasaravakkam",
-    "Karambakkam",
-    "Alapakkam",
-    "Virugambakkam South",
-    "Saligramam",
     "Virugambakkam North",
     "Natesan Nagar",
     "Koyambedu Market",

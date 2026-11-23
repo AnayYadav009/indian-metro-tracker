@@ -12,7 +12,6 @@ import { generateCityMetadata, generateCityJsonLd } from "@/lib/city-seo";
 import { CityDataNotice } from "@/components/city/city-data-notice";
 import { CityLinesTable } from "@/components/city/city-lines-table";
 import { ReportIssueButton } from "@/components/panels/report-issue-button";
-import { AppHeader } from "@/components/layout/app-header";
 
 interface CityPageProps {
   params: Promise<{ id: string }>;
@@ -56,7 +55,7 @@ export default async function CityPage({ params }: CityPageProps) {
       )}
 
       {/* Top Header */}
-      <AppHeader variant="page">
+      <header className="sticky top-0 z-20 border-b border-slate-800 bg-slate-900/90 backdrop-blur px-4 py-3 md:px-8">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <Link
@@ -85,14 +84,14 @@ export default async function CityPage({ params }: CityPageProps) {
             <Link
               href="/compare"
               className="inline-flex items-center gap-1.5 rounded-lg border border-slate-700 bg-slate-800/80 px-3 py-1.5 text-xs font-medium text-slate-200 transition-colors hover:border-slate-500 hover:bg-slate-700 hover:text-white"
-              title={`Compare all ${getAllCities().length} Indian metro networks`}
+              title="Compare all 21 Indian metro networks"
             >
               <BarChart3 className="h-3.5 w-3.5 text-emerald-400" />
               <span className="hidden sm:inline">Compare</span>
             </Link>
           </div>
         </div>
-      </AppHeader>
+      </header>
 
       {/* Main Content Container */}
       <main className="flex-1 px-4 py-6 md:px-8 md:py-10">
@@ -218,7 +217,7 @@ export default async function CityPage({ params }: CityPageProps) {
               </div>
               <div className="text-[11px] text-slate-400">
                 {hasAtLeast80PercentOpened
-                  ? "≥80% of stations have opening dates"
+                  ? "≥80% stations dated"
                   : openedStationsCount > 0
                   ? "<80% stations dated"
                   : "no dates recorded"}

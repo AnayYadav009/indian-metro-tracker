@@ -1,6 +1,7 @@
 import type { CityRoutability, LineRoutability } from "./types";
 import type { City, Line, SegmentFeatureCollection, StationFeatureCollection } from "@/types/metro";
 import { getMetroData } from "@/lib/data";
+import { getRegion, getRegionMemberCityIds, isRegionId } from "@/lib/regions";
 
 /**
  * Audit-derived rule violations for lines that fail geometric projection,
@@ -51,7 +52,10 @@ export function getCityRoutability(
   }
 ): CityRoutability {
   const data = customData ?? getMetroData();
-  const city = data.cities.find((c: City) => c.id === cityId);
+  const region = getRegion(cityId);
+  const city = region
+    ? ({ id: region.id, name: region.name } as City)
+    : data.cities.find((c: City) => c.id === cityId);
 
   if (!city) {
     return {
@@ -63,10 +67,12 @@ export function getCityRoutability(
     };
   }
 
-  // 1. Check operational stations in this city
+  const memberIds = isRegionId(cityId) ? getRegionMemberCityIds(cityId) : [cityId];
+
+  // 1. Check operational stations in this city/region
   const operationalStations = data.stations.features.filter(
     (st: any) =>
-      st.properties.city_id === cityId && st.properties.status === "operational"
+      memberIds.includes(st.properties.city_id) && st.properties.status === "operational"
   );
 
   if (operationalStations.length === 0) {
@@ -89,10 +95,10 @@ export function getCityRoutability(
     };
   }
 
-  // 2. Identify all lines that have operational segments in this city
+  // 2. Identify all lines that have operational segments in this city/region
   const operationalSegments = data.segments.features.filter(
     (seg: any) =>
-      seg.properties.city_id === cityId &&
+      memberIds.includes(seg.properties.city_id) &&
       seg.properties.status === "operational"
   );
 

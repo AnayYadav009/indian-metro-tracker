@@ -44,8 +44,22 @@
           }
         }
       ],
-      "construction": [],
-      "notes": "Kanpur Metro Orange Line (Line 1) operational section spans 14.65 km with 14 stations (9 elevated, 5 underground) from IIT Kanpur to Kanpur Central. Operated by Uttar Pradesh Metro Rail Corporation (UPMRC)."
+      "construction": [
+        {
+          "stretch": "Kanpur Central to Naubasta",
+          "phase": "1",
+          "status": "under_construction",
+          "expected_completion": "2026-12",
+          "stations": 5,
+          "source": {
+            "title": "Boost to Urban Public Transport connectivity in Kanpur",
+            "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1566737",
+            "retrieved_at": "2026-11-23",
+            "kind": "official"
+          }
+        }
+      ],
+      "notes": "Kanpur Metro Orange Line (Line 1) operational section spans 14.65 km with 14 stations (9 elevated, 5 underground) from IIT Kanpur to Kanpur Central. Balance section from Kanpur Central to Naubasta (8.65 km, 5 stations) is under active construction. Corridor 2 (Agriculture University to Barra-8, 8.6 km, 8 stations) approved per PIB PRID=1566737 is tracked as an under-construction coverage gap."
     }
   ]
 }

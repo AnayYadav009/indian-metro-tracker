@@ -20,6 +20,7 @@ import noidaRef from "@/data/reference/noida.json";
 import patnaRef from "@/data/reference/patna.json";
 import puneRef from "@/data/reference/pune.json";
 import suratRef from "@/data/reference/surat.json";
+import namoBharatRef from "@/data/reference/namo-bharat.json";
 
 export interface ReferenceLine {
   line_id?: string;
@@ -60,4 +61,5 @@ export const REFERENCE_MAP: Record<string, ReferenceFile> = {
   patna: patnaRef as ReferenceFile,
   pune: puneRef as ReferenceFile,
   surat: suratRef as ReferenceFile,
+  "namo-bharat": namoBharatRef as ReferenceFile,
 };

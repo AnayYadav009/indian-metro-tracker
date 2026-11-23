@@ -1,0 +1,85 @@
+{
+  "city_id": "namo-bharat",
+  "compiled_on": "2026-11-22",
+  "lines": [
+    {
+      "line_id": "namo-delhi-meerut",
+      "official_name": "Delhi–Meerut Regional Rapid Transit System",
+      "operator": "NCRTC",
+      "topology": "linear",
+      "operational_stations": 14,
+      "operational_length_km": 78.2,
+      "official_length_km": 82.15,
+      "terminals": [
+        "Sarai Kale Khan",
+        "Modipuram"
+      ],
+      "status": "operational",
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "Priority Section (Sahibabad to Duhai)",
+          "phase": null,
+          "opened_on": "2023-10-20",
+          "stations_added": 4,
+          "source": {
+            "title": "PM inaugurates Priority Section of Delhi-Ghaziabad-Meerut RRTS Corridor",
+            "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1969248",
+            "retrieved_at": "2026-11-22",
+            "kind": "official"
+          }
+        },
+        {
+          "stage": "Section 2 (Duhai to Modinagar North)",
+          "phase": null,
+          "opened_on": "2024-03-06",
+          "stations_added": 3,
+          "source": {
+            "title": "PM inaugurates 17 km stretch from Duhai to Modinagar North",
+            "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2012028",
+            "retrieved_at": "2026-11-22",
+            "kind": "official"
+          }
+        },
+        {
+          "stage": "Section 3 (Modinagar North to Meerut South)",
+          "phase": null,
+          "opened_on": "2024-08-18",
+          "stations_added": 1,
+          "source": {
+            "title": "One year of Namo Bharat operations: Meerut South RRTS Station operationalized on August 18, 2024",
+            "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2066736",
+            "retrieved_at": "2026-11-23",
+            "kind": "official"
+          }
+        },
+        {
+          "stage": "Delhi Section (Sahibabad to New Ashok Nagar with Anand Vihar)",
+          "phase": null,
+          "opened_on": "2025-01-05",
+          "stations_added": 2,
+          "source": {
+            "title": "PM inaugurates 13 km Sahibabad to New Ashok Nagar section of Delhi-Ghaziabad-Meerut RRTS Corridor",
+            "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2090307",
+            "retrieved_at": "2026-11-23",
+            "kind": "official"
+          }
+        },
+        {
+          "stage": "Full Corridor Completion (Sarai Kale Khan to New Ashok Nagar & Meerut South to Modipuram)",
+          "phase": null,
+          "opened_on": "2026-02-22",
+          "stations_added": 4,
+          "source": {
+            "title": "PM flags off Meerut Metro and Namo Bharat Train at Shatabdi Nagar Station and dedicates full corridor",
+            "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2230858",
+            "retrieved_at": "2026-11-23",
+            "kind": "official"
+          }
+        }
+      ],
+      "construction": [],
+      "notes": "82.15 km semi-high-speed regional rapid transit corridor connecting Sarai Kale Khan in Delhi to Modipuram in Meerut via Ghaziabad across 14 operational stations. The official sanctioned project length of 82.15 km includes stabling yards and depot spurs (Duhai Depot branch and Modipuram Depot connection tracks); the 2D passenger mainline surveyed in OSM measures 78.23 km. Meerut Metro operates local services over 21.25 km across 12 revenue passenger stations on the shared infrastructure between Meerut South and Modipuram (the 13th station cited in press is the at-grade Modipuram Depot station per NCRTC official map https://ncrtc.in/interactive-map/)."
+    }
+  ]
+}

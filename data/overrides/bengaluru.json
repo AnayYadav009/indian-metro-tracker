@@ -2545,18 +2545,19 @@
     {
       "segment_id": "blr-pink-seg-01",
       "line_id": "blr-pink",
-      "line_name": "Pink Line (Kalena Agrahara - Nagawara)",
+      "line_name": "Pink Line (Kalena Agrahara - Tavarekere)",
       "phase": "2",
-      "status": "construction",
+      "status": "operational",
       "gauge": "standard",
-      "inaugurated_on": null,
+      "inaugurated_on": "2026-11-14",
       "expected_completion": null,
-      "completion_unconfirmed": true,
+      "completion_unconfirmed": false,
       "color": "#FF69B4",
       "references": [
+        "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335840",
         "https://english.bmrc.co.in/FileUploads/0091bf_Phase2.pdf"
       ],
-      "last_verified": "2026-10-15",
+      "last_verified": "2026-11-23",
       "coordinates": [
         [
           77.592014,
@@ -2958,6 +2959,31 @@
           77.600479,
           12.928243
         ],
+        [
+          77.600498,
+          12.92909
+        ]
+      ],
+      "city_id": "bengaluru",
+      "geometry_quality": "exact",
+      "opened_on": "2026-11-14"
+    },
+    {
+      "segment_id": "blr-pink-seg-02",
+      "line_id": "blr-pink",
+      "line_name": "Pink Line (Tavarekere - Nagawara)",
+      "phase": "2",
+      "status": "construction",
+      "gauge": "standard",
+      "inaugurated_on": null,
+      "expected_completion": "2027-03",
+      "completion_unconfirmed": false,
+      "color": "#FF69B4",
+      "references": [
+        "https://english.bmrc.co.in/FileUploads/0091bf_Phase2.pdf"
+      ],
+      "last_verified": "2026-11-23",
+      "coordinates": [
         [
           77.600498,
           12.92909
@@ -3765,56 +3791,64 @@
         "blr-pink"
       ],
       "phase": "2",
-      "status": "construction",
+      "status": "operational",
       "layout": "elevated",
-      "expected_completion": "2026-11",
+      "expected_completion": null,
       "completion_unconfirmed": false,
       "references": [
-        "https://www.thehansindia.com/karnataka/bengaluru-pink-line-metro-gets-statutory-safety-clearance-planned-inauguration-in-nov-1017124",
-        "https://swarajyamag.com/infrastructure/bengaluru-namma-metros-pink-line-set-for-cmrs-inspection-key-elevated-stretch-nears-completion"
-      ]
+        "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335840",
+        "https://english.bmrc.co.in/FileUploads/0091bf_Phase2.pdf"
+      ],
+      "opened_on": "2026-11-14",
+      "last_verified": "2026-11-23"
     },
     "Hulimavu": {
       "line_ids": [
         "blr-pink"
       ],
       "phase": "2",
-      "status": "construction",
+      "status": "operational",
       "layout": "elevated",
-      "expected_completion": "2026-11",
+      "expected_completion": null,
       "completion_unconfirmed": false,
       "references": [
-        "https://www.thehansindia.com/karnataka/bengaluru-pink-line-metro-gets-statutory-safety-clearance-planned-inauguration-in-nov-1017124",
-        "https://swarajyamag.com/infrastructure/bengaluru-namma-metros-pink-line-set-for-cmrs-inspection-key-elevated-stretch-nears-completion"
-      ]
+        "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335840",
+        "https://english.bmrc.co.in/FileUploads/0091bf_Phase2.pdf"
+      ],
+      "opened_on": "2026-11-14",
+      "last_verified": "2026-11-23"
     },
     "IIMB": {
       "line_ids": [
         "blr-pink"
       ],
       "phase": "2",
-      "status": "construction",
+      "status": "operational",
       "layout": "elevated",
-      "expected_completion": "2026-11",
+      "expected_completion": null,
       "completion_unconfirmed": false,
       "references": [
-        "https://www.thehansindia.com/karnataka/bengaluru-pink-line-metro-gets-statutory-safety-clearance-planned-inauguration-in-nov-1017124",
-        "https://swarajyamag.com/infrastructure/bengaluru-namma-metros-pink-line-set-for-cmrs-inspection-key-elevated-stretch-nears-completion"
-      ]
+        "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335840",
+        "https://english.bmrc.co.in/FileUploads/0091bf_Phase2.pdf"
+      ],
+      "opened_on": "2026-11-14",
+      "last_verified": "2026-11-23"
     },
     "JP Nagar 4th Phase": {
       "line_ids": [
         "blr-pink"
       ],
       "phase": "2",
-      "status": "construction",
+      "status": "operational",
       "layout": "elevated",
-      "expected_completion": "2026-11",
+      "expected_completion": null,
       "completion_unconfirmed": false,
       "references": [
-        "https://www.thehansindia.com/karnataka/bengaluru-pink-line-metro-gets-statutory-safety-clearance-planned-inauguration-in-nov-1017124",
-        "https://swarajyamag.com/infrastructure/bengaluru-namma-metros-pink-line-set-for-cmrs-inspection-key-elevated-stretch-nears-completion"
-      ]
+        "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335840",
+        "https://english.bmrc.co.in/FileUploads/0091bf_Phase2.pdf"
+      ],
+      "opened_on": "2026-11-14",
+      "last_verified": "2026-11-23"
     },
     "Jayadeva Hospital": {
       "line_ids": [
@@ -3826,23 +3860,26 @@
       "is_interchange": true,
       "layout": "elevated",
       "references": [
-        "https://www.thehansindia.com/karnataka/bengaluru-pink-line-metro-gets-statutory-safety-clearance-planned-inauguration-in-nov-1017124",
+        "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335840",
         "https://english.bmrc.co.in/FileUploads/0091bf_Phase2.pdf"
-      ]
+      ],
+      "last_verified": "2026-11-23"
     },
     "Tavarekere": {
       "line_ids": [
         "blr-pink"
       ],
       "phase": "2",
-      "status": "construction",
+      "status": "operational",
       "layout": "elevated",
-      "expected_completion": "2026-11",
+      "expected_completion": null,
       "completion_unconfirmed": false,
       "references": [
-        "https://www.thehansindia.com/karnataka/bengaluru-pink-line-metro-gets-statutory-safety-clearance-planned-inauguration-in-nov-1017124",
-        "https://swarajyamag.com/infrastructure/bengaluru-namma-metros-pink-line-set-for-cmrs-inspection-key-elevated-stretch-nears-completion"
-      ]
+        "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335840",
+        "https://english.bmrc.co.in/FileUploads/0091bf_Phase2.pdf"
+      ],
+      "opened_on": "2026-11-14",
+      "last_verified": "2026-11-23"
     },
     "Nagawara": {
       "line_ids": [
@@ -3852,10 +3889,11 @@
       "status": "construction",
       "layout": "underground",
       "expected_completion": "2027-03",
-      "completion_unconfirmed": true,
+      "completion_unconfirmed": false,
       "references": [
         "https://english.bmrc.co.in/FileUploads/0091bf_Phase2.pdf"
-      ]
+      ],
+      "last_verified": "2026-11-23"
     },
     "KIAL Terminals": {
       "line_ids": [
@@ -3914,7 +3952,7 @@
         12.866626
       ],
       "lineRefs": [],
-      "status": "construction"
+      "status": "operational"
     },
     {
       "osmId": 9906325549,
@@ -3924,7 +3962,7 @@
         12.880833
       ],
       "lineRefs": [],
-      "status": "construction"
+      "status": "operational"
     },
     {
       "osmId": 9906325550,
@@ -3934,7 +3972,7 @@
         12.895724
       ],
       "lineRefs": [],
-      "status": "construction"
+      "status": "operational"
     },
     {
       "osmId": 9906325547,
@@ -3944,7 +3982,7 @@
         12.909848
       ],
       "lineRefs": [],
-      "status": "construction"
+      "status": "operational"
     },
     {
       "osmId": 9906325542,
@@ -3954,7 +3992,7 @@
         12.929498
       ],
       "lineRefs": [],
-      "status": "construction"
+      "status": "operational"
     },
     {
       "osmId": 99990502,

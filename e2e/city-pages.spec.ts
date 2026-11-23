@@ -129,7 +129,7 @@ test.describe("M17 City Static Pages & SEO", () => {
     const crawlableNav = crawlableCityDirectory(page);
     await expect(crawlableNav).toBeAttached();
     const cityLinks = crawlableNav.locator("a");
-    await expect(cityLinks).toHaveCount(21);
+    await expect(cityLinks).toHaveCount(citiesJson.length);
 
     // Verify all 21 cities are linked
     for (const city of citiesJson) {

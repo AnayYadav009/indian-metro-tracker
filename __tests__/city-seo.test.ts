@@ -27,7 +27,7 @@ describe("M17 City SEO & Metadata Generation", () => {
     const canonicals = new Set<string>();
     const titles = new Set<string>();
 
-    for (const city of citiesJson) {
+    for (const city of getAllCities()) {
       const meta = generateCityMetadata(city.id);
       expect(meta.title).toContain(city.name);
       expect(meta.title).toContain("Metro Network");
@@ -81,7 +81,7 @@ describe("M17 City SEO & Metadata Generation", () => {
   });
 
   it("generates valid schema.org JSON-LD using only verified properties without bbox midpoint coordinates", () => {
-    for (const city of citiesJson) {
+    for (const city of getAllCities()) {
       const jsonLd = generateCityJsonLd(city.id);
       expect(jsonLd).not.toBeNull();
       expect(jsonLd?.["@context"]).toBe("https://schema.org");

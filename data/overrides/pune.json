@@ -92,10 +92,10 @@
       "phase": "1",
       "status": "operational",
       "gauge": "standard",
-      "inaugurated_on": "2026-11-03",
+      "inaugurated_on": "2026-11-04",
       "expected_completion": null,
       "color": "#FF69B4",
-      "stations_count": 13,
+      "stations_count": 19,
       "stations_not_published": false,
       "references": [
         "https://www.pmrda.gov.in/en/pune-metro-line-3/",
@@ -1953,7 +1953,6 @@
     "Yervada Metro Station": "Yerwada",
     "Pune Railway Station": "Pune Railway Station",
     "Pune Railway": "Pune Railway Station",
-    "Doehler India": "Maan",
     "Wakad Chowk metro Station": "Wakad Chowk",
     "Savitribal Phule Pune University": "Savitribai Phule Pune University"
   },
@@ -2247,10 +2246,113 @@
       "references": [
         "https://www.pmrda.gov.in/en/pune-metro-line-3/"
       ]
+    },
+    "High Street": {
+      "line_ids": [
+        "pun-line-3"
+      ],
+      "phase": "1",
+      "status": "construction",
+      "expected_completion": "2026-12",
+      "layout": "elevated",
+      "references": [
+        "https://www.pmrda.gov.in/en/pune-metro-line-3/"
+      ],
+      "last_verified": "2026-11-23"
+    },
+    "Balewadi Phata": {
+      "line_ids": [
+        "pun-line-3"
+      ],
+      "phase": "1",
+      "status": "construction",
+      "expected_completion": "2026-12",
+      "layout": "elevated",
+      "references": [
+        "https://www.pmrda.gov.in/en/pune-metro-line-3/"
+      ],
+      "last_verified": "2026-11-23"
+    },
+    "Baner Gaon": {
+      "line_ids": [
+        "pun-line-3"
+      ],
+      "phase": "1",
+      "status": "construction",
+      "expected_completion": "2027-01",
+      "layout": "elevated",
+      "references": [
+        "https://www.pmrda.gov.in/en/pune-metro-line-3/"
+      ],
+      "last_verified": "2026-11-23"
+    },
+    "Baner": {
+      "line_ids": [
+        "pun-line-3"
+      ],
+      "phase": "1",
+      "status": "construction",
+      "expected_completion": "2027-01",
+      "layout": "elevated",
+      "references": [
+        "https://www.pmrda.gov.in/en/pune-metro-line-3/"
+      ],
+      "last_verified": "2026-11-23"
+    },
+    "RBI": {
+      "line_ids": [
+        "pun-line-3"
+      ],
+      "phase": "1",
+      "status": "construction",
+      "expected_completion": "2027-01",
+      "layout": "elevated",
+      "references": [
+        "https://www.pmrda.gov.in/en/pune-metro-line-3/"
+      ],
+      "last_verified": "2026-11-23"
+    },
+    "Doehler India": {
+      "line_ids": [
+        "pun-line-3"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2026-11-04",
+      "layout": "elevated",
+      "references": [
+        "https://www.pmrda.gov.in/en/pune-metro-line-3/"
+      ],
+      "last_verified": "2026-11-23"
+    },
+    "Shivajinagar": {
+      "line_ids": [
+        "pun-line-3"
+      ],
+      "phase": "1",
+      "status": "construction",
+      "expected_completion": "2027-01",
+      "layout": "elevated",
+      "references": [
+        "https://www.pmrda.gov.in/en/pune-metro-line-3/"
+      ],
+      "last_verified": "2026-11-23"
+    },
+    "Line 3 Shivajinagar": {
+      "line_ids": [
+        "pun-line-3"
+      ],
+      "phase": "1",
+      "status": "construction",
+      "expected_completion": "2027-01",
+      "layout": "elevated",
+      "references": [
+        "https://www.pmrda.gov.in/en/pune-metro-line-3/"
+      ],
+      "last_verified": "2026-11-23"
     }
   },
   "out_of_scope_station_ids": [
-    "Line 3 Shivajinagar",
     "pun-kothrud",
     "pun-kothrud-bus-depot",
     "pun-hadapsar",
@@ -2274,19 +2376,13 @@
     "pun-fatima-nagar",
     "pun-ramtekadi",
     "pun-balewadi-stadium",
-    "pun-doehler-india",
     "pun-infosys",
     "pun-agriculture-college",
     "pun-wipro",
-    "pun-rbi",
     "pun-wakad-chowk",
     "pun-savitribal-phule-pune-university",
     "pun-yashada",
     "pun-krushi-anusandhan",
-    "pun-baner",
-    "pun-baner-gaon",
-    "pun-balewadi-phata",
-    "pun-high-street",
     "pun-nicmar",
     "pun-jakat-naka",
     "pun-hinjawadi",
@@ -2312,13 +2408,8 @@
     "Race Course",
     "Fatima Nagar",
     "Ramtekadi",
-    "RBI",
-    "Baner",
-    "Baner Gaon",
-    "Balewadi Phata",
-    "High Street",
-    "Shivaji Nagar Railway Station",
     "Shivaji Nagar Railway",
+    "Shivaji Nagar Railway Station",
     "pune-anand-nagar"
   ],
   "out_of_scope_line_ids": [],

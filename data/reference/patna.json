@@ -50,9 +50,22 @@
           "stations": 7,
           "notes": "7.9 km underground stretch with 7 stations (Patna Junction to Malahi Pakri ramp). 7.4 km tunneling completed with multiple TBM breakthroughs; civil box structures and track-laying underway.",
           "source": {
-            "title": "Patna Metro Corridor 2 underground civil and tunneling progress",
-            "url": "https://patnametrorail.com",
-            "retrieved_at": "2026-10-16",
+            "title": "Cabinet approves Patna Metro Rail Project",
+            "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1564352",
+            "retrieved_at": "2026-11-23",
+            "kind": "official"
+          }
+        },
+        {
+          "stretch": "Corridor 1 (Danapur - Mithapur - Khemnichak)",
+          "phase": "1",
+          "expected_completion": "2027-12",
+          "stations": 14,
+          "notes": "16.94 km East-West corridor connecting Danapur to Khemnichak with 14 stations.",
+          "source": {
+            "title": "Cabinet approves Patna Metro Rail Project",
+            "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1564352",
+            "retrieved_at": "2026-11-23",
             "kind": "official"
           }
         }

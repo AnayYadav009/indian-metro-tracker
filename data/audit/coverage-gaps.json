@@ -14,8 +14,8 @@
     "stretch": "Madhavaram - SIPCOT",
     "segment_id": "che-corridor-3-seg-01",
     "status": "under_construction",
-    "source_url": "https://chennaimetrorail.org/latest-updates/",
-    "reason": "CMRL confirms active Corridor 3 works, but the declared OSM relation still contains only inactive way members and the refreshed cache has no sourced SIPCOT 2 terminal station coordinate for a schematic segment.",
+    "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2061653",
+    "reason": "Union Cabinet approved Phase-II Corridor 3 (Madhavaram to SIPCOT, 45.8 km, 50 stations; PIB PRID=2061653); active civil works in progress, surveyed way and station coordinates pending in OSM cache.",
     "review_date": "2027-01-15"
   },
   {
@@ -23,18 +23,17 @@
     "line_id": "che-corridor-4",
     "stretch": "Vadapalani - Light House",
     "status": "under_construction",
-    "source_url": "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/",
-    "reason": "CMRL Phase II Corridor 4 eastern section (Vadapalani to Light House) is under active construction; alignment geometry not yet published in OSM cache.",
+    "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2061653",
+    "reason": "Union Cabinet approved Phase-II Corridor 4 eastern section (Vadapalani to Light House, 19 stations; PIB PRID=2061653); active underground/elevated construction, surveyed coordinates pending in OSM cache.",
     "review_date": "2027-01-15"
   },
   {
     "city_id": "noida",
     "line_id": "noi-aqua",
     "stretch": "Sector 142 to Botanical Garden",
-    "segment_id": "noi-aqua-seg-02",
     "status": "planned",
-    "source_url": "https://nmrcnoida.com/Projects/Upcoming-projects",
-    "reason": "NMRC lists this approved 11.56 km, 8-station corridor as an upcoming project. OSM way 538930428 is tagged railway=proposed and usage=branch, so it is not part of the operational Aqua Line and its partial proposed geometry is not compiled.",
+    "source_url": "https://www.pmindia.gov.in/en/news_updates/cabinet-approves-extension-corridor-from-noida-sector-142-to-botanical-garden-noida-for-a-length-of-11-56-km-with-8-stations/",
+    "reason": "Union Cabinet approved 11.56 km, 8-station extension from Sector 142 to Botanical Garden on 2026-11-20 (PMIndia); surveyed alignment geometry and station nodes are not yet mapped in OpenStreetMap.",
     "review_date": "2027-01-15"
   },
   {
@@ -79,8 +78,8 @@
     "line_id": "nag-aqua",
     "stretch": "Lokmanya Nagar to Hingna (Reach 3A extension)",
     "status": "under_construction",
-    "source_url": "https://themetrorailguy.com/nagpur-metro-phase-2-information-route-maps-project-updates/",
-    "reason": "Maha Metro Phase 2 Reach 3A civil packages are awarded, but alignment geometry and station coordinates are not yet available in the compiled dataset.",
+    "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1882434",
+    "reason": "PM laid foundation stone of Nagpur Metro Phase II alongside Phase I dedication (PIB PRID=1882434); 43.8 km / 32 stations breakdown sourced from official project profile (https://www.metrorailnagpur.com/nagpur-metro-project/project-profile); civil packages awarded, alignment geometry and station coordinates are not yet published in OSM.",
     "review_date": "2027-01-15"
   },
   {
@@ -88,8 +87,8 @@
     "line_id": "nag-aqua",
     "stretch": "Prajapati Nagar to Transport Nagar (Reach 4A extension)",
     "status": "under_construction",
-    "source_url": "https://themetrorailguy.com/nagpur-metro-phase-2-information-route-maps-project-updates/",
-    "reason": "Maha Metro Phase 2 Reach 4A civil packages are awarded, but alignment geometry and station coordinates are not yet available in the compiled dataset.",
+    "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1882434",
+    "reason": "PM laid foundation stone of Nagpur Metro Phase II alongside Phase I dedication (PIB PRID=1882434); 43.8 km / 32 stations breakdown sourced from official project profile (https://www.metrorailnagpur.com/nagpur-metro-project/project-profile); civil packages awarded, alignment geometry and station coordinates are not yet published in OSM.",
     "review_date": "2027-01-15"
   },
   {
@@ -97,8 +96,8 @@
     "line_id": "nag-orange",
     "stretch": "Automotive Square to Kanhan River (Reach 2B extension)",
     "status": "under_construction",
-    "source_url": "https://themetrorailguy.com/nagpur-metro-phase-2-information-route-maps-project-updates/",
-    "reason": "Maha Metro Phase 2 Reach 2B civil packages are awarded, but alignment geometry and station coordinates are not yet available in the compiled dataset.",
+    "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1882434",
+    "reason": "PM laid foundation stone of Nagpur Metro Phase II alongside Phase I dedication (PIB PRID=1882434); 43.8 km / 32 stations breakdown sourced from official project profile (https://www.metrorailnagpur.com/nagpur-metro-project/project-profile); civil packages awarded, alignment geometry and station coordinates are not yet published in OSM.",
     "review_date": "2027-01-15"
   },
   {
@@ -106,8 +105,8 @@
     "line_id": "nag-orange",
     "stretch": "Khapri to Butibori MIDC ESR (Reach 1A extension)",
     "status": "under_construction",
-    "source_url": "https://themetrorailguy.com/nagpur-metro-phase-2-information-route-maps-project-updates/",
-    "reason": "Maha Metro Phase 2 Reach 1A civil packages are awarded, but alignment geometry and station coordinates are not yet available in the compiled dataset.",
+    "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1882434",
+    "reason": "PM laid foundation stone of Nagpur Metro Phase II alongside Phase I dedication (PIB PRID=1882434); 43.8 km / 32 stations breakdown sourced from official project profile (https://www.metrorailnagpur.com/nagpur-metro-project/project-profile); civil packages awarded, alignment geometry and station coordinates are not yet published in OSM.",
     "review_date": "2027-01-15"
   },
   {
@@ -190,6 +189,114 @@
     "status": "planned",
     "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2271058",
     "reason": "Union Cabinet approved Ahmedabad Metro Phase 2A on 10 June 2026, comprising a 6.032 km corridor with 5 stations (Ashram Road, Koteshwar Prachin Mandir, Sabarmati River, Sardar Nagar, Airport) at ₹2,169.04 crore; line assignment ahm-yellow inferred from existing Koteshwar Road station; surveyed alignment geometry not yet published in OSM.",
+    "review_date": "2027-01-15"
+  },
+  {
+    "city_id": "pune",
+    "line_id": "pun-line-3",
+    "stretch": "Maan - Hinjawadi (Maan MIDC Circle Phase II station)",
+    "status": "operational",
+    "source_url": "https://www.pmrda.gov.in/en/pune-metro-line-3/",
+    "reason": "operational/unsurveyed: PMRDA Line 3 station opened 2026-11-04 (station #2, Embassy Quadron); surveyed node is not yet published in OpenStreetMap.",
+    "review_date": "2027-01-15"
+  },
+  {
+    "city_id": "pune",
+    "line_id": "pun-line-3",
+    "stretch": "Hinjawadi (Padmabhushan Chowk station)",
+    "status": "operational",
+    "source_url": "https://www.pmrda.gov.in/en/pune-metro-line-3/",
+    "reason": "operational/unsurveyed: PMRDA Line 3 station opened 2026-11-04 (station #6, Pall India); surveyed node is not yet published in OpenStreetMap.",
+    "review_date": "2027-01-15"
+  },
+  {
+    "city_id": "pune",
+    "line_id": "pun-line-3",
+    "stretch": "Hinjawadi (Chhatrapati Shivaji Chowk station)",
+    "status": "operational",
+    "source_url": "https://www.pmrda.gov.in/en/pune-metro-line-3/",
+    "reason": "operational/unsurveyed: PMRDA Line 3 station opened 2026-11-04 (station #7, Hinjawadi Shivaji Chowk); surveyed node is not yet published in OpenStreetMap.",
+    "review_date": "2027-01-15"
+  },
+  {
+    "city_id": "patna",
+    "line_id": "pat-blue",
+    "stretch": "Corridor 2 Underground (Patna Junction - Malahi Pakri)",
+    "status": "under_construction",
+    "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1564352",
+    "reason": "7.9 km underground section of Corridor 2 (Patna Junction to Malahi Pakri ramp) with 7 stations is under active construction by PMRC; alignment geometry and underground station nodes are not yet published in the OpenStreetMap cache.",
+    "review_date": "2027-01-15"
+  },
+  {
+    "city_id": "gurugram",
+    "line_id": "gur-rapid",
+    "stretch": "Millennium City Centre to Cyber City (GMRL)",
+    "status": "planned",
+    "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1930452",
+    "reason": "Union Cabinet approved 28.5 km, 27-station Gurugram Metro extension from Millennium City Centre to Cyber City on 7 June 2023 (GMRL); surveyed alignment geometry and station nodes are not yet mapped in OpenStreetMap.",
+    "review_date": "2027-01-15"
+  },
+  {
+    "city_id": "patna",
+    "line_id": "pat-blue",
+    "stretch": "Corridor 1 (Danapur - Mithapur - Khemnichak)",
+    "status": "under_construction",
+    "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1564352",
+    "reason": "16.94 km Corridor 1 of Patna Metro Rail Project with 14 stations is under active construction by PMRC; alignment geometry and station coordinates are not yet published in the OpenStreetMap cache.",
+    "review_date": "2027-01-15"
+  },
+  {
+    "city_id": "lucknow",
+    "line_id": "lko-blue",
+    "stretch": "Charbagh to Vasant Kunj (Phase 1B)",
+    "status": "planned",
+    "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2032137",
+    "reason": "UP State Cabinet and PM GatiShakti NPG approved 11.165 km, 12-station East-West Corridor (Charbagh to Vasant Kunj, ₹5,801 crore; PIB PRID=2032137); physical construction has not started and alignment geometry is not in OSM.",
+    "review_date": "2027-01-15"
+  },
+  {
+    "city_id": "kanpur",
+    "line_id": "knp-orange",
+    "stretch": "Kanpur Central to Naubasta",
+    "status": "under_construction",
+    "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1566737",
+    "reason": "Union Cabinet approved Kanpur Metro Phase 1 balance (Kanpur Central to Naubasta, 8.65 km, 5 stations; PIB PRID=1566737); under active construction, surveyed alignment geometry is not yet in OSM.",
+    "review_date": "2027-01-15"
+  },
+  {
+    "city_id": "kanpur",
+    "line_id": "knp-blue",
+    "stretch": "Agriculture University to Barra-8 (Corridor 2)",
+    "status": "under_construction",
+    "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1566737",
+    "reason": "Union Cabinet approved Kanpur Metro Corridor 2 (Agriculture University to Barra-8, 8.6 km, 8 stations; PIB PRID=1566737); under active construction, surveyed coordinates not in OSM.",
+    "review_date": "2027-01-15"
+  },
+  {
+    "city_id": "jaipur",
+    "line_id": "jai-pink",
+    "stretch": "Badi Chaupar to Transport Nagar (Phase 1C)",
+    "status": "under_construction",
+    "source_url": "https://transport.rajasthan.gov.in/content/transportportal/en/metro.html",
+    "reason": "UNVERIFIED: News leads indicate 2.85 km Phase 1C extension under construction; detailed surveyed alignment geometry not published in OSM.",
+    "review_date": "2027-01-15"
+  },
+  {
+    "city_id": "jaipur",
+    "line_id": "jai-pink",
+    "stretch": "Mansarovar to 200 Feet Bypass (Phase 1D)",
+    "status": "under_construction",
+    "source_url": "https://transport.rajasthan.gov.in/content/transportportal/en/metro.html",
+    "reason": "UNVERIFIED: News leads indicate 1.33 km Phase 1D extension under construction; detailed surveyed alignment geometry not published in OSM.",
+    "review_date": "2027-01-15"
+  },
+  {
+    "city_id": "navi-mumbai",
+    "line_id": "nmm-line-1",
+    "stretch": "Pendhar to MIDC Taloja (Phase 2)",
+    "status": "planned",
+    "source_url": "https://cidco.maharashtra.gov.in/Page?Token=92BA1874285",
+    "reason": "UNVERIFIED: News leads indicate CIDCO planning 2.2 km, 6-station Phase 2 extension; physical construction not yet surveyed in OSM.",
     "review_date": "2027-01-15"
   }
 ]

@@ -16,6 +16,7 @@ import { useMetroStore } from "@/store/use-metro-store";
 import { getMetroData } from "@/lib/data";
 import { buildTransitGraph, findRoute } from "@/lib/routing/graph";
 import { getCityRoutability } from "@/lib/routing/city-guard";
+import { getRegion, getRegionMemberCityIds, isRegionId } from "@/lib/regions";
 import type { RouteResult } from "@/lib/routing/types";
 import { ReportIssueButton } from "@/components/panels/report-issue-button";
 import {
@@ -51,9 +52,13 @@ export function RouteFinderPanel() {
 
   // Default to Kochi or first routable city if none selected
   const activeCityId = selectedCityId || "kochi";
+  const region = getRegion(activeCityId);
   const activeCity = useMemo(
-    () => dataset.cities.find((c) => c.id === activeCityId),
-    [dataset.cities, activeCityId]
+    () =>
+      region
+        ? ({ id: region.id, name: region.name } as any)
+        : dataset.cities.find((c) => c.id === activeCityId),
+    [dataset.cities, activeCityId, region]
   );
   const cityRoutability = useMemo(
     () => getCityRoutability(activeCityId),
@@ -66,11 +71,17 @@ export function RouteFinderPanel() {
     [cityRoutability.routableLineIds]
   );
 
+  const memberCityIds = useMemo(() => {
+    return isRegionId(activeCityId)
+      ? getRegionMemberCityIds(activeCityId)
+      : [activeCityId];
+  }, [activeCityId]);
+
   const cityOperationalStations = useMemo(() => {
     return dataset.stations.features
       .filter(
         (st) =>
-          st.properties.city_id === activeCityId &&
+          memberCityIds.includes(st.properties.city_id) &&
           st.properties.status === "operational" &&
           (cityRoutability.routableLineIds.length === 0 ||
             st.properties.line_ids.some((lid) => routableLineSet.has(lid)))
@@ -81,7 +92,7 @@ export function RouteFinderPanel() {
         lines: st.properties.line_ids,
       }))
       .sort((a, b) => a.name.localeCompare(b.name));
-  }, [dataset.stations.features, activeCityId, routableLineSet, cityRoutability.routableLineIds]);
+  }, [dataset.stations.features, memberCityIds, routableLineSet, cityRoutability.routableLineIds]);
 
   // Build transit graph for active city with allowed routable lines
   const graph = useMemo(() => {

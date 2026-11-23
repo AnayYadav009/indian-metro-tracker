@@ -15,6 +15,17 @@ These findings violate audit rules currently classified as `pending_rules` in `d
 
 ---
 
+## 1.1 Resolved in Phase 12 (2026-11-23)
+
+- **Bengaluru Pink Reach 6**: Split `blr-pink-seg-01` into operational elevated segment (Kalena Agrahara to Tavarekere, 7.14 km, 6 stations, opened 2026-11-14, inaugurated 2026-11-13 per PIB PRID 2335840) and underground construction segment `blr-pink-seg-02` (13.8 km).
+- **Pune Line 3 (Pink)**: Un-suppressed 7 surveyed station nodes, bringing compiled count from 13 to 19 stations with official layout and verified references.
+- **Chennai Corridor 4**: Restored 6 intermediate station nodes as `construction` under `che-corridor-4-seg-01` with official CMRL alignment.
+- **Under-Construction Pipelines Documented**: Sourced official government links for Gurugram GMRL (PIB PRID 1930452), Noida extensions (PMIndia Cabinet approval & PIB PRID 2334971), Patna Metro (PIB PRID 1564352), Nagpur Phase 2 (PIB PRID 1882434), Lucknow Phase 1B (PIB PRID 2032137), Kanpur Phase 1 & Line 2 (PIB PRID 1566735), and Jaipur Phase 1C/1D (Rajasthan Transport portal).
+- **Namo Bharat (RRTS)**: First-class `rrts` system onboarded with 82.15 km corridor, 14 surveyed stations (8 operational, 6 construction) from Overpass Relation 17337287, and cross-network interchanges in Delhi (`int-sarai-kale-khan`, `int-new-ashok-nagar`, `int-anand-vihar`, `int-ghaziabad-shaheed-sthal`) and Meerut (`int-meerut-south`, `int-shatabdi-nagar`, `int-begumpul`, `int-modipuram`).
+- **NCR Combined Regional View**: Built `NCR_REGION` model grouping Delhi, Gurugram, Noida, Meerut, and Namo Bharat on a unified canvas with MapLibre `in` filtering, unified city picker, and cross-system shortest path routing graph.
+
+---
+
 ## 2. Tracked Coverage Gaps (15)
 
 These stretches represent sanctioned, under-construction, or planned transit corridors where geometry or station positions are not yet available in OpenStreetMap or official CAD/GIS releases. They are tracked explicitly in `data/audit/coverage-gaps.json` to prevent false-precision errors.
