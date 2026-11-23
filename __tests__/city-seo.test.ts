@@ -13,6 +13,7 @@ describe("M17 City SEO & Metadata Generation", () => {
   it("provides data for all 22 cities in data/cities.json", () => {
     const allCities = getAllCities();
     expect(allCities).toHaveLength(22);
+    expect(allCities.some((city) => city.system_type === "rrts")).toBe(false);
 
     for (const city of allCities) {
       const pageData = getCityPageData(city.id);

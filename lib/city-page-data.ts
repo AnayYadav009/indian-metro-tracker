@@ -96,7 +96,7 @@ const stationsCollection = stationsGeoJson as unknown as StationFeatureCollectio
 const segmentsCollection = segmentsGeoJson as unknown as SegmentFeatureCollection;
 
 export function getAllCities(): City[] {
-  return citiesJson as City[];
+  return (citiesJson as City[]).filter((city) => city.system_type !== "rrts");
 }
 
 export function getCityPageData(cityId: string): CityPageData | null {

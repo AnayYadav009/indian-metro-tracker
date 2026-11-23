@@ -101,6 +101,7 @@ export const CitySchema = z.object({
     .default(1)
     .optional(),
   network_id: z.string().min(1).optional(),
+  system_type: z.enum(["metro", "rrts"]).optional(),
   retrieved_at: z
     .string()
     .regex(/^\d{4}-\d{2}-\d{2}$/, "Format must be YYYY-MM-DD")
