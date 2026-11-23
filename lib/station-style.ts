@@ -17,7 +17,7 @@ export const STATION_STYLE = {
   },
 } as const;
 
-export function stationStrokeExpression(): any[] {
+export function stationStrokeExpression(): unknown[] {
   return [
     "case",
     ["==", ["get", "status"], "operational"],

@@ -1,81 +1,13 @@
-import {
-  ProvenanceSchema,
-  ProvenanceStatusSchema,
-  FareBandSchema,
-  FareKmBandSchema,
-  FareStationBandSchema,
-  FareDayScopeSchema,
-  FareRuleSchema,
-  FareRuleKmSchema,
-  FareRuleStationCountSchema,
-  ServiceDayTypeSchema,
-  ServiceHoursSchema,
-} from "./schema";
+export * from "./schema";
 import type {
-  Status,
-  Layout,
-  BoundingBox,
-  Provenance,
-  ProvenanceStatus,
   City,
   Line,
-  SegmentProperties,
-  SharedCorridor,
-  SegmentFeature,
   SegmentFeatureCollection,
-  StationProperties,
-  StationFeature,
   StationFeatureCollection,
-  FareBand,
-  FareKmBand,
-  FareStationBand,
-  FareDayScope,
   FareRule,
-  FareRuleKm,
-  FareRuleStationCount,
-  ServiceDayType,
   ServiceHours,
+  Status,
 } from "./schema";
-
-export {
-  ProvenanceSchema,
-  ProvenanceStatusSchema,
-  FareBandSchema,
-  FareKmBandSchema,
-  FareStationBandSchema,
-  FareDayScopeSchema,
-  FareRuleSchema,
-  FareRuleKmSchema,
-  FareRuleStationCountSchema,
-  ServiceDayTypeSchema,
-  ServiceHoursSchema,
-};
-
-export type {
-  Status,
-  Layout,
-  BoundingBox,
-  Provenance,
-  ProvenanceStatus,
-  City,
-  Line,
-  SegmentProperties,
-  SharedCorridor,
-  SegmentFeature,
-  SegmentFeatureCollection,
-  StationProperties,
-  StationFeature,
-  StationFeatureCollection,
-  FareBand,
-  FareKmBand,
-  FareStationBand,
-  FareDayScope,
-  FareRule,
-  FareRuleKm,
-  FareRuleStationCount,
-  ServiceDayType,
-  ServiceHours,
-};
 
 export interface MetroDataset {
   cities: City[];
@@ -100,5 +32,3 @@ export interface StationFilterOptions {
   lineId?: string;
   isInterchange?: boolean;
 }
-
-

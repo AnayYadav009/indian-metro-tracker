@@ -4,7 +4,6 @@ import {
   getNationwideTotals,
   calculateCityCompareStats,
   calculateNationwideTotals,
-  TIER_1_CITY_IDS,
 } from "@/lib/compare-stats";
 import { getMetroData } from "@/lib/data";
 

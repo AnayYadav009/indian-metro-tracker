@@ -55,20 +55,10 @@ export function getSegmentStationOrder(
     .filter((st) => st.distanceM <= 300)
     .sort((a, b) => a.progress - b.progress);
 
-  // Deduplicate any stations mapped to the same coordinate/progress
-  const uniqueStations: OrderedStation[] = [];
   const seenIds = new Set<string>();
-  for (const st of projected) {
-    if (!seenIds.has(st.id)) {
-      seenIds.add(st.id);
-      uniqueStations.push({
-        id: st.id,
-        name: st.name,
-        coordinates: st.coordinates,
-        progress: st.progress,
-      });
-    }
-  }
+  const uniqueStations: OrderedStation[] = projected
+    .filter((st) => !seenIds.has(st.id) && seenIds.add(st.id))
+    .map(({ id, name, coordinates, progress }) => ({ id, name, coordinates, progress }));
 
   return {
     segmentId,

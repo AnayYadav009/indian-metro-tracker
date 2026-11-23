@@ -470,12 +470,6 @@
       "reason": "triaged in M10.2 Delhi reconciliation"
     },
     {
-      "city_id": "delhi",
-      "rule": "station-gap",
-      "subject": "del-magenta|del-janakpuri-west|del-bhalaswa",
-      "reason": "triaged in M10.2 Delhi reconciliation"
-    },
-    {
       "city_id": "mumbai",
       "rule": "station-gap",
       "subject": "mum-line-4|mum-dongripada|mum-kasarvadavali",
@@ -1257,18 +1251,6 @@
     {
       "city_id": "delhi",
       "rule": "future-date-unconfirmed",
-      "subject": "del-bhalaswa",
-      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "future-date-unconfirmed",
-      "subject": "del-deepali-chowk",
-      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "future-date-unconfirmed",
       "subject": "del-golden-branch-01",
       "reason": "Expected completion date pending operator progress update or unconfirmed flag"
     },
@@ -1281,25 +1263,7 @@
     {
       "city_id": "delhi",
       "rule": "future-date-unconfirmed",
-      "subject": "del-haiderpur-village",
-      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "future-date-unconfirmed",
-      "subject": "del-magenta-seg-02",
-      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "future-date-unconfirmed",
       "subject": "del-magenta-seg-03",
-      "reason": "Expected completion date pending operator progress update or unconfirmed flag"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "future-date-unconfirmed",
-      "subject": "del-north-pitampura-prashant-vihar",
       "reason": "Expected completion date pending operator progress update or unconfirmed flag"
     },
     {
@@ -1313,30 +1277,6 @@
       "rule": "future-date-unconfirmed",
       "subject": "del-red-seg-02",
       "reason": "Expected completion date pending operator progress update or unconfirmed flag"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "future-record-no-reference",
-      "subject": "del-bhalaswa",
-      "reason": "Future segment or station pending deep-link reference citation"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "future-record-no-reference",
-      "subject": "del-deepali-chowk",
-      "reason": "Future segment or station pending deep-link reference citation"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "future-record-no-reference",
-      "subject": "del-haiderpur-village",
-      "reason": "Future segment or station pending deep-link reference citation"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "future-record-no-reference",
-      "subject": "del-north-pitampura-prashant-vihar",
-      "reason": "Future segment or station pending deep-link reference citation"
     },
     {
       "city_id": "delhi",
@@ -1407,12 +1347,6 @@
     {
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
-      "subject": "del-bhalaswa",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "layout/suspect-default-elevated",
       "subject": "del-bhikaji-cama-place",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
@@ -1450,12 +1384,6 @@
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
       "subject": "del-dashrath-puri",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "layout/suspect-default-elevated",
-      "subject": "del-deepali-chowk",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -1576,12 +1504,6 @@
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
       "subject": "del-guru-dronacharya",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "layout/suspect-default-elevated",
-      "subject": "del-haiderpur-village",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -1773,19 +1695,7 @@
     {
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
-      "subject": "del-madhuban-chowk",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "layout/suspect-default-elevated",
       "subject": "del-madipur",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "layout/suspect-default-elevated",
-      "subject": "del-majlis-park",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -1954,12 +1864,6 @@
       "city_id": "delhi",
       "rule": "layout/suspect-default-elevated",
       "subject": "del-noida-sector-18",
-      "reason": "Outdoor station layout unverified pending operator published structural list"
-    },
-    {
-      "city_id": "delhi",
-      "rule": "layout/suspect-default-elevated",
-      "subject": "del-north-pitampura-prashant-vihar",
       "reason": "Outdoor station layout unverified pending operator published structural list"
     },
     {
@@ -2541,12 +2445,6 @@
     {
       "city_id": "kolkata",
       "rule": "layout/suspect-default-elevated",
-      "subject": "kolkata-beleghata",
-      "reason": "Station layout pending physical verification against official station list"
-    },
-    {
-      "city_id": "kolkata",
-      "rule": "layout/suspect-default-elevated",
       "subject": "kolkata-bengal-chemical",
       "reason": "Station layout pending physical verification against official station list"
     },
@@ -2741,18 +2639,6 @@
       "rule": "segment-end-far-from-station",
       "subject": "kol-purple-seg-02",
       "reason": "Under-construction/planned terminus terminal gap pending intermediate station survey"
-    },
-    {
-      "city_id": "kolkata",
-      "rule": "station-gap",
-      "subject": "kol-orange|kolkata-beleghata|kolkata-nalban",
-      "reason": "Under-construction corridor station gap awaiting intermediate station survey"
-    },
-    {
-      "city_id": "kolkata",
-      "rule": "station-gap",
-      "subject": "kol-orange|kolkata-nalban|kolkata-mothers-wax-museum",
-      "reason": "Under-construction corridor station gap awaiting intermediate station survey"
     },
     {
       "city_id": "mumbai",
@@ -3239,24 +3125,6 @@
       "rule": "layout/suspect-default-elevated",
       "subject": "noi-depot",
       "reason": "Depot station layout left unverified pending explicit NMRC site layout verification per T4"
-    },
-    {
-      "city_id": "pune",
-      "rule": "station-far-from-nearest-segment",
-      "subject": "pune-district-court",
-      "reason": "Physical station entrance/concourse offset from track centerline within tolerances"
-    },
-    {
-      "city_id": "pune",
-      "rule": "station-far-from-nearest-segment",
-      "subject": "pune-district-court",
-      "reason": "Physical station entrance/concourse offset from track centerline within tolerances"
-    },
-    {
-      "city_id": "pune",
-      "rule": "segment-end-far-from-station",
-      "subject": "pun-line-3-seg-01",
-      "reason": "Line 3 under construction terminals Hinjawadi and Civil Court not yet commissioned."
     },
     {
       "city_id": "gurugram",
@@ -4665,13 +4533,6 @@
       "city_id": "kolkata",
       "rule": "operational-station-no-opened-on",
       "subject": "kolkata-satyajit-roy",
-      "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies.",
-      "review_by": "2027-04-01"
-    },
-    {
-      "city_id": "kolkata",
-      "rule": "operational-station-no-opened-on",
-      "subject": "kolkata-beleghata",
       "reason": "Historical opening date per station unverified in official operator records; segment inauguration date applies.",
       "review_by": "2027-04-01"
     },

@@ -3,3 +3,4 @@
 
 # Ensure snapshot files always use LF line endings across all platforms
 *.snap text eol=lf
+data/** text eol=lf

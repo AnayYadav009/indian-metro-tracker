@@ -11,14 +11,18 @@ export function StatusFilter() {
   const selectedStatuses = useMetroStore((state) => state.selectedStatuses);
   const toggleStatus = useMetroStore((state) => state.toggleStatus);
 
-  const dataset = getMetroData();
-
-  const getCountForStatus = (status: Status) =>
-    dataset.segments.features.filter(
-      ({ properties }) =>
-        properties.status === status &&
-        (!selectedCityId || properties.city_id === selectedCityId)
-    ).length;
+  const countsByStatus = React.useMemo(() => {
+    const dataset = getMetroData();
+    const counts: Record<Status, number> = { operational: 0, construction: 0, planned: 0 };
+    for (const { properties } of dataset.segments.features) {
+      if (!selectedCityId || properties.city_id === selectedCityId) {
+        if (properties.status in counts) {
+          counts[properties.status]++;
+        }
+      }
+    }
+    return counts;
+  }, [selectedCityId]);
 
   return (
     <div className="flex flex-col gap-1">
@@ -32,7 +36,7 @@ export function StatusFilter() {
       <div className="grid grid-cols-1 gap-1 sm:grid-cols-3">
         {STATUS_LIST.map((opt) => {
           const isActive = selectedStatuses.includes(opt.id);
-          const count = getCountForStatus(opt.id);
+          const count = countsByStatus[opt.id] ?? 0;
 
           return (
             <button
