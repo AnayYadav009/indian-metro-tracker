@@ -36,7 +36,7 @@ export function FilterPanel() {
   return (
     <div
       data-testid="filter-panel"
-      className="absolute top-4 left-4 z-20 w-[92vw] max-w-sm rounded-xl border border-slate-800 bg-slate-900/95 p-4 text-slate-100 shadow-2xl backdrop-blur-md transition-all sm:w-96"
+      className="absolute top-4 left-4 z-20 w-[92vw] max-w-sm rounded-xl border border-slate-800 bg-slate-900/95 p-3 text-slate-100 shadow-2xl backdrop-blur-md transition-all sm:w-96"
     >
       <div className="flex items-center justify-between pb-2 border-b border-slate-800/80">
         <div className="flex items-center gap-2">
@@ -79,7 +79,7 @@ export function FilterPanel() {
       </div>
 
       {!isCollapsed && (
-        <div id="filter-panel-controls" className="mt-3 flex flex-col gap-4 text-xs max-h-[340px] sm:max-h-[calc(100vh-8rem)] overflow-y-auto pr-1">
+        <div id="filter-panel-controls" className="mt-2.5 flex max-h-[340px] flex-col gap-3 overflow-y-auto pr-1 text-xs sm:max-h-[calc(100vh-8rem)]">
           <div className="relative">
             <Search className="absolute left-2.5 top-2.5 h-3.5 w-3.5 text-slate-400" />
             <input

@@ -76,6 +76,7 @@ export interface CityPageLine {
   topology?: string;
   lengthKm: number;
   stationsCount: number;
+  stationNames: string[];
 }
 
 export interface CityPageData {
@@ -124,6 +125,37 @@ export function getCityPageData(cityId: string): CityPageData | null {
     const stationsCount = stationsCollection.features.filter((st) =>
       (st.properties.line_ids ?? []).includes(line.id)
     ).length;
+    const orderedStations = stationsCollection.features.filter((st) =>
+      (st.properties.line_ids ?? []).includes(line.id)
+    );
+    const backbone = lineSegs.reduce((longest, segment) =>
+      segment.geometry.coordinates.length > (longest?.geometry.coordinates.length ?? 0) ? segment : longest, lineSegs[0]);
+    const stationNames = line.ordered_station_ids?.length
+      ? line.ordered_station_ids.map((id) => orderedStations.find((st) => st.properties.station_id === id)?.properties.name).filter((name): name is string => !!name)
+      : backbone
+        ? orderedStations.map((station) => {
+            const [lng, lat] = station.geometry.coordinates;
+            let distance = Infinity;
+            let position = 0;
+            let travelled = 0;
+            const coordinates = backbone.geometry.coordinates;
+            for (let i = 1; i < coordinates.length; i++) {
+              const [ax, ay] = coordinates[i - 1];
+              const [bx, by] = coordinates[i];
+              const dx = bx - ax;
+              const dy = by - ay;
+              const length = Math.hypot(dx, dy);
+              const t = Math.max(0, Math.min(1, ((lng - ax) * dx + (lat - ay) * dy) / (length * length)));
+              const d = Math.hypot(lng - (ax + t * dx), lat - (ay + t * dy));
+              if (d < distance) {
+                distance = d;
+                position = travelled + t * length;
+              }
+              travelled += length;
+            }
+            return { name: station.properties.name, position };
+          }).sort((a, b) => a.position - b.position).map(({ name }) => name)
+        : orderedStations.map((station) => station.properties.name);
 
     // Line status priority: operational if any segment is op, else construction, else planned
     let status: "operational" | "construction" | "planned" = "planned";
@@ -148,6 +180,7 @@ export function getCityPageData(cityId: string): CityPageData | null {
       topology: refLine?.topology,
       lengthKm,
       stationsCount,
+      stationNames,
     };
   });
 

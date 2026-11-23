@@ -42,6 +42,14 @@ test.describe("OSM Attribution Visibility & Zero-Intersection (Phase 6)", () => 
 
       // Check legend intersection (expanded)
       const legend = page.getByTestId("map-legend");
+      const toggleBtn = page.getByTestId("toggle-legend-btn");
+
+      // On mobile viewports legend defaults to collapsed; expand it first to test expanded intersection
+      if (!(await page.getByTestId("legend-content").isVisible())) {
+        await toggleBtn.click();
+        await page.waitForTimeout(200);
+      }
+
       let legendBox = await legend.boundingBox();
       expect(legendBox).not.toBeNull();
       if (legendBox) {
@@ -49,7 +57,7 @@ test.describe("OSM Attribution Visibility & Zero-Intersection (Phase 6)", () => 
       }
 
       // Toggle legend to collapsed
-      await page.getByTestId("toggle-legend-btn").click();
+      await toggleBtn.click();
       await page.waitForTimeout(200);
 
       attrBox = await attribution.boundingBox();

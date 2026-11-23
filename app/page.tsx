@@ -46,7 +46,7 @@ export default function HomePage() {
   return (
     <div className="flex h-dvh w-screen flex-col overflow-hidden bg-slate-950 text-slate-100">
       {/* Header bar */}
-      <header className="z-20 flex h-14 shrink-0 items-center justify-between border-b border-slate-800 bg-slate-900/90 px-4 backdrop-blur md:px-6">
+      <header className="relative z-20 flex h-14 shrink-0 items-center justify-between border-b border-slate-800 bg-slate-900/90 px-4 backdrop-blur md:px-6">
         <div className="flex items-center gap-3">
           <div className="flex h-8 w-8 items-center justify-center rounded-lg border border-emerald-500/20 bg-emerald-500/10 text-sm font-bold text-emerald-400">
             IM
@@ -58,17 +58,14 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Live Network Metric Stats */}
-        <NetworkStats />
-
-        <div className="flex items-center gap-2">
+        <nav aria-label="Network modes" className="absolute left-1/2 flex -translate-x-1/2 items-center rounded-full border border-slate-700/80 bg-slate-950/80 p-1 shadow-inner backdrop-blur max-lg:static max-lg:translate-x-0">
           <button
             onClick={() => setIsRoutePanelOpen(!isRoutePanelOpen)}
             data-testid="find-route-btn"
-            className={`inline-flex items-center gap-1.5 rounded-lg border px-2.5 py-1 text-xs font-medium transition-colors ${
+            className={`inline-flex items-center gap-1.5 whitespace-nowrap rounded-full px-3 py-1.5 text-xs font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 ${
               isRoutePanelOpen
-                ? "border-emerald-500 bg-emerald-500/20 text-emerald-300"
-                : "border-slate-700 bg-slate-800/80 text-slate-200 hover:border-slate-500 hover:bg-slate-700 hover:text-white"
+                ? "bg-emerald-500/20 text-emerald-200 shadow-sm ring-1 ring-inset ring-emerald-400/30"
+                : "text-slate-200 hover:bg-slate-800 hover:text-white"
             }`}
             title="Plan a metro route"
           >
@@ -78,10 +75,10 @@ export default function HomePage() {
           <button
             onClick={() => setIsNearestPanelOpen(!isNearestPanelOpen)}
             data-testid="find-nearest-btn"
-            className={`inline-flex items-center gap-1.5 rounded-lg border px-2.5 py-1 text-xs font-medium transition-colors ${
+            className={`inline-flex items-center gap-1.5 whitespace-nowrap rounded-full px-3 py-1.5 text-xs font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 ${
               isNearestPanelOpen
-                ? "border-emerald-500 bg-emerald-500/20 text-emerald-300"
-                : "border-slate-700 bg-slate-800/80 text-slate-200 hover:border-slate-500 hover:bg-slate-700 hover:text-white"
+                ? "bg-emerald-500/20 text-emerald-200 shadow-sm ring-1 ring-inset ring-emerald-400/30"
+                : "text-slate-200 hover:bg-slate-800 hover:text-white"
             }`}
             title="Find nearest metro station"
           >
@@ -89,12 +86,19 @@ export default function HomePage() {
             <span className="hidden sm:inline">Nearest</span>
           </button>
           <button
-            onClick={() => setIsCityDirectoryOpen(!isCityDirectoryOpen)}
+            onClick={() => {
+              const open = !isCityDirectoryOpen;
+              setIsCityDirectoryOpen(open);
+              if (open) {
+                setIsNearestPanelOpen(false);
+                setIsRoutePanelOpen(false);
+              }
+            }}
             data-testid="city-directory-btn"
-            className={`inline-flex items-center gap-1.5 rounded-lg border px-2.5 py-1 text-xs font-medium transition-colors ${
+            className={`inline-flex items-center gap-1.5 whitespace-nowrap rounded-full px-3 py-1.5 text-xs font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 ${
               isCityDirectoryOpen
-                ? "border-emerald-500 bg-emerald-500/20 text-emerald-300"
-                : "border-slate-700 bg-slate-800/80 text-slate-200 hover:border-slate-500 hover:bg-slate-700 hover:text-white"
+                ? "bg-emerald-500/20 text-emerald-200 shadow-sm ring-1 ring-inset ring-emerald-400/30"
+                : "text-slate-200 hover:bg-slate-800 hover:text-white"
             }`}
             title="Browse all city metro networks"
           >
@@ -104,22 +108,14 @@ export default function HomePage() {
           <Link
             href="/compare"
             data-testid="nav-to-compare"
-            className="inline-flex items-center gap-1.5 rounded-lg border border-slate-700 bg-slate-800/80 px-2.5 py-1 text-xs font-medium text-slate-200 transition-colors hover:border-slate-500 hover:bg-slate-700 hover:text-white"
+            className="inline-flex items-center gap-1.5 whitespace-nowrap rounded-full px-3 py-1.5 text-xs font-medium text-slate-200 transition-colors hover:bg-slate-800 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
             title="View Comparison Dashboard"
           >
             <BarChart3 className="h-3.5 w-3.5 text-emerald-400" />
             <span className="hidden sm:inline">Compare</span>
           </Link>
-          <span
-            data-testid="data-last-updated"
-            className="inline-flex items-center rounded-full border border-slate-700 bg-slate-800 px-2 py-0.5 text-[11px] font-medium text-slate-300 md:px-2.5 md:text-xs"
-          >
-            {metadataSummary.badgeLabel}
-          </span>
-          <span className="inline-flex items-center rounded-full border border-slate-700 bg-slate-800 px-2 py-0.5 text-[10px] sm:text-xs font-medium text-slate-300">
-            {BASEMAP_CONFIG.name}
-          </span>
-        </div>
+        </nav>
+        <NetworkStats />
       </header>
 
       {/* Mandatory Mock Data Warning Banner whenever DATA_SOURCE === "mock" */}
@@ -189,9 +185,14 @@ export default function HomePage() {
         {/* Bottom-right unified container: Legend stacked above Attribution */}
         <div
           data-testid="bottom-right-container"
-          className="absolute bottom-2 right-2 z-20 flex flex-col items-end gap-1.5 pointer-events-none"
+          className="absolute bottom-20 right-2 z-20 flex flex-col items-end gap-1.5 pointer-events-none sm:bottom-2"
         >
           <MapLegend />
+          <div className="flex items-center gap-1.5 rounded-full border border-slate-700/80 bg-slate-950/75 px-2 py-1 text-[9px] font-medium text-slate-400 shadow backdrop-blur-sm sm:text-[10px]">
+            <span data-testid="data-last-updated">{metadataSummary.badgeLabel}</span>
+            <span aria-hidden="true" className="text-slate-600">·</span>
+            <span>{BASEMAP_CONFIG.name}</span>
+          </div>
           <OsmAttribution />
         </div>
       </main>

@@ -21,7 +21,8 @@
     "pipeline:all": "tsx scripts/pipeline/build-all.ts",
     "audit:dedupe": "tsx scripts/audit/dedupe-report.ts",
     "audit:links": "tsx scripts/audit/check-reference-links.ts",
-    "audit:data": "tsx scripts/audit/consistency-report.ts"
+    "audit:data": "tsx scripts/audit/consistency-report.ts",
+    "verify:routing": "tsx scripts/verify-routing.ts"
   },
   "engines": {
     "node": ">=18.18.0"

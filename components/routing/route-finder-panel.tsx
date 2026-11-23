@@ -20,6 +20,7 @@ import type { RouteResult } from "@/lib/routing/types";
 
 export function RouteFinderPanel() {
   const isRoutePanelOpen = useMetroStore((state) => state.isRoutePanelOpen);
+  const selectedFeature = useMetroStore((state) => state.selectedFeature);
   const setIsRoutePanelOpen = useMetroStore(
     (state) => state.setIsRoutePanelOpen
   );
@@ -33,6 +34,8 @@ export function RouteFinderPanel() {
   const setRouteDestinationId = useMetroStore(
     (state) => state.setRouteDestinationId
   );
+  const routeFocusTarget = useMetroStore((state) => state.routeFocusTarget);
+  const setRouteFocusTarget = useMetroStore((state) => state.setRouteFocusTarget);
   const activeRoute = useMetroStore((state) => state.activeRoute);
   const setActiveRoute = useMetroStore((state) => state.setActiveRoute);
   const clearRoute = useMetroStore((state) => state.clearRoute);
@@ -112,6 +115,12 @@ export function RouteFinderPanel() {
       setDestQuery("");
     }
   }, [routeDestinationId, dataset.stations.features]);
+
+  useEffect(() => {
+    if (!isRoutePanelOpen || !routeFocusTarget) return;
+    (routeFocusTarget === "origin" ? originInputRef : destInputRef).current?.focus();
+    setRouteFocusTarget(null);
+  }, [isRoutePanelOpen, routeFocusTarget, setRouteFocusTarget]);
 
   // Read URL query parameters on initial mount once
   const hasHydratedRef = useRef(false);
@@ -214,7 +223,7 @@ export function RouteFinderPanel() {
   return (
     <aside
       data-testid="route-finder-panel"
-      className="absolute top-14 left-2 right-2 sm:left-4 sm:right-auto z-30 w-auto sm:w-96 max-h-[85vh] flex flex-col rounded-xl border border-slate-700/80 bg-slate-900/95 shadow-2xl backdrop-blur-md overflow-hidden text-slate-100"
+      className={`absolute top-16 left-2 right-2 z-30 flex max-h-[calc(100vh-8.5rem)] w-auto flex-col overflow-hidden rounded-xl border border-slate-700/80 bg-slate-900/95 text-slate-100 shadow-2xl backdrop-blur-md sm:left-auto sm:right-6 sm:w-96 ${selectedFeature ? "md:hidden" : ""}`}
     >
       {/* Header */}
       <div className="flex items-center justify-between border-b border-slate-800 px-4 py-3 bg-slate-800/40">
@@ -311,7 +320,10 @@ export function RouteFinderPanel() {
                       setOriginQuery(e.target.value);
                       setRouteOriginId(null);
                     }}
-                    onFocus={() => setIsOriginFocused(true)}
+                    onFocus={() => {
+                      setIsOriginFocused(true);
+                      setRouteFocusTarget("origin");
+                    }}
                     onBlur={() => setTimeout(() => setIsOriginFocused(false), 200)}
                     placeholder="Origin station"
                     data-testid="route-origin-input"
@@ -367,7 +379,10 @@ export function RouteFinderPanel() {
                       setDestQuery(e.target.value);
                       setRouteDestinationId(null);
                     }}
-                    onFocus={() => setIsDestFocused(true)}
+                    onFocus={() => {
+                      setIsDestFocused(true);
+                      setRouteFocusTarget("destination");
+                    }}
                     onBlur={() => setTimeout(() => setIsDestFocused(false), 200)}
                     placeholder="Destination station"
                     data-testid="route-destination-input"

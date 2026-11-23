@@ -50,6 +50,20 @@ export default function ComparePage() {
   const [sortKey, setSortKey] = useState<SortKey>("operationalKm");
   const [sortDirection, setSortDirection] = useState<SortDirection>("desc");
   const [expandedCityId, setExpandedCityId] = useState<string | null>(null);
+  const [compareCityIds, setCompareCityIds] = useState<string[]>([]);
+  const [showHeadToHead, setShowHeadToHead] = useState(false);
+  const compareCities = compareCityIds.map((id) => allStats.find((city) => city.cityId === id)).filter((city): city is CityCompareStats => !!city);
+
+  const toggleCompareCity = (cityId: string) => {
+    if (compareCityIds.includes(cityId)) {
+      setCompareCityIds(compareCityIds.filter((id) => id !== cityId));
+      setShowHeadToHead(false);
+    } else if (compareCityIds.length < 2) {
+      const next = [...compareCityIds, cityId];
+      setCompareCityIds(next);
+      if (next.length === 2) setShowHeadToHead(true);
+    }
+  };
 
   const handleSort = (key: SortKey) => {
     if (sortKey === key) {
@@ -147,6 +161,37 @@ export default function ComparePage() {
 
       {/* Main Content Area */}
       <main className="flex-1 overflow-y-auto px-4 py-6 md:px-8 max-w-7xl mx-auto w-full flex flex-col gap-6">
+        {compareCities.length === 2 && (
+          <section className="sticky top-2 z-30 rounded-xl border border-emerald-500/30 bg-slate-950/95 shadow-xl backdrop-blur-md" data-testid="head-to-head-compare">
+            <div className="flex items-center justify-between gap-3 px-4 py-2.5">
+              <div className="text-xs text-slate-300"><span className="font-semibold text-emerald-300">2 cities selected</span><span className="hidden sm:inline"> · {compareCities.map((city) => city.cityName).join(" vs ")}</span></div>
+              <button type="button" onClick={() => setShowHeadToHead((open) => !open)} aria-expanded={showHeadToHead} className="rounded-lg bg-emerald-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-emerald-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300">{showHeadToHead ? "Hide comparison" : "Compare Cities"}</button>
+            </div>
+            {showHeadToHead && (
+              <div className="grid gap-4 border-t border-slate-800 px-4 py-4 sm:grid-cols-[minmax(120px,0.8fr)_1fr_1fr]" data-testid="head-to-head-card">
+                <div className="hidden text-[11px] font-medium text-slate-500 sm:block">Network measures</div>
+                {compareCities.map((city) => <h2 key={city.cityId} className="text-sm font-semibold text-white">{city.cityName}</h2>)}
+                {(["Total Network Build", "Operational km", "Stations", "Interchanges", "Status Ratios"] as const).map((metric) => <React.Fragment key={metric}>
+                  <div className="text-[11px] font-medium text-slate-400">{metric}</div>
+                  {compareCities.map((city) => {
+                    const total = city.totalKm || 0;
+                    const ratios = [city.operationalKm, city.constructionKm, city.plannedKm].map((value) => total ? value / total * 100 : 0);
+                    return <div key={`${city.cityId}-${metric}`} className="min-w-0 text-xs text-slate-200">
+                      {metric === "Total Network Build" && <strong>{city.totalKm.toLocaleString()} km</strong>}
+                      {metric === "Operational km" && <strong className="text-emerald-300">{city.operationalKm.toLocaleString()} km</strong>}
+                      {metric === "Stations" && <><strong>{city.totalStations.toLocaleString()} total</strong><span className="mt-0.5 block text-[10px] text-slate-400">{city.operationalStations} open · {city.constructionStations} building · {city.plannedStations} planned</span></>}
+                      {metric === "Interchanges" && <strong>{city.interchangesCount.toLocaleString()}</strong>}
+                      {metric === "Status Ratios" && <><div className="flex h-2 overflow-hidden rounded-full bg-slate-800" aria-label={`${city.cityName} corridor status ratios`}>{ratios.map((ratio, index) => <span key={index} className={["bg-emerald-500", "bg-amber-500", "bg-sky-500"][index]} style={{ width: `${ratio}%` }} />)}</div><span className="mt-1 block text-[10px] text-slate-400">{ratios.map((ratio) => `${ratio.toFixed(1)}%`).join(" / ")}</span></>}
+                    </div>;
+                  })}
+                </React.Fragment>)}
+                <div className="hidden text-[10px] text-slate-500 sm:block">Operational / construction / planned</div>
+                <div className="text-[10px] text-slate-500">Operational / construction / planned</div>
+                <div className="text-[10px] text-slate-500">Operational / construction / planned</div>
+              </div>
+            )}
+          </section>
+        )}
         {/* Nationwide Summary Hero Cards */}
         <section
           data-testid="nationwide-summary"
@@ -321,6 +366,7 @@ export default function ComparePage() {
           >
             <thead>
               <tr className="border-b border-slate-800 bg-slate-900/90 text-slate-300">
+                <th scope="col" className="w-10 px-2 py-3 text-center text-[10px] font-medium text-slate-500">H2H</th>
                 <th
                   scope="col"
                   className="py-3 px-4 font-semibold cursor-pointer select-none hover:text-white"
@@ -457,6 +503,9 @@ export default function ComparePage() {
                       }
                       className="group cursor-pointer transition-colors hover:bg-slate-800/40"
                     >
+                      <td className="px-2 py-2.5 text-center" onClick={(event) => event.stopPropagation()}>
+                        <input type="checkbox" checked={compareCityIds.includes(c.cityId)} disabled={!compareCityIds.includes(c.cityId) && compareCityIds.length === 2} onChange={() => toggleCompareCity(c.cityId)} aria-label={`Select ${c.cityName} for head-to-head comparison`} data-testid={`compare-select-city-${c.cityId}`} className="h-3.5 w-3.5 cursor-pointer accent-emerald-500 disabled:cursor-not-allowed disabled:opacity-30" />
+                      </td>
                       {/* City Name with link to city page, map link, and caveat icon */}
                       <td className="py-2.5 px-4 font-medium text-slate-100">
                         <div className="flex items-center gap-2">
@@ -611,7 +660,7 @@ export default function ComparePage() {
                     {/* Expandable Details Drawer on Row Click */}
                     {isExpanded && (
                       <tr className="bg-slate-900/80 border-b border-slate-800">
-                        <td colSpan={11} className="py-3 px-6 text-xs">
+                        <td colSpan={12} className="py-3 px-6 text-xs">
                           <div className="flex flex-col gap-2">
                             {c.hasCompletenessCaveat && (
                               <div
@@ -678,6 +727,7 @@ export default function ComparePage() {
             {/* Nationwide Table Totals Row */}
             <tfoot>
               <tr className="border-t-2 border-slate-700 bg-slate-900/95 font-semibold text-slate-100">
+                <td className="px-2 py-3" />
                 <td className="py-3 px-4 font-bold">
                   Total ({allStats.length} Cities)
                 </td>

@@ -4,17 +4,13 @@ import Link from "next/link";
 import {
   ArrowLeft,
   MapPin,
-  Train,
-  Layers,
-  AlertTriangle,
   Info,
-  Calendar,
   BarChart3,
-  ExternalLink,
-  GitBranch,
 } from "lucide-react";
 import { getAllCities, getCityPageData } from "@/lib/city-page-data";
 import { generateCityMetadata, generateCityJsonLd } from "@/lib/city-seo";
+import { CityDataNotice } from "@/components/city/city-data-notice";
+import { CityLinesTable } from "@/components/city/city-lines-table";
 
 interface CityPageProps {
   params: Promise<{ id: string }>;
@@ -140,35 +136,11 @@ export default async function CityPage({ params }: CityPageProps) {
             </div>
           )}
 
-          {/* Known Completeness Caveat Banner */}
-          {stats.hasCompletenessCaveat && (
-            <div
-              data-testid="completeness-caveat-banner"
-              className="rounded-xl border border-amber-500/30 bg-amber-500/10 p-4 text-xs text-amber-200 flex items-start gap-3"
-            >
-              <Info className="h-5 w-5 shrink-0 text-amber-400 mt-0.5" />
-              <div className="space-y-1">
-                <p className="font-semibold text-amber-100">Data Notice</p>
-                <p className="text-amber-200/90">{stats.completenessCaveatText}</p>
-              </div>
-            </div>
-          )}
-
-          {/* Length Mismatch Notice (> 3% Variance) */}
-          {stats.hasLengthMismatch && (
-            <div
-              data-testid="length-mismatch-banner"
-              className="rounded-xl border border-amber-500/30 bg-slate-900 p-4 text-xs text-amber-300 flex items-start gap-3"
-            >
-              <AlertTriangle className="h-5 w-5 shrink-0 text-amber-400 mt-0.5" />
-              <div className="space-y-1">
-                <p className="font-semibold text-amber-200">
-                  Official Length Variance ({stats.lengthVariancePercent}% Δ)
-                </p>
-                <p className="text-slate-300">{stats.lengthMismatchNote}</p>
-              </div>
-            </div>
-          )}
+          <CityDataNotice
+            caveat={stats.hasCompletenessCaveat ? stats.completenessCaveatText ?? undefined : undefined}
+            lengthNote={stats.hasLengthMismatch ? stats.lengthMismatchNote ?? undefined : undefined}
+            variance={stats.lengthVariancePercent ?? undefined}
+          />
 
           {/* Network Key Metrics Grid */}
           <section className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
@@ -250,101 +222,7 @@ export default async function CityPage({ params }: CityPageProps) {
             </div>
 
             <div className="overflow-x-auto rounded-xl border border-slate-800 bg-slate-900/60 shadow-lg">
-              <table
-                data-testid="city-lines-table"
-                className="w-full border-collapse text-left text-xs"
-              >
-                <thead>
-                  <tr className="border-b border-slate-800 bg-slate-900/90 text-slate-300">
-                    <th scope="col" className="py-3 px-4 font-semibold">
-                      Line
-                    </th>
-                    <th scope="col" className="py-3 px-3 font-semibold">
-                      Operator
-                    </th>
-                    <th scope="col" className="py-3 px-3 font-semibold">
-                      Status
-                    </th>
-                    <th scope="col" className="py-3 px-3 font-semibold">
-                      Terminals / Topology
-                    </th>
-                    <th scope="col" className="py-3 px-3 font-semibold text-right">
-                      Length
-                    </th>
-                    <th scope="col" className="py-3 px-4 font-semibold text-right">
-                      Stations
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-slate-800/60">
-                  {lines.map((l) => (
-                    <tr
-                      key={l.id}
-                      className="group transition-colors hover:bg-slate-800/40"
-                    >
-                      <td className="py-3 px-4 font-medium text-white">
-                        <div className="flex items-center gap-2.5">
-                          <span
-                            className="h-3 w-3 shrink-0 rounded-full"
-                            style={{ backgroundColor: l.color }}
-                            aria-hidden="true"
-                          />
-                          <div>
-                            <div className="font-semibold text-slate-100">
-                              {l.officialName}
-                            </div>
-                            {l.officialName !== l.name && (
-                              <div className="text-[11px] text-slate-400">
-                                {l.name}
-                              </div>
-                            )}
-                          </div>
-                        </div>
-                      </td>
-
-                      <td className="py-3 px-3 text-slate-300">
-                        {l.operator}
-                      </td>
-
-                      <td className="py-3 px-3">
-                        <span
-                          className={`inline-flex items-center rounded px-2 py-0.5 text-[10px] font-semibold capitalize ${
-                            l.status === "operational"
-                              ? "bg-emerald-500/15 text-emerald-300 border border-emerald-500/30"
-                              : l.status === "construction"
-                              ? "bg-amber-500/15 text-amber-300 border border-amber-500/30"
-                              : "bg-sky-500/15 text-sky-300 border border-sky-500/30"
-                          }`}
-                        >
-                          {l.status === "construction" ? "Under Construction" : l.status}
-                        </span>
-                      </td>
-
-                      <td className="py-3 px-3 text-slate-300">
-                        {l.terminals.length > 0 ? (
-                          <div className="flex items-center gap-1.5 flex-wrap">
-                            <span>{l.terminals.join(" ↔ ")}</span>
-                          </div>
-                        ) : l.topology === "loop" ? (
-                          <span className="text-slate-400 italic">
-                            Circular Ring Loop
-                          </span>
-                        ) : (
-                          <span className="text-slate-500">—</span>
-                        )}
-                      </td>
-
-                      <td className="py-3 px-3 text-right font-medium text-slate-200">
-                        {l.lengthKm > 0 ? `${l.lengthKm} km` : "—"}
-                      </td>
-
-                      <td className="py-3 px-4 text-right font-medium text-slate-200">
-                        {l.stationsCount}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+              <CityLinesTable cityId={city.id} lines={lines} />
             </div>
           </section>
 

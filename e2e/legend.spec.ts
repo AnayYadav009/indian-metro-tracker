@@ -19,6 +19,14 @@ test.describe("Map Legend and Data Source Status", () => {
     const legend = page.getByTestId("map-legend");
     await expect(legend).toBeVisible();
 
+    const toggleBtn = page.getByTestId("toggle-legend-btn");
+
+    // On mobile viewports (< 768px), legend collapses by default after mount
+    if (page.viewportSize() && page.viewportSize()!.width < 768) {
+      await expect(page.getByTestId("legend-content")).not.toBeVisible();
+      await toggleBtn.click();
+    }
+
     // Check line statuses
     await expect(page.getByTestId("legend-status-operational")).toBeVisible();
     await expect(page.getByTestId("legend-status-construction")).toBeVisible();
@@ -29,7 +37,6 @@ test.describe("Map Legend and Data Source Status", () => {
     await expect(page.getByTestId("legend-station-standard")).toBeVisible();
 
     // Toggle collapse
-    const toggleBtn = page.getByTestId("toggle-legend-btn");
     await toggleBtn.click();
     await expect(page.getByTestId("legend-content")).not.toBeVisible();
 

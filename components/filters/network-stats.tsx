@@ -52,20 +52,20 @@ export function NetworkStats() {
   return (
     <div
       data-testid="network-stats-bar"
-      className="hidden items-center gap-3 text-xs md:flex"
+      className="hidden items-center gap-1.5 whitespace-nowrap text-[10px] lg:flex"
     >
-      <div className="flex items-center gap-1.5 rounded-full border border-emerald-500/20 bg-emerald-950/40 px-2.5 py-0.5 text-emerald-300">
-        <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+      <div className="flex items-center gap-1 rounded-full border border-emerald-500/20 bg-emerald-950/40 px-2 py-0.5 text-emerald-300">
+        <span className="h-1 w-1 rounded-full bg-emerald-400" />
         <span>{stats.operationalKm} km open</span>
       </div>
 
-      <div className="flex items-center gap-1.5 rounded-full border border-amber-500/20 bg-amber-950/40 px-2.5 py-0.5 text-amber-300">
-        <span className="h-1.5 w-1.5 rounded-full bg-amber-400" />
+      <div className="flex items-center gap-1 rounded-full border border-amber-500/20 bg-amber-950/40 px-2 py-0.5 text-amber-300">
+        <span className="h-1 w-1 rounded-full bg-amber-400" />
         <span>{stats.constructionKm} km under constr.</span>
       </div>
 
-      <div className="flex items-center gap-1.5 rounded-full border border-violet-500/20 bg-violet-950/40 px-2.5 py-0.5 text-violet-300">
-        <span className="h-1.5 w-1.5 rounded-full bg-violet-400" />
+      <div className="flex items-center gap-1 rounded-full border border-violet-500/20 bg-violet-950/40 px-2 py-0.5 text-violet-300">
+        <span className="h-1 w-1 rounded-full bg-violet-400" />
         <span>{stats.plannedKm} km planned</span>
       </div>
     </div>

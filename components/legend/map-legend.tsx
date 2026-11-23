@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import { ChevronDown, ChevronUp, Layers } from "lucide-react";
 import { useMetroStore } from "@/store/use-metro-store";
 import { getMetroData } from "@/lib/data";
@@ -13,6 +13,16 @@ interface MapLegendProps {
 
 export function MapLegend({ className = "" }: MapLegendProps) {
   const [isExpanded, setIsExpanded] = useState(true);
+
+  useEffect(() => {
+    if (
+      typeof window !== "undefined" &&
+      typeof window.matchMedia === "function" &&
+      window.matchMedia("(max-width: 767px)").matches
+    ) {
+      setIsExpanded(false);
+    }
+  }, []);
   const selectedCityId = useMetroStore((state) => state.selectedCityId);
 
   const dataset = useMemo(() => getMetroData(), []);
@@ -63,7 +73,7 @@ export function MapLegend({ className = "" }: MapLegendProps) {
       {isExpanded && (
         <div
           data-testid="legend-content"
-          className="flex flex-col gap-3.5 border-t border-slate-800/80 p-3.5 pt-3 text-xs text-slate-300"
+          className="flex max-h-[calc(100dvh-16rem)] flex-col gap-3.5 overflow-y-auto border-t border-slate-800/80 p-3.5 pt-3 text-xs text-slate-300"
         >
           <div>
             <h4 className="mb-2 text-[10px] font-bold uppercase tracking-wider text-slate-400">

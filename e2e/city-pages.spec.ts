@@ -68,6 +68,7 @@ test.describe("M17 City Static Pages & SEO", () => {
   }) => {
     await page.goto("/city/delhi/");
 
+    await page.getByRole("button", { name: "Details" }).click();
     const caveatBanner = page.getByTestId("completeness-caveat-banner");
     await expect(caveatBanner).toBeVisible();
     await expect(caveatBanner).toContainText("Data incomplete for this line");

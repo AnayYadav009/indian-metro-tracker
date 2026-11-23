@@ -19,12 +19,12 @@ export function PhaseFilter() {
 
   if (!activeCity) {
     return (
-      <div className="flex flex-col gap-1.5" data-testid="phase-filter-container">
-        <label className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+      <div className="flex items-center gap-2" data-testid="phase-filter-container">
+        <label className="shrink-0 text-xs font-semibold uppercase tracking-wider text-slate-400">
           Phases
         </label>
         <p
-          className="text-xs italic text-slate-400"
+          className="whitespace-nowrap text-[11px] italic text-slate-400"
           data-testid="phase-filter-empty-hint"
         >
           Select a city to filter by phase
@@ -38,7 +38,7 @@ export function PhaseFilter() {
   if (availablePhases.length === 0) return null;
 
   return (
-    <div className="flex flex-col gap-1.5" data-testid="phase-filter-container">
+    <div className="flex flex-col gap-1" data-testid="phase-filter-container">
       <div className="flex items-center justify-between">
         <label className="text-xs font-semibold uppercase tracking-wider text-slate-400">
           Phases ({activeCity.name})
@@ -54,14 +54,14 @@ export function PhaseFilter() {
         )}
       </div>
 
-      <div className="flex flex-wrap gap-1.5">
+      <div className="flex flex-wrap gap-1">
         <button
           type="button"
           data-testid="phase-pill-all"
           onClick={() => setPhases([])}
           aria-pressed={selectedPhases.length === 0}
           aria-label="Filter network to all phases"
-          className={`rounded-full px-2.5 py-1 text-xs font-medium transition-all ${
+          className={`rounded-full px-2 py-0.5 text-[11px] font-medium transition-all ${
             selectedPhases.length === 0
               ? "bg-slate-700 text-white ring-1 ring-slate-500"
               : "bg-slate-900/80 text-slate-400 hover:bg-slate-800 hover:text-slate-200"
@@ -81,7 +81,7 @@ export function PhaseFilter() {
               onClick={() => togglePhase(phase)}
               aria-pressed={isSelected}
               aria-label={`Filter network to ${formattedLabel}`}
-              className={`rounded-full px-2.5 py-1 text-xs font-medium transition-all ${
+              className={`rounded-full px-2 py-0.5 text-[11px] font-medium transition-all ${
                 isSelected
                   ? "bg-emerald-600 text-white shadow-sm ring-1 ring-emerald-400"
                   : "bg-slate-900/80 text-slate-300 border border-slate-800 hover:border-slate-700 hover:text-white"
