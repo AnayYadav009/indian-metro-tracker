@@ -3,6 +3,8 @@
 import React, { useMemo, useRef, useEffect, useState, useCallback } from "react";
 import Map, {
   NavigationControl,
+  GeolocateControl,
+  Marker,
   Source,
   Layer,
   type MapRef,
@@ -62,6 +64,15 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
   const selectedYear = useMetroStore((state) => state.selectedYear);
   const includeFuture = useMetroStore((state) => state.includeFuture);
   const showStations = useMetroStore((state) => state.showStations);
+  const isPickingLocation = useMetroStore((state) => state.isPickingLocation);
+  const setIsPickingLocation = useMetroStore(
+    (state) => state.setIsPickingLocation
+  );
+  const userLocation = useMetroStore((state) => state.userLocation);
+  const setUserLocation = useMetroStore((state) => state.setUserLocation);
+  const setIsNearestPanelOpen = useMetroStore(
+    (state) => state.setIsNearestPanelOpen
+  );
   const interactiveLayerIds = useMemo(
     () =>
       showStations
@@ -237,6 +248,13 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
 
   const handleMapClick = useCallback(
     (e: MapLayerMouseEvent) => {
+      if (isPickingLocation) {
+        setUserLocation([e.lngLat.lng, e.lngLat.lat]);
+        setIsPickingLocation(false);
+        setIsNearestPanelOpen(true);
+        return;
+      }
+
       const features = e.features;
       if (!features || features.length === 0) {
         setSelectionLocation(null);
@@ -291,7 +309,14 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
 
       clearSelectedFeature();
     },
-    [clearSelectedFeature, setSelectedFeature]
+    [
+      isPickingLocation,
+      setUserLocation,
+      setIsPickingLocation,
+      setIsNearestPanelOpen,
+      clearSelectedFeature,
+      setSelectedFeature,
+    ]
   );
 
   const handleMouseMove = useCallback(
@@ -352,6 +377,18 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
     <div
       data-testid="map-container"
       className={`relative h-full w-full overflow-hidden ${className}`}
+      onClick={(e) => {
+        if (isPickingLocation && mapRef.current) {
+          const map = mapRef.current.getMap();
+          const rect = e.currentTarget.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          const lngLat = map.unproject([x, y]);
+          setUserLocation([lngLat.lng, lngLat.lat]);
+          setIsPickingLocation(false);
+          setIsNearestPanelOpen(true);
+        }
+      }}
     >
       <Map
         ref={mapRef}
@@ -363,7 +400,7 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
         maxZoom={INITIAL_VIEW_STATE.maxZoom}
         attributionControl={false}
         interactiveLayerIds={interactiveLayerIds}
-        cursor={cursor}
+        cursor={isPickingLocation ? "crosshair" : cursor}
         onClick={handleMapClick}
         onMouseMove={handleMouseMove}
         onMouseEnter={() => setCursor("pointer")}
@@ -398,6 +435,17 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
         onIdle={() => setIsLoadingTiles(false)}
       >
         <NavigationControl position="top-right" showCompass showZoom />
+        <GeolocateControl
+          position="top-right"
+          positionOptions={{ enableHighAccuracy: true }}
+          trackUserLocation={false}
+          onGeolocate={(e: any) => {
+            if (e.coords) {
+              setUserLocation([e.coords.longitude, e.coords.latitude]);
+              setIsNearestPanelOpen(true);
+            }
+          }}
+        />
 
         <Source id="metro-segments" type="geojson" data={dataset.segments}>
           <Layer {...getSelectedSegmentLayer(selectedSegmentId)} />
@@ -445,6 +493,23 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
             )}
           />
         </Source>
+
+        {userLocation && (
+          <Marker
+            longitude={userLocation[0]}
+            latitude={userLocation[1]}
+            anchor="center"
+          >
+            <div
+              data-testid="user-location-marker"
+              className="relative flex h-6 w-6 items-center justify-center pointer-events-none"
+              title="Your location"
+            >
+              <span className="absolute h-6 w-6 animate-ping rounded-full bg-blue-500 opacity-60" />
+              <span className="relative flex h-3.5 w-3.5 items-center justify-center rounded-full border-2 border-white bg-blue-600 shadow-md" />
+            </div>
+          </Marker>
+        )}
       </Map>
 
       {isLoadingTiles && (
