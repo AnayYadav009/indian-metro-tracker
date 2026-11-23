@@ -4,38 +4,7 @@ import React from "react";
 import { useMetroStore } from "@/store/use-metro-store";
 import type { Status } from "@/types/schema";
 import { getMetroData } from "@/lib/data";
-
-interface StatusOption {
-  id: Status;
-  label: string;
-  patternLabel: string;
-  description: string;
-  lineStyle: "solid" | "dashed" | "dotted";
-}
-
-const STATUS_OPTIONS: StatusOption[] = [
-  {
-    id: "operational",
-    label: "Operational",
-    patternLabel: "Solid",
-    description: "In-service lines",
-    lineStyle: "solid",
-  },
-  {
-    id: "construction",
-    label: "Under Construction",
-    patternLabel: "Dashed",
-    description: "Actively building",
-    lineStyle: "dashed",
-  },
-  {
-    id: "planned",
-    label: "Planned / Proposed",
-    patternLabel: "Dotted",
-    description: "Approved & DPRs",
-    lineStyle: "dotted",
-  },
-];
+import { STATUS_LIST } from "@/lib/metro-styles";
 
 export function StatusFilter() {
   const selectedCityId = useMetroStore((state) => state.selectedCityId);
@@ -48,15 +17,8 @@ export function StatusFilter() {
   const getCountForStatus = (status: Status) => {
     return dataset.segments.features.filter((f) => {
       if (f.properties.status !== status) return false;
-      if (selectedCityId) {
-        const city = dataset.cities.find((c) => c.id === selectedCityId);
-        if (
-          city &&
-          f.properties.city.toLowerCase() !== city.name.toLowerCase() &&
-          f.properties.city.toLowerCase() !== city.id.toLowerCase()
-        ) {
-          return false;
-        }
+      if (selectedCityId && f.properties.city_id !== selectedCityId) {
+        return false;
       }
       return true;
     }).length;
@@ -72,7 +34,7 @@ export function StatusFilter() {
       </div>
 
       <div className="grid grid-cols-1 gap-1.5 sm:grid-cols-3">
-        {STATUS_OPTIONS.map((opt) => {
+        {STATUS_LIST.map((opt) => {
           const isActive = selectedStatuses.includes(opt.id);
           const count = getCountForStatus(opt.id);
 

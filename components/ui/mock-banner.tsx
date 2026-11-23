@@ -53,5 +53,3 @@ export function MockBanner({ className = "" }: MockBannerProps) {
     </aside>
   );
 }
-
-export default MockBanner;

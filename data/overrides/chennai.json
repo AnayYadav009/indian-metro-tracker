@@ -1,0 +1,521 @@
+{
+  "city": {
+    "id": "chennai",
+    "name": "Chennai",
+    "bbox": [
+      80.05,
+      12.82,
+      80.35,
+      13.22
+    ],
+    "operator": "CMRL",
+    "phases": [
+      "1",
+      "1 Ext",
+      "2"
+    ]
+  },
+  "lines": [
+    {
+      "id": "che-blue",
+      "name": "Blue Line (Corridor 1)",
+      "city": "Chennai",
+      "color": "#0072CE",
+      "operator": "CMRL",
+      "city_id": "chennai",
+      "source": "osm+cmrl"
+    },
+    {
+      "id": "che-green",
+      "name": "Green Line (Corridor 2)",
+      "city": "Chennai",
+      "color": "#009A44",
+      "operator": "CMRL",
+      "city_id": "chennai",
+      "source": "osm+cmrl"
+    },
+    {
+      "id": "che-corridor-3",
+      "name": "Purple Line (Corridor 3)",
+      "city": "Chennai",
+      "color": "#702082",
+      "operator": "CMRL",
+      "city_id": "chennai",
+      "source": "cmrl"
+    },
+    {
+      "id": "che-corridor-4",
+      "name": "Yellow Line (Corridor 4)",
+      "city": "Chennai",
+      "color": "#FFD100",
+      "operator": "CMRL",
+      "city_id": "chennai",
+      "source": "cmrl"
+    },
+    {
+      "id": "che-corridor-5",
+      "name": "Red Line (Corridor 5)",
+      "city": "Chennai",
+      "color": "#ED1C24",
+      "operator": "CMRL",
+      "city_id": "chennai",
+      "source": "cmrl"
+    }
+  ],
+  "segments": [
+    {
+      "osmId": 8037595,
+      "segment_id": "che-blue-seg-01",
+      "line_id": "che-blue",
+      "line_name": "Blue Line (Wimco Nagar Depot - Chennai Airport)",
+      "phase": "1",
+      "status": "operational",
+      "gauge": "standard",
+      "inaugurated_on": "2016-09-21",
+      "expected_completion": null,
+      "color": "#0072CE",
+      "references": [
+        "https://chennaimetrorail.org",
+        "https://pib.gov.in/PressReleasePage.aspx?PRID=1696235"
+      ]
+    },
+    {
+      "osmId": 8037605,
+      "segment_id": "che-green-seg-01",
+      "line_id": "che-green",
+      "line_name": "Green Line (Chennai Central - St. Thomas Mount)",
+      "phase": "1",
+      "status": "operational",
+      "gauge": "standard",
+      "inaugurated_on": "2015-06-29",
+      "expected_completion": null,
+      "color": "#009A44",
+      "references": [
+        "https://chennaimetrorail.org"
+      ]
+    },
+    {
+      "osmId": 12824987,
+      "segment_id": "che-corridor-4-seg-01",
+      "line_id": "che-corridor-4",
+      "line_name": "Corridor 4 (Poonamallee Bypass - Light House)",
+      "phase": "2",
+      "status": "construction",
+      "gauge": "standard",
+      "inaugurated_on": null,
+      "expected_completion": "2026-12",
+      "color": "#FFD100",
+      "references": [
+        "https://chennaimetrorail.org",
+        "https://pib.gov.in/PressReleasePage.aspx?PRID=2061557"
+      ]
+    },
+    {
+      "osmId": 12824257,
+      "segment_id": "che-corridor-3-seg-01",
+      "line_id": "che-corridor-3",
+      "line_name": "Purple Line (Madhavaram - SIPCOT)",
+      "phase": "2",
+      "status": "construction",
+      "gauge": "standard",
+      "inaugurated_on": null,
+      "expected_completion": "2027",
+      "color": "#702082",
+      "references": [
+        "https://chennaimetrorail.org",
+        "https://pib.gov.in/PressReleasePage.aspx?PRID=2061557"
+      ],
+      "city_id": "chennai"
+    },
+    {
+      "osmId": 12828618,
+      "segment_id": "che-corridor-5-seg-01",
+      "line_id": "che-corridor-5",
+      "line_name": "Red Line (Madhavaram - Sholinganallur)",
+      "phase": "2",
+      "status": "construction",
+      "gauge": "standard",
+      "inaugurated_on": null,
+      "expected_completion": "2027",
+      "color": "#ED1C24",
+      "references": [
+        "https://chennaimetrorail.org",
+        "https://pib.gov.in/PressReleasePage.aspx?PRID=2061557"
+      ],
+      "city_id": "chennai"
+    }
+  ],
+  "interchangeStationNames": [
+    "Puratchi Thalaivar Dr. M.G. Ramachandran Central Metro",
+    "Chennai Central",
+    "Central Metro",
+    "Arignar Anna Alandur Metro",
+    "Alandur"
+  ],
+  "dedupeRadiusM": 300,
+  "stationAliases": {
+    "Airport": "Chennai International Airport",
+    "Chennai Airport": "Chennai International Airport",
+    "Central": "Chennai Central",
+    "Central Metro": "Chennai Central",
+    "Puratchi Thalaivar Dr. M.G. Ramachandran Central Metro": "Chennai Central",
+    "Egmore Metro": "Egmore",
+    "St. Thomas Mount Metro": "St. Thomas Mount"
+  },
+  "stationOverrides": {
+    "Sir Theagaraya College": {
+      "layout": "underground",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Washermanpet": {
+      "layout": "underground",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Mannadi": {
+      "layout": "underground",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "High Court": {
+      "layout": "underground",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Chennai Central": {
+      "layout": "underground",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Government Estate": {
+      "layout": "underground",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "LIC": {
+      "layout": "underground",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Thousand Lights": {
+      "layout": "underground",
+      "line_ids": [
+        "che-blue"
+      ],
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "AG-DMS": {
+      "layout": "underground",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Teynampet": {
+      "layout": "underground",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Nandanam": {
+      "layout": "underground",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Saidapet": {
+      "layout": "underground",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Egmore": {
+      "layout": "underground",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Nehru Park": {
+      "layout": "underground",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Kilpauk": {
+      "layout": "underground",
+      "line_ids": [
+        "che-green"
+      ],
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Pachaiyappa's College": {
+      "layout": "underground",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Shenoy Nagar": {
+      "layout": "underground",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Anna Nagar East": {
+      "layout": "underground",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Anna Nagar Tower": {
+      "layout": "underground",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Thirumangalam": {
+      "layout": "underground",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Wimco Nagar Depot": {
+      "layout": "at-grade",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Wimco Nagar": {
+      "layout": "elevated",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Thiruvottiyur Theradi": {
+      "layout": "elevated",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Thiruvottriyur": {
+      "layout": "elevated",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Kaladipet": {
+      "layout": "elevated",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Tollgate": {
+      "layout": "elevated",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "New Washermanpet": {
+      "layout": "elevated",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Tondiarpet": {
+      "layout": "elevated",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Little Mount": {
+      "layout": "elevated",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Guindy": {
+      "layout": "elevated",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Alandur": {
+      "layout": "elevated",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Nanganallur Road": {
+      "layout": "elevated",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Meenambakkam": {
+      "layout": "elevated",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Chennai International Airport": {
+      "layout": "elevated",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Koyambedu": {
+      "layout": "elevated",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "CMBT": {
+      "layout": "elevated",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Arumbakkam": {
+      "layout": "elevated",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Vadapalani": {
+      "layout": "elevated",
+      "line_ids": [
+        "che-green"
+      ],
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Ashok Nagar": {
+      "layout": "elevated",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Ekkattuthangal": {
+      "layout": "elevated",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "St. Thomas Mount": {
+      "layout": "elevated",
+      "references": [
+        "https://chennaimetrorail.org"
+      ],
+      "last_verified": "2026-10-08"
+    }
+  },
+  "out_of_scope_station_ids": [
+    "Porur Junction",
+    "Poonamallee Bypass",
+    "Thelliyaragaram",
+    "Porur Bypass",
+    "Kumananchavadi",
+    "Poonamallee Government Hospital Metro",
+    "Poonamallee Bus Stand Metro",
+    "Kattupakkam",
+    "Karayanchavadi",
+    "Iyappanthangal Metro",
+    "Madhavaram Milk Colony",
+    "Sholinganallur Metro",
+    "Kodambakkam Metro",
+    "Panagal Park Metro",
+    "Boat Club Metro",
+    "Bharathidasan Road Metro",
+    "Alwarpet Metro",
+    "Thirumayilai Metro",
+    "Kutchery Road Metro",
+    "Lighthouse Metro",
+    "Madhavaram Depot",
+    "Royapettah Metro",
+    "Kodambakkam Powerhouse",
+    "Alwarthirunagar",
+    "Valasaravakkam",
+    "Karambakkam",
+    "Alapakkam",
+    "Virugambakkam South",
+    "Saligramam",
+    "Virugambakkam North",
+    "Natesan Nagar",
+    "Koyambedu Market",
+    "Madhavaram Bus Terminal Metro",
+    "Assissi Nagar",
+    "Manjampakkam",
+    "Velmurugan Nagar",
+    "Shastri Nagar",
+    "Retteri Junction Metro",
+    "Kolathur",
+    "Srinivasa Nagar",
+    "Villivakkam Metro",
+    "Mugalivakkam",
+    "Ramapuram",
+    "Manapakkam",
+    "Chennai Trade Centre",
+    "Butt Road"
+  ],
+  "out_of_scope_line_ids": [
+    "che-corridor-3",
+    "che-corridor-4",
+    "che-corridor-5"
+  ],
+  "selfIntersectionExemptions": [
+    "che-blue-seg-01",
+    "che-green-seg-01",
+    "che-corridor-5-seg-01"
+  ]
+}

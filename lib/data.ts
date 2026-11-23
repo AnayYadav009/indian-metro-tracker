@@ -64,9 +64,9 @@ export function determineDataSourceState(
 }
 
 export const DATA_SOURCE: DataSourceState = determineDataSourceState(
-  segmentsGeoJson as any,
-  stationsGeoJson as any,
-  linesJson as any,
+  segmentsGeoJson as unknown as SegmentFeatureCollection,
+  stationsGeoJson as unknown as StationFeatureCollection,
+  linesJson as unknown as Line[],
   process.env.NEXT_PUBLIC_DATA_SOURCE
 );
 
@@ -237,7 +237,7 @@ export function getDatasetMetadataSummary(): {
   let latestDateStr = "";
   const sourceTokens = new Set<string>();
 
-  const processRecord = (props?: { source?: string; last_verified?: string }) => {
+  const processRecord = (props?: { source?: string; last_verified?: string | null }) => {
     if (!props) return;
     if (props.last_verified && props.last_verified > latestDateStr) {
       latestDateStr = props.last_verified;

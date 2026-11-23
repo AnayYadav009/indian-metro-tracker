@@ -11,6 +11,21 @@ export const INTERACTIVE_LAYER_IDS = [
 ];
 
 /**
+ * Standard data-driven zoom-based line width interpolation across all statuses.
+ */
+export const LINE_WIDTH_ZOOM_EXPRESSION: unknown[] = [
+  "interpolate",
+  ["linear"],
+  ["zoom"],
+  6,
+  2.5,
+  10,
+  4,
+  14,
+  6,
+];
+
+/**
  * 1. Operational Lines Layer:
  * Solid stroke, data-driven line-color based on segment's color.
  */
@@ -25,17 +40,7 @@ export const operationalLineLayer: LayerProps = {
   },
   paint: {
     "line-color": ["get", "color"],
-    "line-width": [
-      "interpolate",
-      ["linear"],
-      ["zoom"],
-      6,
-      2.5,
-      10,
-      4,
-      14,
-      6,
-    ],
+    "line-width": LINE_WIDTH_ZOOM_EXPRESSION as any,
     "line-opacity": 0.95,
   },
 };
@@ -55,17 +60,7 @@ export const constructionLineLayer: LayerProps = {
   },
   paint: {
     "line-color": ["get", "color"],
-    "line-width": [
-      "interpolate",
-      ["linear"],
-      ["zoom"],
-      6,
-      2.5,
-      10,
-      4,
-      14,
-      6,
-    ],
+    "line-width": LINE_WIDTH_ZOOM_EXPRESSION as any,
     "line-dasharray": [4, 2],
     "line-opacity": 0.9,
   },
@@ -86,17 +81,7 @@ export const plannedLineLayer: LayerProps = {
   },
   paint: {
     "line-color": ["get", "color"],
-    "line-width": [
-      "interpolate",
-      ["linear"],
-      ["zoom"],
-      6,
-      2.5,
-      10,
-      4,
-      14,
-      6,
-    ],
+    "line-width": LINE_WIDTH_ZOOM_EXPRESSION as any,
     "line-dasharray": [0.1, 2],
     "line-opacity": 0.85,
   },
@@ -225,5 +210,55 @@ export function withFilter<T extends LayerProps>(layer: T, filter?: unknown): T 
     ...layer,
     filter,
   } as T;
+}
+
+/**
+ * Builds WebGL filter condition for a segment status layer based on store state.
+ */
+export function buildStatusFilter(
+  status: "operational" | "construction" | "planned",
+  selectedStatuses: string[],
+  selectedCityId: string | null,
+  selectedPhases: string[]
+): unknown[] {
+  if (!selectedStatuses.includes(status)) {
+    return ["==", ["get", "status"], "__NONE__"];
+  }
+  const conditions: unknown[] = ["all", ["==", ["get", "status"], status]];
+
+  if (selectedCityId) {
+    conditions.push(["==", ["get", "city_id"], selectedCityId]);
+  }
+
+  if (selectedPhases.length > 0) {
+    conditions.push(["in", ["get", "phase"], ["literal", selectedPhases]]);
+  }
+
+  return conditions;
+}
+
+/**
+ * Builds WebGL filter condition for the station points layer based on store state.
+ */
+export function buildStationFilter(
+  selectedStatuses: string[],
+  selectedCityId: string | null,
+  selectedPhases: string[]
+): unknown[] | undefined {
+  const conditions: unknown[] = ["all"];
+
+  if (selectedStatuses.length < 3) {
+    conditions.push(["in", ["get", "status"], ["literal", selectedStatuses]]);
+  }
+
+  if (selectedCityId) {
+    conditions.push(["==", ["get", "city_id"], selectedCityId]);
+  }
+
+  if (selectedPhases.length > 0) {
+    conditions.push(["in", ["get", "phase"], ["literal", selectedPhases]]);
+  }
+
+  return conditions.length === 1 ? undefined : conditions;
 }
 

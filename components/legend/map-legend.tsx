@@ -207,5 +207,3 @@ export function MapLegend({ className = "" }: MapLegendProps) {
     </div>
   );
 }
-
-export default MapLegend;

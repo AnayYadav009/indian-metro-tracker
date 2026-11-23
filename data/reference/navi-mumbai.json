@@ -1,0 +1,35 @@
+{
+  "city_id": "navi-mumbai",
+  "compiled_on": "2026-10-08",
+  "lines": [
+    {
+      "line_id": "nmm-line-1",
+      "official_name": "Line 1",
+      "operator": "Maha Metro",
+      "topology": "linear",
+      "operational_stations": 11,
+      "official_length_km": 11.1,
+      "terminals": [
+        "CBD Belapur",
+        "Pendhar"
+      ],
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "Phase 1 (Belapur to Pendhar)",
+          "phase": "1",
+          "opened_on": "2023-11-17",
+          "stations_added": 11,
+          "source": {
+            "title": "Navi Mumbai Metro starts services from today",
+            "url": "https://www.thehindu.com/news/cities/mumbai/navi-mumbai-metro-starts-services-from-today/article67543265.ece",
+            "retrieved_at": "2026-10-08",
+            "kind": "news"
+          }
+        }
+      ],
+      "construction": [],
+      "notes": "Line 1 Phase 1 spans 11.10 km from Belapur Terminal to Pendhar with 11 stations, fully elevated. Owned by CIDCO; operated and maintained by Maha Metro under a 10-year contract signed in 2021. OSM tags operator as CIDCO creating a documented source conflict."
+    }
+  ]
+}

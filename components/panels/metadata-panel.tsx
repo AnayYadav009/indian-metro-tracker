@@ -67,5 +67,3 @@ export function MetadataPanel() {
     </div>
   );
 }
-
-export default MetadataPanel;

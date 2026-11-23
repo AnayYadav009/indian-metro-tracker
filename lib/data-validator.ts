@@ -8,14 +8,14 @@ import {
 import type { City, Line, MetroDataset } from "../types/metro";
 import { calculateLineStringLengthKm, checkLengthMismatch } from "./geo";
 
-export const INDIA_COORDINATE_ENVELOPE = {
+const INDIA_COORDINATE_ENVELOPE = {
   minLng: 68,
   maxLng: 98,
   minLat: 6,
   maxLat: 38,
 } as const;
 
-export const BBOX_MARGIN_DEG = 0.05;
+const BBOX_MARGIN_DEG = 0.05;
 
 export interface ValidationResult {
   valid: boolean;
@@ -301,6 +301,13 @@ export function validateMetroDataset(
           `Station "${props.station_id}" references unknown line_id "${lineId}"`
         );
       }
+    }
+
+    // Verify segment_id exists if specified
+    if (props.segment_id && !seenSegmentIds.has(props.segment_id)) {
+      errors.push(
+        `Station "${props.station_id}" references unknown segment_id "${props.segment_id}"`
+      );
     }
 
     // Coordinate Envelope and City Bounding Box checks

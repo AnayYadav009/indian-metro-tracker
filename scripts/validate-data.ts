@@ -1,37 +1,10 @@
-import fs from "node:fs";
-import path from "node:path";
 import { validateMetroDataset } from "../lib/data-validator";
+import { loadMetroDatasetFromDisk } from "./lib/load-dataset";
 
 function runValidation() {
   console.log("🔍 Validating Indian Metro Network Tracker datasets...");
 
-  const dataDir = path.resolve(process.cwd(), "data");
-  const citiesPath = path.join(dataDir, "cities.json");
-  const linesPath = path.join(dataDir, "lines.json");
-  const segmentsPath = path.join(dataDir, "segments.geojson");
-  const stationsPath = path.join(dataDir, "stations.geojson");
-
-  if (!fs.existsSync(citiesPath)) {
-    console.error(`❌ Missing file: ${citiesPath}`);
-    process.exit(1);
-  }
-  if (!fs.existsSync(linesPath)) {
-    console.error(`❌ Missing file: ${linesPath}`);
-    process.exit(1);
-  }
-  if (!fs.existsSync(segmentsPath)) {
-    console.error(`❌ Missing file: ${segmentsPath}`);
-    process.exit(1);
-  }
-  if (!fs.existsSync(stationsPath)) {
-    console.error(`❌ Missing file: ${stationsPath}`);
-    process.exit(1);
-  }
-
-  const cities = JSON.parse(fs.readFileSync(citiesPath, "utf-8"));
-  const lines = JSON.parse(fs.readFileSync(linesPath, "utf-8"));
-  const segments = JSON.parse(fs.readFileSync(segmentsPath, "utf-8"));
-  const stations = JSON.parse(fs.readFileSync(stationsPath, "utf-8"));
+  const { cities, lines, segments, stations } = loadMetroDatasetFromDisk();
 
   const result = validateMetroDataset({ cities, lines, segments, stations });
 

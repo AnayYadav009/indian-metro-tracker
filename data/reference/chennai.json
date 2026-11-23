@@ -1,0 +1,275 @@
+{
+  "city_id": "chennai",
+  "compiled_on": "2026-10-07",
+  "lines": [
+    {
+      "line_id": "che-blue",
+      "official_name": "Blue Line (Corridor 1)",
+      "operator": "CMRL",
+      "topology": "linear",
+      "operational_stations": 26,
+      "operational_length_km": 32.65,
+      "planned_length_km": 32.65,
+      "terminals": [
+        "Wimco Nagar Depot",
+        "Chennai International Airport"
+      ],
+      "status": "operational",
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "Little Mount - Chennai International Airport",
+          "phase": null,
+          "opened_on": "2016-09-21",
+          "stations_added": 6,
+          "confidence": "sourced",
+          "source": {
+            "title": "Press Release - Little Mount to Airport Metro opening",
+            "url": "https://chennaimetrorail.org",
+            "retrieved_at": "2026-10-07",
+            "kind": "official"
+          }
+        },
+        {
+          "stage": "Saidapet - AG-DMS (via Nandanam, Teynampet)",
+          "phase": null,
+          "opened_on": "2018-05-25",
+          "stations_added": 4,
+          "confidence": "sourced",
+          "source": {
+            "title": "CMRL Chronology of Milestones - Underground Stretch Opening",
+            "url": "https://chennaimetrorail.org",
+            "retrieved_at": "2026-10-07",
+            "kind": "official"
+          }
+        },
+        {
+          "stage": "AG-DMS - Washermanpet (completing Phase I original network)",
+          "phase": null,
+          "opened_on": "2019-02-10",
+          "stations_added": 7,
+          "confidence": "sourced",
+          "source": {
+            "title": "CMRL Chronology of Milestones - AG-DMS to Washermanpet",
+            "url": "https://chennaimetrorail.org",
+            "retrieved_at": "2026-10-07",
+            "kind": "official"
+          }
+        },
+        {
+          "stage": "Phase I Extension (Washermanpet - Wimco Nagar)",
+          "phase": null,
+          "opened_on": "2021-02-14",
+          "stations_added": 7,
+          "confidence": "sourced",
+          "source": {
+            "title": "PM to visit Tamil Nadu and Kerala on 14th February (Washermanpet to Wimco Nagar inauguration)",
+            "url": "https://pib.gov.in/PressReleasePage.aspx?PRID=1696235",
+            "retrieved_at": "2026-10-07",
+            "kind": "government"
+          }
+        },
+        {
+          "stage": "Phase I Extension infill & terminal (Thiruvottriyur Theradi & Wimco Nagar Depot)",
+          "phase": null,
+          "opened_on": "2022-03-13",
+          "stations_added": 2,
+          "confidence": "sourced",
+          "source": {
+            "title": "CMRL Chronology of Milestones - Wimco Nagar Depot and Thiruvottriyur Theradi opening",
+            "url": "https://chennaimetrorail.org",
+            "retrieved_at": "2026-10-07",
+            "kind": "official"
+          }
+        }
+      ],
+      "construction": [],
+      "notes": "32.65 km operational heavy rail metro corridor from Wimco Nagar Depot in the north to Chennai International Airport in the south across 26 stations. Operated by Chennai Metro Rail Limited (CMRL).",
+      "confidence": "sourced"
+    },
+    {
+      "line_id": "che-green",
+      "official_name": "Green Line (Corridor 2)",
+      "operator": "CMRL",
+      "topology": "linear",
+      "operational_stations": 17,
+      "operational_length_km": 21.96,
+      "planned_length_km": 21.96,
+      "terminals": [
+        "Chennai Central",
+        "St. Thomas Mount"
+      ],
+      "status": "operational",
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "Koyambedu - Alandur (first commissioned stretch of Chennai Metro)",
+          "phase": null,
+          "opened_on": "2015-06-29",
+          "stations_added": 7,
+          "confidence": "sourced",
+          "source": {
+            "title": "CMRL Chronology of Milestones - Koyambedu to Alandur opening",
+            "url": "https://chennaimetrorail.org",
+            "retrieved_at": "2026-10-07",
+            "kind": "official"
+          }
+        },
+        {
+          "stage": "Alandur - St. Thomas Mount",
+          "phase": null,
+          "opened_on": "2016-10-14",
+          "stations_added": 1,
+          "confidence": "sourced",
+          "source": {
+            "title": "CMRL Chronology of Milestones - St. Thomas Mount commercial operations",
+            "url": "https://chennaimetrorail.org",
+            "retrieved_at": "2026-10-07",
+            "kind": "official"
+          }
+        },
+        {
+          "stage": "Thirumangalam - Nehru Park (first underground section)",
+          "phase": null,
+          "opened_on": "2017-05-14",
+          "stations_added": 7,
+          "confidence": "sourced",
+          "source": {
+            "title": "CMRL Chronology of Milestones - Thirumangalam to Nehru Park underground opening",
+            "url": "https://chennaimetrorail.org",
+            "retrieved_at": "2026-10-07",
+            "kind": "official"
+          }
+        },
+        {
+          "stage": "Nehru Park - Chennai Central (via Egmore)",
+          "phase": null,
+          "opened_on": "2018-05-25",
+          "stations_added": 2,
+          "confidence": "sourced",
+          "source": {
+            "title": "CMRL Chronology of Milestones - Nehru Park to Chennai Central opening",
+            "url": "https://chennaimetrorail.org",
+            "retrieved_at": "2026-10-07",
+            "kind": "official"
+          }
+        }
+      ],
+      "construction": [],
+      "notes": "21.96 km operational corridor linking Chennai Central to St. Thomas Mount via Koyambedu and Alandur across 17 stations. Operated by Chennai Metro Rail Limited (CMRL).",
+      "confidence": "sourced"
+    },
+    {
+      "line_id": "che-corridor-3",
+      "official_name": "Purple Line (Corridor 3)",
+      "operator": "CMRL",
+      "topology": "linear",
+      "operational_stations": 0,
+      "operational_length_km": 0,
+      "planned_length_km": 45.80,
+      "terminals": [
+        "Madhavaram Milk Colony",
+        "SIPCOT"
+      ],
+      "status": "under_construction",
+      "disjoint_stretches": false,
+      "openings": [],
+      "construction": [
+        {
+          "stretch": "Madhavaram - SIPCOT",
+          "phase": "2",
+          "expected_completion": "2027",
+          "stations": 50,
+          "notes": "45.8 km North-South corridor linking Madhavaram to SIPCOT (Siruseri IT corridor) via Adyar, Nehru Nagar, and Sholinganallur. Cabinet approved in October 2024 as Central sector project.",
+          "source": {
+            "title": "Cabinet approves Chennai Metro Rail Project Phase II comprising three corridors",
+            "url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2061557",
+            "retrieved_at": "2026-10-07",
+            "kind": "government"
+          }
+        }
+      ],
+      "notes": "Phase II Corridor 3 spanning 45.8 km with 50 stations connecting Madhavaram to SIPCOT. Under active construction.",
+      "confidence": "sourced"
+    },
+    {
+      "line_id": "che-corridor-4",
+      "official_name": "Yellow Line (Corridor 4)",
+      "operator": "CMRL",
+      "topology": "linear",
+      "operational_stations": 0,
+      "operational_length_km": 0,
+      "planned_length_km": 26.10,
+      "terminals": [
+        "Light House",
+        "Poonamallee Bypass"
+      ],
+      "status": "under_construction",
+      "disjoint_stretches": false,
+      "openings": [],
+      "construction": [
+        {
+          "stretch": "Poonamallee Bypass - Porur Junction",
+          "phase": "2",
+          "expected_completion": "2026",
+          "stations": 10,
+          "notes": "Priority elevated stretch between Poonamallee Bypass and Porur Junction (approx 9.1 km). Trial runs conducted in 2025/2026.",
+          "source": {
+            "title": "CMRL Project Progress - Phase II Corridor 4 updates",
+            "url": "https://chennaimetrorail.org",
+            "retrieved_at": "2026-10-07",
+            "kind": "official"
+          }
+        },
+        {
+          "stretch": "Porur Junction - Light House",
+          "phase": "2",
+          "expected_completion": "2027",
+          "stations": 20,
+          "notes": "Remaining 17 km underground and elevated stretch from Porur to Light House via Vadapalani, Nandanam, and Alwarpet.",
+          "source": {
+            "title": "Cabinet approves Chennai Metro Rail Project Phase II comprising three corridors",
+            "url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2061557",
+            "retrieved_at": "2026-10-07",
+            "kind": "government"
+          }
+        }
+      ],
+      "notes": "Phase II Corridor 4 spanning 26.1 km with 30 stations connecting Light House on the Marina to Poonamallee Bypass. Under active construction.",
+      "confidence": "sourced"
+    },
+    {
+      "line_id": "che-corridor-5",
+      "official_name": "Red Line (Corridor 5)",
+      "operator": "CMRL",
+      "topology": "linear",
+      "operational_stations": 0,
+      "operational_length_km": 0,
+      "planned_length_km": 47.00,
+      "terminals": [
+        "Madhavaram Milk Colony",
+        "Sholinganallur"
+      ],
+      "status": "under_construction",
+      "disjoint_stretches": false,
+      "openings": [],
+      "construction": [
+        {
+          "stretch": "Madhavaram - Sholinganallur",
+          "phase": "2",
+          "expected_completion": "2027",
+          "stations": 48,
+          "notes": "47.0 km circumferential corridor connecting Madhavaram to Sholinganallur via Kolathur, Koyambedu, Alandur, and Medavakkam.",
+          "source": {
+            "title": "Cabinet approves Chennai Metro Rail Project Phase II comprising three corridors",
+            "url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2061557",
+            "retrieved_at": "2026-10-07",
+            "kind": "government"
+          }
+        }
+      ],
+      "notes": "Phase II Corridor 5 spanning 47.0 km with 48 stations connecting Madhavaram to Sholinganallur. Under active construction.",
+      "confidence": "sourced"
+    }
+  ]
+}

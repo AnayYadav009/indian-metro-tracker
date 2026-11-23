@@ -6,7 +6,8 @@
     "city": "Delhi",
     "color": "#FFD700",
     "operator": "DMRC",
-    "source": "mock"
+    "source": "mock",
+    "retrieved_at": "2026-10-07"
   },
   {
     "id": "del-blue",
@@ -15,7 +16,8 @@
     "city": "Delhi",
     "color": "#0070BB",
     "operator": "DMRC",
-    "source": "mock"
+    "source": "mock",
+    "retrieved_at": "2026-10-07"
   },
   {
     "id": "del-silver",
@@ -24,7 +26,8 @@
     "city": "Delhi",
     "color": "#A0A0A0",
     "operator": "DMRC",
-    "source": "mock"
+    "source": "mock",
+    "retrieved_at": "2026-10-07"
   },
   {
     "id": "blr-purple",
@@ -33,7 +36,8 @@
     "city": "Bengaluru",
     "color": "#800080",
     "operator": "BMRCL",
-    "source": "mock"
+    "source": "mock",
+    "retrieved_at": "2026-10-07"
   },
   {
     "id": "blr-blue",
@@ -42,7 +46,8 @@
     "city": "Bengaluru",
     "color": "#1E90FF",
     "operator": "BMRCL",
-    "source": "mock"
+    "source": "mock",
+    "retrieved_at": "2026-10-07"
   },
   {
     "id": "mum-line-1",
@@ -51,7 +56,8 @@
     "city": "Mumbai",
     "color": "#0072CE",
     "operator": "MMRDA",
-    "source": "mock"
+    "source": "mock",
+    "retrieved_at": "2026-10-07"
   },
   {
     "id": "mum-line-3",
@@ -60,7 +66,8 @@
     "city": "Mumbai",
     "color": "#00A3E0",
     "operator": "MMRDA",
-    "source": "mock"
+    "source": "mock",
+    "retrieved_at": "2026-10-07"
   },
   {
     "id": "mum-line-4",
@@ -69,6 +76,7 @@
     "city": "Mumbai",
     "color": "#00B140",
     "operator": "MMRDA",
-    "source": "mock"
+    "source": "mock",
+    "retrieved_at": "2026-10-07"
   }
 ]

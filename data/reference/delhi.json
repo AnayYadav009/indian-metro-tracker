@@ -1,0 +1,588 @@
+{
+  "city_id": "delhi",
+  "compiled_on": "2026-10-07",
+  "lines": [
+    {
+      "line_id": "del-red",
+      "official_name": "Red Line (Line 1)",
+      "operator": "DMRC",
+      "topology": "linear",
+      "operational_stations": 29,
+      "operational_length_km": 34.55,
+      "planned_length_km": 61.01,
+      "terminals": [
+        "Rithala",
+        "Shaheed Sthal"
+      ],
+      "status": "operational",
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "Shahdara - Tis Hazari",
+          "phase": "1",
+          "opened_on": "2002-12-25",
+          "stations_added": 6,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Tis Hazari - Inderlok",
+          "phase": "1",
+          "opened_on": "2003-10-03",
+          "stations_added": 4,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Inderlok - Rithala",
+          "phase": "1",
+          "opened_on": "2004-03-31",
+          "stations_added": 8,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Shahdara - Dilshad Garden",
+          "phase": "2",
+          "opened_on": "2008-06-04",
+          "stations_added": 3,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Dilshad Garden - Shaheed Sthal (New Bus Adda)",
+          "phase": "3",
+          "opened_on": "2019-03-08",
+          "stations_added": 8,
+          "confidence": "unverified"
+        }
+      ],
+      "construction": [
+        {
+          "stretch": "Phase 4 extension (Rithala - Narela - Nathupur/Kundli)",
+          "phase": "4",
+          "expected_completion": null,
+          "stations": 21,
+          "notes": "Target completion late 2028 per 4-year construction schedule from approval."
+        }
+      ],
+      "notes": "Operational line spans 34.55 km with 29 stations. Phase 4 extension (26.46 km, 21 stations) approved December 2024.",
+      "confidence": "unverified"
+    },
+    {
+      "line_id": "del-yellow",
+      "official_name": "Yellow Line (Line 2)",
+      "operator": "DMRC",
+      "topology": "linear",
+      "operational_stations": 37,
+      "operational_length_km": 49.02,
+      "planned_length_km": 49.02,
+      "terminals": [
+        "Samaypur Badli",
+        "Millennium City Centre Gurugram"
+      ],
+      "status": "operational",
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "Vishwa Vidyalaya - Kashmere Gate",
+          "phase": "1",
+          "opened_on": "2004-12-20",
+          "stations_added": 4,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Kashmere Gate - Central Secretariat",
+          "phase": "1",
+          "opened_on": "2005-07-03",
+          "stations_added": 6,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Vishwa Vidyalaya - Jahangirpuri",
+          "phase": "2",
+          "opened_on": "2009-02-04",
+          "stations_added": 5,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "HUDA City Centre (Millennium City Centre) - Qutab Minar",
+          "phase": "2",
+          "opened_on": "2010-06-21",
+          "stations_added": 9,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Central Secretariat - Qutab Minar",
+          "phase": "2",
+          "opened_on": "2010-09-03",
+          "stations_added": 10,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Jahangirpuri - Samaypur Badli",
+          "phase": "3",
+          "opened_on": "2015-11-10",
+          "stations_added": 3,
+          "confidence": "unverified"
+        }
+      ],
+      "construction": [],
+      "notes": "49.02 km fully operational linear corridor with 37 stations connecting Samaypur Badli to Millennium City Centre Gurugram.",
+      "confidence": "unverified"
+    },
+    {
+      "line_id": "del-blue",
+      "official_name": "Blue Line (Line 3 & Line 4)",
+      "operator": "DMRC",
+      "topology": "branched",
+      "operational_stations": 58,
+      "operational_length_km": 65.35,
+      "planned_length_km": 65.35,
+      "terminals": [
+        "Dwarka Sector 21",
+        "Noida Electronic City",
+        "Vaishali"
+      ],
+      "status": "operational",
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "Barakhamba Road - Dwarka",
+          "phase": "1",
+          "opened_on": "2005-12-31",
+          "stations_added": 22,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Dwarka - Dwarka Sector 9",
+          "phase": "1",
+          "opened_on": "2006-04-01",
+          "stations_added": 6,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Barakhamba Road - Indraprastha",
+          "phase": "1",
+          "opened_on": "2006-11-11",
+          "stations_added": 3,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Indraprastha - Yamuna Bank",
+          "phase": "2",
+          "opened_on": "2009-05-10",
+          "stations_added": 1,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Yamuna Bank - Noida City Centre",
+          "phase": "2",
+          "opened_on": "2009-11-12",
+          "stations_added": 10,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Yamuna Bank - Anand Vihar",
+          "phase": "2",
+          "opened_on": "2010-01-06",
+          "stations_added": 6,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Dwarka Sector 9 - Dwarka Sector 21",
+          "phase": "2",
+          "opened_on": "2010-10-30",
+          "stations_added": 2,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Anand Vihar - Vaishali (Line 4 branch)",
+          "phase": "2",
+          "opened_on": "2011-07-14",
+          "stations_added": 2,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Noida City Centre - Noida Electronic City",
+          "phase": "3",
+          "opened_on": "2019-03-09",
+          "stations_added": 6,
+          "confidence": "unverified"
+        }
+      ],
+      "construction": [],
+      "notes": "65.35 km branched network across main line (50 stations) and Vaishali branch (8 stations, including Yamuna Bank interchange).",
+      "confidence": "unverified"
+    },
+    {
+      "line_id": "del-green",
+      "official_name": "Green Line (Line 5)",
+      "operator": "DMRC",
+      "topology": "branched",
+      "operational_stations": 24,
+      "operational_length_km": 28.79,
+      "planned_length_km": 28.79,
+      "terminals": [
+        "Inderlok",
+        "Kirti Nagar",
+        "Brigadier Hoshiyar Singh"
+      ],
+      "status": "operational",
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "Inderlok - Mundka",
+          "phase": "2",
+          "opened_on": "2010-04-03",
+          "stations_added": 14,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Ashok Park Main - Kirti Nagar branch",
+          "phase": "2",
+          "opened_on": "2011-08-27",
+          "stations_added": 2,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Mundka - Brigadier Hoshiyar Singh (Bahadurgarh)",
+          "phase": "3",
+          "opened_on": "2018-06-24",
+          "stations_added": 7,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Punjabi Bagh West interchange halt",
+          "phase": "3",
+          "opened_on": "2022-03-29",
+          "stations_added": 1,
+          "confidence": "unverified"
+        }
+      ],
+      "construction": [],
+      "notes": "28.79 km branched line. Main branch to Inderlok, secondary branch to Kirti Nagar. Note: Inderlok - Indraprastha extension is part of the Magenta Line (Line 8).",
+      "confidence": "unverified"
+    },
+    {
+      "line_id": "del-violet",
+      "official_name": "Violet Line (Line 6)",
+      "operator": "DMRC",
+      "topology": "linear",
+      "operational_stations": 34,
+      "operational_length_km": 46.34,
+      "planned_length_km": 46.34,
+      "terminals": [
+        "Kashmere Gate",
+        "Raja Nahar Singh"
+      ],
+      "status": "operational",
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "Central Secretariat - Sarita Vihar",
+          "phase": "2",
+          "opened_on": "2010-10-03",
+          "stations_added": 13,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Sarita Vihar - Badarpur Border",
+          "phase": "2",
+          "opened_on": "2011-01-14",
+          "stations_added": 3,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Central Secretariat - Mandi House",
+          "phase": "3",
+          "opened_on": "2014-06-26",
+          "stations_added": 2,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Mandi House - ITO",
+          "phase": "3",
+          "opened_on": "2015-06-08",
+          "stations_added": 1,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Badarpur - Escorts Mujesar",
+          "phase": "3",
+          "opened_on": "2015-09-06",
+          "stations_added": 9,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "ITO - Kashmere Gate (Heritage Line)",
+          "phase": "3",
+          "opened_on": "2017-05-28",
+          "stations_added": 4,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Escorts Mujesar - Raja Nahar Singh (Ballabhgarh)",
+          "phase": "3",
+          "opened_on": "2018-11-19",
+          "stations_added": 2,
+          "confidence": "unverified"
+        }
+      ],
+      "construction": [],
+      "notes": "46.34 km linear corridor with 34 stations connecting Kashmere Gate to Ballabhgarh.",
+      "confidence": "unverified"
+    },
+    {
+      "line_id": "del-airport",
+      "official_name": "Airport Express (Orange Line)",
+      "operator": "DMRC",
+      "topology": "linear",
+      "operational_stations": 7,
+      "operational_length_km": 24.69,
+      "planned_length_km": 24.69,
+      "terminals": [
+        "New Delhi",
+        "Yashobhoomi Dwarka Sector 25"
+      ],
+      "status": "operational",
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "New Delhi - Dwarka Sector 21",
+          "phase": "2",
+          "opened_on": "2011-02-23",
+          "stations_added": 6,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Dwarka Sector 21 - Yashobhoomi Dwarka Sector 25",
+          "phase": null,
+          "opened_on": "2023-09-17",
+          "stations_added": 1,
+          "confidence": "unverified"
+        }
+      ],
+      "construction": [],
+      "notes": "High speed airport express corridor (24.69 km, 7 stations) connecting New Delhi to IGI Airport T3 and Yashobhoomi Dwarka Sector 25.",
+      "confidence": "unverified"
+    },
+    {
+      "line_id": "del-pink",
+      "official_name": "Pink Line (Line 7)",
+      "operator": "DMRC",
+      "topology": "loop_with_branch",
+      "operational_stations": null,
+      "operational_stations_candidates": [
+        46,
+        47
+      ],
+      "operational_length_km": 71.55,
+      "planned_length_km": 71.55,
+      "terminals": [
+        "Shiv Vihar"
+      ],
+      "status": "operational",
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "Majlis Park - Durgabai Deshmukh South Campus",
+          "phase": "3",
+          "opened_on": "2018-03-14",
+          "stations_added": 12,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "South Campus - Lajpat Nagar",
+          "phase": "3",
+          "opened_on": "2018-08-06",
+          "stations_added": 6,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Shiv Vihar - Trilokpuri Sanjay Lake",
+          "phase": "3",
+          "opened_on": "2018-10-31",
+          "stations_added": 15,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Lajpat Nagar - Mayur Vihar Pocket 1",
+          "phase": "3",
+          "opened_on": "2018-12-31",
+          "stations_added": 5,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Trilokpuri Sanjay Lake missing link",
+          "phase": "3",
+          "opened_on": "2021-08-06",
+          "stations_added": 1,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Phase 4 loop completion (Majlis Park - Maujpur-Babarpur)",
+          "phase": "4",
+          "opened_on": "2026-03-08",
+          "stations_added": 8,
+          "confidence": "unverified"
+        }
+      ],
+      "construction": [],
+      "notes": "Topology: India's first Ring Metro loop with branch (circular ring loop + branch from Maujpur-Babarpur to terminal Shiv Vihar). Station count candidates: [46, 47]. 46 unique stations (counting Maujpur-Babarpur once) vs 47 operational station stopping points (counting Maujpur-Babarpur on both the loop and branch). Official length is 71.55 km (some sources cite 73.49 km).",
+      "confidence": "unverified"
+    },
+    {
+      "line_id": "del-magenta",
+      "official_name": "Magenta Line (Line 8)",
+      "operator": "DMRC",
+      "topology": "linear",
+      "operational_stations": 33,
+      "operational_length_km": 50.18,
+      "planned_length_km": 79.42,
+      "terminals": [
+        "Krishna Park Extension",
+        "Botanical Garden",
+        "Deepali Chowk",
+        "Majlis Park"
+      ],
+      "status": "operational",
+      "disjoint_stretches": true,
+      "openings": [
+        {
+          "stage": "Botanical Garden - Kalkaji Mandir",
+          "phase": "3",
+          "opened_on": "2017-12-25",
+          "stations_added": 9,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Kalkaji Mandir - Janakpuri West",
+          "phase": "3",
+          "opened_on": "2018-05-28",
+          "stations_added": 16,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Phase 4 Stage 1 (Janakpuri West - Krishna Park Extension)",
+          "phase": "4",
+          "opened_on": "2025-01-05",
+          "stations_added": 1,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Phase 4 Stage 2 disjoint stretch (Deepali Chowk - Majlis Park)",
+          "phase": "4",
+          "opened_on": "2026-03-08",
+          "stations_added": 7,
+          "confidence": "unverified"
+        }
+      ],
+      "construction": [
+        {
+          "stretch": "Phase 4 middle section (Krishna Park Extension - Deepali Chowk)",
+          "phase": "4",
+          "expected_completion": null,
+          "stations": 6,
+          "notes": "Targeted completion late 2026/early 2027. Under construction across 6 intermediate stations: Keshopur, Paschim Vihar, Peeragarhi, Mangolpuri, West Enclave, Pushpanjali."
+        },
+        {
+          "stretch": "Phase 4 eastern section (Majlis Park - RK Ashram Marg)",
+          "phase": "4",
+          "expected_completion": null,
+          "stations": 8,
+          "notes": "Targeted completion late 2027. Under construction across 8 stations."
+        },
+        {
+          "stretch": "Phase 4 extension (Inderlok - Indraprastha)",
+          "phase": "4",
+          "expected_completion": null,
+          "stations": 10,
+          "notes": "Approved March 2024 (12.377 km, 10 stations), construction commenced July 2026; targeted completion 2028."
+        }
+      ],
+      "notes": "Currently operates in two disjoint stretches: Botanical Garden to Krishna Park Extension (40.26 km, 26 stations) and Deepali Chowk to Majlis Park (9.92 km, 7 stations), totaling operational_length_km = 50.18 km and 33 operational stations. Middle section (6 stations: Keshopur, Paschim Vihar, Peeragarhi, Mangolpuri, West Enclave, Pushpanjali) connects KPE to Deepali Chowk; eastern section (Majlis Park to RK Ashram Marg) has 8 stations under construction. Full Janakpuri West to RK Ashram Marg corridor has 22 new stations (1 + 7 + 6 + 8 = 22). Inderlok to Indraprastha (12.38 km, 10 stations) is officially designated as part of the Magenta Line network.",
+      "confidence": "unverified"
+    },
+    {
+      "line_id": "del-grey",
+      "official_name": "Grey Line (Line 9)",
+      "operator": "DMRC",
+      "topology": "linear",
+      "operational_stations": 4,
+      "operational_length_km": 5.19,
+      "planned_length_km": 5.19,
+      "terminals": [
+        "Dwarka",
+        "Dhansa Bus Stand"
+      ],
+      "status": "operational",
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "Dwarka - Najafgarh",
+          "phase": "3",
+          "opened_on": "2019-10-04",
+          "stations_added": 3,
+          "confidence": "unverified"
+        },
+        {
+          "stage": "Najafgarh - Dhansa Bus Stand extension",
+          "phase": null,
+          "opened_on": "2021-09-18",
+          "stations_added": 1,
+          "confidence": "unverified"
+        }
+      ],
+      "construction": [],
+      "notes": "5.19 km operational linear corridor connecting Dwarka to Dhansa Bus Stand with 4 stations.",
+      "confidence": "unverified"
+    },
+    {
+      "line_id": "del-silver",
+      "official_name": "Golden Line (Line 10, formerly Silver)",
+      "operator": "DMRC",
+      "topology": "branched",
+      "operational_stations": 0,
+      "operational_length_km": 0,
+      "planned_length_km": 34.26,
+      "terminals": [
+        "Delhi Aerocity",
+        "Tughlakabad",
+        "Terminal 1 IGI Airport",
+        "Lajpat Nagar"
+      ],
+      "status": "under_construction",
+      "disjoint_stretches": false,
+      "openings": [],
+      "construction": [
+        {
+          "stretch": "Phase 4 priority section (Tughlakabad - Sangam Vihar)",
+          "phase": "4",
+          "expected_completion": null,
+          "stations": 4,
+          "notes": "Targeted completion late 2026 in DMRC reviews."
+        },
+        {
+          "stretch": "Phase 4 main corridor (Sangam Vihar - Delhi Aerocity)",
+          "phase": "4",
+          "expected_completion": null,
+          "stations": 11,
+          "notes": "Targeted completion late 2027 in DMRC reviews."
+        },
+        {
+          "stretch": "Aerocity - Terminal 1 IGI Airport extension",
+          "phase": "4",
+          "expected_completion": null,
+          "stations": 1,
+          "notes": "2.26 km spur extension; targeted completion mid-2028."
+        },
+        {
+          "stretch": "Lajpat Nagar - Saket G-Block branch",
+          "phase": "4",
+          "expected_completion": null,
+          "stations": 8,
+          "notes": "Approved March 2024 (8.385 km, 8 stations); targeted completion late 2028."
+        }
+      ],
+      "notes": "Main corridor (Aerocity to Tughlakabad) is 23.62 km with 15 stations. Extensions include Aerocity to T1 IGI Airport (2.26 km) and Lajpat Nagar to Saket G-Block branch (8.385 km). Status of Tughlakabad–Kalindi Kunj: officially part of Phase 5 (A) DPR submission (3.9 km, 3 stations), NOT part of Phase 4.",
+      "confidence": "unverified"
+    }
+  ]
+}

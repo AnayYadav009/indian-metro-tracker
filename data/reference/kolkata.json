@@ -1,0 +1,441 @@
+{
+  "city_id": "kolkata",
+  "compiled_on": "2026-10-07",
+  "lines": [
+    {
+      "line_id": "kol-blue",
+      "official_name": "Blue Line (Line 1 / North-South Metro)",
+      "operator": "Metro Railway, Kolkata",
+      "topology": "linear",
+      "operational_stations": 26,
+      "operational_length_km": 31.36,
+      "planned_length_km": 31.36,
+      "terminals": [
+        "Dakshineswar",
+        "Kavi Subhash"
+      ],
+      "status": "operational",
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "Esplanade - Bhowanipore (Netaji Bhavan)",
+          "phase": null,
+          "opened_on": "1984-10-24",
+          "stations_added": 5,
+          "confidence": "sourced",
+          "source": {
+            "title": "History & Milestones - Metro Railway Kolkata",
+            "url": "https://mtp.indianrailways.gov.in",
+            "retrieved_at": "2026-10-07",
+            "kind": "official"
+          }
+        },
+        {
+          "stage": "Bhowanipore (Netaji Bhavan) - Tollygunge (Mahanayak Uttam Kumar)",
+          "phase": null,
+          "opened_on": "1986-04-29",
+          "stations_added": 6,
+          "confidence": "sourced",
+          "source": {
+            "title": "History & Milestones - Metro Railway Kolkata",
+            "url": "https://mtp.indianrailways.gov.in",
+            "retrieved_at": "2026-10-07",
+            "kind": "official"
+          }
+        },
+        {
+          "stage": "Dum Dum - Belgachhia",
+          "phase": null,
+          "opened_on": "1994-08-13",
+          "stations_added": 2,
+          "confidence": "sourced",
+          "source": {
+            "title": "History & Milestones - Metro Railway Kolkata",
+            "url": "https://mtp.indianrailways.gov.in",
+            "retrieved_at": "2026-10-07",
+            "kind": "official"
+          }
+        },
+        {
+          "stage": "Chandni Chowk - Central",
+          "phase": null,
+          "opened_on": "1995-02-15",
+          "stations_added": 2,
+          "confidence": "sourced",
+          "source": {
+            "title": "History & Milestones - Metro Railway Kolkata",
+            "url": "https://mtp.indianrailways.gov.in",
+            "retrieved_at": "2026-10-07",
+            "kind": "official"
+          }
+        },
+        {
+          "stage": "Belgachhia - Chandni Chowk (continuous link Dum Dum to Tollygunge)",
+          "phase": null,
+          "opened_on": "1995-09-27",
+          "stations_added": 2,
+          "confidence": "sourced",
+          "source": {
+            "title": "History & Milestones - Metro Railway Kolkata",
+            "url": "https://mtp.indianrailways.gov.in",
+            "retrieved_at": "2026-10-07",
+            "kind": "official"
+          }
+        },
+        {
+          "stage": "Tollygunge (Mahanayak Uttam Kumar) - Garia Bazar (Kavi Nazrul)",
+          "phase": null,
+          "opened_on": "2009-08-22",
+          "stations_added": 4,
+          "confidence": "sourced",
+          "source": {
+            "title": "History & Milestones - Metro Railway Kolkata",
+            "url": "https://mtp.indianrailways.gov.in",
+            "retrieved_at": "2026-10-07",
+            "kind": "official"
+          }
+        },
+        {
+          "stage": "Kavi Nazrul - Kavi Subhash (New Garia)",
+          "phase": null,
+          "opened_on": "2010-10-07",
+          "stations_added": 2,
+          "confidence": "sourced",
+          "source": {
+            "title": "History & Milestones - Metro Railway Kolkata",
+            "url": "https://mtp.indianrailways.gov.in",
+            "retrieved_at": "2026-10-07",
+            "kind": "official"
+          }
+        },
+        {
+          "stage": "Dum Dum - Noapara",
+          "phase": null,
+          "opened_on": "2013-07-10",
+          "stations_added": 1,
+          "confidence": "sourced",
+          "source": {
+            "title": "History & Milestones - Metro Railway Kolkata",
+            "url": "https://mtp.indianrailways.gov.in",
+            "retrieved_at": "2026-10-07",
+            "kind": "official"
+          }
+        },
+        {
+          "stage": "Noapara - Dakshineswar (via Baranagar)",
+          "phase": null,
+          "opened_on": "2021-02-23",
+          "stations_added": 2,
+          "confidence": "sourced",
+          "source": {
+            "title": "PM inaugurates extension of Metro Railway from Noapara to Dakshineswar",
+            "url": "https://pib.gov.in/PressReleasePage.aspx?PRID=1699923",
+            "retrieved_at": "2026-10-07",
+            "kind": "government"
+          }
+        }
+      ],
+      "construction": [],
+      "notes": "India's first rapid transit line, spanning 31.36 km across 26 operational stations from Dakshineswar to Kavi Subhash (New Garia). Operated directly by Metro Railway, Kolkata (Indian Railways zone).",
+      "confidence": "sourced"
+    },
+    {
+      "line_id": "kol-green",
+      "official_name": "Green Line (Line 2 / East-West Metro)",
+      "operator": "KMRC",
+      "topology": "linear",
+      "operational_stations": 12,
+      "operational_length_km": 16.55,
+      "planned_length_km": 16.55,
+      "terminals": [
+        "Howrah Maidan",
+        "Salt Lake Sector V"
+      ],
+      "status": "operational",
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "Phase-I (Salt Lake Sector V - Salt Lake Stadium)",
+          "phase": null,
+          "opened_on": "2020-02-14",
+          "stations_added": 6,
+          "confidence": "sourced",
+          "source": {
+            "title": "Inauguration of Phase-I of East-West Metro corridor",
+            "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1602930",
+            "retrieved_at": "2026-10-07",
+            "kind": "government"
+          }
+        },
+        {
+          "stage": "Salt Lake Stadium - Phoolbagan",
+          "phase": null,
+          "opened_on": "2020-10-05",
+          "stations_added": 1,
+          "confidence": "sourced",
+          "source": {
+            "title": "Shri Piyush Goyal Inaugurates Phoolbagan Metro Station",
+            "url": "https://pib.gov.in/PressReleasePage.aspx?PRID=1661528",
+            "retrieved_at": "2026-10-07",
+            "kind": "government"
+          }
+        },
+        {
+          "stage": "Phoolbagan - Sealdah",
+          "phase": null,
+          "opened_on": "2022-07-14",
+          "stations_added": 1,
+          "confidence": "sourced",
+          "source": {
+            "title": "Sealdah Metro Station inaugurated by Smt. Smriti Irani",
+            "url": "https://pib.gov.in/PressReleasePage.aspx?PRID=1840742",
+            "retrieved_at": "2026-10-07",
+            "kind": "government"
+          }
+        },
+        {
+          "stage": "Howrah Maidan - Esplanade (underwater Hooghly river tunnel stretch)",
+          "phase": null,
+          "opened_on": "2024-03-15",
+          "stations_added": 4,
+          "confidence": "sourced",
+          "source": {
+            "title": "PM inaugurates multiple connectivity projects worth Rs 15,400 crores in Kolkata",
+            "url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2011707",
+            "retrieved_at": "2026-10-07",
+            "kind": "government"
+          }
+        },
+        {
+          "stage": "Sealdah - Esplanade connecting link (unifying east and west corridors)",
+          "phase": null,
+          "opened_on": "2025-08-22",
+          "stations_added": 0,
+          "confidence": "sourced",
+          "source": {
+            "title": "PM Narendra Modi inaugurates multiple development projects at Kolkata (Sealdah-Esplanade link)",
+            "url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2159869",
+            "retrieved_at": "2026-10-07",
+            "kind": "government"
+          }
+        }
+      ],
+      "construction": [],
+      "notes": "East-West Metro corridor spanning 16.55 km with 12 stations connecting Howrah Maidan to Salt Lake Sector V, including India's first underwater transportation tunnel beneath the Hooghly River. Continuous commercial operations commenced following completion of the Sealdah-Esplanade link in August 2025.",
+      "confidence": "sourced"
+    },
+    {
+      "line_id": "kol-purple",
+      "official_name": "Purple Line (Line 3 / Joka-Esplanade Corridor)",
+      "operator": "Metro Railway, Kolkata",
+      "topology": "linear",
+      "operational_stations": 7,
+      "operational_length_km": 7.75,
+      "planned_length_km": 14.01,
+      "terminals": [
+        "Joka",
+        "Majerhat"
+      ],
+      "status": "operational",
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "Joka - Taratala",
+          "phase": null,
+          "opened_on": "2023-01-02",
+          "stations_added": 6,
+          "confidence": "sourced",
+          "source": {
+            "title": "PM flags off Vande Bharat and inaugurates Joka-Taratala stretch of Purple Line",
+            "url": "https://pib.gov.in/PressReleasePage.aspx?PRID=1887680",
+            "retrieved_at": "2026-10-07",
+            "kind": "government"
+          }
+        },
+        {
+          "stage": "Taratala - Majerhat",
+          "phase": null,
+          "opened_on": "2024-03-15",
+          "stations_added": 1,
+          "confidence": "sourced",
+          "source": {
+            "title": "PM inaugurates multiple connectivity projects in Kolkata (Taratala-Majerhat section)",
+            "url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2011707",
+            "retrieved_at": "2026-10-07",
+            "kind": "government"
+          }
+        }
+      ],
+      "construction": [
+        {
+          "stretch": "Majerhat - Esplanade",
+          "phase": null,
+          "expected_completion": "2028",
+          "stations": 5,
+          "notes": "Underground and elevated stretch connecting Majerhat to Esplanade via Mominpur, Khidirpur, Victoria, and Park Street. TBM breakthrough achieved at Victoria in July 2026.",
+          "source": {
+            "title": "Project Highlights - Purple Line - Metro Railway Kolkata",
+            "url": "https://mtp.indianrailways.gov.in",
+            "retrieved_at": "2026-10-07",
+            "kind": "official"
+          }
+        }
+      ],
+      "notes": "7.75 km operational elevated section from Joka to Majerhat with 7 stations. Extension to Esplanade (6.26 km) currently under active construction.",
+      "confidence": "sourced"
+    },
+    {
+      "line_id": "kol-yellow",
+      "official_name": "Yellow Line (Line 4 / Noapara-Barasat Corridor)",
+      "operator": "Metro Railway, Kolkata",
+      "topology": "linear",
+      "operational_stations": 4,
+      "operational_length_km": 6.77,
+      "planned_length_km": 16.88,
+      "terminals": [
+        "Noapara",
+        "Jai Hind"
+      ],
+      "status": "operational",
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "Noapara - Jai Hind (Bimanbandar/Airport)",
+          "phase": null,
+          "opened_on": "2025-08-22",
+          "stations_added": 4,
+          "confidence": "sourced",
+          "source": {
+            "title": "PM inaugurates Noapara-Jai Hind Bimanbandar Metro Service",
+            "url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2159869",
+            "retrieved_at": "2026-10-07",
+            "kind": "government"
+          }
+        }
+      ],
+      "construction": [
+        {
+          "stretch": "Jai Hind (Airport) - Barasat",
+          "phase": null,
+          "expected_completion": null,
+          "stations": 6,
+          "notes": "Remaining 10.1 km stretch towards Barasat via Birati, Michael Nagar, New Barrackpore, Madhyamgram, and Hridaypur. Construction beyond airport has faced right-of-way and utility constraints.",
+          "source": {
+            "title": "Project Highlights - Yellow Line - Metro Railway Kolkata",
+            "url": "https://mtp.indianrailways.gov.in",
+            "retrieved_at": "2026-10-07",
+            "kind": "official"
+          }
+        }
+      ],
+      "notes": "6.77 km operational stretch connecting Noapara to Jai Hind Bimanbandar (Airport) across 4 stations (Noapara, Dum Dum Cantonment, Jessore Road, Jai Hind). Extension to Barasat under construction/planning.",
+      "confidence": "sourced"
+    },
+    {
+      "line_id": "kol-orange",
+      "official_name": "Orange Line (Line 6 / Kavi Subhash-Airport Corridor)",
+      "operator": "Metro Railway, Kolkata",
+      "topology": "linear",
+      "operational_stations": 9,
+      "operational_length_km": 9.80,
+      "planned_length_km": 29.87,
+      "terminals": [
+        "Kavi Subhash",
+        "Beleghata"
+      ],
+      "status": "operational",
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "Kavi Subhash (New Garia) - Hemanta Mukhopadhyay (Ruby More)",
+          "phase": null,
+          "opened_on": "2024-03-15",
+          "stations_added": 5,
+          "confidence": "sourced",
+          "source": {
+            "title": "PM inaugurates Kavi Subhash - Hemanta Mukhopadhyay Metro section",
+            "url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2011707",
+            "retrieved_at": "2026-10-07",
+            "kind": "government"
+          }
+        },
+        {
+          "stage": "Hemanta Mukhopadhyay - Beleghata",
+          "phase": null,
+          "opened_on": "2025-08-22",
+          "stations_added": 4,
+          "confidence": "sourced",
+          "source": {
+            "title": "PM flags off Beleghata-Hemanta Mukhopadhyay Metro section",
+            "url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2159869",
+            "retrieved_at": "2026-10-07",
+            "kind": "government"
+          }
+        }
+      ],
+      "construction": [
+        {
+          "stretch": "Beleghata - Salt Lake Sector V (IT Centre)",
+          "phase": null,
+          "expected_completion": "2026-12",
+          "stations": 2,
+          "notes": "4.4 km extension from Beleghata to Sector V following completion of the Chingrighata viaduct gap. Targeted for late 2026 commercial operations.",
+          "source": {
+            "title": "Project Highlights - Orange Line - Metro Railway Kolkata",
+            "url": "https://mtp.indianrailways.gov.in",
+            "retrieved_at": "2026-10-07",
+            "kind": "official"
+          }
+        },
+        {
+          "stretch": "Salt Lake Sector V - Jai Hind (Airport)",
+          "phase": null,
+          "expected_completion": "2027",
+          "stations": 13,
+          "notes": "Remaining northern section of the 29.87 km circumferential corridor connecting New Town and Rajarhat to NSCBI Airport.",
+          "source": {
+            "title": "Project Highlights - Orange Line - Metro Railway Kolkata",
+            "url": "https://mtp.indianrailways.gov.in",
+            "retrieved_at": "2026-10-07",
+            "kind": "official"
+          }
+        }
+      ],
+      "notes": "9.80 km operational elevated section from Kavi Subhash to Beleghata serving 9 stations along the EM Bypass. Extension to Sector V and Jai Hind Airport under construction.",
+      "confidence": "sourced"
+    },
+    {
+      "line_id": "kol-pink",
+      "official_name": "Pink Line (Line 5 / Baranagar-Barrackpore Corridor)",
+      "operator": "Metro Railway, Kolkata",
+      "topology": "linear",
+      "operational_stations": 0,
+      "operational_length_km": 0,
+      "planned_length_km": 12.50,
+      "terminals": [
+        "Baranagar",
+        "Barrackpore"
+      ],
+      "status": "planned",
+      "disjoint_stretches": false,
+      "openings": [],
+      "construction": [
+        {
+          "stretch": "Baranagar - Barrackpore",
+          "phase": null,
+          "expected_completion": null,
+          "stations": 11,
+          "notes": "12.50 km planned elevated corridor along BT Road. Sanctioned project that received clearance in August 2026 following municipal pipeline realignment agreement.",
+          "source": {
+            "title": "Project Highlights - Pink Line - Metro Railway Kolkata",
+            "url": "https://mtp.indianrailways.gov.in",
+            "retrieved_at": "2026-10-07",
+            "kind": "official"
+          }
+        }
+      ],
+      "notes": "12.50 km sanctioned elevated metro corridor along BT Road connecting Baranagar to Barrackpore across 11 planned stations. Not yet operational.",
+      "confidence": "sourced"
+    }
+  ]
+}

@@ -13,7 +13,6 @@ const OVERPASS_ENDPOINTS = [
   "https://overpass-api.de/api/interpreter",
   "https://lz4.overpass-api.de/api/interpreter",
   "https://overpass.kumi.systems/api/interpreter",
-  "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
   "https://overpass.private.coffee/api/interpreter",
 ];
 
@@ -55,6 +54,7 @@ export async function fetchOverpassDataForCity(
   // Stations: Operational, Light rail, and Under Construction
   node["railway"="station"]["subway"="yes"](${minLat},${minLng},${maxLat},${maxLng});
   node["station"="subway"](${minLat},${minLng},${maxLat},${maxLng});
+  node["railway"="stop"]["subway"="yes"](${minLat},${minLng},${maxLat},${maxLng});
   node["railway"="station"]["light_rail"="yes"](${minLat},${minLng},${maxLat},${maxLng});
   node["station"="light_rail"](${minLat},${minLng},${maxLat},${maxLng});
   node["railway"="station"]["construction"="subway"](${minLat},${minLng},${maxLat},${maxLng});
@@ -131,9 +131,23 @@ if (require.main === module) {
   const citiesPath = path.resolve(process.cwd(), "data", "cities.json");
   const cities = JSON.parse(fs.readFileSync(citiesPath, "utf-8"));
 
-  const targetCities = cityArg
-    ? cities.filter((c: any) => c.id.toLowerCase() === cityArg.toLowerCase())
-    : cities;
+  const targetCities: { id: string; bbox: [number, number, number, number] }[] = [];
+  if (cityArg) {
+    const foundInCities = cities.find((c: any) => c.id.toLowerCase() === cityArg.toLowerCase());
+    if (foundInCities) {
+      targetCities.push(foundInCities);
+    } else {
+      const overridePath = path.resolve(process.cwd(), "data", "overrides", `${cityArg.toLowerCase()}.json`);
+      if (fs.existsSync(overridePath)) {
+        const overrideData = JSON.parse(fs.readFileSync(overridePath, "utf-8"));
+        targetCities.push({ id: overrideData.city.id, bbox: overrideData.city.bbox });
+      } else {
+        console.error(`City ${cityArg} not found in cities.json or overrides directory.`);
+      }
+    }
+  } else {
+    targetCities.push(...cities);
+  }
 
   (async () => {
     for (const city of targetCities) {

@@ -102,7 +102,9 @@
       "inaugurated_on": "2025-08-10",
       "expected_completion": null,
       "color": "#FFCC00",
-      "references": ["https://english.bmrc.co.in/"],
+      "references": [
+        "https://english.bmrc.co.in/"
+      ],
       "city_id": "bengaluru"
     },
     {
@@ -116,7 +118,9 @@
       "expected_completion": null,
       "completion_unconfirmed": true,
       "color": "#1E90FF",
-      "references": ["https://english.bmrc.co.in/"],
+      "references": [
+        "https://english.bmrc.co.in/"
+      ],
       "last_verified": "2026-10-06",
       "coordinates": [
         [
@@ -161,7 +165,9 @@
       "expected_completion": null,
       "completion_unconfirmed": true,
       "color": "#FF69B4",
-      "references": ["https://english.bmrc.co.in/"],
+      "references": [
+        "https://english.bmrc.co.in/"
+      ],
       "last_verified": "2026-10-06",
       "coordinates": [
         [
@@ -179,6 +185,10 @@
         [
           77.6189,
           13.0234
+        ],
+        [
+          77.62486,
+          13.04228
         ]
       ],
       "city_id": "bengaluru"
@@ -194,7 +204,9 @@
       "expected_completion": null,
       "completion_unconfirmed": true,
       "color": "#800080",
-      "references": ["https://english.bmrc.co.in/"],
+      "references": [
+        "https://english.bmrc.co.in/"
+      ],
       "last_verified": "2026-10-06",
       "coordinates": [
         [
@@ -222,5 +234,69 @@
     "MG Road",
     "KR Puram",
     "Central Silk Board"
-  ]
+  ],
+  "intentionalBreaks": [
+    "blr-planned-seg-01|blr-purple-seg-01"
+  ],
+  "stationOverrides": {
+    "Nadaprabhu Kempegowda, Majestic": {
+      "layout": "underground",
+      "references": [
+        "https://english.bmrc.co.in/"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Nadaprabhu Kempegowda Station, Majestic": {
+      "layout": "underground",
+      "references": [
+        "https://english.bmrc.co.in/"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Krantivira Sangolli Rayanna Railway": {
+      "layout": "underground",
+      "references": [
+        "https://english.bmrc.co.in/"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Krantivira Sangolli Rayanna Railway Station": {
+      "layout": "underground",
+      "references": [
+        "https://english.bmrc.co.in/"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Cubbon Park": {
+      "layout": "underground",
+      "references": [
+        "https://english.bmrc.co.in/"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Dr. B. R. Ambedkar, Vidhana Soudha": {
+      "layout": "underground",
+      "references": [
+        "https://english.bmrc.co.in/"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "Sir M. Visvesvaraya Stn., Central College": {
+      "layout": "underground",
+      "references": [
+        "https://english.bmrc.co.in/"
+      ],
+      "last_verified": "2026-10-08"
+    },
+    "blr-nagawara-proposed": {
+      "status": "construction",
+      "expected_completion": "2026-12",
+      "phase": "2"
+    },
+    "Nagawara (Proposed)": {
+      "status": "construction",
+      "expected_completion": "2026-12",
+      "phase": "2"
+    }
+  }
 }

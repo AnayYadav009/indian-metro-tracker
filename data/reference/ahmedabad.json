@@ -1,0 +1,181 @@
+{
+  "city_id": "ahmedabad",
+  "compiled_on": "2026-10-08",
+  "lines": [
+    {
+      "line_id": "ahm-blue",
+      "official_name": "Blue Line (Line 1 / East-West Corridor)",
+      "operator": "GMRC",
+      "topology": "linear",
+      "operational_stations": 18,
+      "operational_length_km": 21.16,
+      "planned_length_km": 21.16,
+      "terminals": [
+        "Thaltej Gam",
+        "Vastral Gam"
+      ],
+      "status": "operational",
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "Vastral Gam - Apparel Park",
+          "phase": null,
+          "opened_on": "2019-03-04",
+          "stations_added": 6,
+          "confidence": "sourced",
+          "source": {
+            "title": "PM Narendra Modi inaugurates Ahmedabad Metro Phase 1 priority stretch",
+            "url": "https://www.gujaratmetrorail.com/projects/project-overview/",
+            "retrieved_at": "2026-10-08",
+            "kind": "official"
+          }
+        },
+        {
+          "stage": "Apparel Park - Thaltej",
+          "phase": null,
+          "opened_on": "2022-09-30",
+          "stations_added": 11,
+          "confidence": "sourced",
+          "source": {
+            "title": "Ahmedabad Metro Phase 1 commercial operations begin",
+            "url": "https://www.gujaratmetrorail.com/projects/project-overview/",
+            "retrieved_at": "2026-10-08",
+            "kind": "official"
+          }
+        },
+        {
+          "stage": "Thaltej - Thaltej Gam",
+          "phase": null,
+          "opened_on": "2024-12-08",
+          "stations_added": 1,
+          "confidence": "sourced",
+          "source": {
+            "title": "Thaltej to Thaltej Gam extension opened for public",
+            "url": "https://www.gujaratmetrorail.com/projects/project-overview/",
+            "retrieved_at": "2026-10-08",
+            "kind": "official"
+          }
+        }
+      ],
+      "construction": [],
+      "notes": "Phase 1 East-West Corridor connecting Thaltej Gam to Vastral Gam via Old High Court (interchange with Line 2). Includes 18 operational stations."
+    },
+    {
+      "line_id": "ahm-red",
+      "official_name": "Red Line (Line 2 / North-South Corridor)",
+      "operator": "GMRC",
+      "topology": "linear",
+      "operational_stations": 14,
+      "operational_length_km": 18.87,
+      "planned_length_km": 18.87,
+      "terminals": [
+        "APMC",
+        "Motera Stadium"
+      ],
+      "status": "operational",
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "APMC - Motera Stadium",
+          "phase": null,
+          "opened_on": "2022-09-30",
+          "stations_added": 14,
+          "confidence": "sourced",
+          "source": {
+            "title": "Ahmedabad Metro Phase 1 North-South corridor inaugurated",
+            "url": "https://www.gujaratmetrorail.com/projects/project-overview/",
+            "retrieved_at": "2026-10-08",
+            "kind": "official"
+          }
+        }
+      ],
+      "construction": [],
+      "notes": "Phase 1 North-South Corridor connecting APMC to Motera Stadium with 14 operational elevated stations, intersecting Line 1 at Old High Court. (Sabarmati Railway Station infill multi-modal hub planned)."
+    },
+    {
+      "line_id": "ahm-yellow",
+      "official_name": "Yellow Line (Line 3 / Motera Stadium - Mahatma Mandir)",
+      "operator": "GMRC",
+      "topology": "linear",
+      "operational_stations": 21,
+      "operational_length_km": 22.84,
+      "planned_length_km": 22.84,
+      "terminals": [
+        "Motera Stadium",
+        "Mahatma Mandir"
+      ],
+      "status": "operational",
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "Motera Stadium - Gandhinagar Sector-1",
+          "phase": null,
+          "opened_on": "2024-09-16",
+          "stations_added": 14,
+          "confidence": "sourced",
+          "source": {
+            "title": "PM Modi inaugurates Phase-2 section connecting Motera to Sector-1",
+            "url": "https://www.gujaratmetrorail.com/projects/project-overview/",
+            "retrieved_at": "2026-10-08",
+            "kind": "official"
+          }
+        },
+        {
+          "stage": "Sector-1 - Mahatma Mandir",
+          "phase": null,
+          "opened_on": "2026-01-11",
+          "stations_added": 7,
+          "confidence": "sourced",
+          "source": {
+            "title": "Full commissioning of Ahmedabad Metro Phase-2 till Mahatma Mandir",
+            "url": "https://www.gujaratmetrorail.com/projects/project-overview/",
+            "retrieved_at": "2026-10-08",
+            "kind": "official"
+          }
+        }
+      ],
+      "construction": [],
+      "notes": "Phase 2 Corridor-1 connecting Motera Stadium (Ahmedabad) to Mahatma Mandir (Gandhinagar) across 21 stations, fully commissioned in January 2026."
+    },
+    {
+      "line_id": "ahm-violet",
+      "official_name": "Violet Line (Line 4 / GNLU - GIFT City Spur)",
+      "operator": "GMRC",
+      "topology": "linear",
+      "operational_stations": 3,
+      "operational_length_km": 5.42,
+      "planned_length_km": 8.75,
+      "terminals": [
+        "GNLU",
+        "GIFT City"
+      ],
+      "status": "operational",
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "GNLU - GIFT City",
+          "phase": null,
+          "opened_on": "2024-09-16",
+          "stations_added": 3,
+          "confidence": "sourced",
+          "source": {
+            "title": "PM Modi inaugurates GNLU to GIFT City metro spur",
+            "url": "https://www.gujaratmetrorail.com/projects/project-overview/",
+            "retrieved_at": "2026-10-08",
+            "kind": "official"
+          }
+        }
+      ],
+      "construction": [
+        {
+          "stretch": "GIFT City - Shahpur (Phase 2B extension)",
+          "phase": "2B",
+          "expected_completion": "2028-12",
+          "stations": 3,
+          "notes": "3.33 km elevated extension from GIFT City to Shahpur with 3 stations approved by Government of Gujarat."
+        }
+      ],
+      "notes": "Phase 2 Corridor-2 spur line from GNLU interchange to GIFT City via PDEU. Extension towards Shahpur (Phase 2B) approved."
+    }
+  ]
+}

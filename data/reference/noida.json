@@ -1,0 +1,48 @@
+{
+  "city_id": "noida",
+  "compiled_on": "2026-10-08",
+  "lines": [
+    {
+      "line_id": "noi-aqua",
+      "official_name": "Aqua Line",
+      "operator": "NMRC",
+      "topology": "linear",
+      "operational_stations": 21,
+      "official_length_km": 29.7,
+      "terminals": [
+        "Noida Sector 51",
+        "Depot"
+      ],
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "Phase 1 (Noida Sector 51 to Depot)",
+          "phase": "1",
+          "opened_on": "2019-01-25",
+          "stations_added": 21,
+          "source": {
+            "title": "Noida Aqua Line inauguration",
+            "url": "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece",
+            "retrieved_at": "2026-10-08",
+            "kind": "news"
+          }
+        }
+      ],
+      "construction": [
+        {
+          "stretch": "Sector 142 to Botanical Garden",
+          "phase": "2",
+          "expected_completion": "2030",
+          "stations": 8,
+          "source": {
+            "title": "Cabinet approves Noida Metro extension from Sector 142 to Botanical Garden",
+            "url": "https://ddnews.gov.in",
+            "retrieved_at": "2026-10-08",
+            "kind": "government"
+          }
+        }
+      ],
+      "notes": "29.7 km fully elevated corridor connecting Sector 51 in Noida to Depot in Greater Noida across 21 stations. Operated by Noida Metro Rail Corporation (NMRC). Interchange with DMRC Blue Line at Sector 51/52 via pedestrian walkway. Union Cabinet approved 11.56 km extension from Sector 142 to Botanical Garden on 2026-02-14."
+    }
+  ]
+}

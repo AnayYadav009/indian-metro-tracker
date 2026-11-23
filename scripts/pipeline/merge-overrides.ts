@@ -1,7 +1,17 @@
 import fs from "node:fs";
 import path from "node:path";
-import { calculateLineStringLengthKm } from "../../lib/geo";
-import { slugify, type NormalizedCityData, type NormalizedSegment, type NormalizedStation } from "./normalize";
+import {
+  calculateLineStringLengthKm,
+  pointToPolylineDistanceM,
+  haversineDistanceKm,
+  haversineDistanceM,
+} from "../../lib/geo";
+import {
+  slugify,
+  type NormalizedCityData,
+  type NormalizedSegment,
+  type NormalizedStation,
+} from "./normalize";
 import type { SegmentFeature, StationFeature } from "../../types/metro";
 
 export interface CityOverrideData {
@@ -37,6 +47,7 @@ export interface CityOverrideData {
     references?: string[];
     completion_unconfirmed?: boolean;
     last_verified?: string;
+    geometry_quality?: "exact" | "schematic";
   }>;
   interchangeStationNames?: string[];
   dedupeRadiusM?: number;
@@ -50,132 +61,70 @@ export interface CityOverrideData {
       opened_on?: string | null;
       expected_completion?: string | null;
       is_interchange?: boolean;
-      layout?: "underground" | "elevated" | "at-grade";
+      layout?: "underground" | "elevated" | "at-grade" | null;
+      last_verified?: string;
+      coordinates?: [number, number];
     }
   >;
-}
-
-/**
- * Calculates geodesic distance between two points in km (Haversine).
- */
-function pointDistanceKm(p1: [number, number], p2: [number, number]): number {
-  const R = 6371; // Earth radius in km
-  const dLat = ((p2[1] - p1[1]) * Math.PI) / 180;
-  const dLon = ((p2[0] - p1[0]) * Math.PI) / 180;
-  const a =
-    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-    Math.cos((p1[1] * Math.PI) / 180) *
-      Math.cos((p2[1] * Math.PI) / 180) *
-      Math.sin(dLon / 2) *
-      Math.sin(dLon / 2);
-  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-  return R * c;
-}
-
-/**
- * Calculates minimum distance from a point to a LineString geometry in km.
- */
-function minDistanceToLine(point: [number, number], line: [number, number][]): number {
-  let min = Infinity;
-  for (const coord of line) {
-    const d = pointDistanceKm(point, coord);
-    if (d < min) min = d;
-  }
-  return min;
+  out_of_scope_station_ids?: string[];
+  out_of_scope_line_ids?: string[];
 }
 
 export function mergeCityOverrides(
   normalized: NormalizedCityData,
-  overrides: CityOverrideData
+  overrides: CityOverrideData,
+  retrievedAt?: string
 ): {
   segments: SegmentFeature[];
   stations: StationFeature[];
 } {
   const cityName = overrides.city.name;
-  const operator = overrides.city.operator;
-  const sourceTag = `osm+${operator.toLowerCase()}`;
-  const today = "2026-10-05";
 
   // Map normalized segments by osmId
   const normalizedSegsByOsmId = new Map<number, NormalizedSegment>();
   normalized.segments.forEach((s) => normalizedSegsByOsmId.set(s.osmId, s));
 
-  // 1. Process Segments
-  const segmentFeatures: SegmentFeature[] = [];
-  const segmentsForProximity: Array<{ line_id: string; phase: string; status: "operational" | "construction" | "planned"; coords: [number, number][] }> = [];
+  // Map lines by line_id for operator lookup
+  const lineById = new Map<string, { operator: string; name: string }>();
+  overrides.lines.forEach((l) =>
+    lineById.set(l.id, { operator: l.operator, name: l.name })
+  );
+
+  // 1. First pass: Collect initial segment geometry candidates
+  interface IntermediateSegment {
+    segOverride: CityOverrideData["segments"][number];
+    coords?: [number, number][];
+    isOsmSourced: boolean;
+    geometryQuality: "exact" | "schematic";
+  }
+
+  const intermediateSegments: IntermediateSegment[] = [];
 
   for (const segOverride of overrides.segments) {
     let coords: [number, number][] | undefined;
-    let stationsCount = segOverride.stations_count || 10;
-
     let isOsmSourced = false;
+
     if (segOverride.osmId && normalizedSegsByOsmId.has(segOverride.osmId)) {
       const normSeg = normalizedSegsByOsmId.get(segOverride.osmId)!;
       coords = normSeg.coordinates;
-      if (normSeg.stationOsmIds && normSeg.stationOsmIds.length > 0) {
-        stationsCount = normSeg.stationOsmIds.length;
-      }
       isOsmSourced = true;
     } else if (segOverride.coordinates && segOverride.coordinates.length >= 2) {
       coords = segOverride.coordinates;
       isOsmSourced = false;
     }
 
-    if (!coords || coords.length < 2) {
-      console.warn(`⚠️ Segment ${segOverride.segment_id} has no valid coordinates. Skipping.`);
-      continue;
-    }
+    const geometryQuality: "exact" | "schematic" =
+      segOverride.geometry_quality || "exact";
 
-    const computedKm = calculateLineStringLengthKm(coords);
-    const lengthKm = Number(computedKm.toFixed(1));
-    const segmentSource = isOsmSourced ? "osm" : "manual";
-    if (segmentSource === "manual" && !segOverride.last_verified) {
-      throw new Error(
-        `Manual segment '${segOverride.segment_id}' must explicitly provide last_verified date in overrides.`
-      );
-    }
-    const lastVerifiedDate = segmentSource === "manual" ? segOverride.last_verified! : today;
-
-    segmentFeatures.push({
-      type: "Feature",
-      geometry: {
-        type: "LineString",
-        coordinates: coords,
-      },
-      properties: {
-        segment_id: segOverride.segment_id,
-        line_id: segOverride.line_id,
-        line_name: segOverride.line_name,
-        city_id: overrides.city.id,
-        city: cityName,
-        operator,
-        status: segOverride.status,
-        phase: segOverride.phase,
-        length_km: lengthKm,
-        gauge: segOverride.gauge,
-        inaugurated_on: segOverride.status === "operational" ? segOverride.inaugurated_on : null,
-        expected_completion:
-          segOverride.status === "construction" || segOverride.status === "planned"
-            ? segOverride.expected_completion
-            : null,
-        stations_count: stationsCount,
-        color: segOverride.color,
-        source: segmentSource,
-        references: segOverride.references || [],
-        completion_unconfirmed: segOverride.completion_unconfirmed || false,
-        last_verified: lastVerifiedDate,
-      },
-    });
-
-    segmentsForProximity.push({
-      line_id: segOverride.line_id,
-      phase: segOverride.phase,
-      status: segOverride.status,
+    intermediateSegments.push({
+      segOverride,
       coords,
+      isOsmSourced,
+      geometryQuality,
     });
   }
 
-  // 2. Process Stations
+  // 2. Process and deduplicate stations
   const interchangeSet = new Set<string>(
     (overrides.interchangeStationNames || []).map((n) => n.toLowerCase())
   );
@@ -185,19 +134,22 @@ export function mergeCityOverrides(
   if (overrides.stationAliases) {
     for (const [k, v] of Object.entries(overrides.stationAliases)) {
       aliasMap.set(k.toLowerCase().trim(), v.trim());
-      aliasMap.set(v.toLowerCase().trim(), k.trim());
     }
   }
 
-  const stationFeatures: StationFeature[] = [];
-  const seenStationIds = new Set<string>();
-  const seenStationCoords: Array<{
+  interface DeduplicatedStation {
     id: string;
     coords: [number, number];
+    rawName: string;
     name: string;
     baseName: string;
     tags?: Record<string, string>;
-  }> = [];
+    lineRefs: string[];
+    status?: "operational" | "construction" | "planned";
+  }
+
+  const deduplicatedStations: DeduplicatedStation[] = [];
+  const seenStationIds = new Set<string>();
 
   for (const station of normalized.stations) {
     const rawName = station.name;
@@ -210,32 +162,54 @@ export function mergeCityOverrides(
           ? "blr"
           : overrides.city.id === "mumbai"
             ? "mum"
-            : overrides.city.id;
+            : overrides.city.id === "gurugram"
+              ? "gur"
+              : overrides.city.id === "noida"
+                ? "noi"
+                : overrides.city.id === "navi-mumbai"
+                  ? "nmm"
+                  : overrides.city.id;
     const baseSlug = `${prefix}-${slugify(resolvedName)}`;
     let stationId = baseSlug;
 
-    // Deduplication rule:
-    // 1. Within dedupeRadiusM (default 350m) AND same base name (or alias match)
-    // 2. OR within dedupeRadiusM AND both nodes share explicit interchange tags
-    // Different base names never merge on proximity alone.
-    const existing = seenStationCoords.find((s) => {
-      const dist = pointDistanceKm(station.coordinates, s.coords);
+    const outOfScopeList = new Set(overrides.out_of_scope_station_ids || []);
+    if (
+      outOfScopeList.has(baseSlug) ||
+      outOfScopeList.has(stationId) ||
+      outOfScopeList.has(rawName) ||
+      outOfScopeList.has(resolvedName)
+    ) {
+      continue;
+    }
+
+    // Deduplication rule
+    const existing = deduplicatedStations.find((s) => {
+      const dist = haversineDistanceKm(station.coordinates, s.coords);
       if (dist > dedupeRadiusKm) return false;
 
       const sameName =
         s.baseName.toLowerCase() === resolvedName.toLowerCase() ||
         s.baseName.toLowerCase() === rawName.toLowerCase();
       const aliasMatch =
-        aliasMap.get(s.baseName.toLowerCase())?.toLowerCase() === resolvedName.toLowerCase();
+        aliasMap.get(s.baseName.toLowerCase())?.toLowerCase() ===
+        resolvedName.toLowerCase();
       const sharedInterchangeTag = Boolean(
-        (station.tags?.interchange === "yes" || station.tags?.public_transport === "stop_area") &&
-          (s.tags?.interchange === "yes" || s.tags?.public_transport === "stop_area")
+        (station.tags?.interchange === "yes" ||
+          station.tags?.public_transport === "stop_area") &&
+        (s.tags?.interchange === "yes" ||
+          s.tags?.public_transport === "stop_area")
       );
 
       return sameName || aliasMatch || sharedInterchangeTag;
     });
 
     if (existing) {
+      // Merge lineRefs
+      for (const ref of station.lineRefs || []) {
+        if (!existing.lineRefs.includes(ref)) {
+          existing.lineRefs.push(ref);
+        }
+      }
       continue;
     }
 
@@ -243,147 +217,340 @@ export function mergeCityOverrides(
     while (seenStationIds.has(stationId)) {
       stationId = `${baseSlug}-${++counter}`;
     }
+    if (outOfScopeList.has(stationId)) {
+      continue;
+    }
     seenStationIds.add(stationId);
-    seenStationCoords.push({
+
+    deduplicatedStations.push({
       id: stationId,
       coords: station.coordinates,
+      rawName,
       name: resolvedName,
       baseName: resolvedName,
       tags: station.tags,
+      lineRefs: [...(station.lineRefs || [])],
+      status: station.status,
     });
+  }
 
-    // Associate station with lines
+  // 3. Assign stations to lines via hierarchy:
+  //    (1) OSM route relation membership
+  //    (2) Proximity (< 200m)
+  //    (3) Station overrides
+  const stationsWithLines: Array<{
+    st: DeduplicatedStation;
+    assignedLineIds: string[];
+    assignedPhase: string;
+    assignedStatus: "operational" | "construction" | "planned";
+    layout: "underground" | "elevated" | "at-grade" | null;
+    layoutSource: "operator" | "osm-tag" | "unverified";
+    openedOn: string | null;
+    expectedCompletion: string | null;
+    lastVerified: string | null;
+  }> = [];
+
+  for (const st of deduplicatedStations) {
     const lineIdsSet = new Set<string>();
     let assignedPhase = overrides.city.phases[0];
-    let assignedStatus: "operational" | "construction" | "planned" = "operational";
+    let assignedStatus: "operational" | "construction" | "planned" =
+      "operational";
 
-    let closestDist = Infinity;
-    let closestSegment = segmentsForProximity[0];
-
-    for (const seg of segmentsForProximity) {
-      const dist = minDistanceToLine(station.coordinates, seg.coords);
-      if (dist < closestDist) {
-        closestDist = dist;
-        closestSegment = seg;
+    // Tier 1: OSM route relation membership
+    for (const relRef of st.lineRefs) {
+      const segMatch = overrides.segments.find(
+        (s) => s.osmId === Number(relRef)
+      );
+      if (segMatch) {
+        lineIdsSet.add(segMatch.line_id);
       }
     }
 
-    if (overrides.city.id === "mumbai") {
-      const matchedStatuses: Array<"operational" | "construction" | "planned"> = [];
-      const matchedPhases: string[] = [];
+    // Tier 2: Proximity (< 200m) to segment geometry if available
+    let closestDistM = Infinity;
+    let closestSeg: IntermediateSegment | undefined;
 
-      for (const relRef of station.lineRefs || []) {
-        const segOverride = overrides.segments.find(s => s.osmId === Number(relRef));
-        if (segOverride) {
-          lineIdsSet.add(segOverride.line_id);
-          matchedStatuses.push(segOverride.status);
-          if (segOverride.phase) matchedPhases.push(segOverride.phase);
+    for (const iseg of intermediateSegments) {
+      if (iseg.coords && iseg.coords.length >= 2) {
+        const dM = pointToPolylineDistanceM(st.coords, iseg.coords);
+        if (dM < closestDistM) {
+          closestDistM = dM;
+          closestSeg = iseg;
         }
-      }
-
-      if (lineIdsSet.size > 0) {
-        if (matchedStatuses.includes("operational")) {
-          assignedStatus = "operational";
-        } else if (matchedStatuses.every((s) => s === "construction" || s === "planned")) {
-          assignedStatus = matchedStatuses.includes("construction") ? "construction" : "planned";
-        } else {
-          assignedStatus = "planned";
+        if (dM <= 200) {
+          lineIdsSet.add(iseg.segOverride.line_id);
         }
-        assignedPhase = matchedPhases[0] || overrides.city.phases[0];
-      } else {
-        // Fallback
-        if (closestSegment) {
-          lineIdsSet.add(closestSegment.line_id);
-          assignedStatus = closestSegment.status;
-          assignedPhase = closestSegment.phase;
-        }
-        if (station.tags?.railway === "construction" || station.tags?.proposed || station.tags?.railway === "proposed") {
-          assignedStatus = station.tags.railway === "construction" ? "construction" : "planned";
-        }
-      }
-    } else {
-      // Original proximity logic for other cities
-      for (const seg of segmentsForProximity) {
-        const dist = minDistanceToLine(station.coordinates, seg.coords);
-        if (dist < 0.3) {
-          lineIdsSet.add(seg.line_id);
-        }
-      }
-
-      if (lineIdsSet.size === 0 && closestSegment) {
-        lineIdsSet.add(closestSegment.line_id);
-      }
-
-      if (closestSegment) {
-        assignedPhase = closestSegment.phase;
-        assignedStatus = closestSegment.status;
-      }
-
-      if (station.status && station.status !== "operational") {
-        assignedStatus = station.status;
       }
     }
 
-    // Check interchange flag
-    const isInterchange =
-      interchangeSet.has(rawName.toLowerCase()) ||
-      lineIdsSet.size > 1;
+    // Fallback if no relation and no proximity < 200m
+    if (lineIdsSet.size === 0 && closestSeg) {
+      lineIdsSet.add(closestSeg.segOverride.line_id);
+      assignedPhase = closestSeg.segOverride.phase;
+      assignedStatus = closestSeg.segOverride.status;
+    } else if (closestSeg) {
+      assignedPhase = closestSeg.segOverride.phase;
+      assignedStatus = closestSeg.segOverride.status;
+    }
 
-    // Determine layout
-    const tags = station.tags || {};
-    const isUnderground =
+    if (st.status && st.status !== "operational") {
+      assignedStatus = st.status;
+    } else if (
+      st.tags?.railway === "construction" ||
+      st.tags?.proposed ||
+      st.tags?.railway === "proposed"
+    ) {
+      assignedStatus =
+        st.tags.railway === "construction" ? "construction" : "planned";
+    }
+
+    // Layout
+    const tags = st.tags || {};
+    let layout: "underground" | "elevated" | "at-grade" | null = null;
+    let layoutSource: "operator" | "osm-tag" | "unverified" = "unverified";
+
+    if (
       tags.tunnel === "yes" ||
       tags.location === "underground" ||
       tags.layer === "-1" ||
-      tags.layer === "-2";
-    const layout = isUnderground ? "underground" : "elevated";
+      tags.layer === "-2"
+    ) {
+      layout = "underground";
+      layoutSource = "osm-tag";
+    } else if (
+      tags.bridge === "yes" ||
+      tags.layer === "1" ||
+      tags.layer === "2"
+    ) {
+      layout = "elevated";
+      layoutSource = "osm-tag";
+    }
 
-    // Date properties
+    // Dates & verification
     let openedOn: string | null = null;
     let expectedCompletion: string | null = null;
+    let lastVerified: string | null = null; // Stays null for OSM-sourced
 
-    if (assignedStatus === "operational") {
-      openedOn = "2006-11-11"; // Fallback operational opening
-      expectedCompletion = null;
-    } else if (assignedStatus === "construction") {
-      openedOn = null;
+    if (assignedStatus === "construction") {
       expectedCompletion = "2026-12";
-    } else {
-      openedOn = null;
+    } else if (assignedStatus === "planned") {
       expectedCompletion = "2028";
     }
 
-    // Apply specific station override if present
-    const override = overrides.stationOverrides?.[stationId] || overrides.stationOverrides?.[rawName];
+    // Tier 3: Manual station overrides (highest priority)
+    const override =
+      overrides.stationOverrides?.[st.id] ||
+      overrides.stationOverrides?.[st.rawName] ||
+      overrides.stationOverrides?.[st.name];
+
     if (override) {
-      if (override.line_ids) lineIdsSet.clear();
-      override.line_ids?.forEach((id) => lineIdsSet.add(id));
+      if (override.line_ids) {
+        lineIdsSet.clear();
+        override.line_ids.forEach((id) => lineIdsSet.add(id));
+      }
       if (override.phase) assignedPhase = override.phase;
-      if (override.status) assignedStatus = override.status;
+      if (override.status) {
+        assignedStatus = override.status;
+        if (
+          assignedStatus === "operational" &&
+          override.expected_completion === undefined
+        ) {
+          expectedCompletion = null;
+        }
+      }
       if (override.opened_on !== undefined) openedOn = override.opened_on;
-      if (override.expected_completion !== undefined) expectedCompletion = override.expected_completion;
+      if (override.expected_completion !== undefined)
+        expectedCompletion = override.expected_completion;
+      if (override.layout !== undefined) {
+        layout = override.layout;
+        layoutSource = override.layout ? "operator" : "unverified";
+      }
+      if (override.last_verified) lastVerified = override.last_verified;
+      if (override.coordinates) st.coords = override.coordinates;
     }
+
+    stationsWithLines.push({
+      st,
+      assignedLineIds: Array.from(lineIdsSet),
+      assignedPhase,
+      assignedStatus,
+      layout,
+      layoutSource,
+      openedOn,
+      expectedCompletion,
+      lastVerified,
+    });
+  }
+
+  // 4. Build schematic connectors for construction/planned segments lacking way geometry
+  for (const iseg of intermediateSegments) {
+    if (iseg.coords && iseg.coords.length >= 2) continue;
+
+    // Must be construction or planned
+    if (iseg.segOverride.status === "operational") {
+      throw new Error(
+        `Operational segment '${iseg.segOverride.segment_id}' has no geometry coordinates. Operational segments cannot be schematic.`
+      );
+    }
+
+    // Find all stations assigned to this line and phase
+    const lineStations = stationsWithLines.filter(
+      (sw) =>
+        sw.assignedLineIds.includes(iseg.segOverride.line_id) &&
+        sw.assignedPhase === iseg.segOverride.phase
+    );
+
+    if (lineStations.length >= 2) {
+      // Connect stations in order of their principal geographic spread (minLng to maxLng or minLat to maxLat)
+      const sorted = [...lineStations].sort((a, b) => {
+        const dx = b.st.coords[0] - a.st.coords[0];
+        const dy = b.st.coords[1] - a.st.coords[1];
+        if (Math.abs(dx) > Math.abs(dy)) {
+          return a.st.coords[0] - b.st.coords[0];
+        }
+        return a.st.coords[1] - b.st.coords[1];
+      });
+
+      iseg.coords = sorted.map((s) => s.st.coords);
+      iseg.geometryQuality = "schematic";
+    }
+  }
+
+  // 5. Finalize Segments and compute dynamic stations_count
+  const segmentFeatures: SegmentFeature[] = [];
+
+  for (const iseg of intermediateSegments) {
+    const segOverride = iseg.segOverride;
+    const coords = iseg.coords;
+
+    if (!coords || coords.length < 2) {
+      console.warn(
+        `⚠️ Segment ${segOverride.segment_id} has no valid coordinates. Skipping.`
+      );
+      continue;
+    }
+
+    const computedKm = calculateLineStringLengthKm(coords);
+    const lengthKm = Number(computedKm.toFixed(1));
+    const segmentSource = iseg.isOsmSourced ? "osm" : "manual";
+
+    if (segmentSource === "manual" && !segOverride.last_verified) {
+      throw new Error(
+        `Manual segment '${segOverride.segment_id}' must explicitly provide last_verified date in overrides.`
+      );
+    }
+
+    // Inherit operator from line (Rule C4/C8)
+    const lineInfo = lineById.get(segOverride.line_id);
+    const operator = lineInfo?.operator || overrides.city.operator;
+
+    // Dynamic stations_count derivation:
+    // Deduplicated assigned stations on this line within 200m of this segment
+    let stationsCount = 0;
+    if (segOverride.stations_count !== undefined) {
+      stationsCount = segOverride.stations_count;
+    } else {
+      const lineStations = stationsWithLines.filter((sw) =>
+        sw.assignedLineIds.includes(segOverride.line_id)
+      );
+      for (const sw of lineStations) {
+        const distM = pointToPolylineDistanceM(sw.st.coords, coords);
+        if (distM <= 200) {
+          stationsCount++;
+        }
+      }
+
+      if (stationsCount === 0 && segOverride.status === "operational") {
+        throw new Error(
+          `Segment '${segOverride.segment_id}' stations_count could not be computed (found 0 nearby assigned stations on line '${segOverride.line_id}'). Operational segments must have at least 1 station.`
+        );
+      }
+    }
+
+    const lastVerifiedDate =
+      segmentSource === "manual"
+        ? segOverride.last_verified!
+        : segOverride.last_verified || null;
+
+    const truncatedCoords: [number, number][] = coords.map(([lng, lat]) => [
+      Number(lng.toFixed(5)),
+      Number(lat.toFixed(5)),
+    ]);
+
+    segmentFeatures.push({
+      type: "Feature",
+      geometry: {
+        type: "LineString",
+        coordinates: truncatedCoords,
+      },
+      properties: {
+        segment_id: segOverride.segment_id,
+        line_id: segOverride.line_id,
+        line_name: segOverride.line_name,
+        city_id: overrides.city.id,
+        city: cityName,
+        operator,
+        status: segOverride.status,
+        phase: segOverride.phase,
+        length_km: lengthKm,
+        gauge: segOverride.gauge,
+        inaugurated_on:
+          segOverride.status === "operational"
+            ? segOverride.inaugurated_on
+            : null,
+        expected_completion:
+          segOverride.status === "construction" ||
+          segOverride.status === "planned"
+            ? segOverride.expected_completion
+            : null,
+        stations_count: stationsCount,
+        color: segOverride.color,
+        source: segmentSource,
+        references: segOverride.references || [],
+        completion_unconfirmed: segOverride.completion_unconfirmed || false,
+        last_verified: lastVerifiedDate,
+        retrieved_at: iseg.isOsmSourced ? retrievedAt : undefined,
+        geometry_quality: iseg.geometryQuality,
+      },
+    });
+  }
+
+  // 6. Finalize Stations
+  const stationFeatures: StationFeature[] = [];
+
+  for (const sw of stationsWithLines) {
+    const isInterchange =
+      interchangeSet.has(sw.st.rawName.toLowerCase()) ||
+      interchangeSet.has(sw.st.name.toLowerCase()) ||
+      sw.assignedLineIds.length > 1;
+
+    const truncatedStationCoords: [number, number] = [
+      Number(sw.st.coords[0].toFixed(5)),
+      Number(sw.st.coords[1].toFixed(5)),
+    ];
 
     stationFeatures.push({
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: station.coordinates,
+        coordinates: truncatedStationCoords,
       },
       properties: {
-        station_id: stationId,
-        name: rawName,
+        station_id: sw.st.id,
+        name: sw.st.name,
         city_id: overrides.city.id,
         city: cityName,
-        line_ids: Array.from(lineIdsSet),
-        status: assignedStatus,
-        phase: assignedPhase,
+        line_ids: sw.assignedLineIds,
+        status: sw.assignedStatus,
+        phase: sw.assignedPhase,
         is_interchange: isInterchange,
-        opened_on: openedOn,
-        expected_completion: expectedCompletion,
-        layout,
+        opened_on: sw.openedOn,
+        expected_completion: sw.expectedCompletion,
+        layout: sw.layout,
+        layout_source: sw.layoutSource,
         source: "osm",
-        last_verified: today,
+        last_verified: sw.lastVerified,
+        retrieved_at: retrievedAt,
       },
     });
   }

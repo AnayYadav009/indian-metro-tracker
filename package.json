@@ -19,20 +19,20 @@
     "pipeline:fetch": "tsx scripts/pipeline/fetch-overpass.ts",
     "pipeline:build": "tsx scripts/pipeline/build-real-data.ts",
     "pipeline:all": "tsx scripts/pipeline/build-all.ts",
-    "audit:dedupe": "tsx scripts/audit/dedupe-report.ts"
+    "audit:dedupe": "tsx scripts/audit/dedupe-report.ts",
+    "audit:links": "tsx scripts/audit/check-reference-links.ts",
+    "audit:data": "tsx scripts/audit/consistency-report.ts"
   },
   "engines": {
     "node": ">=18.18.0"
   },
   "dependencies": {
-    "clsx": "^2.1.1",
     "lucide-react": "^1.16.0",
     "maplibre-gl": "6.12.0",
     "next": "^15.2.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-map-gl": "^8.1.3",
-    "tailwind-merge": "^3.0.2",
     "zod": "^3.24.2",
     "zustand": "^5.0.3"
   },

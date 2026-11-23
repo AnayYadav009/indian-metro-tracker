@@ -1,0 +1,4994 @@
+{
+  "version": 0.6,
+  "generator": "OpenStreetMap API full relation 9268569",
+  "elements": [
+    {
+      "type": "node",
+      "id": 4165777364,
+      "lat": 28.4927843,
+      "lon": 77.4242558,
+      "timestamp": "2016-05-31T12:37:44Z",
+      "version": 3,
+      "changeset": 39687806,
+      "user": "bindhu",
+      "uid": 2901516
+    },
+    {
+      "type": "node",
+      "id": 4165777366,
+      "lat": 28.4948415,
+      "lon": 77.4216125,
+      "timestamp": "2016-05-04T13:46:31Z",
+      "version": 1,
+      "changeset": 39096889,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4165777367,
+      "lat": 28.4954403,
+      "lon": 77.4206885,
+      "timestamp": "2016-05-04T13:46:31Z",
+      "version": 1,
+      "changeset": 39096889,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4165777368,
+      "lat": 28.4959861,
+      "lon": 77.4197493,
+      "timestamp": "2026-01-10T21:49:45Z",
+      "version": 2,
+      "changeset": 177077980,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 4165777369,
+      "lat": 28.4973673,
+      "lon": 77.4167748,
+      "timestamp": "2026-01-10T21:49:45Z",
+      "version": 5,
+      "changeset": 177077980,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 4165777370,
+      "lat": 28.4978868,
+      "lon": 77.4156356,
+      "timestamp": "2026-01-10T21:49:45Z",
+      "version": 3,
+      "changeset": 177077980,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 4165778692,
+      "lat": 28.4446855,
+      "lon": 77.4814546,
+      "timestamp": "2021-09-23T18:34:22Z",
+      "version": 2,
+      "changeset": 111613004,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 4165778693,
+      "lat": 28.4447609,
+      "lon": 77.480996,
+      "timestamp": "2021-09-23T18:34:22Z",
+      "version": 2,
+      "changeset": 111613004,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 4165778694,
+      "lat": 28.4449591,
+      "lon": 77.480261,
+      "timestamp": "2021-09-23T18:34:22Z",
+      "version": 2,
+      "changeset": 111613004,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 4165778695,
+      "lat": 28.4450699,
+      "lon": 77.4799499,
+      "timestamp": "2021-09-23T18:34:22Z",
+      "version": 2,
+      "changeset": 111613004,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 4165778696,
+      "lat": 28.4454945,
+      "lon": 77.4790594,
+      "timestamp": "2021-09-23T18:34:22Z",
+      "version": 2,
+      "changeset": 111613004,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 4165778697,
+      "lat": 28.4459448,
+      "lon": 77.4784022,
+      "timestamp": "2021-09-23T18:34:22Z",
+      "version": 2,
+      "changeset": 111613004,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 4165778698,
+      "lat": 28.4464944,
+      "lon": 77.4778269,
+      "timestamp": "2016-05-04T13:46:29Z",
+      "version": 1,
+      "changeset": 39096889,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4165778699,
+      "lat": 28.4469236,
+      "lon": 77.4774648,
+      "timestamp": "2016-05-04T13:46:29Z",
+      "version": 1,
+      "changeset": 39096889,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4165778700,
+      "lat": 28.4501616,
+      "lon": 77.4750643,
+      "timestamp": "2016-05-04T13:46:29Z",
+      "version": 1,
+      "changeset": 39096889,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4165778701,
+      "lat": 28.4509492,
+      "lon": 77.4744715,
+      "timestamp": "2016-05-04T13:46:29Z",
+      "version": 1,
+      "changeset": 39096889,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4165778702,
+      "lat": 28.4521024,
+      "lon": 77.473522,
+      "timestamp": "2016-05-04T13:46:29Z",
+      "version": 1,
+      "changeset": 39096889,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4165778703,
+      "lat": 28.4528122,
+      "lon": 77.4729024,
+      "timestamp": "2016-05-04T13:46:29Z",
+      "version": 1,
+      "changeset": 39096889,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4165778704,
+      "lat": 28.453713,
+      "lon": 77.4722319,
+      "timestamp": "2026-01-17T16:45:53Z",
+      "version": 2,
+      "changeset": 177343613,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 4165778705,
+      "lat": 28.4547836,
+      "lon": 77.4712367,
+      "timestamp": "2026-01-17T16:45:53Z",
+      "version": 2,
+      "changeset": 177343613,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 4165778706,
+      "lat": 28.4563165,
+      "lon": 77.4696489,
+      "timestamp": "2026-01-17T16:45:53Z",
+      "version": 2,
+      "changeset": 177343613,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 4165778707,
+      "lat": 28.4569391,
+      "lon": 77.4689354,
+      "timestamp": "2026-01-17T16:45:53Z",
+      "version": 2,
+      "changeset": 177343613,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 4165778708,
+      "lat": 28.4581299,
+      "lon": 77.4675138,
+      "timestamp": "2026-01-17T16:45:53Z",
+      "version": 2,
+      "changeset": 177343613,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 4165778712,
+      "lat": 28.469355,
+      "lon": 77.5098431,
+      "timestamp": "2021-09-23T17:45:33Z",
+      "version": 3,
+      "changeset": 111610251,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 4165778713,
+      "lat": 28.4693017,
+      "lon": 77.4545419,
+      "timestamp": "2026-01-17T16:45:53Z",
+      "version": 2,
+      "changeset": 177343613,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 4165778714,
+      "lat": 28.4695048,
+      "lon": 77.5100442,
+      "timestamp": "2021-09-23T17:45:33Z",
+      "version": 2,
+      "changeset": 111610251,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 4165778717,
+      "lat": 28.4725948,
+      "lon": 77.4490981,
+      "timestamp": "2026-01-17T16:45:53Z",
+      "version": 2,
+      "changeset": 177343613,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 4165778718,
+      "lat": 28.4728821,
+      "lon": 77.4488554,
+      "timestamp": "2026-01-17T16:45:53Z",
+      "version": 2,
+      "changeset": 177343613,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 4165778719,
+      "lat": 28.4734603,
+      "lon": 77.448325,
+      "timestamp": "2026-01-17T16:45:53Z",
+      "version": 2,
+      "changeset": 177343613,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 4165778721,
+      "lat": 28.475111,
+      "lon": 77.446663,
+      "timestamp": "2016-05-04T13:46:30Z",
+      "version": 1,
+      "changeset": 39096889,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4165778722,
+      "lat": 28.4759009,
+      "lon": 77.4458664,
+      "timestamp": "2016-05-04T13:46:30Z",
+      "version": 1,
+      "changeset": 39096889,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4165778723,
+      "lat": 28.4767473,
+      "lon": 77.4449571,
+      "timestamp": "2016-05-04T13:46:30Z",
+      "version": 1,
+      "changeset": 39096889,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4165778725,
+      "lat": 28.4784849,
+      "lon": 77.4430206,
+      "timestamp": "2016-05-04T13:46:30Z",
+      "version": 1,
+      "changeset": 39096889,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4165778727,
+      "lat": 28.4805561,
+      "lon": 77.4407165,
+      "timestamp": "2016-05-04T13:46:30Z",
+      "version": 1,
+      "changeset": 39096889,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4165778728,
+      "lat": 28.4812327,
+      "lon": 77.4399253,
+      "timestamp": "2016-05-04T13:46:30Z",
+      "version": 1,
+      "changeset": 39096889,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4165778729,
+      "lat": 28.4817089,
+      "lon": 77.4392896,
+      "timestamp": "2016-05-04T13:46:30Z",
+      "version": 1,
+      "changeset": 39096889,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4165778731,
+      "lat": 28.4833875,
+      "lon": 77.4369722,
+      "timestamp": "2016-05-04T13:46:30Z",
+      "version": 1,
+      "changeset": 39096889,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4165778733,
+      "lat": 28.4846229,
+      "lon": 77.4352207,
+      "timestamp": "2016-05-04T13:46:30Z",
+      "version": 1,
+      "changeset": 39096889,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4165778736,
+      "lat": 28.4882109,
+      "lon": 77.4303391,
+      "timestamp": "2016-05-31T12:37:44Z",
+      "version": 3,
+      "changeset": 39687806,
+      "user": "bindhu",
+      "uid": 2901516
+    },
+    {
+      "type": "node",
+      "id": 4165778737,
+      "lat": 28.4897244,
+      "lon": 77.4281692,
+      "timestamp": "2016-05-31T12:37:44Z",
+      "version": 3,
+      "changeset": 39687806,
+      "user": "bindhu",
+      "uid": 2901516
+    },
+    {
+      "type": "node",
+      "id": 4165778738,
+      "lat": 28.4903279,
+      "lon": 77.4273135,
+      "timestamp": "2016-05-04T13:46:30Z",
+      "version": 1,
+      "changeset": 39096889,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4267913778,
+      "lat": 28.5024878,
+      "lon": 77.4084135,
+      "timestamp": "2016-06-27T11:16:03Z",
+      "version": 1,
+      "changeset": 40318538,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4267913779,
+      "lat": 28.5030553,
+      "lon": 77.4084487,
+      "timestamp": "2026-01-10T21:49:45Z",
+      "version": 2,
+      "changeset": 177077980,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 4267913780,
+      "lat": 28.5033209,
+      "lon": 77.4084441,
+      "timestamp": "2026-01-10T21:49:45Z",
+      "version": 2,
+      "changeset": 177077980,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 4267913781,
+      "lat": 28.5036159,
+      "lon": 77.4084076,
+      "timestamp": "2026-01-10T21:49:45Z",
+      "version": 2,
+      "changeset": 177077980,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 4267913782,
+      "lat": 28.5042723,
+      "lon": 77.4081748,
+      "timestamp": "2026-01-10T21:49:45Z",
+      "version": 2,
+      "changeset": 177077980,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 4267913783,
+      "lat": 28.5045428,
+      "lon": 77.4080225,
+      "timestamp": "2026-01-10T21:49:45Z",
+      "version": 2,
+      "changeset": 177077980,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 4267913784,
+      "lat": 28.5065265,
+      "lon": 77.4066415,
+      "timestamp": "2026-01-10T21:49:45Z",
+      "version": 2,
+      "changeset": 177077980,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 4267913785,
+      "lat": 28.5085436,
+      "lon": 77.4051915,
+      "timestamp": "2016-06-27T11:16:03Z",
+      "version": 1,
+      "changeset": 40318538,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4267913786,
+      "lat": 28.5119622,
+      "lon": 77.402813,
+      "timestamp": "2016-06-27T11:16:03Z",
+      "version": 1,
+      "changeset": 40318538,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4267913787,
+      "lat": 28.5134224,
+      "lon": 77.4018035,
+      "timestamp": "2016-06-27T11:16:03Z",
+      "version": 1,
+      "changeset": 40318538,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4267913788,
+      "lat": 28.5140623,
+      "lon": 77.4014163,
+      "timestamp": "2016-06-27T11:16:03Z",
+      "version": 1,
+      "changeset": 40318538,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4267913889,
+      "lat": 28.5151802,
+      "lon": 77.4008539,
+      "timestamp": "2016-06-27T11:16:03Z",
+      "version": 1,
+      "changeset": 40318538,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4267913890,
+      "lat": 28.5171831,
+      "lon": 77.3998306,
+      "timestamp": "2016-06-27T11:16:03Z",
+      "version": 1,
+      "changeset": 40318538,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4267913891,
+      "lat": 28.5191434,
+      "lon": 77.3987981,
+      "timestamp": "2016-06-27T11:16:03Z",
+      "version": 1,
+      "changeset": 40318538,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4267913892,
+      "lat": 28.5199919,
+      "lon": 77.3982957,
+      "timestamp": "2016-06-27T11:16:04Z",
+      "version": 1,
+      "changeset": 40318538,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4267913893,
+      "lat": 28.5206439,
+      "lon": 77.3979062,
+      "timestamp": "2016-06-27T11:16:04Z",
+      "version": 1,
+      "changeset": 40318538,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4267913894,
+      "lat": 28.5211988,
+      "lon": 77.3975467,
+      "timestamp": "2016-06-27T11:16:04Z",
+      "version": 1,
+      "changeset": 40318538,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4267913895,
+      "lat": 28.5215511,
+      "lon": 77.3972171,
+      "timestamp": "2016-06-27T11:16:04Z",
+      "version": 1,
+      "changeset": 40318538,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4267913897,
+      "lat": 28.5229727,
+      "lon": 77.3957351,
+      "timestamp": "2016-06-27T11:16:04Z",
+      "version": 1,
+      "changeset": 40318538,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4267913898,
+      "lat": 28.5235114,
+      "lon": 77.395288,
+      "timestamp": "2016-06-27T11:16:04Z",
+      "version": 1,
+      "changeset": 40318538,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4267913899,
+      "lat": 28.5238981,
+      "lon": 77.3950391,
+      "timestamp": "2016-06-27T11:16:04Z",
+      "version": 1,
+      "changeset": 40318538,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4267913900,
+      "lat": 28.5243416,
+      "lon": 77.3948778,
+      "timestamp": "2016-06-27T11:16:04Z",
+      "version": 1,
+      "changeset": 40318538,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4267913901,
+      "lat": 28.5517084,
+      "lon": 77.3885991,
+      "timestamp": "2023-06-09T14:28:00Z",
+      "version": 2,
+      "changeset": 137140138,
+      "user": "memphi907",
+      "uid": 13502059
+    },
+    {
+      "type": "node",
+      "id": 4267913902,
+      "lat": 28.5528094,
+      "lon": 77.3874525,
+      "timestamp": "2016-06-27T11:16:04Z",
+      "version": 1,
+      "changeset": 40318538,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4267913903,
+      "lat": 28.5533378,
+      "lon": 77.3868901,
+      "timestamp": "2016-06-27T11:16:04Z",
+      "version": 1,
+      "changeset": 40318538,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4267913904,
+      "lat": 28.5538722,
+      "lon": 77.3864015,
+      "timestamp": "2016-06-27T11:16:04Z",
+      "version": 1,
+      "changeset": 40318538,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4267913906,
+      "lat": 28.5545706,
+      "lon": 77.3859475,
+      "timestamp": "2016-06-27T11:16:04Z",
+      "version": 1,
+      "changeset": 40318538,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4267913907,
+      "lat": 28.5549775,
+      "lon": 77.3856836,
+      "timestamp": "2016-06-27T11:16:04Z",
+      "version": 1,
+      "changeset": 40318538,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4267913908,
+      "lat": 28.5551992,
+      "lon": 77.3855465,
+      "timestamp": "2016-06-27T11:16:04Z",
+      "version": 1,
+      "changeset": 40318538,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4267913909,
+      "lat": 28.55776,
+      "lon": 77.3838479,
+      "timestamp": "2016-06-27T11:16:04Z",
+      "version": 1,
+      "changeset": 40318538,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4267913910,
+      "lat": 28.5592358,
+      "lon": 77.3828707,
+      "timestamp": "2016-06-27T11:16:04Z",
+      "version": 1,
+      "changeset": 40318538,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4267913911,
+      "lat": 28.5613424,
+      "lon": 77.381479,
+      "timestamp": "2016-06-27T11:16:04Z",
+      "version": 1,
+      "changeset": 40318538,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4267913912,
+      "lat": 28.562397,
+      "lon": 77.3807694,
+      "timestamp": "2016-06-27T11:16:04Z",
+      "version": 1,
+      "changeset": 40318538,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4678424388,
+      "lat": 28.4685459,
+      "lon": 77.4557003,
+      "timestamp": "2026-01-17T16:45:53Z",
+      "version": 2,
+      "changeset": 177343613,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 4849443433,
+      "lat": 28.4570728,
+      "lon": 77.5002978,
+      "timestamp": "2026-02-26T22:07:43Z",
+      "version": 11,
+      "changeset": 179106211,
+      "user": "Bovi887",
+      "uid": 17440526,
+      "tags": {
+        "name": "Knowledge Park II",
+        "name:hi": "नॉलेज पार्क II",
+        "network": "Noida Metro",
+        "operator": "Noida Metro Rail Corporation",
+        "public_transport": "stop_position",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4849443447,
+      "lat": 28.4446355,
+      "lon": 77.4823422,
+      "timestamp": "2021-09-23T18:34:22Z",
+      "version": 2,
+      "changeset": 111613004,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 4849443448,
+      "lat": 28.4446708,
+      "lon": 77.4828839,
+      "timestamp": "2021-09-23T18:34:22Z",
+      "version": 2,
+      "changeset": 111613004,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 4849443449,
+      "lat": 28.4448643,
+      "lon": 77.4839703,
+      "timestamp": "2021-09-23T18:34:22Z",
+      "version": 2,
+      "changeset": 111613004,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 4849443450,
+      "lat": 28.4452321,
+      "lon": 77.4849493,
+      "timestamp": "2021-09-23T18:34:22Z",
+      "version": 2,
+      "changeset": 111613004,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 4849443451,
+      "lat": 28.4456519,
+      "lon": 77.485703,
+      "timestamp": "2017-05-12T10:59:42Z",
+      "version": 1,
+      "changeset": 48620280,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4849443452,
+      "lat": 28.4466377,
+      "lon": 77.4870843,
+      "timestamp": "2017-05-12T10:59:42Z",
+      "version": 1,
+      "changeset": 48620280,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4849443453,
+      "lat": 28.4474938,
+      "lon": 77.4882376,
+      "timestamp": "2021-09-23T18:34:22Z",
+      "version": 2,
+      "changeset": 111613004,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 4849443454,
+      "lat": 28.4494961,
+      "lon": 77.4906462,
+      "timestamp": "2021-09-23T18:34:22Z",
+      "version": 2,
+      "changeset": 111613004,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 4849443455,
+      "lat": 28.4514676,
+      "lon": 77.4926498,
+      "timestamp": "2021-09-23T18:34:22Z",
+      "version": 3,
+      "changeset": 111613004,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 4849443461,
+      "lat": 28.4534225,
+      "lon": 77.495418,
+      "timestamp": "2021-09-23T18:34:22Z",
+      "version": 2,
+      "changeset": 111613004,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 4849443467,
+      "lat": 28.4551982,
+      "lon": 77.4976683,
+      "timestamp": "2017-05-12T10:59:43Z",
+      "version": 1,
+      "changeset": 48620280,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4849443469,
+      "lat": 28.4564906,
+      "lon": 77.4995459,
+      "timestamp": "2026-01-15T10:34:51Z",
+      "version": 3,
+      "changeset": 177253028,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 4849443470,
+      "lat": 28.4585648,
+      "lon": 77.5022226,
+      "timestamp": "2019-06-10T16:20:20Z",
+      "version": 2,
+      "changeset": 71109334,
+      "user": "vojtechzaboril",
+      "uid": 8971394
+    },
+    {
+      "type": "node",
+      "id": 4849443471,
+      "lat": 28.4608863,
+      "lon": 77.5052173,
+      "timestamp": "2019-06-10T16:20:20Z",
+      "version": 2,
+      "changeset": 71109334,
+      "user": "vojtechzaboril",
+      "uid": 8971394
+    },
+    {
+      "type": "node",
+      "id": 4849443472,
+      "lat": 28.461901,
+      "lon": 77.4633496,
+      "timestamp": "2017-05-12T10:59:43Z",
+      "version": 1,
+      "changeset": 48620280,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4849443473,
+      "lat": 28.4635016,
+      "lon": 77.461464,
+      "timestamp": "2017-05-12T10:59:43Z",
+      "version": 1,
+      "changeset": 48620280,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4849443474,
+      "lat": 28.4644854,
+      "lon": 77.5097268,
+      "timestamp": "2023-06-09T14:28:00Z",
+      "version": 4,
+      "changeset": 137140138,
+      "user": "memphi907",
+      "uid": 13502059
+    },
+    {
+      "type": "node",
+      "id": 4849443475,
+      "lat": 28.464898,
+      "lon": 77.5101113,
+      "timestamp": "2021-09-23T17:45:33Z",
+      "version": 2,
+      "changeset": 111610251,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 4849443476,
+      "lat": 28.4652434,
+      "lon": 77.5102884,
+      "timestamp": "2021-09-23T17:45:33Z",
+      "version": 3,
+      "changeset": 111610251,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 4849443477,
+      "lat": 28.4655106,
+      "lon": 77.4596026,
+      "timestamp": "2017-05-12T10:59:43Z",
+      "version": 1,
+      "changeset": 48620280,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4849443478,
+      "lat": 28.4655959,
+      "lon": 77.5103607,
+      "timestamp": "2021-09-23T17:45:33Z",
+      "version": 3,
+      "changeset": 111610251,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 4849443479,
+      "lat": 28.4660262,
+      "lon": 77.5103473,
+      "timestamp": "2021-09-23T17:45:33Z",
+      "version": 3,
+      "changeset": 111610251,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 4849443480,
+      "lat": 28.4667343,
+      "lon": 77.4583258,
+      "timestamp": "2026-01-17T16:45:53Z",
+      "version": 2,
+      "changeset": 177343613,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 4849443481,
+      "lat": 28.4667065,
+      "lon": 77.5099865,
+      "timestamp": "2021-09-23T17:45:33Z",
+      "version": 3,
+      "changeset": 111610251,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 4849444042,
+      "lat": 28.4675101,
+      "lon": 77.4572422,
+      "timestamp": "2017-05-12T10:59:43Z",
+      "version": 1,
+      "changeset": 48620280,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4849444043,
+      "lat": 28.467184,
+      "lon": 77.5095775,
+      "timestamp": "2021-09-23T17:45:33Z",
+      "version": 4,
+      "changeset": 111610251,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 4849444044,
+      "lat": 28.4683216,
+      "lon": 77.5092476,
+      "timestamp": "2021-09-23T17:45:33Z",
+      "version": 3,
+      "changeset": 111610251,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 4849444045,
+      "lat": 28.4687484,
+      "lon": 77.509367,
+      "timestamp": "2021-09-23T17:45:33Z",
+      "version": 2,
+      "changeset": 111610251,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 4849444046,
+      "lat": 28.4691905,
+      "lon": 77.509674,
+      "timestamp": "2021-09-23T17:45:33Z",
+      "version": 2,
+      "changeset": 111610251,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 4849444047,
+      "lat": 28.4997899,
+      "lon": 77.4108781,
+      "timestamp": "2026-01-10T21:49:45Z",
+      "version": 3,
+      "changeset": 177077980,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 4849444048,
+      "lat": 28.5003172,
+      "lon": 77.4095931,
+      "timestamp": "2026-01-10T21:49:45Z",
+      "version": 4,
+      "changeset": 177077980,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 4849444049,
+      "lat": 28.5006023,
+      "lon": 77.4091614,
+      "timestamp": "2026-01-10T21:49:45Z",
+      "version": 3,
+      "changeset": 177077980,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 4849444050,
+      "lat": 28.5010101,
+      "lon": 77.4087819,
+      "timestamp": "2026-01-10T21:49:45Z",
+      "version": 3,
+      "changeset": 177077980,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 4849444051,
+      "lat": 28.501729,
+      "lon": 77.4084587,
+      "timestamp": "2026-01-10T21:49:45Z",
+      "version": 3,
+      "changeset": 177077980,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 4849444052,
+      "lat": 28.5253028,
+      "lon": 77.3949442,
+      "timestamp": "2019-01-26T18:53:10Z",
+      "version": 2,
+      "changeset": 66661764,
+      "user": "_rockmachine",
+      "uid": 1836406
+    },
+    {
+      "type": "node",
+      "id": 4849444053,
+      "lat": 28.5260297,
+      "lon": 77.395226,
+      "timestamp": "2019-01-26T18:53:10Z",
+      "version": 2,
+      "changeset": 66661764,
+      "user": "_rockmachine",
+      "uid": 1836406
+    },
+    {
+      "type": "node",
+      "id": 4849444054,
+      "lat": 28.5264697,
+      "lon": 77.3953631,
+      "timestamp": "2019-01-26T18:53:10Z",
+      "version": 2,
+      "changeset": 66661764,
+      "user": "_rockmachine",
+      "uid": 1836406
+    },
+    {
+      "type": "node",
+      "id": 4849444055,
+      "lat": 28.5272175,
+      "lon": 77.3954236,
+      "timestamp": "2019-01-26T18:53:10Z",
+      "version": 2,
+      "changeset": 66661764,
+      "user": "_rockmachine",
+      "uid": 1836406
+    },
+    {
+      "type": "node",
+      "id": 4849444056,
+      "lat": 28.5296399,
+      "lon": 77.3951099,
+      "timestamp": "2017-05-12T10:59:43Z",
+      "version": 1,
+      "changeset": 48620280,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4849444057,
+      "lat": 28.534136,
+      "lon": 77.3945869,
+      "timestamp": "2017-05-12T10:59:43Z",
+      "version": 1,
+      "changeset": 48620280,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4849444058,
+      "lat": 28.5382714,
+      "lon": 77.3945037,
+      "timestamp": "2017-05-12T10:59:43Z",
+      "version": 1,
+      "changeset": 48620280,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4950923221,
+      "lat": 28.5743612,
+      "lon": 77.3782577,
+      "timestamp": "2023-05-27T07:27:02Z",
+      "version": 6,
+      "changeset": 136613488,
+      "user": "sahilister",
+      "uid": 11840981,
+      "tags": {
+        "alt_name": "Noida Sector 50",
+        "name": "Rainbow Metro Station",
+        "name:hi": "नोएडा सेक्टर ५०",
+        "network": "NMRC",
+        "platforms": "2",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4950923225,
+      "lat": 28.5402346,
+      "lon": 77.3944642,
+      "timestamp": "2017-07-04T13:02:11Z",
+      "version": 1,
+      "changeset": 50034280,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4950923226,
+      "lat": 28.5404377,
+      "lon": 77.3944601,
+      "timestamp": "2017-07-04T13:02:11Z",
+      "version": 1,
+      "changeset": 50034280,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4950923227,
+      "lat": 28.5406237,
+      "lon": 77.3944206,
+      "timestamp": "2017-07-04T13:02:11Z",
+      "version": 1,
+      "changeset": 50034280,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4950923228,
+      "lat": 28.5407839,
+      "lon": 77.3943321,
+      "timestamp": "2017-07-04T13:02:11Z",
+      "version": 1,
+      "changeset": 50034280,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4950923229,
+      "lat": 28.5421105,
+      "lon": 77.3930875,
+      "timestamp": "2017-07-04T13:02:11Z",
+      "version": 1,
+      "changeset": 50034280,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4950923230,
+      "lat": 28.5424616,
+      "lon": 77.3928166,
+      "timestamp": "2017-07-04T13:02:11Z",
+      "version": 1,
+      "changeset": 50034280,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4950923231,
+      "lat": 28.5440308,
+      "lon": 77.3918725,
+      "timestamp": "2017-07-04T13:02:11Z",
+      "version": 1,
+      "changeset": 50034280,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4950923232,
+      "lat": 28.5444855,
+      "lon": 77.3916391,
+      "timestamp": "2017-07-04T13:02:11Z",
+      "version": 1,
+      "changeset": 50034280,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4950923233,
+      "lat": 28.5449662,
+      "lon": 77.3914943,
+      "timestamp": "2017-07-04T13:02:11Z",
+      "version": 1,
+      "changeset": 50034280,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4950923235,
+      "lat": 28.5466033,
+      "lon": 77.3910256,
+      "timestamp": "2023-06-09T14:28:00Z",
+      "version": 2,
+      "changeset": 137140138,
+      "user": "memphi907",
+      "uid": 13502059
+    },
+    {
+      "type": "node",
+      "id": 4950923237,
+      "lat": 28.5478629,
+      "lon": 77.3906448,
+      "timestamp": "2023-06-09T14:28:00Z",
+      "version": 2,
+      "changeset": 137140138,
+      "user": "memphi907",
+      "uid": 13502059
+    },
+    {
+      "type": "node",
+      "id": 4950923239,
+      "lat": 28.548185,
+      "lon": 77.3905132,
+      "timestamp": "2023-06-09T14:28:00Z",
+      "version": 2,
+      "changeset": 137140138,
+      "user": "memphi907",
+      "uid": 13502059
+    },
+    {
+      "type": "node",
+      "id": 4950923240,
+      "lat": 28.5485422,
+      "lon": 77.3903524,
+      "timestamp": "2023-06-09T14:28:00Z",
+      "version": 2,
+      "changeset": 137140138,
+      "user": "memphi907",
+      "uid": 13502059
+    },
+    {
+      "type": "node",
+      "id": 4950923241,
+      "lat": 28.54961,
+      "lon": 77.389809,
+      "timestamp": "2017-07-04T13:02:11Z",
+      "version": 1,
+      "changeset": 50034280,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4950923242,
+      "lat": 28.5509373,
+      "lon": 77.3890899,
+      "timestamp": "2023-06-09T14:28:00Z",
+      "version": 2,
+      "changeset": 137140138,
+      "user": "memphi907",
+      "uid": 13502059
+    },
+    {
+      "type": "node",
+      "id": 4950923243,
+      "lat": 28.5511596,
+      "lon": 77.3889711,
+      "timestamp": "2023-06-09T14:28:00Z",
+      "version": 2,
+      "changeset": 137140138,
+      "user": "memphi907",
+      "uid": 13502059
+    },
+    {
+      "type": "node",
+      "id": 4950923245,
+      "lat": 28.5627493,
+      "lon": 77.3805279,
+      "timestamp": "2017-07-04T13:02:11Z",
+      "version": 1,
+      "changeset": 50034280,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4950923246,
+      "lat": 28.5630131,
+      "lon": 77.3803563,
+      "timestamp": "2017-07-04T13:02:11Z",
+      "version": 1,
+      "changeset": 50034280,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4950923247,
+      "lat": 28.5632982,
+      "lon": 77.3801739,
+      "timestamp": "2017-07-04T13:02:11Z",
+      "version": 1,
+      "changeset": 50034280,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4950923249,
+      "lat": 28.5635055,
+      "lon": 77.3800666,
+      "timestamp": "2017-07-04T13:02:11Z",
+      "version": 1,
+      "changeset": 50034280,
+      "user": "Oberaffe",
+      "uid": 56597
+    },
+    {
+      "type": "node",
+      "id": 4950923250,
+      "lat": 28.564129,
+      "lon": 77.379874,
+      "timestamp": "2019-01-26T18:53:10Z",
+      "version": 2,
+      "changeset": 66661764,
+      "user": "_rockmachine",
+      "uid": 1836406
+    },
+    {
+      "type": "node",
+      "id": 4950923252,
+      "lat": 28.5645632,
+      "lon": 77.3798201,
+      "timestamp": "2019-01-26T18:53:10Z",
+      "version": 2,
+      "changeset": 66661764,
+      "user": "_rockmachine",
+      "uid": 1836406
+    },
+    {
+      "type": "node",
+      "id": 4950923255,
+      "lat": 28.5728362,
+      "lon": 77.3785061,
+      "timestamp": "2019-01-26T18:53:10Z",
+      "version": 2,
+      "changeset": 66661764,
+      "user": "_rockmachine",
+      "uid": 1836406
+    },
+    {
+      "type": "node",
+      "id": 4950923256,
+      "lat": 28.5758618,
+      "lon": 77.3780422,
+      "timestamp": "2019-01-26T18:53:11Z",
+      "version": 2,
+      "changeset": 66661764,
+      "user": "_rockmachine",
+      "uid": 1836406
+    },
+    {
+      "type": "node",
+      "id": 4950923257,
+      "lat": 28.5792242,
+      "lon": 77.3774814,
+      "timestamp": "2022-10-03T19:36:56Z",
+      "version": 3,
+      "changeset": 126956262,
+      "user": "memphi907",
+      "uid": 13502059
+    },
+    {
+      "type": "node",
+      "id": 4950923258,
+      "lat": 28.5797469,
+      "lon": 77.3773776,
+      "timestamp": "2022-10-03T19:36:56Z",
+      "version": 3,
+      "changeset": 126956262,
+      "user": "memphi907",
+      "uid": 13502059
+    },
+    {
+      "type": "node",
+      "id": 4950923259,
+      "lat": 28.5806681,
+      "lon": 77.3771446,
+      "timestamp": "2019-01-26T18:53:11Z",
+      "version": 2,
+      "changeset": 66661764,
+      "user": "_rockmachine",
+      "uid": 1836406
+    },
+    {
+      "type": "node",
+      "id": 4950923260,
+      "lat": 28.5817222,
+      "lon": 77.3768502,
+      "timestamp": "2022-10-03T19:36:56Z",
+      "version": 3,
+      "changeset": 126956262,
+      "user": "memphi907",
+      "uid": 13502059
+    },
+    {
+      "type": "node",
+      "id": 4950923261,
+      "lat": 28.5821119,
+      "lon": 77.3766934,
+      "timestamp": "2022-10-03T19:36:56Z",
+      "version": 2,
+      "changeset": 126956262,
+      "user": "memphi907",
+      "uid": 13502059
+    },
+    {
+      "type": "node",
+      "id": 4950923262,
+      "lat": 28.5828199,
+      "lon": 77.3763253,
+      "timestamp": "2022-10-03T19:36:56Z",
+      "version": 2,
+      "changeset": 126956262,
+      "user": "memphi907",
+      "uid": 13502059
+    },
+    {
+      "type": "node",
+      "id": 4950923263,
+      "lat": 28.5835769,
+      "lon": 77.3759768,
+      "timestamp": "2022-10-03T19:36:56Z",
+      "version": 2,
+      "changeset": 126956262,
+      "user": "memphi907",
+      "uid": 13502059
+    },
+    {
+      "type": "node",
+      "id": 4950923264,
+      "lat": 28.5843678,
+      "lon": 77.3757125,
+      "timestamp": "2023-06-09T14:28:00Z",
+      "version": 3,
+      "changeset": 137140138,
+      "user": "memphi907",
+      "uid": 13502059
+    },
+    {
+      "type": "node",
+      "id": 5818945225,
+      "lat": 28.4681408,
+      "lon": 77.5092356,
+      "timestamp": "2021-09-23T17:45:33Z",
+      "version": 3,
+      "changeset": 111610251,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 5818945226,
+      "lat": 28.4665114,
+      "lon": 77.5101408,
+      "timestamp": "2021-09-23T17:45:33Z",
+      "version": 3,
+      "changeset": 111610251,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 6238462610,
+      "lat": 28.5268518,
+      "lon": 77.3954722,
+      "timestamp": "2019-01-26T18:53:08Z",
+      "version": 1,
+      "changeset": 66661764,
+      "user": "_rockmachine",
+      "uid": 1836406
+    },
+    {
+      "type": "node",
+      "id": 6238462614,
+      "lat": 28.5675435,
+      "lon": 77.3793583,
+      "timestamp": "2019-01-26T18:53:09Z",
+      "version": 1,
+      "changeset": 66661764,
+      "user": "_rockmachine",
+      "uid": 1836406
+    },
+    {
+      "type": "node",
+      "id": 6238462616,
+      "lat": 28.569966,
+      "lon": 77.3789891,
+      "timestamp": "2019-01-26T18:53:09Z",
+      "version": 1,
+      "changeset": 66661764,
+      "user": "_rockmachine",
+      "uid": 1836406
+    },
+    {
+      "type": "node",
+      "id": 6238462618,
+      "lat": 28.5785356,
+      "lon": 77.3776367,
+      "timestamp": "2019-01-26T18:53:09Z",
+      "version": 1,
+      "changeset": 66661764,
+      "user": "_rockmachine",
+      "uid": 1836406
+    },
+    {
+      "type": "node",
+      "id": 6537456578,
+      "lat": 28.4518453,
+      "lon": 77.4931329,
+      "timestamp": "2021-09-23T18:34:22Z",
+      "version": 2,
+      "changeset": 111613004,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 6537514236,
+      "lat": 28.4678673,
+      "lon": 77.5092638,
+      "timestamp": "2021-09-23T17:45:33Z",
+      "version": 2,
+      "changeset": 111610251,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 6537514239,
+      "lat": 28.4676338,
+      "lon": 77.5093147,
+      "timestamp": "2021-09-23T17:45:33Z",
+      "version": 2,
+      "changeset": 111610251,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 6537514240,
+      "lat": 28.4662438,
+      "lon": 77.5102804,
+      "timestamp": "2021-09-23T17:45:33Z",
+      "version": 2,
+      "changeset": 111610251,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 6537514243,
+      "lat": 28.4658264,
+      "lon": 77.5103675,
+      "timestamp": "2021-09-23T17:45:33Z",
+      "version": 2,
+      "changeset": 111610251,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 6537514244,
+      "lat": 28.4646899,
+      "lon": 77.5099451,
+      "timestamp": "2021-09-23T17:45:33Z",
+      "version": 2,
+      "changeset": 111610251,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 9117995452,
+      "lat": 28.4690935,
+      "lon": 77.5095864,
+      "timestamp": "2021-09-23T17:45:33Z",
+      "version": 1,
+      "changeset": 111610251,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 9117995454,
+      "lat": 28.4688738,
+      "lon": 77.5094306,
+      "timestamp": "2021-09-23T17:45:33Z",
+      "version": 1,
+      "changeset": 111610251,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 9117995456,
+      "lat": 28.4689885,
+      "lon": 77.5095096,
+      "timestamp": "2021-09-23T17:45:33Z",
+      "version": 1,
+      "changeset": 111610251,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 9117995458,
+      "lat": 28.4685231,
+      "lon": 77.5092839,
+      "timestamp": "2021-09-23T17:45:33Z",
+      "version": 1,
+      "changeset": 111610251,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 9117995461,
+      "lat": 28.4673791,
+      "lon": 77.5094421,
+      "timestamp": "2021-09-23T17:45:33Z",
+      "version": 1,
+      "changeset": 111610251,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 9117995462,
+      "lat": 28.4653914,
+      "lon": 77.5103313,
+      "timestamp": "2021-09-23T17:45:33Z",
+      "version": 1,
+      "changeset": 111610251,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 9117995464,
+      "lat": 28.4650672,
+      "lon": 77.5102092,
+      "timestamp": "2021-09-23T17:45:33Z",
+      "version": 1,
+      "changeset": 111610251,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 9117995474,
+      "lat": 28.4874552,
+      "lon": 77.5412838,
+      "timestamp": "2023-06-09T12:07:16Z",
+      "version": 2,
+      "changeset": 137134272,
+      "user": "memphi907",
+      "uid": 13502059
+    },
+    {
+      "type": "node",
+      "id": 9118142795,
+      "lat": 28.4452312,
+      "lon": 77.4795441,
+      "timestamp": "2021-09-23T18:34:22Z",
+      "version": 1,
+      "changeset": 111613004,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 9118142798,
+      "lat": 28.4448502,
+      "lon": 77.4806053,
+      "timestamp": "2021-09-23T18:34:22Z",
+      "version": 1,
+      "changeset": 111613004,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 9118142800,
+      "lat": 28.4446486,
+      "lon": 77.4818274,
+      "timestamp": "2021-09-23T18:34:22Z",
+      "version": 1,
+      "changeset": 111613004,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 9118142802,
+      "lat": 28.44475,
+      "lon": 77.4834673,
+      "timestamp": "2021-09-23T18:34:22Z",
+      "version": 1,
+      "changeset": 111613004,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 9118142804,
+      "lat": 28.4450348,
+      "lon": 77.4844851,
+      "timestamp": "2021-09-23T18:34:22Z",
+      "version": 1,
+      "changeset": 111613004,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 9118142805,
+      "lat": 28.44543,
+      "lon": 77.4853376,
+      "timestamp": "2021-09-23T18:34:22Z",
+      "version": 1,
+      "changeset": 111613004,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 9118142808,
+      "lat": 28.449941,
+      "lon": 77.4910996,
+      "timestamp": "2021-09-23T18:34:22Z",
+      "version": 1,
+      "changeset": 111613004,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 9118142810,
+      "lat": 28.450794,
+      "lon": 77.491926,
+      "timestamp": "2021-09-23T18:34:22Z",
+      "version": 1,
+      "changeset": 111613004,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 9118142811,
+      "lat": 28.4522225,
+      "lon": 77.493626,
+      "timestamp": "2021-09-23T18:34:22Z",
+      "version": 1,
+      "changeset": 111613004,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 9118142813,
+      "lat": 28.4525825,
+      "lon": 77.4941247,
+      "timestamp": "2021-09-23T18:34:22Z",
+      "version": 1,
+      "changeset": 111613004,
+      "user": "Monumental610",
+      "uid": 12430590
+    },
+    {
+      "type": "node",
+      "id": 9816706940,
+      "lat": 28.4869796,
+      "lon": 77.4321144,
+      "timestamp": "2023-06-09T14:28:00Z",
+      "version": 2,
+      "changeset": 137140138,
+      "user": "memphi907",
+      "uid": 13502059
+    },
+    {
+      "type": "node",
+      "id": 10073661820,
+      "lat": 28.5833293,
+      "lon": 77.3760754,
+      "timestamp": "2022-10-03T19:36:56Z",
+      "version": 1,
+      "changeset": 126956262,
+      "user": "memphi907",
+      "uid": 13502059
+    },
+    {
+      "type": "node",
+      "id": 10073661829,
+      "lat": 28.581928,
+      "lon": 77.3767787,
+      "timestamp": "2022-10-03T19:36:56Z",
+      "version": 1,
+      "changeset": 126956262,
+      "user": "memphi907",
+      "uid": 13502059
+    },
+    {
+      "type": "node",
+      "id": 10074914466,
+      "lat": 28.4890297,
+      "lon": 77.5439804,
+      "timestamp": "2022-10-04T11:49:47Z",
+      "version": 1,
+      "changeset": 126990947,
+      "user": "memphi907",
+      "uid": 13502059,
+      "tags": {
+        "name": "Depot Station",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10074914467,
+      "lat": 28.4847012,
+      "lon": 77.5364801,
+      "timestamp": "2022-10-04T11:49:47Z",
+      "version": 1,
+      "changeset": 126990947,
+      "user": "memphi907",
+      "uid": 13502059,
+      "tags": {
+        "name": "GNIDA Office",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10074914468,
+      "lat": 28.4784907,
+      "lon": 77.5256933,
+      "timestamp": "2022-10-04T11:49:47Z",
+      "version": 1,
+      "changeset": 126990947,
+      "user": "memphi907",
+      "uid": 13502059,
+      "tags": {
+        "name": "Delta 1",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10074914469,
+      "lat": 28.4710499,
+      "lon": 77.5127076,
+      "timestamp": "2022-10-04T11:49:47Z",
+      "version": 1,
+      "changeset": 126990947,
+      "user": "memphi907",
+      "uid": 13502059,
+      "tags": {
+        "name": "Alpha 1",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10074914470,
+      "lat": 28.4634141,
+      "lon": 77.5083353,
+      "timestamp": "2022-10-04T11:49:47Z",
+      "version": 1,
+      "changeset": 126990947,
+      "user": "memphi907",
+      "uid": 13502059,
+      "tags": {
+        "name": "Pari Chowk",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10074914471,
+      "lat": 28.4480792,
+      "lon": 77.4766226,
+      "timestamp": "2022-10-04T11:49:47Z",
+      "version": 1,
+      "changeset": 126990947,
+      "user": "memphi907",
+      "uid": 13502059,
+      "tags": {
+        "name": "Noida Sector 148",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10074914472,
+      "lat": 28.4593419,
+      "lon": 77.4662076,
+      "timestamp": "2026-01-17T16:45:53Z",
+      "version": 2,
+      "changeset": 177343613,
+      "user": "AnnaCatarina",
+      "uid": 560578,
+      "tags": {
+        "name": "Noida Sector 147",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10074914473,
+      "lat": 28.4688753,
+      "lon": 77.4551892,
+      "timestamp": "2026-01-17T16:45:53Z",
+      "version": 2,
+      "changeset": 177343613,
+      "user": "AnnaCatarina",
+      "uid": 560578,
+      "tags": {
+        "name": "Noida Sector 146",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10074914474,
+      "lat": 28.4790219,
+      "lon": 77.4424232,
+      "timestamp": "2022-10-04T11:49:47Z",
+      "version": 1,
+      "changeset": 126990947,
+      "user": "memphi907",
+      "uid": 13502059,
+      "tags": {
+        "name": "Noida Sector 145",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10074914475,
+      "lat": 28.4863132,
+      "lon": 77.4330884,
+      "timestamp": "2022-10-04T11:49:47Z",
+      "version": 1,
+      "changeset": 126990947,
+      "user": "memphi907",
+      "uid": 13502059,
+      "tags": {
+        "name": "Noida Sector 144",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10074914476,
+      "lat": 28.4942812,
+      "lon": 77.4223917,
+      "timestamp": "2022-10-04T11:49:47Z",
+      "version": 1,
+      "changeset": 126990947,
+      "user": "memphi907",
+      "uid": 13502059,
+      "tags": {
+        "name": "Noida Sector 143",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10074914477,
+      "lat": 28.4990137,
+      "lon": 77.412868,
+      "timestamp": "2026-01-10T21:49:45Z",
+      "version": 2,
+      "changeset": 177077980,
+      "user": "AnnaCatarina",
+      "uid": 560578,
+      "tags": {
+        "name": "Noida Sector 142",
+        "operator": "NMRC",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10074914478,
+      "lat": 28.5107876,
+      "lon": 77.4036289,
+      "timestamp": "2022-10-04T11:49:47Z",
+      "version": 1,
+      "changeset": 126990947,
+      "user": "memphi907",
+      "uid": 13502059,
+      "tags": {
+        "name": "Noida Sector 137",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10074914479,
+      "lat": 28.5222947,
+      "lon": 77.3964592,
+      "timestamp": "2022-10-04T11:49:47Z",
+      "version": 1,
+      "changeset": 126990947,
+      "user": "memphi907",
+      "uid": 13502059,
+      "tags": {
+        "name": "Noida Sector 83",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10074914480,
+      "lat": 28.5324158,
+      "lon": 77.3947827,
+      "timestamp": "2022-10-04T11:49:47Z",
+      "version": 1,
+      "changeset": 126990947,
+      "user": "memphi907",
+      "uid": 13502059,
+      "tags": {
+        "name": "NSEZ",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10074914481,
+      "lat": 28.5493098,
+      "lon": 77.3899644,
+      "timestamp": "2023-06-09T14:28:00Z",
+      "version": 2,
+      "changeset": 137140138,
+      "user": "memphi907",
+      "uid": 13502059,
+      "tags": {
+        "name": "Noida Sector 81",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10074914482,
+      "lat": 28.5560682,
+      "lon": 77.3849701,
+      "timestamp": "2022-10-04T11:49:47Z",
+      "version": 1,
+      "changeset": 126990947,
+      "user": "memphi907",
+      "uid": 13502059,
+      "tags": {
+        "name": "Noida Sector 101",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10074914483,
+      "lat": 28.5653399,
+      "lon": 77.3796863,
+      "timestamp": "2022-10-04T11:49:47Z",
+      "version": 1,
+      "changeset": 126990947,
+      "user": "memphi907",
+      "uid": 13502059,
+      "tags": {
+        "name": "Noida Sector 76",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10074914484,
+      "lat": 28.5857254,
+      "lon": 77.3752792,
+      "timestamp": "2022-10-04T11:49:47Z",
+      "version": 1,
+      "changeset": 126990947,
+      "user": "memphi907",
+      "uid": 13502059,
+      "tags": {
+        "name": "Noida Sector 51",
+        "public_transport": "stop_position",
+        "railway": "stop",
+        "subway": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10965600183,
+      "lat": 28.4981331,
+      "lon": 77.4150569,
+      "timestamp": "2026-01-10T21:49:45Z",
+      "version": 2,
+      "changeset": 177077980,
+      "user": "AnnaCatarina",
+      "uid": 560578,
+      "tags": {
+        "railway": "switch",
+        "railway:switch": "default"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10965600185,
+      "lat": 28.5001809,
+      "lon": 77.4098879,
+      "timestamp": "2026-01-10T21:49:45Z",
+      "version": 2,
+      "changeset": 177077980,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 10965600192,
+      "lat": 28.584991,
+      "lon": 77.3755135,
+      "timestamp": "2026-01-12T16:41:10Z",
+      "version": 2,
+      "changeset": 177145989,
+      "user": "AnnaCatarina",
+      "uid": 560578,
+      "tags": {
+        "railway": "switch",
+        "railway:switch": "default"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10965600194,
+      "lat": 28.5845905,
+      "lon": 77.3756392,
+      "timestamp": "2026-01-12T16:41:10Z",
+      "version": 2,
+      "changeset": 177145989,
+      "user": "AnnaCatarina",
+      "uid": 560578,
+      "tags": {
+        "railway": "switch",
+        "railway:switch": "default"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10965600196,
+      "lat": 28.5500487,
+      "lon": 77.3895628,
+      "timestamp": "2023-06-09T14:28:00Z",
+      "version": 1,
+      "changeset": 137140138,
+      "user": "memphi907",
+      "uid": 13502059
+    },
+    {
+      "type": "node",
+      "id": 10965600199,
+      "lat": 28.5505605,
+      "lon": 77.3892826,
+      "timestamp": "2023-06-09T14:28:00Z",
+      "version": 1,
+      "changeset": 137140138,
+      "user": "memphi907",
+      "uid": 13502059
+    },
+    {
+      "type": "node",
+      "id": 10965600201,
+      "lat": 28.5477298,
+      "lon": 77.3906945,
+      "timestamp": "2023-06-09T14:28:00Z",
+      "version": 1,
+      "changeset": 137140138,
+      "user": "memphi907",
+      "uid": 13502059
+    },
+    {
+      "type": "node",
+      "id": 10965600203,
+      "lat": 28.5473095,
+      "lon": 77.3908343,
+      "timestamp": "2023-06-09T14:28:00Z",
+      "version": 1,
+      "changeset": 137140138,
+      "user": "memphi907",
+      "uid": 13502059
+    },
+    {
+      "type": "node",
+      "id": 10965620805,
+      "lat": 28.5475851,
+      "lon": 77.390745,
+      "timestamp": "2023-06-09T14:28:00Z",
+      "version": 1,
+      "changeset": 137140138,
+      "user": "memphi907",
+      "uid": 13502059
+    },
+    {
+      "type": "node",
+      "id": 10965620807,
+      "lat": 28.5471085,
+      "lon": 77.3908945,
+      "timestamp": "2023-06-09T14:28:00Z",
+      "version": 1,
+      "changeset": 137140138,
+      "user": "memphi907",
+      "uid": 13502059
+    },
+    {
+      "type": "node",
+      "id": 10965620811,
+      "lat": 28.5512967,
+      "lon": 77.388894,
+      "timestamp": "2023-06-09T14:28:00Z",
+      "version": 1,
+      "changeset": 137140138,
+      "user": "memphi907",
+      "uid": 13502059
+    },
+    {
+      "type": "node",
+      "id": 10965620812,
+      "lat": 28.5514601,
+      "lon": 77.3887875,
+      "timestamp": "2023-06-09T14:28:00Z",
+      "version": 1,
+      "changeset": 137140138,
+      "user": "memphi907",
+      "uid": 13502059
+    },
+    {
+      "type": "node",
+      "id": 10965620813,
+      "lat": 28.5515736,
+      "lon": 77.3887051,
+      "timestamp": "2023-06-09T14:28:00Z",
+      "version": 1,
+      "changeset": 137140138,
+      "user": "memphi907",
+      "uid": 13502059
+    },
+    {
+      "type": "node",
+      "id": 10965620814,
+      "lat": 28.551979,
+      "lon": 77.3883429,
+      "timestamp": "2023-06-09T14:28:00Z",
+      "version": 1,
+      "changeset": 137140138,
+      "user": "memphi907",
+      "uid": 13502059
+    },
+    {
+      "type": "node",
+      "id": 10965620822,
+      "lat": 28.4856623,
+      "lon": 77.4339288,
+      "timestamp": "2023-06-09T14:28:00Z",
+      "version": 1,
+      "changeset": 137140138,
+      "user": "memphi907",
+      "uid": 13502059
+    },
+    {
+      "type": "node",
+      "id": 10965620826,
+      "lat": 28.4859082,
+      "lon": 77.4336199,
+      "timestamp": "2023-06-09T14:28:00Z",
+      "version": 1,
+      "changeset": 137140138,
+      "user": "memphi907",
+      "uid": 13502059
+    },
+    {
+      "type": "node",
+      "id": 10965620827,
+      "lat": 28.4623984,
+      "lon": 77.5070563,
+      "timestamp": "2023-06-09T14:28:00Z",
+      "version": 1,
+      "changeset": 137140138,
+      "user": "memphi907",
+      "uid": 13502059
+    },
+    {
+      "type": "node",
+      "id": 10965620830,
+      "lat": 28.4641074,
+      "lon": 77.5092528,
+      "timestamp": "2023-06-09T14:28:00Z",
+      "version": 1,
+      "changeset": 137140138,
+      "user": "memphi907",
+      "uid": 13502059
+    },
+    {
+      "type": "node",
+      "id": 13447021528,
+      "lat": 28.4987925,
+      "lon": 77.4134234,
+      "timestamp": "2026-01-10T21:49:45Z",
+      "version": 1,
+      "changeset": 177077980,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 13447021530,
+      "lat": 28.4993145,
+      "lon": 77.412113,
+      "timestamp": "2026-01-10T21:49:45Z",
+      "version": 1,
+      "changeset": 177077980,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 13447021549,
+      "lat": 28.5004408,
+      "lon": 77.4093772,
+      "timestamp": "2026-01-10T21:49:45Z",
+      "version": 1,
+      "changeset": 177077980,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 13447021551,
+      "lat": 28.5008224,
+      "lon": 77.4089383,
+      "timestamp": "2026-01-10T21:49:45Z",
+      "version": 1,
+      "changeset": 177077980,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 13447021553,
+      "lat": 28.5012467,
+      "lon": 77.4086346,
+      "timestamp": "2026-01-10T21:49:45Z",
+      "version": 1,
+      "changeset": 177077980,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 13447021555,
+      "lat": 28.5014733,
+      "lon": 77.4085358,
+      "timestamp": "2026-01-10T21:49:45Z",
+      "version": 1,
+      "changeset": 177077980,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 13447021557,
+      "lat": 28.502009,
+      "lon": 77.4084152,
+      "timestamp": "2026-01-10T21:49:45Z",
+      "version": 1,
+      "changeset": 177077980,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 13447021559,
+      "lat": 28.5022484,
+      "lon": 77.4084036,
+      "timestamp": "2026-01-10T21:49:45Z",
+      "version": 1,
+      "changeset": 177077980,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 13447021560,
+      "lat": 28.5039786,
+      "lon": 77.4083005,
+      "timestamp": "2026-01-10T21:49:45Z",
+      "version": 1,
+      "changeset": 177077980,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 13462525545,
+      "lat": 28.4703077,
+      "lon": 77.4529972,
+      "timestamp": "2026-01-17T16:45:53Z",
+      "version": 1,
+      "changeset": 177343613,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 13462525550,
+      "lat": 28.4704681,
+      "lon": 77.4527136,
+      "timestamp": "2026-01-17T16:45:53Z",
+      "version": 1,
+      "changeset": 177343613,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 13462525551,
+      "lat": 28.4705848,
+      "lon": 77.4524292,
+      "timestamp": "2026-01-17T16:45:53Z",
+      "version": 1,
+      "changeset": 177343613,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 13462525552,
+      "lat": 28.4707034,
+      "lon": 77.452078,
+      "timestamp": "2026-01-17T16:45:53Z",
+      "version": 1,
+      "changeset": 177343613,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 13462525553,
+      "lat": 28.4709477,
+      "lon": 77.4512952,
+      "timestamp": "2026-01-17T16:45:53Z",
+      "version": 1,
+      "changeset": 177343613,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 13462525554,
+      "lat": 28.4710787,
+      "lon": 77.4509297,
+      "timestamp": "2026-01-17T16:45:53Z",
+      "version": 1,
+      "changeset": 177343613,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 13462525555,
+      "lat": 28.471267,
+      "lon": 77.4505432,
+      "timestamp": "2026-01-17T16:45:53Z",
+      "version": 1,
+      "changeset": 177343613,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 13462525556,
+      "lat": 28.4714518,
+      "lon": 77.4502528,
+      "timestamp": "2026-01-17T16:45:53Z",
+      "version": 1,
+      "changeset": 177343613,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 13462525557,
+      "lat": 28.4716185,
+      "lon": 77.4500135,
+      "timestamp": "2026-01-17T16:45:53Z",
+      "version": 1,
+      "changeset": 177343613,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 13462525558,
+      "lat": 28.4718363,
+      "lon": 77.4497753,
+      "timestamp": "2026-01-17T16:45:53Z",
+      "version": 1,
+      "changeset": 177343613,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 13462525559,
+      "lat": 28.4720786,
+      "lon": 77.4495432,
+      "timestamp": "2026-01-17T16:45:53Z",
+      "version": 1,
+      "changeset": 177343613,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 13462525560,
+      "lat": 28.4723628,
+      "lon": 77.4492934,
+      "timestamp": "2026-01-17T16:45:53Z",
+      "version": 1,
+      "changeset": 177343613,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 13462525561,
+      "lat": 28.4731877,
+      "lon": 77.4485785,
+      "timestamp": "2026-01-17T16:45:53Z",
+      "version": 1,
+      "changeset": 177343613,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 13462525566,
+      "lat": 28.4670959,
+      "lon": 77.4578406,
+      "timestamp": "2026-01-17T16:45:53Z",
+      "version": 1,
+      "changeset": 177343613,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 13462525568,
+      "lat": 28.4661345,
+      "lon": 77.4590162,
+      "timestamp": "2026-01-17T16:45:53Z",
+      "version": 1,
+      "changeset": 177343613,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 13462540040,
+      "lat": 28.4639971,
+      "lon": 77.4609561,
+      "timestamp": "2026-01-17T16:45:53Z",
+      "version": 1,
+      "changeset": 177343613,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 13462540054,
+      "lat": 28.4611923,
+      "lon": 77.4642017,
+      "timestamp": "2026-01-17T16:45:53Z",
+      "version": 1,
+      "changeset": 177343613,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 13462540057,
+      "lat": 28.4605849,
+      "lon": 77.4648571,
+      "timestamp": "2026-01-17T16:45:53Z",
+      "version": 1,
+      "changeset": 177343613,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 13462540059,
+      "lat": 28.4599172,
+      "lon": 77.4655834,
+      "timestamp": "2026-01-17T16:45:53Z",
+      "version": 1,
+      "changeset": 177343613,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 13462540061,
+      "lat": 28.4589845,
+      "lon": 77.4665933,
+      "timestamp": "2026-01-17T16:45:53Z",
+      "version": 1,
+      "changeset": 177343613,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 13462540082,
+      "lat": 28.4557893,
+      "lon": 77.4702257,
+      "timestamp": "2026-01-17T16:45:53Z",
+      "version": 1,
+      "changeset": 177343613,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 13462540086,
+      "lat": 28.4552623,
+      "lon": 77.4707676,
+      "timestamp": "2026-01-17T16:45:53Z",
+      "version": 1,
+      "changeset": 177343613,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "node",
+      "id": 13462540088,
+      "lat": 28.4542825,
+      "lon": 77.4717214,
+      "timestamp": "2026-01-17T16:45:53Z",
+      "version": 1,
+      "changeset": 177343613,
+      "user": "AnnaCatarina",
+      "uid": 560578
+    },
+    {
+      "type": "way",
+      "id": 687733478,
+      "timestamp": "2026-03-18T09:52:05Z",
+      "version": 9,
+      "changeset": 180049725,
+      "user": "Claudius Henrichs",
+      "uid": 18069,
+      "nodes": [
+        10074914484,
+        10965600192,
+        10965600194,
+        4950923264,
+        4950923263,
+        10073661820,
+        4950923262,
+        4950923261,
+        10073661829,
+        4950923260,
+        4950923259,
+        4950923258,
+        4950923257,
+        6238462618,
+        4950923256,
+        4950923221
+      ],
+      "tags": {
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "2",
+        "name": "Aqua Line",
+        "operator": "Noida Metro Rail Corporation Ltd. (NMRC)",
+        "railway": "subway",
+        "start_date": "2019-01-25",
+        "voltage": "25000"
+      }
+    },
+    {
+      "type": "way",
+      "id": 687733479,
+      "timestamp": "2026-03-18T09:52:05Z",
+      "version": 7,
+      "changeset": 180049725,
+      "user": "Claudius Henrichs",
+      "uid": 18069,
+      "nodes": [
+        4950923221,
+        4950923255,
+        6238462616,
+        6238462614,
+        10074914483
+      ],
+      "tags": {
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "2",
+        "name": "Aqua Line",
+        "railway": "subway",
+        "start_date": "2019-01-25",
+        "voltage": "25000"
+      }
+    },
+    {
+      "type": "way",
+      "id": 687733480,
+      "timestamp": "2026-03-18T09:52:05Z",
+      "version": 6,
+      "changeset": 180049725,
+      "user": "Claudius Henrichs",
+      "uid": 18069,
+      "nodes": [
+        10074914483,
+        4950923252,
+        4950923250,
+        4950923249,
+        4950923247,
+        4950923246,
+        4950923245,
+        4267913912,
+        4267913911,
+        4267913910,
+        4267913909,
+        10074914482
+      ],
+      "tags": {
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "2",
+        "name": "Aqua Line",
+        "railway": "subway",
+        "start_date": "2019-01-25",
+        "voltage": "25000"
+      }
+    },
+    {
+      "type": "way",
+      "id": 687733481,
+      "timestamp": "2026-03-18T09:52:05Z",
+      "version": 7,
+      "changeset": 180049725,
+      "user": "Claudius Henrichs",
+      "uid": 18069,
+      "nodes": [
+        10074914482,
+        4267913908,
+        4267913907,
+        4267913906,
+        4267913904,
+        4267913903,
+        4267913902,
+        10965620814,
+        4267913901,
+        10965620813,
+        10965620812,
+        10965620811,
+        4950923243,
+        4950923242,
+        10965600199,
+        10965600196,
+        4950923241,
+        10074914481
+      ],
+      "tags": {
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "1",
+        "name": "Aqua Line",
+        "railway": "subway",
+        "start_date": "2019-01-25",
+        "voltage": "25000"
+      }
+    },
+    {
+      "type": "way",
+      "id": 687733482,
+      "timestamp": "2026-03-18T09:52:05Z",
+      "version": 7,
+      "changeset": 180049725,
+      "user": "Claudius Henrichs",
+      "uid": 18069,
+      "nodes": [
+        10074914481,
+        4950923240,
+        4950923239,
+        4950923237,
+        10965600201,
+        10965620805,
+        10965600203,
+        10965620807,
+        4950923235,
+        4950923233,
+        4950923232,
+        4950923231,
+        4950923230,
+        4950923229,
+        4950923228,
+        4950923227,
+        4950923226,
+        4950923225,
+        4849444058,
+        4849444057,
+        10074914480
+      ],
+      "tags": {
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "1",
+        "name": "Aqua Line",
+        "railway": "subway",
+        "start_date": "2019-01-25",
+        "voltage": "25000"
+      }
+    },
+    {
+      "type": "way",
+      "id": 687733483,
+      "timestamp": "2026-03-18T09:52:05Z",
+      "version": 6,
+      "changeset": 180049725,
+      "user": "Claudius Henrichs",
+      "uid": 18069,
+      "nodes": [
+        10074914480,
+        4849444056,
+        4849444055,
+        6238462610,
+        4849444054,
+        4849444053,
+        4849444052,
+        4267913900,
+        4267913899,
+        4267913898,
+        4267913897,
+        10074914479
+      ],
+      "tags": {
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "1",
+        "name": "Aqua Line",
+        "railway": "subway",
+        "start_date": "2019-01-25",
+        "voltage": "25000"
+      }
+    },
+    {
+      "type": "way",
+      "id": 687733484,
+      "timestamp": "2026-03-18T09:52:05Z",
+      "version": 6,
+      "changeset": 180049725,
+      "user": "Claudius Henrichs",
+      "uid": 18069,
+      "nodes": [
+        10074914479,
+        4267913895,
+        4267913894,
+        4267913893,
+        4267913892,
+        4267913891,
+        4267913890,
+        4267913889,
+        4267913788,
+        4267913787,
+        4267913786,
+        10074914478
+      ],
+      "tags": {
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "1",
+        "name": "Aqua Line",
+        "railway": "subway",
+        "start_date": "2019-01-25",
+        "voltage": "25000"
+      }
+    },
+    {
+      "type": "way",
+      "id": 687733485,
+      "timestamp": "2026-03-18T09:52:05Z",
+      "version": 8,
+      "changeset": 180049725,
+      "user": "Claudius Henrichs",
+      "uid": 18069,
+      "nodes": [
+        10074914478,
+        4267913785,
+        4267913784,
+        4267913783,
+        4267913782,
+        13447021560,
+        4267913781,
+        4267913780,
+        4267913779,
+        4267913778,
+        13447021559,
+        13447021557,
+        4849444051,
+        13447021555,
+        13447021553,
+        4849444050,
+        13447021551,
+        4849444049,
+        13447021549,
+        4849444048,
+        10965600185,
+        4849444047,
+        13447021530
+      ],
+      "tags": {
+        "bridge": "viaduct",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "2",
+        "name": "Aqua Line",
+        "railway": "subway",
+        "start_date": "2019-01-25",
+        "voltage": "25000"
+      }
+    },
+    {
+      "type": "way",
+      "id": 687733486,
+      "timestamp": "2026-03-18T09:52:05Z",
+      "version": 8,
+      "changeset": 180049725,
+      "user": "Claudius Henrichs",
+      "uid": 18069,
+      "nodes": [
+        13447021528,
+        10965600183,
+        4165777370,
+        4165777369,
+        4165777368,
+        4165777367,
+        4165777366,
+        10074914476
+      ],
+      "tags": {
+        "bridge": "viaduct",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "2",
+        "name": "Aqua Line",
+        "railway": "subway",
+        "start_date": "2019-01-25",
+        "voltage": "25000"
+      }
+    },
+    {
+      "type": "way",
+      "id": 687733487,
+      "timestamp": "2026-03-18T09:52:05Z",
+      "version": 7,
+      "changeset": 180049725,
+      "user": "Claudius Henrichs",
+      "uid": 18069,
+      "nodes": [
+        10074914476,
+        4165777364,
+        4165778738,
+        4165778737,
+        4165778736,
+        9816706940,
+        10074914475
+      ],
+      "tags": {
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "1",
+        "name": "Aqua Line",
+        "railway": "subway",
+        "start_date": "2019-01-25",
+        "voltage": "25000"
+      }
+    },
+    {
+      "type": "way",
+      "id": 687733488,
+      "timestamp": "2026-03-18T09:52:05Z",
+      "version": 7,
+      "changeset": 180049725,
+      "user": "Claudius Henrichs",
+      "uid": 18069,
+      "nodes": [
+        10074914475,
+        10965620826,
+        10965620822,
+        4165778733,
+        4165778731,
+        4165778729,
+        4165778728,
+        4165778727,
+        10074914474
+      ],
+      "tags": {
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "1",
+        "name": "Aqua Line",
+        "railway": "subway",
+        "start_date": "2019-01-25",
+        "voltage": "25000"
+      }
+    },
+    {
+      "type": "way",
+      "id": 687733489,
+      "timestamp": "2026-03-18T09:52:05Z",
+      "version": 7,
+      "changeset": 180049725,
+      "user": "Claudius Henrichs",
+      "uid": 18069,
+      "nodes": [
+        10074914474,
+        4165778725,
+        4165778723,
+        4165778722,
+        4165778721,
+        4165778719,
+        13462525561,
+        4165778718,
+        4165778717,
+        13462525560,
+        13462525559,
+        13462525558,
+        13462525557,
+        13462525556,
+        13462525555,
+        13462525554,
+        13462525553,
+        13462525552,
+        13462525551,
+        13462525550,
+        13462525545,
+        4165778713,
+        10074914473
+      ],
+      "tags": {
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "1",
+        "name": "Aqua Line",
+        "railway": "subway",
+        "start_date": "2019-01-25",
+        "voltage": "25000"
+      }
+    },
+    {
+      "type": "way",
+      "id": 687733491,
+      "timestamp": "2026-03-18T09:52:05Z",
+      "version": 7,
+      "changeset": 180049725,
+      "user": "Claudius Henrichs",
+      "uid": 18069,
+      "nodes": [
+        10074914473,
+        4678424388,
+        4849444042,
+        13462525566,
+        4849443480,
+        13462525568,
+        4849443477,
+        13462540040,
+        4849443473,
+        4849443472,
+        13462540054,
+        13462540057,
+        13462540059,
+        10074914472,
+        13462540061,
+        4165778708,
+        4165778707,
+        4165778706,
+        13462540082,
+        13462540086,
+        4165778705,
+        13462540088,
+        4165778704,
+        4165778703,
+        4165778702,
+        4165778701,
+        4165778700,
+        10074914471,
+        4165778699,
+        4165778698,
+        4165778697,
+        4165778696,
+        9118142795,
+        4165778695,
+        4165778694,
+        9118142798,
+        4165778693,
+        4165778692,
+        9118142800,
+        4849443447,
+        4849443448,
+        9118142802,
+        4849443449,
+        9118142804,
+        4849443450,
+        9118142805,
+        4849443451,
+        4849443452,
+        4849443453,
+        4849443454,
+        9118142808,
+        9118142810,
+        4849443455,
+        6537456578,
+        9118142811,
+        9118142813,
+        4849443461,
+        4849443467,
+        4849443469,
+        4849443433
+      ],
+      "tags": {
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "2",
+        "name": "Aqua Line",
+        "railway": "subway",
+        "start_date": "2019-01-25",
+        "voltage": "25000"
+      }
+    },
+    {
+      "type": "way",
+      "id": 687733492,
+      "timestamp": "2026-03-18T09:52:05Z",
+      "version": 7,
+      "changeset": 180049725,
+      "user": "Claudius Henrichs",
+      "uid": 18069,
+      "nodes": [
+        4849443433,
+        4849443470,
+        4849443471,
+        10965620827,
+        10074914470
+      ],
+      "tags": {
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "1",
+        "name": "Aqua Line",
+        "railway": "subway",
+        "start_date": "2019-01-25",
+        "voltage": "25000"
+      }
+    },
+    {
+      "type": "way",
+      "id": 687733493,
+      "timestamp": "2026-03-18T09:52:05Z",
+      "version": 9,
+      "changeset": 180049725,
+      "user": "Claudius Henrichs",
+      "uid": 18069,
+      "nodes": [
+        10074914470,
+        10965620830,
+        4849443474,
+        6537514244,
+        4849443475,
+        9117995464,
+        4849443476,
+        9117995462,
+        4849443478,
+        6537514243,
+        4849443479,
+        6537514240,
+        5818945226,
+        4849443481,
+        4849444043,
+        9117995461,
+        6537514239,
+        6537514236,
+        5818945225,
+        4849444044,
+        9117995458,
+        4849444045,
+        9117995454,
+        9117995456,
+        9117995452,
+        4849444046,
+        4165778712,
+        4165778714,
+        10074914469
+      ],
+      "tags": {
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "1",
+        "name": "Aqua Line",
+        "railway": "subway",
+        "start_date": "2019-01-25",
+        "voltage": "25000"
+      }
+    },
+    {
+      "type": "way",
+      "id": 687733494,
+      "timestamp": "2026-03-18T09:52:05Z",
+      "version": 7,
+      "changeset": 180049725,
+      "user": "Claudius Henrichs",
+      "uid": 18069,
+      "nodes": [
+        10074914469,
+        10074914468
+      ],
+      "tags": {
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "1",
+        "name": "Aqua Line",
+        "railway": "subway",
+        "start_date": "2019-01-25",
+        "voltage": "25000"
+      }
+    },
+    {
+      "type": "way",
+      "id": 687733495,
+      "timestamp": "2026-03-18T09:52:05Z",
+      "version": 9,
+      "changeset": 180049725,
+      "user": "Claudius Henrichs",
+      "uid": 18069,
+      "nodes": [
+        10074914468,
+        10074914467
+      ],
+      "tags": {
+        "bridge": "yes",
+        "electrified": "yes",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "1",
+        "name": "Aqua Line",
+        "railway": "subway",
+        "start_date": "2019-01-25",
+        "voltage": "25000"
+      }
+    },
+    {
+      "type": "way",
+      "id": 688068784,
+      "timestamp": "2026-03-18T09:52:05Z",
+      "version": 7,
+      "changeset": 180049725,
+      "user": "Claudius Henrichs",
+      "uid": 18069,
+      "nodes": [
+        10074914467,
+        9117995474,
+        10074914466
+      ],
+      "tags": {
+        "bridge": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "1",
+        "name": "Aqua Line",
+        "railway": "subway",
+        "start_date": "2019-01-25",
+        "voltage": "25000"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1466105448,
+      "timestamp": "2026-03-18T09:52:05Z",
+      "version": 2,
+      "changeset": 180049725,
+      "user": "Claudius Henrichs",
+      "uid": 18069,
+      "nodes": [
+        13447021530,
+        10074914477
+      ],
+      "tags": {
+        "bridge": "viaduct",
+        "covered": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "2",
+        "name": "Aqua Line",
+        "operator": "NMRC",
+        "railway": "subway",
+        "start_date": "2019-01-25",
+        "voltage": "25000"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1466105450,
+      "timestamp": "2026-03-18T09:52:05Z",
+      "version": 2,
+      "changeset": 180049725,
+      "user": "Claudius Henrichs",
+      "uid": 18069,
+      "nodes": [
+        10074914477,
+        13447021528
+      ],
+      "tags": {
+        "bridge": "viaduct",
+        "covered": "yes",
+        "electrified": "contact_line",
+        "frequency": "50",
+        "gauge": "1435",
+        "layer": "2",
+        "name": "Aqua Line",
+        "operator": "Noida Metro Rail Corporation Ltd. (NMRC)",
+        "railway": "subway",
+        "start_date": "2019-01-25",
+        "voltage": "25000"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 9268569,
+      "timestamp": "2026-03-18T09:52:05Z",
+      "version": 10,
+      "changeset": 180049725,
+      "user": "Claudius Henrichs",
+      "uid": 18069,
+      "members": [
+        {
+          "type": "node",
+          "ref": 10074914484,
+          "role": "stop"
+        },
+        {
+          "type": "node",
+          "ref": 4950923221,
+          "role": "stop"
+        },
+        {
+          "type": "node",
+          "ref": 10074914483,
+          "role": "stop"
+        },
+        {
+          "type": "node",
+          "ref": 10074914482,
+          "role": "stop"
+        },
+        {
+          "type": "node",
+          "ref": 10074914481,
+          "role": "stop"
+        },
+        {
+          "type": "node",
+          "ref": 10074914480,
+          "role": "stop"
+        },
+        {
+          "type": "node",
+          "ref": 10074914479,
+          "role": "stop"
+        },
+        {
+          "type": "node",
+          "ref": 10074914478,
+          "role": "stop"
+        },
+        {
+          "type": "node",
+          "ref": 10074914477,
+          "role": "stop"
+        },
+        {
+          "type": "node",
+          "ref": 10074914476,
+          "role": "stop"
+        },
+        {
+          "type": "node",
+          "ref": 10074914475,
+          "role": "stop"
+        },
+        {
+          "type": "node",
+          "ref": 10074914474,
+          "role": "stop"
+        },
+        {
+          "type": "node",
+          "ref": 10074914473,
+          "role": "stop"
+        },
+        {
+          "type": "node",
+          "ref": 10074914472,
+          "role": "stop"
+        },
+        {
+          "type": "node",
+          "ref": 10074914471,
+          "role": "stop"
+        },
+        {
+          "type": "node",
+          "ref": 4849443433,
+          "role": "stop"
+        },
+        {
+          "type": "node",
+          "ref": 10074914470,
+          "role": "stop"
+        },
+        {
+          "type": "node",
+          "ref": 10074914469,
+          "role": "stop"
+        },
+        {
+          "type": "node",
+          "ref": 10074914468,
+          "role": "stop"
+        },
+        {
+          "type": "node",
+          "ref": 10074914467,
+          "role": "stop"
+        },
+        {
+          "type": "node",
+          "ref": 10074914466,
+          "role": "stop"
+        },
+        {
+          "type": "way",
+          "ref": 687733478,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.5857254,
+              "lon": 77.3752792
+            },
+            {
+              "lat": 28.584991,
+              "lon": 77.3755135
+            },
+            {
+              "lat": 28.5845905,
+              "lon": 77.3756392
+            },
+            {
+              "lat": 28.5843678,
+              "lon": 77.3757125
+            },
+            {
+              "lat": 28.5835769,
+              "lon": 77.3759768
+            },
+            {
+              "lat": 28.5833293,
+              "lon": 77.3760754
+            },
+            {
+              "lat": 28.5828199,
+              "lon": 77.3763253
+            },
+            {
+              "lat": 28.5821119,
+              "lon": 77.3766934
+            },
+            {
+              "lat": 28.581928,
+              "lon": 77.3767787
+            },
+            {
+              "lat": 28.5817222,
+              "lon": 77.3768502
+            },
+            {
+              "lat": 28.5806681,
+              "lon": 77.3771446
+            },
+            {
+              "lat": 28.5797469,
+              "lon": 77.3773776
+            },
+            {
+              "lat": 28.5792242,
+              "lon": 77.3774814
+            },
+            {
+              "lat": 28.5785356,
+              "lon": 77.3776367
+            },
+            {
+              "lat": 28.5758618,
+              "lon": 77.3780422
+            },
+            {
+              "lat": 28.5743612,
+              "lon": 77.3782577
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 687733479,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.5743612,
+              "lon": 77.3782577
+            },
+            {
+              "lat": 28.5728362,
+              "lon": 77.3785061
+            },
+            {
+              "lat": 28.569966,
+              "lon": 77.3789891
+            },
+            {
+              "lat": 28.5675435,
+              "lon": 77.3793583
+            },
+            {
+              "lat": 28.5653399,
+              "lon": 77.3796863
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 687733480,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.5653399,
+              "lon": 77.3796863
+            },
+            {
+              "lat": 28.5645632,
+              "lon": 77.3798201
+            },
+            {
+              "lat": 28.564129,
+              "lon": 77.379874
+            },
+            {
+              "lat": 28.5635055,
+              "lon": 77.3800666
+            },
+            {
+              "lat": 28.5632982,
+              "lon": 77.3801739
+            },
+            {
+              "lat": 28.5630131,
+              "lon": 77.3803563
+            },
+            {
+              "lat": 28.5627493,
+              "lon": 77.3805279
+            },
+            {
+              "lat": 28.562397,
+              "lon": 77.3807694
+            },
+            {
+              "lat": 28.5613424,
+              "lon": 77.381479
+            },
+            {
+              "lat": 28.5592358,
+              "lon": 77.3828707
+            },
+            {
+              "lat": 28.55776,
+              "lon": 77.3838479
+            },
+            {
+              "lat": 28.5560682,
+              "lon": 77.3849701
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 687733481,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.5560682,
+              "lon": 77.3849701
+            },
+            {
+              "lat": 28.5551992,
+              "lon": 77.3855465
+            },
+            {
+              "lat": 28.5549775,
+              "lon": 77.3856836
+            },
+            {
+              "lat": 28.5545706,
+              "lon": 77.3859475
+            },
+            {
+              "lat": 28.5538722,
+              "lon": 77.3864015
+            },
+            {
+              "lat": 28.5533378,
+              "lon": 77.3868901
+            },
+            {
+              "lat": 28.5528094,
+              "lon": 77.3874525
+            },
+            {
+              "lat": 28.551979,
+              "lon": 77.3883429
+            },
+            {
+              "lat": 28.5517084,
+              "lon": 77.3885991
+            },
+            {
+              "lat": 28.5515736,
+              "lon": 77.3887051
+            },
+            {
+              "lat": 28.5514601,
+              "lon": 77.3887875
+            },
+            {
+              "lat": 28.5512967,
+              "lon": 77.388894
+            },
+            {
+              "lat": 28.5511596,
+              "lon": 77.3889711
+            },
+            {
+              "lat": 28.5509373,
+              "lon": 77.3890899
+            },
+            {
+              "lat": 28.5505605,
+              "lon": 77.3892826
+            },
+            {
+              "lat": 28.5500487,
+              "lon": 77.3895628
+            },
+            {
+              "lat": 28.54961,
+              "lon": 77.389809
+            },
+            {
+              "lat": 28.5493098,
+              "lon": 77.3899644
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 687733482,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.5493098,
+              "lon": 77.3899644
+            },
+            {
+              "lat": 28.5485422,
+              "lon": 77.3903524
+            },
+            {
+              "lat": 28.548185,
+              "lon": 77.3905132
+            },
+            {
+              "lat": 28.5478629,
+              "lon": 77.3906448
+            },
+            {
+              "lat": 28.5477298,
+              "lon": 77.3906945
+            },
+            {
+              "lat": 28.5475851,
+              "lon": 77.390745
+            },
+            {
+              "lat": 28.5473095,
+              "lon": 77.3908343
+            },
+            {
+              "lat": 28.5471085,
+              "lon": 77.3908945
+            },
+            {
+              "lat": 28.5466033,
+              "lon": 77.3910256
+            },
+            {
+              "lat": 28.5449662,
+              "lon": 77.3914943
+            },
+            {
+              "lat": 28.5444855,
+              "lon": 77.3916391
+            },
+            {
+              "lat": 28.5440308,
+              "lon": 77.3918725
+            },
+            {
+              "lat": 28.5424616,
+              "lon": 77.3928166
+            },
+            {
+              "lat": 28.5421105,
+              "lon": 77.3930875
+            },
+            {
+              "lat": 28.5407839,
+              "lon": 77.3943321
+            },
+            {
+              "lat": 28.5406237,
+              "lon": 77.3944206
+            },
+            {
+              "lat": 28.5404377,
+              "lon": 77.3944601
+            },
+            {
+              "lat": 28.5402346,
+              "lon": 77.3944642
+            },
+            {
+              "lat": 28.5382714,
+              "lon": 77.3945037
+            },
+            {
+              "lat": 28.534136,
+              "lon": 77.3945869
+            },
+            {
+              "lat": 28.5324158,
+              "lon": 77.3947827
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 687733483,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.5324158,
+              "lon": 77.3947827
+            },
+            {
+              "lat": 28.5296399,
+              "lon": 77.3951099
+            },
+            {
+              "lat": 28.5272175,
+              "lon": 77.3954236
+            },
+            {
+              "lat": 28.5268518,
+              "lon": 77.3954722
+            },
+            {
+              "lat": 28.5264697,
+              "lon": 77.3953631
+            },
+            {
+              "lat": 28.5260297,
+              "lon": 77.395226
+            },
+            {
+              "lat": 28.5253028,
+              "lon": 77.3949442
+            },
+            {
+              "lat": 28.5243416,
+              "lon": 77.3948778
+            },
+            {
+              "lat": 28.5238981,
+              "lon": 77.3950391
+            },
+            {
+              "lat": 28.5235114,
+              "lon": 77.395288
+            },
+            {
+              "lat": 28.5229727,
+              "lon": 77.3957351
+            },
+            {
+              "lat": 28.5222947,
+              "lon": 77.3964592
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 687733484,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.5222947,
+              "lon": 77.3964592
+            },
+            {
+              "lat": 28.5215511,
+              "lon": 77.3972171
+            },
+            {
+              "lat": 28.5211988,
+              "lon": 77.3975467
+            },
+            {
+              "lat": 28.5206439,
+              "lon": 77.3979062
+            },
+            {
+              "lat": 28.5199919,
+              "lon": 77.3982957
+            },
+            {
+              "lat": 28.5191434,
+              "lon": 77.3987981
+            },
+            {
+              "lat": 28.5171831,
+              "lon": 77.3998306
+            },
+            {
+              "lat": 28.5151802,
+              "lon": 77.4008539
+            },
+            {
+              "lat": 28.5140623,
+              "lon": 77.4014163
+            },
+            {
+              "lat": 28.5134224,
+              "lon": 77.4018035
+            },
+            {
+              "lat": 28.5119622,
+              "lon": 77.402813
+            },
+            {
+              "lat": 28.5107876,
+              "lon": 77.4036289
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 687733485,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.5107876,
+              "lon": 77.4036289
+            },
+            {
+              "lat": 28.5085436,
+              "lon": 77.4051915
+            },
+            {
+              "lat": 28.5065265,
+              "lon": 77.4066415
+            },
+            {
+              "lat": 28.5045428,
+              "lon": 77.4080225
+            },
+            {
+              "lat": 28.5042723,
+              "lon": 77.4081748
+            },
+            {
+              "lat": 28.5039786,
+              "lon": 77.4083005
+            },
+            {
+              "lat": 28.5036159,
+              "lon": 77.4084076
+            },
+            {
+              "lat": 28.5033209,
+              "lon": 77.4084441
+            },
+            {
+              "lat": 28.5030553,
+              "lon": 77.4084487
+            },
+            {
+              "lat": 28.5024878,
+              "lon": 77.4084135
+            },
+            {
+              "lat": 28.5022484,
+              "lon": 77.4084036
+            },
+            {
+              "lat": 28.502009,
+              "lon": 77.4084152
+            },
+            {
+              "lat": 28.501729,
+              "lon": 77.4084587
+            },
+            {
+              "lat": 28.5014733,
+              "lon": 77.4085358
+            },
+            {
+              "lat": 28.5012467,
+              "lon": 77.4086346
+            },
+            {
+              "lat": 28.5010101,
+              "lon": 77.4087819
+            },
+            {
+              "lat": 28.5008224,
+              "lon": 77.4089383
+            },
+            {
+              "lat": 28.5006023,
+              "lon": 77.4091614
+            },
+            {
+              "lat": 28.5004408,
+              "lon": 77.4093772
+            },
+            {
+              "lat": 28.5003172,
+              "lon": 77.4095931
+            },
+            {
+              "lat": 28.5001809,
+              "lon": 77.4098879
+            },
+            {
+              "lat": 28.4997899,
+              "lon": 77.4108781
+            },
+            {
+              "lat": 28.4993145,
+              "lon": 77.412113
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 1466105448,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.4993145,
+              "lon": 77.412113
+            },
+            {
+              "lat": 28.4990137,
+              "lon": 77.412868
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 1466105450,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.4990137,
+              "lon": 77.412868
+            },
+            {
+              "lat": 28.4987925,
+              "lon": 77.4134234
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 687733486,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.4987925,
+              "lon": 77.4134234
+            },
+            {
+              "lat": 28.4981331,
+              "lon": 77.4150569
+            },
+            {
+              "lat": 28.4978868,
+              "lon": 77.4156356
+            },
+            {
+              "lat": 28.4973673,
+              "lon": 77.4167748
+            },
+            {
+              "lat": 28.4959861,
+              "lon": 77.4197493
+            },
+            {
+              "lat": 28.4954403,
+              "lon": 77.4206885
+            },
+            {
+              "lat": 28.4948415,
+              "lon": 77.4216125
+            },
+            {
+              "lat": 28.4942812,
+              "lon": 77.4223917
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 687733487,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.4942812,
+              "lon": 77.4223917
+            },
+            {
+              "lat": 28.4927843,
+              "lon": 77.4242558
+            },
+            {
+              "lat": 28.4903279,
+              "lon": 77.4273135
+            },
+            {
+              "lat": 28.4897244,
+              "lon": 77.4281692
+            },
+            {
+              "lat": 28.4882109,
+              "lon": 77.4303391
+            },
+            {
+              "lat": 28.4869796,
+              "lon": 77.4321144
+            },
+            {
+              "lat": 28.4863132,
+              "lon": 77.4330884
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 687733488,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.4863132,
+              "lon": 77.4330884
+            },
+            {
+              "lat": 28.4859082,
+              "lon": 77.4336199
+            },
+            {
+              "lat": 28.4856623,
+              "lon": 77.4339288
+            },
+            {
+              "lat": 28.4846229,
+              "lon": 77.4352207
+            },
+            {
+              "lat": 28.4833875,
+              "lon": 77.4369722
+            },
+            {
+              "lat": 28.4817089,
+              "lon": 77.4392896
+            },
+            {
+              "lat": 28.4812327,
+              "lon": 77.4399253
+            },
+            {
+              "lat": 28.4805561,
+              "lon": 77.4407165
+            },
+            {
+              "lat": 28.4790219,
+              "lon": 77.4424232
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 687733489,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.4790219,
+              "lon": 77.4424232
+            },
+            {
+              "lat": 28.4784849,
+              "lon": 77.4430206
+            },
+            {
+              "lat": 28.4767473,
+              "lon": 77.4449571
+            },
+            {
+              "lat": 28.4759009,
+              "lon": 77.4458664
+            },
+            {
+              "lat": 28.475111,
+              "lon": 77.446663
+            },
+            {
+              "lat": 28.4734603,
+              "lon": 77.448325
+            },
+            {
+              "lat": 28.4731877,
+              "lon": 77.4485785
+            },
+            {
+              "lat": 28.4728821,
+              "lon": 77.4488554
+            },
+            {
+              "lat": 28.4725948,
+              "lon": 77.4490981
+            },
+            {
+              "lat": 28.4723628,
+              "lon": 77.4492934
+            },
+            {
+              "lat": 28.4720786,
+              "lon": 77.4495432
+            },
+            {
+              "lat": 28.4718363,
+              "lon": 77.4497753
+            },
+            {
+              "lat": 28.4716185,
+              "lon": 77.4500135
+            },
+            {
+              "lat": 28.4714518,
+              "lon": 77.4502528
+            },
+            {
+              "lat": 28.471267,
+              "lon": 77.4505432
+            },
+            {
+              "lat": 28.4710787,
+              "lon": 77.4509297
+            },
+            {
+              "lat": 28.4709477,
+              "lon": 77.4512952
+            },
+            {
+              "lat": 28.4707034,
+              "lon": 77.452078
+            },
+            {
+              "lat": 28.4705848,
+              "lon": 77.4524292
+            },
+            {
+              "lat": 28.4704681,
+              "lon": 77.4527136
+            },
+            {
+              "lat": 28.4703077,
+              "lon": 77.4529972
+            },
+            {
+              "lat": 28.4693017,
+              "lon": 77.4545419
+            },
+            {
+              "lat": 28.4688753,
+              "lon": 77.4551892
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 687733491,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.4688753,
+              "lon": 77.4551892
+            },
+            {
+              "lat": 28.4685459,
+              "lon": 77.4557003
+            },
+            {
+              "lat": 28.4675101,
+              "lon": 77.4572422
+            },
+            {
+              "lat": 28.4670959,
+              "lon": 77.4578406
+            },
+            {
+              "lat": 28.4667343,
+              "lon": 77.4583258
+            },
+            {
+              "lat": 28.4661345,
+              "lon": 77.4590162
+            },
+            {
+              "lat": 28.4655106,
+              "lon": 77.4596026
+            },
+            {
+              "lat": 28.4639971,
+              "lon": 77.4609561
+            },
+            {
+              "lat": 28.4635016,
+              "lon": 77.461464
+            },
+            {
+              "lat": 28.461901,
+              "lon": 77.4633496
+            },
+            {
+              "lat": 28.4611923,
+              "lon": 77.4642017
+            },
+            {
+              "lat": 28.4605849,
+              "lon": 77.4648571
+            },
+            {
+              "lat": 28.4599172,
+              "lon": 77.4655834
+            },
+            {
+              "lat": 28.4593419,
+              "lon": 77.4662076
+            },
+            {
+              "lat": 28.4589845,
+              "lon": 77.4665933
+            },
+            {
+              "lat": 28.4581299,
+              "lon": 77.4675138
+            },
+            {
+              "lat": 28.4569391,
+              "lon": 77.4689354
+            },
+            {
+              "lat": 28.4563165,
+              "lon": 77.4696489
+            },
+            {
+              "lat": 28.4557893,
+              "lon": 77.4702257
+            },
+            {
+              "lat": 28.4552623,
+              "lon": 77.4707676
+            },
+            {
+              "lat": 28.4547836,
+              "lon": 77.4712367
+            },
+            {
+              "lat": 28.4542825,
+              "lon": 77.4717214
+            },
+            {
+              "lat": 28.453713,
+              "lon": 77.4722319
+            },
+            {
+              "lat": 28.4528122,
+              "lon": 77.4729024
+            },
+            {
+              "lat": 28.4521024,
+              "lon": 77.473522
+            },
+            {
+              "lat": 28.4509492,
+              "lon": 77.4744715
+            },
+            {
+              "lat": 28.4501616,
+              "lon": 77.4750643
+            },
+            {
+              "lat": 28.4480792,
+              "lon": 77.4766226
+            },
+            {
+              "lat": 28.4469236,
+              "lon": 77.4774648
+            },
+            {
+              "lat": 28.4464944,
+              "lon": 77.4778269
+            },
+            {
+              "lat": 28.4459448,
+              "lon": 77.4784022
+            },
+            {
+              "lat": 28.4454945,
+              "lon": 77.4790594
+            },
+            {
+              "lat": 28.4452312,
+              "lon": 77.4795441
+            },
+            {
+              "lat": 28.4450699,
+              "lon": 77.4799499
+            },
+            {
+              "lat": 28.4449591,
+              "lon": 77.480261
+            },
+            {
+              "lat": 28.4448502,
+              "lon": 77.4806053
+            },
+            {
+              "lat": 28.4447609,
+              "lon": 77.480996
+            },
+            {
+              "lat": 28.4446855,
+              "lon": 77.4814546
+            },
+            {
+              "lat": 28.4446486,
+              "lon": 77.4818274
+            },
+            {
+              "lat": 28.4446355,
+              "lon": 77.4823422
+            },
+            {
+              "lat": 28.4446708,
+              "lon": 77.4828839
+            },
+            {
+              "lat": 28.44475,
+              "lon": 77.4834673
+            },
+            {
+              "lat": 28.4448643,
+              "lon": 77.4839703
+            },
+            {
+              "lat": 28.4450348,
+              "lon": 77.4844851
+            },
+            {
+              "lat": 28.4452321,
+              "lon": 77.4849493
+            },
+            {
+              "lat": 28.44543,
+              "lon": 77.4853376
+            },
+            {
+              "lat": 28.4456519,
+              "lon": 77.485703
+            },
+            {
+              "lat": 28.4466377,
+              "lon": 77.4870843
+            },
+            {
+              "lat": 28.4474938,
+              "lon": 77.4882376
+            },
+            {
+              "lat": 28.4494961,
+              "lon": 77.4906462
+            },
+            {
+              "lat": 28.449941,
+              "lon": 77.4910996
+            },
+            {
+              "lat": 28.450794,
+              "lon": 77.491926
+            },
+            {
+              "lat": 28.4514676,
+              "lon": 77.4926498
+            },
+            {
+              "lat": 28.4518453,
+              "lon": 77.4931329
+            },
+            {
+              "lat": 28.4522225,
+              "lon": 77.493626
+            },
+            {
+              "lat": 28.4525825,
+              "lon": 77.4941247
+            },
+            {
+              "lat": 28.4534225,
+              "lon": 77.495418
+            },
+            {
+              "lat": 28.4551982,
+              "lon": 77.4976683
+            },
+            {
+              "lat": 28.4564906,
+              "lon": 77.4995459
+            },
+            {
+              "lat": 28.4570728,
+              "lon": 77.5002978
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 687733492,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.4570728,
+              "lon": 77.5002978
+            },
+            {
+              "lat": 28.4585648,
+              "lon": 77.5022226
+            },
+            {
+              "lat": 28.4608863,
+              "lon": 77.5052173
+            },
+            {
+              "lat": 28.4623984,
+              "lon": 77.5070563
+            },
+            {
+              "lat": 28.4634141,
+              "lon": 77.5083353
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 687733493,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.4634141,
+              "lon": 77.5083353
+            },
+            {
+              "lat": 28.4641074,
+              "lon": 77.5092528
+            },
+            {
+              "lat": 28.4644854,
+              "lon": 77.5097268
+            },
+            {
+              "lat": 28.4646899,
+              "lon": 77.5099451
+            },
+            {
+              "lat": 28.464898,
+              "lon": 77.5101113
+            },
+            {
+              "lat": 28.4650672,
+              "lon": 77.5102092
+            },
+            {
+              "lat": 28.4652434,
+              "lon": 77.5102884
+            },
+            {
+              "lat": 28.4653914,
+              "lon": 77.5103313
+            },
+            {
+              "lat": 28.4655959,
+              "lon": 77.5103607
+            },
+            {
+              "lat": 28.4658264,
+              "lon": 77.5103675
+            },
+            {
+              "lat": 28.4660262,
+              "lon": 77.5103473
+            },
+            {
+              "lat": 28.4662438,
+              "lon": 77.5102804
+            },
+            {
+              "lat": 28.4665114,
+              "lon": 77.5101408
+            },
+            {
+              "lat": 28.4667065,
+              "lon": 77.5099865
+            },
+            {
+              "lat": 28.467184,
+              "lon": 77.5095775
+            },
+            {
+              "lat": 28.4673791,
+              "lon": 77.5094421
+            },
+            {
+              "lat": 28.4676338,
+              "lon": 77.5093147
+            },
+            {
+              "lat": 28.4678673,
+              "lon": 77.5092638
+            },
+            {
+              "lat": 28.4681408,
+              "lon": 77.5092356
+            },
+            {
+              "lat": 28.4683216,
+              "lon": 77.5092476
+            },
+            {
+              "lat": 28.4685231,
+              "lon": 77.5092839
+            },
+            {
+              "lat": 28.4687484,
+              "lon": 77.509367
+            },
+            {
+              "lat": 28.4688738,
+              "lon": 77.5094306
+            },
+            {
+              "lat": 28.4689885,
+              "lon": 77.5095096
+            },
+            {
+              "lat": 28.4690935,
+              "lon": 77.5095864
+            },
+            {
+              "lat": 28.4691905,
+              "lon": 77.509674
+            },
+            {
+              "lat": 28.469355,
+              "lon": 77.5098431
+            },
+            {
+              "lat": 28.4695048,
+              "lon": 77.5100442
+            },
+            {
+              "lat": 28.4710499,
+              "lon": 77.5127076
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 687733494,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.4710499,
+              "lon": 77.5127076
+            },
+            {
+              "lat": 28.4784907,
+              "lon": 77.5256933
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 687733495,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.4784907,
+              "lon": 77.5256933
+            },
+            {
+              "lat": 28.4847012,
+              "lon": 77.5364801
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 688068784,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 28.4847012,
+              "lon": 77.5364801
+            },
+            {
+              "lat": 28.4874552,
+              "lon": 77.5412838
+            },
+            {
+              "lat": 28.4890297,
+              "lon": 77.5439804
+            }
+          ]
+        }
+      ],
+      "tags": {
+        "colour": "aqua",
+        "from": "Noida Sector 51",
+        "name": "Aqua Line: Noida Sector 51 → Depot",
+        "network": "Noida Metro",
+        "network:wikidata": "Q16909221",
+        "operator": "NMRC",
+        "public_transport:version": "2",
+        "ref": "Aqua Line",
+        "route": "subway",
+        "to": "Depot",
+        "type": "route",
+        "wikidata": "Q41668068",
+        "wikipedia": "en:Aqua Line (Noida Metro)"
+      }
+    }
+  ]
+}

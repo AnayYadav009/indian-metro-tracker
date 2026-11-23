@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { isStationNode } from "../pipeline/normalize";
 
 interface RawNode {
   type: string;
@@ -48,19 +49,7 @@ export function generateDedupeReport(cityId: string) {
   const elements: RawNode[] = raw.elements || [];
 
   // Filter station nodes using identical predicate as normalize.ts
-  const stationNodes = elements.filter(
-    (e) =>
-      e.type === "node" &&
-      e.tags &&
-      e.tags.name &&
-      (e.tags.railway === "station" ||
-        e.tags.station === "subway" ||
-        e.tags.subway === "yes" ||
-        e.tags.station === "light_rail" ||
-        e.tags.light_rail === "yes" ||
-        (e.tags.railway === "construction" &&
-          (e.tags.construction === "station" || e.tags.subway === "yes")))
-  );
+  const stationNodes = elements.filter(isStationNode);
 
   const retainedNodes: Array<{
     osmId: number;
