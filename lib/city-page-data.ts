@@ -2,7 +2,7 @@ import citiesJson from "@/data/cities.json";
 import linesJson from "@/data/lines.json";
 import segmentsGeoJson from "@/data/segments.geojson";
 import stationsGeoJson from "@/data/stations.geojson";
-import { getCityCompareStats, CityCompareStats, TIER_1_CITY_IDS } from "@/lib/compare-stats";
+import { getCityCompareStats, CityCompareStats } from "@/lib/compare-stats";
 import type { City, Line, SegmentFeatureCollection, StationFeatureCollection } from "@/types/metro";
 
 import agraRef from "@/data/reference/agra.json";

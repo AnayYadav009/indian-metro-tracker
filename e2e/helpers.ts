@@ -584,3 +584,22 @@ export function dataQualityFlag(page: Page, cityId: string): Locator {
 export function completenessCaveatCity(page: Page, cityId: string): Locator {
   return page.getByTestId(`completeness-caveat-${cityId}`);
 }
+
+// ----------------------------------------------------------------------------
+// Bottom Sheet
+// ----------------------------------------------------------------------------
+
+export function bottomSheet(page: Page): Locator {
+  return page.getByTestId("transit-bottom-sheet");
+}
+
+export function bottomSheetHandle(page: Page): Locator {
+  return page.getByTestId("bottom-sheet-handle");
+}
+
+export function bottomSheetSnapButton(
+  page: Page,
+  snap: "peek" | "half" | "full"
+): Locator {
+  return page.getByTestId(`bottom-sheet-${snap}`);
+}
