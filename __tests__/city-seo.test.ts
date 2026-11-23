@@ -133,7 +133,7 @@ describe("M17 City SEO & Metadata Generation", () => {
     const delhiData = getCityPageData("delhi");
     expect(delhiData?.hasAtLeast80PercentOpened).toBe(false);
     expect(delhiData?.openingYearRange).toBe(
-      "Opening dates recorded for 12 of 245 stations"
+      "Opening dates recorded for 13 of 246 stations"
     );
     expect(getCityDescription("delhi")).not.toContain("(opened");
 

@@ -558,11 +558,11 @@
       "official_name": "Magenta Line (Line 8)",
       "operator": "DMRC",
       "topology": "linear",
-      "operational_stations": 32,
-      "operational_length_km": 46.72,
+      "operational_stations": 33,
+      "operational_length_km": 48.72,
       "planned_length_km": 66.82,
       "terminals": [
-        "Janakpuri West",
+        "Krishna Park Extension",
         "Botanical Garden",
         "Deepali Chowk",
         "Majlis Park"
@@ -591,6 +591,16 @@
           }
         },
         {
+          "stage": "Janakpuri West - Krishna Park Extension",
+          "phase": "4",
+          "opened_on": "2025-01-05",
+          "stations_added": 1,
+          "source": {
+            "kind": "official",
+            "url": "https://kiosk.delhimetrorail.com/pages/en/present-network"
+          }
+        },
+        {
           "stage": "Deepali Chowk - Majlis Park",
           "phase": "4",
           "opened_on": "2026-03-08",
@@ -605,7 +615,7 @@
         {
           "stretch": "Phase 4 extension (Krishna Park Extension - Ramakrishna Ashram Marg)",
           "phase": "4",
-          "stations": 15,
+          "stations": 14,
           "notes": "Krishna Park Extension to RK Ashram Marg section. A completion date is unconfirmed; no date is recorded without an official DMRC source.",
           "source": {
             "kind": "news",
@@ -613,7 +623,7 @@
           }
         }
       ],
-      "notes": "Operational corridor spanning 46.7 km with 32 stations across two sections (Botanical Garden to Janakpuri West, and Deepali Chowk to Majlis Park). The remaining Phase 4 extension has no confirmed completion date. Phase V-A Central Vista corridor (RK Ashram Marg to Indraprastha, 9.9 km underground) foundation laid 2026-03-08."
+      "notes": "Operational corridor spanning 48.7 km with 33 stations across two sections (Botanical Garden to Krishna Park Extension, and Deepali Chowk to Majlis Park). The remaining Phase 4 extension has no confirmed completion date. Phase V-A Central Vista corridor (RK Ashram Marg to Indraprastha, 9.9 km underground) foundation laid 2026-03-08."
     },
     {
       "line_id": "del-grey",

@@ -39871,7 +39871,7 @@
         "references": [],
         "completion_unconfirmed": false,
         "last_verified": null,
-        "retrieved_at": "2026-11-22",
+        "retrieved_at": "2026-11-23",
         "geometry_quality": "exact"
       }
     },
@@ -41286,7 +41286,7 @@
         "references": [],
         "completion_unconfirmed": false,
         "last_verified": null,
-        "retrieved_at": "2026-11-22",
+        "retrieved_at": "2026-11-23",
         "geometry_quality": "exact"
       }
     },
@@ -43341,7 +43341,7 @@
         "references": [],
         "completion_unconfirmed": false,
         "last_verified": null,
-        "retrieved_at": "2026-11-22",
+        "retrieved_at": "2026-11-23",
         "geometry_quality": "exact"
       }
     },
@@ -43768,7 +43768,7 @@
         "references": [],
         "completion_unconfirmed": false,
         "last_verified": null,
-        "retrieved_at": "2026-11-22",
+        "retrieved_at": "2026-11-23",
         "geometry_quality": "exact"
       }
     },
@@ -44347,7 +44347,7 @@
         "references": [],
         "completion_unconfirmed": false,
         "last_verified": null,
-        "retrieved_at": "2026-11-22",
+        "retrieved_at": "2026-11-23",
         "geometry_quality": "exact"
       }
     },
@@ -44546,7 +44546,7 @@
         "references": [],
         "completion_unconfirmed": false,
         "last_verified": null,
-        "retrieved_at": "2026-11-22",
+        "retrieved_at": "2026-11-23",
         "geometry_quality": "exact"
       }
     },
@@ -46089,7 +46089,7 @@
         "references": [],
         "completion_unconfirmed": false,
         "last_verified": null,
-        "retrieved_at": "2026-11-22",
+        "retrieved_at": "2026-11-23",
         "geometry_quality": "exact"
       }
     },
@@ -46712,7 +46712,7 @@
         "references": [],
         "completion_unconfirmed": false,
         "last_verified": null,
-        "retrieved_at": "2026-11-22",
+        "retrieved_at": "2026-11-23",
         "geometry_quality": "exact"
       }
     },
@@ -49782,7 +49782,7 @@
         ],
         "completion_unconfirmed": false,
         "last_verified": null,
-        "retrieved_at": "2026-11-22",
+        "retrieved_at": "2026-11-23",
         "geometry_quality": "exact"
       }
     },
@@ -51426,8 +51426,60 @@
             28.62917
           ],
           [
-            77.07809,
-            28.62956
+            77.0774,
+            28.63052
+          ],
+          [
+            77.07719,
+            28.63186
+          ],
+          [
+            77.07728,
+            28.63286
+          ],
+          [
+            77.07771,
+            28.63356
+          ],
+          [
+            77.07888,
+            28.63506
+          ],
+          [
+            77.07937,
+            28.63571
+          ],
+          [
+            77.07994,
+            28.63634
+          ],
+          [
+            77.08041,
+            28.63687
+          ],
+          [
+            77.08067,
+            28.63724
+          ],
+          [
+            77.08096,
+            28.63798
+          ],
+          [
+            77.08143,
+            28.63929
+          ],
+          [
+            77.08297,
+            28.64356
+          ],
+          [
+            77.08383,
+            28.64625
+          ],
+          [
+            77.08434,
+            28.64779
           ]
         ]
       },
@@ -51440,18 +51492,18 @@
         "operator": "DMRC",
         "status": "operational",
         "phase": "III",
-        "length_km": 35.8,
+        "length_km": 37.9,
         "gauge": "standard",
         "inaugurated_on": "2017-12-25",
         "expected_completion": null,
-        "stations_count": 25,
+        "stations_count": 26,
         "color": "#CC338B",
         "stations_not_published": false,
         "source": "osm",
         "references": [],
         "completion_unconfirmed": false,
         "last_verified": null,
-        "retrieved_at": "2026-11-22",
+        "retrieved_at": "2026-11-23",
         "geometry_quality": "exact"
       }
     },
@@ -51658,7 +51710,7 @@
         "references": [],
         "completion_unconfirmed": false,
         "last_verified": null,
-        "retrieved_at": "2026-11-22",
+        "retrieved_at": "2026-11-23",
         "geometry_quality": "exact"
       }
     },
@@ -52104,7 +52156,7 @@
         ],
         "completion_unconfirmed": true,
         "last_verified": null,
-        "retrieved_at": "2026-11-22",
+        "retrieved_at": "2026-11-23",
         "geometry_quality": "exact"
       }
     },
@@ -52591,7 +52643,7 @@
         ],
         "completion_unconfirmed": false,
         "last_verified": "2026-11-06",
-        "retrieved_at": "2026-11-22",
+        "retrieved_at": "2026-11-23",
         "geometry_quality": "exact"
       }
     },
@@ -52849,7 +52901,7 @@
         ],
         "completion_unconfirmed": true,
         "last_verified": null,
-        "retrieved_at": "2026-11-22",
+        "retrieved_at": "2026-11-23",
         "geometry_quality": "exact"
       }
     },
@@ -53423,7 +53475,7 @@
         ],
         "completion_unconfirmed": false,
         "last_verified": "2026-10-10",
-        "retrieved_at": "2026-11-22",
+        "retrieved_at": "2026-11-23",
         "geometry_quality": "exact"
       }
     },

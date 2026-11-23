@@ -1655,7 +1655,6 @@
     "Sector 54 Chowk",
     "Sector 55–56",
     "del-nanaksar-sonia-vihar",
-    "del-krishna-park-extension",
     "del-noida-sector-143",
     "del-noida-sector-144",
     "del-noida-sector-137",
@@ -1738,6 +1737,18 @@
     "Domestic Airport"
   ],
   "stationOverrides": {
+    "Krishna Park Extension": {
+      "status": "operational",
+      "layout": "underground",
+      "opened_on": "2025-01-05",
+      "line_ids": [
+        "del-magenta"
+      ],
+      "references": [
+        "https://kiosk.delhimetrorail.com/pages/en/present-network"
+      ],
+      "last_verified": "2026-11-23"
+    },
     "Azadpur": {
       "status": "operational",
       "layout": "elevated",
