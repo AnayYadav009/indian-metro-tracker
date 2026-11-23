@@ -49,3 +49,5 @@ reports/data-audit/*-qa-screenshot.png
 *.tsbuildinfo
 next-env.d.ts
 
+# graphify
+/graphify-out/
