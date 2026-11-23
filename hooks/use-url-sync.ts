@@ -22,6 +22,7 @@ export function useUrlSync() {
   const setStatuses = useMetroStore((state) => state.setStatuses);
   const setPhases = useMetroStore((state) => state.setPhases);
   const setSelectedFeature = useMetroStore((state) => state.setSelectedFeature);
+  const setIsRoutePanelOpen = useMetroStore((state) => state.setIsRoutePanelOpen);
   const toggleStations = useMetroStore((state) => state.toggleStations);
 
   const isInitialized = useRef(false);
@@ -34,6 +35,12 @@ export function useUrlSync() {
 
     try {
       const params = new URLSearchParams(window.location.search);
+
+      // The route panel reads its own station IDs after it mounts. Open it here
+      // first so route deep links can reach that hydration logic.
+      if (params.has("from") || params.has("to")) {
+        setIsRoutePanelOpen(true);
+      }
 
       // Hydrate city
       const city = params.get("city");
@@ -106,6 +113,7 @@ export function useUrlSync() {
     setStatuses,
     setPhases,
     setSelectedFeature,
+    setIsRoutePanelOpen,
     toggleStations,
   ]);
 
@@ -120,6 +128,14 @@ export function useUrlSync() {
 
     try {
       const params = new URLSearchParams();
+      const currentParams = new URLSearchParams(window.location.search);
+
+      // RouteFinderPanel owns route selection synchronization. Preserve its
+      // parameters while this hook updates map filters and selection.
+      for (const key of ["from", "to"]) {
+        const value = currentParams.get(key);
+        if (value) params.set(key, value);
+      }
 
       if (selectedCityId) {
         params.set("city", selectedCityId);

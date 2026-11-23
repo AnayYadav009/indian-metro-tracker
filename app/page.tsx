@@ -8,7 +8,6 @@ import citiesJson from "@/data/cities.json";
 import { MapSkeleton } from "@/components/map/map-skeleton";
 import { MetadataPanel } from "@/components/panels/metadata-panel";
 import { NearestStationPanel } from "@/components/panels/nearest-station-panel";
-import { RouteFinderPanel } from "@/components/routing/route-finder-panel";
 import { MockBanner } from "@/components/ui/mock-banner";
 import { NetworkStats } from "@/components/filters/network-stats";
 import { AppHeader } from "@/components/layout/app-header";
@@ -26,6 +25,14 @@ const MapCanvas = dynamic(
     ssr: false,
     loading: () => <MapSkeleton />,
   }
+);
+
+const RouteFinderPanel = dynamic(
+  () =>
+    import("@/components/routing/route-finder-panel").then(
+      (mod) => mod.RouteFinderPanel
+    ),
+  { ssr: false }
 );
 
 export default function HomePage() {
