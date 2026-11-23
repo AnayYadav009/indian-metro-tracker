@@ -1,4 +1,4 @@
-﻿import { test, expect } from "@playwright/test";
+import { test, expect } from "@playwright/test";
 
 test.describe("Agra Visual & Interaction QA (M15)", () => {
   test.beforeEach(async ({ page }) => {
@@ -15,6 +15,10 @@ test.describe("Agra Visual & Interaction QA (M15)", () => {
     const agraBtn = page.getByTestId("city-select-agra");
     await expect(agraBtn).toBeVisible();
     await agraBtn.click();
+    const filterToggle = page.getByTestId("collapse-filter-btn");
+    if ((await filterToggle.getAttribute("aria-expanded")) === "false") {
+      await filterToggle.click({ force: true });
+    }
 
     // 2. Verify dynamic phases for Agra render
     await expect(page.getByTestId("phase-pill-1")).toBeVisible();

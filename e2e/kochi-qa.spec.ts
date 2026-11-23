@@ -15,6 +15,10 @@ test.describe("Kochi Visual & Interaction QA (M15)", () => {
     const kochiBtn = page.getByTestId("city-select-kochi");
     await expect(kochiBtn).toBeVisible();
     await kochiBtn.click();
+    const filterToggle = page.getByTestId("collapse-filter-btn");
+    if ((await filterToggle.getAttribute("aria-expanded")) === "false") {
+      await filterToggle.click({ force: true });
+    }
 
     // 2. Verify dynamic phases for Kochi render
     await expect(page.getByTestId("phase-pill-1")).toBeVisible();

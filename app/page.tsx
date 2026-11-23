@@ -2,6 +2,8 @@
 
 import React, { useMemo } from "react";
 import dynamic from "next/dynamic";
+import Link from "next/link";
+import { BarChart3 } from "lucide-react";
 import { MapSkeleton } from "@/components/map/map-skeleton";
 import { FilterPanel } from "@/components/filters/filter-panel";
 import { MetadataPanel } from "@/components/panels/metadata-panel";
@@ -47,6 +49,15 @@ export default function HomePage() {
         <NetworkStats />
 
         <div className="flex items-center gap-2">
+          <Link
+            href="/compare"
+            data-testid="nav-to-compare"
+            className="inline-flex items-center gap-1.5 rounded-lg border border-slate-700 bg-slate-800/80 px-2.5 py-1 text-xs font-medium text-slate-200 transition-colors hover:border-slate-500 hover:bg-slate-700 hover:text-white"
+            title="View Comparison Dashboard"
+          >
+            <BarChart3 className="h-3.5 w-3.5 text-emerald-400" />
+            <span className="hidden sm:inline">Compare</span>
+          </Link>
           <span
             data-testid="data-last-updated"
             className="inline-flex items-center rounded-full border border-slate-700 bg-slate-800 px-2 py-0.5 text-[11px] font-medium text-slate-300 md:px-2.5 md:text-xs"
