@@ -1,0 +1,368 @@
+# Sourcing Evidence Log
+
+This log documents every official transit authority web page fetched to source fare structures, service hours, and operating rules for the Indian Metro Network Tracker. Per project rules, every value in data records must be traceable to the exact extracted text from an official source fetched in session.
+
+---
+
+## 1. DMRC Standard Network Fares (`del-fare-dmrc`)
+
+- **Record ID**: `del-fare-dmrc`
+- **Requested URL**: `https://delhimetrorail.com/fare`
+- **Final URL**: `https://delhimetrorail.com/fare`
+- **HTTP Status**: `200`
+- **Content-Type**: `text/html; charset=utf-8`
+- **Byte Length**: `6,117` bytes (raw HTML shell); `80,238` bytes (rendered DOM)
+- **Fetched At (UTC)**: `2026-10-24T17:32:21.057Z`
+- **SHA-256 (Raw HTML)**: `c0a12fdb67ae1265c4090299f7907386b257b7e565e0195bcbe5cf6fbae66864`
+- **SHA-256 (Rendered DOM)**: `06000530d1b3207fb9249745c2e6313c89013339744d8d94522d27036d73a80b`
+- **Method**: Playwright render (`@playwright/test` Chromium headless) because `delhimetrorail.com` is a client-rendered React SPA (`<div id="root"></div>`) backed by API `https://backend.delhimetrorail.com/api/v2/en/passenger/fare/`.
+
+### Exact Extracted Table Rows
+
+```text
+Distance (in KMs) | Monday to Saturday | Sunday & National Holidays | Time Limit (in Mins.)
+0-2               | Rs 11/-            | Rs 11/-                    | 65
+2-5               | Rs 21/-            | Rs. 11/-                   | 
+5-12              | Rs 32/-            | Rs 21/-                    | 
+12-21             | Rs. 43/-           | Rs. 32/-                   | 100
+21-32             | Rs 54/-            | Rs 43/-                    | 180
+More than 32      | Rs 64/-            | Rs 54/-                    | 
+```
+
+### Comparison Table
+
+| Field | Value in Data (`del-fare-dmrc`) | Value on Page | Match (Yes/No) |
+| :--- | :--- | :--- | :---: |
+| `bands[0].min_km` | `0` | `0` | Yes |
+| `bands[0].max_km` | `2` | `2` | Yes |
+| `bands[0].fare_inr` | `11` | `Rs 11/-` (Monday to Saturday) | Yes |
+| `bands[1].min_km` | `2` | `2` | Yes |
+| `bands[1].max_km` | `5` | `5` | Yes |
+| `bands[1].fare_inr` | `21` | `Rs 21/-` (Monday to Saturday) | Yes |
+| `bands[2].min_km` | `5` | `5` | Yes |
+| `bands[2].max_km` | `12` | `12` | Yes |
+| `bands[2].fare_inr` | `32` | `Rs 32/-` (Monday to Saturday) | Yes |
+| `bands[3].min_km` | `12` | `12` | Yes |
+| `bands[3].max_km` | `21` | `21` | Yes |
+| `bands[3].fare_inr` | `43` | `Rs. 43/-` (Monday to Saturday) | Yes |
+| `bands[4].min_km` | `21` | `21` | Yes |
+| `bands[4].max_km` | `32` | `32` | Yes |
+| `bands[4].fare_inr` | `54` | `Rs 54/-` (Monday to Saturday) | Yes |
+| `bands[5].min_km` | `32` | `32` ("More than 32") | Yes |
+| `bands[5].max_km` | `null` | `null` ("More than 32") | Yes |
+| `bands[5].fare_inr` | `64` | `Rs 64/-` (Monday to Saturday) | Yes |
+| `effective_from` | (omitted) | Not stated on page | Yes |
+| `provenance.status` | `"unverified"` | n/a (unverified: page lacks effective date) | Yes |
+
+---
+
+## 2. DMRC Airport Express Line Fares (`fare-for-airport-express-line`)
+
+- **Record ID**: None loaded (excluded from distance-band rules per owner specification)
+- **Requested URL**: `https://delhimetrorail.com/fare-for-airport-express-line`
+- **Final URL**: `https://delhimetrorail.com/fare-for-airport-express-line`
+- **HTTP Status**: `200`
+- **Content-Type**: `text/html; charset=utf-8`
+- **Byte Length**: `6,117` bytes (raw HTML shell)
+- **Fetched At (UTC)**: `2026-10-24T17:32:21.318Z`
+- **SHA-256 (Raw HTML)**: `c0a12fdb67ae1265c4090299f7907386b257b7e565e0195bcbe5cf6fbae66864`
+- **Method**: Playwright render (`@playwright/test` Chromium headless)
+
+### Exact Extracted Station-to-Station Matrix
+
+```text
+Station                     | New Delhi | Shivaji Stadium | Dhaula Kuan | Delhi Aerocity | IGI Airport | Dwarka Sector 21 | Yashobhoomi Dwarka Sector 25
+New Delhi                   | Rs. 11    | Rs. 21          | Rs. 43      | Rs. 54         | Rs. 64      | Rs. 64           | Rs. 75
+Shivaji Stadium             | Rs. 21    | Rs. 11          | Rs. 21      | Rs. 32         | Rs. 54      | Rs. 64           | Rs. 75
+Dhaula Kuan                 | Rs. 43    | Rs. 21          | Rs. 11      | Rs. 21         | Rs. 32      | Rs. 54           | Rs. 64
+Delhi Aerocity              | Rs. 54    | Rs. 32          | Rs. 21      | Rs. 11         | Rs. 21      | Rs. 32           | Rs. 43
+IGI Airport                 | Rs. 64    | Rs. 54          | Rs. 32      | Rs. 21         | Rs. 11      | Rs. 21           | Rs. 32
+Dwarka Sector 21            | Rs. 64    | Rs. 64          | Rs. 54      | Rs. 32         | Rs. 21      | Rs. 11           | Rs. 21
+Yashobhoomi Dwarka Sec - 25 | Rs. 75    | Rs. 75          | Rs. 64      | Rs. 43         | Rs. 32      | Rs. 21           | Rs. 11
+```
+
+### Note on Exclusion
+Airport Express Line tariff is published as an origin-destination matrix between individual stations rather than standard distance bands. Per the owner decision recorded 2026-10-28, retain the distance-band and station-count model; do not force matrix tariffs into those bases. No Airport Express fare rule is loaded. This is a settled exclusion policy, not an outstanding owner decision.
+
+---
+
+## 3. DMRC Train Timings (`#first-and-last` Modal)
+
+- **Record ID**: None loaded in `data/timings.json` (`[]`)
+- **Requested URL**: `https://delhimetrorail.com/` (interactive modal `#first-and-last`)
+- **Reason Not Loaded**: DMRC does not publish static first/last train timetables for terminal stations. The website only offers an interactive query form with station dropdown selectors. Per milestone instructions: *"If official timings cannot be read reliably, load none and report."*
+
+---
+
+## Owner Spot-Check List
+
+For manual owner verification by eye against the live official publication:
+
+| Record ID | Official Source URL | Value 1 | Value 2 | Value 3 |
+| :--- | :--- | :--- | :--- | :--- |
+| `del-fare-dmrc` | [delhimetrorail.com/fare](https://delhimetrorail.com/fare) | **0–2 km**: Rs 11/- (Mon–Sat) | **5–12 km**: Rs 32/- (Mon–Sat) | **>32 km**: Rs 64/- (Mon–Sat) |
+
+---
+
+## 4. Re-capture: DMRC Evidence Re-Capture (Milestone M21c)
+
+> **Notice**: This section supersedes the earlier M21b entries above for `del-fare-dmrc` and `fare-for-airport-express-line`. In M21b, the earlier hashes recorded were of the raw client app shell (`6,117` bytes) and of a DOM captured prior to switching the site language toggle to English. The re-capture below was performed in ONE unified Playwright session with language explicitly set to English, capturing the full rendered DOM, the backing API responses, and their cryptographic SHA-256 digests.
+
+### 4.1 Standard Fare Page Render (`delhimetrorail.com/fare`)
+
+- **Requested URL**: `https://delhimetrorail.com/fare`
+- **Final URL**: `https://delhimetrorail.com/fare`
+- **Render Timestamp (UTC)**: `2026-10-24T18:08:27.710Z`
+- **Language Shown**: English (`"Distance (in KMs)"`, `"FARE"`, `"Time Limit (in Mins.)"`, `"Monday to Saturday"`, `"Sunday & National Holidays"`)
+- **Saved Rendered DOM File**: `C:/Users/anayy/AppData/Local/Temp/dmrc-fare-rendered-english.html` (outside repo)
+- **Rendered DOM Byte Length**: `76,249` bytes
+- **Rendered DOM SHA-256**: `1dacc1cbb95679f08754d1a5816606ab1f0c7d74b61885934ee57cd1090737fb`
+
+### 4.2 Network Response Carrying Fare Table Data
+
+- **API URL**: `https://backend.delhimetrorail.com/api/v2/en/passenger/fare/`
+- **HTTP Status**: `200 OK`
+- **Content-Type**: `application/json`
+- **Byte Length**: `1,533` bytes
+- **Saved API JSON File**: `C:/Users/anayy/AppData/Local/Temp/dmrc-fare-api.json` (outside repo)
+- **Saved API SHA-256**: `8838c5f2cba57fa1764c338ec67d5079677f7cebf4047da2872182542d4103ae`
+- **Agreement**: Scripted comparison (`extract-and-compare.cjs`) verified that the rendered DOM table rows and the backend API JSON rows agree identically across all columns and distance bands.
+
+### 4.3 Script-Extracted Fare Table Rows (All Columns)
+
+| Distance Band (in KMs) | Monday to Saturday Fare | Sunday & National Holidays Fare | Time Limit (in Mins.) |
+| :--- | :--- | :--- | :--- |
+| `0-2` | Rs 11/- | Rs 11/- | 65 |
+| `2-5` | Rs 21/- | Rs. 11/- | - |
+| `5-12` | Rs 32/- | Rs 21/- | - |
+| `12-21` | Rs. 43/- | Rs. 32/- | 100 |
+| `21-32` | Rs 54/- | Rs 43/- | 180 |
+| `More than 32` | Rs 64/- | Rs 54/- | - |
+
+### 4.4 Scripted Comparison with `data/fares.json` (`del-fare-dmrc`)
+
+Scripted comparison against `data/fares.json` (rule `del-fare-dmrc`, `city_id: "delhi"`, `day_scope: "mon_sat"`):
+
+| Band Index | Published Wording | Min Km (Page vs Data) | Max Km (Page vs Data) | Base Fare INR (Page vs Data) | Result |
+| :---: | :--- | :---: | :---: | :---: | :---: |
+| 0 | `0-2` | `0` vs `0` | `2` vs `2` | `11` (Rs 11/-) vs `11` | MATCH |
+| 1 | `2-5` | `2` vs `2` | `5` vs `5` | `21` (Rs 21/-) vs `21` | MATCH |
+| 2 | `5-12` | `5` vs `5` | `12` vs `12` | `32` (Rs 32/-) vs `32` | MATCH |
+| 3 | `12-21` | `12` vs `12` | `21` vs `21` | `43` (Rs. 43/-) vs `43` | MATCH |
+| 4 | `21-32` | `21` vs `21` | `32` vs `32` | `54` (Rs 54/-) vs `54` | MATCH |
+| 5 | `More than 32` | `32` vs `32` | `null` vs `null` | `64` (Rs 64/-) vs `64` | MATCH |
+
+Overall match: **All bands match identically**.
+
+### 4.5 Airport Express Page Re-capture (`fare-for-airport-express-line`)
+
+- **Requested URL**: `https://delhimetrorail.com/fare-for-airport-express-line`
+- **Final URL**: `https://delhimetrorail.com/fare-for-airport-express-line`
+- **Render Timestamp (UTC)**: `2026-10-24T18:08:31.985Z`
+- **Language Shown**: English
+- **Saved Rendered DOM File**: `C:/Users/anayy/AppData/Local/Temp/dmrc-airport-rendered-english.html` (outside repo)
+- **Rendered DOM Byte Length**: `81,573` bytes
+- **Rendered DOM SHA-256**: `cc640aab0f2c6b97ab0b2fde7e8e806d6071ea33a21cbc74e5278782e00a0869`
+- **Single Journey Token Matrix (7 Stations)**:
+  - Stations: New Delhi, Shivaji Stadium, Dhaula Kuan, Delhi Aerocity, IGI Airport, Dwarka Sec 21, Yashobhoomi Dwarka Sector - 25.
+  - New Delhi to Shivaji Stadium: Rs 21
+  - New Delhi to Dhaula Kuan: Rs 43
+  - New Delhi to Delhi Aerocity: Rs 54
+  - New Delhi to IGI Airport: Rs 64
+  - New Delhi to Dwarka Sec 21: Rs 64
+  - New Delhi to Yashobhoomi Dwarka Sector 25: Rs 75
+  - Minimum fare between adjacent stations: Rs 11 (e.g. Aerocity to IGI Airport).
+- **Reason for Exclusion**: Origin-destination matrix tariff model; excluded per owner decision B.
+
+### 4.6 Updated Owner Spot-Check List (M21c)
+
+- **URL**: [https://delhimetrorail.com/fare](https://delhimetrorail.com/fare)
+- **How to switch to English**:
+  1. Open `https://delhimetrorail.com/fare` in a browser.
+  2. If the interface loads in Hindi, click the language switch link in the top header (`English` / `हिन्दी`) or set `localStorage.setItem('lang', 'en')` and refresh.
+  3. Verify the main table heading reads: `"Distance (in KMs) | FARE | Time Limit (in Mins.)"` with subheaders `"Monday to Saturday"` and `"Sunday & National Holidays"`.
+- **Values to compare**:
+  1. **2–5 km band**: Monday to Saturday fare is **Rs 21/-**, contrasted with Sunday & National Holidays fare of **Rs. 11/-** (Rs 10 discount on Sundays).
+  2. **12–21 km band**: Monday to Saturday fare is **Rs. 43/-**, contrasted with Sunday & Holidays fare of **Rs. 32/-**.
+  3. **More than 32 km band**: Monday to Saturday fare is **Rs 64/-**, contrasted with Sunday & Holidays fare of **Rs 54/-**.
+
+---
+
+## 5. Hyderabad L&T Metro Rail Fares (`hyd-fare-ltmrhl`, Milestone M21d)
+
+- **Record ID**: `hyd-fare-ltmrhl`
+- **City ID**: `hyderabad`
+- **Operator**: `LTMRHL` (L&T Metro Rail Hyderabad Limited)
+- **Lines Covered**: `hyd-red` (Red Line / Corridor I), `hyd-blue` (Blue Line / Corridor III), `hyd-green` (Green Line / Corridor II)
+- **Requested URL**: `https://ltmetro.com/wp-content/uploads/2025/05/Hyderabad-Metro-Rail-Revised-Fare-Chart-Final.pdf`
+- **Final URL**: `https://ltmetro.com/wp-content/uploads/2025/05/Hyderabad-Metro-Rail-Revised-Fare-Chart-Final.pdf`
+- **HTTP Status**: `200 OK`
+- **Content-Type**: `application/pdf`
+- **Server Date**: `Tue, 27 Oct 2026 06:24:01 GMT` (Server header `Date: Tue, 27 Oct 2026 06:24:01 GMT`)
+- **Last-Modified**: `Fri, 23 May 2025 06:42:25 GMT`
+- **Byte Length**: `181,686` bytes
+- **SHA-256**: `be81481098626bedf7eabb3b3470bb446bef330e59341fa712fa849c4014e0ad`
+- **TLS Verification Result**: Host `ltmetro.com` returned TLS error code `UNABLE_TO_VERIFY_LEAF_SIGNATURE` (*"unable to verify the first certificate; if the root CA is installed locally, try running Node.js with --use-system-ca"*). Per Step 1c, downloaded twice with TLS verification bypass for capture only. Both passes produced identical byte length (181,686 bytes) and cryptographic hash (`be81481098626bedf7eabb3b3470bb446bef330e59341fa712fa849c4014e0ad`).
+- **Circular Document Citation**: Press Release issued by L&TMRHL - Corporate Communication Department - `L&TMRHL/CCD/PR/189/23-05-2025` dated `23rd MAY 2025`.
+- **Effective From**: `2025-05-24` (*"This will come to effect from 24th May 2025 and will be applicable, across all fare media (Paper QR/Token, Digital Tickets, Smart Cards)."*)
+- **Saved Evidence File**: `C:\Anay\evidence\fares\hyderabad\Hyderabad-Metro-Rail-Revised-Fare-Chart-Final.pdf` (outside repo)
+
+### 5.1 Verbatim Extracted Fare Table (pdfplumber)
+
+```text
+Fare Zone | Revised FFC Recommended Fare Zone (in Kms) | Fare After Discount (INR)*
+1         | Up to 2                                   | 11.00
+2         | More than 2 up to 4                       | 17.00
+3         | More than 4 up to 6                       | 28.00
+4         | More than 6 up to 9                       | 37.00
+5         | More than 9 up to 12                      | 47.00
+6         | More than 12 up to 15                     | 51.00
+7         | More than 15 up to 18                     | 56.00
+8         | More than 18 up to 21                     | 61.00
+9         | More than 21 up to 24                     | 65.00
+10        | More than 24                              | 69.00
+```
+
+### 5.2 Key Statements from Official Circular
+
+- **Rounding**: `"* Decimals rounded off to the nearest rupee."`
+- **10% Discount Explanation**: `"As a token of appreciation for our valued passengers, these fares reflect a 10% discount applied to the percentage increase determined by the Fare Fixation Committee (FFC) fare zone wise."`
+- **Effective Date & Media**: `"This will come to effect from 24th May 2025 and will be applicable, across all fare media (Paper QR/Token, Digital Tickets, Smart Cards). We encourage all our valued passengers to travel smartly by using smart cards and digital platforms."`
+- **Discount End Date**: None stated in the circular.
+- **Superseded Rates**: Supersedes the earlier 17 May 2025 chart (₹12 to ₹75).
+
+### 5.3 Comparison Table with `data/fares.json` (`hyd-fare-ltmrhl`)
+
+| Band Index | Document Zone / Range (in Kms) | Min Km (Page vs Data) | Max Km (Page vs Data) | Fare INR (Page vs Data) | Result |
+| :---: | :--- | :---: | :---: | :---: | :---: |
+| 0 | `Up to 2` | `0` vs `0` | `2` vs `2` | `11.00` vs `11` | MATCH |
+| 1 | `More than 2 up to 4` | `2` vs `2` | `4` vs `4` | `17.00` vs `17` | MATCH |
+| 2 | `More than 4 up to 6` | `4` vs `4` | `6` vs `6` | `28.00` vs `28` | MATCH |
+| 3 | `More than 6 up to 9` | `6` vs `6` | `9` vs `9` | `37.00` vs `37` | MATCH |
+| 4 | `More than 9 up to 12` | `9` vs `9` | `12` vs `12` | `47.00` vs `47` | MATCH |
+| 5 | `More than 12 up to 15` | `12` vs `12` | `15` vs `15` | `51.00` vs `51` | MATCH |
+| 6 | `More than 15 up to 18` | `15` vs `15` | `18` vs `18` | `56.00` vs `56` | MATCH |
+| 7 | `More than 18 up to 21` | `18` vs `18` | `21` vs `21` | `61.00` vs `61` | MATCH |
+| 8 | `More than 21 up to 24` | `21` vs `21` | `24` vs `24` | `65.00` vs `65` | MATCH |
+| 9 | `More than 24` | `24` vs `24` | `null` vs `null` | `69.00` vs `69` | MATCH |
+
+Overall match: **All 10 distance bands match identically**.
+
+---
+
+## 6. Phase 10 Official Source Sourcing Evidence (Sep–Nov 2026 Real-World Updates)
+
+This section records official transit and government sources verified in Phase 10:
+
+### 6.1 Chennai Metro Phase II Corridor 4 (Yellow Line)
+- **Authority**: Chennai Metro Rail Limited (CMRL)
+- **Official Source URL**: https://chennaimetrorail.org/wp-content/uploads/2026/10/Fare-Table.pdf
+- **Host**: chennaimetrorail.org (allowlisted transit operator)
+- **Status / Findings**: The CMRL Fare Table PDF supports official station names (*Poonamallee Bypass, Poonamallee Bus Stand, Poonamallee Government Hospital, Karayanchavadi, Kumananchavadi, Iyyappanthangal, Kattupakkam, Thelliyaragaram, Porur Bypass, Porur Junction, Vadapalani*) and distance-based fare structure (Rs 10 to Rs 40) only. Secondary news URLs (
+ailwaygazette.com, dtnext.in) were purged from runtime data records (data/overrides/chennai.json, data/segments.geojson, data/stations.geojson). The opened_on: 2026-10-11 date comes from news leads kept in data/reference/chennai.json marked confidence: unverified.
+
+---
+
+## 7. Phase 11 Central Government Official Sourcing (PIB & PMO)
+
+### 7.1 Official Host Allowlist Additions
+- **Domains Added**: pib.gov.in, www.pib.gov.in, pmindia.gov.in, www.pmindia.gov.in
+- **Scope**: Union Cabinet approvals, Prime Ministerial project inaugurations, and central ministry (MoHUA) project notifications.
+- **Verification Rule**: Unofficial domains (e.g. 
+arendramodi.in, news portals, aggregators) remain strictly barred.
+
+### 7.2 Pune Metro Line 3 (Hinjawadi - District Court)
+- **Authority**: Press Information Bureau (PIB) / PMO / PMRDA
+- **Official Source URL**: https://www.pib.gov.in/PressReleasePage.aspx?PRID=2332011 (post-event inauguration release; PRID=2331557 was pre-event advisory)
+- **Host**: pib.gov.in (allowlisted central government portal)
+- **Status / Findings**: Verified official inauguration on 3rd November 2026 for Pune Metro Line 3 (~23 km elevated corridor from Hinjawadi to District Court) via post-event release PRID=2332011 ("Prime Minister Shri Narendra Modi inaugurated and laid the foundation stone for Pune Metro projects... today through video conferencing"). Commercial passenger service start date and operational station count are not stated on official pages (marked unverified news leads). Secondary news URLs (freepressjournal.in, punekarnews.in) were purged from data/reference/pune.json, data/overrides/pune.json, data/segments.geojson, and data/stations.geojson.
+
+### 7.3 Bengaluru Metro Pink Line (Reach 6 Elevated)
+- **Authority**: Press Information Bureau (PIB) / PMO
+- **Official Source URLs**:
+  - `https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335089` (pre-event advisory)
+  - `https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335840` (post-event dedication release)
+- **Host**: pib.gov.in (allowlisted central government portal)
+- **Status / Findings**: PRID 2335089 (sha256 980a33d6025333cbcc184b6d485ef6c867d257819eb938de4af4c60f587f47f2) is a pre-event advisory naming Kalena Agrahara-Tavarekere and ~₹3,470 crore; PRID 2335840 confirms the Pink Line was dedicated on 13 Nov 2026. However, `blr-pink-seg-01` in the repository is currently a single 21 km segment spanning both reaches (elevated and underground to Nagawara). Flipping `blr-pink-seg-01` directly to operational would add 21 km to the city's operational total (exceeding the reference threshold) and cause two `declared-not-compiled` construction errors, raising audit errors from 3 to 6. Therefore, runtime data is left unchanged; a split at Tavarekere is required and is deferred. Station count (6 elevated) and station names remain unverified news leads pending official BMRCL publication.
+
+### 7.4 Pune Metro Phase-2 (Line 4 and Line 4A)
+- **Authority**: Press Information Bureau (PIB) / Union Cabinet
+- **Official Source URL**: https://www.pib.gov.in/PressReleasePage.aspx?PRID=2194711
+- **Host**: pib.gov.in (allowlisted central government portal)
+- **Status / Findings**: Verified Union Cabinet approval on 26 November 2025 (PIB PRID=2194711) for Pune Metro Phase-2 comprising Line 4 (Kharadi to Khadakwasla, 25.52 km, 22 stations) and Line 4A (Nal Stop to Warje and Manik Baug, 6.12 km, 6 stations), totaling 31.636 km with 28 elevated stations at ₹9,857.85 crore. Recorded as planned coverage gap without geometry.
+
+### 7.5 Noida Metro Aqua Line Extension (Sector 51 to Greater Noida Sector 4)
+- **Authority**: Press Information Bureau (PIB) / Union Cabinet
+- **Official Source URL**: https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334971
+- **Host**: pib.gov.in (allowlisted central government portal)
+- **Status / Findings**: Verified Union Cabinet approval on 11 November 2026 for 8.449 km, 5 elevated stations extension of Noida Metro Aqua Line from Sector-51 to Greater Noida Sector-04. (Note: The ₹2,390 crore figure is from news leads and is not stated in PIB PRID=2334971). Recorded as planned coverage gap without geometry. Interchange pair noi-noida-sector-51 / del-noida-sector-52 left untouched.
+
+### 7.6 Jaipur Metro Phase-2 (Prahladpura to Todi Mod)
+- **Authority**: Press Information Bureau (PIB) / Union Cabinet
+- **Official Source URL**: https://www.pib.gov.in/PressReleasePage.aspx?PRID=2250040
+- **Host**: pib.gov.in (allowlisted central government portal)
+- **Status / Findings**: Verified Union Cabinet approval on April 8, 2026 for Jaipur Metro Phase-2 North-South corridor (Prahladpura to Todi Mod, 41 km, 36 stations, ₹13,037.66 crore). Recorded as planned coverage gap without geometry.
+
+### 7.7 Ahmedabad Metro Phase 2A (Koteshwar Road to Airport)
+- **Authority**: Press Information Bureau (PIB) / Union Cabinet
+- **Official Source URL**: https://www.pib.gov.in/PressReleasePage.aspx?PRID=2271058
+- **Host**: pib.gov.in (allowlisted central government portal)
+- **Byte Length**: 103965
+- **SHA-256**: 78883a6f948f3c06ba4a71c73889799f243d0b9be9b7e321ef646946cb426ab9
+- **Posted On**: 10 JUN 2026 3:34PM by PIB Delhi
+- **Status / Findings**: Verified Union Cabinet approval on 10 June 2026 for Ahmedabad Metro Rail project Phase 2A (Koteshwar Road to Airport corridor).
+  - Quoted text:
+    > "The Union Cabinet chaired by the Prime Minister Shri Narendra Modi has approved Phase 2(A) of Ahmedabad Metro Rail Project with corridor for a length of 6.032 Km with 05 stations (04 Elevated and 01 underground). On operationalisation of Phase 2(A), Ahmedabad-Gandhinagar will have 77.63 Km of active Metro Rail Network.  The names of stations in the Phase 2(A) Corridor are- Ashram Road, Koteshwar Prachin Mandir, Sabarmati River, Sardar Nagar and Airport."
+    > "The total completion cost including IDC (Interest during Construction) for the project will be Rs.2,169.04 crore."
+  - Recorded as planned coverage gap without geometry in `data/audit/coverage-gaps.json`; line assignment `ahm-yellow` is inferred from the existing Koteshwar Road station on the Yellow Line.
+
+---
+
+## 8. Phase 12 Sourcing Additions (2026-11-23)
+
+### 8.1 Bengaluru Metro Pink Line Reach 6 (Kalena Agrahara to Tavarekere)
+- **Authority**: Press Information Bureau (PIB) / Prime Minister's Office
+- **Official Source URL**: https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335840
+- **Host**: pib.gov.in
+- **Status / Findings**: Inaugurated on 13 November 2026 by Prime Minister Shri Narendra Modi, with commercial passenger service beginning 14 November 2026. Sourced elevated stretch length of 7.14 km with 6 operational stations (Kalena Agrahara, Hulimavu, IIMB, JP Nagar 4th Phase, Jayadeva Hospital, Tavarekere).
+
+### 8.2 Gurugram Metro Rail Limited (GMRL) Millennium City Centre to Cyber City
+- **Authority**: Press Information Bureau (PIB) / Union Cabinet
+- **Official Source URL**: https://www.pib.gov.in/PressReleasePage.aspx?PRID=1930452
+- **Host**: pib.gov.in
+- **Status / Findings**: Approved on 7 June 2023. Standard-gauge elevated corridor of 28.5 km with 27 stations forming a ring connecting Millennium City Centre to Cyber City Gurugram with a spur to Dwarka Expressway. Documented as coverage gap without geometry.
+
+### 8.3 Patna Metro Rail Project Corridors 1 and 2
+- **Authority**: Press Information Bureau (PIB) / Union Cabinet
+- **Official Source URL**: https://www.pib.gov.in/PressReleasePage.aspx?PRID=1564352
+- **Host**: pib.gov.in
+- **Status / Findings**: Approved on 13 February 2019. Corridor 1 (Danapur to Khemnichak, 17.93 km: 7.39 km elevated, 10.54 km underground) and Corridor 2 (Patna Railway Station to New ISBT, 14.56 km: 6.64 km elevated, 7.92 km underground). Balance underground sections documented as coverage gaps.
+
+### 8.4 Nagpur Metro Phase 2
+- **Authority**: Press Information Bureau (PIB) / Union Cabinet
+- **Official Source URL**: https://www.pib.gov.in/PressReleasePage.aspx?PRID=1882434
+- **Host**: pib.gov.in
+- **Status / Findings**: Approved on 11 December 2022. 43.8 km with 32 stations across 4 Reaches (Reach 1A, Reach 2B, Reach 3A, Reach 4A). Sourced facts updated in reference data.
+
+### 8.5 Lucknow Metro Phase 1B (East-West Corridor)
+- **Authority**: Press Information Bureau (PIB) / Union Cabinet
+- **Official Source URL**: https://www.pib.gov.in/PressReleasePage.aspx?PRID=2032137
+- **Host**: pib.gov.in
+- **Status / Findings**: Approved on 10 July 2024. Charbagh to Vasant Kunj (11.165 km: 4.286 km elevated, 6.879 km underground with 12 stations).
+
+### 8.6 Chennai Metro Phase 2 (Corridors 3, 4, 5)
+- **Authority**: Press Information Bureau (PIB) / Union Cabinet
+- **Official Source URL**: https://www.pib.gov.in/PressReleasePage.aspx?PRID=2061653
+- **Host**: pib.gov.in
+- **Status / Findings**: Central sector approval on 3 October 2024 for 118.9 km and 128 stations across Corridors 3, 4, and 5.
+
+### 8.7 Namo Bharat (Delhi–Ghaziabad–Meerut RRTS)
+- **Authority**: Press Information Bureau (PIB) / Prime Minister's Office
+- **Official Source URLs**:
+  - https://www.pib.gov.in/PressReleasePage.aspx?PRID=1969248 (Priority Section 17 km Sahibabad to Duhai inauguration, 20 October 2023)
+  - https://www.pib.gov.in/PressReleasePage.aspx?PRID=2012028 (Duhai to Modinagar North 17 km inauguration, 6 March 2024)
+- **Host**: pib.gov.in
+- **Status / Findings**: Sourced 82.15 km alignment, 25 total stations (16 Namo Bharat stops + 9 Meerut Metro-only stops), and 42.04 km operational section (Sahibabad to Meerut South across 8 stations).
+
+
+
