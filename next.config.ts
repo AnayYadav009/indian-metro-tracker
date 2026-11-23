@@ -1,8 +1,10 @@
 import type { NextConfig } from "next";
 
 const isGithubActions = process.env.GITHUB_ACTIONS === "true";
-let repo = "";
-if (isGithubActions && process.env.GITHUB_REPOSITORY) {
+let repo = process.env.NEXT_PUBLIC_BASE_PATH
+  ? process.env.NEXT_PUBLIC_BASE_PATH.replace(/^\//, "")
+  : "";
+if (!repo && isGithubActions && process.env.GITHUB_REPOSITORY && process.env.NODE_ENV === "production") {
   repo = process.env.GITHUB_REPOSITORY.split("/")[1] || "";
 }
 

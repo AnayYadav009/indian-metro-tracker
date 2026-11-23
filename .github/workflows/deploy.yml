@@ -5,12 +5,14 @@ on:
     branches:
       - main
       - master
+  pull_request:
+    branches:
+      - main
+      - master
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
   group: "pages"
@@ -32,6 +34,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Validate data
+        run: npm run validate:data
+
       - name: Type check
         run: npm run typecheck
 
@@ -41,21 +46,38 @@ jobs:
       - name: Run unit tests
         run: npm test
 
+      - name: Run data audit
+        run: npm run audit:data
+        env:
+          AUDIT_WARNINGS: report-only
+
       - name: Build static site
         run: npm run build
         env:
           NEXT_PUBLIC_BASE_PATH: /indian-metro-tracker
 
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            playwright-${{ runner.os }}-
+
       - name: Install Playwright browsers
         run: npx playwright install --with-deps chromium
 
-      - name: Run E2E Smoke Tests on static export
-        run: |
-          node scripts/serve.mjs &
-          sleep 2
-          npx playwright test
+      - name: Run E2E tests on static export
+        run: npx playwright test
         env:
           CI: true
+          PLAYWRIGHT_STATIC_EXPORT: true
+
+      - name: Run E2E tests on development server
+        run: npx playwright test
+        env:
+          CI: true
+          PLAYWRIGHT_STATIC_EXPORT: false
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
@@ -63,6 +85,11 @@ jobs:
           path: ./out
 
   deploy:
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

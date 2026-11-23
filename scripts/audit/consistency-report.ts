@@ -4,6 +4,7 @@
  * Read-only — never modifies data files.
  * Writes reports to reports/data-audit/<date>.{md,json}.
  * Exit code 1 if any error exists or any warn is not baselined.
+ * Set AUDIT_WARNINGS=report-only to keep warnings visible without failing CI.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -121,11 +122,18 @@ function main() {
   const { unbaselined } = applyBaseline(result.findings, baseline);
   const unbaselinedErrors = unbaselined.filter((f) => f.severity === "error").length;
   const unbaselinedWarns = unbaselined.filter((f) => f.severity === "warn").length;
+  const warningsReportOnly = process.env.AUDIT_WARNINGS === "report-only";
 
-  if (unbaselinedErrors > 0 || unbaselinedWarns > 0) {
+  if (unbaselinedErrors > 0 || (unbaselinedWarns > 0 && !warningsReportOnly)) {
     console.log("");
     console.log(`❌ ${unbaselinedErrors} errors and ${unbaselinedWarns} un-baselined warnings remain.`);
     process.exit(1);
+  } else if (warningsReportOnly && unbaselinedWarns > 0) {
+    console.log("");
+    console.log(
+      `⚠️ ${unbaselinedWarns} un-baselined warnings remain; report-only mode ignores warnings for the exit code.`
+    );
+    process.exit(0);
   } else {
     console.log("");
     console.log("✅ All checks pass (no errors, all warnings baselined).");

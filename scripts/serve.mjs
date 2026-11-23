@@ -32,6 +32,13 @@ const server = http.createServer((req, res) => {
   const url = new URL(req.url, `http://localhost:${PORT}`);
   let pathname = decodeURIComponent(url.pathname);
 
+  // Strip basePath prefix if present (e.g. /indian-metro-tracker)
+  const repo = process.env.GITHUB_REPOSITORY ? process.env.GITHUB_REPOSITORY.split("/")[1] : "indian-metro-tracker";
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || (repo ? `/${repo}` : "");
+  if (basePath && (pathname === basePath || pathname.startsWith(`${basePath}/`))) {
+    pathname = pathname.slice(basePath.length) || "/";
+  }
+
   // Normalize root path
   if (pathname.endsWith("/")) {
     pathname += "index.html";
