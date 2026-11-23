@@ -1,0 +1,269 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [77.215, 28.698],
+          [77.228, 28.667],
+          [77.228, 28.652],
+          [77.219, 28.632],
+          [77.212, 28.614]
+        ]
+      },
+      "properties": {
+        "segment_id": "del-yellow-seg-01",
+        "line_id": "del-yellow",
+        "line_name": "Yellow Line",
+        "city": "Delhi",
+        "operator": "DMRC",
+        "status": "operational",
+        "phase": "I",
+        "length_km": 9.9,
+        "gauge": "broad",
+        "inaugurated_on": "2004-12-20",
+        "expected_completion": null,
+        "stations_count": 10,
+        "color": "#FFD700",
+        "source": "mock",
+        "last_verified": "2026-10-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [77.121, 28.553],
+          [77.168, 28.528],
+          [77.211, 28.514],
+          [77.256, 28.502],
+          [77.288, 28.508]
+        ]
+      },
+      "properties": {
+        "segment_id": "del-silver-seg-01",
+        "line_id": "del-silver",
+        "line_name": "Silver Line",
+        "city": "Delhi",
+        "operator": "DMRC",
+        "status": "construction",
+        "phase": "IV",
+        "length_km": 17.6,
+        "gauge": "standard",
+        "inaugurated_on": null,
+        "expected_completion": "2026-12",
+        "stations_count": 15,
+        "color": "#A0A0A0",
+        "source": "mock",
+        "last_verified": "2026-10-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [77.135, 28.746],
+          [77.12, 28.785],
+          [77.098, 28.825],
+          [77.091, 28.852]
+        ]
+      },
+      "properties": {
+        "segment_id": "del-yellow-seg-02",
+        "line_id": "del-yellow",
+        "line_name": "Yellow Line",
+        "city": "Delhi",
+        "operator": "DMRC",
+        "status": "planned",
+        "phase": "IV",
+        "length_km": 12.8,
+        "gauge": "standard",
+        "inaugurated_on": null,
+        "expected_completion": "2028",
+        "stations_count": 8,
+        "color": "#FFD700",
+        "source": "mock",
+        "last_verified": "2026-10-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [77.653, 12.991],
+          [77.638, 12.978],
+          [77.62, 12.975],
+          [77.606, 12.975]
+        ]
+      },
+      "properties": {
+        "segment_id": "blr-purple-seg-01",
+        "line_id": "blr-purple",
+        "line_name": "Purple Line",
+        "city": "Bengaluru",
+        "operator": "BMRCL",
+        "status": "operational",
+        "phase": "1",
+        "length_km": 5.7,
+        "gauge": "standard",
+        "inaugurated_on": "2011-10-20",
+        "expected_completion": null,
+        "stations_count": 6,
+        "color": "#800080",
+        "source": "mock",
+        "last_verified": "2026-10-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [77.697, 13.003],
+          [77.651, 13.045],
+          [77.618, 13.098],
+          [77.605, 13.15],
+          [77.705, 13.198]
+        ]
+      },
+      "properties": {
+        "segment_id": "blr-blue-seg-01",
+        "line_id": "blr-blue",
+        "line_name": "Blue Line",
+        "city": "Bengaluru",
+        "operator": "BMRCL",
+        "status": "construction",
+        "phase": "2B",
+        "length_km": 31.8,
+        "gauge": "standard",
+        "inaugurated_on": null,
+        "expected_completion": "2026-06",
+        "stations_count": 17,
+        "color": "#1E90FF",
+        "source": "mock",
+        "last_verified": "2026-10-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [77.685, 12.923],
+          [77.632, 12.934],
+          [77.598, 12.965],
+          [77.585, 13.035]
+        ]
+      },
+      "properties": {
+        "segment_id": "blr-blue-seg-02",
+        "line_id": "blr-blue",
+        "line_name": "Blue Line",
+        "city": "Bengaluru",
+        "operator": "BMRCL",
+        "status": "planned",
+        "phase": "3",
+        "length_km": 18.8,
+        "gauge": "standard",
+        "inaugurated_on": null,
+        "expected_completion": "2029",
+        "stations_count": 12,
+        "color": "#1E90FF",
+        "source": "mock",
+        "last_verified": "2026-10-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [72.821, 19.131],
+          [72.846, 19.119],
+          [72.868, 19.11],
+          [72.887, 19.098],
+          [72.908, 19.086]
+        ]
+      },
+      "properties": {
+        "segment_id": "mum-line-1-seg-01",
+        "line_id": "mum-line-1",
+        "line_name": "Line 1",
+        "city": "Mumbai",
+        "operator": "MMRDA",
+        "status": "operational",
+        "phase": "1",
+        "length_km": 11.4,
+        "gauge": "standard",
+        "inaugurated_on": "2014-06-08",
+        "expected_completion": null,
+        "stations_count": 12,
+        "color": "#0072CE",
+        "source": "mock",
+        "last_verified": "2026-10-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [72.864, 19.066],
+          [72.836, 19.018],
+          [72.823, 18.972],
+          [72.825, 18.922]
+        ]
+      },
+      "properties": {
+        "segment_id": "mum-line-3-seg-01",
+        "line_id": "mum-line-3",
+        "line_name": "Line 3 (Aqua)",
+        "city": "Mumbai",
+        "operator": "MMRDA",
+        "status": "construction",
+        "phase": "3",
+        "length_km": 17.5,
+        "gauge": "standard",
+        "inaugurated_on": null,
+        "expected_completion": "2025-12",
+        "stations_count": 14,
+        "color": "#00A3E0",
+        "source": "mock",
+        "last_verified": "2026-10-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [72.975, 19.278],
+          [72.965, 19.31],
+          [72.955, 19.335]
+        ]
+      },
+      "properties": {
+        "segment_id": "mum-line-4-seg-01",
+        "line_id": "mum-line-4",
+        "line_name": "Line 4 (Green)",
+        "city": "Mumbai",
+        "operator": "MMRDA",
+        "status": "planned",
+        "phase": "4",
+        "length_km": 7.2,
+        "gauge": "standard",
+        "inaugurated_on": null,
+        "expected_completion": "2028-12",
+        "stations_count": 5,
+        "color": "#00B140",
+        "source": "mock",
+        "last_verified": "2026-10-05"
+      }
+    }
+  ]
+}
