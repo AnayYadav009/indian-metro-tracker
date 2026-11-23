@@ -117,8 +117,8 @@ export default async function CityPage({ params }: CityPageProps) {
             </div>
             <p className="text-sm text-slate-300 max-w-3xl">
               {isUnderConstructionOnly
-                ? `${city.name} transit network is currently under construction with ${stats.constructionKm} km across ${stats.linesCount} lines and 0 operational stations.`
-                : `${city.name} transit network includes ${stats.operationalKm} km operational across ${stats.linesCount} lines and ${stats.operationalStations} operational stations.`}
+                ? `${city.name} transit network is currently under construction with ${stats.constructionKm} km across ${stats.linesCount} ${stats.linesCount === 1 ? "line" : "lines"} and 0 operational stations.`
+                : `${city.name} transit network includes ${stats.operationalKm} km operational across ${stats.linesCount} ${stats.linesCount === 1 ? "line" : "lines"} and ${stats.operationalStations} operational stations.`}
             </p>
           </section>
 

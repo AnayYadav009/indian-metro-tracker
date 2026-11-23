@@ -73,6 +73,7 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
   const setIsNearestPanelOpen = useMetroStore(
     (state) => state.setIsNearestPanelOpen
   );
+  const activeRoute = useMetroStore((state) => state.activeRoute);
   const interactiveLayerIds = useMemo(
     () =>
       showStations
@@ -368,6 +369,61 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
     [setHoveredFeature, showStations]
   );
 
+  const routeGeoJson = useMemo(() => {
+    if (!activeRoute || activeRoute.legs.length === 0) return null;
+    const features: any[] = [];
+    for (const leg of activeRoute.legs) {
+      if (leg.coordinates && leg.coordinates.length >= 2) {
+        features.push({
+          type: "Feature",
+          properties: {
+            lineId: leg.lineId,
+            color: leg.lineColor,
+          },
+          geometry: {
+            type: "LineString",
+            coordinates: leg.coordinates,
+          },
+        });
+      }
+    }
+    if (features.length === 0) return null;
+    return {
+      type: "FeatureCollection" as const,
+      features,
+    };
+  }, [activeRoute]);
+
+  useEffect(() => {
+    if (!activeRoute || !mapRef.current || activeRoute.legs.length === 0) return;
+    const allCoords = activeRoute.legs.flatMap((l) => l.coordinates);
+    if (allCoords.length < 2) return;
+    let minLng = Infinity;
+    let minLat = Infinity;
+    let maxLng = -Infinity;
+    let maxLat = -Infinity;
+    for (const [lng, lat] of allCoords) {
+      if (lng < minLng) minLng = lng;
+      if (lat < minLat) minLat = lat;
+      if (lng > maxLng) maxLng = lng;
+      if (lat > maxLat) maxLat = lat;
+    }
+    const isDesktop = typeof window !== "undefined" && window.innerWidth >= 768;
+    mapRef.current.fitBounds(
+      [
+        [minLng, minLat],
+        [maxLng, maxLat],
+      ],
+      {
+        padding: isDesktop
+          ? { top: 90, bottom: 90, left: 420, right: 80 }
+          : { top: 120, bottom: 120, left: 30, right: 30 },
+        duration: 800,
+        essential: true,
+      }
+    );
+  }, [activeRoute]);
+
   const handleMouseLeave = useCallback(() => {
     setCursor("auto");
     setHoveredFeature(null);
@@ -493,6 +549,64 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
             )}
           />
         </Source>
+
+        {routeGeoJson && (
+          <Source id="route-highlight-source" type="geojson" data={routeGeoJson}>
+            <Layer
+              id="route-highlight-casing"
+              type="line"
+              layout={{ "line-join": "round", "line-cap": "round" }}
+              paint={{
+                "line-color": "#ffffff",
+                "line-width": 8,
+                "line-opacity": 0.85,
+              }}
+            />
+            <Layer
+              id="route-highlight-core"
+              type="line"
+              layout={{ "line-join": "round", "line-cap": "round" }}
+              paint={{
+                "line-color": ["coalesce", ["get", "color"], "#10b981"],
+                "line-width": 4.5,
+                "line-opacity": 1,
+              }}
+            />
+          </Source>
+        )}
+
+        {activeRoute && activeRoute.totalStops > 0 && (
+          <>
+            <Marker
+              longitude={activeRoute.origin.coordinates[0]}
+              latitude={activeRoute.origin.coordinates[1]}
+              anchor="center"
+            >
+              <div
+                data-testid="route-origin-marker"
+                className="relative flex h-6 w-6 items-center justify-center pointer-events-none"
+                title={`Origin: ${activeRoute.origin.name}`}
+              >
+                <span className="absolute h-6 w-6 animate-ping rounded-full bg-emerald-500 opacity-60" />
+                <span className="relative flex h-3.5 w-3.5 items-center justify-center rounded-full border-2 border-white bg-emerald-500 shadow-md" />
+              </div>
+            </Marker>
+            <Marker
+              longitude={activeRoute.destination.coordinates[0]}
+              latitude={activeRoute.destination.coordinates[1]}
+              anchor="center"
+            >
+              <div
+                data-testid="route-destination-marker"
+                className="relative flex h-6 w-6 items-center justify-center pointer-events-none"
+                title={`Destination: ${activeRoute.destination.name}`}
+              >
+                <span className="absolute h-6 w-6 animate-ping rounded-full bg-rose-500 opacity-60" />
+                <span className="relative flex h-3.5 w-3.5 items-center justify-center rounded-full border-2 border-white bg-rose-500 shadow-md" />
+              </div>
+            </Marker>
+          </>
+        )}
 
         {userLocation && (
           <Marker
