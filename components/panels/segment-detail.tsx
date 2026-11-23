@@ -133,7 +133,7 @@ export function SegmentDetail({ segment }: SegmentDetailProps) {
       {/* Segment Feature Source */}
       <div className="flex items-center justify-between border-t border-slate-800/80 pt-2 text-[10px] text-slate-400">
          <span className="flex items-center gap-1.5">
-           <span>Feature source:</span>
+           <span>Geometry source:</span>
            <span
              className={`rounded px-1.5 py-0.5 font-medium ${
                segment.source === "mock"
@@ -145,9 +145,9 @@ export function SegmentDetail({ segment }: SegmentDetailProps) {
            </span>
          </span>
          <span>
-           {segment.last_verified
-             ? `Feature data date: ${segment.last_verified}`
-             : "Feature data date: Unrecorded (OSM data)"}
+           {segment.retrieved_at
+             ? `Geometry retrieved: ${segment.retrieved_at}`
+             : "Geometry retrieval date: Unrecorded"}
          </span>
        </div>
 

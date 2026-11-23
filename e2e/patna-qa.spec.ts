@@ -2,16 +2,19 @@ import { test, expect } from "@playwright/test";
 import {
   gotoHome,
   filterPanel,
-  cityChip,
+  cityOption,
+  openCityPicker,
   filterToggle,
   phasePill,
   mapLegend,
   metadataPanel,
+  openLayersDrawer,
 } from "./helpers";
 
 test.describe("Patna Visual & Interaction QA (M15)", () => {
   test.beforeEach(async ({ page }) => {
     await gotoHome(page);
+    await openLayersDrawer(page);
   });
 
   test("verifies Patna in city selector, phases, line legend, and station panel", async ({
@@ -21,7 +24,8 @@ test.describe("Patna Visual & Interaction QA (M15)", () => {
     await expect(panel).toBeVisible();
 
     // 1. Verify Patna button is present and click it
-    const patnaBtn = cityChip(page, "patna");
+    await openCityPicker(page);
+    const patnaBtn = cityOption(page, "patna");
     await expect(patnaBtn).toBeVisible();
     await patnaBtn.click();
     const toggle = filterToggle(page);

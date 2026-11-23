@@ -2,17 +2,22 @@ import { test, expect } from "@playwright/test";
 import {
   gotoHome,
   filterPanel,
-  cityChip,
+  cityOption,
+  cityPickerTrigger,
+  openCityPicker,
+  selectCity,
   statusToggle,
   phasePill,
   phaseEmptyHint,
   filterToggle,
   resetFiltersBtn,
+  openLayersDrawer,
 } from "./helpers";
 
 test.describe("Filter UI and Map Interaction", () => {
   test.beforeEach(async ({ page }) => {
     await gotoHome(page);
+    await openLayersDrawer(page);
   });
 
   test("renders the floating filter panel with city and status options", async ({
@@ -26,11 +31,14 @@ test.describe("Filter UI and Map Interaction", () => {
       page.getByText("Filters & Network Controls")
     ).toBeVisible();
 
-    // Check cities
-    await expect(cityChip(page, "all")).toBeVisible();
-    await expect(cityChip(page, "delhi")).toBeVisible();
-    await expect(cityChip(page, "bengaluru")).toBeVisible();
-    await expect(cityChip(page, "mumbai")).toBeVisible();
+    // Check the searchable city picker
+    await expect(cityPickerTrigger(page)).toBeVisible();
+    await openCityPicker(page);
+    await expect(cityOption(page, "all")).toBeVisible();
+    await expect(cityOption(page, "delhi")).toBeVisible();
+    await expect(cityOption(page, "bengaluru")).toBeVisible();
+    await expect(cityOption(page, "mumbai")).toBeVisible();
+    await page.keyboard.press("Escape");
 
     // Check status options with visual indicators
     await expect(statusToggle(page, "operational")).toBeVisible();
@@ -51,7 +59,7 @@ test.describe("Filter UI and Map Interaction", () => {
     await expect(phasePill(page, "I")).not.toBeVisible();
 
     // Click Delhi
-    await cityChip(page, "delhi").click();
+    await selectCity(page, "delhi");
     const toggle = filterToggle(page);
     if ((await toggle.getAttribute("aria-expanded")) === "false") {
       await toggle.click({ force: true });
@@ -68,7 +76,7 @@ test.describe("Filter UI and Map Interaction", () => {
     if ((await toggle.getAttribute("aria-expanded")) === "false") {
       await toggle.click({ force: true });
     }
-    await cityChip(page, "bengaluru").click();
+    await selectCity(page, "bengaluru");
     if ((await toggle.getAttribute("aria-expanded")) === "false") {
       await toggle.click({ force: true });
     }

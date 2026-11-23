@@ -2,16 +2,19 @@ import { test, expect } from "@playwright/test";
 import {
   gotoHome,
   filterPanel,
-  cityChip,
+  cityOption,
+  openCityPicker,
   filterToggle,
   phasePill,
   mapLegend,
   metadataPanel,
+  openLayersDrawer,
 } from "./helpers";
 
 test.describe("Lucknow Visual & Interaction QA (M15)", () => {
   test.beforeEach(async ({ page }) => {
     await gotoHome(page);
+    await openLayersDrawer(page);
   });
 
   test("verifies Lucknow in city selector, phases, line legend, and station panel", async ({
@@ -21,7 +24,8 @@ test.describe("Lucknow Visual & Interaction QA (M15)", () => {
     await expect(panel).toBeVisible();
 
     // 1. Verify Lucknow button is present and click it
-    const lucknowBtn = cityChip(page, "lucknow");
+    await openCityPicker(page);
+    const lucknowBtn = cityOption(page, "lucknow");
     await expect(lucknowBtn).toBeVisible();
     await lucknowBtn.click();
     const toggle = filterToggle(page);

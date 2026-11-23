@@ -18,6 +18,12 @@ import { buildTransitGraph, findRoute } from "@/lib/routing/graph";
 import { getCityRoutability } from "@/lib/routing/city-guard";
 import type { RouteResult } from "@/lib/routing/types";
 import { ReportIssueButton } from "@/components/panels/report-issue-button";
+import {
+  estimateRouteFare,
+  hasSourcedFares,
+  getServiceHours,
+  type RouteFareEstimate,
+} from "@/lib/fares";
 
 export function RouteFinderPanel() {
   const isRoutePanelOpen = useMetroStore((state) => state.isRoutePanelOpen);
@@ -222,6 +228,24 @@ export function RouteFinderPanel() {
   const toggleLegExpanded = (idx: number) => {
     setExpandedLegs((prev) => ({ ...prev, [idx]: !prev[idx] }));
   };
+
+  // M24: Fare calculation for active route
+  const routeFare: RouteFareEstimate | null = useMemo(() => {
+    if (!activeRoute || activeRoute.legs.length === 0) return null;
+    return estimateRouteFare(activeRoute.legs, dataset.fareRules || []);
+  }, [activeRoute, dataset.fareRules]);
+
+  // M24: Timing schedules check for origin & transfer terminals
+  const hasVerifiedTiming = useMemo(() => {
+    const hours = dataset.serviceHours || [];
+    if (!activeRoute || hours.length === 0) {
+      return false;
+    }
+    return activeRoute.legs.some((leg) => {
+      const originHours = getServiceHours(leg.lineId, leg.fromStation.id, hours);
+      return originHours.length > 0;
+    });
+  }, [activeRoute, dataset.serviceHours]);
 
   if (!isRoutePanelOpen) return null;
 
@@ -454,11 +478,17 @@ export function RouteFinderPanel() {
                 {/* Optimization objective label */}
                 <div className="flex items-center justify-between text-[11px] text-slate-400 px-0.5">
                   <span className="text-emerald-400 font-medium">Estimated fastest route</span>
-                  <span className="text-slate-500">Minimises time, then transfers, then stops • Fares not included</span>
+                  <span className="text-slate-500">
+                    Minimises time, then transfers, then stops
+                  </span>
                 </div>
 
-                {/* Stat summary cards */}
-                <div className="grid grid-cols-3 gap-2 text-center">
+                {/* Stat summary cards (3 or 4 cols depending on whether sourced fare estimate exists) */}
+                <div
+                  className={`grid ${
+                    routeFare ? "grid-cols-4" : "grid-cols-3"
+                  } gap-2 text-center`}
+                >
                   <div className="rounded-lg border border-slate-800 bg-slate-800/60 p-2">
                     <span className="text-[10px] text-slate-400 block">Est. Time</span>
                     <span className="text-sm font-semibold text-emerald-400">
@@ -477,7 +507,78 @@ export function RouteFinderPanel() {
                       {activeRoute.totalTransfers}
                     </span>
                   </div>
+                  {routeFare && (
+                    <div
+                      data-testid="route-fare-summary-card"
+                      className="rounded-lg border border-emerald-500/30 bg-emerald-500/10 p-2"
+                    >
+                      <span className="text-[10px] text-emerald-300/80 block">
+                        Est. Fare
+                      </span>
+                      <span className="text-sm font-bold text-emerald-300">
+                        ₹{routeFare.total_fare_inr}
+                      </span>
+                    </div>
+                  )}
                 </div>
+
+                {/* Fare Boundary Qualifier / Fare Notes (if sourced) */}
+                {routeFare && (
+                  <div
+                    data-testid="route-fare-details"
+                    className="rounded-lg border border-slate-800 bg-slate-800/50 p-2.5 text-[11px] text-slate-300 space-y-1.5"
+                  >
+                    <div className="flex items-center justify-between font-medium">
+                      <span className="text-emerald-400">
+                        Estimated Single Journey Fare: ₹{routeFare.total_fare_inr}
+                      </span>
+                      <span className="text-[10px] text-slate-400 capitalize">
+                        {routeFare.day_scope === "mon_sat"
+                          ? "Mon–Sat rate"
+                          : routeFare.day_scope === "sun_holiday"
+                          ? "Sun/Holiday rate"
+                          : "Standard tariff"}
+                      </span>
+                    </div>
+                    {routeFare.separate_tickets && (
+                      <p className="text-[10px] text-amber-300/90 leading-tight">
+                        Journey crosses different fare systems; separate tickets may be required.
+                      </p>
+                    )}
+                    {routeFare.any_near_boundary && (
+                      <p
+                        data-testid="fare-boundary-qualifier"
+                        className="text-[10px] text-amber-200/90 leading-tight"
+                      >
+                        Near a fare boundary: estimated ₹{routeFare.total_fare_inr}
+                        {routeFare.groups.find((g) => g.alternative_fare_inr !== undefined)
+                          ?.alternative_fare_inr !== undefined &&
+                          ` or ₹${
+                            routeFare.groups.find(
+                              (g) => g.alternative_fare_inr !== undefined
+                            )?.alternative_fare_inr
+                          }`}
+                        {" "}depending on operator route calculation.
+                      </p>
+                    )}
+                    <p className="text-[10px] text-slate-400">
+                      Official published tariff basis. Concessions or smart card discounts not included.
+                    </p>
+                  </div>
+                )}
+
+                {/* Timing Warning / Operating Window */}
+                {!hasVerifiedTiming && (
+                  <div
+                    data-testid="route-timings-unverified-notice"
+                    className="rounded-lg border border-slate-800 bg-slate-900/50 p-2 text-[10px] text-slate-400 flex items-start gap-1.5 leading-tight"
+                  >
+                    <Clock className="h-3.5 w-3.5 text-slate-500 shrink-0 mt-0.5" />
+                    <span>
+                      First/last train times and service frequencies are not published in reviewable static schedules for this line. Verify departure times with the operator before travelling late.
+                    </span>
+                  </div>
+                )}
 
                 {/* Itinerary step-by-step */}
                 <div className="space-y-2 border-t border-slate-800 pt-3">
@@ -487,6 +588,7 @@ export function RouteFinderPanel() {
 
                   {activeRoute.legs.map((leg, idx) => {
                     const isExpanded = expandedLegs[idx] ?? false;
+                    const transfer = activeRoute.transfers[idx];
                     return (
                       <div
                         key={idx}
@@ -525,6 +627,7 @@ export function RouteFinderPanel() {
                             <button
                               type="button"
                               onClick={() => toggleLegExpanded(idx)}
+                              data-testid={`toggle-stops-btn-${idx}`}
                               className="text-[11px] text-slate-400 hover:text-slate-200 flex items-center gap-1"
                             >
                               <span>
@@ -538,7 +641,10 @@ export function RouteFinderPanel() {
                               )}
                             </button>
                             {isExpanded && (
-                              <ul className="mt-1 space-y-0.5 border-l border-slate-700 pl-2 text-[11px] text-slate-400">
+                              <ul
+                                data-testid={`intermediate-stops-list-${idx}`}
+                                className="mt-1 space-y-0.5 border-l border-slate-700 pl-2 text-[11px] text-slate-400"
+                              >
                                 {leg.intermediateStations.map((st) => (
                                   <li key={st.id}>{st.name}</li>
                                 ))}
@@ -563,13 +669,26 @@ export function RouteFinderPanel() {
                         </div>
 
                         {/* Transfer notice if followed by a transfer */}
-                        {idx < activeRoute.transfers.length && (
-                          <div className="mt-2 rounded border border-cyan-500/30 bg-cyan-500/10 px-2 py-1.5 text-[11px] text-cyan-200 flex items-center gap-1.5">
-                            <Clock className="h-3.5 w-3.5 shrink-0 text-cyan-400" />
-                            <span>
-                              Transfer to {activeRoute.transfers[idx].toLineName} (approx{" "}
-                              {activeRoute.transfers[idx].estimatedMinutes} min walk)
-                            </span>
+                        {transfer && (
+                          <div
+                            data-testid={`transfer-notice-${idx}`}
+                            className="mt-2 rounded-lg border border-cyan-500/30 bg-cyan-500/10 px-2.5 py-2 text-[11px] text-cyan-200 space-y-1"
+                          >
+                            <div className="flex items-center gap-1.5 font-medium text-cyan-300">
+                              <Clock className="h-3.5 w-3.5 shrink-0 text-cyan-400" />
+                              <span>Interchange at {transfer.station.name}</span>
+                            </div>
+                            <div className="text-[10.5px] text-cyan-200/90 pl-5">
+                              Change from{" "}
+                              <span className="font-semibold text-white">
+                                {transfer.fromLineName}
+                              </span>{" "}
+                              to{" "}
+                              <span className="font-semibold text-white">
+                                {transfer.toLineName}
+                              </span>{" "}
+                              (allow approx {transfer.estimatedMinutes} min walking transfer)
+                            </div>
                           </div>
                         )}
                       </div>

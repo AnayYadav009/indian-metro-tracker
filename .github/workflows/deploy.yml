@@ -48,14 +48,15 @@ jobs:
 
       - name: Run data audit
         run: npm run audit:data
-        env:
-          AUDIT_WARNINGS: report-only
 
       - name: Build static site
         run: npm run build
         env:
           NEXT_PUBLIC_BASE_PATH: /indian-metro-tracker
           NEXT_PUBLIC_SITE_URL: https://anayyadav009.github.io/indian-metro-tracker
+
+      - name: Measure static export size baseline
+        run: npm run measure:size
 
       - name: Cache Playwright browsers
         uses: actions/cache@v4

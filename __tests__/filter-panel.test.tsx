@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach } from "vitest";
-import { render, screen, fireEvent } from "@testing-library/react";
+import { act, render, screen, fireEvent } from "@testing-library/react";
 import { FilterPanel } from "@/components/filters/filter-panel";
 import { useMetroStore } from "@/store/use-metro-store";
 
@@ -16,19 +16,9 @@ describe("FilterPanel Component", () => {
     ).toBeInTheDocument();
   });
 
-  it("renders city selector buttons", () => {
+  it("keeps city selection outside the filter panel", () => {
     render(<FilterPanel />);
-    expect(screen.getByTestId("city-select-all")).toBeInTheDocument();
-    expect(screen.getByTestId("city-select-delhi")).toBeInTheDocument();
-    expect(screen.getByTestId("city-select-bengaluru")).toBeInTheDocument();
-    expect(screen.getByTestId("city-select-mumbai")).toBeInTheDocument();
-  });
-
-  it("updates selected city when a city button is clicked", () => {
-    render(<FilterPanel />);
-    const delhiBtn = screen.getByTestId("city-select-delhi");
-    fireEvent.click(delhiBtn);
-    expect(useMetroStore.getState().selectedCityId).toBe("delhi");
+    expect(screen.queryByTestId("city-select-delhi")).not.toBeInTheDocument();
   });
 
   it("renders status filter toggles with pattern labels", () => {
@@ -85,9 +75,7 @@ describe("FilterPanel Component", () => {
     ).toBeInTheDocument();
     expect(screen.queryByTestId("phase-pill-I")).not.toBeInTheDocument();
 
-    // Select Delhi
-    const delhiBtn = screen.getByTestId("city-select-delhi");
-    fireEvent.click(delhiBtn);
+    act(() => useMetroStore.getState().setSelectedCity("delhi"));
 
     expect(screen.queryByTestId("phase-filter-empty-hint")).not.toBeInTheDocument();
     expect(screen.getByTestId("phase-pill-I")).toBeInTheDocument();

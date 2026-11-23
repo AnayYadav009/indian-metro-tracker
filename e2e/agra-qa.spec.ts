@@ -2,16 +2,19 @@ import { test, expect } from "@playwright/test";
 import {
   gotoHome,
   filterPanel,
-  cityChip,
+  cityOption,
+  openCityPicker,
   filterToggle,
   phasePill,
   mapLegend,
   metadataPanel,
+  openLayersDrawer,
 } from "./helpers";
 
 test.describe("Agra Visual & Interaction QA (M15)", () => {
   test.beforeEach(async ({ page }) => {
     await gotoHome(page);
+    await openLayersDrawer(page);
   });
 
   test("verifies Agra in city selector, phases, line legend, and station panel", async ({
@@ -21,7 +24,8 @@ test.describe("Agra Visual & Interaction QA (M15)", () => {
     await expect(panel).toBeVisible();
 
     // 1. Verify Agra button is present and click it
-    const agraBtn = cityChip(page, "agra");
+    await openCityPicker(page);
+    const agraBtn = cityOption(page, "agra");
     await expect(agraBtn).toBeVisible();
     await agraBtn.click();
     const toggle = filterToggle(page);

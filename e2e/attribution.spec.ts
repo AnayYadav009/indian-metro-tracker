@@ -7,6 +7,7 @@ import {
   toggleLegendButton,
   legendContent,
   metadataPanel,
+  openLayersDrawer,
 } from "./helpers";
 
 function rectIntersects(
@@ -36,6 +37,7 @@ test.describe("OSM Attribution Visibility & Zero-Intersection (Phase 6)", () => 
 
       // 1. Test without feature selected (Legend expanded and collapsed)
       await gotoHome(page);
+      await openLayersDrawer(page);
       const attr = attribution(page).first();
       await expect(attr).toBeVisible();
 
@@ -59,9 +61,11 @@ test.describe("OSM Attribution Visibility & Zero-Intersection (Phase 6)", () => 
         await page.waitForTimeout(200);
       }
 
+      attrBox = await attr.boundingBox();
       let legendBox = await legend.boundingBox();
+      expect(attrBox).not.toBeNull();
       expect(legendBox).not.toBeNull();
-      if (legendBox) {
+      if (attrBox && legendBox) {
         expect(rectIntersects(attrBox, legendBox)).toBe(false);
       }
 

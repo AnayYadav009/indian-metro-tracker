@@ -34,6 +34,7 @@ describe("MetadataPanel Component", () => {
       source: "mock",
       references: ["https://example.com/source-doc"],
       last_verified: "2026-10-05",
+      retrieved_at: "2026-10-05",
     };
 
     useMetroStore.getState().setSelectedFeature({
@@ -61,7 +62,7 @@ describe("MetadataPanel Component", () => {
     expect(screen.getByText("11 stations")).toBeInTheDocument();
     expect(screen.getByText("broad")).toBeInTheDocument();
     expect(screen.getByText("2004-12-20")).toBeInTheDocument();
-    expect(screen.getByText("Feature data date: 2026-10-05")).toBeInTheDocument();
+    expect(screen.getByText("Geometry retrieved: 2026-10-05")).toBeInTheDocument();
 
     // References citation link
     const refLink = screen.getByRole("link", { name: "https://example.com/source-doc" });
@@ -346,7 +347,7 @@ describe("MetadataPanel Component", () => {
 
       render(<MetadataPanel />);
       expect(screen.getByText("Date not recorded")).toBeInTheDocument();
-      expect(screen.getByText("Feature data date: Unrecorded (OSM data)")).toBeInTheDocument();
+      expect(screen.getByText("Geometry retrieval date: Unrecorded")).toBeInTheDocument();
     });
   });
 });

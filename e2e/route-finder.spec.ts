@@ -14,6 +14,9 @@ import {
   routeDestinationMarker,
   routeSwapButton,
   routeSameStationNotice,
+  routeFareCard,
+  routeFareDetails,
+  routeTimingsNotice,
 } from "./helpers";
 
 test.describe("M18 Route Finder", () => {
@@ -182,4 +185,62 @@ test.describe("M18 Route Finder", () => {
     );
     await expect(guardNotice).toContainText("PRE-01");
   });
+
+  test("M24: displays verified fare estimate and unverified timings caveat on Delhi route", async ({
+    page,
+  }) => {
+    await gotoHome(page, {
+      city: "delhi",
+      from: "del-kashmere-gate",
+      to: "del-rajiv-chowk",
+    });
+    await page.waitForLoadState("domcontentloaded");
+
+    const panel = routeFinderPanel(page);
+    await expect(panel).toBeVisible();
+
+    const resultsContainer = routeResults(page);
+    await expect(resultsContainer).toBeVisible();
+
+    // Verify fare card exists and shows ₹21
+    const fareCard = routeFareCard(page);
+    await expect(fareCard).toBeVisible();
+    await expect(fareCard).toContainText("₹21");
+
+    // Verify fare details and Mon-Sat label
+    const fareDetails = routeFareDetails(page);
+    await expect(fareDetails).toBeVisible();
+    await expect(fareDetails).toContainText("Estimated Single Journey Fare: ₹21");
+
+    // Verify unverified timing disclaimer
+    const timingNotice = routeTimingsNotice(page);
+    await expect(timingNotice).toBeVisible();
+    await expect(timingNotice).toContainText("First/last train times and service frequencies are not published");
+  });
+
+  test("M24: completely omits fare card on routes without sourced fares (Kochi)", async ({
+    page,
+  }) => {
+    await gotoHome(page, {
+      city: "kochi",
+      from: "kochi-aluva",
+      to: "kochi-edappally",
+    });
+    await page.waitForLoadState("domcontentloaded");
+
+    const resultsContainer = routeResults(page);
+    await expect(resultsContainer).toBeVisible();
+
+    // Fare card and details must be completely hidden
+    const fareCard = routeFareCard(page);
+    await expect(fareCard).toHaveCount(0);
+
+    const fareDetails = routeFareDetails(page);
+    await expect(fareDetails).toHaveCount(0);
+
+    // Timing notice is still shown because service hours are unverified
+    const timingNotice = routeTimingsNotice(page);
+    await expect(timingNotice).toBeVisible();
+  });
 });
+

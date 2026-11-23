@@ -9,6 +9,7 @@ import {
   timelineFutureToggle,
   toggleStationsButton,
   timelineSparkline,
+  openLayersDrawer,
 } from "./helpers";
 
 test.describe("M13 Timeline Slider", () => {
@@ -16,6 +17,7 @@ test.describe("M13 Timeline Slider", () => {
     page,
   }) => {
     await gotoHome(page);
+    await openLayersDrawer(page);
 
     const container = timelineContainer(page);
     await expect(container).toBeVisible();
@@ -41,6 +43,7 @@ test.describe("M13 Timeline Slider", () => {
     page,
   }) => {
     await gotoHome(page);
+    await openLayersDrawer(page);
     await page.waitForLoadState("domcontentloaded");
 
     const slider = timelineSlider(page);
@@ -79,6 +82,7 @@ test.describe("M13 Timeline Slider", () => {
 
   test("hydrates selected year from URL parameter ?year=2015", async ({ page }) => {
     await gotoHome(page, { year: "2015" });
+    await openLayersDrawer(page);
 
     const currentYearText = timelineCurrentYear(page);
     await expect(currentYearText).toHaveText("2015");
@@ -89,6 +93,7 @@ test.describe("M13 Timeline Slider", () => {
 
   test("toggles play and pause state", async ({ page }) => {
     await gotoHome(page, { year: "2000" });
+    await openLayersDrawer(page);
     await page.waitForLoadState("domcontentloaded");
 
     const playBtn = timelinePlayButton(page);
@@ -108,6 +113,7 @@ test.describe("M13 Timeline Slider", () => {
 
   test("include future toggle toggles aria-pressed state", async ({ page }) => {
     await gotoHome(page);
+    await openLayersDrawer(page);
 
     const toggle = timelineFutureToggle(page);
     await expect(toggle).toBeVisible();
@@ -124,6 +130,7 @@ test.describe("M13 Timeline Slider", () => {
     page,
   }) => {
     await gotoHome(page);
+    await openLayersDrawer(page);
 
     const toggle = toggleStationsButton(page);
     await expect(toggle).toBeVisible();
@@ -134,6 +141,7 @@ test.describe("M13 Timeline Slider", () => {
     await expect(page).toHaveURL(/stations=0/);
 
     await page.reload();
+    await openLayersDrawer(page);
     await expect(toggleStationsButton(page)).toHaveAttribute(
       "aria-pressed",
       "false"
@@ -146,6 +154,7 @@ test.describe("M13 Timeline Slider", () => {
     page,
   }) => {
     await gotoHome(page);
+    await openLayersDrawer(page);
 
     const sparkline = timelineSparkline(page);
     // Visible on standard desktop viewports
