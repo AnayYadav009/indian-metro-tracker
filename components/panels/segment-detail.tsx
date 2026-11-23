@@ -31,6 +31,14 @@ export function SegmentDetail({ segment }: SegmentDetailProps) {
       <div className="flex flex-wrap items-center gap-2">
         <StatusBadge status={segment.status} />
         <PhaseBadge phase={segment.phase} />
+        {segment.geometry_quality === "schematic" && (
+          <span
+            data-testid="schematic-route-note"
+            className="rounded-full border border-violet-500/30 bg-violet-500/10 px-2 py-1 text-[10px] font-medium text-violet-300"
+          >
+            Schematic route
+          </span>
+        )}
       </div>
 
       {/* Detailed properties grid */}

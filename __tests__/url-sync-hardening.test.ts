@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
-import { renderHook, act } from "@testing-library/react";
+import { renderHook } from "@testing-library/react";
 import { useUrlSync } from "@/hooks/use-url-sync";
 import { useMetroStore } from "@/store/use-metro-store";
 import { determineDataSourceState } from "@/lib/data";
@@ -108,4 +108,5 @@ describe("Step 2.3.1 - Characterization: useUrlSync URL parsing error resilience
     renderHook(() => useUrlSync());
     expect(useMetroStore.getState().selectedFeature).toBeNull();
   });
+
 });

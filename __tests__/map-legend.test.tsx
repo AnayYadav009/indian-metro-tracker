@@ -39,8 +39,23 @@ describe("MapLegend Component", () => {
       "Interchange"
     );
     expect(screen.getByTestId("legend-station-standard")).toHaveTextContent(
-      "Standard Station"
+      "Standard"
     );
+  });
+
+  it("derives station swatch colors and widths from STATION_STYLE", () => {
+    render(<MapLegend />);
+    const standard = screen.getByTestId("legend-station-standard").firstElementChild;
+    const interchange = screen.getByTestId("legend-station-interchange").firstElementChild;
+
+    expect(standard).toHaveStyle({
+      backgroundColor: "#ffffff",
+      border: "1.5px solid #0f172a",
+    });
+    expect(interchange).toHaveStyle({
+      backgroundColor: "#ffffff",
+      border: "3px solid #0f172a",
+    });
   });
 
   it("collapses and re-expands when the toggle button is clicked", () => {
@@ -76,4 +91,3 @@ describe("MapLegend Component", () => {
     );
   });
 });
-

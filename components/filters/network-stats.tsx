@@ -10,6 +10,8 @@ export function NetworkStats() {
   const selectedStatuses = useMetroStore((state) => state.selectedStatuses);
   const selectedPhases = useMetroStore((state) => state.selectedPhases);
   const searchQuery = useMetroStore((state) => state.searchQuery);
+  const selectedYear = useMetroStore((state) => state.selectedYear);
+  const includeFuture = useMetroStore((state) => state.includeFuture);
 
   const dataset = useMemo(() => getMetroData(), []);
 
@@ -18,7 +20,17 @@ export function NetworkStats() {
       ? dataset.cities.find((c) => c.id === selectedCityId)
       : null;
 
-    const criteria = { activeCity, selectedStatuses, selectedPhases, searchQuery };
+    const criteria = {
+      activeCity,
+      selectedStatuses,
+      selectedPhases,
+      searchQuery,
+      selectedYear,
+      includeFuture,
+      lineAliases: dataset.lines
+        .filter((line) => !selectedCityId || line.city_id === selectedCityId)
+        .flatMap((line) => line.aliases ?? []),
+    };
 
     const filteredSegments = dataset.segments.features.filter((f) =>
       matchesSegmentFilter(f.properties, criteria)
@@ -44,7 +56,15 @@ export function NetworkStats() {
       plannedKm: Math.round(plannedKm * 10) / 10,
       totalSegments: filteredSegments.length,
     };
-  }, [dataset, selectedCityId, selectedStatuses, selectedPhases, searchQuery]);
+  }, [
+    dataset,
+    selectedCityId,
+    selectedStatuses,
+    selectedPhases,
+    searchQuery,
+    selectedYear,
+    includeFuture,
+  ]);
 
   return (
     <div

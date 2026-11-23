@@ -216,6 +216,8 @@
   ],
   "dedupeRadiusM": 300,
   "stationAliases": {
+    "Sakherbazar": "Sakher Bazar",
+    "Satyajit Ray": "Satyajit Roy",
     "Tollygunge": "Mahanayak Uttam Kumar",
     "Kudghat": "Netaji",
     "Bansdroni": "Masterda Surya Sen",

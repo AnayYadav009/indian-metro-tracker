@@ -53,6 +53,10 @@
     "Sector 34": "Amandoot",
     "Panchanand": "Pethali Taloja"
   },
+  "out_of_scope_station_ids": [
+    "nmm-mansarovar",
+    "nmm-khargar-village"
+  ],
   "stationOverrides": {
     "CBD Belapur": {
       "status": "operational",

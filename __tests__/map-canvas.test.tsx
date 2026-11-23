@@ -32,7 +32,7 @@ describe("Map Canvas Components & Rendering", () => {
     expect(screen.getByTestId("mock-maplibre-map")).toBeInTheDocument();
     expect(screen.getByTestId("mock-nav-control")).toBeInTheDocument();
     expect(screen.getAllByTestId("mock-map-source").length).toBe(2);
-    // 7 layers: segment glow + 3 line status layers + station highlight + station circles + station labels
-    expect(screen.getAllByTestId("mock-map-layer").length).toBe(7);
+    // 8 layers: segment glow + 3 line status layers + selected segment + interchange stations + station circles + station highlight
+    expect(screen.getAllByTestId("mock-map-layer").length).toBe(8);
   });
 });

@@ -1379,6 +1379,114 @@
         "https://mmrda.maharashtra.gov.in/"
       ],
       "city_id": "mumbai"
+    },
+    {
+      "segment_id": "mum-line-1-schematic-01",
+      "line_id": "mum-line-1",
+      "line_name": "Line 1 construction station connector",
+      "phase": "1",
+      "status": "construction",
+      "gauge": "standard",
+      "inaugurated_on": null,
+      "expected_completion": null,
+      "completion_unconfirmed": true,
+      "color": "#0072CE",
+      "references": [
+        "https://mmrda.maharashtra.gov.in/"
+      ],
+      "last_verified": "2026-10-10"
+    },
+    {
+      "segment_id": "mum-line-3-schematic-01",
+      "line_id": "mum-line-3",
+      "line_name": "Line 3 construction station connector",
+      "phase": "1",
+      "status": "construction",
+      "gauge": "standard",
+      "inaugurated_on": null,
+      "expected_completion": null,
+      "completion_unconfirmed": true,
+      "color": "#00A3E0",
+      "completion_unconfirmed": true,
+      "references": [
+        "https://mmrcl.com/"
+      ],
+      "last_verified": "2026-10-10"
+    },
+    {
+      "segment_id": "mum-line-3-schematic-02",
+      "line_id": "mum-line-3",
+      "line_name": "Line 3 MMRDA connector",
+      "phase": "2A",
+      "status": "construction",
+      "gauge": "standard",
+      "inaugurated_on": null,
+      "expected_completion": null,
+      "completion_unconfirmed": true,
+      "color": "#00A3E0",
+      "references": [
+        "https://mmrcl.com/"
+      ],
+      "coordinates": [
+        [72.84939, 19.05401],
+        [72.84942, 19.04615]
+      ],
+      "geometry_quality": "schematic",
+      "last_verified": "2026-10-10"
+    },
+    {
+      "segment_id": "mum-line-4-schematic-01",
+      "line_id": "mum-line-4",
+      "line_name": "Line 4 construction station connector",
+      "phase": "2B",
+      "status": "construction",
+      "gauge": "standard",
+      "inaugurated_on": null,
+      "expected_completion": null,
+      "completion_unconfirmed": true,
+      "color": "#00B140",
+      "references": [
+        "https://mmrda.maharashtra.gov.in/"
+      ],
+      "last_verified": "2026-10-10"
+    },
+    {
+      "segment_id": "mum-line-4-schematic-02",
+      "line_id": "mum-line-4",
+      "line_name": "Line 4 Chembur connector",
+      "phase": "2B",
+      "status": "construction",
+      "gauge": "standard",
+      "inaugurated_on": null,
+      "expected_completion": null,
+      "completion_unconfirmed": true,
+      "color": "#00B140",
+      "references": [
+        "https://mmrda.maharashtra.gov.in/"
+      ],
+      "coordinates": [
+        [72.89281, 19.05413],
+        [72.88471, 19.06300]
+      ],
+      "geometry_quality": "schematic",
+      "last_verified": "2026-10-10"
+    },
+    {
+      "segment_id": "mum-line-9-schematic-01",
+      "line_id": "mum-line-9",
+      "line_name": "Line 9 construction station connector",
+      "phase": "1",
+      "status": "construction",
+      "gauge": "standard",
+      "inaugurated_on": null,
+      "expected_completion": null,
+      "completion_unconfirmed": true,
+      "color": "#D32F2F",
+      "completion_unconfirmed": true,
+      "references": [
+        "https://mmrda.maharashtra.gov.in/"
+      ],
+      "last_verified": "2026-10-10"
     }
   ],
   "interchangeStationNames": [
@@ -1751,7 +1859,9 @@
     "mum-waterfront",
     "Waterfront",
     "mum-shahid-bhagat-singh-garden",
-    "Shahid Bhagat Singh Garden"
+    "Shahid Bhagat Singh Garden",
+    "mum-anik-bus-depot",
+    "Anik Bus Depot"
   ],
   "stationAliases": {
     "Science Centre": "Science Museum",

@@ -97,6 +97,16 @@
       "operator": "DMRC",
       "city_id": "delhi",
       "source": "osm+dmrc"
+    },
+    {
+      "id": "del-golden",
+      "name": "Golden Line",
+      "city": "Delhi",
+      "color": "#B8860B",
+      "operator": "DMRC",
+      "city_id": "delhi",
+      "source": "dmrc+news",
+      "aliases": ["Silver Line", "Gold Line"]
     }
   ],
   "segments": [
@@ -124,6 +134,9 @@
       "inaugurated_on": "2004-12-20",
       "expected_completion": null,
       "color": "#FFD700",
+      "endpoint_station_ids": [
+        "del-samaypur-badli"
+      ],
       "city_id": "delhi"
     },
     {
@@ -244,6 +257,24 @@
       "city_id": "delhi"
     },
     {
+      "osmId": 538930430,
+      "segment_id": "del-red-seg-02",
+      "line_id": "del-red",
+      "line_name": "Red Line (Rithala - Narela Phase IV)",
+      "phase": "IV",
+      "status": "construction",
+      "gauge": "standard",
+      "inaugurated_on": null,
+      "expected_completion": null,
+      "completion_unconfirmed": true,
+      "color": "#FF4040",
+      "city_id": "delhi",
+      "references": [
+        "https://delhimetrorail.com/",
+        "https://www.openstreetmap.org/way/538930430"
+      ]
+    },
+    {
       "osmId": 20300114,
       "segment_id": "del-magenta-seg-02",
       "line_id": "del-magenta",
@@ -255,7 +286,70 @@
       "expected_completion": null,
       "completion_unconfirmed": true,
       "color": "#CC338B",
-      "city_id": "delhi"
+      "city_id": "delhi",
+      "references": [
+        "https://delhimetrorail.com/",
+        "https://www.openstreetmap.org/way/538930431"
+      ]
+    },
+    {
+      "osmId": 538930433,
+      "segment_id": "del-magenta-seg-03",
+      "line_id": "del-magenta",
+      "line_name": "Magenta Line (Inderlok - Indraprastha Phase IV)",
+      "phase": "IV",
+      "status": "construction",
+      "gauge": "standard",
+      "inaugurated_on": null,
+      "expected_completion": null,
+      "completion_unconfirmed": true,
+      "color": "#CC338B",
+      "city_id": "delhi",
+      "references": [
+        "https://delhimetrorail.com/",
+        "https://www.openstreetmap.org/way/538930433"
+      ]
+    },
+    {
+      "osmId": 538930435,
+      "segment_id": "del-golden-seg-01",
+      "line_id": "del-golden",
+      "line_name": "Golden Line (Aerocity - Tughlakabad)",
+      "phase": "IV",
+      "status": "construction",
+      "gauge": "standard",
+      "inaugurated_on": null,
+      "expected_completion": null,
+      "completion_unconfirmed": true,
+      "color": "#B8860B",
+      "city_id": "delhi",
+      "references": [
+        "https://delhimetrorail.com/",
+        "https://themetrorailguy.com/2024/01/27/delhi-metros-silver-line-renamed-to-golden-line-line-10/",
+        "https://www.openstreetmap.org/way/538930435"
+      ],
+      "last_verified": "2026-10-10",
+      "geometry_quality": "exact"
+    },
+    {
+      "osmId": 538930423,
+      "segment_id": "del-golden-branch-01",
+      "line_id": "del-golden",
+      "line_name": "Golden Line (Lajpat Nagar - Saket G Block Link)",
+      "phase": "IV",
+      "status": "planned",
+      "gauge": "standard",
+      "inaugurated_on": null,
+      "expected_completion": null,
+      "color": "#B8860B",
+      "city_id": "delhi",
+      "references": [
+        "https://delhimetrorail.com/",
+        "https://themetrorailguy.com/2024/01/27/delhi-metros-silver-line-renamed-to-golden-line-line-10/",
+        "https://www.openstreetmap.org/way/538930423"
+      ],
+      "last_verified": "2026-10-10",
+      "geometry_quality": "exact"
     }
   ],
   "interchangeStationNames": [
@@ -283,9 +377,7 @@
     "Ramakrishna Ashram Marg": "R K Ashram Marg",
     "Seva Teerth": "Udyog Bhawan"
   },
-  "out_of_scope_line_ids": [
-    "del-silver"
-  ],
+  "out_of_scope_line_ids": [],
   "out_of_scope_station_ids": [
     "del-belvedere-towers",
     "del-cyber-city",

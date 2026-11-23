@@ -45,6 +45,24 @@
   ],
   "segments": [
     {
+      "osmId": 770841024,
+      "segment_id": "hyd-green-seg-02",
+      "line_id": "hyd-green",
+      "line_name": "Green Line (MG Bus Station - Chandrayangutta Phase II)",
+      "phase": "2",
+      "status": "construction",
+      "gauge": "standard",
+      "inaugurated_on": null,
+      "expected_completion": null,
+      "completion_unconfirmed": true,
+      "color": "#008D42",
+      "references": [
+        "https://hmrl.co.in",
+        "https://www.openstreetmap.org/way/770841024"
+      ],
+      "city_id": "hyderabad"
+    },
+    {
       "osmId": 8297636,
       "segment_id": "hyd-red-seg-01",
       "line_id": "hyd-red",

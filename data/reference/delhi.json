@@ -535,7 +535,7 @@
       "confidence": "unverified"
     },
     {
-      "line_id": "del-silver",
+      "line_id": "del-golden",
       "official_name": "Golden Line (Line 10, formerly Silver)",
       "operator": "DMRC",
       "topology": "branched",

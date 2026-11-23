@@ -20,11 +20,12 @@
     "retrieved_at": "2026-10-07"
   },
   {
-    "id": "del-silver",
-    "name": "Silver Line",
+    "id": "del-golden",
+    "name": "Golden Line",
     "city_id": "delhi",
     "city": "Delhi",
-    "color": "#A0A0A0",
+    "color": "#B8860B",
+    "aliases": ["Silver Line"],
     "operator": "DMRC",
     "source": "mock",
     "retrieved_at": "2026-10-07"
