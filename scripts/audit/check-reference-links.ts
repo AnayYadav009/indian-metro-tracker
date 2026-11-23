@@ -40,7 +40,10 @@ async function checkUrl(url: string, timeoutMs = 8000): Promise<{ status: number
 
 async function main() {
   const refDir = path.resolve(process.cwd(), "data/reference");
-  const files = ["delhi.json", "bengaluru.json", "mumbai.json"];
+  const files = fs
+    .readdirSync(refDir)
+    .filter((f) => f.endsWith(".json"))
+    .sort();
   const results: CheckResult[] = [];
 
   for (const file of files) {

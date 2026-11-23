@@ -67,6 +67,17 @@ describe("MetadataPanel Component", () => {
     const refLink = screen.getByRole("link", { name: "https://example.com/source-doc" });
     expect(refLink).toBeInTheDocument();
     expect(refLink).toHaveAttribute("href", "https://example.com/source-doc");
+
+    // Report an issue button
+    const reportButton = screen.getByTestId("report-issue-button");
+    expect(reportButton).toBeInTheDocument();
+    expect(reportButton).toHaveAttribute("target", "_blank");
+    expect(reportButton).toHaveAttribute("rel", "noopener noreferrer");
+    expect(reportButton.getAttribute("href")).toContain(
+      "https://github.com/AnayYadav009/indian-metro-tracker/issues/new"
+    );
+    expect(reportButton.getAttribute("href")).toContain("template=data-correction.yml");
+    expect(reportButton.getAttribute("href")).toContain("del-yellow-seg-01");
   });
 
   it("renders under-construction segment with expected completion date", () => {
@@ -150,6 +161,15 @@ describe("MetadataPanel Component", () => {
 
     // Dates
     expect(screen.getByText("2005-01-01")).toBeInTheDocument();
+
+    // Report an issue button
+    const reportButton = screen.getByTestId("report-issue-button");
+    expect(reportButton).toBeInTheDocument();
+    expect(reportButton.getAttribute("href")).toContain(
+      "https://github.com/AnayYadav009/indian-metro-tracker/issues/new"
+    );
+    expect(reportButton.getAttribute("href")).toContain("template=data-correction.yml");
+    expect(reportButton.getAttribute("href")).toContain("del-rajiv-chowk");
   });
 
   it("clears selectedFeature when clicking the close button", () => {
