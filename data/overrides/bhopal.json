@@ -12,7 +12,10 @@
     "phases": [
       "1"
     ],
-    "network_id": "bhopal-metro"
+    "network_id": "bhopal-metro",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   "lines": [
     {
@@ -23,7 +26,10 @@
       "color": "#F97316",
       "operator": "MPMRCL",
       "source": "osm+mpmrcl",
-      "notes": "Line 2 connects Karond Circle to AIIMS Bhopal (14.99 km, 16 stations). Priority corridor Subhash Nagar to AIIMS is operational."
+      "notes": "Line 2 connects Karond Circle to AIIMS Bhopal (14.99 km, 16 stations). Priority corridor Subhash Nagar to AIIMS is operational.",
+      "provenance": {
+        "status": "unverified"
+      }
     },
     {
       "id": "bho-blue",
@@ -33,7 +39,10 @@
       "color": "#3B82F6",
       "operator": "MPMRCL",
       "source": "osm+mpmrcl",
-      "notes": "Line 5 connects Bhadbhada Square to Ratnagiri Tiraha (12.91 km, 14 stations). Under active construction."
+      "notes": "Line 5 connects Bhadbhada Square to Ratnagiri Tiraha (12.91 km, 14 stations). Under active construction.",
+      "provenance": {
+        "status": "unverified"
+      }
     }
   ],
   "segments": [

@@ -9,6 +9,7 @@ const mockTier1Dataset: Parameters<typeof validateMetroDataset>[0] = {
       bbox: [76.84, 28.4, 77.35, 28.88],
       operator: "DMRC",
       phases: ["Phase 1", "Phase 2", "Phase 3"],
+      provenance: { status: "unverified" },
     },
     {
       id: "bengaluru",
@@ -16,6 +17,7 @@ const mockTier1Dataset: Parameters<typeof validateMetroDataset>[0] = {
       bbox: [77.45, 12.85, 77.75, 13.15],
       operator: "BMRCL",
       phases: ["Phase 1", "Phase 2"],
+      provenance: { status: "unverified" },
     },
     {
       id: "mumbai",
@@ -23,6 +25,7 @@ const mockTier1Dataset: Parameters<typeof validateMetroDataset>[0] = {
       bbox: [72.75, 18.88, 73.0, 19.3],
       operator: "MMRDA",
       phases: ["Phase 1", "Phase 2"],
+      provenance: { status: "unverified" },
     },
   ],
   lines: [
@@ -34,6 +37,7 @@ const mockTier1Dataset: Parameters<typeof validateMetroDataset>[0] = {
       color: "#FF4040",
       operator: "DMRC",
       source: "mock",
+      provenance: { status: "unverified" },
     },
     {
       id: "blr-purple",
@@ -43,6 +47,7 @@ const mockTier1Dataset: Parameters<typeof validateMetroDataset>[0] = {
       color: "#800080",
       operator: "BMRCL",
       source: "mock",
+      provenance: { status: "unverified" },
     },
     {
       id: "mum-line-1",
@@ -52,6 +57,7 @@ const mockTier1Dataset: Parameters<typeof validateMetroDataset>[0] = {
       color: "#0000FF",
       operator: "MMRDA",
       source: "mock",
+      provenance: { status: "unverified" },
     },
   ],
   segments: {

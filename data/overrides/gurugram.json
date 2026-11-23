@@ -13,7 +13,10 @@
       "1",
       "2"
     ],
-    "network_id": "rapid-metro-gurgaon"
+    "network_id": "rapid-metro-gurgaon",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   "lines": [
     {
@@ -24,7 +27,10 @@
       "color": "#94a3b8",
       "operator": "Rapid Metro Gurgaon Ltd (RMGL)",
       "source": "osm+rmgl",
-      "notes": "Built by Rapid Metro Gurgaon Ltd (RMGL); operations taken over by DMRC on 2019-10-22."
+      "notes": "Built by Rapid Metro Gurgaon Ltd (RMGL); operations taken over by DMRC on 2019-10-22.",
+      "provenance": {
+        "status": "unverified"
+      }
     }
   ],
   "selfIntersectionExemptions": [

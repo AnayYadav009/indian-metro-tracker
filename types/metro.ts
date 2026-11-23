@@ -1,7 +1,13 @@
+import {
+  ProvenanceSchema,
+  ProvenanceStatusSchema,
+} from "./schema";
 import type {
   Status,
   Layout,
   BoundingBox,
+  Provenance,
+  ProvenanceStatus,
   City,
   Line,
   SegmentProperties,
@@ -13,10 +19,14 @@ import type {
   StationFeatureCollection,
 } from "./schema";
 
+export { ProvenanceSchema, ProvenanceStatusSchema };
+
 export type {
   Status,
   Layout,
   BoundingBox,
+  Provenance,
+  ProvenanceStatus,
   City,
   Line,
   SegmentProperties,

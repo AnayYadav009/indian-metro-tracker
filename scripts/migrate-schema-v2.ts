@@ -36,6 +36,7 @@ export function migrateDatasetV2(
       tier: c.tier !== undefined ? c.tier : 1,
       network_id: c.network_id || undefined,
       retrieved_at: c.retrieved_at || today,
+      provenance: c.provenance || { status: "unverified" },
     };
   });
 
@@ -44,6 +45,7 @@ export function migrateDatasetV2(
     return {
       ...l,
       retrieved_at: l.retrieved_at || today,
+      provenance: l.provenance || { status: "unverified" },
     };
   });
 

@@ -12,7 +12,10 @@
     "phases": [
       "1"
     ],
-    "network_id": "kanpur-metro"
+    "network_id": "kanpur-metro",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   "lines": [
     {
@@ -23,7 +26,10 @@
       "color": "#F97316",
       "operator": "UPMRC",
       "source": "osm+upmrc",
-      "notes": "Orange Line connects IIT Kanpur to Kanpur Central (14.65 km, 14 stations). Fully operational."
+      "notes": "Orange Line connects IIT Kanpur to Kanpur Central (14.65 km, 14 stations). Fully operational.",
+      "provenance": {
+        "status": "unverified"
+      }
     }
   ],
   "segments": [

@@ -12,7 +12,7 @@ import {
   type NormalizedCityData,
   type NormalizedSegment,
 } from "./normalize";
-import type { SegmentFeature, SharedCorridor, StationFeature } from "../../types/metro";
+import type { Provenance, SegmentFeature, SharedCorridor, StationFeature } from "../../types/metro";
 
 type Coordinate = [number, number];
 
@@ -76,6 +76,7 @@ export interface CityOverrideData {
     bbox: [number, number, number, number];
     operator: string;
     phases: string[];
+    provenance?: Provenance;
   };
   lines: Array<{
     id: string;
@@ -86,6 +87,7 @@ export interface CityOverrideData {
     operator: string;
     source: string;
     aliases?: string[];
+    provenance?: Provenance;
   }>;
   segments: Array<{
     osmId?: number;

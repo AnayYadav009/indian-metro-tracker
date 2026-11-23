@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useMemo, useCallback } from "react";
-import type { StationProperties } from "@/types/schema";
+import type { StationProperties, Provenance } from "@/types/schema";
 import { ArrowRight } from "lucide-react";
 import { getMetroData, getSegments } from "@/lib/data";
 import { useMetroStore } from "@/store/use-metro-store";
@@ -12,6 +12,7 @@ import {
   InterchangeBadge,
 } from "./badge-indicators";
 import { ReportIssueButton } from "./report-issue-button";
+import { ProvenanceFooter } from "./provenance-footer";
 import { DEFAULT_LINE_FALLBACK_COLOR } from "@/lib/metro-styles";
 import { getKnownIssueNotice } from "@/lib/known-issue-notices";
 import { getLineStatusLabels } from "@/lib/line-status";
@@ -25,6 +26,9 @@ export function StationDetail({ station, coordinates }: StationDetailProps) {
   const dataset = useMemo(() => getMetroData(), []);
   const setSelectedFeature = useMetroStore((s) => s.setSelectedFeature);
   const startRouteFromStation = useMetroStore((s) => s.startRouteFromStation);
+
+  const city = useMemo(() => dataset.cities.find((c) => c.id === station.city_id), [dataset.cities, station.city_id]);
+  const primaryLine = useMemo(() => dataset.lines.find((l) => station.line_ids.includes(l.id)), [dataset.lines, station.line_ids]);
 
   // Map line_ids to full line info (names and colors)
   // For cross-network or clustered interchanges, aggregate lines from all stations sharing interchange_id
@@ -53,9 +57,49 @@ export function StationDetail({ station, coordinates }: StationDetailProps) {
         name: line?.name || lineId,
         color: line?.color || DEFAULT_LINE_FALLBACK_COLOR,
         statusLabels: getLineStatusLabels(lineSegs.map((s) => s.properties.status)),
+        provenance: line?.provenance ?? { status: "unverified" },
       };
     });
   }, [station.line_ids, station.interchange_id, dataset.stations, dataset.lines, dataset.segments]);
+
+  const { weakestLineProvenance, lineProvenanceLabel } = useMemo<{
+    weakestLineProvenance: Provenance;
+    lineProvenanceLabel: string;
+  }>(() => {
+    const defaultProv: Provenance = { status: "unverified" };
+    if (connectedLines.length === 0) {
+      return {
+        weakestLineProvenance: primaryLine?.provenance ?? defaultProv,
+        lineProvenanceLabel: "Line",
+      };
+    }
+
+    const rank = (status?: string): number => {
+      if (status === "verified") return 3;
+      if (status === "schematic") return 2;
+      return 1; // unverified or missing
+    };
+
+    let weakest: Provenance = connectedLines[0].provenance ?? defaultProv;
+    let allSameStatus = true;
+    const firstStatus = connectedLines[0].provenance?.status || "unverified";
+
+    for (const cl of connectedLines) {
+      const currentProv = cl.provenance ?? defaultProv;
+      const currentStatus = currentProv.status || "unverified";
+      if (currentStatus !== firstStatus) {
+        allSameStatus = false;
+      }
+      if (rank(currentStatus) < rank(weakest.status)) {
+        weakest = currentProv;
+      }
+    }
+
+    return {
+      weakestLineProvenance: weakest,
+      lineProvenanceLabel: connectedLines.length > 1 ? "Lines" : "Line",
+    };
+  }, [connectedLines, primaryLine]);
 
   /** Clicking a line chip selects the first operational segment of that line */
   const handleLineChipClick = useCallback(
@@ -209,13 +253,10 @@ export function StationDetail({ station, coordinates }: StationDetailProps) {
         Route from here <ArrowRight className="h-3 w-3" />
       </button>
 
-      {/* Report an Issue Button */}
-      <ReportIssueButton target={{ type: "station", data: station, coordinates }} />
-
-      {/* Provenance footer */}
+      {/* Station Feature Source */}
       <div className="flex items-center justify-between border-t border-slate-800/80 pt-2 text-[10px] text-slate-400">
         <span className="flex items-center gap-1.5">
-          <span>Source:</span>
+          <span>Feature source:</span>
           <span
             className={`rounded px-1.5 py-0.5 font-medium ${
               station.source === "mock"
@@ -228,10 +269,33 @@ export function StationDetail({ station, coordinates }: StationDetailProps) {
         </span>
         <span>
           {station.last_verified
-            ? `Verified: ${station.last_verified}`
-            : "Not verified (OSM data)"}
+            ? `Feature data date: ${station.last_verified}`
+            : "Feature data date: Unrecorded (OSM data)"}
         </span>
       </div>
+
+      {/* Report an Issue Button */}
+      <ReportIssueButton
+        target={{
+          type: "station",
+          data: station,
+          coordinates,
+          cityProvenance: city?.provenance,
+          lineProvenance: weakestLineProvenance,
+          lineProvenances: connectedLines.map((cl) => ({
+            name: cl.name,
+            provenance: cl.provenance,
+          })),
+        }}
+      />
+
+      {/* Provenance footer */}
+      <ProvenanceFooter
+        items={[
+          { label: "City", provenance: city?.provenance },
+          { label: lineProvenanceLabel, provenance: weakestLineProvenance },
+        ]}
+      />
     </div>
   );
 }

@@ -7,7 +7,10 @@
     "color": "#94a3b8",
     "operator": "Rapid Metro Gurgaon Ltd (RMGL)",
     "source": "osm+rmgl",
-    "notes": "Built by Rapid Metro Gurgaon Ltd (RMGL); operations taken over by DMRC on 2019-10-22."
+    "notes": "Built by Rapid Metro Gurgaon Ltd (RMGL); operations taken over by DMRC on 2019-10-22.",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "nmm-line-1",
@@ -17,7 +20,10 @@
     "color": "#77248b",
     "operator": "Maha Metro",
     "source": "osm+cidco",
-    "notes": "Owned by CIDCO; operated and maintained by Maha Metro under a 10-year contract signed in 2021. OSM tags operator as CIDCO creating a documented source conflict."
+    "notes": "Owned by CIDCO; operated and maintained by Maha Metro under a 10-year contract signed in 2021. OSM tags operator as CIDCO creating a documented source conflict.",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "che-blue",
@@ -26,7 +32,10 @@
     "color": "#0072CE",
     "operator": "CMRL",
     "city_id": "chennai",
-    "source": "osm+cmrl"
+    "source": "osm+cmrl",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "che-green",
@@ -35,7 +44,10 @@
     "color": "#009A44",
     "operator": "CMRL",
     "city_id": "chennai",
-    "source": "osm+cmrl"
+    "source": "osm+cmrl",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "che-corridor-3",
@@ -44,7 +56,10 @@
     "color": "#702082",
     "operator": "CMRL",
     "city_id": "chennai",
-    "source": "cmrl"
+    "source": "cmrl",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "che-corridor-4",
@@ -53,7 +68,10 @@
     "color": "#FFD100",
     "operator": "CMRL",
     "city_id": "chennai",
-    "source": "cmrl"
+    "source": "cmrl",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "che-corridor-5",
@@ -62,7 +80,10 @@
     "color": "#ED1C24",
     "operator": "CMRL",
     "city_id": "chennai",
-    "source": "cmrl"
+    "source": "cmrl",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "pun-purple",
@@ -71,7 +92,10 @@
     "color": "#800080",
     "operator": "Maha Metro",
     "city_id": "pune",
-    "source": "osm+maha_metro"
+    "source": "osm+maha_metro",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "pun-aqua",
@@ -80,7 +104,10 @@
     "color": "#00FFFF",
     "operator": "Maha Metro",
     "city_id": "pune",
-    "source": "osm+maha_metro"
+    "source": "osm+maha_metro",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "pun-line-3",
@@ -89,7 +116,10 @@
     "color": "#FF69B4",
     "operator": "Pune IT City Metro Rail Limited",
     "city_id": "pune",
-    "source": "osm+pmrda"
+    "source": "osm+pmrda",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "blr-purple",
@@ -98,7 +128,10 @@
     "color": "#800080",
     "operator": "BMRCL",
     "city_id": "bengaluru",
-    "source": "osm+bmrcl"
+    "source": "osm+bmrcl",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "blr-green",
@@ -107,7 +140,10 @@
     "color": "#009933",
     "operator": "BMRCL",
     "city_id": "bengaluru",
-    "source": "osm+bmrcl"
+    "source": "osm+bmrcl",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "blr-yellow",
@@ -116,7 +152,10 @@
     "color": "#FFCC00",
     "operator": "BMRCL",
     "city_id": "bengaluru",
-    "source": "osm+bmrcl"
+    "source": "osm+bmrcl",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "blr-blue",
@@ -125,7 +164,10 @@
     "color": "#1E90FF",
     "operator": "BMRCL",
     "city_id": "bengaluru",
-    "source": "osm+bmrcl"
+    "source": "osm+bmrcl",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "blr-pink",
@@ -134,7 +176,10 @@
     "color": "#FF69B4",
     "operator": "BMRCL",
     "city_id": "bengaluru",
-    "source": "osm+bmrcl"
+    "source": "osm+bmrcl",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "mum-line-1",
@@ -143,7 +188,10 @@
     "color": "#0072CE",
     "operator": "MMOPL",
     "city_id": "mumbai",
-    "source": "osm+mmrda"
+    "source": "osm+mmrda",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "mum-line-2a",
@@ -152,7 +200,10 @@
     "color": "#FFD700",
     "operator": "MMMOCL",
     "city_id": "mumbai",
-    "source": "osm+mmrda"
+    "source": "osm+mmrda",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "mum-line-7",
@@ -161,7 +212,10 @@
     "color": "#ED1C24",
     "operator": "MMMOCL",
     "city_id": "mumbai",
-    "source": "osm+mmrda"
+    "source": "osm+mmrda",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "mum-line-3",
@@ -170,7 +224,10 @@
     "color": "#00A3E0",
     "operator": "MMRCL",
     "city_id": "mumbai",
-    "source": "osm+mmrda"
+    "source": "osm+mmrda",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "mum-line-4",
@@ -179,7 +236,10 @@
     "color": "#00B140",
     "operator": "MMMOCL",
     "city_id": "mumbai",
-    "source": "osm+mmrda"
+    "source": "osm+mmrda",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "mum-line-2b",
@@ -188,7 +248,10 @@
     "color": "#FFC72C",
     "operator": "MMMOCL",
     "city_id": "mumbai",
-    "source": "osm+mmrda"
+    "source": "osm+mmrda",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "mum-line-9",
@@ -197,7 +260,10 @@
     "color": "#D32F2F",
     "operator": "MMMOCL",
     "city_id": "mumbai",
-    "source": "osm+mmrda"
+    "source": "osm+mmrda",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "kol-blue",
@@ -206,7 +272,10 @@
     "color": "#0072CE",
     "operator": "Metro Railway, Kolkata",
     "city_id": "kolkata",
-    "source": "osm+mtp"
+    "source": "osm+mtp",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "kol-green",
@@ -215,7 +284,10 @@
     "color": "#009A44",
     "operator": "KMRC",
     "city_id": "kolkata",
-    "source": "osm+kmrc"
+    "source": "osm+kmrc",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "kol-purple",
@@ -224,7 +296,10 @@
     "color": "#702082",
     "operator": "Metro Railway, Kolkata",
     "city_id": "kolkata",
-    "source": "osm+mtp"
+    "source": "osm+mtp",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "kol-yellow",
@@ -233,7 +308,10 @@
     "color": "#FFD100",
     "operator": "Metro Railway, Kolkata",
     "city_id": "kolkata",
-    "source": "osm+mtp"
+    "source": "osm+mtp",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "kol-orange",
@@ -242,7 +320,10 @@
     "color": "#FF8200",
     "operator": "Metro Railway, Kolkata",
     "city_id": "kolkata",
-    "source": "osm+mtp"
+    "source": "osm+mtp",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "hyd-red",
@@ -251,7 +332,10 @@
     "color": "#D84A4E",
     "operator": "LTMRHL",
     "city_id": "hyderabad",
-    "source": "osm+ltmrhl"
+    "source": "osm+ltmrhl",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "hyd-blue",
@@ -260,7 +344,10 @@
     "color": "#0081BF",
     "operator": "LTMRHL",
     "city_id": "hyderabad",
-    "source": "osm+ltmrhl"
+    "source": "osm+ltmrhl",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "hyd-green",
@@ -269,7 +356,10 @@
     "color": "#008D42",
     "operator": "LTMRHL",
     "city_id": "hyderabad",
-    "source": "osm+ltmrhl"
+    "source": "osm+ltmrhl",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "ahm-blue",
@@ -278,7 +368,10 @@
     "color": "#0000FF",
     "operator": "GMRC",
     "city_id": "ahmedabad",
-    "source": "osm+gmrc"
+    "source": "osm+gmrc",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "ahm-red",
@@ -287,7 +380,10 @@
     "color": "#FF0000",
     "operator": "GMRC",
     "city_id": "ahmedabad",
-    "source": "osm+gmrc"
+    "source": "osm+gmrc",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "ahm-yellow",
@@ -296,7 +392,10 @@
     "color": "#FFD700",
     "operator": "GMRC",
     "city_id": "ahmedabad",
-    "source": "osm+gmrc"
+    "source": "osm+gmrc",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "ahm-violet",
@@ -305,7 +404,10 @@
     "color": "#8A2BE2",
     "operator": "GMRC",
     "city_id": "ahmedabad",
-    "source": "osm+gmrc"
+    "source": "osm+gmrc",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "noi-aqua",
@@ -314,7 +416,10 @@
     "city_id": "noida",
     "color": "#00CED1",
     "operator": "NMRC",
-    "source": "osm+nmrc"
+    "source": "osm+nmrc",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "del-red",
@@ -323,7 +428,10 @@
     "color": "#FF4040",
     "operator": "DMRC",
     "city_id": "delhi",
-    "source": "osm+dmrc"
+    "source": "osm+dmrc",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "del-yellow",
@@ -332,7 +440,10 @@
     "color": "#FFD700",
     "operator": "DMRC",
     "city_id": "delhi",
-    "source": "osm+dmrc"
+    "source": "osm+dmrc",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "del-blue",
@@ -341,7 +452,10 @@
     "color": "#0070BB",
     "operator": "DMRC",
     "city_id": "delhi",
-    "source": "osm+dmrc"
+    "source": "osm+dmrc",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "del-green",
@@ -350,7 +464,10 @@
     "color": "#008000",
     "operator": "DMRC",
     "city_id": "delhi",
-    "source": "osm+dmrc"
+    "source": "osm+dmrc",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "del-violet",
@@ -359,7 +476,10 @@
     "color": "#553592",
     "operator": "DMRC",
     "city_id": "delhi",
-    "source": "osm+dmrc"
+    "source": "osm+dmrc",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "del-airport",
@@ -368,7 +488,10 @@
     "color": "#FF8C00",
     "operator": "DMRC",
     "city_id": "delhi",
-    "source": "osm+dmrc"
+    "source": "osm+dmrc",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "del-pink",
@@ -377,7 +500,10 @@
     "color": "#FC8EAC",
     "operator": "DMRC",
     "city_id": "delhi",
-    "source": "osm+dmrc"
+    "source": "osm+dmrc",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "del-magenta",
@@ -386,7 +512,10 @@
     "color": "#CC338B",
     "operator": "DMRC",
     "city_id": "delhi",
-    "source": "osm+dmrc"
+    "source": "osm+dmrc",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "del-grey",
@@ -395,7 +524,10 @@
     "color": "#838996",
     "operator": "DMRC",
     "city_id": "delhi",
-    "source": "osm+dmrc"
+    "source": "osm+dmrc",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "del-golden",
@@ -408,7 +540,10 @@
     "aliases": [
       "Silver Line",
       "Gold Line"
-    ]
+    ],
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "ind-yellow",
@@ -418,7 +553,10 @@
     "color": "#FBBF24",
     "operator": "MPMRCL",
     "source": "osm+mpmrcl",
-    "notes": "Line 3 circular ring line covering 33.53 km across 29 stations."
+    "notes": "Line 3 circular ring line covering 33.53 km across 29 stations.",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "bho-orange",
@@ -428,7 +566,10 @@
     "color": "#F97316",
     "operator": "MPMRCL",
     "source": "osm+mpmrcl",
-    "notes": "Line 2 connects Karond Circle to AIIMS Bhopal (14.99 km, 16 stations). Priority corridor Subhash Nagar to AIIMS is operational."
+    "notes": "Line 2 connects Karond Circle to AIIMS Bhopal (14.99 km, 16 stations). Priority corridor Subhash Nagar to AIIMS is operational.",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "bho-blue",
@@ -438,7 +579,10 @@
     "color": "#3B82F6",
     "operator": "MPMRCL",
     "source": "osm+mpmrcl",
-    "notes": "Line 5 connects Bhadbhada Square to Ratnagiri Tiraha (12.91 km, 14 stations). Under active construction."
+    "notes": "Line 5 connects Bhadbhada Square to Ratnagiri Tiraha (12.91 km, 14 stations). Under active construction.",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "nag-orange",
@@ -448,7 +592,10 @@
     "color": "#F97316",
     "operator": "Maha Metro",
     "source": "osm+mahametro",
-    "notes": "North-South Corridor from Automotive Square to Khapri (19.66 km, 18 stations). Phase 1 fully operational."
+    "notes": "North-South Corridor from Automotive Square to Khapri (19.66 km, 18 stations). Phase 1 fully operational.",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "nag-aqua",
@@ -458,7 +605,10 @@
     "color": "#06B6D4",
     "operator": "Maha Metro",
     "source": "osm+mahametro",
-    "notes": "East-West Corridor from Lokmanya Nagar to Prajapati Nagar (18.56 km, 20 stations). Phase 1 fully operational."
+    "notes": "East-West Corridor from Lokmanya Nagar to Prajapati Nagar (18.56 km, 20 stations). Phase 1 fully operational.",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "sur-red",
@@ -468,7 +618,10 @@
     "operator": "GMRC",
     "city_id": "surat",
     "source": "osm+gmrc",
-    "notes": "Corridor 1 (Diamond Corridor) from Sarthana to Dream City (21.61 km, 21 stations). Under construction."
+    "notes": "Corridor 1 (Diamond Corridor) from Sarthana to Dream City (21.61 km, 21 stations). Under construction.",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "sur-green",
@@ -478,7 +631,10 @@
     "operator": "GMRC",
     "city_id": "surat",
     "source": "osm+gmrc",
-    "notes": "Corridor 2 (Textile Corridor) from Bhesan to Saroli (18.74 km, 18 stations). Under construction."
+    "notes": "Corridor 2 (Textile Corridor) from Bhesan to Saroli (18.74 km, 18 stations). Under construction.",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "koc-blue",
@@ -488,7 +644,10 @@
     "color": "#0284C7",
     "operator": "KMRL",
     "source": "osm+kmrl",
-    "notes": "Line 1 connects Aluva to Thrippunithura Terminal (28.12 km, 25 elevated stations). Fully operational."
+    "notes": "Line 1 connects Aluva to Thrippunithura Terminal (28.12 km, 25 elevated stations). Fully operational.",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "lko-red",
@@ -498,7 +657,10 @@
     "color": "#EF4444",
     "operator": "UPMRC",
     "source": "osm+upmrc",
-    "notes": "Red Line connects CCS Airport to Munshipulia (22.88 km, 21 stations). Fully operational."
+    "notes": "Red Line connects CCS Airport to Munshipulia (22.88 km, 21 stations). Fully operational.",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "knp-orange",
@@ -508,7 +670,10 @@
     "color": "#F97316",
     "operator": "UPMRC",
     "source": "osm+upmrc",
-    "notes": "Orange Line connects IIT Kanpur to Kanpur Central (14.65 km, 14 stations). Fully operational."
+    "notes": "Orange Line connects IIT Kanpur to Kanpur Central (14.65 km, 14 stations). Fully operational.",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "agr-yellow",
@@ -518,7 +683,10 @@
     "color": "#EAB308",
     "operator": "UPMRC",
     "source": "osm+upmrc",
-    "notes": "Yellow Line connects Mankameshwar Mandir to Taj East Gate (5.2 km, 6 stations). Priority corridor fully operational."
+    "notes": "Yellow Line connects Mankameshwar Mandir to Taj East Gate (5.2 km, 6 stations). Priority corridor fully operational.",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "jai-pink",
@@ -528,7 +696,10 @@
     "color": "#ff748c",
     "operator": "JMRC",
     "source": "osm+jmrc",
-    "notes": "Pink Line connects Mansarovar to Badi Chaupar (11.97 km, 11 stations). Phase 1 fully operational."
+    "notes": "Pink Line connects Mansarovar to Badi Chaupar (11.97 km, 11 stations). Phase 1 fully operational.",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "pat-blue",
@@ -538,6 +709,9 @@
     "color": "#4169E1",
     "operator": "PMRC",
     "source": "osm+pmrc",
-    "notes": "Blue Line priority corridor connects New ISBT to Malahi Pakri (5.28 km, 5 stations). Elevated priority corridor fully operational."
+    "notes": "Blue Line priority corridor connects New ISBT to Malahi Pakri (5.28 km, 5 stations). Elevated priority corridor fully operational.",
+    "provenance": {
+      "status": "unverified"
+    }
   }
 ]

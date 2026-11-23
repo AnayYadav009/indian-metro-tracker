@@ -16,7 +16,10 @@
       "4",
       "5",
       "6"
-    ]
+    ],
+    "provenance": {
+      "status": "unverified"
+    }
   },
   "lines": [
     {
@@ -26,7 +29,10 @@
       "color": "#0072CE",
       "operator": "Metro Railway, Kolkata",
       "city_id": "kolkata",
-      "source": "osm+mtp"
+      "source": "osm+mtp",
+      "provenance": {
+        "status": "unverified"
+      }
     },
     {
       "id": "kol-green",
@@ -35,7 +41,10 @@
       "color": "#009A44",
       "operator": "KMRC",
       "city_id": "kolkata",
-      "source": "osm+kmrc"
+      "source": "osm+kmrc",
+      "provenance": {
+        "status": "unverified"
+      }
     },
     {
       "id": "kol-purple",
@@ -44,7 +53,10 @@
       "color": "#702082",
       "operator": "Metro Railway, Kolkata",
       "city_id": "kolkata",
-      "source": "osm+mtp"
+      "source": "osm+mtp",
+      "provenance": {
+        "status": "unverified"
+      }
     },
     {
       "id": "kol-yellow",
@@ -53,7 +65,10 @@
       "color": "#FFD100",
       "operator": "Metro Railway, Kolkata",
       "city_id": "kolkata",
-      "source": "osm+mtp"
+      "source": "osm+mtp",
+      "provenance": {
+        "status": "unverified"
+      }
     },
     {
       "id": "kol-orange",
@@ -62,7 +77,10 @@
       "color": "#FF8200",
       "operator": "Metro Railway, Kolkata",
       "city_id": "kolkata",
-      "source": "osm+mtp"
+      "source": "osm+mtp",
+      "provenance": {
+        "status": "unverified"
+      }
     }
   ],
   "segments": [
@@ -85,12 +103,28 @@
     {
       "osmId": 11720071,
       "orderedWayIds": [
-        { "id": 610018751, "reversed": true },
-        { "id": 1258949231, "reversed": true },
-        { "id": 1258466136, "reversed": true },
-        { "id": 855300989, "reversed": true },
-        { "id": 1146853675 },
-        { "id": 610018750 }
+        {
+          "id": 610018751,
+          "reversed": true
+        },
+        {
+          "id": 1258949231,
+          "reversed": true
+        },
+        {
+          "id": 1258466136,
+          "reversed": true
+        },
+        {
+          "id": 855300989,
+          "reversed": true
+        },
+        {
+          "id": 1146853675
+        },
+        {
+          "id": 610018750
+        }
       ],
       "segment_id": "kol-green-seg-01",
       "line_id": "kol-green",

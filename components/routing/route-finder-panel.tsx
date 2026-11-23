@@ -17,6 +17,7 @@ import { getMetroData } from "@/lib/data";
 import { buildTransitGraph, findRoute } from "@/lib/routing/graph";
 import { getCityRoutability } from "@/lib/routing/city-guard";
 import type { RouteResult } from "@/lib/routing/types";
+import { ReportIssueButton } from "@/components/panels/report-issue-button";
 
 export function RouteFinderPanel() {
   const isRoutePanelOpen = useMetroStore((state) => state.isRoutePanelOpen);
@@ -44,6 +45,10 @@ export function RouteFinderPanel() {
 
   // Default to Kochi or first routable city if none selected
   const activeCityId = selectedCityId || "kochi";
+  const activeCity = useMemo(
+    () => dataset.cities.find((c) => c.id === activeCityId),
+    [dataset.cities, activeCityId]
+  );
   const cityRoutability = useMemo(
     () => getCityRoutability(activeCityId),
     [activeCityId]
@@ -580,6 +585,32 @@ export function RouteFinderPanel() {
                   <Info className="h-4 w-4 text-slate-500 shrink-0 mt-0.5" />
                   <span>{activeRoute.disclaimer}</span>
                 </div>
+
+                {/* Report an Issue Button */}
+                <ReportIssueButton
+                  target={{
+                    type: "route",
+                    data: {
+                      cityId: activeCityId,
+                      cityName: activeCity?.name || activeCityId,
+                      fromStation: {
+                        id: activeRoute.origin.id,
+                        name: activeRoute.origin.name,
+                      },
+                      toStation: {
+                        id: activeRoute.destination.id,
+                        name: activeRoute.destination.name,
+                      },
+                      stationCount: activeRoute.totalStops,
+                      estimatedTime: `${activeRoute.estimatedMinutes} min`,
+                      orderedStationIds: activeRoute.legs.flatMap((leg, idx) => [
+                        ...(idx === 0 ? [leg.fromStation.id] : []),
+                        ...leg.intermediateStations.map((s) => s.id),
+                        leg.toStation.id,
+                      ]),
+                    },
+                  }}
+                />
               </div>
             )}
           </>

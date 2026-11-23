@@ -12,7 +12,10 @@
     "phases": [
       "1"
     ],
-    "network_id": "agra-metro"
+    "network_id": "agra-metro",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   "lines": [
     {
@@ -23,7 +26,10 @@
       "color": "#EAB308",
       "operator": "UPMRC",
       "source": "osm+upmrc",
-      "notes": "Yellow Line connects Mankameshwar Mandir to Taj East Gate (5.2 km, 6 stations). Priority corridor fully operational."
+      "notes": "Yellow Line connects Mankameshwar Mandir to Taj East Gate (5.2 km, 6 stations). Priority corridor fully operational.",
+      "provenance": {
+        "status": "unverified"
+      }
     }
   ],
   "segments": [

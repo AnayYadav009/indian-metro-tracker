@@ -61,7 +61,7 @@ describe("MetadataPanel Component", () => {
     expect(screen.getByText("11 stations")).toBeInTheDocument();
     expect(screen.getByText("broad")).toBeInTheDocument();
     expect(screen.getByText("2004-12-20")).toBeInTheDocument();
-    expect(screen.getByText("Verified: 2026-10-05")).toBeInTheDocument();
+    expect(screen.getByText("Feature data date: 2026-10-05")).toBeInTheDocument();
 
     // References citation link
     const refLink = screen.getByRole("link", { name: "https://example.com/source-doc" });
@@ -346,7 +346,7 @@ describe("MetadataPanel Component", () => {
 
       render(<MetadataPanel />);
       expect(screen.getByText("Date not recorded")).toBeInTheDocument();
-      expect(screen.getByText("Not verified (OSM data)")).toBeInTheDocument();
+      expect(screen.getByText("Feature data date: Unrecorded (OSM data)")).toBeInTheDocument();
     });
   });
 });

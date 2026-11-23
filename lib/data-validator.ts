@@ -29,6 +29,62 @@ export interface ValidationResult {
   dataset?: MetroDataset;
 }
 
+function validateEntityProvenance(
+  entityType: "City" | "Line",
+  id: string,
+  provenance: unknown,
+  errors: string[],
+  today: string
+) {
+  if (!provenance || typeof provenance !== "object") {
+    errors.push(`${entityType} '${id}': missing provenance`);
+    return;
+  }
+  const prov = provenance as Record<string, unknown>;
+  if (!prov.status) {
+    errors.push(`${entityType} '${id}': missing provenance status`);
+    return;
+  }
+  if (!["verified", "schematic", "unverified"].includes(prov.status as string)) {
+    errors.push(`${entityType} '${id}': invalid provenance status '${prov.status}'`);
+    return;
+  }
+
+  if (prov.status === "verified") {
+    if (!prov.source_url) {
+      errors.push(`${entityType} '${id}': verified status requires source_url`);
+    }
+    if (!prov.last_verified) {
+      errors.push(`${entityType} '${id}': verified status requires last_verified`);
+    }
+  }
+
+  if (prov.source_url !== undefined && typeof prov.source_url === "string") {
+    if (!/^https:\/\//.test(prov.source_url)) {
+      errors.push(`${entityType} '${id}': source_url must be an https URL`);
+    }
+  }
+
+  if (prov.last_verified !== undefined && typeof prov.last_verified === "string") {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(prov.last_verified)) {
+      errors.push(`${entityType} '${id}': last_verified must be a valid ISO date (YYYY-MM-DD)`);
+    } else {
+      const [y, m, d] = prov.last_verified.split("-").map(Number);
+      const dt = new Date(Date.UTC(y, m - 1, d));
+      if (
+        isNaN(dt.getTime()) ||
+        dt.getUTCFullYear() !== y ||
+        dt.getUTCMonth() !== m - 1 ||
+        dt.getUTCDate() !== d
+      ) {
+        errors.push(`${entityType} '${id}': last_verified must be a valid calendar date`);
+      } else if (prov.last_verified > today) {
+        errors.push(`${entityType} '${id}': last_verified cannot be in the future`);
+      }
+    }
+  }
+}
+
 /**
  * Validates raw metro data against Zod schemas and relational consistency rules.
  * Zero-code-change requirement: Cities, lines, and phases are dynamically checked
@@ -45,6 +101,26 @@ export function validateMetroDataset(
 ): ValidationResult {
   const errors: string[] = [];
   const warnings: string[] = [];
+  const today = options?.currentDate || new Date().toISOString().slice(0, 10);
+
+  // Validate provenance on cities and lines directly with ID-naming errors
+  if (Array.isArray(rawData.cities)) {
+    for (const rawCity of rawData.cities) {
+      if (rawCity && typeof rawCity === "object") {
+        const cityId = (rawCity as any).id || "unknown";
+        validateEntityProvenance("City", cityId, (rawCity as any).provenance, errors, today);
+      }
+    }
+  }
+
+  if (Array.isArray(rawData.lines)) {
+    for (const rawLine of rawData.lines) {
+      if (rawLine && typeof rawLine === "object") {
+        const lineId = (rawLine as any).id || "unknown";
+        validateEntityProvenance("Line", lineId, (rawLine as any).provenance, errors, today);
+      }
+    }
+  }
 
   // 1. Validate Cities schema
   const citiesParsed = z.array(CitySchema).safeParse(rawData.cities);

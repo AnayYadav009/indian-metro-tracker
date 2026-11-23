@@ -12,7 +12,10 @@
     "phases": [
       "1",
       "2"
-    ]
+    ],
+    "provenance": {
+      "status": "unverified"
+    }
   },
   "lines": [
     {
@@ -22,7 +25,10 @@
       "color": "#D84A4E",
       "operator": "LTMRHL",
       "city_id": "hyderabad",
-      "source": "osm+ltmrhl"
+      "source": "osm+ltmrhl",
+      "provenance": {
+        "status": "unverified"
+      }
     },
     {
       "id": "hyd-blue",
@@ -31,7 +37,10 @@
       "color": "#0081BF",
       "operator": "LTMRHL",
       "city_id": "hyderabad",
-      "source": "osm+ltmrhl"
+      "source": "osm+ltmrhl",
+      "provenance": {
+        "status": "unverified"
+      }
     },
     {
       "id": "hyd-green",
@@ -40,7 +49,10 @@
       "color": "#008D42",
       "operator": "LTMRHL",
       "city_id": "hyderabad",
-      "source": "osm+ltmrhl"
+      "source": "osm+ltmrhl",
+      "provenance": {
+        "status": "unverified"
+      }
     }
   ],
   "segments": [

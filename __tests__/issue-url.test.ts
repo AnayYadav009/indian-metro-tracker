@@ -1,10 +1,16 @@
 import { describe, it, expect } from "vitest";
 import {
   buildDataCorrectionIssueUrl,
+  buildStationIssueUrl,
+  buildSegmentIssueUrl,
+  buildRouteIssueUrl,
+  buildCityIssueUrl,
   buildMapPermalink,
   generateIssueBody,
   MAX_ISSUE_URL_LENGTH,
   type IssueTarget,
+  type RouteIssueData,
+  type CityIssueData,
 } from "@/lib/issue-url";
 import type { SegmentProperties, StationProperties } from "@/types/schema";
 
@@ -70,8 +76,13 @@ describe("Issue URL and Permalink Generator", () => {
   });
 
   describe("generateIssueBody", () => {
-    it("includes all required segment fields: type, id, name, city, timestamps, and displayed values", () => {
-      const target: IssueTarget = { type: "segment", data: sampleSegment };
+    it("includes all required segment fields and separate network provenance section", () => {
+      const target: IssueTarget = {
+        type: "segment",
+        data: sampleSegment,
+        cityProvenance: { status: "unverified", source_url: null, last_verified: null },
+        lineProvenance: { status: "verified", source_url: "https://dmrc.in", last_verified: "2026-10-15" },
+      };
       const body = generateIssueBody(target);
 
       expect(body).toContain("### Feature Diagnostics");
@@ -93,11 +104,19 @@ describe("Issue URL and Permalink Generator", () => {
       expect(body).toContain("- **Inaugurated On:** 2004-12-20");
       expect(body).toContain("- **References:** https://www.delhimetrorail.com/corporate");
 
+      expect(body).toContain("### Network Provenance");
+      expect(body).toContain("- **City Provenance Status:** unverified");
+      expect(body).toContain("- **City Source URL:** None");
+      expect(body).toContain("- **City Last Verified:** Not recorded");
+      expect(body).toContain("- **Line Provenance Status:** verified");
+      expect(body).toContain("- **Line Source URL:** https://dmrc.in");
+      expect(body).toContain("- **Line Last Verified:** 2026-10-15");
+
       expect(body).toContain("### Map Permalink");
       expect(body).toContain("selected=segment%3Adel-yellow-seg-01");
     });
 
-    it("includes all required station fields: type, id, name, city, timestamps, layout, and coordinates", () => {
+    it("includes all required station fields with missing provenance falling back smoothly", () => {
       const target: IssueTarget = {
         type: "station",
         data: sampleStation,
@@ -120,62 +139,165 @@ describe("Issue URL and Permalink Generator", () => {
       expect(body).toContain("- **Opened On:** 2005-01-01");
       expect(body).toContain("- **Coordinates:** 28.6328° N, 77.2183° E");
 
+      expect(body).toContain("### Network Provenance");
+      expect(body).toContain("- **City Provenance Status:** unverified");
+      expect(body).toContain("- **City Source URL:** None");
+      expect(body).toContain("- **City Last Verified:** Not recorded");
+      expect(body).toContain("- **Line Provenance Status:** unverified");
+
       expect(body).toContain("### Map Permalink");
       expect(body).toContain("selected=station%3Adel-rajiv-chowk");
     });
+
+    it("generates structured route issue body", () => {
+      const routeData: RouteIssueData = {
+        cityId: "delhi",
+        cityName: "Delhi",
+        fromStation: { id: "del-kashmere-gate", name: "Kashmere Gate" },
+        toStation: { id: "del-rajiv-chowk", name: "Rajiv Chowk" },
+        stationCount: 5,
+        estimatedTime: "12 min",
+        orderedStationIds: [
+          "del-kashmere-gate",
+          "del-chandni-chowk",
+          "del-chawri-bazar",
+          "del-new-delhi",
+          "del-rajiv-chowk",
+        ],
+      };
+
+      const body = generateIssueBody({ type: "route", data: routeData });
+      expect(body).toContain("### Route Diagnostics");
+      expect(body).toContain("- **City:** Delhi (`delhi`)");
+      expect(body).toContain("- **Origin Station:** Kashmere Gate (`del-kashmere-gate`)");
+      expect(body).toContain("- **Destination Station:** Rajiv Chowk (`del-rajiv-chowk`)");
+      expect(body).toContain("- **Total Stations:** 5");
+      expect(body).toContain("- **Estimated Travel Time:** 12 min");
+      expect(body).toContain(
+        "- **Ordered Station IDs:** del-kashmere-gate, del-chandni-chowk, del-chawri-bazar, del-new-delhi, del-rajiv-chowk"
+      );
+      expect(body).toContain("### Page URL");
+      expect(body).toContain("/city/delhi");
+    });
+
+    it("generates structured city issue body with provenance", () => {
+      const cityData: CityIssueData = {
+        cityId: "mumbai",
+        cityName: "Mumbai",
+        provenance: {
+          status: "schematic",
+          source_url: "https://mmrda.maharashtra.gov.in",
+          last_verified: "2026-10-18",
+        },
+      };
+
+      const body = generateIssueBody({ type: "city", data: cityData });
+      expect(body).toContain("### City Network Diagnostics");
+      expect(body).toContain("- **City:** Mumbai (`mumbai`)");
+      expect(body).toContain("- **Provenance Status:** schematic");
+      expect(body).toContain("- **Source URL:** https://mmrda.maharashtra.gov.in");
+      expect(body).toContain("- **Last Verified:** 2026-10-18");
+      expect(body).toContain("### Page URL");
+      expect(body).toContain("/city/mumbai");
+    });
   });
 
-  describe("buildDataCorrectionIssueUrl", () => {
-    it("constructs a valid GitHub issue new URL with template, labels, and prefilled title and body", () => {
-      const target: IssueTarget = { type: "segment", data: sampleSegment };
-      const urlString = buildDataCorrectionIssueUrl(target);
-
+  describe("buildDataCorrectionIssueUrl and builder helpers", () => {
+    it("constructs a valid GitHub issue new URL for segment", () => {
+      const urlString = buildSegmentIssueUrl(sampleSegment);
       const parsedUrl = new URL(urlString);
       expect(parsedUrl.origin).toBe("https://github.com");
       expect(parsedUrl.pathname).toBe("/AnayYadav009/indian-metro-tracker/issues/new");
-
-      const params = parsedUrl.searchParams;
-      expect(params.get("template")).toBe("data-correction.yml");
-      expect(params.get("labels")).toBe("data-correction");
-      expect(params.get("title")).toBe("[Data Correction]: Line Yellow Line (Delhi)");
-
-      const body = params.get("body");
-      expect(body).not.toBeNull();
-      expect(body).toContain("Yellow Line");
-      expect(body).toContain("del-yellow-seg-01");
-      expect(body).toContain("2026-03-15");
+      expect(parsedUrl.searchParams.get("template")).toBe("data-correction.yml");
+      expect(parsedUrl.searchParams.get("labels")).toBe("data-correction");
+      expect(parsedUrl.searchParams.get("title")).toBe("[Data Correction]: Line Yellow Line (Delhi)");
+      expect(parsedUrl.searchParams.get("body")).toContain("Yellow Line");
     });
 
-    it("properly handles special characters and unicode in names", () => {
+    it("constructs a valid GitHub issue new URL for station", () => {
+      const urlString = buildStationIssueUrl(sampleStation, [77.2183, 28.6328]);
+      const parsedUrl = new URL(urlString);
+      expect(parsedUrl.searchParams.get("title")).toBe("[Data Correction]: Station Rajiv Chowk (Delhi)");
+      expect(parsedUrl.searchParams.get("body")).toContain("Rajiv Chowk");
+    });
+
+    it("constructs a valid GitHub issue new URL for route", () => {
+      const routeData: RouteIssueData = {
+        cityId: "delhi",
+        cityName: "Delhi",
+        fromStation: { id: "del-kashmere-gate", name: "Kashmere Gate" },
+        toStation: { id: "del-rajiv-chowk", name: "Rajiv Chowk" },
+        stationCount: 5,
+        estimatedTime: "12 min",
+        orderedStationIds: ["del-kashmere-gate", "del-chandni-chowk", "del-chawri-bazar", "del-new-delhi", "del-rajiv-chowk"],
+      };
+      const urlString = buildRouteIssueUrl(routeData);
+      const parsedUrl = new URL(urlString);
+      expect(parsedUrl.searchParams.get("title")).toBe("[Data Correction]: Route Kashmere Gate to Rajiv Chowk (Delhi)");
+      expect(parsedUrl.searchParams.get("body")).toContain("**Estimated Travel Time:** 12 min");
+    });
+
+    it("constructs a valid GitHub issue new URL for city", () => {
+      const cityData: CityIssueData = {
+        cityId: "bengaluru",
+        cityName: "Bengaluru",
+        provenance: null,
+      };
+      const urlString = buildCityIssueUrl(cityData);
+      const parsedUrl = new URL(urlString);
+      expect(parsedUrl.searchParams.get("title")).toBe("[Data Correction]: City Bengaluru");
+      expect(parsedUrl.searchParams.get("body")).toContain("Bengaluru (`bengaluru`)");
+      expect(parsedUrl.searchParams.get("body")).toContain("**Provenance Status:** unverified");
+    });
+
+    it("properly handles special characters (&, #, %, +, quotes, newlines, non-Latin) and round-trips safely", () => {
       const specialStation: StationProperties = {
         ...sampleStation,
-        name: 'Chhatrapati Shivaji Maharaj Terminus & "CST" (व्हिटोरिया)',
+        name: 'Chhatrapati Shivaji #1 & 100% "CST" + Terminal \n(छत्रपती शिवाजी महाराज टर्मिनस)',
       };
-      const target: IssueTarget = { type: "station", data: specialStation };
-      const urlString = buildDataCorrectionIssueUrl(target);
+      const urlString = buildStationIssueUrl(specialStation);
 
       const parsedUrl = new URL(urlString);
       const title = parsedUrl.searchParams.get("title");
       const body = parsedUrl.searchParams.get("body");
 
-      expect(title).toContain('Chhatrapati Shivaji Maharaj Terminus & "CST" (व्हिटोरिया)');
-      expect(body).toContain("व्हिटोरिया");
+      expect(title).toContain('Chhatrapati Shivaji #1 & 100% "CST" + Terminal \n(छत्रपती शिवाजी महाराज टर्मिनस)');
+      expect(body).toContain('छत्रपती शिवाजी महाराज टर्मिनस');
+      expect(body).toContain('#1 & 100% "CST" + Terminal');
     });
 
-    it("enforces strict URL length under 6 KB (MAX_ISSUE_URL_LENGTH = 6000)", () => {
-      // Create a segment with an extraordinarily large reference list and massive strings
-      const hugeReferences = Array.from({ length: 200 }, (_, i) => `https://example.com/very/long/nested/path/document-${i}?source=government-gazette-notification-record-reference`);
+    it("enforces strict URL length under 7,400 chars and truncates route station list appropriately", () => {
+      const massiveStationList = Array.from({ length: 400 }, (_, i) => `stn-very-long-city-metro-line-extended-station-identifier-${i}`);
+      const massiveRoute: RouteIssueData = {
+        cityId: "delhi",
+        cityName: "Delhi",
+        fromStation: { id: massiveStationList[0], name: "Start Terminal Station" },
+        toStation: { id: massiveStationList[massiveStationList.length - 1], name: "End Terminal Station" },
+        stationCount: massiveStationList.length,
+        estimatedTime: "240 min",
+        orderedStationIds: massiveStationList,
+      };
+
+      const urlString = buildRouteIssueUrl(massiveRoute);
+      expect(urlString.length).toBeLessThanOrEqual(MAX_ISSUE_URL_LENGTH);
+      expect(urlString.length).toBeLessThan(7500);
+
+      const parsedUrl = new URL(urlString);
+      const body = parsedUrl.searchParams.get("body");
+      expect(body).toContain("Station list truncated");
+    });
+
+    it("enforces strict URL length under 7,400 chars on massive segment references", () => {
+      const hugeReferences = Array.from({ length: 300 }, (_, i) => `https://example.com/very/long/nested/path/document-${i}?source=government-gazette-notification-record-reference`);
       const massiveSegment: SegmentProperties = {
         ...sampleSegment,
         references: hugeReferences,
         line_name: "Super " + "Extremely ".repeat(50) + "Long Line Name",
       };
 
-      const target: IssueTarget = { type: "segment", data: massiveSegment };
-      const urlString = buildDataCorrectionIssueUrl(target);
-
+      const urlString = buildSegmentIssueUrl(massiveSegment);
       expect(urlString.length).toBeLessThanOrEqual(MAX_ISSUE_URL_LENGTH);
-      expect(urlString.length).toBeLessThan(6144); // 6 KB
+      expect(urlString.length).toBeLessThan(7500);
 
       const parsedUrl = new URL(urlString);
       const body = parsedUrl.searchParams.get("body");

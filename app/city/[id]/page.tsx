@@ -11,6 +11,7 @@ import { getAllCities, getCityPageData } from "@/lib/city-page-data";
 import { generateCityMetadata, generateCityJsonLd } from "@/lib/city-seo";
 import { CityDataNotice } from "@/components/city/city-data-notice";
 import { CityLinesTable } from "@/components/city/city-lines-table";
+import { ReportIssueButton } from "@/components/panels/report-issue-button";
 
 interface CityPageProps {
   params: Promise<{ id: string }>;
@@ -140,7 +141,21 @@ export default async function CityPage({ params }: CityPageProps) {
             caveat={stats.hasCompletenessCaveat ? stats.completenessCaveatText ?? undefined : undefined}
             lengthNote={stats.hasLengthMismatch ? stats.lengthMismatchNote ?? undefined : undefined}
             variance={stats.lengthVariancePercent ?? undefined}
+            provenance={city.provenance}
           />
+
+          <div className="w-full sm:w-fit">
+            <ReportIssueButton
+              target={{
+                type: "city",
+                data: {
+                  cityId: city.id,
+                  cityName: city.name,
+                  provenance: city.provenance,
+                },
+              }}
+            />
+          </div>
 
           {/* Network Key Metrics Grid */}
           <section className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
@@ -249,7 +264,7 @@ export default async function CityPage({ params }: CityPageProps) {
       {/* Footer */}
       <footer className="border-t border-slate-800 bg-slate-900/60 px-4 py-6 text-center text-xs text-slate-400 md:px-8">
         <p>
-          Data verified from transit agency publications and OpenStreetMap vectors. Free and open data under ODbL.
+          Compiled from OpenStreetMap (ODbL) and public operator information. Unofficial. See the provenance status above.
         </p>
       </footer>
     </div>

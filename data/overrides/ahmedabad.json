@@ -14,7 +14,10 @@
       "2",
       "2A",
       "2B"
-    ]
+    ],
+    "provenance": {
+      "status": "unverified"
+    }
   },
   "lines": [
     {
@@ -24,7 +27,10 @@
       "color": "#0000FF",
       "operator": "GMRC",
       "city_id": "ahmedabad",
-      "source": "osm+gmrc"
+      "source": "osm+gmrc",
+      "provenance": {
+        "status": "unverified"
+      }
     },
     {
       "id": "ahm-red",
@@ -33,7 +39,10 @@
       "color": "#FF0000",
       "operator": "GMRC",
       "city_id": "ahmedabad",
-      "source": "osm+gmrc"
+      "source": "osm+gmrc",
+      "provenance": {
+        "status": "unverified"
+      }
     },
     {
       "id": "ahm-yellow",
@@ -42,7 +51,10 @@
       "color": "#FFD700",
       "operator": "GMRC",
       "city_id": "ahmedabad",
-      "source": "osm+gmrc"
+      "source": "osm+gmrc",
+      "provenance": {
+        "status": "unverified"
+      }
     },
     {
       "id": "ahm-violet",
@@ -51,7 +63,10 @@
       "color": "#8A2BE2",
       "operator": "GMRC",
       "city_id": "ahmedabad",
-      "source": "osm+gmrc"
+      "source": "osm+gmrc",
+      "provenance": {
+        "status": "unverified"
+      }
     }
   ],
   "segments": [

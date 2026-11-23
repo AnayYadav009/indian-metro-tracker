@@ -13,7 +13,10 @@
       "1",
       "2"
     ],
-    "network_id": "rapid-metro-gurgaon"
+    "network_id": "rapid-metro-gurgaon",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "navi-mumbai",
@@ -28,7 +31,10 @@
     "phases": [
       "1"
     ],
-    "network_id": "navi-mumbai-metro"
+    "network_id": "navi-mumbai-metro",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "chennai",
@@ -44,7 +50,10 @@
       "1",
       "1 Ext",
       "2"
-    ]
+    ],
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "pune",
@@ -60,7 +69,10 @@
       "1",
       "1A",
       "1B"
-    ]
+    ],
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "bengaluru",
@@ -78,7 +90,10 @@
       "2A",
       "2B",
       "3"
-    ]
+    ],
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "mumbai",
@@ -96,7 +111,10 @@
       "2B",
       "3",
       "4"
-    ]
+    ],
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "kolkata",
@@ -115,7 +133,10 @@
       "4",
       "5",
       "6"
-    ]
+    ],
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "hyderabad",
@@ -130,7 +151,10 @@
     "phases": [
       "1",
       "2"
-    ]
+    ],
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "ahmedabad",
@@ -147,7 +171,10 @@
       "2",
       "2A",
       "2B"
-    ]
+    ],
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "noida",
@@ -163,7 +190,10 @@
       "1",
       "2"
     ],
-    "network_id": "noida-metro"
+    "network_id": "noida-metro",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "delhi",
@@ -180,7 +210,10 @@
       "II",
       "III",
       "IV"
-    ]
+    ],
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "indore",
@@ -195,7 +228,10 @@
     "phases": [
       "1"
     ],
-    "network_id": "indore-metro"
+    "network_id": "indore-metro",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "bhopal",
@@ -210,7 +246,10 @@
     "phases": [
       "1"
     ],
-    "network_id": "bhopal-metro"
+    "network_id": "bhopal-metro",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "nagpur",
@@ -226,7 +265,10 @@
       "1",
       "2"
     ],
-    "network_id": "nagpur-metro"
+    "network_id": "nagpur-metro",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "surat",
@@ -241,7 +283,10 @@
     "phases": [
       "1"
     ],
-    "network_id": "surat-metro"
+    "network_id": "surat-metro",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "kochi",
@@ -256,7 +301,10 @@
     "phases": [
       "1"
     ],
-    "network_id": "kochi-metro"
+    "network_id": "kochi-metro",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "lucknow",
@@ -271,7 +319,10 @@
     "phases": [
       "1"
     ],
-    "network_id": "lucknow-metro"
+    "network_id": "lucknow-metro",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "kanpur",
@@ -286,7 +337,10 @@
     "phases": [
       "1"
     ],
-    "network_id": "kanpur-metro"
+    "network_id": "kanpur-metro",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "agra",
@@ -301,7 +355,10 @@
     "phases": [
       "1"
     ],
-    "network_id": "agra-metro"
+    "network_id": "agra-metro",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "jaipur",
@@ -316,7 +373,10 @@
     "phases": [
       "1"
     ],
-    "network_id": "jaipur-metro"
+    "network_id": "jaipur-metro",
+    "provenance": {
+      "status": "unverified"
+    }
   },
   {
     "id": "patna",
@@ -331,6 +391,9 @@
     "phases": [
       "1"
     ],
-    "network_id": "patna-metro"
+    "network_id": "patna-metro",
+    "provenance": {
+      "status": "unverified"
+    }
   }
 ]

@@ -113,8 +113,15 @@ export async function buildCityData(cityId: string, forceFetch = false): Promise
   console.log(`✅ City ${cityId.toUpperCase()} passed validation successfully!`);
 
   return {
-    city: overrides.city,
-    lines: overrides.lines.map((l) => ({ ...l, city_id: (l as any).city_id || overrides.city.id })),
+    city: {
+      ...overrides.city,
+      provenance: overrides.city.provenance || { status: "unverified" },
+    },
+    lines: overrides.lines.map((l) => ({
+      ...l,
+      city_id: (l as any).city_id || overrides.city.id,
+      provenance: l.provenance || { status: "unverified" },
+    })),
     segments,
     stations,
   };
