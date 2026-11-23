@@ -246,8 +246,11 @@ let cachedTotals: NationwideTotals | null = null;
 
 export function getCityCompareStats(): CityCompareStats[] {
   if (!cachedCityStats) {
+    const metroCities = (citiesJson as City[]).filter(
+      (c) => (c as any).system_type !== "rrts"
+    );
     cachedCityStats = calculateCityCompareStats(
-      citiesJson as City[],
+      metroCities,
       linesJson as Line[],
       segmentsGeoJson as unknown as SegmentFeatureCollection,
       stationsGeoJson as unknown as StationFeatureCollection
@@ -256,9 +259,18 @@ export function getCityCompareStats(): CityCompareStats[] {
   return cachedCityStats;
 }
 
+export function getAllSystemCompareStats(): CityCompareStats[] {
+  return calculateCityCompareStats(
+    citiesJson as City[],
+    linesJson as Line[],
+    segmentsGeoJson as unknown as SegmentFeatureCollection,
+    stationsGeoJson as unknown as StationFeatureCollection
+  );
+}
+
 export function getNationwideTotals(): NationwideTotals {
   if (!cachedTotals) {
-    cachedTotals = calculateNationwideTotals(getCityCompareStats());
+    cachedTotals = calculateNationwideTotals(getAllSystemCompareStats());
   }
   return cachedTotals;
 }

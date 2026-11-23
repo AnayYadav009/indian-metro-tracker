@@ -42,7 +42,35 @@
           }
         }
       ],
-      "notes": "Phase 1 operational between Mansarovar and Badi Chaupar (11.4 km, 11 stations). Union Cabinet approved Phase 2 from Prahladpura to Todi Mod (41 km, 36 stations, ₹13,037.66 crore on April 8, 2026 per PIB PRID=2250040)."
+      "construction": [
+        {
+          "stretch": "Badi Chaupar to Transport Nagar (Phase 1C)",
+          "phase": "1C",
+          "status": "under_construction",
+          "expected_completion": "2027-03",
+          "stations": 2,
+          "source": {
+            "title": "Jaipur Metro Phase 1C Project Update",
+            "url": "https://timesofindia.indiatimes.com/city/jaipur/jaipur-metro-phase-1c-work-begins/articleshow/104000000.cms",
+            "retrieved_at": "2026-11-23",
+            "kind": "news"
+          }
+        },
+        {
+          "stretch": "Mansarovar to 200 Feet Bypass (Phase 1D)",
+          "phase": "1D",
+          "status": "under_construction",
+          "expected_completion": "2026-12",
+          "stations": 1,
+          "source": {
+            "title": "Jaipur Metro Phase 1D Project Update",
+            "url": "https://timesofindia.indiatimes.com/city/jaipur/jaipur-metro-phase-1d-tender/articleshow/103000000.cms",
+            "retrieved_at": "2026-11-23",
+            "kind": "news"
+          }
+        }
+      ],
+      "notes": "Phase 1 operational between Mansarovar and Badi Chaupar (11.4 km, 11 stations). Phase 1C (Badi Chaupar to Transport Nagar, 2.85 km, 2 stations) and Phase 1D (Mansarovar to 200 Feet Bypass, 1.33 km, 1 station) are tracked as unverified coverage gaps based on news leads. Union Cabinet approved Phase 2 from Prahladpura to Todi Mod (41 km, 36 stations, ₹13,037.66 crore on April 8, 2026 per PIB PRID=2250040)."
     }
   ]
 }

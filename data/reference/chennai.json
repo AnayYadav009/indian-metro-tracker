@@ -133,7 +133,12 @@
           "expected_completion": "2027",
           "stations": 50,
           "notes": "45.8 km North-South corridor linking Madhavaram to SIPCOT (Siruseri IT corridor) via Adyar, Nehru Nagar, and Sholinganallur.",
-          "confidence": "unverified"
+          "source": {
+            "title": "Cabinet approves Chennai Metro Rail Project Phase-II",
+            "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2061653",
+            "retrieved_at": "2026-11-23",
+            "kind": "official"
+          }
         }
       ],
       "notes": "Phase II Corridor 3 spanning 45.8 km with 50 stations connecting Madhavaram to SIPCOT. Under active construction.",
@@ -176,14 +181,14 @@
           "stations": 19,
           "notes": "Remaining underground and elevated stretch from Vadapalani to Light House via Nandanam and Alwarpet.",
           "source": {
-            "title": "Chennai Metro opens first section of the Yellow Line as Phase II expansion gathers pace",
-            "url": "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/",
-            "retrieved_at": "2026-11-06",
-            "kind": "news"
+            "title": "Cabinet approves Chennai Metro Rail Project Phase-II",
+            "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2061653",
+            "retrieved_at": "2026-11-23",
+            "kind": "official"
           }
         }
       ],
-      "notes": "Phase II Corridor 4: repository geometry maps 14.9 km from Poonamallee Bypass to Vadapalani (11 elevated stations). CMRL confirms a 14.64 km, 11-station safety inspection in February 2026 but no inauguration date; 2026-10-11 remains an unverified secondary-source date. Remaining section to Light House is under construction.",
+      "notes": "Phase II Corridor 4: repository geometry maps 14.9 km from Poonamallee Bypass to Vadapalani (11 operational stations and 6 intermediate stations under construction). Remaining section from Vadapalani to Light House is under construction.",
       "confidence": "sourced"
     },
     {
@@ -205,10 +210,15 @@
         {
           "stretch": "Madhavaram - Sholinganallur",
           "phase": "2",
-          "expected_completion": null,
+          "expected_completion": "2028-12",
           "stations": 48,
-          "notes": "The CMRL Phase II land page lists the Corridor 5 alignment. Current construction status and completion date are unconfirmed.",
-          "confidence": "unverified"
+          "notes": "47.0 km orbital corridor connecting Madhavaram to Sholinganallur via CMBT, Alandur, and Medavakkam.",
+          "source": {
+            "title": "Cabinet approves Chennai Metro Rail Project Phase-II",
+            "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2061653",
+            "retrieved_at": "2026-11-23",
+            "kind": "official"
+          }
         }
       ],
       "notes": "The planned Phase II Corridor 5 alignment connects Madhavaram to Sholinganallur. Current construction status and completion date are unconfirmed.",

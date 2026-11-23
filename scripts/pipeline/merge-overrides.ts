@@ -279,6 +279,7 @@ export function mergeCityOverrides(
     gurugram: "gur",
     noida: "noi",
     "navi-mumbai": "nmm",
+    "namo-bharat": "namo",
   };
   const prefix = cityPrefix[overrides.city.id] || overrides.city.id;
 

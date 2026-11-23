@@ -725,5 +725,20 @@
     "provenance": {
       "status": "unverified"
     }
+  },
+  {
+    "id": "namo-delhi-meerut",
+    "name": "Delhi–Meerut RRTS",
+    "city": "Namo Bharat (RRTS)",
+    "city_id": "namo-bharat",
+    "color": "#F0631E",
+    "operator": "NCRTC",
+    "system_type": "rrts",
+    "source": "osm+ncrtc",
+    "provenance": {
+      "status": "verified",
+      "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1969248",
+      "last_verified": "2026-11-22"
+    }
   }
 ]

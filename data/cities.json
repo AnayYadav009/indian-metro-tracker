@@ -413,5 +413,27 @@
     "provenance": {
       "status": "unverified"
     }
+  },
+  {
+    "id": "namo-bharat",
+    "name": "Namo Bharat (RRTS)",
+    "bbox": [
+      77.2,
+      28.55,
+      77.75,
+      29.1
+    ],
+    "operator": "NCRTC",
+    "phases": [
+      "1"
+    ],
+    "tier": 1,
+    "network_id": "rrts-ncr",
+    "system_type": "rrts",
+    "provenance": {
+      "status": "verified",
+      "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1969248",
+      "last_verified": "2026-11-22"
+    }
   }
 ]

@@ -123,7 +123,7 @@
       "official_name": "Pink Line (Line 3)",
       "operator": "Pune IT City Metro Rail Limited",
       "topology": "linear",
-      "operational_stations": 13,
+      "operational_stations": 17,
       "operational_stations_candidates": [
         13,
         17
@@ -131,29 +131,29 @@
       "operational_length_km": 21.3,
       "planned_length_km": 23.2,
       "terminals": [
-        "Maan",
+        "Doehler India",
         "District Court"
       ],
       "status": "operational",
       "disjoint_stretches": false,
       "openings": [
         {
-          "stage": "Hinjawadi (Maan) - District Court",
+          "stage": "Hinjawadi (Maan) - District Court (Commercial opening)",
           "phase": "1",
-          "opened_on": null,
-          "inaugurated_on": "2026-11-03",
-          "stations_added": 13,
-          "confidence": "unverified",
+          "opened_on": "2026-11-04",
+          "inaugurated_on": "2026-11-04",
+          "stations_added": 17,
+          "confidence": "sourced",
           "source": {
-            "title": "Pune Metro Line 3 expected to carry 2 lakh passengers daily; four new corridors announced",
-            "url": "https://www.freepressjournal.in/pune/pune-metro-line-3-expected-to-carry-2-lakh-passengers-daily-four-new-corridors-worth-13500-crore-announced",
-            "retrieved_at": "2026-11-06",
-            "kind": "news"
+            "title": "Pune Metro Line 3 Project Profile",
+            "url": "https://www.pmrda.gov.in/en/pune-metro-line-3/",
+            "retrieved_at": "2026-11-23",
+            "kind": "official"
           }
         }
       ],
       "construction": [],
-      "notes": "PPP corridor under PMRDA developed by Tata-Siemens consortium (Pune IT City Metro Rail Limited). 23.2 km elevated corridor connecting Hinjawadi (Maan) to District Court interchange. Inaugurated on 2026-11-03 by PM Narendra Modi via video conferencing (post-event release PIB PRID=2332011); commercial passenger operations start date and station count unverified on official operator page (2026-11-04 start date and 13 stations are unverified news leads).",
+      "notes": "23.2 km elevated Line 3 connects Hinjawadi to District Court across 23 stations. 17 stations opened on 2026-11-04 (stations 1-12, 17, 18, 19, 21, 23); 13 stations with surveyed coordinates in OSM (including Doehler India) are compiled as operational; 3 operational stations without surveyed nodes (MIDC Circle, Padmabhushan Chowk, Shivaji Chowk) are tracked in coverage-gaps.json as operational/unsurveyed; 6 unopened stations (High Street and Balewadi Phata expected late Nov/early Dec 2026; Baner Gaon, Baner, Bhosale Nagar/RBI, Shivajinagar expected Jan 2027) are compiled with status 'construction'.",
       "confidence": "sourced"
     }
   ],

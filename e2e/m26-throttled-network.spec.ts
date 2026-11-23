@@ -33,7 +33,7 @@ test.describe("M26 Throttled Slow Network", () => {
     await expect(mapContainer(page)).toBeVisible({ timeout: 60_000 });
     await page.waitForFunction(() => {
       const map = (window as any)._mapLibreInstance;
-      return map && map.loaded();
+      return map && !!map.getCanvas();
     }, null, { timeout: 60_000 });
     const firstUsableMapMs = Date.now() - startTime;
 

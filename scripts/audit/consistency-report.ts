@@ -43,7 +43,7 @@ function main() {
             typeof gap?.line_id === "string" &&
             typeof gap?.stretch === "string" &&
             (gap?.segment_id === undefined || typeof gap.segment_id === "string") &&
-            ["planned", "under_construction"].includes(gap?.status) &&
+            ["planned", "under_construction", "operational"].includes(gap?.status) &&
             typeof gap?.source_url === "string" &&
             /^https?:\/\//.test(gap.source_url) &&
             typeof gap?.reason === "string" &&

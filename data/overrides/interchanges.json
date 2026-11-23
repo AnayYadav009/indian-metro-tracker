@@ -7,16 +7,28 @@
     "Auto rule: is_interchange=true → interchange_id = station_id of cluster representative."
   ],
   "del-sikanderpur": {
-    "interchange_id": "int-sikanderpur"
+    "interchange_id": "int-sikanderpur",
+    "source": "https://www.pib.gov.in/newsite/PrintRelease.aspx?relid=78778",
+    "date": "2026-11-23",
+    "note": "Interchange between Delhi Metro Yellow Line and Gurugram Rapid Metro officially established under MoUD MoU for Metro Link connecting Delhi Metro Sikanderpur station to Cyber City"
   },
   "gur-sikanderpur": {
-    "interchange_id": "int-sikanderpur"
+    "interchange_id": "int-sikanderpur",
+    "source": "https://www.pib.gov.in/newsite/PrintRelease.aspx?relid=78778",
+    "date": "2026-11-23",
+    "note": "Interchange between Delhi Metro Yellow Line and Gurugram Rapid Metro officially established under MoUD MoU for Metro Link connecting Delhi Metro Sikanderpur station to Cyber City"
   },
   "del-noida-sector-52": {
-    "interchange_id": "int-noida-sec51-52"
+    "interchange_id": "int-noida-sec51-52",
+    "source": "https://www.nmrcnoida.com/Passenger-Information/Places-of-Interest",
+    "date": "2026-11-23",
+    "note": "Interchange between Delhi Metro Blue Line Sector 52 and Noida Metro Aqua Line Sector 51 officially listed in NMRC Passenger Information Nearest Places table"
   },
   "noi-noida-sector-51": {
-    "interchange_id": "int-noida-sec51-52"
+    "interchange_id": "int-noida-sec51-52",
+    "source": "https://www.nmrcnoida.com/Passenger-Information/Places-of-Interest",
+    "date": "2026-11-23",
+    "note": "Interchange between Delhi Metro Blue Line Sector 52 and Noida Metro Aqua Line Sector 51 officially listed in NMRC Passenger Information Nearest Places table"
   },
   "mum-western-express-highway": {
     "interchange_id": "int-mumbai-weh-gundavali",
@@ -65,5 +77,98 @@
     "source": "https://swarajyamag.com/news-brief/trial-runs-for-kolkata-metros-orange-line-extension-to-sector-v-scheduled-to-begin-10th-october-2026",
     "date": "2026-11-06",
     "note": "elevated footbridge connecting Green Line Sector V to Orange Line IT Centre"
+  },
+  "del-sarai-kale-khan-nizamuddin": {
+    "interchange_id": "int-sarai-kale-khan",
+    "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1969248",
+    "date": "2026-11-22",
+    "note": "Interchange between Delhi Metro Pink Line and Namo Bharat RRTS"
+  },
+  "namo-sarai-kale-khan": {
+    "interchange_id": "int-sarai-kale-khan",
+    "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1969248",
+    "date": "2026-11-22",
+    "note": "Interchange between Delhi Metro Pink Line and Namo Bharat RRTS"
+  },
+  "del-new-ashok-nagar": {
+    "interchange_id": "int-new-ashok-nagar",
+    "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1969248",
+    "date": "2026-11-22",
+    "note": "Interchange between Delhi Metro Blue Line and Namo Bharat RRTS"
+  },
+  "namo-new-ashok-nagar": {
+    "interchange_id": "int-new-ashok-nagar",
+    "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1969248",
+    "date": "2026-11-22",
+    "note": "Interchange between Delhi Metro Blue Line and Namo Bharat RRTS"
+  },
+  "del-anand-vihar": {
+    "interchange_id": "int-anand-vihar",
+    "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1969248",
+    "date": "2026-11-22",
+    "note": "Interchange between Delhi Metro Blue Line and Namo Bharat RRTS"
+  },
+  "namo-anand-vihar": {
+    "interchange_id": "int-anand-vihar",
+    "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1969248",
+    "date": "2026-11-22",
+    "note": "Interchange between Delhi Metro Blue Line and Namo Bharat RRTS"
+  },
+
+  "del-shaheed-sthal": {
+    "interchange_id": null,
+    "note": "Unsourced footbridge link to Namo Bharat Ghaziabad excluded from routing graph pending official source"
+  },
+  "namo-ghaziabad": {
+    "interchange_id": null,
+    "note": "Unsourced footbridge link to Delhi Metro Shaheed Sthal excluded from routing graph pending official source"
+  },
+  "meerut-meerut-south": {
+    "interchange_id": "int-meerut-south",
+    "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1969248",
+    "date": "2026-11-22",
+    "note": "Shared station between Meerut Metro (Line 1) and Namo Bharat RRTS"
+  },
+  "namo-meerut-south": {
+    "interchange_id": "int-meerut-south",
+    "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1969248",
+    "date": "2026-11-22",
+    "note": "Shared station between Meerut Metro (Line 1) and Namo Bharat RRTS"
+  },
+  "meerut-shatabdi-nagar": {
+    "interchange_id": "int-shatabdi-nagar",
+    "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1969248",
+    "date": "2026-11-22",
+    "note": "Shared station between Meerut Metro (Line 1) and Namo Bharat RRTS"
+  },
+  "namo-shatabdi-nagar": {
+    "interchange_id": "int-shatabdi-nagar",
+    "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1969248",
+    "date": "2026-11-22",
+    "note": "Shared station between Meerut Metro (Line 1) and Namo Bharat RRTS"
+  },
+  "meerut-begumpul": {
+    "interchange_id": "int-begumpul",
+    "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1969248",
+    "date": "2026-11-22",
+    "note": "Shared station between Meerut Metro (Line 1) and Namo Bharat RRTS"
+  },
+  "namo-begumpul": {
+    "interchange_id": "int-begumpul",
+    "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1969248",
+    "date": "2026-11-22",
+    "note": "Shared station between Meerut Metro (Line 1) and Namo Bharat RRTS"
+  },
+  "meerut-modipuram": {
+    "interchange_id": "int-modipuram",
+    "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1969248",
+    "date": "2026-11-22",
+    "note": "Shared terminal station between Meerut Metro (Line 1) and Namo Bharat RRTS"
+  },
+  "namo-modipuram": {
+    "interchange_id": "int-modipuram",
+    "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1969248",
+    "date": "2026-11-22",
+    "note": "Shared terminal station between Meerut Metro (Line 1) and Namo Bharat RRTS"
   }
 }

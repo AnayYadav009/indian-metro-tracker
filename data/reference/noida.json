@@ -33,17 +33,30 @@
           "stretch": "Sector 142 to Botanical Garden",
           "status": "planned",
           "phase": "2",
-          "expected_completion": null,
+          "expected_completion": "2028-12",
           "stations": 8,
           "source": {
-            "title": "NMRC Upcoming Projects: Sector 142 to Botanical Garden",
-            "url": "https://nmrcnoida.com/Projects/Upcoming-projects",
-            "retrieved_at": "2026-10-15",
+            "title": "Cabinet approves extension corridor from Noida Sector 142 to Botanical Garden Noida",
+            "url": "https://www.pmindia.gov.in/en/news_updates/cabinet-approves-extension-corridor-from-noida-sector-142-to-botanical-garden-noida-for-a-length-of-11-56-km-with-8-stations/",
+            "retrieved_at": "2026-11-23",
+            "kind": "official"
+          }
+        },
+        {
+          "stretch": "Sector 51 to Greater Noida Sector 4",
+          "status": "planned",
+          "phase": "2",
+          "expected_completion": "2029-06",
+          "stations": 5,
+          "source": {
+            "title": "Cabinet approves extension of Noida-Greater Noida Metro to Sector-04",
+            "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334971",
+            "retrieved_at": "2026-11-23",
             "kind": "official"
           }
         }
       ],
-      "notes": "29.7 km fully elevated corridor connecting Sector 51 in Noida to Depot in Greater Noida across 21 stations. Operated by Noida Metro Rail Corporation (NMRC). Interchange with DMRC Blue Line at Sector 51/52 via pedestrian walkway. The approved Sector 142 to Botanical Garden extension (11.56 km, 8 stations) is listed as an upcoming project by NMRC and remains a planned coverage gap. Union Cabinet approved 8.449 km, 5-station elevated extension from Sector-51 to Greater Noida Sector-04 (PIB PRID=2334971; ₹2,390 crore estimated cost is an unverified news lead)."
+      "notes": "29.7 km fully elevated corridor connecting Sector 51 in Noida to Depot in Greater Noida across 21 stations. Operated by Noida Metro Rail Corporation (NMRC). Interchange with DMRC Blue Line at Sector 51/52 via pedestrian walkway. The approved Sector 142 to Botanical Garden extension (11.56 km, 8 stations) is listed as an upcoming project by NMRC and remains a planned coverage gap. Union Cabinet approved the 8.449 km, 5-station elevated extension from Sector-51 to Greater Noida Sector-04 on 2026-11-11 per PIB PRID=2334971 (the earlier 2024-06-10 date in news leads referenced prior UP State Cabinet / administrative clearance, superseded by the definitive Union Cabinet approval on 11 November 2026; ₹2,390 crore cost figure is an unverified news lead)."
     }
   ],
   "confidence": "sourced"

@@ -78,10 +78,10 @@
           "stations": 12,
           "notes": "Package C-08 and C-11 awarded to RVNL and KPIL",
           "source": {
-            "title": "Nagpur Metro Phase 2 Reach 2B contract awarded",
-            "url": "https://themetrorailguy.com/nagpur-metro-phase-2-information-route-maps-project-updates/",
-            "retrieved_at": "2026-10-15",
-            "kind": "news"
+            "title": "PM lays foundation stone of Nagpur Metro Phase II",
+            "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1882434",
+            "retrieved_at": "2026-11-23",
+            "kind": "official"
           }
         },
         {
@@ -91,14 +91,14 @@
           "stations": 10,
           "notes": "Package C-02 and C-09 awarded to GRIL and YFC-BBG JV",
           "source": {
-            "title": "Nagpur Metro Phase 2 Reach 1A civil packages awarded",
-            "url": "https://themetrorailguy.com/nagpur-metro-phase-2-information-route-maps-project-updates/",
-            "retrieved_at": "2026-10-15",
-            "kind": "news"
+            "title": "PM lays foundation stone of Nagpur Metro Phase II",
+            "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1882434",
+            "retrieved_at": "2026-11-23",
+            "kind": "official"
           }
         }
       ],
-      "notes": "North-South Corridor (Orange Line) extends 19.66 km with 18 stations in Phase 1, fully operational. Phase 2 extensions to Kanhan River and Butibori MIDC are under active construction."
+      "notes": "North-South Corridor (Orange Line) extends 19.66 km with 18 stations in Phase 1, fully operational. Phase 2 extensions to Kanhan River (Reach 2B, 13 km, 12 stations) and Butibori MIDC (Reach 1A, 18.5 km, 10 stations) have foundation stone laid by PM (PIB PRID 1882434); 43.8 km / 32 stations breakdown sourced from official project profile (https://www.metrorailnagpur.com/nagpur-metro-project/project-profile)."
     },
     {
       "line_id": "nag-aqua",
@@ -150,10 +150,10 @@
           "stations": 7,
           "notes": "Package C-06 and C-11 awarded to RVNL and KPIL",
           "source": {
-            "title": "Nagpur Metro Phase 2 Reach 3A contract awarded",
-            "url": "https://themetrorailguy.com/nagpur-metro-phase-2-information-route-maps-project-updates/",
-            "retrieved_at": "2026-10-15",
-            "kind": "news"
+            "title": "PM lays foundation stone of Nagpur Metro Phase II",
+            "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1882434",
+            "retrieved_at": "2026-11-23",
+            "kind": "official"
           }
         },
         {
@@ -163,14 +163,14 @@
           "stations": 3,
           "notes": "Package C-06 and C-11 awarded to RVNL and KPIL",
           "source": {
-            "title": "Nagpur Metro Phase 2 Reach 4A contract awarded",
-            "url": "https://themetrorailguy.com/nagpur-metro-phase-2-information-route-maps-project-updates/",
-            "retrieved_at": "2026-10-15",
-            "kind": "news"
+            "title": "PM lays foundation stone of Nagpur Metro Phase II",
+            "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1882434",
+            "retrieved_at": "2026-11-23",
+            "kind": "official"
           }
         }
       ],
-      "notes": "East-West Corridor (Aqua Line) extends 18.56 km with 20 stations in Phase 1, fully operational. Phase 2 extensions to Hingna and Transport Nagar are under construction."
+      "notes": "East-West Corridor (Aqua Line) extends 18.56 km with 20 stations in Phase 1, fully operational. Phase 2 extensions to Hingna (Reach 3A, 6.7 km, 7 stations) and Transport Nagar (Reach 4A, 5.6 km, 3 stations) have foundation stone laid by PM (PIB PRID 1882434); 43.8 km / 32 stations breakdown sourced from official project profile (https://www.metrorailnagpur.com/nagpur-metro-project/project-profile)."
     }
   ]
 }

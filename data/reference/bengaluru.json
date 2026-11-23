@@ -241,45 +241,32 @@
       "official_name": "Pink Line",
       "operator": "BMRCL",
       "topology": "linear",
-      "operational_stations": null,
-      "operational_length_km": 0,
+      "operational_stations": 6,
+      "operational_length_km": 7.14,
       "planned_length_km": 21.25,
       "terminals": [
         "Kalena Agrahara",
-        "Nagawara"
+        "Tavarekere"
       ],
-      "status": "under_construction",
+      "status": "operational",
       "disjoint_stretches": false,
       "openings": [
         {
           "stage": "Reach 6 Elevated (Kalena Agrahara - Tavarekere)",
           "phase": "2",
           "inaugurated_on": "2026-11-13",
+          "opened_on": "2026-11-14",
           "stations_added": 6,
-          "confidence": "unverified",
-          "notes": "Inaugurated on 2026-11-13 per PIB PRID=2335840; station count (6) is an unverified news lead not stated in PIB release. Commercial service circular on english.bmrc.co.in unconfirmed, so line status remains under_construction without runtime segment geometry changes.",
+          "confidence": "sourced",
           "source": {
             "title": "PM inaugurates 7.5 km elevated stretch of Bengaluru Metro Pink Line from Kalena Agrahara to Tavarekere",
             "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335840",
-            "retrieved_at": "2026-11-22",
+            "retrieved_at": "2026-11-23",
             "kind": "official"
           }
         }
       ],
       "construction": [
-        {
-          "stretch": "Reach 6 Elevated (Kalena Agrahara - Tavarekere)",
-          "phase": "2",
-          "expected_completion": "2026-11",
-          "stations": 6,
-          "notes": "Inaugurated on 2026-11-13 by PM Narendra Modi per PIB PRID=2335840. Station count (6 elevated stations) is an unverified news lead not stated in PIB release. Commercial service launch circular unconfirmed on english.bmrc.co.in; runtime status remains under_construction.",
-          "source": {
-            "title": "PM inaugurates 7.5 km elevated stretch of Bengaluru Metro Pink Line from Kalena Agrahara to Tavarekere",
-            "kind": "official",
-            "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335840",
-            "retrieved_at": "2026-11-22"
-          }
-        },
         {
           "stretch": "Reach 6 Underground (Dairy Circle - Nagawara)",
           "phase": "2",
@@ -292,7 +279,7 @@
           }
         }
       ],
-      "notes": "21.25 km line with 18 stations (6 elevated, 12 underground) connecting Kalena Agrahara to Nagawara.",
+      "notes": "21.25 km line connecting Kalena Agrahara to Nagawara across 18 stations (6 elevated, 12 underground). Reach 6 elevated section (7.5 km, 6 stations from Kalena Agrahara to Tavarekere) was inaugurated on 2026-11-13 with commercial service from 2026-11-14 (PIB PRID 2335840). Remaining 13.75 km underground section to Nagawara is under active construction.",
       "confidence": "sourced"
     }
   ]

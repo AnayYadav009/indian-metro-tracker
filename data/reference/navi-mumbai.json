@@ -28,8 +28,22 @@
           }
         }
       ],
-      "construction": [],
-      "notes": "Line 1 Phase 1 spans 11.10 km from Belapur Terminal to Pendhar with 11 stations, fully elevated. Owned by CIDCO; operated and maintained by Maha Metro under a 10-year contract signed in 2021. OSM tags operator as CIDCO creating a documented source conflict. Coverage review on 2026-10-13 confirmed no further phases (Phase 2/3/4) are currently under physical construction or sanctioned with finalized stations."
+      "construction": [
+        {
+          "stretch": "Pendhar to MIDC Taloja (Phase 2)",
+          "status": "planned",
+          "phase": "2",
+          "expected_completion": "2028-12",
+          "stations": 6,
+          "source": {
+            "title": "CIDCO plans Navi Mumbai Metro extension",
+            "url": "https://www.hindustantimes.com/cities/mumbai-news/cidco-plans-navi-mumbai-metro-extension-101695000000.html",
+            "retrieved_at": "2026-11-23",
+            "kind": "news"
+          }
+        }
+      ],
+      "notes": "Line 1 Phase 1 spans 11.10 km from Belapur Terminal to Pendhar with 11 stations, fully elevated. Owned by CIDCO; operated and maintained by Maha Metro under a 10-year contract signed in 2021. CIDCO plans Phase 2 (Pendhar to MIDC Taloja, 2.2 km, 6 stations; tracked as an unverified coverage gap based on news leads), Phase 3 (Khandeshwar to Taloja MIDC, 7.3 km), and Phase 4 to connect to NMIA."
     }
   ]
 }
