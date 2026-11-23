@@ -1,0 +1,43 @@
+{
+  "city_id": "meerut",
+  "compiled_on": "2026-11-06",
+  "lines": [
+    {
+      "line_id": "mee-line-1",
+      "official_name": "Line 1 (Meerut Metro)",
+      "operator": "NCRTC",
+      "topology": "linear",
+      "operational_stations": 12,
+      "operational_stations_candidates": [
+        12,
+        13
+      ],
+      "operational_length_km": 21.3,
+      "planned_length_km": 23,
+      "terminals": [
+        "Meerut South",
+        "Modipuram"
+      ],
+      "status": "operational",
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "Meerut South - Modipuram",
+          "phase": "1",
+          "opened_on": "2026-02-22",
+          "stations_added": 12,
+          "confidence": "sourced",
+          "source": {
+            "title": "PM Modi Launches Meerut Metro, Dedicates Full Delhi-Meerut Namo Bharat Corridor",
+            "url": "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video",
+            "retrieved_at": "2026-11-06",
+            "kind": "news"
+          }
+        }
+      ],
+      "construction": [],
+      "notes": "Line 1 operational corridor runs 21.3 km between Meerut South and Modipuram with 12 operational stations (9 elevated, 3 underground: Meerut Central, Bhainsali, Begumpul). 4 stations (Meerut South, Shatabdi Nagar, Begumpul, Modipuram) share tracks and interchange premises with the Delhi-Meerut Namo Bharat RRTS. Full corridor length including Modipuram Depot is 23 km (13 total stations). Operated by National Capital Region Transport Corporation (NCRTC). Inaugurated on 2026-02-22.",
+      "confidence": "sourced"
+    }
+  ]
+}

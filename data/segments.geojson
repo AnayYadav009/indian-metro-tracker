@@ -3095,7 +3095,6 @@
         "stations_not_published": false,
         "source": "osm",
         "references": [
-          "https://chennaimetrorail.org",
           "https://pib.gov.in/PressReleasePage.aspx?PRID=1696235"
         ],
         "completion_unconfirmed": false,
@@ -4884,9 +4883,7 @@
         "color": "#009A44",
         "stations_not_published": false,
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
+        "references": [],
         "completion_unconfirmed": false,
         "last_verified": null,
         "retrieved_at": "2026-10-10",
@@ -4899,8 +4896,8 @@
         "type": "LineString",
         "coordinates": [
           [
-            80.21273,
-            13.05002
+            80.21206,
+            13.05094
           ],
           [
             80.21104,
@@ -5407,31 +5404,30 @@
             13.04867
           ],
           [
-            80.08101,
-            13.0477
+            80.08178,
+            13.04799
           ]
         ]
       },
       "properties": {
         "segment_id": "che-corridor-4-seg-01",
         "line_id": "che-corridor-4",
-        "line_name": "Corridor 4 (Poonamallee Bypass - Light House)",
+        "line_name": "Corridor 4 (Poonamallee Bypass - Vadapalani)",
         "city_id": "chennai",
         "city": "Chennai",
         "operator": "CMRL",
-        "status": "construction",
+        "status": "operational",
         "phase": "2",
-        "length_km": 15,
+        "length_km": 14.9,
         "gauge": "standard",
-        "inaugurated_on": null,
-        "expected_completion": "2026-12",
-        "stations_count": 0,
+        "inaugurated_on": "2026-10-11",
+        "expected_completion": null,
+        "stations_count": 11,
         "color": "#FFD100",
-        "stations_not_published": true,
+        "stations_not_published": false,
         "source": "osm",
         "references": [
-          "https://chennaimetrorail.org",
-          "https://pib.gov.in/PressReleasePage.aspx?PRID=2061557"
+          "https://chennaimetrorail.org/wp-content/uploads/2026/10/Fare-Table.pdf"
         ],
         "completion_unconfirmed": false,
         "last_verified": null,
@@ -5522,16 +5518,15 @@
         "length_km": 1.3,
         "gauge": "standard",
         "inaugurated_on": null,
-        "expected_completion": "2027",
+        "expected_completion": null,
         "stations_count": 0,
         "color": "#ED1C24",
         "stations_not_published": true,
         "source": "osm",
         "references": [
-          "https://chennaimetrorail.org",
-          "https://pib.gov.in/PressReleasePage.aspx?PRID=2061557"
+          "https://wcag.chennaimetrorail.org/phase-ii-land/"
         ],
-        "completion_unconfirmed": false,
+        "completion_unconfirmed": true,
         "last_verified": null,
         "retrieved_at": "2026-10-10",
         "geometry_quality": "exact"
@@ -6277,9 +6272,7 @@
         "color": "#800080",
         "stations_not_published": false,
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
+        "references": [],
         "completion_unconfirmed": false,
         "last_verified": null,
         "retrieved_at": "2026-10-16",
@@ -7734,9 +7727,7 @@
         "color": "#00FFFF",
         "stations_not_published": false,
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
+        "references": [],
         "completion_unconfirmed": false,
         "last_verified": null,
         "retrieved_at": "2026-10-16",
@@ -7749,92 +7740,8 @@
         "type": "LineString",
         "coordinates": [
           [
-            73.69539,
-            18.58434
-          ],
-          [
-            73.69562,
-            18.58447
-          ],
-          [
-            73.69584,
-            18.5846
-          ],
-          [
-            73.69657,
-            18.58509
-          ],
-          [
-            73.69772,
-            18.58586
-          ],
-          [
-            73.69791,
-            18.58598
-          ],
-          [
-            73.69815,
-            18.58609
-          ],
-          [
-            73.69843,
-            18.58619
-          ],
-          [
-            73.69894,
-            18.58634
-          ],
-          [
-            73.69917,
-            18.58642
-          ],
-          [
-            73.69939,
-            18.5865
-          ],
-          [
-            73.69961,
-            18.5866
-          ],
-          [
-            73.70034,
-            18.58693
-          ],
-          [
-            73.70072,
-            18.58712
-          ],
-          [
-            73.7011,
-            18.58732
-          ],
-          [
-            73.70134,
-            18.58745
-          ],
-          [
-            73.70158,
-            18.58758
-          ],
-          [
-            73.7019,
-            18.58774
-          ],
-          [
-            73.70208,
-            18.58782
-          ],
-          [
-            73.70225,
-            18.58789
-          ],
-          [
-            73.70242,
-            18.58796
-          ],
-          [
-            73.70269,
-            18.58807
+            73.70289,
+            18.5881
           ],
           [
             73.70294,
@@ -9565,31 +9472,31 @@
             18.53031
           ],
           [
-            73.85922,
-            18.52816
+            73.85775,
+            18.52672
           ]
         ]
       },
       "properties": {
         "segment_id": "pun-line-3-seg-01",
         "line_id": "pun-line-3",
-        "line_name": "Line 3 (Puneri Metro / Hinjawadi - Civil Court)",
+        "line_name": "Pink Line (Line 3: Hinjawadi - District Court)",
         "city_id": "pune",
         "city": "Pune",
         "operator": "Pune IT City Metro Rail Limited",
-        "status": "construction",
+        "status": "operational",
         "phase": "1",
-        "length_km": 21.3,
+        "length_km": 20.3,
         "gauge": "standard",
-        "inaugurated_on": null,
-        "expected_completion": "2026-12",
-        "stations_count": 1,
+        "inaugurated_on": "2026-11-03",
+        "expected_completion": null,
+        "stations_count": 13,
         "color": "#FF69B4",
         "stations_not_published": false,
         "source": "manual",
         "references": [
-          "https://www.punemetrorail.org",
-          "https://pmrda.gov.in"
+          "https://www.pmrda.gov.in/en/pune-metro-line-3/",
+          "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2332011"
         ],
         "completion_unconfirmed": false,
         "last_verified": "2026-10-08",
@@ -15658,7 +15565,7 @@
         "gauge": "standard",
         "inaugurated_on": "2025-08-10",
         "expected_completion": null,
-        "stations_count": 17,
+        "stations_count": 16,
         "color": "#FFCC00",
         "stations_not_published": false,
         "source": "osm",
@@ -19039,15 +18946,15 @@
         "gauge": "standard",
         "inaugurated_on": null,
         "expected_completion": null,
-        "stations_count": 4,
+        "stations_count": 7,
         "color": "#FF69B4",
         "stations_not_published": false,
         "source": "manual",
         "references": [
-          "https://english.bmrc.co.in/"
+          "https://english.bmrc.co.in/FileUploads/0091bf_Phase2.pdf"
         ],
         "completion_unconfirmed": true,
-        "last_verified": "2026-10-13",
+        "last_verified": "2026-10-15",
         "geometry_quality": "exact"
       }
     },
@@ -23173,7 +23080,7 @@
         "stations_not_published": false,
         "source": "manual",
         "references": [
-          "https://mmrda.maharashtra.gov.in/"
+          "https://mmrda.maharashtra.gov.in/metro-line-4"
         ],
         "completion_unconfirmed": true,
         "last_verified": "2026-10-13",
@@ -23543,7 +23450,7 @@
         "stations_not_published": true,
         "source": "manual",
         "references": [
-          "https://mmrda.maharashtra.gov.in/"
+          "https://mmrda.maharashtra.gov.in/metro-line-4"
         ],
         "completion_unconfirmed": true,
         "last_verified": "2026-10-06",
@@ -25006,7 +24913,7 @@
         "stations_not_published": false,
         "source": "osm",
         "references": [
-          "https://mmrda.maharashtra.gov.in/"
+          "https://mmrda.maharashtra.gov.in/metro-line-9"
         ],
         "completion_unconfirmed": false,
         "last_verified": null,
@@ -25051,7 +24958,7 @@
         "stations_not_published": false,
         "source": "manual",
         "references": [
-          "https://mmrda.maharashtra.gov.in/"
+          "https://mmrda.maharashtra.gov.in/metro-line-9"
         ],
         "completion_unconfirmed": true,
         "last_verified": "2026-10-10",
@@ -26507,7 +26414,7 @@
         "stations_not_published": false,
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in",
+          "https://mtp.indianrailways.gov.in/ministry/about-us",
           "https://pib.gov.in/PressReleasePage.aspx?PRID=1699923"
         ],
         "completion_unconfirmed": false,
@@ -27671,7 +27578,7 @@
         "stations_not_published": true,
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "completion_unconfirmed": false,
         "last_verified": null,
@@ -29084,342 +28991,34 @@
             22.57948
           ],
           [
-            88.42976,
-            22.58095
-          ],
-          [
-            88.43162,
-            22.58212
-          ],
-          [
-            88.4322,
-            22.5824
-          ],
-          [
-            88.43256,
-            22.5825
-          ],
-          [
-            88.43282,
-            22.58254
-          ],
-          [
-            88.43301,
-            22.58255
-          ],
-          [
-            88.43322,
-            22.58253
-          ],
-          [
-            88.43338,
-            22.5825
-          ],
-          [
-            88.43377,
-            22.58239
-          ],
-          [
-            88.43425,
-            22.5822
-          ],
-          [
-            88.43485,
-            22.58196
-          ],
-          [
-            88.43614,
-            22.5814
-          ],
-          [
-            88.43739,
-            22.58085
-          ],
-          [
-            88.43781,
-            22.58063
-          ],
-          [
-            88.43816,
-            22.58037
-          ],
-          [
-            88.43854,
-            22.58025
-          ],
-          [
-            88.43908,
-            22.58016
-          ],
-          [
-            88.43973,
-            22.58007
-          ],
-          [
-            88.44088,
-            22.58006
-          ],
-          [
-            88.44223,
-            22.58007
-          ],
-          [
-            88.44268,
-            22.58015
-          ],
-          [
-            88.4433,
-            22.58043
-          ],
-          [
-            88.44391,
-            22.5807
-          ],
-          [
-            88.44429,
-            22.58078
-          ],
-          [
-            88.44452,
-            22.58079
-          ],
-          [
-            88.44547,
-            22.58089
-          ],
-          [
-            88.44681,
-            22.581
-          ],
-          [
-            88.44859,
-            22.58114
-          ],
-          [
-            88.45102,
-            22.58138
-          ],
-          [
-            88.45263,
-            22.58159
-          ],
-          [
-            88.45352,
-            22.5816
-          ],
-          [
-            88.45451,
-            22.58154
-          ],
-          [
-            88.45581,
-            22.58132
-          ],
-          [
-            88.45861,
-            22.58082
-          ],
-          [
-            88.46119,
-            22.5804
-          ],
-          [
-            88.46456,
-            22.5798
-          ],
-          [
-            88.46737,
-            22.57928
-          ],
-          [
-            88.46916,
-            22.57901
-          ],
-          [
-            88.46959,
-            22.57899
-          ],
-          [
-            88.46976,
-            22.57899
-          ],
-          [
-            88.46993,
-            22.579
-          ],
-          [
-            88.4701,
-            22.57902
-          ],
-          [
-            88.47026,
-            22.57905
-          ],
-          [
-            88.47043,
-            22.57909
-          ],
-          [
-            88.47059,
-            22.57914
-          ],
-          [
-            88.47075,
-            22.57919
-          ],
-          [
-            88.47091,
-            22.57925
-          ],
-          [
-            88.47106,
-            22.57932
-          ],
-          [
-            88.4712,
-            22.5794
-          ],
-          [
-            88.47135,
-            22.57949
-          ],
-          [
-            88.47148,
-            22.57958
-          ],
-          [
-            88.47161,
-            22.57968
-          ],
-          [
-            88.47174,
-            22.57979
-          ],
-          [
-            88.47185,
-            22.5799
-          ],
-          [
-            88.47196,
-            22.58002
-          ],
-          [
-            88.47207,
-            22.58014
-          ],
-          [
-            88.47216,
-            22.58027
-          ],
-          [
-            88.47225,
-            22.5804
-          ],
-          [
-            88.47232,
-            22.58054
-          ],
-          [
-            88.4724,
-            22.58068
-          ],
-          [
-            88.47246,
-            22.58083
-          ],
-          [
-            88.47285,
-            22.58185
-          ],
-          [
-            88.47349,
-            22.58367
-          ],
-          [
-            88.47401,
-            22.58496
-          ],
-          [
-            88.47452,
-            22.58625
-          ],
-          [
-            88.47465,
-            22.5866
-          ],
-          [
-            88.47485,
-            22.58707
-          ],
-          [
-            88.47503,
-            22.58761
-          ],
-          [
-            88.47511,
-            22.58794
-          ],
-          [
-            88.47516,
-            22.58827
-          ],
-          [
-            88.47516,
-            22.5885
-          ],
-          [
-            88.47516,
-            22.58872
-          ],
-          [
-            88.47516,
-            22.58891
-          ],
-          [
-            88.47512,
-            22.58916
-          ],
-          [
-            88.47509,
-            22.58932
-          ],
-          [
-            88.47505,
-            22.58953
-          ],
-          [
-            88.47492,
-            22.58993
-          ],
-          [
-            88.47467,
-            22.59043
+            88.42996,
+            22.58109
           ]
         ]
       },
       "properties": {
         "segment_id": "kol-orange-seg-02",
         "line_id": "kol-orange",
-        "line_name": "Orange Line Extension (Beleghata - Jai Hind Airport)",
+        "line_name": "Orange Line Extension (Beleghata - IT Centre)",
         "city_id": "kolkata",
         "city": "Kolkata",
         "operator": "Metro Railway, Kolkata",
         "status": "construction",
         "phase": "6",
-        "length_km": 10.2,
+        "length_km": 4.5,
         "gauge": "broad",
         "inaugurated_on": null,
-        "expected_completion": "2027",
-        "stations_count": 3,
+        "expected_completion": "2026-12",
+        "stations_count": 4,
         "color": "#FF8200",
         "stations_not_published": false,
-        "source": "osm",
+        "source": "manual",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://www.squareyards.com/blog/kolkata-metro-beleghata-it-centre",
+          "https://swarajyamag.com/news-brief/trial-runs-for-kolkata-metros-orange-line-extension-to-sector-v-scheduled-to-begin-10th-october-2026"
         ],
-        "completion_unconfirmed": false,
-        "last_verified": null,
-        "retrieved_at": "2026-10-16",
+        "completion_unconfirmed": true,
+        "last_verified": "2026-11-06",
         "geometry_quality": "exact"
       }
     },
@@ -52118,7 +51717,7 @@
         "stations_not_published": true,
         "source": "osm",
         "references": [
-          "https://delhimetrorail.com/",
+          "https://delhimetrorail.com/pages/about-us/present-network",
           "https://www.openstreetmap.org/way/538930430"
         ],
         "completion_unconfirmed": true,
@@ -52133,8 +51732,136 @@
         "type": "LineString",
         "coordinates": [
           [
-            77.16809,
-            28.73696
+            77.18211,
+            28.72409
+          ],
+          [
+            77.18169,
+            28.72519
+          ],
+          [
+            77.1817,
+            28.726
+          ],
+          [
+            77.18184,
+            28.72909
+          ],
+          [
+            77.18195,
+            28.73024
+          ],
+          [
+            77.18194,
+            28.73039
+          ],
+          [
+            77.18192,
+            28.73054
+          ],
+          [
+            77.18189,
+            28.73069
+          ],
+          [
+            77.18186,
+            28.73083
+          ],
+          [
+            77.18181,
+            28.73098
+          ],
+          [
+            77.18176,
+            28.73112
+          ],
+          [
+            77.18169,
+            28.73126
+          ],
+          [
+            77.18162,
+            28.73139
+          ],
+          [
+            77.18154,
+            28.73152
+          ],
+          [
+            77.18145,
+            28.73165
+          ],
+          [
+            77.18136,
+            28.73177
+          ],
+          [
+            77.18125,
+            28.73189
+          ],
+          [
+            77.18115,
+            28.732
+          ],
+          [
+            77.18103,
+            28.73211
+          ],
+          [
+            77.1809,
+            28.73221
+          ],
+          [
+            77.18078,
+            28.7323
+          ],
+          [
+            77.18064,
+            28.73239
+          ],
+          [
+            77.1805,
+            28.73247
+          ],
+          [
+            77.18036,
+            28.73255
+          ],
+          [
+            77.18021,
+            28.73262
+          ],
+          [
+            77.17978,
+            28.73279
+          ],
+          [
+            77.17707,
+            28.73395
+          ],
+          [
+            77.17631,
+            28.73422
+          ],
+          [
+            77.17282,
+            28.73554
+          ],
+          [
+            77.17247,
+            28.73566
+          ],
+          [
+            77.17182,
+            28.73588
+          ],
+          [
+            77.17042,
+            28.73631
+          ],
+          [
+            77.1698,
+            28.73647
           ],
           [
             77.16807,
@@ -52461,26 +52188,27 @@
       "properties": {
         "segment_id": "del-magenta-seg-02",
         "line_id": "del-magenta",
-        "line_name": "Magenta Line (Ext Phase IV)",
+        "line_name": "Magenta Line (Deepali Chowk - Majlis Park)",
         "city_id": "delhi",
         "city": "Delhi",
         "operator": "DMRC",
-        "status": "construction",
+        "status": "operational",
         "phase": "IV",
-        "length_km": 7,
+        "length_km": 9.3,
         "gauge": "standard",
-        "inaugurated_on": null,
+        "inaugurated_on": "2026-03-08",
         "expected_completion": null,
-        "stations_count": 4,
+        "stations_count": 7,
         "color": "#CC338B",
         "stations_not_published": false,
         "source": "osm",
         "references": [
-          "https://delhimetrorail.com/",
-          "https://www.openstreetmap.org/way/538930431"
+          "https://delhimetrorail.com/pages/about-us/present-network",
+          "https://metrorailnews.in/modi-inaugurated-2-new-sections-of-delhi-metro/",
+          "https://www.tribuneindia.com/news/delhi/dmrc-begins-services-on-two-newly-inaugurated-corridors/"
         ],
-        "completion_unconfirmed": true,
-        "last_verified": null,
+        "completion_unconfirmed": false,
+        "last_verified": "2026-11-06",
         "retrieved_at": "2026-10-16",
         "geometry_quality": "exact"
       }
@@ -52734,7 +52462,7 @@
         "stations_not_published": true,
         "source": "osm",
         "references": [
-          "https://delhimetrorail.com/",
+          "https://delhimetrorail.com/pages/about-us/present-network",
           "https://www.openstreetmap.org/way/538930433"
         ],
         "completion_unconfirmed": true,
@@ -53046,18 +52774,19 @@
         "length_km": 19.2,
         "gauge": "standard",
         "inaugurated_on": null,
-        "expected_completion": null,
+        "expected_completion": "2026-12",
         "stations_count": 3,
         "color": "#B8860B",
         "stations_not_published": true,
         "source": "manual",
         "references": [
-          "https://delhimetrorail.com/",
+          "https://delhimetrorail.com/pages/about-us/present-network",
           "https://themetrorailguy.com/2024/01/27/delhi-metros-silver-line-renamed-to-golden-line-line-10/",
+          "https://www.devdiscourse.com/article/business/3918126-dmrc-eyes-december-rollout-for-key-phase-4-corridors-fixes-target-for-phase-5-expansion",
           "https://www.openstreetmap.org/way/538930435"
         ],
         "completion_unconfirmed": true,
-        "last_verified": "2026-10-10",
+        "last_verified": "2026-11-06",
         "geometry_quality": "schematic"
       }
     },
@@ -53306,7 +53035,7 @@
         "stations_not_published": false,
         "source": "osm",
         "references": [
-          "https://delhimetrorail.com/",
+          "https://delhimetrorail.com/pages/about-us/present-network",
           "https://themetrorailguy.com/2024/01/27/delhi-metros-silver-line-renamed-to-golden-line-line-10/",
           "https://www.openstreetmap.org/way/538930423"
         ],
@@ -58389,7 +58118,7 @@
         "stations_not_published": false,
         "source": "manual",
         "references": [
-          "https://www.gujaratmetrorail.com"
+          "https://www.gujaratmetrorail.com/projects/surat-metro-rail-project-phase-i/"
         ],
         "completion_unconfirmed": false,
         "last_verified": "2026-10-15",
@@ -59329,7 +59058,7 @@
         "stations_not_published": false,
         "source": "manual",
         "references": [
-          "https://www.gujaratmetrorail.com"
+          "https://www.gujaratmetrorail.com/projects/surat-metro-rail-project-phase-i/"
         ],
         "completion_unconfirmed": false,
         "last_verified": "2026-10-15",
@@ -64691,6 +64420,1152 @@
         "completion_unconfirmed": false,
         "last_verified": "2026-10-16",
         "retrieved_at": "2026-10-16",
+        "geometry_quality": "exact"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            77.63284,
+            28.90473
+          ],
+          [
+            77.63325,
+            28.90513
+          ],
+          [
+            77.63335,
+            28.90523
+          ],
+          [
+            77.6338,
+            28.9057
+          ],
+          [
+            77.63417,
+            28.90608
+          ],
+          [
+            77.63484,
+            28.90665
+          ],
+          [
+            77.63549,
+            28.90729
+          ],
+          [
+            77.63794,
+            28.90921
+          ],
+          [
+            77.6389,
+            28.90986
+          ],
+          [
+            77.64104,
+            28.91147
+          ],
+          [
+            77.64273,
+            28.91326
+          ],
+          [
+            77.64371,
+            28.91449
+          ],
+          [
+            77.64549,
+            28.9166
+          ],
+          [
+            77.64761,
+            28.91906
+          ],
+          [
+            77.64949,
+            28.921
+          ],
+          [
+            77.64956,
+            28.92107
+          ],
+          [
+            77.65011,
+            28.92166
+          ],
+          [
+            77.65027,
+            28.92181
+          ],
+          [
+            77.65054,
+            28.92207
+          ],
+          [
+            77.65079,
+            28.92231
+          ],
+          [
+            77.65105,
+            28.92256
+          ],
+          [
+            77.65157,
+            28.923
+          ],
+          [
+            77.65236,
+            28.92374
+          ],
+          [
+            77.6552,
+            28.92664
+          ],
+          [
+            77.65917,
+            28.93075
+          ],
+          [
+            77.65965,
+            28.93122
+          ],
+          [
+            77.65997,
+            28.9316
+          ],
+          [
+            77.66023,
+            28.93185
+          ],
+          [
+            77.66052,
+            28.93211
+          ],
+          [
+            77.66077,
+            28.93234
+          ],
+          [
+            77.66095,
+            28.9325
+          ],
+          [
+            77.66158,
+            28.93301
+          ],
+          [
+            77.66301,
+            28.93429
+          ],
+          [
+            77.6639,
+            28.9351
+          ],
+          [
+            77.66433,
+            28.93561
+          ],
+          [
+            77.6662,
+            28.93854
+          ],
+          [
+            77.66689,
+            28.93959
+          ],
+          [
+            77.66802,
+            28.94094
+          ],
+          [
+            77.67033,
+            28.94395
+          ],
+          [
+            77.6712,
+            28.94498
+          ],
+          [
+            77.6715,
+            28.94534
+          ],
+          [
+            77.67182,
+            28.9457
+          ],
+          [
+            77.67221,
+            28.94621
+          ],
+          [
+            77.67269,
+            28.94676
+          ],
+          [
+            77.67377,
+            28.94784
+          ],
+          [
+            77.6741,
+            28.94818
+          ],
+          [
+            77.6746,
+            28.94857
+          ],
+          [
+            77.67523,
+            28.9491
+          ],
+          [
+            77.67533,
+            28.9492
+          ],
+          [
+            77.67619,
+            28.95002
+          ],
+          [
+            77.67773,
+            28.95136
+          ],
+          [
+            77.67887,
+            28.95217
+          ],
+          [
+            77.67924,
+            28.95249
+          ],
+          [
+            77.67968,
+            28.95293
+          ],
+          [
+            77.68049,
+            28.95378
+          ],
+          [
+            77.68267,
+            28.9562
+          ],
+          [
+            77.68363,
+            28.95745
+          ],
+          [
+            77.68386,
+            28.95782
+          ],
+          [
+            77.68402,
+            28.95812
+          ],
+          [
+            77.68411,
+            28.95837
+          ],
+          [
+            77.6843,
+            28.95894
+          ],
+          [
+            77.68448,
+            28.95959
+          ],
+          [
+            77.68461,
+            28.95999
+          ],
+          [
+            77.68474,
+            28.96033
+          ],
+          [
+            77.68487,
+            28.96067
+          ],
+          [
+            77.68508,
+            28.96124
+          ],
+          [
+            77.6852,
+            28.9615
+          ],
+          [
+            77.68552,
+            28.96205
+          ],
+          [
+            77.68591,
+            28.96286
+          ],
+          [
+            77.68611,
+            28.96327
+          ],
+          [
+            77.68629,
+            28.96368
+          ],
+          [
+            77.68642,
+            28.96411
+          ],
+          [
+            77.68655,
+            28.96465
+          ],
+          [
+            77.68665,
+            28.96503
+          ],
+          [
+            77.68679,
+            28.96536
+          ],
+          [
+            77.68695,
+            28.9657
+          ],
+          [
+            77.68713,
+            28.96601
+          ],
+          [
+            77.68759,
+            28.96681
+          ],
+          [
+            77.68812,
+            28.96784
+          ],
+          [
+            77.68985,
+            28.97149
+          ],
+          [
+            77.69055,
+            28.97285
+          ],
+          [
+            77.69058,
+            28.97289
+          ],
+          [
+            77.69075,
+            28.97318
+          ],
+          [
+            77.69105,
+            28.97357
+          ],
+          [
+            77.6915,
+            28.97384
+          ],
+          [
+            77.69212,
+            28.97416
+          ],
+          [
+            77.69246,
+            28.97446
+          ],
+          [
+            77.69352,
+            28.97655
+          ],
+          [
+            77.69413,
+            28.97848
+          ],
+          [
+            77.69463,
+            28.97997
+          ],
+          [
+            77.69552,
+            28.98232
+          ],
+          [
+            77.69584,
+            28.98348
+          ],
+          [
+            77.69594,
+            28.98485
+          ],
+          [
+            77.69612,
+            28.98514
+          ],
+          [
+            77.69678,
+            28.9855
+          ],
+          [
+            77.69804,
+            28.98601
+          ],
+          [
+            77.69872,
+            28.98645
+          ],
+          [
+            77.69939,
+            28.98724
+          ],
+          [
+            77.7003,
+            28.98811
+          ],
+          [
+            77.70103,
+            28.9888
+          ],
+          [
+            77.70183,
+            28.99051
+          ],
+          [
+            77.70338,
+            28.99258
+          ],
+          [
+            77.70527,
+            28.99467
+          ],
+          [
+            77.70556,
+            28.99555
+          ],
+          [
+            77.70558,
+            28.99674
+          ],
+          [
+            77.70561,
+            28.99858
+          ],
+          [
+            77.70549,
+            29.00047
+          ],
+          [
+            77.70468,
+            29.00537
+          ],
+          [
+            77.70447,
+            29.00696
+          ],
+          [
+            77.7044,
+            29.00795
+          ],
+          [
+            77.70435,
+            29.00882
+          ],
+          [
+            77.7043,
+            29.00972
+          ],
+          [
+            77.70427,
+            29.0102
+          ],
+          [
+            77.70423,
+            29.01072
+          ],
+          [
+            77.70419,
+            29.01119
+          ],
+          [
+            77.70412,
+            29.01225
+          ],
+          [
+            77.70409,
+            29.01293
+          ],
+          [
+            77.70412,
+            29.01345
+          ],
+          [
+            77.70418,
+            29.01391
+          ],
+          [
+            77.70433,
+            29.01465
+          ],
+          [
+            77.70435,
+            29.01475
+          ],
+          [
+            77.70445,
+            29.01551
+          ],
+          [
+            77.70448,
+            29.01566
+          ],
+          [
+            77.70455,
+            29.01597
+          ],
+          [
+            77.70462,
+            29.01633
+          ],
+          [
+            77.7047,
+            29.01671
+          ],
+          [
+            77.70486,
+            29.01727
+          ],
+          [
+            77.70489,
+            29.01741
+          ],
+          [
+            77.7052,
+            29.0189
+          ],
+          [
+            77.70543,
+            29.02002
+          ],
+          [
+            77.70556,
+            29.02052
+          ],
+          [
+            77.70573,
+            29.02108
+          ],
+          [
+            77.7082,
+            29.02885
+          ],
+          [
+            77.70831,
+            29.02947
+          ],
+          [
+            77.70835,
+            29.0299
+          ],
+          [
+            77.70834,
+            29.03029
+          ],
+          [
+            77.7083,
+            29.03071
+          ],
+          [
+            77.70823,
+            29.03108
+          ],
+          [
+            77.7081,
+            29.03154
+          ],
+          [
+            77.70792,
+            29.03204
+          ],
+          [
+            77.70717,
+            29.03403
+          ],
+          [
+            77.70682,
+            29.03501
+          ],
+          [
+            77.70669,
+            29.03538
+          ],
+          [
+            77.70664,
+            29.03563
+          ],
+          [
+            77.70659,
+            29.03589
+          ],
+          [
+            77.70656,
+            29.03616
+          ],
+          [
+            77.70655,
+            29.03673
+          ],
+          [
+            77.70656,
+            29.03708
+          ],
+          [
+            77.70659,
+            29.03743
+          ],
+          [
+            77.70673,
+            29.0394
+          ],
+          [
+            77.70674,
+            29.0395
+          ],
+          [
+            77.70674,
+            29.04018
+          ],
+          [
+            77.70676,
+            29.0404
+          ],
+          [
+            77.70678,
+            29.04074
+          ],
+          [
+            77.70681,
+            29.04109
+          ],
+          [
+            77.70683,
+            29.0413
+          ],
+          [
+            77.70693,
+            29.04202
+          ],
+          [
+            77.70697,
+            29.04252
+          ],
+          [
+            77.70712,
+            29.04447
+          ],
+          [
+            77.70718,
+            29.04526
+          ],
+          [
+            77.70726,
+            29.04592
+          ],
+          [
+            77.70731,
+            29.04639
+          ],
+          [
+            77.70738,
+            29.04687
+          ],
+          [
+            77.70751,
+            29.04765
+          ],
+          [
+            77.70759,
+            29.04817
+          ],
+          [
+            77.70764,
+            29.04864
+          ],
+          [
+            77.70766,
+            29.04884
+          ],
+          [
+            77.70773,
+            29.04946
+          ],
+          [
+            77.70779,
+            29.05028
+          ],
+          [
+            77.70785,
+            29.05143
+          ],
+          [
+            77.70792,
+            29.05244
+          ],
+          [
+            77.70797,
+            29.05303
+          ],
+          [
+            77.70799,
+            29.05335
+          ],
+          [
+            77.70802,
+            29.05373
+          ],
+          [
+            77.70812,
+            29.05506
+          ],
+          [
+            77.70818,
+            29.05576
+          ],
+          [
+            77.70828,
+            29.05638
+          ],
+          [
+            77.70837,
+            29.05709
+          ],
+          [
+            77.70856,
+            29.05954
+          ],
+          [
+            77.7089,
+            29.06411
+          ],
+          [
+            77.70891,
+            29.06448
+          ],
+          [
+            77.70889,
+            29.06494
+          ],
+          [
+            77.70884,
+            29.06539
+          ],
+          [
+            77.70872,
+            29.0661
+          ],
+          [
+            77.70862,
+            29.06668
+          ],
+          [
+            77.70855,
+            29.0673
+          ],
+          [
+            77.70853,
+            29.06774
+          ],
+          [
+            77.70864,
+            29.06943
+          ],
+          [
+            77.70866,
+            29.06977
+          ],
+          [
+            77.70872,
+            29.07048
+          ],
+          [
+            77.70878,
+            29.07129
+          ],
+          [
+            77.70888,
+            29.07233
+          ]
+        ]
+      },
+      "properties": {
+        "segment_id": "mee-line-1-seg-01",
+        "line_id": "mee-line-1",
+        "line_name": "Line 1 (Meerut South - Modipuram)",
+        "city_id": "meerut",
+        "city": "Meerut",
+        "operator": "NCRTC",
+        "status": "operational",
+        "phase": "1",
+        "length_km": 21.2,
+        "gauge": "standard",
+        "inaugurated_on": "2026-02-22",
+        "expected_completion": null,
+        "stations_count": 12,
+        "color": "#D8514D",
+        "stations_not_published": false,
+        "source": "osm",
+        "references": [
+          "https://ncrtc.in/wp-content/uploads/2025/10/File-update-24.10.25.pdf",
+          "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
+        ],
+        "completion_unconfirmed": false,
+        "last_verified": "2026-11-06",
+        "retrieved_at": "2026-11-07",
+        "geometry_quality": "exact"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            88.42996,
+            22.58109
+          ],
+          [
+            88.43162,
+            22.58212
+          ],
+          [
+            88.4322,
+            22.5824
+          ],
+          [
+            88.43256,
+            22.5825
+          ],
+          [
+            88.43282,
+            22.58254
+          ],
+          [
+            88.43301,
+            22.58255
+          ],
+          [
+            88.43322,
+            22.58253
+          ],
+          [
+            88.43338,
+            22.5825
+          ],
+          [
+            88.43377,
+            22.58239
+          ],
+          [
+            88.43425,
+            22.5822
+          ],
+          [
+            88.43485,
+            22.58196
+          ],
+          [
+            88.43614,
+            22.5814
+          ],
+          [
+            88.43739,
+            22.58085
+          ],
+          [
+            88.43781,
+            22.58063
+          ],
+          [
+            88.43816,
+            22.58037
+          ],
+          [
+            88.43854,
+            22.58025
+          ],
+          [
+            88.43908,
+            22.58016
+          ],
+          [
+            88.43973,
+            22.58007
+          ],
+          [
+            88.44088,
+            22.58006
+          ],
+          [
+            88.44223,
+            22.58007
+          ],
+          [
+            88.44268,
+            22.58015
+          ],
+          [
+            88.4433,
+            22.58043
+          ],
+          [
+            88.44391,
+            22.5807
+          ],
+          [
+            88.44429,
+            22.58078
+          ],
+          [
+            88.44452,
+            22.58079
+          ],
+          [
+            88.44547,
+            22.58089
+          ],
+          [
+            88.44681,
+            22.581
+          ],
+          [
+            88.44859,
+            22.58114
+          ],
+          [
+            88.45102,
+            22.58138
+          ],
+          [
+            88.45263,
+            22.58159
+          ],
+          [
+            88.45352,
+            22.5816
+          ],
+          [
+            88.45451,
+            22.58154
+          ],
+          [
+            88.45581,
+            22.58132
+          ],
+          [
+            88.45861,
+            22.58082
+          ],
+          [
+            88.46119,
+            22.5804
+          ],
+          [
+            88.46456,
+            22.5798
+          ],
+          [
+            88.46737,
+            22.57928
+          ],
+          [
+            88.46916,
+            22.57901
+          ],
+          [
+            88.46959,
+            22.57899
+          ],
+          [
+            88.46976,
+            22.57899
+          ],
+          [
+            88.46993,
+            22.579
+          ],
+          [
+            88.4701,
+            22.57902
+          ],
+          [
+            88.47026,
+            22.57905
+          ],
+          [
+            88.47043,
+            22.57909
+          ],
+          [
+            88.47059,
+            22.57914
+          ],
+          [
+            88.47075,
+            22.57919
+          ],
+          [
+            88.47091,
+            22.57925
+          ],
+          [
+            88.47106,
+            22.57932
+          ],
+          [
+            88.4712,
+            22.5794
+          ],
+          [
+            88.47135,
+            22.57949
+          ],
+          [
+            88.47148,
+            22.57958
+          ],
+          [
+            88.47161,
+            22.57968
+          ],
+          [
+            88.47174,
+            22.57979
+          ],
+          [
+            88.47185,
+            22.5799
+          ],
+          [
+            88.47196,
+            22.58002
+          ],
+          [
+            88.47207,
+            22.58014
+          ],
+          [
+            88.47216,
+            22.58027
+          ],
+          [
+            88.47225,
+            22.5804
+          ],
+          [
+            88.47232,
+            22.58054
+          ],
+          [
+            88.4724,
+            22.58068
+          ],
+          [
+            88.47246,
+            22.58083
+          ],
+          [
+            88.47285,
+            22.58185
+          ],
+          [
+            88.47349,
+            22.58367
+          ],
+          [
+            88.47401,
+            22.58496
+          ],
+          [
+            88.47452,
+            22.58625
+          ],
+          [
+            88.47465,
+            22.5866
+          ],
+          [
+            88.47485,
+            22.58707
+          ],
+          [
+            88.47503,
+            22.58761
+          ],
+          [
+            88.47511,
+            22.58794
+          ],
+          [
+            88.47516,
+            22.58827
+          ],
+          [
+            88.47516,
+            22.5885
+          ],
+          [
+            88.47516,
+            22.58872
+          ],
+          [
+            88.47516,
+            22.58891
+          ],
+          [
+            88.47512,
+            22.58916
+          ],
+          [
+            88.47509,
+            22.58932
+          ],
+          [
+            88.47505,
+            22.58953
+          ],
+          [
+            88.47492,
+            22.58993
+          ],
+          [
+            88.47467,
+            22.59043
+          ]
+        ]
+      },
+      "properties": {
+        "segment_id": "kol-orange-seg-03",
+        "line_id": "kol-orange",
+        "line_name": "Orange Line Extension (IT Centre - Jai Hind Airport)",
+        "city_id": "kolkata",
+        "city": "Kolkata",
+        "operator": "Metro Railway, Kolkata",
+        "status": "construction",
+        "phase": "6",
+        "length_km": 5.7,
+        "gauge": "broad",
+        "inaugurated_on": null,
+        "expected_completion": "2027",
+        "stations_count": 2,
+        "color": "#FF8200",
+        "stations_not_published": false,
+        "source": "manual",
+        "references": [
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
+        ],
+        "completion_unconfirmed": false,
+        "last_verified": "2026-11-06",
         "geometry_quality": "exact"
       }
     }

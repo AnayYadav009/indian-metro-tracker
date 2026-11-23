@@ -41,7 +41,23 @@
             "retrieved_at": "2026-10-16"
           }
         }
-      ]
+      ],
+      "construction": [
+        {
+          "stretch": "Corridor 2 Underground (Patna Junction - Malahi Pakri)",
+          "phase": "1",
+          "expected_completion": "2027-03",
+          "stations": 7,
+          "notes": "7.9 km underground stretch with 7 stations (Patna Junction to Malahi Pakri ramp). 7.4 km tunneling completed with multiple TBM breakthroughs; civil box structures and track-laying underway.",
+          "source": {
+            "title": "Patna Metro Corridor 2 underground civil and tunneling progress",
+            "url": "https://patnametrorail.com",
+            "retrieved_at": "2026-10-16",
+            "kind": "official"
+          }
+        }
+      ],
+      "notes": "Patna Metro Corridor 2 (Blue Line) connects Patna Junction to New ISBT (14.56 km). Priority elevated section (New ISBT to Malahi Pakri, 5.28 km, 5 stations) is operational; balance 7.9 km underground stretch is under active construction."
     }
   ]
 }

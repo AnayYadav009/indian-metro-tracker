@@ -111,7 +111,7 @@
   },
   {
     "id": "pun-line-3",
-    "name": "Line 3 (Puneri Metro)",
+    "name": "Pink Line (Line 3)",
     "city": "Pune",
     "color": "#FF69B4",
     "operator": "Pune IT City Metro Rail Limited",
@@ -710,6 +710,18 @@
     "operator": "PMRC",
     "source": "osm+pmrc",
     "notes": "Blue Line priority corridor connects New ISBT to Malahi Pakri (5.28 km, 5 stations). Elevated priority corridor fully operational.",
+    "provenance": {
+      "status": "unverified"
+    }
+  },
+  {
+    "id": "mee-line-1",
+    "name": "Line 1 (Meerut Metro)",
+    "city": "Meerut",
+    "city_id": "meerut",
+    "color": "#D8514D",
+    "operator": "NCRTC",
+    "source": "osm+ncrtc",
     "provenance": {
       "status": "unverified"
     }

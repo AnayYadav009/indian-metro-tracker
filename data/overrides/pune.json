@@ -45,7 +45,7 @@
     },
     {
       "id": "pun-line-3",
-      "name": "Line 3 (Puneri Metro)",
+      "name": "Pink Line (Line 3)",
       "city": "Pune",
       "color": "#FF69B4",
       "operator": "Pune IT City Metro Rail Limited",
@@ -68,9 +68,7 @@
       "inaugurated_on": "2022-03-06",
       "expected_completion": null,
       "color": "#800080",
-      "references": [
-        "https://www.punemetrorail.org"
-      ],
+      "references": [],
       "city_id": "pune"
     },
     {
@@ -84,21 +82,25 @@
       "inaugurated_on": "2022-03-06",
       "expected_completion": null,
       "color": "#00FFFF",
-      "references": [
-        "https://www.punemetrorail.org"
-      ],
+      "references": [],
       "city_id": "pune"
     },
     {
       "segment_id": "pun-line-3-seg-01",
       "line_id": "pun-line-3",
-      "line_name": "Line 3 (Puneri Metro / Hinjawadi - Civil Court)",
+      "line_name": "Pink Line (Line 3: Hinjawadi - District Court)",
       "phase": "1",
-      "status": "construction",
+      "status": "operational",
       "gauge": "standard",
-      "inaugurated_on": null,
-      "expected_completion": "2026-12",
+      "inaugurated_on": "2026-11-03",
+      "expected_completion": null,
       "color": "#FF69B4",
+      "stations_count": 13,
+      "stations_not_published": false,
+      "references": [
+        "https://www.pmrda.gov.in/en/pune-metro-line-3/",
+        "https://www.pib.gov.in/PressReleaseDetail.aspx?PRID=2331557"
+      ],
       "coordinates": [
         [
           73.69539,
@@ -1921,10 +1923,6 @@
           18.52816
         ]
       ],
-      "references": [
-        "https://www.punemetrorail.org",
-        "https://pmrda.gov.in"
-      ],
       "operator": "Pune IT City Metro Rail Limited",
       "city_id": "pune",
       "last_verified": "2026-10-08"
@@ -1954,7 +1952,10 @@
     "Yervada": "Yerwada",
     "Yervada Metro Station": "Yerwada",
     "Pune Railway Station": "Pune Railway Station",
-    "Pune Railway": "Pune Railway Station"
+    "Pune Railway": "Pune Railway Station",
+    "Doehler India": "Maan",
+    "Wakad Chowk metro Station": "Wakad Chowk",
+    "Savitribal Phule Pune University": "Savitribai Phule Pune University"
   },
   "stationOverrides": {
     "Range Hill": {
@@ -1965,206 +1966,287 @@
         "pun-purple"
       ],
       "layout": "elevated",
-      "references": [
-        "https://www.punemetrorail.org"
-      ],
-      "last_verified": "2026-10-08"
+      "references": [],
+      "last_verified": null
     },
     "Kasba Peth": {
       "layout": "underground",
-      "references": [
-        "https://www.punemetrorail.org"
-      ],
-      "last_verified": "2026-10-08"
+      "references": [],
+      "last_verified": null
     },
     "Mahatma Phule Mandai": {
       "layout": "underground",
-      "references": [
-        "https://www.punemetrorail.org"
-      ],
-      "last_verified": "2026-10-08"
+      "references": [],
+      "last_verified": null
     },
     "Swargate": {
       "layout": "underground",
-      "references": [
-        "https://www.punemetrorail.org"
-      ],
-      "last_verified": "2026-10-08"
+      "references": [],
+      "last_verified": null
     },
     "Shivaji Nagar": {
       "layout": "underground",
-      "references": [
-        "https://www.punemetrorail.org"
-      ],
-      "last_verified": "2026-10-08"
+      "references": [],
+      "last_verified": null
     },
     "District Court": {
       "layout": "underground",
       "references": [
-        "https://www.punemetrorail.org"
+        "https://www.pmrda.gov.in/en/pune-metro-line-3/"
       ],
-      "last_verified": "2026-10-08"
+      "last_verified": "2026-10-08",
+      "line_ids": [
+        "pun-purple",
+        "pun-aqua",
+        "pun-line-3"
+      ]
     },
     "Vanaz": {
       "layout": "elevated",
-      "references": [
-        "https://www.punemetrorail.org"
-      ],
-      "last_verified": "2026-10-08"
+      "references": [],
+      "last_verified": null
     },
     "Ideal Colony": {
       "layout": "elevated",
-      "references": [
-        "https://www.punemetrorail.org"
-      ],
-      "last_verified": "2026-10-08"
+      "references": [],
+      "last_verified": null
     },
     "SNDT College": {
       "layout": "elevated",
-      "references": [
-        "https://www.punemetrorail.org"
-      ],
-      "last_verified": "2026-10-08"
+      "references": [],
+      "last_verified": null
     },
     "Garware College": {
       "layout": "elevated",
-      "references": [
-        "https://www.punemetrorail.org"
-      ],
-      "last_verified": "2026-10-08"
+      "references": [],
+      "last_verified": null
     },
     "Anandnagar": {
       "layout": "elevated",
-      "references": [
-        "https://www.punemetrorail.org"
-      ],
-      "last_verified": "2026-10-08"
+      "references": [],
+      "last_verified": null
     },
     "Phugewadi": {
       "layout": "elevated",
-      "references": [
-        "https://www.punemetrorail.org"
-      ],
-      "last_verified": "2026-10-08"
+      "references": [],
+      "last_verified": null
     },
     "Deccan Gymkhana": {
       "layout": "elevated",
-      "references": [
-        "https://www.punemetrorail.org"
-      ],
-      "last_verified": "2026-10-08"
+      "references": [],
+      "last_verified": null
     },
     "Dapodi": {
       "layout": "elevated",
-      "references": [
-        "https://www.punemetrorail.org"
-      ],
-      "last_verified": "2026-10-08"
+      "references": [],
+      "last_verified": null
     },
     "PMC": {
       "layout": "elevated",
-      "references": [
-        "https://www.punemetrorail.org"
-      ],
-      "last_verified": "2026-10-08"
+      "references": [],
+      "last_verified": null
     },
     "Ruby Hall Clinic": {
       "layout": "elevated",
-      "references": [
-        "https://www.punemetrorail.org"
-      ],
-      "last_verified": "2026-10-08"
+      "references": [],
+      "last_verified": null
     },
     "Sant Tukaram Nagar": {
       "layout": "elevated",
-      "references": [
-        "https://www.punemetrorail.org"
-      ],
-      "last_verified": "2026-10-08"
+      "references": [],
+      "last_verified": null
     },
     "Kasarwadi": {
       "layout": "elevated",
-      "references": [
-        "https://www.punemetrorail.org"
-      ],
-      "last_verified": "2026-10-08"
+      "references": [],
+      "last_verified": null
     },
     "Bhosari": {
       "layout": "elevated",
-      "references": [
-        "https://www.punemetrorail.org"
-      ],
-      "last_verified": "2026-10-08"
+      "references": [],
+      "last_verified": null
     },
     "Bopodi": {
       "layout": "elevated",
-      "references": [
-        "https://www.punemetrorail.org"
-      ],
-      "last_verified": "2026-10-08"
+      "references": [],
+      "last_verified": null
     },
     "PCMC": {
       "layout": "elevated",
-      "references": [
-        "https://www.punemetrorail.org"
-      ],
-      "last_verified": "2026-10-08"
+      "references": [],
+      "last_verified": null
     },
     "Pune Railway Station": {
       "layout": "elevated",
-      "references": [
-        "https://www.punemetrorail.org"
-      ],
-      "last_verified": "2026-10-08"
+      "references": [],
+      "last_verified": null
     },
     "Mangalwar Peth": {
       "layout": "elevated",
-      "references": [
-        "https://www.punemetrorail.org"
-      ],
-      "last_verified": "2026-10-08"
+      "references": [],
+      "last_verified": null
     },
     "Chhatrapati Sambhaji Udyan": {
       "layout": "elevated",
-      "references": [
-        "https://www.punemetrorail.org"
-      ],
-      "last_verified": "2026-10-08"
+      "references": [],
+      "last_verified": null
     },
     "Ramwadi": {
       "layout": "elevated",
-      "references": [
-        "https://www.punemetrorail.org"
-      ],
-      "last_verified": "2026-10-08"
+      "references": [],
+      "last_verified": null
     },
     "Bund Garden": {
       "layout": "elevated",
-      "references": [
-        "https://www.punemetrorail.org"
-      ],
-      "last_verified": "2026-10-08"
+      "references": [],
+      "last_verified": null
     },
     "Yerwada": {
       "layout": "elevated",
-      "references": [
-        "https://www.punemetrorail.org"
-      ],
-      "last_verified": "2026-10-08"
+      "references": [],
+      "last_verified": null
     },
     "Kalyani Nagar": {
       "layout": "elevated",
-      "references": [
-        "https://www.punemetrorail.org"
-      ],
-      "last_verified": "2026-10-08"
+      "references": [],
+      "last_verified": null
     },
     "Khadki": {
       "layout": "elevated",
-      "references": [
-        "https://www.punemetrorail.org"
+      "references": [],
+      "last_verified": null
+    },
+    "Maan": {
+      "layout": "elevated",
+      "status": "operational",
+      "opened_on": "2026-11-04",
+      "line_ids": [
+        "pun-line-3"
       ],
-      "last_verified": "2026-10-08"
+      "references": [
+        "https://www.pmrda.gov.in/en/pune-metro-line-3/"
+      ]
+    },
+    "Infosys": {
+      "layout": "elevated",
+      "status": "operational",
+      "opened_on": "2026-11-04",
+      "line_ids": [
+        "pun-line-3"
+      ],
+      "references": [
+        "https://www.pmrda.gov.in/en/pune-metro-line-3/"
+      ]
+    },
+    "Wipro": {
+      "layout": "elevated",
+      "status": "operational",
+      "opened_on": "2026-11-04",
+      "line_ids": [
+        "pun-line-3"
+      ],
+      "references": [
+        "https://www.pmrda.gov.in/en/pune-metro-line-3/"
+      ]
+    },
+    "Hinjawadi": {
+      "layout": "elevated",
+      "status": "operational",
+      "opened_on": "2026-11-04",
+      "line_ids": [
+        "pun-line-3"
+      ],
+      "references": [
+        "https://www.pmrda.gov.in/en/pune-metro-line-3/"
+      ]
+    },
+    "Jakat Naka": {
+      "layout": "elevated",
+      "status": "operational",
+      "opened_on": "2026-11-04",
+      "line_ids": [
+        "pun-line-3"
+      ],
+      "references": [
+        "https://www.pmrda.gov.in/en/pune-metro-line-3/"
+      ]
+    },
+    "Wakad Chowk": {
+      "layout": "elevated",
+      "status": "operational",
+      "opened_on": "2026-11-04",
+      "line_ids": [
+        "pun-line-3"
+      ],
+      "references": [
+        "https://www.pmrda.gov.in/en/pune-metro-line-3/"
+      ]
+    },
+    "Balewadi Stadium": {
+      "layout": "elevated",
+      "status": "operational",
+      "opened_on": "2026-11-04",
+      "line_ids": [
+        "pun-line-3"
+      ],
+      "references": [
+        "https://www.pmrda.gov.in/en/pune-metro-line-3/"
+      ]
+    },
+    "NICMAR": {
+      "layout": "elevated",
+      "status": "operational",
+      "opened_on": "2026-11-04",
+      "line_ids": [
+        "pun-line-3"
+      ],
+      "references": [
+        "https://www.pmrda.gov.in/en/pune-metro-line-3/"
+      ]
+    },
+    "Krushi Anusandhan": {
+      "layout": "elevated",
+      "status": "operational",
+      "opened_on": "2026-11-04",
+      "line_ids": [
+        "pun-line-3"
+      ],
+      "references": [
+        "https://www.pmrda.gov.in/en/pune-metro-line-3/"
+      ]
+    },
+    "YASHADA": {
+      "layout": "elevated",
+      "status": "operational",
+      "opened_on": "2026-11-04",
+      "line_ids": [
+        "pun-line-3"
+      ],
+      "references": [
+        "https://www.pmrda.gov.in/en/pune-metro-line-3/"
+      ]
+    },
+    "Savitribai Phule Pune University": {
+      "layout": "elevated",
+      "status": "operational",
+      "opened_on": "2026-11-04",
+      "line_ids": [
+        "pun-line-3"
+      ],
+      "references": [
+        "https://www.pmrda.gov.in/en/pune-metro-line-3/"
+      ]
+    },
+    "Agriculture College": {
+      "layout": "elevated",
+      "status": "operational",
+      "opened_on": "2026-11-04",
+      "line_ids": [
+        "pun-line-3"
+      ],
+      "references": [
+        "https://www.pmrda.gov.in/en/pune-metro-line-3/"
+      ]
     }
   },
   "out_of_scope_station_ids": [
@@ -2230,33 +2312,21 @@
     "Race Course",
     "Fatima Nagar",
     "Ramtekadi",
-    "Balewadi Stadium",
-    "Doehler India",
-    "Infosys",
-    "Agriculture College",
-    "Wipro",
     "RBI",
-    "Wakad Chowk",
-    "Wakad Chowk metro Station",
-    "Savitribal Phule Pune University",
-    "YASHADA",
-    "Krushi Anusandhan",
     "Baner",
     "Baner Gaon",
     "Balewadi Phata",
     "High Street",
-    "NICMAR",
-    "Jakat Naka",
-    "Hinjawadi",
     "Shivaji Nagar Railway Station",
     "Shivaji Nagar Railway",
     "pune-anand-nagar"
   ],
-  "out_of_scope_line_ids": [
-    "pun-line-3"
-  ],
+  "out_of_scope_line_ids": [],
   "selfIntersectionExemptions": [
     "pun-purple-seg-01",
     "pun-aqua-seg-01"
-  ]
+  ],
+  "audit_thresholds": {
+    "terminalToSegmentEndMaxM": 1000
+  }
 }

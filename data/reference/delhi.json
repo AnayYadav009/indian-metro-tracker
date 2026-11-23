@@ -558,15 +558,17 @@
       "official_name": "Magenta Line (Line 8)",
       "operator": "DMRC",
       "topology": "linear",
-      "operational_stations": 25,
-      "operational_length_km": 37.46,
+      "operational_stations": 32,
+      "operational_length_km": 46.72,
       "planned_length_km": 66.82,
       "terminals": [
         "Janakpuri West",
-        "Botanical Garden"
+        "Botanical Garden",
+        "Deepali Chowk",
+        "Majlis Park"
       ],
       "status": "operational",
-      "disjoint_stretches": false,
+      "disjoint_stretches": true,
       "openings": [
         {
           "stage": "Botanical Garden - Kalkaji Mandir",
@@ -587,22 +589,31 @@
             "kind": "official",
             "url": "https://www.delhimetrorail.com/corporate"
           }
+        },
+        {
+          "stage": "Deepali Chowk - Majlis Park",
+          "phase": "4",
+          "opened_on": "2026-03-08",
+          "stations_added": 7,
+          "source": {
+            "kind": "news",
+            "url": "https://metrorailnews.in/modi-inaugurated-2-new-sections-of-delhi-metro/"
+          }
         }
       ],
       "construction": [
         {
-          "stretch": "Phase 4 extension (Janakpuri West - Ramakrishna Ashram Marg)",
+          "stretch": "Phase 4 extension (Krishna Park Extension - Ramakrishna Ashram Marg)",
           "phase": "4",
-          "expected_completion": null,
-          "stations": 22,
-          "notes": "29.36 km extension with 22 stations.",
+          "stations": 15,
+          "notes": "Krishna Park Extension to RK Ashram Marg section. A completion date is unconfirmed; no date is recorded without an official DMRC source.",
           "source": {
-            "kind": "official",
-            "url": "https://www.delhimetrorail.com/project-updates"
+            "kind": "news",
+            "url": "https://www.devdiscourse.com/article/business/3918126-dmrc-eyes-december-rollout-for-key-phase-4-corridors-fixes-target-for-phase-5-expansion"
           }
         }
       ],
-      "notes": "37.46 km operational line with 25 stations. Phase 4 extension (Janakpuri West to RK Ashram Marg, 29.36 km, 22 stations) under active construction."
+      "notes": "Operational corridor spanning 46.7 km with 32 stations across two sections (Botanical Garden to Janakpuri West, and Deepali Chowk to Majlis Park). The remaining Phase 4 extension has no confirmed completion date. Phase V-A Central Vista corridor (RK Ashram Marg to Indraprastha, 9.9 km underground) foundation laid 2026-03-08."
     },
     {
       "line_id": "del-grey",
@@ -662,16 +673,15 @@
         {
           "stretch": "Phase 4 main corridor (Delhi Aerocity - Tughlakabad)",
           "phase": "4",
-          "expected_completion": null,
           "stations": 15,
-          "notes": "23.62 km main corridor under construction with 15 stations.",
+          "notes": "23.62 km main corridor under construction with 15 stations. A completion date is unconfirmed; no date is recorded without an official DMRC source.",
           "source": {
-            "kind": "official",
-            "url": "https://www.delhimetrorail.com/project-updates"
+            "kind": "news",
+            "url": "https://www.devdiscourse.com/article/business/3918126-dmrc-eyes-december-rollout-for-key-phase-4-corridors-fixes-target-for-phase-5-expansion"
           }
         }
       ],
-      "notes": "Phase 4 Aerocity to Tughlakabad corridor (23.62 km, 15 stations) under active construction. Formerly designated Silver Line, officially re-branded Golden Line in 2024. Aliases del-silver retained.",
+      "notes": "Phase 4 Aerocity to Tughlakabad corridor (23.62 km, 15 stations) under active construction; its completion date is unconfirmed. Phase V-A extensions (Aerocity to IGI T1 2.26 km underground, Tughlakabad to Kalindi Kunj 3.9 km elevated) foundation stone laid 2026-03-08. Formerly designated Silver Line, officially re-branded Golden Line in 2024. Aliases del-silver retained.",
       "confidence": "unverified"
     }
   ]

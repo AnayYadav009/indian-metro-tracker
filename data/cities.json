@@ -395,5 +395,23 @@
     "provenance": {
       "status": "unverified"
     }
+  },
+  {
+    "id": "meerut",
+    "name": "Meerut",
+    "bbox": [
+      77.58,
+      28.88,
+      77.76,
+      29.1
+    ],
+    "operator": "NCRTC",
+    "phases": [
+      "1"
+    ],
+    "network_id": "meerut-metro",
+    "provenance": {
+      "status": "unverified"
+    }
   }
 ]

@@ -9,9 +9,9 @@ import {
 import { getMetroData } from "@/lib/data";
 
 describe("M14 Compare Stats Calculation", () => {
-  it("processes all 21 cities in dataset", () => {
+  it("processes all 22 cities in dataset", () => {
     const stats = getCityCompareStats();
-    expect(stats).toHaveLength(21);
+    expect(stats).toHaveLength(22);
     const cityIds = stats.map((s) => s.cityId);
     expect(cityIds).toContain("delhi");
     expect(cityIds).toContain("mumbai");
@@ -43,13 +43,13 @@ describe("M14 Compare Stats Calculation", () => {
     expect(totals.totalStations).toBe(dataset.stations.features.length);
   });
 
-  it("correctly partitions cities into Tier 1 (6 cities) and Tier 2 (15 cities)", () => {
+  it("correctly partitions cities into Tier 1 (6 cities) and Tier 2 (16 cities)", () => {
     const stats = getCityCompareStats();
     const tier1 = stats.filter((s) => s.tier === 1);
     const tier2 = stats.filter((s) => s.tier === 2);
 
     expect(tier1).toHaveLength(6);
-    expect(tier2).toHaveLength(15);
+    expect(tier2).toHaveLength(16);
 
     const tier1Names = new Set(tier1.map((s) => s.cityId));
     expect(tier1Names).toEqual(

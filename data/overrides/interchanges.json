@@ -53,5 +53,17 @@
     "source": "https://ltmetro.com/metro-network-map/",
     "date": "2026-10-17",
     "note": "straight-line distance (637 m); operator map listed at https://ltmetro.com/metro-network-map/, not independently confirmed"
+  },
+  "kolkata-salt-lake-sector-v": {
+    "interchange_id": "int-kolkata-sector-v",
+    "source": "https://swarajyamag.com/news-brief/trial-runs-for-kolkata-metros-orange-line-extension-to-sector-v-scheduled-to-begin-10th-october-2026",
+    "date": "2026-11-06",
+    "note": "elevated footbridge connecting Green Line Sector V to Orange Line IT Centre"
+  },
+  "kolkata-it-centre": {
+    "interchange_id": "int-kolkata-sector-v",
+    "source": "https://swarajyamag.com/news-brief/trial-runs-for-kolkata-metros-orange-line-extension-to-sector-v-scheduled-to-begin-10th-october-2026",
+    "date": "2026-11-06",
+    "note": "elevated footbridge connecting Green Line Sector V to Orange Line IT Centre"
   }
 }

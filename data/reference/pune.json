@@ -22,52 +22,28 @@
           "phase": null,
           "opened_on": "2022-03-06",
           "stations_added": 5,
-          "confidence": "sourced",
-          "source": {
-            "title": "PM Modi inaugurates Pune Metro priority stretches",
-            "url": "https://www.punemetrorail.org",
-            "retrieved_at": "2026-10-08",
-            "kind": "official"
-          }
+          "confidence": "unverified"
         },
         {
           "stage": "Phugewadi - District Court (Civil Court)",
           "phase": null,
           "opened_on": "2023-08-01",
           "stations_added": 4,
-          "confidence": "sourced",
-          "source": {
-            "title": "Pune Metro Phugewadi to Civil Court stretch inaugurated",
-            "url": "https://www.punemetrorail.org",
-            "retrieved_at": "2026-10-08",
-            "kind": "official"
-          }
+          "confidence": "unverified"
         },
         {
           "stage": "District Court - Swargate (Underground)",
           "phase": null,
           "opened_on": "2024-09-29",
           "stations_added": 3,
-          "confidence": "sourced",
-          "source": {
-            "title": "Civil Court to Swargate underground metro stretch opens",
-            "url": "https://www.punemetrorail.org",
-            "retrieved_at": "2026-10-08",
-            "kind": "official"
-          }
+          "confidence": "unverified"
         },
         {
           "stage": "Khadki station infill opening",
           "phase": null,
           "opened_on": "2025-06-21",
           "stations_added": 1,
-          "confidence": "sourced",
-          "source": {
-            "title": "Khadki Metro station opens for commercial operations",
-            "url": "https://www.punemetrorail.org",
-            "retrieved_at": "2026-10-08",
-            "kind": "official"
-          }
+          "confidence": "unverified"
         }
       ],
       "construction": [
@@ -115,52 +91,28 @@
           "phase": null,
           "opened_on": "2022-03-06",
           "stations_added": 5,
-          "confidence": "sourced",
-          "source": {
-            "title": "PM Modi inaugurates Pune Metro priority stretches",
-            "url": "https://www.punemetrorail.org",
-            "retrieved_at": "2026-10-08",
-            "kind": "official"
-          }
+          "confidence": "unverified"
         },
         {
           "stage": "Garware College - Ruby Hall Clinic",
           "phase": null,
           "opened_on": "2023-08-01",
           "stations_added": 7,
-          "confidence": "sourced",
-          "source": {
-            "title": "Garware College to Ruby Hall Clinic stretch opened",
-            "url": "https://www.punemetrorail.org",
-            "retrieved_at": "2026-10-08",
-            "kind": "official"
-          }
+          "confidence": "unverified"
         },
         {
           "stage": "Ruby Hall Clinic - Ramwadi (except Yerawada)",
           "phase": null,
           "opened_on": "2024-03-06",
           "stations_added": 3,
-          "confidence": "sourced",
-          "source": {
-            "title": "Ruby Hall Clinic to Ramwadi stretch opened",
-            "url": "https://www.punemetrorail.org",
-            "retrieved_at": "2026-10-08",
-            "kind": "official"
-          }
+          "confidence": "unverified"
         },
         {
           "stage": "Yerawada station infill opening",
           "phase": null,
           "opened_on": "2024-08-21",
           "stations_added": 1,
-          "confidence": "sourced",
-          "source": {
-            "title": "Yerawada station opened for passenger operations",
-            "url": "https://www.punemetrorail.org",
-            "retrieved_at": "2026-10-08",
-            "kind": "official"
-          }
+          "confidence": "unverified"
         }
       ],
       "construction": [],
@@ -168,30 +120,43 @@
     },
     {
       "line_id": "pun-line-3",
-      "official_name": "Line 3 (Puneri Metro)",
+      "official_name": "Pink Line (Line 3)",
       "operator": "Pune IT City Metro Rail Limited",
       "topology": "linear",
-      "operational_stations": 0,
-      "operational_length_km": 0,
+      "operational_stations": 13,
+      "operational_stations_candidates": [
+        13,
+        17
+      ],
+      "operational_length_km": 21.3,
       "planned_length_km": 23.2,
       "terminals": [
         "Maan",
         "District Court"
       ],
-      "status": "under_construction",
+      "status": "operational",
       "disjoint_stretches": false,
-      "openings": [],
-      "construction": [
+      "openings": [
         {
-          "stretch": "Hinjawadi (Maan) - District Court (Civil Court)",
+          "stage": "Hinjawadi (Maan) - District Court",
           "phase": "1",
-          "expected_completion": "2026-12",
-          "stations": 23,
-          "notes": "23.2 km elevated PPP corridor connecting Rajiv Gandhi Infotech Park, Hinjawadi to District Court interchange."
+          "opened_on": null,
+          "inaugurated_on": "2026-11-03",
+          "stations_added": 13,
+          "confidence": "unverified",
+          "source": {
+            "title": "Pune Metro Line 3 expected to carry 2 lakh passengers daily; four new corridors announced",
+            "url": "https://www.freepressjournal.in/pune/pune-metro-line-3-expected-to-carry-2-lakh-passengers-daily-four-new-corridors-worth-13500-crore-announced",
+            "retrieved_at": "2026-11-06",
+            "kind": "news"
+          }
         }
       ],
-      "notes": "PPP corridor under PMRDA developed by Tata-Siemens consortium (SPV: Pune IT City Metro Rail Limited). 23 elevated stations; testing and CMRS safety clearance under way. Coverage review on 2026-10-13 confirmed Phase 1A/Phase 2 extensions (Swargate to Katraj underground, PCMC to Nigdi) are in pre-construction/tender stages; Line 3 is the only corridor with active physical construction."
+      "construction": [],
+      "notes": "PPP corridor under PMRDA developed by Tata-Siemens consortium (Pune IT City Metro Rail Limited). 23.2 km elevated corridor connecting Hinjawadi (Maan) to District Court interchange. Inaugurated on 2026-11-03 by PM Narendra Modi via video conferencing (post-event release PIB PRID=2332011); commercial passenger operations start date and station count unverified on official operator page (2026-11-04 start date and 13 stations are unverified news leads).",
+      "confidence": "sourced"
     }
   ],
-  "confidence": "sourced"
+  "confidence": "sourced",
+  "notes": "Union Cabinet approved Pune Metro Phase-2 on 26 November 2025, comprising Line 4 from Kharadi to Khadakwasla (25.52 km, 22 stations) and Line 4A from Nal Stop to Warje and Manik Baug (6.12 km, 6 stations) totaling 31.636 km with 28 elevated stations at ₹9,857.85 crore (PIB PRID=2194711)."
 }

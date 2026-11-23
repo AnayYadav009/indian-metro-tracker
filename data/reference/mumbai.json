@@ -223,18 +223,33 @@
       "openings": [],
       "construction": [
         {
-          "stretch": "Full Line (Wadala - Kasarvadavali)",
-          "phase": null,
-          "expected_completion": null,
-          "stations": 30,
-          "notes": "Targeted late 2027 in MMRDA project reviews.",
+          "stretch": "Northern Priority Stretch (Gaimukh - Cadbury Junction)",
+          "phase": "4",
+          "expected_completion": "2026-12",
+          "stations": 10,
+          "notes": "10.5 km northern priority stretch combining Line 4A and northern Line 4 in Thane (Gaimukh to Cadbury Junction); targeted for December 2026 commissioning following trial runs.",
           "source": {
+            "title": "MMRDA Metro Line 4 Project Status",
             "kind": "official",
-            "url": "https://mmrda.maharashtra.gov.in/metro-line-4"
+            "url": "https://mmrda.maharashtra.gov.in/metro-line-4",
+            "retrieved_at": "2026-10-15"
+          }
+        },
+        {
+          "stretch": "Southern Section (Cadbury Junction - Wadala)",
+          "phase": "4",
+          "expected_completion": null,
+          "stations": 22,
+          "notes": "Balance southern corridor from Cadbury Junction to Bhakti Park Wadala under active civil works.",
+          "source": {
+            "title": "MMRDA Metro Line 4 Project Status",
+            "kind": "official",
+            "url": "https://mmrda.maharashtra.gov.in/metro-line-4",
+            "retrieved_at": "2026-10-15"
           }
         }
       ],
-      "notes": "Official planned length is 32.32 km with 30 planned stations connecting Wadala to Kasarvadavali under active construction.",
+      "notes": "Official planned length is 32.32 km with 30 planned stations connecting Wadala to Kasarvadavali under active construction. Phased commissioning prioritizes northern section (Gaimukh to Cadbury Junction, 10.5 km, target late 2026) ahead of southern section to Wadala.",
       "confidence": "sourced"
     },
     {

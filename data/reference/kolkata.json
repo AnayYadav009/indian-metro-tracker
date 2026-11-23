@@ -25,7 +25,7 @@
           "confidence": "sourced",
           "source": {
             "title": "History & Milestones - Metro Railway Kolkata",
-            "url": "https://mtp.indianrailways.gov.in",
+            "url": "https://mtp.indianrailways.gov.in/ministry/about-us",
             "retrieved_at": "2026-10-07",
             "kind": "official"
           }
@@ -38,7 +38,7 @@
           "confidence": "sourced",
           "source": {
             "title": "History & Milestones - Metro Railway Kolkata",
-            "url": "https://mtp.indianrailways.gov.in",
+            "url": "https://mtp.indianrailways.gov.in/ministry/about-us",
             "retrieved_at": "2026-10-07",
             "kind": "official"
           }
@@ -51,7 +51,7 @@
           "confidence": "sourced",
           "source": {
             "title": "History & Milestones - Metro Railway Kolkata",
-            "url": "https://mtp.indianrailways.gov.in",
+            "url": "https://mtp.indianrailways.gov.in/ministry/about-us",
             "retrieved_at": "2026-10-07",
             "kind": "official"
           }
@@ -64,7 +64,7 @@
           "confidence": "sourced",
           "source": {
             "title": "History & Milestones - Metro Railway Kolkata",
-            "url": "https://mtp.indianrailways.gov.in",
+            "url": "https://mtp.indianrailways.gov.in/ministry/about-us",
             "retrieved_at": "2026-10-07",
             "kind": "official"
           }
@@ -77,7 +77,7 @@
           "confidence": "sourced",
           "source": {
             "title": "History & Milestones - Metro Railway Kolkata",
-            "url": "https://mtp.indianrailways.gov.in",
+            "url": "https://mtp.indianrailways.gov.in/ministry/about-us",
             "retrieved_at": "2026-10-07",
             "kind": "official"
           }
@@ -90,7 +90,7 @@
           "confidence": "sourced",
           "source": {
             "title": "History & Milestones - Metro Railway Kolkata",
-            "url": "https://mtp.indianrailways.gov.in",
+            "url": "https://mtp.indianrailways.gov.in/ministry/about-us",
             "retrieved_at": "2026-10-07",
             "kind": "official"
           }
@@ -103,7 +103,7 @@
           "confidence": "sourced",
           "source": {
             "title": "History & Milestones - Metro Railway Kolkata",
-            "url": "https://mtp.indianrailways.gov.in",
+            "url": "https://mtp.indianrailways.gov.in/ministry/about-us",
             "retrieved_at": "2026-10-07",
             "kind": "official"
           }
@@ -116,7 +116,7 @@
           "confidence": "sourced",
           "source": {
             "title": "History & Milestones - Metro Railway Kolkata",
-            "url": "https://mtp.indianrailways.gov.in",
+            "url": "https://mtp.indianrailways.gov.in/ministry/about-us",
             "retrieved_at": "2026-10-07",
             "kind": "official"
           }
@@ -275,7 +275,7 @@
           "notes": "Underground and elevated stretch connecting Majerhat to Esplanade via Mominpur, Khidirpur, Victoria, and Park Street. TBM breakthrough achieved at Victoria in July 2026.",
           "source": {
             "title": "Project Highlights - Purple Line - Metro Railway Kolkata",
-            "url": "https://mtp.indianrailways.gov.in",
+            "url": "https://mtp.indianrailways.gov.in/ministry/about-us",
             "retrieved_at": "2026-10-07",
             "kind": "official"
           }
@@ -352,7 +352,7 @@
       "operator": "Metro Railway, Kolkata",
       "topology": "linear",
       "operational_stations": 9,
-      "operational_length_km": 9.80,
+      "operational_length_km": 9.8,
       "planned_length_km": 29.87,
       "terminals": [
         "Kavi Subhash",
@@ -393,11 +393,11 @@
           "stretch": "Beleghata - Salt Lake Sector V (IT Centre)",
           "phase": null,
           "expected_completion": "2026-12",
-          "stations": 2,
-          "notes": "4.4 km extension from Beleghata to Sector V following completion of the Chingrighata viaduct gap. Targeted for late 2026 commercial operations.",
+          "stations": 3,
+          "notes": "4.5 km extension from Beleghata to Sector V (IT Centre) following completion of the Chingrighata viaduct gap. Trial runs began on 2026-10-10, targeting December 2026 commercial operations.",
           "source": {
             "title": "Project Highlights - Orange Line - Metro Railway Kolkata",
-            "url": "https://mtp.indianrailways.gov.in",
+            "url": "https://mtp.indianrailways.gov.in/ministry/about-us",
             "retrieved_at": "2026-10-07",
             "kind": "official"
           }
@@ -410,7 +410,7 @@
           "notes": "Remaining northern section of the 29.87 km circumferential corridor connecting New Town and Rajarhat to NSCBI Airport.",
           "source": {
             "title": "Project Highlights - Orange Line - Metro Railway Kolkata",
-            "url": "https://mtp.indianrailways.gov.in",
+            "url": "https://mtp.indianrailways.gov.in/ministry/about-us",
             "retrieved_at": "2026-10-07",
             "kind": "official"
           }
@@ -426,7 +426,7 @@
       "topology": "linear",
       "operational_stations": 0,
       "operational_length_km": 0,
-      "planned_length_km": 12.50,
+      "planned_length_km": 12.5,
       "terminals": [
         "Baranagar",
         "Barrackpore"
@@ -443,7 +443,7 @@
           "notes": "12.50 km planned elevated corridor along BT Road. Sanctioned project that received clearance in August 2026 following municipal pipeline realignment agreement.",
           "source": {
             "title": "Project Highlights - Pink Line - Metro Railway Kolkata",
-            "url": "https://mtp.indianrailways.gov.in",
+            "url": "https://mtp.indianrailways.gov.in/ministry/about-us",
             "retrieved_at": "2026-10-07",
             "kind": "official"
           }

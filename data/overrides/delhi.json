@@ -1193,7 +1193,7 @@
       "city_id": "delhi",
       "stations_not_published": true,
       "references": [
-        "https://delhimetrorail.com/",
+        "https://delhimetrorail.com/pages/about-us/present-network",
         "https://www.openstreetmap.org/way/538930430"
       ]
     },
@@ -1201,19 +1201,26 @@
       "osmId": 20300114,
       "segment_id": "del-magenta-seg-02",
       "line_id": "del-magenta",
-      "line_name": "Magenta Line (Ext Phase IV)",
+      "line_name": "Magenta Line (Deepali Chowk - Majlis Park)",
       "phase": "IV",
-      "status": "construction",
+      "status": "operational",
       "gauge": "standard",
-      "inaugurated_on": null,
+      "inaugurated_on": "2026-03-08",
       "expected_completion": null,
-      "completion_unconfirmed": true,
+      "completion_unconfirmed": false,
       "color": "#CC338B",
       "city_id": "delhi",
+      "stations_count": 7,
+      "endpoint_station_ids": [
+        "del-deepali-chowk",
+        "del-majlis-park"
+      ],
       "references": [
-        "https://delhimetrorail.com/",
-        "https://www.openstreetmap.org/way/538930431"
-      ]
+        "https://delhimetrorail.com/pages/about-us/present-network",
+        "https://metrorailnews.in/modi-inaugurated-2-new-sections-of-delhi-metro/",
+        "https://www.tribuneindia.com/news/delhi/dmrc-begins-services-on-two-newly-inaugurated-corridors/"
+      ],
+      "last_verified": "2026-11-06"
     },
     {
       "osmId": 538930433,
@@ -1230,7 +1237,7 @@
       "city_id": "delhi",
       "stations_not_published": true,
       "references": [
-        "https://delhimetrorail.com/",
+        "https://delhimetrorail.com/pages/about-us/present-network",
         "https://www.openstreetmap.org/way/538930433"
       ]
     },
@@ -1243,16 +1250,17 @@
       "status": "construction",
       "gauge": "standard",
       "inaugurated_on": null,
-      "expected_completion": null,
+      "expected_completion": "2026-12",
       "completion_unconfirmed": true,
       "color": "#B8860B",
       "city_id": "delhi",
       "references": [
-        "https://delhimetrorail.com/",
+        "https://delhimetrorail.com/pages/about-us/present-network",
         "https://themetrorailguy.com/2024/01/27/delhi-metros-silver-line-renamed-to-golden-line-line-10/",
+        "https://www.devdiscourse.com/article/business/3918126-dmrc-eyes-december-rollout-for-key-phase-4-corridors-fixes-target-for-phase-5-expansion",
         "https://www.openstreetmap.org/way/538930435"
       ],
-      "last_verified": "2026-10-10",
+      "last_verified": "2026-11-06",
       "geometry_quality": "schematic",
       "coordinates": [
         [
@@ -1555,7 +1563,7 @@
       "color": "#B8860B",
       "city_id": "delhi",
       "references": [
-        "https://delhimetrorail.com/",
+        "https://delhimetrorail.com/pages/about-us/present-network",
         "https://themetrorailguy.com/2024/01/27/delhi-metros-silver-line-renamed-to-golden-line-line-10/",
         "https://www.openstreetmap.org/way/538930423"
       ],
@@ -1742,11 +1750,14 @@
       "status": "operational",
       "layout": "elevated",
       "references": [
-        "https://www.delhimetrorail.com/network_map"
+        "https://www.delhimetrorail.com/network_map",
+        "https://metrorailnews.in/modi-inaugurated-2-new-sections-of-delhi-metro/",
+        "https://www.tribuneindia.com/news/delhi/dmrc-begins-services-on-two-newly-inaugurated-corridors/"
       ],
-      "last_verified": "2026-10-08",
+      "last_verified": "2026-11-06",
       "line_ids": [
-        "del-yellow"
+        "del-yellow",
+        "del-magenta"
       ]
     },
     "Saket": {
@@ -2064,14 +2075,88 @@
       "last_verified": "2026-10-08"
     },
     "Madhuban Chowk": {
+      "status": "operational",
+      "layout": "elevated",
       "line_ids": [
-        "del-red"
-      ]
+        "del-red",
+        "del-magenta"
+      ],
+      "references": [
+        "https://www.delhimetrorail.com/network_map",
+        "https://metrorailnews.in/modi-inaugurated-2-new-sections-of-delhi-metro/",
+        "https://www.tribuneindia.com/news/delhi/dmrc-begins-services-on-two-newly-inaugurated-corridors/"
+      ],
+      "last_verified": "2026-11-06"
     },
     "Majlis Park": {
+      "status": "operational",
+      "layout": "elevated",
       "line_ids": [
-        "del-pink"
-      ]
+        "del-pink",
+        "del-magenta"
+      ],
+      "references": [
+        "https://delhimetrorail.com/pages/about-us/present-network",
+        "https://metrorailnews.in/modi-inaugurated-2-new-sections-of-delhi-metro/",
+        "https://www.tribuneindia.com/news/delhi/dmrc-begins-services-on-two-newly-inaugurated-corridors/"
+      ],
+      "last_verified": "2026-11-06"
+    },
+    "Deepali Chowk": {
+      "status": "operational",
+      "layout": "elevated",
+      "opened_on": "2026-03-08",
+      "line_ids": [
+        "del-magenta"
+      ],
+      "references": [
+        "https://delhimetrorail.com/pages/about-us/present-network",
+        "https://metrorailnews.in/modi-inaugurated-2-new-sections-of-delhi-metro/",
+        "https://www.tribuneindia.com/news/delhi/dmrc-begins-services-on-two-newly-inaugurated-corridors/"
+      ],
+      "last_verified": "2026-11-06"
+    },
+    "North Pitampura - Prashant Vihar": {
+      "status": "operational",
+      "layout": "elevated",
+      "opened_on": "2026-03-08",
+      "line_ids": [
+        "del-magenta"
+      ],
+      "references": [
+        "https://delhimetrorail.com/pages/about-us/present-network",
+        "https://metrorailnews.in/modi-inaugurated-2-new-sections-of-delhi-metro/",
+        "https://www.tribuneindia.com/news/delhi/dmrc-begins-services-on-two-newly-inaugurated-corridors/"
+      ],
+      "last_verified": "2026-11-06"
+    },
+    "Haiderpur Village": {
+      "status": "operational",
+      "layout": "elevated",
+      "opened_on": "2026-03-08",
+      "line_ids": [
+        "del-magenta"
+      ],
+      "references": [
+        "https://delhimetrorail.com/pages/about-us/present-network",
+        "https://metrorailnews.in/modi-inaugurated-2-new-sections-of-delhi-metro/",
+        "https://www.tribuneindia.com/news/delhi/dmrc-begins-services-on-two-newly-inaugurated-corridors/"
+      ],
+      "last_verified": "2026-11-06"
+    },
+    "Bhalaswa": {
+      "status": "operational",
+      "layout": "elevated",
+      "opened_on": "2026-03-08",
+      "line_ids": [
+        "del-magenta"
+      ],
+      "references": [
+        "https://delhimetrorail.com/pages/about-us/present-network",
+        "https://metrorailnews.in/modi-inaugurated-2-new-sections-of-delhi-metro/",
+        "https://www.tribuneindia.com/news/delhi/dmrc-begins-services-on-two-newly-inaugurated-corridors/"
+      ],
+      "last_verified": "2026-11-06"
     },
     "Inderlok": {
       "line_ids": [
@@ -2254,7 +2339,7 @@
       "status": "planned",
       "phase": "IV",
       "references": [
-        "https://delhimetrorail.com/",
+        "https://delhimetrorail.com/pages/about-us/present-network",
         "https://themetrorailguy.com/2024/01/27/delhi-metros-silver-line-renamed-to-golden-line-line-10/"
       ],
       "last_verified": "2026-10-10"

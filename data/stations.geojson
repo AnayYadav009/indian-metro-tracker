@@ -754,10 +754,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -787,10 +785,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -820,10 +816,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -853,10 +847,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -886,10 +878,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -919,10 +909,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -952,10 +940,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -985,10 +971,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1018,10 +1002,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1051,10 +1033,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1084,10 +1064,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1118,10 +1096,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10",
         "interchange_id": "chennai-alandur"
       }
@@ -1152,10 +1128,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1185,10 +1159,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1218,10 +1190,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1251,10 +1221,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1284,10 +1252,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1306,11 +1272,12 @@
         "city_id": "chennai",
         "city": "Chennai",
         "line_ids": [
-          "che-green"
+          "che-green",
+          "che-corridor-4"
         ],
         "status": "operational",
         "phase": "1",
-        "is_interchange": false,
+        "is_interchange": true,
         "opened_on": null,
         "expected_completion": null,
         "completion_unconfirmed": false,
@@ -1318,10 +1285,11 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://chennaimetrorail.org"
+          "https://chennaimetrorail.org/wp-content/uploads/2026/10/Fare-Table.pdf"
         ],
         "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-10"
+        "retrieved_at": "2026-10-10",
+        "interchange_id": "chennai-vadapalani"
       }
     },
     {
@@ -1350,10 +1318,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1383,10 +1349,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1416,10 +1380,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1450,10 +1412,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10",
         "interchange_id": "chennai-chennai-central"
       }
@@ -1484,10 +1444,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1517,10 +1475,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1550,10 +1506,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1583,10 +1537,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1616,10 +1568,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1649,10 +1599,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1682,10 +1630,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1715,10 +1661,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1748,10 +1692,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1781,10 +1723,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1814,10 +1754,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1847,10 +1785,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1880,10 +1816,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1913,10 +1847,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1946,10 +1878,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -1979,10 +1909,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -2012,10 +1940,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -2045,10 +1971,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -2078,10 +2002,8 @@
         "layout": "at-grade",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://chennaimetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-10"
       }
     },
@@ -2111,10 +2033,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2144,10 +2064,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2177,10 +2095,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2210,10 +2126,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2243,10 +2157,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2276,10 +2188,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2309,10 +2219,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2342,10 +2250,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2375,10 +2281,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2408,10 +2312,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2441,10 +2343,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2474,10 +2374,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2510,7 +2408,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://www.punemetrorail.org"
+          "https://www.pmrda.gov.in/en/pune-metro-line-3/"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16",
@@ -2543,10 +2441,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2576,10 +2472,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2609,10 +2503,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2642,10 +2534,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2675,10 +2565,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2708,10 +2596,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2741,10 +2627,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2774,10 +2658,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2807,10 +2689,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2840,10 +2720,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2873,10 +2751,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2906,10 +2782,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2939,10 +2813,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -2972,10 +2844,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -3005,10 +2875,8 @@
         "layout": "underground",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -3038,10 +2906,8 @@
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
-        "references": [
-          "https://www.punemetrorail.org"
-        ],
-        "last_verified": "2026-10-08",
+        "references": [],
+        "last_verified": null,
         "retrieved_at": "2026-10-16"
       }
     },
@@ -4477,9 +4343,12 @@
         "expected_completion": null,
         "completion_unconfirmed": false,
         "layout": "elevated",
-        "layout_source": "osm-tag",
+        "layout_source": "operator",
         "source": "osm",
-        "references": [],
+        "references": [
+          "https://www.thehansindia.com/karnataka/bengaluru-pink-line-metro-gets-statutory-safety-clearance-planned-inauguration-in-nov-1017124",
+          "https://english.bmrc.co.in/FileUploads/0091bf_Phase2.pdf"
+        ],
         "last_verified": null,
         "retrieved_at": "2026-10-10",
         "interchange_id": "blr-jayadeva-hospital"
@@ -5558,39 +5427,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          77.59998,
-          12.91673
-        ]
-      },
-      "properties": {
-        "station_id": "blr-jayadeva-interchange-uc",
-        "name": "Jayadeva Interchange (u/c)",
-        "city_id": "bengaluru",
-        "city": "Bengaluru",
-        "line_ids": [
-          "blr-yellow",
-          "blr-pink"
-        ],
-        "status": "construction",
-        "phase": "2",
-        "is_interchange": true,
-        "opened_on": null,
-        "expected_completion": null,
-        "completion_unconfirmed": true,
-        "layout": null,
-        "layout_source": "unverified",
-        "source": "osm",
-        "references": [],
-        "last_verified": null,
-        "retrieved_at": "2026-10-10",
-        "interchange_id": "blr-jayadeva-interchange-uc"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           77.49837,
           12.92424
         ]
@@ -5731,13 +5567,14 @@
         "phase": "2",
         "is_interchange": false,
         "opened_on": null,
-        "expected_completion": "2026-12",
+        "expected_completion": "2026-11",
         "completion_unconfirmed": false,
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://english.bmrc.co.in/FileUploads/0091bf_Phase2.pdf"
+          "https://www.thehansindia.com/karnataka/bengaluru-pink-line-metro-gets-statutory-safety-clearance-planned-inauguration-in-nov-1017124",
+          "https://swarajyamag.com/infrastructure/bengaluru-namma-metros-pink-line-set-for-cmrs-inspection-key-elevated-stretch-nears-completion"
         ],
         "last_verified": null,
         "retrieved_at": "2026-10-10"
@@ -5835,7 +5672,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mmrda.maharashtra.gov.in/"
+          "https://mmrda.maharashtra.gov.in/metro-line-1"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10",
@@ -6152,7 +5989,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mmrda.maharashtra.gov.in/"
+          "https://mmrda.maharashtra.gov.in/metro-line-1"
         ],
         "last_verified": null,
         "retrieved_at": "2026-10-10",
@@ -6599,7 +6436,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mmrda.maharashtra.gov.in/"
+          "https://mmrda.maharashtra.gov.in/metro-line-4"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-10"
@@ -8497,7 +8334,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mmrda.maharashtra.gov.in/"
+          "https://mmrda.maharashtra.gov.in/metro-line-4"
         ],
         "last_verified": null,
         "retrieved_at": "2026-10-10"
@@ -8594,7 +8431,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mmrda.maharashtra.gov.in/"
+          "https://mmrda.maharashtra.gov.in/metro-line-4"
         ],
         "last_verified": null,
         "retrieved_at": "2026-10-10"
@@ -8627,7 +8464,7 @@
         "layout_source": "unverified",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-13",
         "retrieved_at": "2026-10-16"
@@ -8808,14 +8645,16 @@
         "status": "operational",
         "phase": "6",
         "is_interchange": false,
-        "opened_on": null,
+        "opened_on": "2025-08-22",
         "expected_completion": null,
         "completion_unconfirmed": false,
-        "layout": null,
-        "layout_source": "unverified",
+        "layout": "elevated",
+        "layout_source": "operator",
         "source": "osm",
-        "references": [],
-        "last_verified": null,
+        "references": [
+          "https://pib.gov.in/PressReleasePage.aspx?PRID=2159869"
+        ],
+        "last_verified": "2026-10-07",
         "retrieved_at": "2026-10-16"
       }
     },
@@ -8972,7 +8811,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16"
@@ -9036,7 +8875,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16"
@@ -9069,7 +8908,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16"
@@ -9290,7 +9129,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16"
@@ -9354,7 +9193,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16"
@@ -9387,7 +9226,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16"
@@ -9420,7 +9259,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16"
@@ -9453,7 +9292,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16"
@@ -9486,7 +9325,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16"
@@ -9519,7 +9358,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16"
@@ -9552,7 +9391,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16"
@@ -9586,7 +9425,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16",
@@ -9620,7 +9459,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16"
@@ -9653,7 +9492,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16"
@@ -9686,7 +9525,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16"
@@ -9719,7 +9558,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16"
@@ -9752,7 +9591,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16"
@@ -9777,7 +9616,7 @@
         ],
         "status": "operational",
         "phase": "2",
-        "is_interchange": false,
+        "is_interchange": true,
         "opened_on": null,
         "expected_completion": null,
         "completion_unconfirmed": false,
@@ -9786,7 +9625,8 @@
         "source": "osm",
         "references": [],
         "last_verified": null,
-        "retrieved_at": "2026-10-16"
+        "retrieved_at": "2026-10-16",
+        "interchange_id": "int-kolkata-sector-v"
       }
     },
     {
@@ -9816,7 +9656,9 @@
         "layout_source": "unverified",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us",
+          "https://www.squareyards.com/blog/kolkata-metro-beleghata-it-centre",
+          "https://swarajyamag.com/news-brief/trial-runs-for-kolkata-metros-orange-line-extension-to-sector-v-scheduled-to-begin-10th-october-2026"
         ],
         "last_verified": "2026-10-13",
         "retrieved_at": "2026-10-16"
@@ -10004,7 +9846,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16"
@@ -10161,7 +10003,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16"
@@ -10194,7 +10036,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16"
@@ -10227,7 +10069,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://mtp.indianrailways.gov.in"
+          "https://mtp.indianrailways.gov.in/ministry/about-us"
         ],
         "last_verified": "2026-10-08",
         "retrieved_at": "2026-10-16"
@@ -17350,20 +17192,26 @@
         "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
-          "del-red"
+          "del-red",
+          "del-magenta"
         ],
         "status": "operational",
         "phase": "I",
-        "is_interchange": false,
+        "is_interchange": true,
         "opened_on": null,
         "expected_completion": null,
         "completion_unconfirmed": false,
-        "layout": null,
-        "layout_source": "unverified",
+        "layout": "elevated",
+        "layout_source": "operator",
         "source": "osm",
-        "references": [],
-        "last_verified": null,
-        "retrieved_at": "2026-10-16"
+        "references": [
+          "https://www.delhimetrorail.com/network_map",
+          "https://metrorailnews.in/modi-inaugurated-2-new-sections-of-delhi-metro/",
+          "https://www.tribuneindia.com/news/delhi/dmrc-begins-services-on-two-newly-inaugurated-corridors/"
+        ],
+        "last_verified": "2026-11-06",
+        "retrieved_at": "2026-10-16",
+        "interchange_id": "del-madhuban-chowk"
       }
     },
     {
@@ -20060,11 +19908,12 @@
         "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
-          "del-yellow"
+          "del-yellow",
+          "del-magenta"
         ],
         "status": "operational",
         "phase": "I",
-        "is_interchange": false,
+        "is_interchange": true,
         "opened_on": null,
         "expected_completion": null,
         "completion_unconfirmed": false,
@@ -20072,10 +19921,13 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://www.delhimetrorail.com/network_map"
+          "https://www.delhimetrorail.com/network_map",
+          "https://metrorailnews.in/modi-inaugurated-2-new-sections-of-delhi-metro/",
+          "https://www.tribuneindia.com/news/delhi/dmrc-begins-services-on-two-newly-inaugurated-corridors/"
         ],
-        "last_verified": "2026-10-08",
-        "retrieved_at": "2026-10-16"
+        "last_verified": "2026-11-06",
+        "retrieved_at": "2026-10-16",
+        "interchange_id": "del-haiderpur-badli-mor"
       }
     },
     {
@@ -20999,17 +20851,21 @@
         "line_ids": [
           "del-magenta"
         ],
-        "status": "construction",
+        "status": "operational",
         "phase": "IV",
         "is_interchange": false,
-        "opened_on": null,
+        "opened_on": "2026-03-08",
         "expected_completion": null,
-        "completion_unconfirmed": true,
-        "layout": null,
-        "layout_source": "unverified",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
         "source": "osm",
-        "references": [],
-        "last_verified": null,
+        "references": [
+          "https://delhimetrorail.com/pages/about-us/present-network",
+          "https://metrorailnews.in/modi-inaugurated-2-new-sections-of-delhi-metro/",
+          "https://www.tribuneindia.com/news/delhi/dmrc-begins-services-on-two-newly-inaugurated-corridors/"
+        ],
+        "last_verified": "2026-11-06",
         "retrieved_at": "2026-10-16"
       }
     },
@@ -21030,17 +20886,21 @@
         "line_ids": [
           "del-magenta"
         ],
-        "status": "construction",
+        "status": "operational",
         "phase": "IV",
         "is_interchange": false,
-        "opened_on": null,
+        "opened_on": "2026-03-08",
         "expected_completion": null,
-        "completion_unconfirmed": true,
-        "layout": null,
-        "layout_source": "unverified",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
         "source": "osm",
-        "references": [],
-        "last_verified": null,
+        "references": [
+          "https://delhimetrorail.com/pages/about-us/present-network",
+          "https://metrorailnews.in/modi-inaugurated-2-new-sections-of-delhi-metro/",
+          "https://www.tribuneindia.com/news/delhi/dmrc-begins-services-on-two-newly-inaugurated-corridors/"
+        ],
+        "last_verified": "2026-11-06",
         "retrieved_at": "2026-10-16"
       }
     },
@@ -21061,17 +20921,21 @@
         "line_ids": [
           "del-magenta"
         ],
-        "status": "construction",
+        "status": "operational",
         "phase": "IV",
         "is_interchange": false,
-        "opened_on": null,
+        "opened_on": "2026-03-08",
         "expected_completion": null,
-        "completion_unconfirmed": true,
-        "layout": null,
-        "layout_source": "unverified",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
         "source": "osm",
-        "references": [],
-        "last_verified": null,
+        "references": [
+          "https://delhimetrorail.com/pages/about-us/present-network",
+          "https://metrorailnews.in/modi-inaugurated-2-new-sections-of-delhi-metro/",
+          "https://www.tribuneindia.com/news/delhi/dmrc-begins-services-on-two-newly-inaugurated-corridors/"
+        ],
+        "last_verified": "2026-11-06",
         "retrieved_at": "2026-10-16"
       }
     },
@@ -21092,17 +20956,21 @@
         "line_ids": [
           "del-magenta"
         ],
-        "status": "construction",
+        "status": "operational",
         "phase": "IV",
         "is_interchange": false,
-        "opened_on": null,
+        "opened_on": "2026-03-08",
         "expected_completion": null,
-        "completion_unconfirmed": true,
-        "layout": null,
-        "layout_source": "unverified",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
         "source": "osm",
-        "references": [],
-        "last_verified": null,
+        "references": [
+          "https://delhimetrorail.com/pages/about-us/present-network",
+          "https://metrorailnews.in/modi-inaugurated-2-new-sections-of-delhi-metro/",
+          "https://www.tribuneindia.com/news/delhi/dmrc-begins-services-on-two-newly-inaugurated-corridors/"
+        ],
+        "last_verified": "2026-11-06",
         "retrieved_at": "2026-10-16"
       }
     },
@@ -21544,20 +21412,26 @@
         "city_id": "delhi",
         "city": "Delhi",
         "line_ids": [
-          "del-pink"
+          "del-pink",
+          "del-magenta"
         ],
         "status": "operational",
         "phase": "III",
-        "is_interchange": false,
+        "is_interchange": true,
         "opened_on": null,
         "expected_completion": null,
         "completion_unconfirmed": false,
-        "layout": null,
-        "layout_source": "unverified",
+        "layout": "elevated",
+        "layout_source": "operator",
         "source": "osm",
-        "references": [],
-        "last_verified": null,
-        "retrieved_at": "2026-10-16"
+        "references": [
+          "https://delhimetrorail.com/pages/about-us/present-network",
+          "https://metrorailnews.in/modi-inaugurated-2-new-sections-of-delhi-metro/",
+          "https://www.tribuneindia.com/news/delhi/dmrc-begins-services-on-two-newly-inaugurated-corridors/"
+        ],
+        "last_verified": "2026-11-06",
+        "retrieved_at": "2026-10-16",
+        "interchange_id": "del-majlis-park"
       }
     },
     {
@@ -25665,7 +25539,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://www.gujaratmetrorail.com"
+          "https://www.gujaratmetrorail.com/projects/surat-metro-rail-project-phase-i/"
         ],
         "last_verified": "2026-10-15",
         "retrieved_at": "2026-10-15"
@@ -25698,7 +25572,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://www.gujaratmetrorail.com"
+          "https://www.gujaratmetrorail.com/projects/surat-metro-rail-project-phase-i/"
         ],
         "last_verified": "2026-10-15",
         "retrieved_at": "2026-10-15"
@@ -25731,7 +25605,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://www.gujaratmetrorail.com"
+          "https://www.gujaratmetrorail.com/projects/surat-metro-rail-project-phase-i/"
         ],
         "last_verified": "2026-10-15",
         "retrieved_at": "2026-10-15"
@@ -25764,7 +25638,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://www.gujaratmetrorail.com"
+          "https://www.gujaratmetrorail.com/projects/surat-metro-rail-project-phase-i/"
         ],
         "last_verified": "2026-10-15",
         "retrieved_at": "2026-10-15"
@@ -25797,7 +25671,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://www.gujaratmetrorail.com"
+          "https://www.gujaratmetrorail.com/projects/surat-metro-rail-project-phase-i/"
         ],
         "last_verified": "2026-10-15",
         "retrieved_at": "2026-10-15"
@@ -25830,7 +25704,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://www.gujaratmetrorail.com"
+          "https://www.gujaratmetrorail.com/projects/surat-metro-rail-project-phase-i/"
         ],
         "last_verified": "2026-10-15",
         "retrieved_at": "2026-10-15"
@@ -25863,7 +25737,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://www.gujaratmetrorail.com"
+          "https://www.gujaratmetrorail.com/projects/surat-metro-rail-project-phase-i/"
         ],
         "last_verified": "2026-10-15",
         "retrieved_at": "2026-10-15"
@@ -25896,7 +25770,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://www.gujaratmetrorail.com"
+          "https://www.gujaratmetrorail.com/projects/surat-metro-rail-project-phase-i/"
         ],
         "last_verified": "2026-10-15",
         "retrieved_at": "2026-10-15"
@@ -25929,7 +25803,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://www.gujaratmetrorail.com"
+          "https://www.gujaratmetrorail.com/projects/surat-metro-rail-project-phase-i/"
         ],
         "last_verified": "2026-10-15",
         "retrieved_at": "2026-10-15"
@@ -25962,7 +25836,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://www.gujaratmetrorail.com"
+          "https://www.gujaratmetrorail.com/projects/surat-metro-rail-project-phase-i/"
         ],
         "last_verified": "2026-10-15",
         "retrieved_at": "2026-10-15"
@@ -25995,7 +25869,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://www.gujaratmetrorail.com"
+          "https://www.gujaratmetrorail.com/projects/surat-metro-rail-project-phase-i/"
         ],
         "last_verified": "2026-10-15",
         "retrieved_at": "2026-10-15"
@@ -26028,7 +25902,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://www.gujaratmetrorail.com"
+          "https://www.gujaratmetrorail.com/projects/surat-metro-rail-project-phase-i/"
         ],
         "last_verified": "2026-10-15",
         "retrieved_at": "2026-10-15"
@@ -26061,7 +25935,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://www.gujaratmetrorail.com"
+          "https://www.gujaratmetrorail.com/projects/surat-metro-rail-project-phase-i/"
         ],
         "last_verified": "2026-10-15",
         "retrieved_at": "2026-10-15"
@@ -26094,7 +25968,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://www.gujaratmetrorail.com"
+          "https://www.gujaratmetrorail.com/projects/surat-metro-rail-project-phase-i/"
         ],
         "last_verified": "2026-10-15",
         "retrieved_at": "2026-10-15"
@@ -26128,7 +26002,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://www.gujaratmetrorail.com"
+          "https://www.gujaratmetrorail.com/projects/surat-metro-rail-project-phase-i/"
         ],
         "last_verified": "2026-10-15",
         "retrieved_at": "2026-10-15",
@@ -26162,7 +26036,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://www.gujaratmetrorail.com"
+          "https://www.gujaratmetrorail.com/projects/surat-metro-rail-project-phase-i/"
         ],
         "last_verified": "2026-10-15",
         "retrieved_at": "2026-10-15"
@@ -26195,7 +26069,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://www.gujaratmetrorail.com"
+          "https://www.gujaratmetrorail.com/projects/surat-metro-rail-project-phase-i/"
         ],
         "last_verified": "2026-10-15",
         "retrieved_at": "2026-10-15"
@@ -26228,7 +26102,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://www.gujaratmetrorail.com"
+          "https://www.gujaratmetrorail.com/projects/surat-metro-rail-project-phase-i/"
         ],
         "last_verified": "2026-10-15",
         "retrieved_at": "2026-10-15"
@@ -26255,13 +26129,13 @@
         "phase": "1",
         "is_interchange": false,
         "opened_on": null,
-        "expected_completion": "2027-12",
+        "expected_completion": "2026-12",
         "completion_unconfirmed": false,
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://www.gujaratmetrorail.com"
+          "https://www.gujaratmetrorail.com/projects/surat-metro-rail-project-phase-i/"
         ],
         "last_verified": "2026-10-15",
         "retrieved_at": "2026-10-15"
@@ -26294,7 +26168,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://www.gujaratmetrorail.com"
+          "https://www.gujaratmetrorail.com/projects/surat-metro-rail-project-phase-i/"
         ],
         "last_verified": "2026-10-15",
         "retrieved_at": "2026-10-15"
@@ -26327,7 +26201,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://www.gujaratmetrorail.com"
+          "https://www.gujaratmetrorail.com/projects/surat-metro-rail-project-phase-i/"
         ],
         "last_verified": "2026-10-15",
         "retrieved_at": "2026-10-15"
@@ -26360,7 +26234,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://www.gujaratmetrorail.com"
+          "https://www.gujaratmetrorail.com/projects/surat-metro-rail-project-phase-i/"
         ],
         "last_verified": "2026-10-15",
         "retrieved_at": "2026-10-15"
@@ -26393,7 +26267,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://www.gujaratmetrorail.com"
+          "https://www.gujaratmetrorail.com/projects/surat-metro-rail-project-phase-i/"
         ],
         "last_verified": "2026-10-15",
         "retrieved_at": "2026-10-15"
@@ -26426,7 +26300,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://www.gujaratmetrorail.com"
+          "https://www.gujaratmetrorail.com/projects/surat-metro-rail-project-phase-i/"
         ],
         "last_verified": "2026-10-15",
         "retrieved_at": "2026-10-15"
@@ -26459,7 +26333,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://www.gujaratmetrorail.com"
+          "https://www.gujaratmetrorail.com/projects/surat-metro-rail-project-phase-i/"
         ],
         "last_verified": "2026-10-15",
         "retrieved_at": "2026-10-15"
@@ -26486,13 +26360,13 @@
         "phase": "1",
         "is_interchange": false,
         "opened_on": null,
-        "expected_completion": "2027-12",
+        "expected_completion": "2026-12",
         "completion_unconfirmed": false,
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://www.gujaratmetrorail.com"
+          "https://www.gujaratmetrorail.com/projects/surat-metro-rail-project-phase-i/"
         ],
         "last_verified": "2026-10-15",
         "retrieved_at": "2026-10-15"
@@ -26525,7 +26399,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://www.gujaratmetrorail.com"
+          "https://www.gujaratmetrorail.com/projects/surat-metro-rail-project-phase-i/"
         ],
         "last_verified": "2026-10-15",
         "retrieved_at": "2026-10-15"
@@ -26552,13 +26426,13 @@
         "phase": "1",
         "is_interchange": false,
         "opened_on": null,
-        "expected_completion": "2027-12",
+        "expected_completion": "2026-12",
         "completion_unconfirmed": false,
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://www.gujaratmetrorail.com"
+          "https://www.gujaratmetrorail.com/projects/surat-metro-rail-project-phase-i/"
         ],
         "last_verified": "2026-10-15",
         "retrieved_at": "2026-10-15"
@@ -26585,13 +26459,13 @@
         "phase": "1",
         "is_interchange": false,
         "opened_on": null,
-        "expected_completion": "2027-12",
+        "expected_completion": "2026-12",
         "completion_unconfirmed": false,
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://www.gujaratmetrorail.com"
+          "https://www.gujaratmetrorail.com/projects/surat-metro-rail-project-phase-i/"
         ],
         "last_verified": "2026-10-15",
         "retrieved_at": "2026-10-15"
@@ -26618,13 +26492,13 @@
         "phase": "1",
         "is_interchange": false,
         "opened_on": null,
-        "expected_completion": "2027-12",
+        "expected_completion": "2026-12",
         "completion_unconfirmed": false,
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://www.gujaratmetrorail.com"
+          "https://www.gujaratmetrorail.com/projects/surat-metro-rail-project-phase-i/"
         ],
         "last_verified": "2026-10-15",
         "retrieved_at": "2026-10-15"
@@ -26651,13 +26525,13 @@
         "phase": "1",
         "is_interchange": false,
         "opened_on": null,
-        "expected_completion": "2027-12",
+        "expected_completion": "2026-12",
         "completion_unconfirmed": false,
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://www.gujaratmetrorail.com"
+          "https://www.gujaratmetrorail.com/projects/surat-metro-rail-project-phase-i/"
         ],
         "last_verified": "2026-10-15",
         "retrieved_at": "2026-10-15"
@@ -26684,13 +26558,13 @@
         "phase": "1",
         "is_interchange": false,
         "opened_on": null,
-        "expected_completion": "2027-12",
+        "expected_completion": "2026-12",
         "completion_unconfirmed": false,
         "layout": "elevated",
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://www.gujaratmetrorail.com"
+          "https://www.gujaratmetrorail.com/projects/surat-metro-rail-project-phase-i/"
         ],
         "last_verified": "2026-10-15",
         "retrieved_at": "2026-10-15"
@@ -26723,7 +26597,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://www.gujaratmetrorail.com"
+          "https://www.gujaratmetrorail.com/projects/surat-metro-rail-project-phase-i/"
         ],
         "last_verified": "2026-10-15",
         "retrieved_at": "2026-10-15"
@@ -26756,7 +26630,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://www.gujaratmetrorail.com"
+          "https://www.gujaratmetrorail.com/projects/surat-metro-rail-project-phase-i/"
         ],
         "last_verified": "2026-10-15",
         "retrieved_at": "2026-10-15"
@@ -26789,7 +26663,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://www.gujaratmetrorail.com"
+          "https://www.gujaratmetrorail.com/projects/surat-metro-rail-project-phase-i/"
         ],
         "last_verified": "2026-10-15",
         "retrieved_at": "2026-10-15"
@@ -26822,7 +26696,7 @@
         "layout_source": "operator",
         "source": "osm",
         "references": [
-          "https://www.gujaratmetrorail.com"
+          "https://www.gujaratmetrorail.com/projects/surat-metro-rail-project-phase-i/"
         ],
         "last_verified": "2026-10-15",
         "retrieved_at": "2026-10-15"
@@ -29561,11 +29435,1350 @@
         "layout_source": "unverified",
         "source": "osm",
         "references": [
-          "https://delhimetrorail.com/",
+          "https://delhimetrorail.com/pages/about-us/present-network",
           "https://themetrorailguy.com/2024/01/27/delhi-metros-silver-line-renamed-to-golden-line-line-10/"
         ],
         "last_verified": "2026-10-10",
         "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.15676,
+          13.03586
+        ]
+      },
+      "properties": {
+        "station_id": "chennai-porur-junction",
+        "name": "Porur Junction",
+        "city_id": "chennai",
+        "city": "Chennai",
+        "line_ids": [
+          "che-corridor-4"
+        ],
+        "status": "operational",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": "2026-10-11",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://chennaimetrorail.org/wp-content/uploads/2026/10/Fare-Table.pdf"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-10"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.08178,
+          13.04799
+        ]
+      },
+      "properties": {
+        "station_id": "chennai-poonamallee-bypass",
+        "name": "Poonamallee Bypass",
+        "city_id": "chennai",
+        "city": "Chennai",
+        "line_ids": [
+          "che-corridor-4"
+        ],
+        "status": "operational",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": "2026-10-11",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://chennaimetrorail.org/wp-content/uploads/2026/10/Fare-Table.pdf"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-10"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.14186,
+          13.03686
+        ]
+      },
+      "properties": {
+        "station_id": "chennai-thelliyaragaram",
+        "name": "Thelliyaragaram",
+        "city_id": "chennai",
+        "city": "Chennai",
+        "line_ids": [
+          "che-corridor-4"
+        ],
+        "status": "operational",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": "2026-10-11",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://chennaimetrorail.org/wp-content/uploads/2026/10/Fare-Table.pdf"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-10"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.14997,
+          13.03623
+        ]
+      },
+      "properties": {
+        "station_id": "chennai-porur-bypass",
+        "name": "Porur Bypass",
+        "city_id": "chennai",
+        "city": "Chennai",
+        "line_ids": [
+          "che-corridor-4"
+        ],
+        "status": "operational",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": "2026-10-11",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://chennaimetrorail.org/wp-content/uploads/2026/10/Fare-Table.pdf"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-10"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.11891,
+          13.04468
+        ]
+      },
+      "properties": {
+        "station_id": "chennai-kumananchavadi",
+        "name": "Kumananchavadi",
+        "city_id": "chennai",
+        "city": "Chennai",
+        "line_ids": [
+          "che-corridor-4"
+        ],
+        "status": "operational",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": "2026-10-11",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://chennaimetrorail.org/wp-content/uploads/2026/10/Fare-Table.pdf"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-10"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.102,
+          13.04971
+        ]
+      },
+      "properties": {
+        "station_id": "chennai-poonamallee-government-hospital",
+        "name": "Poonamallee Government Hospital",
+        "city_id": "chennai",
+        "city": "Chennai",
+        "line_ids": [
+          "che-corridor-4"
+        ],
+        "status": "operational",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": "2026-10-11",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://chennaimetrorail.org/wp-content/uploads/2026/10/Fare-Table.pdf"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-10"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.09492,
+          13.05092
+        ]
+      },
+      "properties": {
+        "station_id": "chennai-poonamallee-bus-stand",
+        "name": "Poonamallee Bus Stand",
+        "city_id": "chennai",
+        "city": "Chennai",
+        "line_ids": [
+          "che-corridor-4"
+        ],
+        "status": "operational",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": "2026-10-11",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://chennaimetrorail.org/wp-content/uploads/2026/10/Fare-Table.pdf"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-10"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.12538,
+          13.04198
+        ]
+      },
+      "properties": {
+        "station_id": "chennai-kattupakkam",
+        "name": "Kattupakkam",
+        "city_id": "chennai",
+        "city": "Chennai",
+        "line_ids": [
+          "che-corridor-4"
+        ],
+        "status": "operational",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": "2026-10-11",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://chennaimetrorail.org/wp-content/uploads/2026/10/Fare-Table.pdf"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-10"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.11091,
+          13.04671
+        ]
+      },
+      "properties": {
+        "station_id": "chennai-karayanchavadi",
+        "name": "Karayanchavadi",
+        "city_id": "chennai",
+        "city": "Chennai",
+        "line_ids": [
+          "che-corridor-4"
+        ],
+        "status": "operational",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": "2026-10-11",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://chennaimetrorail.org/wp-content/uploads/2026/10/Fare-Table.pdf"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-10"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.13499,
+          13.03818
+        ]
+      },
+      "properties": {
+        "station_id": "chennai-iyyappanthangal",
+        "name": "Iyyappanthangal",
+        "city_id": "chennai",
+        "city": "Chennai",
+        "line_ids": [
+          "che-corridor-4"
+        ],
+        "status": "operational",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": "2026-10-11",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://chennaimetrorail.org/wp-content/uploads/2026/10/Fare-Table.pdf"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-10"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.76154,
+          18.57971
+        ]
+      },
+      "properties": {
+        "station_id": "pune-balewadi-stadium",
+        "name": "Balewadi Stadium",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-line-3"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-11-04",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.pmrda.gov.in/en/pune-metro-line-3/"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.70289,
+          18.5881
+        ]
+      },
+      "properties": {
+        "station_id": "pune-maan",
+        "name": "Maan",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-line-3"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-11-04",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.pmrda.gov.in/en/pune-metro-line-3/"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.70922,
+          18.59419
+        ]
+      },
+      "properties": {
+        "station_id": "pune-infosys",
+        "name": "Infosys",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-line-3"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-11-04",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.pmrda.gov.in/en/pune-metro-line-3/"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.84149,
+          18.53301
+        ]
+      },
+      "properties": {
+        "station_id": "pune-agriculture-college",
+        "name": "Agriculture College",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-line-3"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-11-04",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.pmrda.gov.in/en/pune-metro-line-3/"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.71716,
+          18.59659
+        ]
+      },
+      "properties": {
+        "station_id": "pune-wipro",
+        "name": "Wipro",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-line-3"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-11-04",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.pmrda.gov.in/en/pune-metro-line-3/"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.75756,
+          18.5903
+        ]
+      },
+      "properties": {
+        "station_id": "pune-wakad-chowk",
+        "name": "Wakad Chowk",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-line-3"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-11-04",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.pmrda.gov.in/en/pune-metro-line-3/"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.82717,
+          18.54235
+        ]
+      },
+      "properties": {
+        "station_id": "pune-savitribai-phule-pune-university",
+        "name": "Savitribai Phule Pune University",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-line-3"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-11-04",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.pmrda.gov.in/en/pune-metro-line-3/"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.81967,
+          18.54632
+        ]
+      },
+      "properties": {
+        "station_id": "pune-yashada",
+        "name": "YASHADA",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-line-3"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-11-04",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.pmrda.gov.in/en/pune-metro-line-3/"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.80823,
+          18.55027
+        ]
+      },
+      "properties": {
+        "station_id": "pune-krushi-anusandhan",
+        "name": "Krushi Anusandhan",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-line-3"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-11-04",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.pmrda.gov.in/en/pune-metro-line-3/"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.76606,
+          18.57503
+        ]
+      },
+      "properties": {
+        "station_id": "pune-nicmar",
+        "name": "NICMAR",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-line-3"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-11-04",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.pmrda.gov.in/en/pune-metro-line-3/"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.7463,
+          18.59097
+        ]
+      },
+      "properties": {
+        "station_id": "pune-jakat-naka",
+        "name": "Jakat Naka",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-line-3"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-11-04",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.pmrda.gov.in/en/pune-metro-line-3/"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.73736,
+          18.59239
+        ]
+      },
+      "properties": {
+        "station_id": "pune-hinjawadi",
+        "name": "Hinjawadi",
+        "city_id": "pune",
+        "city": "Pune",
+        "line_ids": [
+          "pun-line-3"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-11-04",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.pmrda.gov.in/en/pune-metro-line-3/"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.70888,
+          29.07233
+        ]
+      },
+      "properties": {
+        "station_id": "meerut-modipuram",
+        "name": "Modipuram",
+        "city_id": "meerut",
+        "city": "Meerut",
+        "line_ids": [
+          "mee-line-1"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-02-22",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://ncrtc.in/wp-content/uploads/2025/10/File-update-24.10.25.pdf",
+          "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
+        ],
+        "last_verified": "2026-11-06",
+        "retrieved_at": "2026-11-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.70798,
+          29.06067
+        ]
+      },
+      "properties": {
+        "station_id": "meerut-meerut-north",
+        "name": "Meerut North",
+        "city_id": "meerut",
+        "city": "Meerut",
+        "line_ids": [
+          "mee-line-1"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-02-22",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://ncrtc.in/wp-content/uploads/2025/10/File-update-24.10.25.pdf",
+          "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
+        ],
+        "last_verified": "2026-11-06",
+        "retrieved_at": "2026-11-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.67388,
+          28.94775
+        ]
+      },
+      "properties": {
+        "station_id": "meerut-shatabdi-nagar",
+        "name": "Shatabdi Nagar",
+        "city_id": "meerut",
+        "city": "Meerut",
+        "line_ids": [
+          "mee-line-1"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-02-22",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://ncrtc.in/wp-content/uploads/2025/10/File-update-24.10.25.pdf",
+          "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
+        ],
+        "last_verified": "2026-11-06",
+        "retrieved_at": "2026-11-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.70462,
+          29.01596
+        ]
+      },
+      "properties": {
+        "station_id": "meerut-mes-colony",
+        "name": "MES Colony",
+        "city_id": "meerut",
+        "city": "Meerut",
+        "line_ids": [
+          "mee-line-1"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-02-22",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://ncrtc.in/wp-content/uploads/2025/10/File-update-24.10.25.pdf",
+          "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
+        ],
+        "last_verified": "2026-11-06",
+        "retrieved_at": "2026-11-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.6906,
+          28.97287
+        ]
+      },
+      "properties": {
+        "station_id": "meerut-meerut-central",
+        "name": "Meerut Central",
+        "city_id": "meerut",
+        "city": "Meerut",
+        "line_ids": [
+          "mee-line-1"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-02-22",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "underground",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://ncrtc.in/wp-content/uploads/2025/10/File-update-24.10.25.pdf",
+          "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
+        ],
+        "last_verified": "2026-11-06",
+        "retrieved_at": "2026-11-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.63284,
+          28.90473
+        ]
+      },
+      "properties": {
+        "station_id": "meerut-meerut-south",
+        "name": "Meerut South",
+        "city_id": "meerut",
+        "city": "Meerut",
+        "line_ids": [
+          "mee-line-1"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-02-22",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://ncrtc.in/wp-content/uploads/2025/10/File-update-24.10.25.pdf",
+          "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
+        ],
+        "last_verified": "2026-11-06",
+        "retrieved_at": "2026-11-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.7056,
+          28.99674
+        ]
+      },
+      "properties": {
+        "station_id": "meerut-begumpul",
+        "name": "Begumpul",
+        "city_id": "meerut",
+        "city": "Meerut",
+        "line_ids": [
+          "mee-line-1"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-02-22",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "underground",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://ncrtc.in/wp-content/uploads/2025/10/File-update-24.10.25.pdf",
+          "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
+        ],
+        "last_verified": "2026-11-06",
+        "retrieved_at": "2026-11-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.70686,
+          29.04071
+        ]
+      },
+      "properties": {
+        "station_id": "meerut-daurli",
+        "name": "Daurli",
+        "city_id": "meerut",
+        "city": "Meerut",
+        "line_ids": [
+          "mee-line-1"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-02-22",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://ncrtc.in/wp-content/uploads/2025/10/File-update-24.10.25.pdf",
+          "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
+        ],
+        "last_verified": "2026-11-06",
+        "retrieved_at": "2026-11-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.66055,
+          28.93204
+        ]
+      },
+      "properties": {
+        "station_id": "meerut-rithani",
+        "name": "Rithani",
+        "city_id": "meerut",
+        "city": "Meerut",
+        "line_ids": [
+          "mee-line-1"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-02-22",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://ncrtc.in/wp-content/uploads/2025/10/File-update-24.10.25.pdf",
+          "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
+        ],
+        "last_verified": "2026-11-06",
+        "retrieved_at": "2026-11-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.68481,
+          28.9603
+        ]
+      },
+      "properties": {
+        "station_id": "meerut-brahmpuri",
+        "name": "Brahmpuri",
+        "city_id": "meerut",
+        "city": "Meerut",
+        "line_ids": [
+          "mee-line-1"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-02-22",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://ncrtc.in/wp-content/uploads/2025/10/File-update-24.10.25.pdf",
+          "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
+        ],
+        "last_verified": "2026-11-06",
+        "retrieved_at": "2026-11-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.65059,
+          28.92202
+        ]
+      },
+      "properties": {
+        "station_id": "meerut-partapur",
+        "name": "Partapur",
+        "city_id": "meerut",
+        "city": "Meerut",
+        "line_ids": [
+          "mee-line-1"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-02-22",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://ncrtc.in/wp-content/uploads/2025/10/File-update-24.10.25.pdf",
+          "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
+        ],
+        "last_verified": "2026-11-06",
+        "retrieved_at": "2026-11-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.70032,
+          28.98809
+        ]
+      },
+      "properties": {
+        "station_id": "meerut-bhaisali",
+        "name": "Bhaisali",
+        "city_id": "meerut",
+        "city": "Meerut",
+        "line_ids": [
+          "mee-line-1"
+        ],
+        "status": "operational",
+        "phase": "1",
+        "is_interchange": false,
+        "opened_on": "2026-02-22",
+        "expected_completion": null,
+        "completion_unconfirmed": false,
+        "layout": "underground",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://ncrtc.in/wp-content/uploads/2025/10/File-update-24.10.25.pdf",
+          "https://www.freepressjournal.in/amp/india/pm-modi-launches-meerut-metro-dedicates-full-delhimeerut-namo-bharat-corridor-video"
+        ],
+        "last_verified": "2026-11-06",
+        "retrieved_at": "2026-11-07"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.41467,
+          22.56112
+        ]
+      },
+      "properties": {
+        "station_id": "kolkata-gour-kishore-ghosh",
+        "name": "Gour Kishore Ghosh",
+        "city_id": "kolkata",
+        "city": "Kolkata",
+        "line_ids": [
+          "kol-orange"
+        ],
+        "status": "construction",
+        "phase": "6",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2026-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.squareyards.com/blog/kolkata-metro-beleghata-it-centre",
+          "https://swarajyamag.com/news-brief/trial-runs-for-kolkata-metros-orange-line-extension-to-sector-v-scheduled-to-begin-10th-october-2026"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.42996,
+          22.58109
+        ]
+      },
+      "properties": {
+        "station_id": "kolkata-it-centre",
+        "name": "IT Centre",
+        "city_id": "kolkata",
+        "city": "Kolkata",
+        "line_ids": [
+          "kol-orange"
+        ],
+        "status": "construction",
+        "phase": "6",
+        "is_interchange": true,
+        "opened_on": null,
+        "expected_completion": "2026-12",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.squareyards.com/blog/kolkata-metro-beleghata-it-centre",
+          "https://swarajyamag.com/news-brief/trial-runs-for-kolkata-metros-orange-line-extension-to-sector-v-scheduled-to-begin-10th-october-2026"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-16",
+        "interchange_id": "int-kolkata-sector-v"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.59586,
+          12.88083
+        ]
+      },
+      "properties": {
+        "station_id": "blr-hulimavu",
+        "name": "Hulimavu",
+        "city_id": "bengaluru",
+        "city": "Bengaluru",
+        "line_ids": [
+          "blr-pink"
+        ],
+        "status": "construction",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2026-11",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.thehansindia.com/karnataka/bengaluru-pink-line-metro-gets-statutory-safety-clearance-planned-inauguration-in-nov-1017124",
+          "https://swarajyamag.com/infrastructure/bengaluru-namma-metros-pink-line-set-for-cmrs-inspection-key-elevated-stretch-nears-completion"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-10"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.59959,
+          12.89572
+        ]
+      },
+      "properties": {
+        "station_id": "blr-iimb",
+        "name": "IIMB",
+        "city_id": "bengaluru",
+        "city": "Bengaluru",
+        "line_ids": [
+          "blr-pink"
+        ],
+        "status": "construction",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2026-11",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.thehansindia.com/karnataka/bengaluru-pink-line-metro-gets-statutory-safety-clearance-planned-inauguration-in-nov-1017124",
+          "https://swarajyamag.com/infrastructure/bengaluru-namma-metros-pink-line-set-for-cmrs-inspection-key-elevated-stretch-nears-completion"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-10"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.60009,
+          12.90985
+        ]
+      },
+      "properties": {
+        "station_id": "blr-jp-nagar-4th-phase",
+        "name": "JP Nagar 4th Phase",
+        "city_id": "bengaluru",
+        "city": "Bengaluru",
+        "line_ids": [
+          "blr-pink"
+        ],
+        "status": "construction",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2026-11",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.thehansindia.com/karnataka/bengaluru-pink-line-metro-gets-statutory-safety-clearance-planned-inauguration-in-nov-1017124",
+          "https://swarajyamag.com/infrastructure/bengaluru-namma-metros-pink-line-set-for-cmrs-inspection-key-elevated-stretch-nears-completion"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-10"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.60054,
+          12.9295
+        ]
+      },
+      "properties": {
+        "station_id": "blr-tavarekere",
+        "name": "Tavarekere",
+        "city_id": "bengaluru",
+        "city": "Bengaluru",
+        "line_ids": [
+          "blr-pink"
+        ],
+        "status": "construction",
+        "phase": "2",
+        "is_interchange": false,
+        "opened_on": null,
+        "expected_completion": "2026-11",
+        "completion_unconfirmed": false,
+        "layout": "elevated",
+        "layout_source": "operator",
+        "source": "osm",
+        "references": [
+          "https://www.thehansindia.com/karnataka/bengaluru-pink-line-metro-gets-statutory-safety-clearance-planned-inauguration-in-nov-1017124",
+          "https://swarajyamag.com/infrastructure/bengaluru-namma-metros-pink-line-set-for-cmrs-inspection-key-elevated-stretch-nears-completion"
+        ],
+        "last_verified": null,
+        "retrieved_at": "2026-10-10"
       }
     }
   ]

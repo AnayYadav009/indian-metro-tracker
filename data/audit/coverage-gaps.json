@@ -19,6 +19,15 @@
     "review_date": "2027-01-15"
   },
   {
+    "city_id": "chennai",
+    "line_id": "che-corridor-4",
+    "stretch": "Vadapalani - Light House",
+    "status": "under_construction",
+    "source_url": "https://www.railwaygazette.com/india/2026/10/13/chennai-metro-opens-first-section-of-the-yellow-line-as-phase-ii-expansion-gathers-pace/",
+    "reason": "CMRL Phase II Corridor 4 eastern section (Vadapalani to Light House) is under active construction; alignment geometry not yet published in OSM cache.",
+    "review_date": "2027-01-15"
+  },
+  {
     "city_id": "noida",
     "line_id": "noi-aqua",
     "stretch": "Sector 142 to Botanical Garden",
@@ -106,26 +115,81 @@
     "line_id": "pun-purple",
     "stretch": "Range Hill station infill",
     "status": "under_construction",
-    "source_url": "https://www.punemetrorail.org",
-    "reason": "Maha Metro infill station on operational corridor delayed by defence land clearance; station node and track alignment are not separately compiled.",
-    "review_date": "2027-01-15"
+    "reason": "Maha Metro’s official Line 1 profile lists Range Hill on the corridor; the compiled dataset has no coordinate-supported feature for this station. Its current operating status is unconfirmed.",
+    "review_date": "2027-01-15",
+    "source_url": "https://www.punemetrorail.org/Line_b.aspx?lang=en-US"
   },
   {
     "city_id": "pune",
     "line_id": "pun-purple",
     "stretch": "PCMC - Nigdi (Bhakti Shakti)",
     "status": "under_construction",
-    "source_url": "https://www.punemetrorail.org",
     "reason": "Maha Metro Phase 1A northern extension (4.41 km) is under construction; alignment geometry is not yet present in the compiled dataset.",
-    "review_date": "2027-01-15"
+    "review_date": "2027-01-15",
+    "source_url": "https://www.punemetrorail.org/Line_b.aspx?lang=en-US"
   },
   {
     "city_id": "pune",
     "line_id": "pun-purple",
     "stretch": "Swargate - Katraj",
     "status": "under_construction",
-    "source_url": "https://www.punemetrorail.org",
     "reason": "Maha Metro Phase 1B southern underground extension (5.46 km) approved/tendered; alignment geometry is not yet present in the compiled dataset.",
+    "review_date": "2027-01-15",
+    "source_url": "https://www.punemetrorail.org/Line_b.aspx?lang=en-US"
+  },
+  {
+    "city_id": "hyderabad",
+    "line_id": "hyd-green",
+    "stretch": "MG Bus Station - Chandrayangutta (via Falaknuma)",
+    "segment_id": "hyd-green-seg-02",
+    "status": "under_construction",
+    "source_url": "https://hmrl.co.in/old-city-metro-rail-corridor-expansion-works-accelerated-hmrl-additional-md-mr-b-ajith-reddy-conducts-field-inspection/",
+    "reason": "Foundation stone laid March 8, 2024 for 7 km Old City expansion; pre-construction works underway while intermediate station surveyed geometry remains uncompiled in OSM cache.",
+    "review_date": "2027-01-15"
+  },
+  {
+    "city_id": "mumbai",
+    "line_id": "mum-line-4",
+    "stretch": "Thane Integral Ring Metro",
+    "status": "planned",
+    "source_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2045952",
+    "reason": "Union Cabinet approved 29-km, 22-station Thane Integral Ring Metro Rail Project on August 16, 2024 (PRID 2045952) executed by Maha Metro; detailed surveyed alignment not yet compiled in OSM.",
+    "review_date": "2027-01-15"
+  },
+  {
+    "city_id": "pune",
+    "line_id": "pun-line-4",
+    "stretch": "Line 4 (Kharadi - Khadakwasla) & Line 4A (Nal Stop - Warje - Manik Baug)",
+    "status": "planned",
+    "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2194711",
+    "reason": "Union Cabinet approved Pune Metro Phase-2 on 26 November 2025, comprising Line 4 (25.52 km, 22 stations) and Line 4A (6.12 km, 6 stations) totaling 31.636 km with 28 elevated stations at ₹9,857.85 crore; surveyed alignment geometry not yet published in OSM.",
+    "review_date": "2027-01-15"
+  },
+  {
+    "city_id": "noida",
+    "line_id": "noi-aqua",
+    "stretch": "Sector 51 to Greater Noida Sector 4",
+    "status": "planned",
+    "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334971",
+    "reason": "Union Cabinet approved 8.449 km, 5-station elevated extension of Noida Metro Aqua Line from Sector-51 to Greater Noida Sector-04; surveyed alignment geometry not yet published in OSM.",
+    "review_date": "2027-01-15"
+  },
+  {
+    "city_id": "jaipur",
+    "line_id": "jai-phase-2",
+    "stretch": "Prahladpura to Todi Mod (Phase 2)",
+    "status": "planned",
+    "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2250040",
+    "reason": "Union Cabinet approved 41 km, 36-station North-South corridor of Jaipur Metro Phase-2 from Prahladpura to Todi Mod at ₹13,037.66 crore on April 8, 2026; surveyed alignment geometry not yet published in OSM.",
+    "review_date": "2027-01-15"
+  },
+  {
+    "city_id": "ahmedabad",
+    "line_id": "ahm-yellow",
+    "stretch": "Koteshwar Road to Airport (Phase 2A)",
+    "status": "planned",
+    "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2271058",
+    "reason": "Union Cabinet approved Ahmedabad Metro Phase 2A on 10 June 2026, comprising a 6.032 km corridor with 5 stations (Ashram Road, Koteshwar Prachin Mandir, Sabarmati River, Sardar Nagar, Airport) at ₹2,169.04 crore; line assignment ahm-yellow inferred from existing Koteshwar Road station; surveyed alignment geometry not yet published in OSM.",
     "review_date": "2027-01-15"
   }
 ]
