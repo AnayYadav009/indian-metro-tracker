@@ -3,7 +3,8 @@
 import React, { useMemo } from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { BarChart3, Navigation } from "lucide-react";
+import { BarChart3, Navigation, Building2, X } from "lucide-react";
+import citiesJson from "@/data/cities.json";
 import { MapSkeleton } from "@/components/map/map-skeleton";
 import { FilterPanel } from "@/components/filters/filter-panel";
 import { MetadataPanel } from "@/components/panels/metadata-panel";
@@ -35,6 +36,7 @@ export default function HomePage() {
   const setIsNearestPanelOpen = useMetroStore(
     (state) => state.setIsNearestPanelOpen
   );
+  const [isCityDirectoryOpen, setIsCityDirectoryOpen] = React.useState(false);
 
   return (
     <div className="flex h-dvh w-screen flex-col overflow-hidden bg-slate-950 text-slate-100">
@@ -68,6 +70,19 @@ export default function HomePage() {
             <Navigation className="h-3.5 w-3.5 text-emerald-400" />
             <span className="hidden sm:inline">Nearest</span>
           </button>
+          <button
+            onClick={() => setIsCityDirectoryOpen(!isCityDirectoryOpen)}
+            data-testid="city-directory-btn"
+            className={`inline-flex items-center gap-1.5 rounded-lg border px-2.5 py-1 text-xs font-medium transition-colors ${
+              isCityDirectoryOpen
+                ? "border-emerald-500 bg-emerald-500/20 text-emerald-300"
+                : "border-slate-700 bg-slate-800/80 text-slate-200 hover:border-slate-500 hover:bg-slate-700 hover:text-white"
+            }`}
+            title="Browse all city metro networks"
+          >
+            <Building2 className="h-3.5 w-3.5 text-emerald-400" />
+            <span className="hidden sm:inline">Cities</span>
+          </button>
           <Link
             href="/compare"
             data-testid="nav-to-compare"
@@ -100,6 +115,57 @@ export default function HomePage() {
         <EmptyFilterState />
         <TimelineSlider />
         <MapCanvas className="h-full w-full" />
+
+        {/* City Directory Modal */}
+        {isCityDirectoryOpen && (
+          <div
+            data-testid="city-directory-modal"
+            className="absolute inset-x-4 top-4 z-30 mx-auto max-w-lg rounded-xl border border-slate-700 bg-slate-900/95 p-4 shadow-2xl backdrop-blur max-h-[80vh] overflow-y-auto"
+          >
+            <div className="flex items-center justify-between pb-3 border-b border-slate-800">
+              <div className="flex items-center gap-2">
+                <Building2 className="h-4 w-4 text-emerald-400" />
+                <h2 className="text-sm font-semibold text-white">
+                  City Metro Directories ({citiesJson.length})
+                </h2>
+              </div>
+              <button
+                onClick={() => setIsCityDirectoryOpen(false)}
+                className="rounded-lg p-1 text-slate-400 hover:bg-slate-800 hover:text-white"
+                title="Close directory"
+              >
+                <X className="h-4 w-4" />
+              </button>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 pt-3">
+              {citiesJson.map((c) => (
+                <Link
+                  key={c.id}
+                  href={`/city/${c.id}/`}
+                  className="rounded-lg border border-slate-800 bg-slate-800/50 px-2.5 py-2 text-xs font-medium text-slate-200 hover:border-emerald-500 hover:bg-emerald-500/10 hover:text-emerald-300 transition-colors"
+                >
+                  {c.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Crawlable Semantic Nav for Search Engines */}
+        <nav
+          aria-label="City Directory"
+          data-testid="crawlable-city-directory"
+          className="sr-only"
+        >
+          <h2>City Metro Networks</h2>
+          <ul>
+            {citiesJson.map((city) => (
+              <li key={city.id}>
+                <Link href={`/city/${city.id}/`}>{city.name} Metro</Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
         {/* Bottom-right unified container: Legend stacked above Attribution */}
         <div
