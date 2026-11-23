@@ -7,7 +7,6 @@ import type { City, Line, SegmentFeatureCollection, StationFeatureCollection } f
 const ROOT_DIR = path.resolve(__dirname, "..");
 const DATA_DIR = path.join(ROOT_DIR, "data");
 const MOCK_DIR = path.join(DATA_DIR, "mock");
-const OVERRIDES_DIR = path.join(DATA_DIR, "overrides");
 
 export interface MigrationV2Options {
   currentDate?: string;

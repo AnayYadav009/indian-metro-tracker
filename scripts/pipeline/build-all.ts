@@ -8,6 +8,7 @@ import type { City, Line, SegmentFeature, StationFeature } from "../../types/met
 const DATA_DIR = path.resolve(process.cwd(), "data");
 
 async function main() {
+  const forceFetch = process.argv.includes("--force");
   const citiesPath = path.join(DATA_DIR, "cities.json");
   if (!fs.existsSync(citiesPath)) {
     throw new Error(`Cities file not found: ${citiesPath}`);
@@ -25,7 +26,7 @@ async function main() {
     console.log(`\n--------------------------------------------`);
     console.log(`Processing city: ${city.name} (${city.id})`);
     console.log(`--------------------------------------------`);
-    const cityData = await buildCityData(city.id);
+    const cityData = await buildCityData(city.id, forceFetch);
     allCities.push(cityData.city);
     allLines.push(...cityData.lines);
     allSegments.push(...cityData.segments);

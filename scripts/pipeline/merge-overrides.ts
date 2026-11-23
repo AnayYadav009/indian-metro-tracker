@@ -1,18 +1,58 @@
-import fs from "node:fs";
-import path from "node:path";
 import {
   calculateLineStringLengthKm,
   pointToPolylineDistanceM,
   haversineDistanceKm,
   haversineDistanceM,
+  nearestPointOnPolyline,
+  lineSlice,
 } from "../../lib/geo";
 import {
   slugify,
   type NormalizedCityData,
   type NormalizedSegment,
-  type NormalizedStation,
 } from "./normalize";
 import type { SegmentFeature, StationFeature } from "../../types/metro";
+
+type Coordinate = [number, number];
+
+function removeAdjacentDuplicateCoords(coords: Coordinate[]): Coordinate[] {
+  return coords.filter(
+    (coord, index) =>
+      index === 0 ||
+      coord[0] !== coords[index - 1][0] ||
+      coord[1] !== coords[index - 1][1]
+  );
+}
+
+function segmentsCross(
+  a: Coordinate,
+  b: Coordinate,
+  c: Coordinate,
+  d: Coordinate
+): boolean {
+  const cross = (o: Coordinate, p: Coordinate, q: Coordinate) =>
+    (p[0] - o[0]) * (q[1] - o[1]) - (p[1] - o[1]) * (q[0] - o[0]);
+  const abC = cross(a, b, c);
+  const abD = cross(a, b, d);
+  const cdA = cross(c, d, a);
+  const cdB = cross(c, d, b);
+  return (
+    ((abC > 0 && abD < 0) || (abC < 0 && abD > 0)) &&
+    ((cdA > 0 && cdB < 0) || (cdA < 0 && cdB > 0))
+  );
+}
+
+function removeShortSelfIntersectionSpur(coords: Coordinate[]): Coordinate[] {
+  for (let i = 0; i < coords.length - 3; i++) {
+    for (let j = i + 2; j < Math.min(coords.length - 1, i + 50); j++) {
+      if (j === i + 1) continue;
+      if (segmentsCross(coords[i], coords[i + 1], coords[j], coords[j + 1])) {
+        return [...coords.slice(0, i + 1), ...coords.slice(j + 1)];
+      }
+    }
+  }
+  return coords;
+}
 
 export interface CityOverrideData {
   city: {
@@ -30,6 +70,7 @@ export interface CityOverrideData {
     color: string;
     operator: string;
     source: string;
+    aliases?: string[];
   }>;
   segments: Array<{
     osmId?: number;
@@ -48,10 +89,18 @@ export interface CityOverrideData {
     completion_unconfirmed?: boolean;
     last_verified?: string;
     geometry_quality?: "exact" | "schematic";
+    endpoint_station_ids?: string[];
   }>;
   interchangeStationNames?: string[];
   dedupeRadiusM?: number;
   stationAliases?: Record<string, string>;
+  additionalStations?: Array<{
+    osmId: number;
+    name: string;
+    coordinates: [number, number];
+    lineRefs?: string[];
+    status?: "operational" | "construction" | "planned";
+  }>;
   stationOverrides?: Record<
     string,
     {
@@ -70,14 +119,40 @@ export interface CityOverrideData {
   out_of_scope_line_ids?: string[];
 }
 
+/**
+ * Shape of a single entry in data/overrides/interchanges.json.
+ * - interchange_id: string → assign this station to the named cluster (merge)
+ * - interchange_id: null → remove from any auto-derived cluster (split)
+ */
+export interface InterchangeCorrection {
+  interchange_id: string | null;
+}
+
+/** Map of station_id → correction read from data/overrides/interchanges.json. */
+export type InterchangeCorrectionsMap = Record<string, InterchangeCorrection>;
+
 export function mergeCityOverrides(
   normalized: NormalizedCityData,
   overrides: CityOverrideData,
-  retrievedAt?: string
+  retrievedAt?: string,
+  interchangeCorrections: InterchangeCorrectionsMap = {}
 ): {
   segments: SegmentFeature[];
   stations: StationFeature[];
 } {
+  const normalizedStations = [...normalized.stations];
+  for (const station of overrides.additionalStations || []) {
+    if (!normalizedStations.some((existing) => existing.osmId === station.osmId)) {
+      normalizedStations.push({
+        osmId: station.osmId,
+        name: station.name,
+        coordinates: station.coordinates,
+        tags: {},
+        lineRefs: station.lineRefs || [],
+        status: station.status || "operational",
+      });
+    }
+  }
   const cityName = overrides.city.name;
 
   // Map normalized segments by osmId
@@ -139,6 +214,7 @@ export function mergeCityOverrides(
 
   interface DeduplicatedStation {
     id: string;
+    osmIds: number[];
     coords: [number, number];
     rawName: string;
     name: string;
@@ -151,8 +227,14 @@ export function mergeCityOverrides(
   const deduplicatedStations: DeduplicatedStation[] = [];
   const seenStationIds = new Set<string>();
 
-  for (const station of normalized.stations) {
+  for (const station of normalizedStations) {
     const rawName = station.name;
+    if (
+      rawName.length > 80 ||
+      /detailed project report|authorities for approval/i.test(rawName)
+    ) {
+      continue;
+    }
     const resolvedName = aliasMap.get(rawName.toLowerCase()) || rawName;
 
     const prefix =
@@ -210,6 +292,9 @@ export function mergeCityOverrides(
           existing.lineRefs.push(ref);
         }
       }
+      if (!existing.osmIds.includes(station.osmId)) {
+        existing.osmIds.push(station.osmId);
+      }
       continue;
     }
 
@@ -224,6 +309,7 @@ export function mergeCityOverrides(
 
     deduplicatedStations.push({
       id: stationId,
+      osmIds: [station.osmId],
       coords: station.coordinates,
       rawName,
       name: resolvedName,
@@ -263,6 +349,18 @@ export function mergeCityOverrides(
       );
       if (segMatch) {
         lineIdsSet.add(segMatch.line_id);
+      }
+    }
+    for (const normalizedSegment of normalized.segments) {
+      if (
+        normalizedSegment.stationOsmIds.some((osmId) =>
+          st.osmIds.includes(osmId)
+        )
+      ) {
+        const segMatch = overrides.segments.find(
+          (s) => s.osmId === normalizedSegment.osmId
+        );
+        if (segMatch) lineIdsSet.add(segMatch.line_id);
       }
     }
 
@@ -331,11 +429,8 @@ export function mergeCityOverrides(
     let expectedCompletion: string | null = null;
     let lastVerified: string | null = null; // Stays null for OSM-sourced
 
-    if (assignedStatus === "construction") {
-      expectedCompletion = "2026-12";
-    } else if (assignedStatus === "planned") {
-      expectedCompletion = "2028";
-    }
+    // Dates are only populated from explicit sourced overrides; OSM status
+    // alone does not establish an opening or completion date.
 
     // Tier 3: Manual station overrides (highest priority)
     const override =
@@ -397,7 +492,10 @@ export function mergeCityOverrides(
     const lineStations = stationsWithLines.filter(
       (sw) =>
         sw.assignedLineIds.includes(iseg.segOverride.line_id) &&
-        sw.assignedPhase === iseg.segOverride.phase
+        sw.assignedPhase === iseg.segOverride.phase &&
+        (iseg.segOverride.status === "construction"
+          ? sw.assignedStatus === "construction"
+          : sw.assignedStatus !== "operational")
     );
 
     if (lineStations.length >= 2) {
@@ -416,10 +514,97 @@ export function mergeCityOverrides(
     }
   }
 
+  // Trim route geometry to the first and last assigned station projection.
+  // This removes turn-back/depot spurs that are outside the station span.
+  for (const iseg of intermediateSegments) {
+    if (iseg.coords) {
+      iseg.coords = removeAdjacentDuplicateCoords(iseg.coords);
+    }
+    const coords = iseg.coords;
+    if (!coords || coords.length < 2) continue;
+    const lineStations = stationsWithLines.filter((sw) => {
+      if (!sw.assignedLineIds.includes(iseg.segOverride.line_id)) return false;
+      const normalizedSegment = iseg.segOverride.osmId
+        ? normalizedSegsByOsmId.get(iseg.segOverride.osmId)
+        : undefined;
+      const isRelationMember =
+        sw.st.lineRefs.includes(String(iseg.segOverride.osmId)) ||
+        Boolean(
+          normalizedSegment?.stationOsmIds.some((osmId) =>
+            sw.st.osmIds.includes(osmId)
+          )
+        );
+      return isRelationMember || pointToPolylineDistanceM(sw.st.coords, coords) <= 1000;
+    });
+    if (lineStations.length < 2) continue;
+
+    const projections = lineStations
+      .map((sw) => {
+        const projected = nearestPointOnPolyline(sw.st.coords, coords);
+        return {
+          station: sw,
+          position: projected.segmentIndex + projected.t,
+          point: projected.point,
+        };
+      })
+      .sort((a, b) => a.position - b.position);
+
+    const first = projections[0];
+    const last = projections[projections.length - 1];
+    if (first.position !== last.position) {
+      iseg.coords = lineSlice(first.point, last.point, coords);
+    }
+    iseg.coords = removeShortSelfIntersectionSpur(iseg.coords || coords);
+    const trimmed = iseg.coords;
+    if (trimmed && trimmed.length >= 2) {
+      for (const end of [0, trimmed.length - 1]) {
+        const endpoint = trimmed[end];
+        const nearest = lineStations.reduce<{
+          coords: Coordinate;
+          distanceM: number;
+        } | null>((best, sw) => {
+          const distanceM = haversineDistanceM(endpoint, sw.st.coords);
+          return !best || distanceM < best.distanceM
+            ? { coords: sw.st.coords, distanceM }
+            : best;
+        }, null);
+        if (nearest && nearest.distanceM <= 1000) {
+          trimmed[end] = nearest.coords;
+        }
+      }
+      for (const stationId of iseg.segOverride.endpoint_station_ids || []) {
+        const endpointStation = stationsWithLines.find(
+          (sw) => sw.st.id === stationId
+        );
+        if (!endpointStation) continue;
+        const startDistanceM = haversineDistanceM(
+          trimmed[0],
+          endpointStation.st.coords
+        );
+        const endDistanceM = haversineDistanceM(
+          trimmed[trimmed.length - 1],
+          endpointStation.st.coords
+        );
+        const endpointIndex = startDistanceM <= endDistanceM ? 0 : trimmed.length - 1;
+        const distanceM = Math.min(startDistanceM, endDistanceM);
+        if (distanceM > 250 && distanceM <= 2000) {
+          trimmed[endpointIndex] = endpointStation.st.coords;
+        }
+      }
+    }
+  }
+
   // 5. Finalize Segments and compute dynamic stations_count
   const segmentFeatures: SegmentFeature[] = [];
 
   for (const iseg of intermediateSegments) {
+    if (iseg.coords) {
+      iseg.coords = removeAdjacentDuplicateCoords(
+        removeShortSelfIntersectionSpur(
+          removeAdjacentDuplicateCoords(iseg.coords)
+        )
+      );
+    }
     const segOverride = iseg.segOverride;
     const coords = iseg.coords;
 
@@ -445,7 +630,8 @@ export function mergeCityOverrides(
     const operator = lineInfo?.operator || overrides.city.operator;
 
     // Dynamic stations_count derivation:
-    // Deduplicated assigned stations on this line within 200m of this segment
+    // Deduplicated assigned stations on this line within the audit proximity
+    // tolerance of this segment.
     let stationsCount = 0;
     if (segOverride.stations_count !== undefined) {
       stationsCount = segOverride.stations_count;
@@ -455,7 +641,7 @@ export function mergeCityOverrides(
       );
       for (const sw of lineStations) {
         const distM = pointToPolylineDistanceM(sw.st.coords, coords);
-        if (distM <= 200) {
+        if (distM <= 250) {
           stationsCount++;
         }
       }
@@ -472,10 +658,12 @@ export function mergeCityOverrides(
         ? segOverride.last_verified!
         : segOverride.last_verified || null;
 
-    const truncatedCoords: [number, number][] = coords.map(([lng, lat]) => [
-      Number(lng.toFixed(5)),
-      Number(lat.toFixed(5)),
-    ]);
+    const truncatedCoords = removeAdjacentDuplicateCoords(
+      coords.map(([lng, lat]) => [
+        Number(lng.toFixed(5)),
+        Number(lat.toFixed(5)),
+      ] as Coordinate)
+    );
 
     segmentFeatures.push({
       type: "Feature",
@@ -524,6 +712,24 @@ export function mergeCityOverrides(
       interchangeSet.has(sw.st.name.toLowerCase()) ||
       sw.assignedLineIds.length > 1;
 
+    // Derive interchange_id:
+    // Auto: any interchange station is its own cluster representative (station_id).
+    // Manual correction can override to merge (same id) or split (null).
+    let interchangeId: string | undefined = undefined;
+    if (isInterchange) {
+      interchangeId = sw.st.id;
+    }
+    const correction = interchangeCorrections[sw.st.id];
+    if (correction !== undefined) {
+      if (correction.interchange_id === null) {
+        // Forced split — remove interchange_id even if auto assigned
+        interchangeId = undefined;
+      } else {
+        // Forced merge — use the specified cluster id
+        interchangeId = correction.interchange_id;
+      }
+    }
+
     const truncatedStationCoords: [number, number] = [
       Number(sw.st.coords[0].toFixed(5)),
       Number(sw.st.coords[1].toFixed(5)),
@@ -546,11 +752,15 @@ export function mergeCityOverrides(
         is_interchange: isInterchange,
         opened_on: sw.openedOn,
         expected_completion: sw.expectedCompletion,
+        completion_unconfirmed:
+          sw.assignedStatus !== "operational" && !sw.expectedCompletion,
         layout: sw.layout,
         layout_source: sw.layoutSource,
         source: "osm",
+        references: [],
         last_verified: sw.lastVerified,
         retrieved_at: retrievedAt,
+        ...(interchangeId !== undefined ? { interchange_id: interchangeId } : {}),
       },
     });
   }

@@ -20,15 +20,15 @@ export async function fetchOverpassDataForCity(
   cityId: string,
   bbox: [number, number, number, number],
   force = false,
-  backoffMs = 1000
+  backoffMs = 1000,
+  cacheDir = path.resolve(process.cwd(), "data", "raw")
 ): Promise<any> {
   const [minLng, minLat, maxLng, maxLat] = bbox;
-  const rawDir = path.resolve(process.cwd(), "data", "raw");
-  if (!fs.existsSync(rawDir)) {
-    fs.mkdirSync(rawDir, { recursive: true });
+  if (!fs.existsSync(cacheDir)) {
+    fs.mkdirSync(cacheDir, { recursive: true });
   }
 
-  const cacheFile = path.join(rawDir, `${cityId}.json`);
+  const cacheFile = path.join(cacheDir, `${cityId}.json`);
   if (!force && fs.existsSync(cacheFile)) {
     console.log(`📦 Using cached Overpass data for ${cityId} from ${cacheFile}`);
     return JSON.parse(fs.readFileSync(cacheFile, "utf-8"));
@@ -44,6 +44,9 @@ export async function fetchOverpassDataForCity(
   relation["railway"="subway"](${minLat},${minLng},${maxLat},${maxLng});
   relation["railway"="construction"]["construction"="subway"](${minLat},${minLng},${maxLat},${maxLng});
   relation["railway"="proposed"]["proposed"="subway"](${minLat},${minLng},${maxLat},${maxLng});
+  // Include all station nodes belonging to intersecting route relations,
+  // including terminal stations just outside the city bbox.
+  node(r);
 
   // Under-construction and proposed tracks/ways with geometry
   way["railway"="construction"]["construction"="subway"](${minLat},${minLng},${maxLat},${maxLng});

@@ -283,7 +283,7 @@ describe("Audit Engine", () => {
       const result = runAudit(
         makeDataset({
           stations: [
-            makeStation({ is_interchange: true }),
+            makeStation({ is_interchange: true, interchange_id: "tc-station-a" }),
             makeStation({ station_id: "tc-station-b", name: "Station B" }),
           ],
         }),
@@ -306,6 +306,39 @@ describe("Audit Engine", () => {
       );
       const interchangeFindings = findByRule(result.findings, "interchange-consistency");
       expect(interchangeFindings.some((f) => f.message.includes("2 lines"))).toBe(true);
+    });
+
+    it("detects interchange cluster inconsistency (is_interchange true without interchange_id)", () => {
+      const result = runAudit(
+        makeDataset({
+          lines: [makeLine(), makeLine({ id: "tc-blue", name: "Blue Line", color: "#0000FF" })],
+          stations: [
+            makeStation({ line_ids: ["tc-red", "tc-blue"], is_interchange: true, interchange_id: undefined }),
+            makeStation({ station_id: "tc-station-b", name: "Station B" }),
+          ],
+        }),
+        AUDIT_OPTIONS
+      );
+      const clusterFindings = findByRule(result.findings, "interchange-cluster-consistency");
+      expect(clusterFindings.length).toBe(1);
+      expect(clusterFindings[0].severity).toBe("error");
+      expect(clusterFindings[0].message).toContain("interchange_id cluster is missing");
+    });
+
+    it("detects interchange cluster inconsistency (is_interchange false with interchange_id defined)", () => {
+      const result = runAudit(
+        makeDataset({
+          stations: [
+            makeStation({ is_interchange: false, interchange_id: "tc-cluster-1" }),
+            makeStation({ station_id: "tc-station-b", name: "Station B" }),
+          ],
+        }),
+        AUDIT_OPTIONS
+      );
+      const clusterFindings = findByRule(result.findings, "interchange-cluster-consistency");
+      expect(clusterFindings.length).toBe(1);
+      expect(clusterFindings[0].severity).toBe("error");
+      expect(clusterFindings[0].message).toContain("is_interchange is false");
     });
 
     it("detects segment operator mismatch with line operator", () => {

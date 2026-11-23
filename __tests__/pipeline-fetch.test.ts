@@ -1,27 +1,22 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import fs from "node:fs";
+import os from "node:os";
 import path from "node:path";
 import { fetchOverpassDataForCity } from "@/scripts/pipeline/fetch-overpass";
 
 describe("fetchOverpassDataForCity Pipeline Resilience", () => {
   const testCityId = "test-resilience-city";
-  const rawDir = path.resolve(process.cwd(), "data", "raw");
-  const testCacheFile = path.join(rawDir, `${testCityId}.json`);
+  let cacheDir: string;
+  let testCacheFile: string;
 
   beforeEach(() => {
-    if (fs.existsSync(testCacheFile)) {
-      fs.unlinkSync(testCacheFile);
-    }
+    cacheDir = fs.mkdtempSync(path.join(os.tmpdir(), "metro-overpass-test-"));
+    testCacheFile = path.join(cacheDir, `${testCityId}.json`);
   });
 
   afterEach(() => {
     vi.restoreAllMocks();
-    if (fs.existsSync(testCacheFile)) {
-      fs.unlinkSync(testCacheFile);
-    }
-    if (fs.existsSync(`${testCacheFile}.tmp`)) {
-      fs.unlinkSync(`${testCacheFile}.tmp`);
-    }
+    fs.rmSync(cacheDir, { recursive: true, force: true });
   });
 
   it("reads directly from existing cache file when force is false", async () => {
@@ -35,7 +30,9 @@ describe("fetchOverpassDataForCity Pipeline Resilience", () => {
     const result = await fetchOverpassDataForCity(
       testCityId,
       [77.0, 28.0, 77.5, 28.5],
-      false
+      false,
+      1000,
+      cacheDir
     );
 
     expect(result).toEqual(cachedData);
@@ -57,7 +54,8 @@ describe("fetchOverpassDataForCity Pipeline Resilience", () => {
       testCityId,
       [77.0, 28.0, 77.5, 28.5],
       true,
-      0
+      0,
+      cacheDir
     );
 
     // Should return existing cache instead of crashing
@@ -74,7 +72,8 @@ describe("fetchOverpassDataForCity Pipeline Resilience", () => {
         testCityId,
         [77.0, 28.0, 77.5, 28.5],
         true,
-        0
+        0,
+        cacheDir
       )
     ).rejects.toThrow(/All Overpass endpoints failed/);
   });

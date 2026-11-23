@@ -1,4 +1,4 @@
-import { describe, it, expect, vi } from "vitest";
+import { describe, it, expect } from "vitest";
 import { saveActiveDataset } from "@/scripts/pipeline/build-real-data";
 import type { City, Line, SegmentFeature, StationFeature } from "@/types/metro";
 

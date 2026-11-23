@@ -100,8 +100,8 @@ describe("Schema Validation Tests", () => {
   it("enforces conditional date rules for construction segments", () => {
     const constructionSegmentProps = {
       segment_id: "test-seg-2",
-      line_id: "del-silver",
-      line_name: "Silver Line",
+      line_id: "del-golden",
+      line_name: "Golden Line",
       city_id: "delhi",
       city: "Delhi",
       operator: "DMRC",
@@ -112,7 +112,7 @@ describe("Schema Validation Tests", () => {
       inaugurated_on: null,
       expected_completion: "2026-12",
       stations_count: 8,
-      color: "#A0A0A0",
+      color: "#B8860B",
       source: "mock",
       last_verified: "2026-10-05",
     };

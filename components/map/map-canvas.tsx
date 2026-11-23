@@ -30,6 +30,7 @@ import {
   constructionLineLayer,
   plannedLineLayer,
   getSelectedSegmentLayer,
+  interchangeStationLayer,
   stationCircleLayer,
   getSelectedStationLayer,
   stationLabelsLayer,
@@ -58,6 +59,8 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
     (state) => state.clearSelectedFeature
   );
   const setHoveredFeature = useMetroStore((state) => state.setHoveredFeature);
+  const selectedYear = useMetroStore((state) => state.selectedYear);
+  const includeFuture = useMetroStore((state) => state.includeFuture);
 
   // Compute selected IDs for highlight layers
   const selectedSegmentId =
@@ -74,23 +77,54 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
 
   // MapLibre WebGL Layer Filter Expressions (filters applied directly by GPU without re-parsing GeoJSON)
   const operationalFilter = useMemo(
-    () => buildStatusFilter("operational", selectedStatuses, selectedCityId, selectedPhases),
-    [selectedStatuses, selectedCityId, selectedPhases]
+    () =>
+      buildStatusFilter(
+        "operational",
+        selectedStatuses,
+        selectedCityId,
+        selectedPhases,
+        selectedYear,
+        includeFuture
+      ),
+    [selectedStatuses, selectedCityId, selectedPhases, selectedYear, includeFuture]
   );
 
   const constructionFilter = useMemo(
-    () => buildStatusFilter("construction", selectedStatuses, selectedCityId, selectedPhases),
-    [selectedStatuses, selectedCityId, selectedPhases]
+    () =>
+      buildStatusFilter(
+        "construction",
+        selectedStatuses,
+        selectedCityId,
+        selectedPhases,
+        selectedYear,
+        includeFuture
+      ),
+    [selectedStatuses, selectedCityId, selectedPhases, selectedYear, includeFuture]
   );
 
   const plannedFilter = useMemo(
-    () => buildStatusFilter("planned", selectedStatuses, selectedCityId, selectedPhases),
-    [selectedStatuses, selectedCityId, selectedPhases]
+    () =>
+      buildStatusFilter(
+        "planned",
+        selectedStatuses,
+        selectedCityId,
+        selectedPhases,
+        selectedYear,
+        includeFuture
+      ),
+    [selectedStatuses, selectedCityId, selectedPhases, selectedYear, includeFuture]
   );
 
   const stationFilter = useMemo(
-    () => buildStationFilter(selectedStatuses, selectedCityId, selectedPhases),
-    [selectedStatuses, selectedCityId, selectedPhases]
+    () =>
+      buildStationFilter(
+        selectedStatuses,
+        selectedCityId,
+        selectedPhases,
+        selectedYear,
+        includeFuture
+      ),
+    [selectedStatuses, selectedCityId, selectedPhases, selectedYear, includeFuture]
   );
 
   // Pan/zoom map when city selection changes
@@ -133,6 +167,7 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
       // Prioritize station points over lines when both overlap
       const stationF = features.find(
         (f) =>
+          f.layer.id === "interchange-points" ||
           f.layer.id === "station-points" ||
           (f.properties && "station_id" in f.properties)
       );
@@ -186,6 +221,7 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
         // Station hover
         const stationF = features.find(
           (f) =>
+            f.layer.id === "interchange-points" ||
             f.layer.id === "station-points" ||
             (f.properties && "station_id" in f.properties)
         );
@@ -266,7 +302,17 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
         <Source id="metro-stations" type="geojson" data={dataset.stations}>
           {/* Highlight ring for selected station */}
           <Layer {...getSelectedStationLayer(selectedStationId)} />
+          {/* Regular station dots (non-interchange) */}
           <Layer {...withFilter(stationCircleLayer, stationFilter)} />
+          {/* Interchange stations: distinct larger ring marker */}
+          <Layer
+            {...withFilter(
+              interchangeStationLayer,
+              stationFilter
+                ? ["all", stationFilter, ["==", ["get", "is_interchange"], true]]
+                : ["==", ["get", "is_interchange"], true]
+            )}
+          />
           <Layer {...withFilter(stationLabelsLayer, stationFilter)} />
         </Source>
       </Map>
