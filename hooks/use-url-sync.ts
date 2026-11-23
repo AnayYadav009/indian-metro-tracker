@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { useMetroStore } from "@/store/use-metro-store";
 import { getSegmentById, getStationById } from "@/lib/data";
+import { MIN_DATASET_YEAR } from "@/lib/timeline-utils";
 import type { Status } from "@/types/schema";
 
 /**
@@ -85,7 +86,7 @@ export function useUrlSync() {
       const yearParam = params.get("year");
       if (yearParam) {
         const yr = parseInt(yearParam, 10);
-        if (!Number.isNaN(yr) && yr >= 1984) {
+        if (!Number.isNaN(yr) && yr >= MIN_DATASET_YEAR) {
           useMetroStore.getState().setSelectedYear(yr);
         }
       }

@@ -33,11 +33,15 @@ test.describe("M13 Timeline Slider", () => {
 
     const slider = page.getByTestId("timeline-range-slider");
     await expect(slider).toBeVisible();
-    await slider.focus();
-    await slider.press("Home");
-    for (let year = 1985; year <= 2010; year++) {
-      await slider.press("ArrowRight", { delay: 5 });
-    }
+
+    // Use fill() + input event — keyboard events on <input type="range"> are not
+    // supported by mobile browsers (Pixel 7 / mobile-chrome emulation), so we
+    // drive the slider programmatically to avoid a flaky platform-specific test.
+    await slider.evaluate((el: HTMLInputElement) => {
+      el.value = "2010";
+      el.dispatchEvent(new Event("input", { bubbles: true }));
+      el.dispatchEvent(new Event("change", { bubbles: true }));
+    });
 
     // Year text updates immediately
     const currentYearText = page.getByTestId("timeline-current-year");

@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { isStationNode } from "../pipeline/normalize";
+import { haversineDistanceM } from "../../lib/geo";
 
 interface RawNode {
   type: string;
@@ -11,17 +12,7 @@ interface RawNode {
 }
 
 function pointDistanceM(p1: [number, number], p2: [number, number]): number {
-  const R = 6371000; // Earth's radius in meters
-  const dLat = ((p2[1] - p1[1]) * Math.PI) / 180;
-  const dLon = ((p2[0] - p1[0]) * Math.PI) / 180;
-  const a =
-    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-    Math.cos((p1[1] * Math.PI) / 180) *
-      Math.cos((p2[1] * Math.PI) / 180) *
-      Math.sin(dLon / 2) *
-      Math.sin(dLon / 2);
-  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-  return R * c;
+  return haversineDistanceM(p1, p2);
 }
 
 export function generateDedupeReport(cityId: string) {

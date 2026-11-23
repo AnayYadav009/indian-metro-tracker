@@ -136,3 +136,29 @@ export function matchesSegmentFilter(
 
   return true;
 }
+
+export function buildFilterCriteria(
+  dataset: { cities: City[]; lines: Array<{ id: string; city_id: string; aliases?: string[] }> },
+  selectedCityId: string | null,
+  selectedStatuses: Status[],
+  selectedPhases: string[],
+  searchQuery: string,
+  selectedYear?: number | null,
+  includeFuture?: boolean
+): FilterCriteria {
+  const activeCity = selectedCityId
+    ? dataset.cities.find((c) => c.id === selectedCityId)
+    : null;
+
+  return {
+    activeCity,
+    selectedStatuses,
+    selectedPhases,
+    searchQuery,
+    selectedYear,
+    includeFuture,
+    lineAliases: dataset.lines
+      .filter((line) => !selectedCityId || line.city_id === selectedCityId)
+      .flatMap((line) => line.aliases ?? []),
+  };
+}

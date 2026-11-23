@@ -3,7 +3,7 @@
 import React, { useMemo } from "react";
 import { useMetroStore } from "@/store/use-metro-store";
 import { getMetroData } from "@/lib/data";
-import { matchesSegmentFilter } from "@/lib/filter-utils";
+import { matchesSegmentFilter, buildFilterCriteria } from "@/lib/filter-utils";
 
 export function NetworkStats() {
   const selectedCityId = useMetroStore((state) => state.selectedCityId);
@@ -16,21 +16,15 @@ export function NetworkStats() {
   const dataset = useMemo(() => getMetroData(), []);
 
   const stats = useMemo(() => {
-    const activeCity = selectedCityId
-      ? dataset.cities.find((c) => c.id === selectedCityId)
-      : null;
-
-    const criteria = {
-      activeCity,
+    const criteria = buildFilterCriteria(
+      dataset,
+      selectedCityId,
       selectedStatuses,
       selectedPhases,
       searchQuery,
       selectedYear,
-      includeFuture,
-      lineAliases: dataset.lines
-        .filter((line) => !selectedCityId || line.city_id === selectedCityId)
-        .flatMap((line) => line.aliases ?? []),
-    };
+      includeFuture
+    );
 
     const filteredSegments = dataset.segments.features.filter((f) =>
       matchesSegmentFilter(f.properties, criteria)

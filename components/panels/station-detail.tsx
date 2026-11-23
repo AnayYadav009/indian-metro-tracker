@@ -11,6 +11,7 @@ import {
   InterchangeBadge,
 } from "./badge-indicators";
 import { ReportIssueButton } from "./report-issue-button";
+import { DEFAULT_LINE_FALLBACK_COLOR } from "@/lib/metro-styles";
 
 interface StationDetailProps {
   station: StationProperties;
@@ -28,7 +29,7 @@ export function StationDetail({ station, coordinates }: StationDetailProps) {
       return {
         id: lineId,
         name: line?.name || lineId,
-        color: line?.color || "#94a3b8",
+        color: line?.color || DEFAULT_LINE_FALLBACK_COLOR,
       };
     });
   }, [station.line_ids, dataset.lines]);
