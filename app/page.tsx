@@ -19,9 +19,7 @@ import { LayersDrawer } from "@/components/layers/layers-drawer";
 import { BottomSheet, type BottomSheetSnap } from "@/components/sheet/bottom-sheet";
 import { StationSearchInput } from "@/components/search/station-search-input";
 import { useMetroStore } from "@/store/use-metro-store";
-
 import { useUrlSync } from "@/hooks/use-url-sync";
-
 const MapCanvas = dynamic(
   () => import("@/components/map/map-canvas").then((mod) => mod.MapCanvas),
   {

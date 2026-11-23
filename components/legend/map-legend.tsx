@@ -6,6 +6,7 @@ import { useMetroStore } from "@/store/use-metro-store";
 import { getMetroData } from "@/lib/data";
 import { BASEMAP_CONFIG } from "@/lib/map-config";
 import { STATION_STYLE } from "@/lib/station-style";
+import { getRegion, getRegionMemberCityIds, isRegionId } from "@/lib/regions";
 
 interface MapLegendProps {
   className?: string;
@@ -31,11 +32,17 @@ export function MapLegend({ className = "" }: MapLegendProps) {
     if (!selectedCityId) {
       return [];
     }
+    if (isRegionId(selectedCityId)) {
+      const memberIds = getRegionMemberCityIds(selectedCityId);
+      return dataset.lines.filter((l) => memberIds.includes(l.city_id));
+    }
     return dataset.lines.filter((l) => l.city_id === selectedCityId);
   }, [selectedCityId, dataset.lines]);
 
   const activeCityName = useMemo(() => {
     if (!selectedCityId) return "All Networks";
+    const region = getRegion(selectedCityId);
+    if (region) return region.name;
     return dataset.cities.find((c) => c.id === selectedCityId)?.name || "City";
   }, [selectedCityId, dataset.cities]);
 

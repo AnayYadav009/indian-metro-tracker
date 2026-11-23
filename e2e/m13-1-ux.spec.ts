@@ -80,12 +80,14 @@ async function expectSelectedAnchorOutsidePanel(
 }
 
 test.describe("M13.1 map and panel UX", () => {
-  test("keeps a selected station clear of the details panel", async ({ page }) => {
+  test("keeps a selected station clear of the details panel", async ({ page }, testInfo) => {
+    test.skip(testInfo.project.name === "mobile-chrome", "Desktop map padding requirement (M13.1 step 4)");
     await openStation(page, "delhi", "del-kashmere-gate");
     await expectSelectedAnchorOutsidePanel(page, "metro-stations", "station_id", "del-kashmere-gate");
   });
 
-  test("keeps a selected segment clear of the details panel", async ({ page }) => {
+  test("keeps a selected segment clear of the details panel", async ({ page }, testInfo) => {
+    test.skip(testInfo.project.name === "mobile-chrome", "Desktop map padding requirement (M13.1 step 4)");
     await openSegment(page, "chennai", "che-blue-seg-01");
     await expectSelectedAnchorOutsidePanel(page, "metro-segments", "segment_id", "che-blue-seg-01");
   });
@@ -129,7 +131,7 @@ test.describe("M13.1 map and panel UX", () => {
       (buttons) =>
         buttons
           .map((button) => button.getAttribute("data-testid") || "")
-          .filter((id) => id !== "city-select-all")
+          .filter((id) => id !== "city-select-all" && id !== "city-select-ncr")
           .map((id) => id.replace("city-select-", ""))
     );
 

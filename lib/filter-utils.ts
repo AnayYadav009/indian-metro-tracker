@@ -1,4 +1,5 @@
 import type { SegmentProperties, Status, City } from "@/types/schema";
+import { getRegion, getRegionMemberCityIds, isRegionId } from "@/lib/regions";
 
 export interface FilterCriteria {
   activeCity: City | null | undefined;
@@ -39,7 +40,14 @@ export function isVisible(
   options: VisibilityOptions
 ): boolean {
   if (!options.statuses.includes(record.status)) return false;
-  if (options.cityId && record.city_id !== options.cityId) return false;
+  if (options.cityId) {
+    if (isRegionId(options.cityId)) {
+      const memberIds = getRegionMemberCityIds(options.cityId);
+      if (!record.city_id || !memberIds.includes(record.city_id)) return false;
+    } else if (record.city_id !== options.cityId) {
+      return false;
+    }
+  }
   if (
     options.phases.length > 0 &&
     !options.phases.includes(record.phase ?? "")
@@ -57,7 +65,11 @@ export function buildVisibilityExpression(
   const conditions: unknown[] = ["all", ["==", ["get", "status"], status]];
 
   if (options.cityId) {
-    conditions.push(["==", ["get", "city_id"], options.cityId]);
+    if (isRegionId(options.cityId)) {
+      conditions.push(["in", ["get", "city_id"], ["literal", getRegionMemberCityIds(options.cityId)]]);
+    } else {
+      conditions.push(["==", ["get", "city_id"], options.cityId]);
+    }
   }
   if (options.phases.length > 0) {
     conditions.push(["in", ["get", "phase"], ["literal", options.phases]]);
@@ -107,8 +119,12 @@ export function matchesSegmentFilter(
   } = criteria;
 
   if (activeCity && props.city_id) {
-    if (props.city_id.toLowerCase() !== activeCity.id.toLowerCase())
+    if (isRegionId(activeCity.id)) {
+      const memberIds = getRegionMemberCityIds(activeCity.id);
+      if (!memberIds.includes(props.city_id.toLowerCase())) return false;
+    } else if (props.city_id.toLowerCase() !== activeCity.id.toLowerCase()) {
       return false;
+    }
   } else if (activeCity) {
     const segmentCity = props.city.toLowerCase();
     if (
@@ -156,7 +172,17 @@ export function buildFilterCriteria(
   selectedYear?: number | null,
   includeFuture?: boolean
 ): FilterCriteria {
-  const activeCity = selectedCityId
+  const region = getRegion(selectedCityId);
+  const activeCity = region
+    ? ({
+        id: region.id,
+        name: region.name,
+        phases: [],
+        bbox: region.bbox,
+        operator: "NCR Regional Network",
+        provenance: { status: "verified" as const },
+      } as unknown as City)
+    : selectedCityId
     ? dataset.cities.find((c) => c.id === selectedCityId)
     : null;
 
@@ -168,7 +194,13 @@ export function buildFilterCriteria(
     selectedYear,
     includeFuture,
     lineAliases: dataset.lines
-      .filter((line) => !selectedCityId || line.city_id === selectedCityId)
+      .filter((line) => {
+        if (!selectedCityId) return true;
+        if (isRegionId(selectedCityId)) {
+          return getRegionMemberCityIds(selectedCityId).includes(line.city_id);
+        }
+        return line.city_id === selectedCityId;
+      })
       .flatMap((line) => line.aliases ?? []),
   };
 }

@@ -5,6 +5,7 @@ import { useMetroStore } from "@/store/use-metro-store";
 import type { Status } from "@/types/schema";
 import { getMetroData } from "@/lib/data";
 import { STATUS_LIST } from "@/lib/metro-styles";
+import { getRegionMemberCityIds, isRegionId } from "@/lib/regions";
 
 export function StatusFilter() {
   const selectedCityId = useMetroStore((state) => state.selectedCityId);
@@ -14,8 +15,14 @@ export function StatusFilter() {
   const countsByStatus = React.useMemo(() => {
     const dataset = getMetroData();
     const counts: Record<Status, number> = { operational: 0, construction: 0, planned: 0 };
+    const memberIds = isRegionId(selectedCityId) ? getRegionMemberCityIds(selectedCityId) : null;
     for (const { properties } of dataset.segments.features) {
-      if (!selectedCityId || properties.city_id === selectedCityId) {
+      const matchesCity = !selectedCityId
+        ? true
+        : memberIds
+        ? memberIds.includes(properties.city_id)
+        : properties.city_id === selectedCityId;
+      if (matchesCity) {
         if (properties.status in counts) {
           counts[properties.status]++;
         }

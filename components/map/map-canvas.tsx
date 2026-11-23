@@ -24,6 +24,7 @@ import {
   INITIAL_VIEW_STATE,
 } from "@/lib/map-config";
 import { getMetroData, getSegmentById, getStationById } from "@/lib/data";
+import { getRegion, getRegionMemberCityIds, isRegionId } from "@/lib/regions";
 import { useMetroStore } from "@/store/use-metro-store";
 import {
   INTERACTIVE_LAYER_IDS,
@@ -51,9 +52,14 @@ interface MapCanvasProps {
 const CATCHMENT_RADII = [500, 1000] as const;
 
 function buildWalkingCatchments(stations: ReturnType<typeof getMetroData>["stations"], cityId: string | null) {
-  const operational = stations.features.filter(({ properties }) =>
-    properties.status === "operational" && (!cityId || properties.city_id === cityId)
-  );
+  const operational = stations.features.filter(({ properties }) => {
+    if (properties.status !== "operational") return false;
+    if (!cityId) return true;
+    if (isRegionId(cityId)) {
+      return getRegionMemberCityIds(cityId).includes(properties.city_id);
+    }
+    return properties.city_id === cityId;
+  });
   const features = operational.flatMap(({ geometry, properties }) =>
     CATCHMENT_RADII.map((radius) => {
       const [longitude, latitude] = geometry.coordinates;
@@ -188,6 +194,14 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
   );
 
   const [isLoadingTiles, setIsLoadingTiles] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (!isLoadingTiles) return;
+    const timer = setTimeout(() => {
+      setIsLoadingTiles(false);
+    }, 1200);
+    return () => clearTimeout(timer);
+  }, [isLoadingTiles]);
   const [isMapReady, setIsMapReady] = useState(false);
   const [selectionLocation, setSelectionLocation] = useState<{
     featureKey: string;
@@ -217,9 +231,12 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
     }
 
     if (selectedCityId) {
-      const targetCity = dataset.cities.find((c) => c.id === selectedCityId);
-      if (targetCity) {
-        const [minLng, minLat, maxLng, maxLat] = targetCity.bbox;
+      const region = getRegion(selectedCityId);
+      const targetBbox = region
+        ? region.bbox
+        : dataset.cities.find((c) => c.id === selectedCityId)?.bbox;
+      if (targetBbox) {
+        const [minLng, minLat, maxLng, maxLat] = targetBbox;
         // Desktop padding reserves space for the filter panel (left) and metadata panel (right)
         const isDesktop = typeof window !== "undefined" && window.innerWidth >= 768;
         mapRef.current.fitBounds(
@@ -230,7 +247,9 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
           {
             padding: isDesktop
               ? { top: 70, bottom: 70, left: 400, right: 80 }
-              : { top: 80, bottom: 80, left: 24, right: 24 },
+              : selectedFeatureAnchor
+                ? { top: 80, bottom: 420, left: 24, right: 24 }
+                : { top: 80, bottom: 80, left: 24, right: 24 },
             duration: 450,
             essential: true,
           }
@@ -244,34 +263,43 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
         essential: true,
       });
     }
-  }, [selectedCityId, dataset.cities]);
+  }, [selectedCityId, dataset.cities, selectedFeatureAnchor]);
 
   useEffect(() => {
     if (!mapRef.current || !isMapReady || !selectedFeatureAnchor) return;
     const map = mapRef.current.getMap();
     const mapRect = map.getContainer().getBoundingClientRect();
-    const target = { x: mapRect.width / 2, y: mapRect.height / 2 };
-    const overlays = [
-      ...document.querySelectorAll<HTMLElement>(
-        '[data-testid="metadata-panel"], [data-testid="filter-panel"]'
-      ),
-    ]
-      .filter((element) => element.getBoundingClientRect().width > 0)
-      .map((element) => {
-        const rect = element.getBoundingClientRect();
-        return {
-          left: rect.left - mapRect.left,
-          right: rect.right - mapRect.left,
-          top: rect.top - mapRect.top,
-          bottom: rect.bottom - mapRect.top,
-        };
-      });
-    for (const overlay of overlays) {
-      if (
-        target.x >= overlay.left && target.x <= overlay.right &&
-        target.y >= overlay.top && target.y <= overlay.bottom
-      ) {
-        target.y = Math.max(24, overlay.top - 24);
+    const isDesktop = typeof window !== "undefined" && window.innerWidth >= 768;
+    const panelEl = document.querySelector<HTMLElement>('[data-testid="metadata-panel"]');
+    const panelTop = panelEl && panelEl.getBoundingClientRect().height > 0
+      ? panelEl.getBoundingClientRect().top
+      : mapRect.bottom;
+    const target = isDesktop
+      ? { x: mapRect.width / 2, y: mapRect.height / 2 }
+      : { x: mapRect.width / 2, y: Math.max(30, (panelTop - mapRect.top) / 2) };
+    if (isDesktop) {
+      const overlays = [
+        ...document.querySelectorAll<HTMLElement>(
+          '[data-testid="metadata-panel"], [data-testid="filter-panel"]'
+        ),
+      ]
+        .filter((element) => element.getBoundingClientRect().width > 0)
+        .map((element) => {
+          const rect = element.getBoundingClientRect();
+          return {
+            left: rect.left - mapRect.left,
+            right: rect.right - mapRect.left,
+            top: rect.top - mapRect.top,
+            bottom: rect.bottom - mapRect.top,
+          };
+        });
+      for (const overlay of overlays) {
+        if (
+          target.x >= overlay.left && target.x <= overlay.right &&
+          target.y >= overlay.top && target.y <= overlay.bottom
+        ) {
+          target.y = Math.max(24, overlay.top - 24);
+        }
       }
     }
     const anchorPoint = map.project(selectedFeatureAnchor);
@@ -506,7 +534,15 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
       }}
     >
       <Map
-        ref={mapRef}
+        ref={(r) => {
+          (mapRef as any).current = r;
+          if (r && typeof window !== "undefined") {
+            try {
+              const m = r.getMap();
+              if (m) (window as any)._mapLibreInstance = m;
+            } catch {}
+          }
+        }}
         mapLib={maplibregl}
         initialViewState={INITIAL_VIEW_STATE}
         mapStyle={BASEMAP_STYLE_URL}
@@ -519,18 +555,18 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
         onClick={handleMapClick}
         onMouseMove={handleMouseMove}
         onMouseEnter={() => setCursor("pointer")}
-        onLoad={() => {
-          if (!mapRef.current) return;
+        onLoad={(e) => {
           setIsMapReady(true);
-          if (typeof window !== "undefined") {
-            (window as any)._mapLibreInstance = mapRef.current.getMap();
+          const map = e.target || (mapRef.current ? mapRef.current.getMap() : null);
+          if (typeof window !== "undefined" && map) {
+            (window as any)._mapLibreInstance = map;
           }
-          if (selectedCityId) {
+          if (map && selectedCityId && !selectedFeatureAnchor) {
             const targetCity = dataset.cities.find((c) => c.id === selectedCityId);
             if (targetCity) {
               const [minLng, minLat, maxLng, maxLat] = targetCity.bbox;
               const isDesktop = typeof window !== "undefined" && window.innerWidth >= 768;
-              mapRef.current.fitBounds(
+              map.fitBounds(
                 [
                   [minLng, minLat],
                   [maxLng, maxLat],
@@ -539,7 +575,7 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
                   padding: isDesktop
                     ? { top: 70, bottom: 70, left: 400, right: 80 }
                     : { top: 80, bottom: 80, left: 24, right: 24 },
-                    duration: 0,
+                  duration: 0,
                   essential: true,
                 }
               );
@@ -547,6 +583,7 @@ export function MapCanvas({ className = "" }: MapCanvasProps) {
           }
         }}
         onMoveStart={() => setIsLoadingTiles(true)}
+        onMoveEnd={() => setIsLoadingTiles(false)}
         onIdle={() => setIsLoadingTiles(false)}
       >
         <NavigationControl position="top-right" showCompass showZoom />
