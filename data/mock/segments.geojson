@@ -6,17 +6,33 @@
       "geometry": {
         "type": "LineString",
         "coordinates": [
-          [77.215, 28.698],
-          [77.228, 28.667],
-          [77.228, 28.652],
-          [77.219, 28.632],
-          [77.212, 28.614]
+          [
+            77.215,
+            28.698
+          ],
+          [
+            77.228,
+            28.667
+          ],
+          [
+            77.228,
+            28.652
+          ],
+          [
+            77.219,
+            28.632
+          ],
+          [
+            77.212,
+            28.614
+          ]
         ]
       },
       "properties": {
         "segment_id": "del-yellow-seg-01",
         "line_id": "del-yellow",
         "line_name": "Yellow Line",
+        "city_id": "delhi",
         "city": "Delhi",
         "operator": "DMRC",
         "status": "operational",
@@ -36,17 +52,33 @@
       "geometry": {
         "type": "LineString",
         "coordinates": [
-          [77.121, 28.553],
-          [77.168, 28.528],
-          [77.211, 28.514],
-          [77.256, 28.502],
-          [77.288, 28.508]
+          [
+            77.121,
+            28.553
+          ],
+          [
+            77.168,
+            28.528
+          ],
+          [
+            77.211,
+            28.514
+          ],
+          [
+            77.256,
+            28.502
+          ],
+          [
+            77.288,
+            28.508
+          ]
         ]
       },
       "properties": {
         "segment_id": "del-silver-seg-01",
         "line_id": "del-silver",
         "line_name": "Silver Line",
+        "city_id": "delhi",
         "city": "Delhi",
         "operator": "DMRC",
         "status": "construction",
@@ -66,16 +98,29 @@
       "geometry": {
         "type": "LineString",
         "coordinates": [
-          [77.135, 28.746],
-          [77.12, 28.785],
-          [77.098, 28.825],
-          [77.091, 28.852]
+          [
+            77.135,
+            28.746
+          ],
+          [
+            77.12,
+            28.785
+          ],
+          [
+            77.098,
+            28.825
+          ],
+          [
+            77.091,
+            28.852
+          ]
         ]
       },
       "properties": {
         "segment_id": "del-yellow-seg-02",
         "line_id": "del-yellow",
         "line_name": "Yellow Line",
+        "city_id": "delhi",
         "city": "Delhi",
         "operator": "DMRC",
         "status": "planned",
@@ -95,16 +140,29 @@
       "geometry": {
         "type": "LineString",
         "coordinates": [
-          [77.653, 12.991],
-          [77.638, 12.978],
-          [77.62, 12.975],
-          [77.606, 12.975]
+          [
+            77.653,
+            12.991
+          ],
+          [
+            77.638,
+            12.978
+          ],
+          [
+            77.62,
+            12.975
+          ],
+          [
+            77.606,
+            12.975
+          ]
         ]
       },
       "properties": {
         "segment_id": "blr-purple-seg-01",
         "line_id": "blr-purple",
         "line_name": "Purple Line",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "operator": "BMRCL",
         "status": "operational",
@@ -124,17 +182,33 @@
       "geometry": {
         "type": "LineString",
         "coordinates": [
-          [77.697, 13.003],
-          [77.651, 13.045],
-          [77.618, 13.098],
-          [77.605, 13.15],
-          [77.705, 13.198]
+          [
+            77.697,
+            13.003
+          ],
+          [
+            77.651,
+            13.045
+          ],
+          [
+            77.618,
+            13.098
+          ],
+          [
+            77.605,
+            13.15
+          ],
+          [
+            77.705,
+            13.198
+          ]
         ]
       },
       "properties": {
         "segment_id": "blr-blue-seg-01",
         "line_id": "blr-blue",
         "line_name": "Blue Line",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "operator": "BMRCL",
         "status": "construction",
@@ -154,16 +228,29 @@
       "geometry": {
         "type": "LineString",
         "coordinates": [
-          [77.685, 12.923],
-          [77.632, 12.934],
-          [77.598, 12.965],
-          [77.585, 13.035]
+          [
+            77.685,
+            12.923
+          ],
+          [
+            77.632,
+            12.934
+          ],
+          [
+            77.598,
+            12.965
+          ],
+          [
+            77.585,
+            13.035
+          ]
         ]
       },
       "properties": {
         "segment_id": "blr-blue-seg-02",
         "line_id": "blr-blue",
         "line_name": "Blue Line",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
         "operator": "BMRCL",
         "status": "planned",
@@ -183,17 +270,33 @@
       "geometry": {
         "type": "LineString",
         "coordinates": [
-          [72.821, 19.131],
-          [72.846, 19.119],
-          [72.868, 19.11],
-          [72.887, 19.098],
-          [72.908, 19.086]
+          [
+            72.821,
+            19.131
+          ],
+          [
+            72.846,
+            19.119
+          ],
+          [
+            72.868,
+            19.11
+          ],
+          [
+            72.887,
+            19.098
+          ],
+          [
+            72.908,
+            19.086
+          ]
         ]
       },
       "properties": {
         "segment_id": "mum-line-1-seg-01",
         "line_id": "mum-line-1",
         "line_name": "Line 1",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "operator": "MMRDA",
         "status": "operational",
@@ -213,16 +316,29 @@
       "geometry": {
         "type": "LineString",
         "coordinates": [
-          [72.864, 19.066],
-          [72.836, 19.018],
-          [72.823, 18.972],
-          [72.825, 18.922]
+          [
+            72.864,
+            19.066
+          ],
+          [
+            72.836,
+            19.018
+          ],
+          [
+            72.823,
+            18.972
+          ],
+          [
+            72.825,
+            18.922
+          ]
         ]
       },
       "properties": {
         "segment_id": "mum-line-3-seg-01",
         "line_id": "mum-line-3",
         "line_name": "Line 3 (Aqua)",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "operator": "MMRDA",
         "status": "construction",
@@ -242,15 +358,25 @@
       "geometry": {
         "type": "LineString",
         "coordinates": [
-          [72.975, 19.278],
-          [72.965, 19.31],
-          [72.955, 19.335]
+          [
+            72.975,
+            19.278
+          ],
+          [
+            72.965,
+            19.31
+          ],
+          [
+            72.955,
+            19.335
+          ]
         ]
       },
       "properties": {
         "segment_id": "mum-line-4-seg-01",
         "line_id": "mum-line-4",
         "line_name": "Line 4 (Green)",
+        "city_id": "mumbai",
         "city": "Mumbai",
         "operator": "MMRDA",
         "status": "planned",

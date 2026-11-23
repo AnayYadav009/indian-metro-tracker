@@ -34,16 +34,17 @@ export interface MetroDataset {
 }
 
 export interface SegmentFilterOptions {
-  city?: string;
+  cityId?: string;
   status?: Status;
   phase?: string;
   lineId?: string;
 }
 
 export interface StationFilterOptions {
-  city?: string;
+  cityId?: string;
   status?: Status;
   phase?: string;
   lineId?: string;
   isInterchange?: boolean;
 }
+

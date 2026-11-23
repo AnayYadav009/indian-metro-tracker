@@ -3,6 +3,7 @@
 import React from "react";
 import { useMetroStore } from "@/store/use-metro-store";
 import { getMetroData } from "@/lib/data";
+import { formatPhaseLabel } from "@/lib/phase-utils";
 
 export function PhaseFilter() {
   const selectedCityId = useMetroStore((state) => state.selectedCityId);
@@ -12,22 +13,36 @@ export function PhaseFilter() {
 
   const dataset = getMetroData();
 
-  // Determine available phases for current city scope
+  // Determine active city
   const activeCity = selectedCityId
     ? dataset.cities.find((c) => c.id === selectedCityId)
     : null;
 
-  const availablePhases = activeCity
-    ? activeCity.phases
-    : Array.from(new Set(dataset.cities.flatMap((c) => c.phases)));
+  if (!activeCity) {
+    return (
+      <div className="flex flex-col gap-1.5" data-testid="phase-filter-container">
+        <label className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+          Phases
+        </label>
+        <p
+          className="text-xs italic text-slate-400"
+          data-testid="phase-filter-empty-hint"
+        >
+          Select a city to filter by phase
+        </p>
+      </div>
+    );
+  }
+
+  const availablePhases = activeCity.phases || [];
 
   if (availablePhases.length === 0) return null;
 
   return (
-    <div className="flex flex-col gap-1.5">
+    <div className="flex flex-col gap-1.5" data-testid="phase-filter-container">
       <div className="flex items-center justify-between">
         <label className="text-xs font-semibold uppercase tracking-wider text-slate-400">
-          Phases {activeCity ? `(${activeCity.name})` : "(All Cities)"}
+          Phases ({activeCity.name})
         </label>
         {selectedPhases.length > 0 && (
           <button
@@ -58,6 +73,7 @@ export function PhaseFilter() {
 
         {availablePhases.map((phase) => {
           const isSelected = selectedPhases.includes(phase);
+          const formattedLabel = formatPhaseLabel(phase);
           return (
             <button
               key={phase}
@@ -65,14 +81,14 @@ export function PhaseFilter() {
               data-testid={`phase-pill-${phase}`}
               onClick={() => togglePhase(phase)}
               aria-pressed={isSelected}
-              aria-label={`Filter network to Phase ${phase}`}
+              aria-label={`Filter network to ${formattedLabel}`}
               className={`rounded-full px-2.5 py-1 text-xs font-medium transition-all ${
                 isSelected
                   ? "bg-emerald-600 text-white shadow-sm ring-1 ring-emerald-400"
                   : "bg-slate-900/80 text-slate-300 border border-slate-800 hover:border-slate-700 hover:text-white"
               }`}
             >
-              Phase {phase}
+              {formattedLabel}
             </button>
           );
         })}

@@ -6,9 +6,17 @@
  * 3. 100% free: no API keys or billing required.
  */
 
-// Single configuration constant for the vector basemap style
-export const BASEMAP_STYLE_URL =
-  "https://tiles.openfreemap.org/styles/positron";
+// Single unified configuration constant for the vector basemap style and attribution
+export const BASEMAP_CONFIG = {
+  name: "OpenFreeMap Positron",
+  styleUrl: "https://tiles.openfreemap.org/styles/positron",
+  provider: "OpenFreeMap",
+  providerUrl: "https://openfreemap.org",
+  osmAttribution: "© OpenStreetMap contributors",
+  osmAttributionUrl: "https://www.openstreetmap.org/copyright",
+  dataLicense: "ODbL (Open Database License)",
+  dataLicenseUrl: "https://opendatacommons.org/licenses/odbl/",
+} as const;
 
 // Initial map viewport centered on India
 export const INITIAL_VIEW_STATE = {
@@ -19,8 +27,9 @@ export const INITIAL_VIEW_STATE = {
   maxZoom: 18,
 };
 
-// Attribution constants
-export const OSM_ATTRIBUTION = "© OpenStreetMap contributors";
-export const OSM_ATTRIBUTION_URL = "https://www.openstreetmap.org/copyright";
-export const OPENFREEMAP_ATTRIBUTION = "OpenFreeMap";
-export const OPENFREEMAP_ATTRIBUTION_URL = "https://openfreemap.org";
+// Backward-compatible export constants derived from BASEMAP_CONFIG
+export const BASEMAP_STYLE_URL = BASEMAP_CONFIG.styleUrl;
+export const OSM_ATTRIBUTION = BASEMAP_CONFIG.osmAttribution;
+export const OSM_ATTRIBUTION_URL = BASEMAP_CONFIG.osmAttributionUrl;
+export const OPENFREEMAP_ATTRIBUTION = BASEMAP_CONFIG.provider;
+export const OPENFREEMAP_ATTRIBUTION_URL = BASEMAP_CONFIG.providerUrl;

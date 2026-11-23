@@ -4,7 +4,7 @@ import React from "react";
 import { EmptyFilterState } from "@/components/map/empty-state";
 import { useMetroStore } from "@/store/use-metro-store";
 
-describe("Milestone 6 - EmptyFilterState Component", () => {
+describe("EmptyFilterState Component", () => {
   beforeEach(() => {
     useMetroStore.getState().resetFilters();
   });

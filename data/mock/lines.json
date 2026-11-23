@@ -2,57 +2,73 @@
   {
     "id": "del-yellow",
     "name": "Yellow Line",
+    "city_id": "delhi",
     "city": "Delhi",
     "color": "#FFD700",
-    "operator": "DMRC"
+    "operator": "DMRC",
+    "source": "mock"
   },
   {
     "id": "del-blue",
     "name": "Blue Line",
+    "city_id": "delhi",
     "city": "Delhi",
     "color": "#0070BB",
-    "operator": "DMRC"
+    "operator": "DMRC",
+    "source": "mock"
   },
   {
     "id": "del-silver",
     "name": "Silver Line",
+    "city_id": "delhi",
     "city": "Delhi",
     "color": "#A0A0A0",
-    "operator": "DMRC"
+    "operator": "DMRC",
+    "source": "mock"
   },
   {
     "id": "blr-purple",
     "name": "Purple Line",
+    "city_id": "bengaluru",
     "city": "Bengaluru",
     "color": "#800080",
-    "operator": "BMRCL"
+    "operator": "BMRCL",
+    "source": "mock"
   },
   {
     "id": "blr-blue",
     "name": "Blue Line",
+    "city_id": "bengaluru",
     "city": "Bengaluru",
     "color": "#1E90FF",
-    "operator": "BMRCL"
+    "operator": "BMRCL",
+    "source": "mock"
   },
   {
     "id": "mum-line-1",
     "name": "Line 1",
+    "city_id": "mumbai",
     "city": "Mumbai",
     "color": "#0072CE",
-    "operator": "MMRDA"
+    "operator": "MMRDA",
+    "source": "mock"
   },
   {
     "id": "mum-line-3",
     "name": "Line 3 (Aqua)",
+    "city_id": "mumbai",
     "city": "Mumbai",
     "color": "#00A3E0",
-    "operator": "MMRDA"
+    "operator": "MMRDA",
+    "source": "mock"
   },
   {
     "id": "mum-line-4",
     "name": "Line 4 (Green)",
+    "city_id": "mumbai",
     "city": "Mumbai",
     "color": "#00B140",
-    "operator": "MMRDA"
+    "operator": "MMRDA",
+    "source": "mock"
   }
 ]

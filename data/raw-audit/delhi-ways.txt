@@ -1,0 +1,507 @@
+Total Raw Delhi Proposed / Construction Ways: 30
+
+[1] OSM Way ID: 538930411
+Tags: {
+  "electrified": "yes",
+  "gauge": "1676",
+  "name": "Airport Express Line (Orange) Extension",
+  "proposed": "subway",
+  "railway": "proposed",
+  "tracks": "2",
+  "type": "Underground",
+  "usage": "main",
+  "voltage": "750"
+}
+Nodes count: 6
+Geometry coordinate count: 6
+First coordinate: [77.0573433, 28.5029745]
+Last coordinate: [77.0609409, 28.4949263]
+--------------------------------------------------------------------------------
+[2] OSM Way ID: 538930412
+Tags: {
+  "electrified": "yes",
+  "gauge": "1676",
+  "name": "Airport Express Line (Orange) Extension",
+  "proposed": "subway",
+  "railway": "proposed",
+  "tracks": "2",
+  "type": "Elivated",
+  "usage": "main",
+  "voltage": "750"
+}
+Nodes count: 9
+Geometry coordinate count: 9
+First coordinate: [77.0347729, 28.5147563]
+Last coordinate: [77.0573433, 28.5029745]
+--------------------------------------------------------------------------------
+[3] OSM Way ID: 538930413
+Tags: {
+  "electrified": "yes",
+  "gauge": "1676",
+  "name": "Airport Express Line (Orange) Extension",
+  "proposed": "subway",
+  "railway": "proposed",
+  "tracks": "2",
+  "type": "Underground",
+  "usage": "main",
+  "voltage": "750"
+}
+Nodes count: 11
+Geometry coordinate count: 11
+First coordinate: [77.0559065, 28.5491017]
+Last coordinate: [77.0347729, 28.5147563]
+--------------------------------------------------------------------------------
+[4] OSM Way ID: 538930414
+Tags: {
+  "electrified": "yes",
+  "gauge": "1676",
+  "name": "Line-2 Extension",
+  "proposed": "subway",
+  "railway": "proposed",
+  "tracks": "2",
+  "type": "Elivated",
+  "usage": "main",
+  "voltage": "750"
+}
+Nodes count: 14
+Geometry coordinate count: 14
+First coordinate: [77.0680163, 28.4540544]
+Last coordinate: [77.0373303, 28.4287358]
+--------------------------------------------------------------------------------
+[5] OSM Way ID: 538930415
+Tags: {
+  "electrified": "yes",
+  "gauge": "1676",
+  "name": "Airport Express Line (Orange) Extension",
+  "proposed": "subway",
+  "railway": "proposed",
+  "tracks": "2",
+  "type": "Elivated",
+  "usage": "main",
+  "voltage": "750"
+}
+Nodes count: 24
+Geometry coordinate count: 24
+First coordinate: [77.0609409, 28.4949263]
+Last coordinate: [77.071167, 28.4708882]
+--------------------------------------------------------------------------------
+[6] OSM Way ID: 538930416
+Tags: {
+  "electrified": "yes",
+  "gauge": "1676",
+  "proposed": "subway",
+  "railway": "proposed",
+  "tracks": "2",
+  "type": "Underground",
+  "usage": "main",
+  "voltage": "750"
+}
+Nodes count: 9
+Geometry coordinate count: 9
+First coordinate: [77.1040178, 28.6114734]
+Last coordinate: [77.0804451, 28.5926662]
+--------------------------------------------------------------------------------
+[7] OSM Way ID: 538930417
+Tags: {
+  "electrified": "yes",
+  "gauge": "1676",
+  "proposed": "subway",
+  "railway": "proposed",
+  "tracks": "2",
+  "type": "Elivated",
+  "usage": "main",
+  "voltage": "750"
+}
+Nodes count: 37
+Geometry coordinate count: 37
+First coordinate: [77.1402153, 28.6416569]
+Last coordinate: [77.1040178, 28.6114734]
+--------------------------------------------------------------------------------
+[8] OSM Way ID: 538930418
+Tags: {
+  "electrified": "yes",
+  "gauge": "1676",
+  "name": "Line-5 Extension",
+  "proposed": "subway",
+  "railway": "proposed",
+  "tracks": "2",
+  "type": "Underground",
+  "usage": "main",
+  "voltage": "750"
+}
+Nodes count: 9
+Geometry coordinate count: 9
+First coordinate: [77.1488123, 28.6511788]
+Last coordinate: [77.1402153, 28.6416569]
+--------------------------------------------------------------------------------
+[9] OSM Way ID: 538930419
+Tags: {
+  "electrified": "yes",
+  "gauge": "1676",
+  "proposed": "subway",
+  "railway": "proposed",
+  "tracks": "2",
+  "type": "Elevated",
+  "usage": "main",
+  "voltage": "750"
+}
+Nodes count: 42
+Geometry coordinate count: 42
+First coordinate: [77.0804451, 28.5926662]
+Last coordinate: [77.0115583, 28.5441175]
+--------------------------------------------------------------------------------
+[10] OSM Way ID: 538930423
+Tags: {
+  "electrified": "yes",
+  "gauge": "1676",
+  "name": "Saket G Block to Lajpat Nagar (Phase-4)",
+  "proposed": "subway",
+  "railway": "proposed",
+  "tracks": "2",
+  "type": "elevated",
+  "usage": "main",
+  "voltage": "750"
+}
+Nodes count: 55
+Geometry coordinate count: 55
+First coordinate: [77.2158856, 28.5178182]
+Last coordinate: [77.2361692, 28.5706151]
+--------------------------------------------------------------------------------
+[11] OSM Way ID: 538930426
+Tags: {
+  "electrified": "yes",
+  "gauge": "1676",
+  "name": "Yamuna Bank to Loni Border Line-12",
+  "proposed": "subway",
+  "railway": "proposed",
+  "tracks": "2",
+  "type": "Elivated",
+  "usage": "main",
+  "voltage": "750"
+}
+Nodes count: 62
+Geometry coordinate count: 62
+First coordinate: [77.2688222, 28.6236635]
+Last coordinate: [77.2608628, 28.7378204]
+--------------------------------------------------------------------------------
+[12] OSM Way ID: 538930427
+Tags: {
+  "electrified": "yes",
+  "gauge": "1676",
+  "name": "Dainik Jagran Vaishali to Ghaziabad (Extn.)",
+  "proposed": "subway",
+  "railway": "proposed",
+  "tracks": "2",
+  "type": "Elivated",
+  "usage": "main",
+  "voltage": "750"
+}
+Nodes count: 12
+Geometry coordinate count: 12
+First coordinate: [77.3422694, 28.6514933]
+Last coordinate: [77.3818702, 28.678319]
+--------------------------------------------------------------------------------
+[13] OSM Way ID: 538930428
+Tags: {
+  "bridge": "viaduct",
+  "electrified": "yes",
+  "frequency": "50",
+  "gauge": "1435",
+  "layer": "2",
+  "name": "Botanical Garden to Noida Sector 142 (Route-2)",
+  "proposed": "subway",
+  "proposed:railway": "subway",
+  "railway": "proposed",
+  "tracks": "2",
+  "usage": "branch",
+  "voltage": "25000"
+}
+Nodes count: 54
+Geometry coordinate count: 54
+First coordinate: [77.3342781, 28.5634827]
+Last coordinate: [77.4066507, 28.5004755]
+--------------------------------------------------------------------------------
+[14] OSM Way ID: 538930430
+Tags: {
+  "electrified": "yes",
+  "gauge": "1676",
+  "name": "Rithala Bawana to Narela (Phase-4)",
+  "proposed": "subway",
+  "railway": "proposed",
+  "tracks": "2",
+  "type": "Elivated",
+  "usage": "main",
+  "voltage": "750"
+}
+Nodes count: 103
+Geometry coordinate count: 103
+First coordinate: [77.1011111, 28.7253188]
+Last coordinate: [77.0978308, 28.8547092]
+--------------------------------------------------------------------------------
+[15] OSM Way ID: 538930431
+Tags: {
+  "electrified": "yes",
+  "gauge": "1676",
+  "name": "R K Ashram Marg to Krishna Park Extension (Phase-4)",
+  "proposed": "subway",
+  "railway": "proposed",
+  "tracks": "2",
+  "type": "Underground",
+  "usage": "main",
+  "voltage": "750"
+}
+Nodes count: 89
+Geometry coordinate count: 89
+First coordinate: [77.2079539, 28.6395839]
+Last coordinate: [77.1809406, 28.7164868]
+--------------------------------------------------------------------------------
+[16] OSM Way ID: 538930433
+Tags: {
+  "electrified": "yes",
+  "gauge": "1676",
+  "layer": "-1",
+  "name": "Indraprastha to Inderlok (Phase-4)",
+  "proposed": "subway",
+  "railway": "proposed",
+  "tracks": "2",
+  "type": "Underground",
+  "usage": "main",
+  "voltage": "750"
+}
+Nodes count: 56
+Geometry coordinate count: 56
+First coordinate: [77.2495001, 28.6175055]
+Last coordinate: [77.1595191, 28.6670566]
+--------------------------------------------------------------------------------
+[17] OSM Way ID: 538930435
+Tags: {
+  "electrified": "yes",
+  "gauge": "1676",
+  "name": "Tughlakabad to Domestic Airport (Phase-4)",
+  "proposed": "subway",
+  "railway": "proposed",
+  "tracks": "2",
+  "type": "Underground",
+  "usage": "main",
+  "voltage": "750"
+}
+Nodes count: 77
+Geometry coordinate count: 77
+First coordinate: [77.1943269, 28.5223215]
+Last coordinate: [77.1214673, 28.5680456]
+--------------------------------------------------------------------------------
+[18] OSM Way ID: 1067888069
+Tags: {
+  "electrified": "yes",
+  "gauge": "1676",
+  "name": "Line-5 Extension",
+  "proposed": "subway",
+  "railway": "proposed",
+  "tracks": "2",
+  "type": "Underground",
+  "usage": "main",
+  "voltage": "750"
+}
+Nodes count: 3
+Geometry coordinate count: 3
+First coordinate: [77.1496416, 28.6523681]
+Last coordinate: [77.1488123, 28.6511788]
+--------------------------------------------------------------------------------
+[19] OSM Way ID: 1180926653
+Tags: {
+  "construction": "subway",
+  "electrified": "contact_line",
+  "frequency": "50",
+  "gauge": "1435",
+  "railway": "construction",
+  "service": "yard",
+  "voltage": "25000"
+}
+Nodes count: 7
+Geometry coordinate count: 7
+First coordinate: [77.1871396, 28.7242932]
+Last coordinate: [77.1865885, 28.7223255]
+--------------------------------------------------------------------------------
+[20] OSM Way ID: 1180926654
+Tags: {
+  "construction": "subway",
+  "electrified": "contact_line",
+  "frequency": "50",
+  "gauge": "1435",
+  "railway": "construction",
+  "service": "yard",
+  "voltage": "25000"
+}
+Nodes count: 5
+Geometry coordinate count: 5
+First coordinate: [77.1865125, 28.7223307]
+Last coordinate: [77.1867736, 28.7237134]
+--------------------------------------------------------------------------------
+[21] OSM Way ID: 1180926655
+Tags: {
+  "construction": "subway",
+  "electrified": "contact_line",
+  "frequency": "50",
+  "gauge": "1435",
+  "railway": "construction",
+  "service": "yard",
+  "voltage": "25000"
+}
+Nodes count: 7
+Geometry coordinate count: 7
+First coordinate: [77.1864372, 28.7223409]
+Last coordinate: [77.1868869, 28.7238929]
+--------------------------------------------------------------------------------
+[22] OSM Way ID: 1180926656
+Tags: {
+  "construction": "subway",
+  "electrified": "contact_line",
+  "frequency": "50",
+  "gauge": "1435",
+  "railway": "construction",
+  "service": "yard",
+  "voltage": "25000"
+}
+Nodes count: 7
+Geometry coordinate count: 7
+First coordinate: [77.1866583, 28.7235356]
+Last coordinate: [77.1863616, 28.7223494]
+--------------------------------------------------------------------------------
+[23] OSM Way ID: 1187662702
+Tags: {
+  "construction": "subway",
+  "covered": "yes",
+  "electrified": "contact_line",
+  "frequency": "50",
+  "gauge": "1435",
+  "railway": "construction",
+  "service": "yard",
+  "voltage": "25000"
+}
+Nodes count: 2
+Geometry coordinate count: 2
+First coordinate: [77.1863973, 28.7209806]
+Last coordinate: [77.1865885, 28.7223255]
+--------------------------------------------------------------------------------
+[24] OSM Way ID: 1187662703
+Tags: {
+  "construction": "subway",
+  "covered": "yes",
+  "electrified": "contact_line",
+  "frequency": "50",
+  "gauge": "1435",
+  "railway": "construction",
+  "service": "yard",
+  "voltage": "25000"
+}
+Nodes count: 2
+Geometry coordinate count: 2
+First coordinate: [77.1863216, 28.7209882]
+Last coordinate: [77.1865125, 28.7223307]
+--------------------------------------------------------------------------------
+[25] OSM Way ID: 1187662704
+Tags: {
+  "construction": "subway",
+  "covered": "yes",
+  "electrified": "contact_line",
+  "frequency": "50",
+  "gauge": "1435",
+  "railway": "construction",
+  "service": "yard",
+  "voltage": "25000"
+}
+Nodes count: 2
+Geometry coordinate count: 2
+First coordinate: [77.1862459, 28.7209959]
+Last coordinate: [77.1864372, 28.7223409]
+--------------------------------------------------------------------------------
+[26] OSM Way ID: 1187662705
+Tags: {
+  "construction": "subway",
+  "covered": "yes",
+  "electrified": "contact_line",
+  "frequency": "50",
+  "gauge": "1435",
+  "railway": "construction",
+  "service": "yard",
+  "voltage": "25000"
+}
+Nodes count: 2
+Geometry coordinate count: 2
+First coordinate: [77.1861703, 28.7210036]
+Last coordinate: [77.1863616, 28.7223494]
+--------------------------------------------------------------------------------
+[27] OSM Way ID: 1348956632
+Tags: {
+  "construction": "subway",
+  "construction:railway": "subway",
+  "electrified": "yes",
+  "gauge": "1676",
+  "layer": "-2",
+  "name": "R K Ashram Marg to Krishna Park Extension (Phase-4)",
+  "railway": "construction",
+  "tracks": "2",
+  "tunnel": "yes",
+  "usage": "main",
+  "voltage": "750"
+}
+Nodes count: 5
+Geometry coordinate count: 5
+First coordinate: [77.0843102, 28.6478016]
+Last coordinate: [77.0853538, 28.6505032]
+--------------------------------------------------------------------------------
+[28] OSM Way ID: 1348956633
+Tags: {
+  "construction": "subway",
+  "construction:railway": "subway",
+  "electrified": "yes",
+  "gauge": "1676",
+  "layer": "-2",
+  "name": "R K Ashram Marg to Krishna Park Extension (Phase-4)",
+  "railway": "construction",
+  "tracks": "2",
+  "tunnel": "yes",
+  "usage": "main",
+  "voltage": "750"
+}
+Nodes count: 5
+Geometry coordinate count: 5
+First coordinate: [77.0854023, 28.650457]
+Last coordinate: [77.0843808, 28.6477782]
+--------------------------------------------------------------------------------
+[29] OSM Way ID: 1486690684
+Tags: {
+  "bridge": "yes",
+  "construction": "subway",
+  "electrified": "yes",
+  "gauge": "1676",
+  "layer": "1",
+  "name": "R K Ashram Marg to Krishna Park Extension (Phase-4)",
+  "railway": "construction",
+  "tracks": "2",
+  "usage": "main",
+  "voltage": "750"
+}
+Nodes count: 53
+Geometry coordinate count: 53
+First coordinate: [77.0853538, 28.6505032]
+Last coordinate: [77.1148463, 28.6971322]
+--------------------------------------------------------------------------------
+[30] OSM Way ID: 1486690685
+Tags: {
+  "bridge": "yes",
+  "construction": "subway",
+  "electrified": "yes",
+  "gauge": "1676",
+  "layer": "1",
+  "name": "R K Ashram Marg to Krishna Park Extension (Phase-4)",
+  "railway": "construction",
+  "tracks": "2",
+  "usage": "main",
+  "voltage": "750"
+}
+Nodes count: 53
+Geometry coordinate count: 53
+First coordinate: [77.11486, 28.6970935]
+Last coordinate: [77.0854023, 28.650457]
+--------------------------------------------------------------------------------

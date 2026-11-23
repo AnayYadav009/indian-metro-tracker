@@ -26,9 +26,11 @@ export type City = z.infer<typeof CitySchema>;
 export const LineSchema = z.object({
   id: z.string().min(1),
   name: z.string().min(1),
+  city_id: z.string().min(1),
   city: z.string().min(1),
   color: z.string().regex(/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/, "Invalid hex color"),
   operator: z.string().min(1),
+  source: z.string().min(1, "source is required"),
 });
 export type Line = z.infer<typeof LineSchema>;
 
@@ -37,6 +39,7 @@ export const SegmentPropertiesSchema = z
     segment_id: z.string().min(1),
     line_id: z.string().min(1),
     line_name: z.string().min(1),
+    city_id: z.string().min(1),
     city: z.string().min(1),
     operator: z.string().min(1),
     status: StatusSchema,
@@ -54,9 +57,13 @@ export const SegmentPropertiesSchema = z
     stations_count: z.number().int().nonnegative(),
     color: z.string().regex(/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/, "Invalid hex color"),
     source: z.string().min(1),
+    references: z
+      .array(z.string().regex(/^https?:\/\//, "Reference must be a valid http or https URL"))
+      .default([]),
     last_verified: z
       .string()
       .regex(/^\d{4}-\d{2}-\d{2}$/, "Format must be YYYY-MM-DD"),
+    completion_unconfirmed: z.boolean().default(false).optional(),
   })
   .superRefine((data, ctx) => {
     if (data.status === "operational") {
@@ -75,10 +82,10 @@ export const SegmentPropertiesSchema = z
         });
       }
     } else if (data.status === "construction") {
-      if (!data.expected_completion) {
+      if (!data.expected_completion && !data.completion_unconfirmed) {
         ctx.addIssue({
           code: z.ZodIssueCode.custom,
-          message: "expected_completion is required when status is 'construction'",
+          message: "expected_completion is required when status is 'construction' unless completion_unconfirmed is true",
           path: ["expected_completion"],
         });
       }
@@ -97,6 +104,19 @@ export const SegmentPropertiesSchema = z
           path: ["inaugurated_on"],
         });
       }
+    }
+
+    const isNonMock = data.source.toLowerCase() !== "mock";
+    const isManual = data.source.toLowerCase().includes("manual");
+    const isNotPureOsm = data.source.toLowerCase() !== "osm";
+    const missingRefs = !data.references || data.references.length === 0;
+
+    if (isManual && missingRefs) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: `Manual segment '${data.segment_id}' requires at least one valid URL in 'references'`,
+        path: ["references"],
+      });
     }
   });
 export type SegmentProperties = z.infer<typeof SegmentPropertiesSchema>;
@@ -128,6 +148,7 @@ export const StationPropertiesSchema = z
   .object({
     station_id: z.string().min(1),
     name: z.string().min(1),
+    city_id: z.string().min(1),
     city: z.string().min(1),
     line_ids: z.array(z.string().min(1)).min(1),
     status: StatusSchema,
@@ -142,11 +163,11 @@ export const StationPropertiesSchema = z
       .regex(/^(\d{4}-\d{2}|\d{4})$/, "Format must be YYYY-MM or YYYY")
       .nullable(),
     layout: LayoutSchema,
-    source: z.string().default("mock"),
+    source: z.string().min(1, "source is required"),
     last_verified: z
       .string()
-      .regex(/^\d{4}-\d{2}-\d{2}$/, "Format must be YYYY-MM-DD")
-      .default("2026-10-05"),
+      .regex(/^\d{4}-\d{2}-\d{2}$/, "Format must be YYYY-MM-DD"),
+    completion_unconfirmed: z.boolean().default(false).optional(),
   })
   .superRefine((data, ctx) => {
     if (data.status === "operational") {
@@ -165,10 +186,10 @@ export const StationPropertiesSchema = z
         });
       }
     } else if (data.status === "construction") {
-      if (!data.expected_completion) {
+      if (!data.expected_completion && !data.completion_unconfirmed) {
         ctx.addIssue({
           code: z.ZodIssueCode.custom,
-          message: "expected_completion is required when status is 'construction'",
+          message: "expected_completion is required when status is 'construction' unless completion_unconfirmed is true",
           path: ["expected_completion"],
         });
       }

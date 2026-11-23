@@ -215,3 +215,15 @@ export const stationLabelsLayer: LayerProps = {
     "text-halo-width": 1.5,
   },
 };
+
+/**
+ * Strongly typed helper to apply dynamic runtime filter expressions to MapLibre LayerProps without casting.
+ */
+export function withFilter<T extends LayerProps>(layer: T, filter?: unknown): T {
+  if (!filter) return layer;
+  return {
+    ...layer,
+    filter,
+  } as T;
+}
+

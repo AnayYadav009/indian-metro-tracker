@@ -9,15 +9,19 @@ export interface BoundingBox {
 }
 
 const OVERPASS_ENDPOINTS = [
+  "https://z.overpass-api.de/api/interpreter",
   "https://overpass-api.de/api/interpreter",
-  "https://overpass.private.coffee/api/interpreter",
+  "https://lz4.overpass-api.de/api/interpreter",
+  "https://overpass.kumi.systems/api/interpreter",
   "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+  "https://overpass.private.coffee/api/interpreter",
 ];
 
 export async function fetchOverpassDataForCity(
   cityId: string,
   bbox: [number, number, number, number],
-  force = false
+  force = false,
+  backoffMs = 1000
 ): Promise<any> {
   const [minLng, minLat, maxLng, maxLat] = bbox;
   const rawDir = path.resolve(process.cwd(), "data", "raw");
@@ -33,27 +37,45 @@ export async function fetchOverpassDataForCity(
 
   console.log(`🌐 Querying Overpass API for ${cityId} (bbox: [${minLng}, ${minLat}, ${maxLng}, ${maxLat}])...`);
 
-  const query = `[out:json][timeout:30];
+  const query = `[out:json][timeout:90];
 (
+  // Metro & Light Rail Route Relations
   relation["route"="subway"](${minLat},${minLng},${maxLat},${maxLng});
   relation["route"="light_rail"](${minLat},${minLng},${maxLat},${maxLng});
   relation["railway"="subway"](${minLat},${minLng},${maxLat},${maxLng});
+  relation["railway"="construction"]["construction"="subway"](${minLat},${minLng},${maxLat},${maxLng});
+  relation["railway"="proposed"]["proposed"="subway"](${minLat},${minLng},${maxLat},${maxLng});
+
+  // Under-construction and proposed tracks/ways with geometry
+  way["railway"="construction"]["construction"="subway"](${minLat},${minLng},${maxLat},${maxLng});
+  way["railway"="construction"]["construction"="light_rail"](${minLat},${minLng},${maxLat},${maxLng});
+  way["railway"="proposed"]["proposed"="subway"](${minLat},${minLng},${maxLat},${maxLng});
+  way["railway"="proposed"]["proposed"="light_rail"](${minLat},${minLng},${maxLat},${maxLng});
+
+  // Stations: Operational, Light rail, and Under Construction
   node["railway"="station"]["subway"="yes"](${minLat},${minLng},${maxLat},${maxLng});
   node["station"="subway"](${minLat},${minLng},${maxLat},${maxLng});
+  node["railway"="station"]["light_rail"="yes"](${minLat},${minLng},${maxLat},${maxLng});
+  node["station"="light_rail"](${minLat},${minLng},${maxLat},${maxLng});
+  node["railway"="station"]["construction"="subway"](${minLat},${minLng},${maxLat},${maxLng});
+  node["railway"="station"]["construction"="light_rail"](${minLat},${minLng},${maxLat},${maxLng});
+  node["railway"="construction"]["construction"="station"](${minLat},${minLng},${maxLat},${maxLng});
 );
 out body geom;
 `;
 
   let lastError: Error | null = null;
-  for (const endpoint of OVERPASS_ENDPOINTS) {
+  for (let i = 0; i < OVERPASS_ENDPOINTS.length; i++) {
+    const endpoint = OVERPASS_ENDPOINTS[i];
     try {
       console.log(`   Trying ${endpoint}...`);
       const response = await fetch(endpoint, {
         method: "POST",
+        signal: AbortSignal.timeout(60000),
         headers: {
-          "User-Agent": "IndianMetroTracker/1.0 (https://github.com/anay/indian-metro-tracker)",
-          "Accept": "application/json",
-          "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+          "User-Agent": "IndianMetroTracker/1.0",
+          "Accept": "*/*",
+          "Content-Type": "application/x-www-form-urlencoded",
         },
         body: `data=${encodeURIComponent(query)}`,
       });
@@ -67,12 +89,33 @@ out body geom;
         throw new Error("Invalid Overpass response: missing 'elements' array");
       }
 
-      fs.writeFileSync(cacheFile, JSON.stringify(json, null, 2), "utf-8");
+      // Atomically write cache to avoid partial file corruption
+      const tempCacheFile = `${cacheFile}.tmp`;
+      fs.writeFileSync(tempCacheFile, JSON.stringify(json, null, 2), "utf-8");
+      fs.renameSync(tempCacheFile, cacheFile);
+
       console.log(`✅ Saved ${json.elements.length} elements for ${cityId} to ${cacheFile}`);
       return json;
     } catch (err: any) {
       console.warn(`   ⚠️ Endpoint ${endpoint} failed: ${err.message}`);
       lastError = err;
+
+      // Small backoff before attempting next mirror endpoint
+      if (i < OVERPASS_ENDPOINTS.length - 1 && backoffMs > 0) {
+        await new Promise((resolve) => setTimeout(resolve, backoffMs));
+      }
+    }
+  }
+
+  // If all endpoints failed but an existing cache file exists, gracefully fall back with warning
+  if (fs.existsSync(cacheFile)) {
+    try {
+      console.warn(
+        `⚠️  All Overpass mirrors failed for ${cityId}. Falling back to previously cached dataset at ${cacheFile}.`
+      );
+      return JSON.parse(fs.readFileSync(cacheFile, "utf-8"));
+    } catch {
+      // If cached file is unreadable, proceed to throw lastError
     }
   }
 

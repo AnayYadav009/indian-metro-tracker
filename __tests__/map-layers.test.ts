@@ -7,7 +7,7 @@ import {
   stationLabelsLayer,
 } from "@/components/map/map-layers";
 
-describe("MapLibre Layer Specifications (Milestone 4)", () => {
+describe("MapLibre Layer Specifications", () => {
   describe("Line status visual discrimination without relying on color", () => {
     it("configures operationalLayer as a solid line", () => {
       const layer = operationalLineLayer as Record<string, any>;

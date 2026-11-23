@@ -5,13 +5,20 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [77.2185, 28.6328]
+        "coordinates": [
+          77.2185,
+          28.6328
+        ]
       },
       "properties": {
         "station_id": "del-rajiv-chowk",
         "name": "Rajiv Chowk",
+        "city_id": "delhi",
         "city": "Delhi",
-        "line_ids": ["del-yellow", "del-blue"],
+        "line_ids": [
+          "del-yellow",
+          "del-blue"
+        ],
         "status": "operational",
         "phase": "I",
         "is_interchange": true,
@@ -26,13 +33,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [77.2285, 28.6675]
+        "coordinates": [
+          77.2285,
+          28.6675
+        ]
       },
       "properties": {
         "station_id": "del-kashmere-gate",
         "name": "Kashmere Gate",
+        "city_id": "delhi",
         "city": "Delhi",
-        "line_ids": ["del-yellow"],
+        "line_ids": [
+          "del-yellow"
+        ],
         "status": "operational",
         "phase": "I",
         "is_interchange": true,
@@ -47,13 +60,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [77.1215, 28.5532]
+        "coordinates": [
+          77.1215,
+          28.5532
+        ]
       },
       "properties": {
         "station_id": "del-aerocity",
         "name": "Delhi Aerocity",
+        "city_id": "delhi",
         "city": "Delhi",
-        "line_ids": ["del-silver"],
+        "line_ids": [
+          "del-silver"
+        ],
         "status": "construction",
         "phase": "IV",
         "is_interchange": true,
@@ -68,13 +87,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [77.091, 28.852]
+        "coordinates": [
+          77.091,
+          28.852
+        ]
       },
       "properties": {
         "station_id": "del-narela",
         "name": "Narela",
+        "city_id": "delhi",
         "city": "Delhi",
-        "line_ids": ["del-yellow"],
+        "line_ids": [
+          "del-yellow"
+        ],
         "status": "planned",
         "phase": "IV",
         "is_interchange": false,
@@ -89,13 +114,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [77.6068, 12.9756]
+        "coordinates": [
+          77.6068,
+          12.9756
+        ]
       },
       "properties": {
         "station_id": "blr-mg-road",
         "name": "MG Road",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
-        "line_ids": ["blr-purple"],
+        "line_ids": [
+          "blr-purple"
+        ],
         "status": "operational",
         "phase": "1",
         "is_interchange": false,
@@ -110,13 +141,20 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [77.6975, 13.0034]
+        "coordinates": [
+          77.6975,
+          13.0034
+        ]
       },
       "properties": {
         "station_id": "blr-kr-puram",
         "name": "KR Puram",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
-        "line_ids": ["blr-purple", "blr-blue"],
+        "line_ids": [
+          "blr-purple",
+          "blr-blue"
+        ],
         "status": "construction",
         "phase": "2B",
         "is_interchange": true,
@@ -131,13 +169,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [77.7052, 13.1986]
+        "coordinates": [
+          77.7052,
+          13.1986
+        ]
       },
       "properties": {
         "station_id": "blr-airport",
         "name": "KIA Airport Terminal",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
-        "line_ids": ["blr-blue"],
+        "line_ids": [
+          "blr-blue"
+        ],
         "status": "construction",
         "phase": "2B",
         "is_interchange": false,
@@ -152,13 +196,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [77.6854, 12.9231]
+        "coordinates": [
+          77.6854,
+          12.9231
+        ]
       },
       "properties": {
         "station_id": "blr-sarjapur",
         "name": "Sarjapur",
+        "city_id": "bengaluru",
         "city": "Bengaluru",
-        "line_ids": ["blr-blue"],
+        "line_ids": [
+          "blr-blue"
+        ],
         "status": "planned",
         "phase": "3",
         "is_interchange": false,
@@ -173,13 +223,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [72.8212, 19.1314]
+        "coordinates": [
+          72.8212,
+          19.1314
+        ]
       },
       "properties": {
         "station_id": "mum-versova",
         "name": "Versova",
+        "city_id": "mumbai",
         "city": "Mumbai",
-        "line_ids": ["mum-line-1"],
+        "line_ids": [
+          "mum-line-1"
+        ],
         "status": "operational",
         "phase": "1",
         "is_interchange": false,
@@ -194,13 +250,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [72.9082, 19.0863]
+        "coordinates": [
+          72.9082,
+          19.0863
+        ]
       },
       "properties": {
         "station_id": "mum-ghatkopar",
         "name": "Ghatkopar",
+        "city_id": "mumbai",
         "city": "Mumbai",
-        "line_ids": ["mum-line-1"],
+        "line_ids": [
+          "mum-line-1"
+        ],
         "status": "operational",
         "phase": "1",
         "is_interchange": true,
@@ -215,13 +277,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [72.8643, 19.0664]
+        "coordinates": [
+          72.8643,
+          19.0664
+        ]
       },
       "properties": {
         "station_id": "mum-bkc",
         "name": "Bandra Kurla Complex",
+        "city_id": "mumbai",
         "city": "Mumbai",
-        "line_ids": ["mum-line-3"],
+        "line_ids": [
+          "mum-line-3"
+        ],
         "status": "construction",
         "phase": "3",
         "is_interchange": true,
@@ -236,13 +304,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [72.8252, 18.9221]
+        "coordinates": [
+          72.8252,
+          18.9221
+        ]
       },
       "properties": {
         "station_id": "mum-cuffe-parade",
         "name": "Cuffe Parade",
+        "city_id": "mumbai",
         "city": "Mumbai",
-        "line_ids": ["mum-line-3"],
+        "line_ids": [
+          "mum-line-3"
+        ],
         "status": "construction",
         "phase": "3",
         "is_interchange": false,
@@ -257,13 +331,19 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [72.9754, 19.2783]
+        "coordinates": [
+          72.9754,
+          19.2783
+        ]
       },
       "properties": {
         "station_id": "mum-gaimukh",
         "name": "Gaimukh",
+        "city_id": "mumbai",
         "city": "Mumbai",
-        "line_ids": ["mum-line-4"],
+        "line_ids": [
+          "mum-line-4"
+        ],
         "status": "planned",
         "phase": "4",
         "is_interchange": false,

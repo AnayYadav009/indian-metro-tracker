@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { AlertTriangle, X } from "lucide-react";
-import { DATA_SOURCE } from "@/lib/data";
+import { DATA_SOURCE, getMockCityNames } from "@/lib/data";
 
 interface MockBannerProps {
   className?: string;
@@ -11,10 +11,13 @@ interface MockBannerProps {
 export function MockBanner({ className = "" }: MockBannerProps) {
   const [dismissed, setDismissed] = useState(false);
 
-  // Hard rule: Only render whenever DATA_SOURCE === "mock"
-  if (DATA_SOURCE !== "mock" || dismissed) {
+  // Render for both "mock" and "mixed" datasets
+  if (DATA_SOURCE === "real" || dismissed) {
     return null;
   }
+
+  const isMixed = DATA_SOURCE === "mixed";
+  const mockCities = isMixed ? getMockCityNames() : [];
 
   return (
     <aside
@@ -26,7 +29,15 @@ export function MockBanner({ className = "" }: MockBannerProps) {
         <AlertTriangle className="h-4 w-4 shrink-0 text-amber-400" />
         <span>
           <strong className="font-semibold text-amber-300">Notice:</strong>{" "}
-          Data is illustrative/mock — real data pipeline coming in Milestone 7.
+          {isMixed ? (
+            <>
+              Some cities{" "}
+              {mockCities.length > 0 ? `(${mockCities.join(", ")})` : ""}{" "}
+              currently use illustrative mock data while real data pipeline onboarding is in progress.
+            </>
+          ) : (
+            "Network data is illustrative mock data."
+          )}
         </span>
       </div>
 

@@ -8,15 +8,16 @@ import {
   getStations,
   getSegmentById,
   getStationById,
-  validateMetroDataset,
+  getDatasetMetadataSummary,
 } from "@/lib/data";
+import { validateMetroDataset } from "@/lib/data-validator";
 
-describe("Metro Data Loader & Milestone 3 Acceptance Criteria", () => {
-  it("exports a valid DATA_SOURCE ('mock' | 'real')", () => {
-    expect(["mock", "real"]).toContain(DATA_SOURCE);
+describe("Metro Data Loader & Dataset Invariants", () => {
+  it("exports a valid DATA_SOURCE ('mock' | 'real' | 'mixed')", () => {
+    expect(["mock", "real", "mixed"]).toContain(DATA_SOURCE);
   });
 
-  it("loads and validates the complete metro dataset without error", () => {
+  it("loads the complete metro dataset without error", () => {
     const dataset = getMetroData();
     expect(dataset).toBeDefined();
     expect(dataset.cities.length).toBeGreaterThan(0);
@@ -25,20 +26,27 @@ describe("Metro Data Loader & Milestone 3 Acceptance Criteria", () => {
     expect(dataset.stations.features.length).toBeGreaterThan(0);
   });
 
-  describe("Milestone 3 Criteria Verification", () => {
+  it("proves real dataset passes full validateMetroDataset schema and relational rules", () => {
     const dataset = getMetroData();
-
-    it("criterion: Tier 1 cities only are present in mock data", () => {
-      const cityIds = dataset.cities.map((c) => c.id.toLowerCase());
-      expect(cityIds).toContain("delhi");
-      expect(cityIds).toContain("bengaluru");
-      expect(cityIds).toContain("mumbai");
-      // Verify all cities are Tier 1
-      const tier1Allowed = ["delhi", "bengaluru", "mumbai", "chennai", "kolkata", "hyderabad"];
-      cityIds.forEach((id) => {
-        expect(tier1Allowed).toContain(id);
-      });
+    const result = validateMetroDataset({
+      cities: dataset.cities,
+      lines: dataset.lines,
+      segments: dataset.segments,
+      stations: dataset.stations,
     });
+    expect(result.valid).toBe(true);
+    expect(result.errors).toHaveLength(0);
+  });
+
+  it("derives dynamic dataset metadata summary with last verified date and sources", () => {
+    const summary = getDatasetMetadataSummary();
+    expect(summary).toBeDefined();
+    expect(summary.badgeLabel).toMatch(/^Data: [A-Z][a-z]{2} \d{4} \(.+\)$/);
+    expect(summary.badgeLabel).not.toContain("MoHUA");
+  });
+
+  describe("Dataset Structural & Relational Invariants", () => {
+    const dataset = getMetroData();
 
     it("criterion: at least 2 segments per status (operational, construction, planned)", () => {
       const operational = dataset.segments.features.filter(
@@ -68,14 +76,14 @@ describe("Metro Data Loader & Milestone 3 Acceptance Criteria", () => {
         if (DATA_SOURCE === "mock") {
           expect(segment.properties.source).toBe("mock");
         } else {
-          expect(segment.properties.source).toMatch(/^(osm|mock)/);
+          expect(segment.properties.source).toMatch(/^(osm|manual|mock)/);
         }
       }
       for (const station of dataset.stations.features) {
         if (DATA_SOURCE === "mock") {
           expect(station.properties.source).toBe("mock");
         } else {
-          expect(station.properties.source).toMatch(/^(osm|mock)/);
+          expect(station.properties.source).toMatch(/^(osm|manual|mock)/);
         }
       }
     });
@@ -97,9 +105,11 @@ describe("Metro Data Loader & Milestone 3 Acceptance Criteria", () => {
           {
             id: "chn-blue",
             name: "Blue Line",
+            city_id: "chennai",
             city: "Chennai",
             color: "#0066CC",
             operator: "CMRL",
+            source: "mock",
           },
         ],
         segments: {
@@ -119,6 +129,7 @@ describe("Metro Data Loader & Milestone 3 Acceptance Criteria", () => {
                 segment_id: "chn-blue-seg-01",
                 line_id: "chn-blue",
                 line_name: "Blue Line",
+                city_id: "chennai",
                 city: "Chennai",
                 operator: "CMRL",
                 status: "operational",
@@ -152,7 +163,7 @@ describe("Metro Data Loader & Milestone 3 Acceptance Criteria", () => {
   describe("Query and Filter Utilities", () => {
     it("getCities returns all configured cities", () => {
       const cities = getCities();
-      expect(cities.length).toBe(3);
+      expect(cities.length).toBeGreaterThan(0);
       expect(cities.map((c) => c.name)).toEqual(
         expect.arrayContaining(["Delhi", "Bengaluru", "Mumbai"])
       );
@@ -168,22 +179,26 @@ describe("Metro Data Loader & Milestone 3 Acceptance Criteria", () => {
       blrLines.forEach((l) => expect(l.city).toBe("Bengaluru"));
     });
 
-    it("getSegments filters by city and status", () => {
+    it("getSegments filters by cityId and status", () => {
       const delhiOperational = getSegments({
-        city: "Delhi",
+        cityId: "delhi",
         status: "operational",
       });
       expect(delhiOperational.length).toBeGreaterThan(0);
       delhiOperational.forEach((s) => {
-        expect(s.properties.city).toBe("Delhi");
+        expect(s.properties.city_id).toBe("delhi");
         expect(s.properties.status).toBe("operational");
       });
     });
 
-    it("getStations filters by interchange and city", () => {
-      const interchanges = getStations({ isInterchange: true });
-      expect(interchanges.length).toBeGreaterThan(0);
-      interchanges.forEach((st) => {
+    it("getStations filters by interchange and cityId", () => {
+      const delhiInterchanges = getStations({
+        cityId: "delhi",
+        isInterchange: true,
+      });
+      expect(delhiInterchanges.length).toBeGreaterThan(0);
+      delhiInterchanges.forEach((st) => {
+        expect(st.properties.city_id).toBe("delhi");
         expect(st.properties.is_interchange).toBe(true);
       });
     });
