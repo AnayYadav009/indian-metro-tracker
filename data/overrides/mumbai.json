@@ -1,0 +1,155 @@
+{
+  "city": {
+    "id": "mumbai",
+    "name": "Mumbai",
+    "bbox": [72.75, 18.88, 73.05, 19.3],
+    "operator": "MMRDA",
+    "phases": ["1", "2A", "2B", "3", "4"]
+  },
+  "lines": [
+    {
+      "id": "mum-line-1",
+      "name": "Line 1 (Blue)",
+      "city": "Mumbai",
+      "color": "#0072CE",
+      "operator": "MMRDA"
+    },
+    {
+      "id": "mum-line-2a",
+      "name": "Line 2A (Yellow)",
+      "city": "Mumbai",
+      "color": "#FFD700",
+      "operator": "MMRDA"
+    },
+    {
+      "id": "mum-line-7",
+      "name": "Line 7 (Red)",
+      "city": "Mumbai",
+      "color": "#ED1C24",
+      "operator": "MMRDA"
+    },
+    {
+      "id": "mum-line-3",
+      "name": "Line 3 (Aqua)",
+      "city": "Mumbai",
+      "color": "#00A3E0",
+      "operator": "MMRDA"
+    },
+    {
+      "id": "mum-line-4",
+      "name": "Line 4 (Green)",
+      "city": "Mumbai",
+      "color": "#00B140",
+      "operator": "MMRDA"
+    },
+    {
+      "id": "mum-line-2b",
+      "name": "Line 2B (Yellow Ext)",
+      "city": "Mumbai",
+      "color": "#FFC72C",
+      "operator": "MMRDA"
+    }
+  ],
+  "segments": [
+    {
+      "osmId": 3808111,
+      "segment_id": "mum-line-1-seg-01",
+      "line_id": "mum-line-1",
+      "line_name": "Line 1 (Versova - Ghatkopar)",
+      "phase": "1",
+      "status": "operational",
+      "gauge": "standard",
+      "inaugurated_on": "2014-06-08",
+      "expected_completion": null,
+      "color": "#0072CE"
+    },
+    {
+      "osmId": 13989912,
+      "segment_id": "mum-line-2a-seg-01",
+      "line_id": "mum-line-2a",
+      "line_name": "Line 2A (Dahisar E - Andheri W)",
+      "phase": "2A",
+      "status": "operational",
+      "gauge": "standard",
+      "inaugurated_on": "2022-04-02",
+      "expected_completion": null,
+      "color": "#FFD700"
+    },
+    {
+      "osmId": 13989914,
+      "segment_id": "mum-line-7-seg-01",
+      "line_id": "mum-line-7",
+      "line_name": "Line 7 (Dahisar E - Gundavali)",
+      "phase": "1",
+      "status": "operational",
+      "gauge": "standard",
+      "inaugurated_on": "2022-04-02",
+      "expected_completion": null,
+      "color": "#ED1C24"
+    },
+    {
+      "osmId": 7898597,
+      "segment_id": "mum-line-3-seg-01",
+      "line_id": "mum-line-3",
+      "line_name": "Line 3 Aqua (Aarey JVLR - BKC)",
+      "phase": "3",
+      "status": "operational",
+      "gauge": "standard",
+      "inaugurated_on": "2024-10-07",
+      "expected_completion": null,
+      "color": "#00A3E0"
+    },
+    {
+      "osmId": 7898732,
+      "segment_id": "mum-line-4-seg-01",
+      "line_id": "mum-line-4",
+      "line_name": "Line 4 Green (Wadala - Kasarvadavali)",
+      "phase": "4",
+      "status": "construction",
+      "gauge": "standard",
+      "inaugurated_on": null,
+      "expected_completion": "2026-12",
+      "color": "#00B140"
+    },
+    {
+      "osmId": 20403808,
+      "segment_id": "mum-line-2b-seg-01",
+      "line_id": "mum-line-2b",
+      "line_name": "Line 2B (DN Nagar - Mandale)",
+      "phase": "2B",
+      "status": "construction",
+      "gauge": "standard",
+      "inaugurated_on": null,
+      "expected_completion": "2026-06",
+      "color": "#FFC72C"
+    },
+    {
+      "segment_id": "mum-planned-seg-01",
+      "line_id": "mum-line-4",
+      "line_name": "Line 4A (Kasarvadavali - Gaimukh Extension)",
+      "phase": "4",
+      "status": "planned",
+      "gauge": "standard",
+      "inaugurated_on": null,
+      "expected_completion": "2027",
+      "color": "#00B140",
+      "coordinates": [
+        [72.9712, 19.2785],
+        [72.9654, 19.2987],
+        [72.9582, 19.3145]
+      ]
+    }
+  ],
+  "interchangeStationNames": [
+    "Ghatkopar",
+    "Andheri",
+    "D.N. Nagar",
+    "Gundavali",
+    "Western Express Highway",
+    "Marol Naka",
+    "Dahisar East",
+    "BKC",
+    "Chhatrapati Shivaji Maharaj Terminus",
+    "Dadar"
+  ]
+}

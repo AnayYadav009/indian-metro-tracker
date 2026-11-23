@@ -1,0 +1,147 @@
+{
+  "city": {
+    "id": "bengaluru",
+    "name": "Bengaluru",
+    "bbox": [77.45, 12.8, 77.78, 13.15],
+    "operator": "BMRCL",
+    "phases": ["1", "2", "2A", "2B", "3"]
+  },
+  "lines": [
+    {
+      "id": "blr-purple",
+      "name": "Purple Line",
+      "city": "Bengaluru",
+      "color": "#800080",
+      "operator": "BMRCL"
+    },
+    {
+      "id": "blr-green",
+      "name": "Green Line",
+      "city": "Bengaluru",
+      "color": "#009933",
+      "operator": "BMRCL"
+    },
+    {
+      "id": "blr-yellow",
+      "name": "Yellow Line",
+      "city": "Bengaluru",
+      "color": "#FFCC00",
+      "operator": "BMRCL"
+    },
+    {
+      "id": "blr-blue",
+      "name": "Blue Line (Airport Link)",
+      "city": "Bengaluru",
+      "color": "#1E90FF",
+      "operator": "BMRCL"
+    },
+    {
+      "id": "blr-pink",
+      "name": "Pink Line",
+      "city": "Bengaluru",
+      "color": "#FF69B4",
+      "operator": "BMRCL"
+    }
+  ],
+  "segments": [
+    {
+      "osmId": 1798771,
+      "segment_id": "blr-purple-seg-01",
+      "line_id": "blr-purple",
+      "line_name": "Purple Line",
+      "phase": "1",
+      "status": "operational",
+      "gauge": "standard",
+      "inaugurated_on": "2011-10-20",
+      "expected_completion": null,
+      "color": "#800080"
+    },
+    {
+      "osmId": 1798772,
+      "segment_id": "blr-green-seg-01",
+      "line_id": "blr-green",
+      "line_name": "Green Line",
+      "phase": "1",
+      "status": "operational",
+      "gauge": "standard",
+      "inaugurated_on": "2014-03-01",
+      "expected_completion": null,
+      "color": "#009933"
+    },
+    {
+      "osmId": 19421927,
+      "segment_id": "blr-yellow-seg-01",
+      "line_id": "blr-yellow",
+      "line_name": "Yellow Line (RV Road - Bommasandra)",
+      "phase": "2",
+      "status": "construction",
+      "gauge": "standard",
+      "inaugurated_on": null,
+      "expected_completion": "2025-12",
+      "color": "#FFCC00"
+    },
+    {
+      "segment_id": "blr-blue-seg-01",
+      "line_id": "blr-blue",
+      "line_name": "Blue Line (ORR & Airport)",
+      "phase": "2A",
+      "status": "construction",
+      "gauge": "standard",
+      "inaugurated_on": null,
+      "expected_completion": "2026-12",
+      "color": "#1E90FF",
+      "coordinates": [
+        [77.6245, 12.9174],
+        [77.6534, 12.9256],
+        [77.6892, 12.9367],
+        [77.6985, 12.9912],
+        [77.6654, 13.0456],
+        [77.6321, 13.1124],
+        [77.7065, 13.1985]
+      ]
+    },
+    {
+      "segment_id": "blr-pink-seg-01",
+      "line_id": "blr-pink",
+      "line_name": "Pink Line (Kalena Agrahara - Nagawara)",
+      "phase": "2",
+      "status": "construction",
+      "gauge": "standard",
+      "inaugurated_on": null,
+      "expected_completion": "2026-06",
+      "color": "#FF69B4",
+      "coordinates": [
+        [77.5852, 12.8712],
+        [77.5954, 12.9234],
+        [77.6045, 12.9712],
+        [77.6189, 13.0234]
+      ]
+    },
+    {
+      "segment_id": "blr-planned-seg-01",
+      "line_id": "blr-purple",
+      "line_name": "Phase 3 Magadi Road - Hosahalli",
+      "phase": "3",
+      "status": "planned",
+      "gauge": "standard",
+      "inaugurated_on": null,
+      "expected_completion": "2030",
+      "color": "#800080",
+      "coordinates": [
+        [77.5342, 12.9785],
+        [77.4912, 12.9845],
+        [77.4521, 12.9912]
+      ]
+    }
+  ],
+  "interchangeStationNames": [
+    "Nadaprabhu Kempegowda Station, Majestic",
+    "Majestic",
+    "Jayadeva Hospital",
+    "Rashtreeya Vidyalaya Road",
+    "RV Road",
+    "MG Road",
+    "KR Puram",
+    "Central Silk Board"
+  ]
+}
