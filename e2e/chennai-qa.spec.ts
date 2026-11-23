@@ -15,6 +15,10 @@ test.describe("Chennai Visual & Interaction QA (Step 5)", () => {
     const chennaiBtn = page.getByTestId("city-select-chennai");
     await expect(chennaiBtn).toBeVisible();
     await chennaiBtn.click();
+    const filterToggle = page.getByTestId("collapse-filter-btn");
+    if ((await filterToggle.getAttribute("aria-expanded")) === "false") {
+      await filterToggle.click({ force: true });
+    }
 
     // 2. Verify dynamic phases for Chennai render
     await expect(page.getByTestId("phase-pill-1")).toBeVisible();

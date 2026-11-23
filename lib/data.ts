@@ -35,22 +35,10 @@ export function determineDataSourceState(
     return envOverride;
   }
 
-  const allSources: string[] = [];
-  if (segments?.features) {
-    for (const f of segments.features) {
-      if (f.properties?.source) allSources.push(f.properties.source);
-    }
-  }
-  if (stations?.features) {
-    for (const f of stations.features) {
-      if (f.properties?.source) allSources.push(f.properties.source);
-    }
-  }
-  if (Array.isArray(lines)) {
-    for (const l of lines) {
-      if (l?.source) allSources.push(l.source);
-    }
-  }
+  const allSources = [...(segments?.features ?? []), ...(stations?.features ?? [])]
+    .map((f) => f.properties?.source)
+    .filter((source): source is string => !!source)
+    .concat(Array.isArray(lines) ? lines.map((l) => l?.source).filter((source): source is string => !!source) : []);
 
   if (allSources.length === 0) return "mock";
 
@@ -206,21 +194,9 @@ export function getStationById(stationId: string): StationFeature | undefined {
  */
 export function getMockCityNames(): string[] {
   const { segments, stations } = getMetroData();
-  const mockCityNames = new Set<string>();
-
-  for (const seg of segments.features) {
-    if (seg.properties.source?.toLowerCase() === "mock") {
-      mockCityNames.add(seg.properties.city);
-    }
-  }
-
-  for (const stn of stations.features) {
-    if (stn.properties.source?.toLowerCase() === "mock") {
-      mockCityNames.add(stn.properties.city);
-    }
-  }
-
-  return Array.from(mockCityNames);
+  return [...new Set([...segments.features, ...stations.features]
+    .filter(({ properties }) => properties.source?.toLowerCase() === "mock")
+    .map(({ properties }) => properties.city))];
 }
 
 /**
@@ -238,25 +214,10 @@ export function getDatasetMetadataSummary(): {
   let latestDateStr = "";
   const sourceTokens = new Set<string>();
 
-  const processRecord = (props?: { source?: string; last_verified?: string | null }) => {
-    if (!props) return;
-    if (props.last_verified && props.last_verified > latestDateStr) {
-      latestDateStr = props.last_verified;
-    }
-    if (props.source) {
-      const parts = props.source.split(/[+,]/).map((p) => p.trim().toLowerCase());
-      for (const part of parts) {
-        if (part) sourceTokens.add(part);
-      }
-    }
-  };
-
-  for (const seg of segments.features) {
-    processRecord(seg.properties);
-  }
-  for (const stn of stations.features) {
-    processRecord(stn.properties);
-  }
+  [...segments.features, ...stations.features].forEach(({ properties: props }) => {
+    if (props.last_verified && props.last_verified > latestDateStr) latestDateStr = props.last_verified;
+    props.source?.split(/[+,]/).map((part) => part.trim().toLowerCase()).filter(Boolean).forEach((part) => sourceTokens.add(part));
+  });
 
   let dateFormatted = "Unknown";
   if (latestDateStr) {

@@ -39,6 +39,11 @@ test.describe("MapLibre Worker Isolation (Zero Runtime unpkg)", () => {
 
     // Assert that the local worker was requested
     expect(localWorkerRequests.length).toBeGreaterThanOrEqual(1);
+    const workerType = await page.evaluate(async () => {
+      const response = await fetch("/maplibre-gl-worker.mjs");
+      return response.headers.get("content-type") || "";
+    });
+    expect(workerType).toMatch(/javascript|ecmascript/);
 
     // Assert no 404 errors for maplibre files
     const maplibre404s = failed404s.filter((u) => u.includes("maplibre-gl"));

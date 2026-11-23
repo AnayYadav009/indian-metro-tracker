@@ -5,6 +5,7 @@ import { normalizeOverpassCity } from "./normalize";
 import { mergeCityOverrides, type CityOverrideData, type InterchangeCorrectionsMap } from "./merge-overrides";
 import { validateMetroDataset } from "../../lib/data-validator";
 import { atomicWriteFiles } from "../lib/atomic-write";
+import { readJsonFile } from "../lib/load-dataset";
 import type { City, Line, SegmentFeature, StationFeature } from "../../types/metro";
 
 const DATA_DIR = path.resolve(process.cwd(), "data");
@@ -16,13 +17,13 @@ export function replaceCityRecords<T>(
   getId: (record: T) => string
 ): T[] {
   const remaining = new Map(replacements.map((record) => [getId(record), record]));
-  const merged = existing.flatMap((record) => {
-    if (!belongsToCity(record)) return [record];
-    const replacement = remaining.get(getId(record));
-    if (!replacement) return [];
-    remaining.delete(getId(record));
-    return [replacement];
-  });
+  const merged = existing.reduce<T[]>((result, record) => {
+    if (!belongsToCity(record)) return (result.push(record), result);
+    const id = getId(record);
+    const replacement = remaining.get(id);
+    if (replacement) result.push(replacement), remaining.delete(id);
+    return result;
+  }, []);
   return [...merged, ...remaining.values()];
 }
 
@@ -40,7 +41,7 @@ export async function buildCityData(cityId: string, forceFetch = false): Promise
   if (!fs.existsSync(overridesPath)) {
     throw new Error(`Missing overrides file at ${overridesPath}`);
   }
-  const overrides: CityOverrideData = JSON.parse(fs.readFileSync(overridesPath, "utf-8"));
+  const overrides = readJsonFile<CityOverrideData>(overridesPath);
 
   // 1. Fetch Overpass
   const rawData = await fetchOverpassDataForCity(cityId, overrides.city.bbox, forceFetch);
@@ -78,7 +79,7 @@ export async function buildCityData(cityId: string, forceFetch = false): Promise
   let interchangeCorrections: InterchangeCorrectionsMap = {};
   if (fs.existsSync(interchangesPath)) {
     try {
-      const raw = JSON.parse(fs.readFileSync(interchangesPath, "utf-8"));
+      const raw = readJsonFile<Record<string, unknown>>(interchangesPath);
       // Strip the _comment key (metadata), keep only station_id keyed entries
       const { _comment: _ignored, ...corrections } = raw;
       interchangeCorrections = corrections as InterchangeCorrectionsMap;
@@ -190,10 +191,10 @@ if (require.main === module) {
       const segsFile = path.join(DATA_DIR, "segments.geojson");
       const stnsFile = path.join(DATA_DIR, "stations.geojson");
 
-      const existingCities: City[] = fs.existsSync(citiesFile) ? JSON.parse(fs.readFileSync(citiesFile, "utf-8")) : [];
-      const existingLines: Line[] = fs.existsSync(linesFile) ? JSON.parse(fs.readFileSync(linesFile, "utf-8")) : [];
-      const existingSegs = fs.existsSync(segsFile) ? JSON.parse(fs.readFileSync(segsFile, "utf-8")).features : [];
-      const existingStns = fs.existsSync(stnsFile) ? JSON.parse(fs.readFileSync(stnsFile, "utf-8")).features : [];
+      const existingCities = fs.existsSync(citiesFile) ? readJsonFile<City[]>(citiesFile) : [],
+        existingLines = fs.existsSync(linesFile) ? readJsonFile<Line[]>(linesFile) : [];
+      const existingSegs = fs.existsSync(segsFile) ? readJsonFile<{ features: SegmentFeature[] }>(segsFile).features : [],
+        existingStns = fs.existsSync(stnsFile) ? readJsonFile<{ features: StationFeature[] }>(stnsFile).features : [];
 
       // Replace or merge city
       const targetCity = cityArg.toLowerCase();

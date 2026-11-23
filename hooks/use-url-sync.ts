@@ -76,14 +76,10 @@ export function useUrlSync() {
         const id = selectedParam.slice(colonIndex + 1);
         if (id && type === "segment") {
           const segment = getSegmentById(id);
-          if (segment && (!city || segment.properties.city_id === city)) {
-            setSelectedFeature({ type, data: segment.properties });
-          }
+          if (segment && (!city || segment.properties.city_id === city)) setSelectedFeature({ type, data: segment.properties });
         } else if (id && type === "station") {
           const station = getStationById(id);
-          if (station && (!city || station.properties.city_id === city)) {
-            setSelectedFeature({ type, data: station.properties });
-          }
+          if (station && (!city || station.properties.city_id === city)) setSelectedFeature({ type, data: station.properties });
         }
       }
       // Hydrate year: ?year=2015
@@ -137,13 +133,7 @@ export function useUrlSync() {
         params.set("phase", selectedPhases.join(","));
       }
 
-      if (selectedFeature) {
-        if (selectedFeature.type === "segment") {
-          params.set("selected", `segment:${selectedFeature.data.segment_id}`);
-        } else if (selectedFeature.type === "station") {
-          params.set("selected", `station:${selectedFeature.data.station_id}`);
-        }
-      }
+      if (selectedFeature) params.set("selected", selectedFeature.type === "segment" ? `segment:${selectedFeature.data.segment_id}` : `station:${selectedFeature.data.station_id}`);
 
       if (selectedYear !== null) {
         params.set("year", selectedYear.toString());

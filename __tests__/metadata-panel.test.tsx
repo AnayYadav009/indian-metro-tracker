@@ -229,6 +229,38 @@ describe("MetadataPanel Component", () => {
   });
 
   describe("M13.1 UX Hardening Labels & Copy", () => {
+    it("flags a selected line when its geometry or coverage is incomplete", () => {
+      const mockSegment: SegmentProperties = {
+        segment_id: "del-pink-seg-01",
+        line_id: "del-pink",
+        line_name: "Pink Line",
+        city_id: "delhi",
+        city: "Delhi",
+        operator: "DMRC",
+        status: "operational",
+        phase: "1",
+        length_km: 61.4,
+        gauge: "standard",
+        inaugurated_on: "2018-03-14",
+        expected_completion: null,
+        stations_count: 38,
+        color: "#E75480",
+        source: "osm",
+        references: [],
+        last_verified: null,
+      };
+
+      useMetroStore.getState().setSelectedFeature({
+        type: "segment",
+        data: mockSegment,
+      });
+
+      render(<MetadataPanel />);
+      expect(screen.getByTestId("known-issue-notice")).toHaveTextContent(
+        "Data incomplete for this line: station and terminal coverage is incomplete."
+      );
+    });
+
     it("renders '1 station' singular when stations_count is 1", () => {
       const mockSegment: SegmentProperties = {
         segment_id: "test-single-seg",

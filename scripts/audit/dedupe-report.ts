@@ -80,12 +80,10 @@ export function generateDedupeReport(cityId: string) {
     // 1. Within dedupeRadiusM (default 350m) AND same base name (or alias match)
     // 2. OR within dedupeRadiusM AND both nodes share explicit interchange tags
     // Different base names never merge on proximity alone.
-    let matched: (typeof retainedNodes)[0] | null = null;
     let matchedDistM = Infinity;
-
-    for (const r of retainedNodes) {
+    const matched = retainedNodes.find((r) => {
       const distM = haversineDistanceM(coords, r.coords);
-      if (distM > dedupeRadiusM) continue;
+      if (distM > dedupeRadiusM) return false;
 
       const sameName =
         r.resolvedName.toLowerCase() === resolvedName.toLowerCase() ||
@@ -98,12 +96,10 @@ export function generateDedupeReport(cityId: string) {
           (r.tags?.interchange === "yes" || r.tags?.public_transport === "stop_area")
       );
 
-      if (sameName || aliasMatch || sharedInterchangeTag) {
-        matched = r;
-        matchedDistM = distM;
-        break;
-      }
-    }
+      if (!(sameName || aliasMatch || sharedInterchangeTag)) return false;
+      matchedDistM = distM;
+      return true;
+    });
 
     if (matched) {
       mergedNodes.push({

@@ -26,6 +26,7 @@ import {
   nearestPointOnPolyline,
 } from "../../lib/geo";
 import { AUDIT_THRESHOLDS } from "./audit-config";
+import { segmentsIntersect as segmentsIntersectHelper } from "../lib/geometry";
 
 // ─── Types ──────────────────────────────────────────────────────────────────
 
@@ -232,7 +233,9 @@ function isSelfIntersecting(coords: [number, number][]): boolean {
       // Skip adjacent segments
       if (j === i + 1) continue;
       if (
-        segmentsIntersect(coords[i], coords[i + 1], coords[j], coords[j + 1])
+        segmentsIntersectHelper(coords[i], coords[i + 1], coords[j], coords[j + 1], {
+          includeCollinear: true,
+        })
       ) {
         return true;
       }
@@ -280,53 +283,6 @@ function shortSharpTurns(
     if (angle > angleThreshold && span < spanM) count++;
   }
   return count;
-}
-
-function cross(
-  o: [number, number],
-  a: [number, number],
-  b: [number, number]
-): number {
-  return (a[0] - o[0]) * (b[1] - o[1]) - (a[1] - o[1]) * (b[0] - o[0]);
-}
-
-function onSegment(
-  p: [number, number],
-  q: [number, number],
-  r: [number, number]
-): boolean {
-  return (
-    Math.min(p[0], r[0]) <= q[0] &&
-    q[0] <= Math.max(p[0], r[0]) &&
-    Math.min(p[1], r[1]) <= q[1] &&
-    q[1] <= Math.max(p[1], r[1])
-  );
-}
-
-function segmentsIntersect(
-  p1: [number, number],
-  q1: [number, number],
-  p2: [number, number],
-  q2: [number, number]
-): boolean {
-  const d1 = cross(p2, q2, p1);
-  const d2 = cross(p2, q2, q1);
-  const d3 = cross(p1, q1, p2);
-  const d4 = cross(p1, q1, q2);
-
-  if (
-    ((d1 > 0 && d2 < 0) || (d1 < 0 && d2 > 0)) &&
-    ((d3 > 0 && d4 < 0) || (d3 < 0 && d4 > 0))
-  ) {
-    return true;
-  }
-
-  if (d1 === 0 && onSegment(p2, p1, q2)) return true;
-  if (d2 === 0 && onSegment(p2, q1, q2)) return true;
-  if (d3 === 0 && onSegment(p1, p2, q1)) return true;
-  if (d4 === 0 && onSegment(p1, q2, q1)) return true;
-
-  return false;
 }
 
 // ─── Main audit ─────────────────────────────────────────────────────────────
@@ -860,41 +816,20 @@ export function runAudit(
   // A3: Coordinates inside India envelope
   for (const seg of segments.features) {
     const p = seg.properties;
-    for (const [lng, lat] of seg.geometry.coordinates) {
-      if (
-        lng < cfg.indiaEnvelope.minLng ||
-        lng > cfg.indiaEnvelope.maxLng ||
-        lat < cfg.indiaEnvelope.minLat ||
-        lat > cfg.indiaEnvelope.maxLat
-      ) {
-        add(
-          p.city_id,
-          "coords-india-envelope",
-          "error",
-          p.segment_id,
-          `Coordinate [${lng}, ${lat}] outside India envelope`
-        );
-        break; // one finding per segment
-      }
-    }
+    const outside = seg.geometry.coordinates.find(([lng, lat]) =>
+      lng < cfg.indiaEnvelope.minLng || lng > cfg.indiaEnvelope.maxLng ||
+      lat < cfg.indiaEnvelope.minLat || lat > cfg.indiaEnvelope.maxLat
+    );
+    if (outside) add(p.city_id, "coords-india-envelope", "error", p.segment_id,
+      `Coordinate [${outside[0]}, ${outside[1]}] outside India envelope`);
   }
   for (const st of stations.features) {
     const p = st.properties;
     const [lng, lat] = st.geometry.coordinates;
-    if (
-      lng < cfg.indiaEnvelope.minLng ||
-      lng > cfg.indiaEnvelope.maxLng ||
-      lat < cfg.indiaEnvelope.minLat ||
-      lat > cfg.indiaEnvelope.maxLat
-    ) {
-      add(
-        p.city_id,
-        "coords-india-envelope",
-        "error",
-        p.station_id,
-        `Coordinate [${lng}, ${lat}] outside India envelope`
-      );
-    }
+    if (lng < cfg.indiaEnvelope.minLng || lng > cfg.indiaEnvelope.maxLng ||
+        lat < cfg.indiaEnvelope.minLat || lat > cfg.indiaEnvelope.maxLat)
+      add(p.city_id, "coords-india-envelope", "error", p.station_id,
+        `Coordinate [${lng}, ${lat}] outside India envelope`);
   }
 
   // A4: Coordinates outside city bbox margin
@@ -902,45 +837,24 @@ export function runAudit(
     const p = seg.properties;
     const city = cityById.get(p.city_id);
     if (!city) continue;
-    const [cMinLng, cMinLat, cMaxLng, cMaxLat] = city.bbox;
-    for (const [lng, lat] of seg.geometry.coordinates) {
-      if (
-        lng < cMinLng - cfg.bboxMarginDeg ||
-        lng > cMaxLng + cfg.bboxMarginDeg ||
-        lat < cMinLat - cfg.bboxMarginDeg ||
-        lat > cMaxLat + cfg.bboxMarginDeg
-      ) {
-        add(
-          p.city_id,
-          "coords-city-bbox",
-          "warn",
-          p.segment_id,
-          `Coordinate [${lng}, ${lat}] outside city bbox [${city.bbox.join(", ")}] ±${cfg.bboxMarginDeg}°`
-        );
-        break; // one finding per segment
-      }
-    }
+    const [minLng, minLat, maxLng, maxLat] = city.bbox;
+    const outside = seg.geometry.coordinates.find(([lng, lat]) =>
+      lng < minLng - cfg.bboxMarginDeg || lng > maxLng + cfg.bboxMarginDeg ||
+      lat < minLat - cfg.bboxMarginDeg || lat > maxLat + cfg.bboxMarginDeg
+    );
+    if (outside) add(p.city_id, "coords-city-bbox", "warn", p.segment_id,
+      `Coordinate [${outside[0]}, ${outside[1]}] outside city bbox [${city.bbox.join(", ")}] ±${cfg.bboxMarginDeg}°`);
   }
   for (const st of stations.features) {
     const p = st.properties;
     const city = cityById.get(p.city_id);
     if (!city) continue;
-    const [cMinLng, cMinLat, cMaxLng, cMaxLat] = city.bbox;
+    const [minLng, minLat, maxLng, maxLat] = city.bbox;
     const [lng, lat] = st.geometry.coordinates;
-    if (
-      lng < cMinLng - cfg.bboxMarginDeg ||
-      lng > cMaxLng + cfg.bboxMarginDeg ||
-      lat < cMinLat - cfg.bboxMarginDeg ||
-      lat > cMaxLat + cfg.bboxMarginDeg
-    ) {
-      add(
-        p.city_id,
-        "coords-city-bbox",
-        "warn",
-        p.station_id,
-        `Coordinate [${lng}, ${lat}] outside city bbox [${city.bbox.join(", ")}] ±${cfg.bboxMarginDeg}°`
-      );
-    }
+    if (lng < minLng - cfg.bboxMarginDeg || lng > maxLng + cfg.bboxMarginDeg ||
+        lat < minLat - cfg.bboxMarginDeg || lat > maxLat + cfg.bboxMarginDeg)
+      add(p.city_id, "coords-city-bbox", "warn", p.station_id,
+        `Coordinate [${lng}, ${lat}] outside city bbox [${city.bbox.join(", ")}] ±${cfg.bboxMarginDeg}°`);
   }
 
   // A5: Line with no segments
@@ -1639,24 +1553,15 @@ export function runAudit(
 
   // C9: Duplicate normalized station names in same city
   for (const city of cities) {
-    const cityStations = stationsByCityId.get(city.id) || [];
-    const nameMap = new Map<string, string[]>();
-    for (const st of cityStations) {
+    const names = (stationsByCityId.get(city.id) || []).reduce((map, st) => {
       const norm = normalizeStationName(st.properties.name);
-      const arr = nameMap.get(norm) || [];
-      arr.push(st.properties.station_id);
-      nameMap.set(norm, arr);
-    }
-    for (const [norm, ids] of nameMap.entries()) {
-      if (ids.length > 1) {
-        add(
-          city.id,
-          "duplicate-station-name",
-          "warn",
-          ids.sort().join("|"),
-          `Duplicate normalized station name '${norm}': [${ids.sort().join(", ")}]`
-        );
-      }
+      map.set(norm, [...(map.get(norm) || []), st.properties.station_id]);
+      return map;
+    }, new Map<string, string[]>());
+    for (const [norm, ids] of names) if (ids.length > 1) {
+      const sorted = ids.sort();
+      add(city.id, "duplicate-station-name", "warn", sorted.join("|"),
+        `Duplicate normalized station name '${norm}': [${sorted.join(", ")}]`);
     }
   }
 
@@ -2330,126 +2235,54 @@ export function runAudit(
       }
 
       // D2: Terminal station names (after alias normalization)
-      if (refLine.terminals && refLine.terminals.length > 0) {
-        const lineStations = stationsByLineId.get(refLine.line_id) || [];
-        const lineSegs = segmentsByLineId.get(refLine.line_id) || [];
-        const stationNames = new Set(
-          lineStations.map((s) => normalizeStationName(s.properties.name))
-        );
-        for (const terminal of refLine.terminals) {
-          const normTerm = normalizeStationName(terminal);
-          if (!stationNames.has(normTerm)) {
-            const isUnverified = refLine.confidence === "unverified";
-            const sev: Severity = isUnverified ? "warn" : "error";
-            const label = isUnverified ? " (unverified reference)" : "";
-            add(
-              city.id,
-              "reference-station-missing",
-              sev,
-              refLine.line_id,
-              `Terminal '${terminal}' from reference not found in data station names${label}`
-            );
-          } else {
-            // M8.1.5: line-terminal-missing
-            // Every terminal in the reference must have a station within ~300 m of a segment end of that line
-            const termStation = lineStations.find(
-              (s) => normalizeStationName(s.properties.name) === normTerm
-            );
-            if (termStation && lineSegs.length > 0) {
-              const stCoord = termStation.geometry.coordinates as [number, number];
-              let minEndDistM = Infinity;
-
-              for (const seg of lineSegs) {
-                const coords = seg.geometry.coordinates as [number, number][];
-                if (coords.length < 2) continue;
-                const startPt = coords[0];
-                const endPt = coords[coords.length - 1];
-                const dStart = haversineDistanceKm(stCoord, startPt) * 1000;
-                const dEnd = haversineDistanceKm(stCoord, endPt) * 1000;
-                if (dStart < minEndDistM) minEndDistM = dStart;
-                if (dEnd < minEndDistM) minEndDistM = dEnd;
-              }
-
-              if (minEndDistM > cfg.terminalToSegmentEndMaxM) {
-                add(
-                  city.id,
-                  "line-terminal-missing",
-                  "error",
-                  `${refLine.line_id}|${termStation.properties.station_id}`,
-                  `Terminal station '${terminal}' is ${Math.round(minEndDistM)} m away from nearest segment end of line '${refLine.line_id}' (threshold: ${cfg.terminalToSegmentEndMaxM} m)`
-                );
-              }
-            } else if (!termStation || lineSegs.length === 0) {
-              add(
-                city.id,
-                "line-terminal-missing",
-                "error",
-                `${refLine.line_id}|${terminal}`,
-                `Terminal station '${terminal}' has no segment endpoints on line '${refLine.line_id}'`
-              );
-            }
-          }
+      const lineStations = stationsByLineId.get(refLine.line_id) || [];
+      const lineSegs = segmentsByLineId.get(refLine.line_id) || [];
+      const stationNames = new Set(lineStations.map((s) => normalizeStationName(s.properties.name)));
+      for (const terminal of refLine.terminals || []) {
+        const normTerm = normalizeStationName(terminal);
+        if (!stationNames.has(normTerm)) {
+          const unverified = refLine.confidence === "unverified";
+          add(city.id, "reference-station-missing", unverified ? "warn" : "error", refLine.line_id,
+            `Terminal '${terminal}' from reference not found in data station names${unverified ? " (unverified reference)" : ""}`);
+          continue;
         }
+        const termStation = lineStations.find((s) => normalizeStationName(s.properties.name) === normTerm);
+        if (!termStation || !lineSegs.length) {
+          add(city.id, "line-terminal-missing", "error", `${refLine.line_id}|${terminal}`,
+            `Terminal station '${terminal}' has no segment endpoints on line '${refLine.line_id}'`);
+          continue;
+        }
+        const stCoord = termStation.geometry.coordinates as [number, number];
+        const minEndDistM = lineSegs.reduce((min, seg) => {
+          const coords = seg.geometry.coordinates as [number, number][];
+          return coords.length < 2 ? min : Math.min(min,
+            haversineDistanceKm(stCoord, coords[0]) * 1000,
+            haversineDistanceKm(stCoord, coords.at(-1)!) * 1000);
+        }, Infinity);
+        if (minEndDistM > cfg.terminalToSegmentEndMaxM)
+          add(city.id, "line-terminal-missing", "error", `${refLine.line_id}|${termStation.properties.station_id}`,
+            `Terminal station '${terminal}' is ${Math.round(minEndDistM)} m away from nearest segment end of line '${refLine.line_id}' (threshold: ${cfg.terminalToSegmentEndMaxM} m)`);
       }
 
       // Reference self-check: openings chronological, stage sums only when every stage has a non-null count
-      if (refLine.openings && refLine.openings.length > 0) {
-        let runningTotal = 0;
-        let lastDate: string | null = null;
-        let dateOrderValid = true;
-        let allStagesHaveCounts = true;
-
-        for (const op of refLine.openings) {
-          if (op.stations_added != null) {
-            runningTotal += op.stations_added;
-          } else {
-            allStagesHaveCounts = false;
-          }
-          if (op.opened_on) {
-            if (lastDate && op.opened_on < lastDate) {
-              dateOrderValid = false;
-            }
-            lastDate = op.opened_on;
-          }
-          if (
-            op.source?.kind &&
-            !["official", "government", "news"].includes(op.source.kind)
-          ) {
-            add(
-              city.id,
-              "reference-self-check",
-              "error",
-              refLine.line_id,
-              `Opening stage '${op.stage}' has invalid source kind '${op.source.kind}'`
-            );
-          }
-        }
-
-        if (!dateOrderValid) {
-          add(
-            city.id,
-            "reference-self-check",
-            "error",
-            refLine.line_id,
-            `Openings for line '${refLine.line_id}' are not in chronological order`
-          );
-        }
-
-        // Compare stage sums only when every stage has a non-null count; otherwise compare line totals
-        if (
-          allStagesHaveCounts &&
-          refLine.operational_stations != null &&
-          runningTotal !== refLine.operational_stations
-        ) {
-          add(
-            city.id,
-            "reference-self-check",
-            "error",
-            refLine.line_id,
-            `Reference self-check: sum of stations_added (${runningTotal}) does not match operational_stations (${refLine.operational_stations})`
-          );
-        }
-      }
+      const [runningTotal, , dateOrderValid, allStagesHaveCounts] = (refLine.openings || []).reduce(
+        ([total, lastDate, ordered, counted], op) => {
+          if (op.source?.kind && !["official", "government", "news"].includes(op.source.kind))
+            add(city.id, "reference-self-check", "error", refLine.line_id,
+              `Opening stage '${op.stage}' has invalid source kind '${op.source.kind}'`);
+          return [
+            total + (op.stations_added ?? 0),
+            op.opened_on || lastDate,
+            ordered && !(lastDate && op.opened_on && op.opened_on < lastDate),
+            counted && op.stations_added != null,
+          ] as [number, string | null, boolean, boolean];
+        }, [0, null, true, true] as [number, string | null, boolean, boolean]
+      );
+      if (!dateOrderValid) add(city.id, "reference-self-check", "error", refLine.line_id,
+        `Openings for line '${refLine.line_id}' are not in chronological order`);
+      if (refLine.openings?.length && allStagesHaveCounts && refLine.operational_stations != null && runningTotal !== refLine.operational_stations)
+        add(city.id, "reference-self-check", "error", refLine.line_id,
+          `Reference self-check: sum of stations_added (${runningTotal}) does not match operational_stations (${refLine.operational_stations})`);
 
       if (refLine.construction && refLine.construction.length > 0) {
         for (const con of refLine.construction) {

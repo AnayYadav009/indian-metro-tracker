@@ -42,6 +42,9 @@ test.describe("M12 Interchange Highlighting", () => {
     const chips = page.locator('[data-testid^="interchange-line-chip-"]');
     const count = await chips.count();
     expect(count).toBeGreaterThanOrEqual(2);
+    await expect(chips.first()).toContainText(
+      /Operational|Under Construction|Planned/
+    );
 
     // Each chip should have text (line name)
     for (let i = 0; i < count; i++) {

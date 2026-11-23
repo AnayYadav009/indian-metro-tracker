@@ -30,24 +30,13 @@ export function NetworkStats() {
       matchesSegmentFilter(f.properties, criteria)
     );
 
-    let operationalKm = 0;
-    let constructionKm = 0;
-    let plannedKm = 0;
-
-    for (const seg of filteredSegments) {
-      if (seg.properties.status === "operational") {
-        operationalKm += seg.properties.length_km;
-      } else if (seg.properties.status === "construction") {
-        constructionKm += seg.properties.length_km;
-      } else if (seg.properties.status === "planned") {
-        plannedKm += seg.properties.length_km;
-      }
-    }
+    const km = { operational: 0, construction: 0, planned: 0 };
+    for (const { properties } of filteredSegments) km[properties.status] += properties.length_km;
 
     return {
-      operationalKm: Math.round(operationalKm * 10) / 10,
-      constructionKm: Math.round(constructionKm * 10) / 10,
-      plannedKm: Math.round(plannedKm * 10) / 10,
+      operationalKm: Math.round(km.operational * 10) / 10,
+      constructionKm: Math.round(km.construction * 10) / 10,
+      plannedKm: Math.round(km.planned * 10) / 10,
       totalSegments: filteredSegments.length,
     };
   }, [

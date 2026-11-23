@@ -15,7 +15,7 @@ import {
   formatJsonReport,
 } from "./audit-engine";
 import type { AuditDeclarations, BaselineFile, CoverageGap } from "./audit-engine";
-import { loadMetroDatasetFromDisk } from "../lib/load-dataset";
+import { loadMetroDatasetFromDisk, readJsonFile } from "../lib/load-dataset";
 
 function main() {
   const dataDir = path.resolve(process.cwd(), "data");
@@ -33,7 +33,7 @@ function main() {
   let coverageGaps: CoverageGap[] = [];
   if (fs.existsSync(coverageGapsPath)) {
     try {
-      const parsed: unknown = JSON.parse(fs.readFileSync(coverageGapsPath, "utf-8"));
+      const parsed: unknown = readJsonFile(coverageGapsPath);
       if (Array.isArray(parsed)) {
         coverageGaps = parsed.filter(
           (gap): gap is CoverageGap =>
@@ -57,56 +57,33 @@ function main() {
   // Look for exemptions in each city's override file
   const overridesDir = path.join(dataDir, "overrides");
   if (fs.existsSync(overridesDir)) {
-    for (const file of fs.readdirSync(overridesDir)) {
-      if (!file.endsWith(".json") || file === "pending-unverified.json") continue;
+    fs.readdirSync(overridesDir).filter((file) => file.endsWith(".json") && file !== "pending-unverified.json").forEach((file) => {
       try {
-        const override = JSON.parse(
-          fs.readFileSync(path.join(overridesDir, file), "utf-8")
-        );
+        const override = readJsonFile<any>(path.join(overridesDir, file));
         const cityId = override.city?.id || file.replace(".json", "");
-        for (const segment of override.segments || []) {
-          if (segment.segment_id && segment.line_id) {
-            declarations.segments.push({
-              city_id: cityId,
-              line_id: segment.line_id,
-              segment_id: segment.segment_id,
-              status: segment.status,
-            });
-          }
-        }
-        if (override.selfIntersectionExemptions) {
-          selfIntersectionExemptions.push(...override.selfIntersectionExemptions);
-        }
-        if (override.intentionalBreaks) {
-          intentionalBreaks.push(...override.intentionalBreaks);
-        }
-        if (override.out_of_scope_station_ids) {
-          outOfScopeStations[cityId] = override.out_of_scope_station_ids;
-        }
-        if (override.out_of_scope_line_ids) {
-          outOfScopeLineIds.push(...override.out_of_scope_line_ids);
-        }
+        declarations.segments.push(...(override.segments || []).filter((s: any) => s.segment_id && s.line_id)
+          .map((s: any) => ({ city_id: cityId, line_id: s.line_id, segment_id: s.segment_id, status: s.status })));
+        selfIntersectionExemptions.push(...(override.selfIntersectionExemptions || []));
+        intentionalBreaks.push(...(override.intentionalBreaks || []));
+        if (override.out_of_scope_station_ids) outOfScopeStations[cityId] = override.out_of_scope_station_ids;
+        outOfScopeLineIds.push(...(override.out_of_scope_line_ids || []));
       } catch {
         // Skip malformed override files
       }
-    }
+    });
   }
 
   const referenceDir = path.join(dataDir, "reference");
   if (fs.existsSync(referenceDir)) {
-    for (const file of fs.readdirSync(referenceDir)) {
-      if (!file.endsWith(".json")) continue;
+    fs.readdirSync(referenceDir).filter((file) => file.endsWith(".json")).forEach((file) => {
       try {
-        const reference = JSON.parse(fs.readFileSync(path.join(referenceDir, file), "utf-8"));
-        for (const line of reference.lines || []) {
-          if (reference.city_id && line.line_id) {
-            declarations.lines.push({ city_id: reference.city_id, line_id: line.line_id });
-          }
-        }
+        const reference = readJsonFile<any>(path.join(referenceDir, file));
+        declarations.lines.push(...(reference.lines || []).filter((line: any) => reference.city_id && line.line_id)
+          .map((line: any) => ({ city_id: reference.city_id, line_id: line.line_id })));
       } catch {
         // Ignore malformed reference files here; reference schema checks report them separately.
       }
-    }
+    });
   }
 
   console.log("🔍 Running data audit...\n");
@@ -131,7 +108,7 @@ function main() {
   const baselinePath = path.join(dataDir, "audit-baseline.json");
   if (fs.existsSync(baselinePath)) {
     try {
-      baseline = JSON.parse(fs.readFileSync(baselinePath, "utf-8"));
+      baseline = readJsonFile<BaselineFile>(baselinePath);
     } catch {
       console.warn("⚠️ Failed to parse audit-baseline.json, ignoring.");
     }
@@ -153,14 +130,14 @@ function main() {
   console.log("📊 Audit Summary:");
   console.log("");
 
+  const cityCounts = result.findings.reduce((counts, finding) => {
+    const count = counts.get(finding.city_id) || { error: 0, warn: 0, info: 0 };
+    count[finding.severity]++;
+    return counts.set(finding.city_id, count);
+  }, new Map<string, { error: number; warn: number; info: number }>());
   for (const summary of result.summaries) {
-    const cityFindings = result.findings.filter((f) => f.city_id === summary.city_id);
-    const e = cityFindings.filter((f) => f.severity === "error").length;
-    const w = cityFindings.filter((f) => f.severity === "warn").length;
-    const i = cityFindings.filter((f) => f.severity === "info").length;
-    console.log(
-      `  ${summary.city_name}: ${summary.lines} lines, ${summary.segments} segments, ${summary.stations} stations — ${e} errors, ${w} warnings, ${i} info`
-    );
+    const { error: e = 0, warn: w = 0, info: i = 0 } = cityCounts.get(summary.city_id) || {};
+    console.log(`  ${summary.city_name}: ${summary.lines} lines, ${summary.segments} segments, ${summary.stations} stations — ${e} errors, ${w} warnings, ${i} info`);
   }
 
   console.log("");
@@ -198,15 +175,11 @@ function main() {
   if (totalStale > 0) {
     console.log("");
     console.log(`⚠️ Warning: Found ${totalStale} stale baseline entry/entries that match no active finding:`);
-    for (const s of staleAccepted) {
-      console.log(`   • [stale accepted] ${s.city_id} | ${s.rule} | ${s.subject}`);
-    }
-    for (const s of staleUnreviewed) {
-      console.log(`   • [stale unreviewed] ${s.city_id} | ${s.rule} | ${s.subject}`);
-    }
-    for (const s of staleKnownDefects) {
-      console.log(`   • [stale defect ${s.finding_id}] ${s.city_id} | ${s.rule} | ${s.subject}`);
-    }
+    [
+      ...staleAccepted.map((s) => `[stale accepted] ${s.city_id} | ${s.rule} | ${s.subject}`),
+      ...staleUnreviewed.map((s) => `[stale unreviewed] ${s.city_id} | ${s.rule} | ${s.subject}`),
+      ...staleKnownDefects.map((s) => `[stale defect ${s.finding_id}] ${s.city_id} | ${s.rule} | ${s.subject}`),
+    ].forEach((entry) => console.log(`   • ${entry}`));
   }
 
   if (unbaselinedErrors > 0 || (unbaselinedWarns > 0 && !warningsReportOnly)) {
