@@ -126,7 +126,7 @@ export function getCityRoutability(
       unroutableLines.push({
         id: line.id,
         name: line.name,
-        reason: lineRes.reason || "Failed routing verification checks.",
+        reason: lineRes.reason || "Failed routing checks.",
       });
     }
   }
@@ -135,7 +135,7 @@ export function getCityRoutability(
   if (routableLineIds.length === 0) {
     const primaryReason =
       unroutableLines[0]?.reason ||
-      `${city.name} Metro has no verified routable lines available.`;
+      `${city.name} Metro has no routable lines available.`;
     return {
       isRoutable: false,
       status: "non_routable",
@@ -149,7 +149,7 @@ export function getCityRoutability(
     return {
       isRoutable: true,
       status: "partly_routable",
-      reason: `${routableLineIds.length} of ${cityLines.length} lines verified for routing. Excluded lines: ${unroutableLines.map((u) => u.name).join(", ")}.`,
+      reason: `${routableLineIds.length} of ${cityLines.length} lines that passed routing checks. Excluded lines: ${unroutableLines.map((u) => u.name).join(", ")}.`,
       routableLineIds,
       unroutableLines,
     };

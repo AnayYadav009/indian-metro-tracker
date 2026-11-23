@@ -1,5 +1,17 @@
 import { test, expect } from "@playwright/test";
 import citiesJson from "../data/cities.json";
+import {
+  goToCityPage,
+  goToCompare,
+  gotoHome,
+  cityLinesTable,
+  zeroOperationalNotice,
+  completenessCaveatBanner,
+  cityPageLink,
+  crawlableCityDirectory,
+  cityDirectoryButton,
+  cityDirectoryModal,
+} from "./helpers";
 
 test.describe("M17 City Static Pages & SEO", () => {
   test("renders all 21 city pages with valid headings, metrics, and metadata", async ({
@@ -10,7 +22,7 @@ test.describe("M17 City Static Pages & SEO", () => {
 
     for (const cityId of testCities) {
       const city = citiesJson.find((c) => c.id === cityId)!;
-      await page.goto(`/city/${cityId}/`);
+      await goToCityPage(page, cityId);
 
       // 1. Heading & Title
       const heading = page.locator("h1");
@@ -37,9 +49,9 @@ test.describe("M17 City Static Pages & SEO", () => {
       expect(parsed.mainEntity.geo).toBeUndefined();
 
       // 4. Lines & Corridors Table
-      const linesTable = page.getByTestId("city-lines-table");
-      await expect(linesTable).toBeVisible();
-      const tableRows = linesTable.locator("tbody tr");
+      const lines = cityLinesTable(page);
+      await expect(lines).toBeVisible();
+      const tableRows = lines.locator("tbody tr");
       await expect(tableRows).not.toHaveCount(0);
     }
   });
@@ -47,10 +59,10 @@ test.describe("M17 City Static Pages & SEO", () => {
   test("handles Surat with zero-operational construction notice", async ({
     page,
   }) => {
-    await page.goto("/city/surat/");
+    await goToCityPage(page, "surat");
 
     // Verify zero operational notice banner
-    const notice = page.getByTestId("zero-operational-notice");
+    const notice = zeroOperationalNotice(page);
     await expect(notice).toBeVisible();
     await expect(notice).toContainText("Network Under Construction");
     await expect(notice).toContainText("No stations or lines are currently open");
@@ -66,10 +78,10 @@ test.describe("M17 City Static Pages & SEO", () => {
   test("displays data completeness notice on cities with coverage gaps (Delhi)", async ({
     page,
   }) => {
-    await page.goto("/city/delhi/");
+    await goToCityPage(page, "delhi");
 
     await page.getByRole("button", { name: "Details" }).click();
-    const caveatBanner = page.getByTestId("completeness-caveat-banner");
+    const caveatBanner = completenessCaveatBanner(page);
     await expect(caveatBanner).toBeVisible();
     await expect(caveatBanner).toContainText("Data incomplete for this line");
   });
@@ -77,7 +89,7 @@ test.describe("M17 City Static Pages & SEO", () => {
   test("provides working navigation from city page to interactive map and compare", async ({
     page,
   }) => {
-    await page.goto("/city/bengaluru/");
+    await goToCityPage(page, "bengaluru");
 
     // 1. Click "Back to Map"
     const backToMap = page.getByRole("link", { name: "Back to Map" });
@@ -86,7 +98,7 @@ test.describe("M17 City Static Pages & SEO", () => {
     await expect(page).toHaveURL(/\/\?city=bengaluru/);
 
     // 2. Return to city page and navigate to Compare
-    await page.goto("/city/bengaluru/");
+    await goToCityPage(page, "bengaluru");
     const compareLink = page.getByRole("link", { name: "Compare", exact: false }).first();
     await expect(compareLink).toBeVisible();
     await compareLink.click();
@@ -96,10 +108,10 @@ test.describe("M17 City Static Pages & SEO", () => {
   test("allows navigating from /compare/ table rows to city pages", async ({
     page,
   }) => {
-    await page.goto("/compare/");
+    await goToCompare(page);
 
     // Find Delhi city page link
-    const delhiLink = page.getByTestId("city-page-link-delhi");
+    const delhiLink = cityPageLink(page, "delhi");
     await expect(delhiLink).toBeVisible();
     await delhiLink.click();
 
@@ -111,10 +123,10 @@ test.describe("M17 City Static Pages & SEO", () => {
   test("home page contains crawlable city links and accessible city directory", async ({
     page,
   }) => {
-    await page.goto("/");
+    await gotoHome(page);
 
     // 1. Verify semantic crawlable nav exists in DOM
-    const crawlableNav = page.getByTestId("crawlable-city-directory");
+    const crawlableNav = crawlableCityDirectory(page);
     await expect(crawlableNav).toBeAttached();
     const cityLinks = crawlableNav.locator("a");
     await expect(cityLinks).toHaveCount(21);
@@ -126,11 +138,11 @@ test.describe("M17 City Static Pages & SEO", () => {
     }
 
     // 2. Test visible Cities header button and modal
-    const cityDirectoryBtn = page.getByTestId("city-directory-btn");
+    const cityDirectoryBtn = cityDirectoryButton(page);
     await expect(cityDirectoryBtn).toBeVisible();
     await cityDirectoryBtn.click();
 
-    const directoryModal = page.getByTestId("city-directory-modal");
+    const directoryModal = cityDirectoryModal(page);
     await expect(directoryModal).toBeVisible();
 
     // Click a city inside modal

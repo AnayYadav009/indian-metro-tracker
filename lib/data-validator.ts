@@ -4,8 +4,17 @@ import {
   LineSchema,
   SegmentFeatureCollectionSchema,
   StationFeatureCollectionSchema,
+  FareRuleSchema,
+  ServiceHoursSchema,
 } from "../types/schema";
-import type { City, Line, MetroDataset } from "../types/metro";
+import type {
+  City,
+  Line,
+  MetroDataset,
+  FareRule,
+  ServiceHours,
+  StationFeature,
+} from "../types/metro";
 import {
   calculateLineStringLengthKm,
   checkLengthMismatch,
@@ -53,6 +62,18 @@ function validateEntityProvenance(
   if (prov.status === "verified") {
     if (!prov.source_url) {
       errors.push(`${entityType} '${id}': verified status requires source_url`);
+    } else if (typeof prov.source_url === "string") {
+      try {
+        const parsed = new URL(prov.source_url);
+        const path = parsed.pathname;
+        if (!path || path === "/" || path === "") {
+          errors.push(
+            `${entityType} '${id}': verified status requires a non-root source_url path (bare homepages are not allowed)`
+          );
+        }
+      } catch {
+        // regex handles invalid format
+      }
     }
     if (!prov.last_verified) {
       errors.push(`${entityType} '${id}': verified status requires last_verified`);
@@ -85,6 +106,167 @@ function validateEntityProvenance(
   }
 }
 
+export function validateFareRules(
+  rawFareRules: unknown,
+  context: { cities: City[]; lines: Line[] },
+  options?: { currentDate?: string }
+): { valid: boolean; errors: string[]; fareRules?: FareRule[] } {
+  const errors: string[] = [];
+  const today = options?.currentDate || new Date().toISOString().slice(0, 10);
+
+  if (rawFareRules === undefined || rawFareRules === null) {
+    return { valid: true, errors: [], fareRules: [] };
+  }
+
+  if (!Array.isArray(rawFareRules)) {
+    return { valid: false, errors: ["Fare rules data must be an array"] };
+  }
+
+  const parsed = z.array(FareRuleSchema).safeParse(rawFareRules);
+  if (!parsed.success) {
+    errors.push(
+      ...parsed.error.issues.map(
+        (i) => `FareRule schema error at ${i.path.join(".")}: ${i.message}`
+      )
+    );
+    return { valid: false, errors };
+  }
+
+  const rules = parsed.data;
+  const cityById = new Map<string, City>(context.cities.map((c) => [c.id, c]));
+  const lineById = new Map<string, Line>(context.lines.map((l) => [l.id, l]));
+
+  const seenRuleIds = new Set<string>();
+  const lineAssignedRule = new Map<string, string>();
+
+  for (const rule of rules) {
+    if (seenRuleIds.has(rule.id)) {
+      errors.push(`Duplicate fare rule ID '${rule.id}' found`);
+    }
+    seenRuleIds.add(rule.id);
+
+    const city = cityById.get(rule.city_id);
+    if (!city) {
+      errors.push(`Fare rule '${rule.id}' references unknown city_id '${rule.city_id}'`);
+    }
+
+    for (const lineId of rule.applies_to_line_ids) {
+      const line = lineById.get(lineId);
+      if (!line) {
+        errors.push(`Fare rule '${rule.id}' references unknown line_id '${lineId}'`);
+      } else {
+        if (line.city_id !== rule.city_id) {
+          errors.push(
+            `Fare rule '${rule.id}' for city '${rule.city_id}' cannot apply to line '${lineId}' belonging to city '${line.city_id}'`
+          );
+        }
+      }
+
+      if (lineAssignedRule.has(lineId)) {
+        errors.push(
+          `Line '${lineId}' appears in multiple fare rules: '${lineAssignedRule.get(lineId)}' and '${rule.id}'`
+        );
+      } else {
+        lineAssignedRule.set(lineId, rule.id);
+      }
+    }
+
+    if (rule.provenance.last_verified && rule.provenance.last_verified > today) {
+      errors.push(`Fare rule '${rule.id}': last_verified cannot be in the future`);
+    }
+  }
+
+  return {
+    valid: errors.length === 0,
+    errors,
+    fareRules: errors.length === 0 ? rules : undefined,
+  };
+}
+
+export function validateServiceHours(
+  rawServiceHours: unknown,
+  context: { lines: Line[]; stations: StationFeature[] },
+  options?: { currentDate?: string }
+): { valid: boolean; errors: string[]; serviceHours?: ServiceHours[] } {
+  const errors: string[] = [];
+  const today = options?.currentDate || new Date().toISOString().slice(0, 10);
+
+  if (rawServiceHours === undefined || rawServiceHours === null) {
+    return { valid: true, errors: [], serviceHours: [] };
+  }
+
+  if (!Array.isArray(rawServiceHours)) {
+    return { valid: false, errors: ["Service hours data must be an array"] };
+  }
+
+  const parsed = z.array(ServiceHoursSchema).safeParse(rawServiceHours);
+  if (!parsed.success) {
+    errors.push(
+      ...parsed.error.issues.map(
+        (i) => `ServiceHours schema error at ${i.path.join(".")}: ${i.message}`
+      )
+    );
+    return { valid: false, errors };
+  }
+
+  const serviceHoursList = parsed.data;
+  const lineById = new Map<string, Line>(context.lines.map((l) => [l.id, l]));
+  const stationById = new Map<string, StationFeature>(
+    context.stations.map((s) => [s.properties.station_id, s])
+  );
+
+  const seenKeys = new Set<string>();
+
+  for (const sh of serviceHoursList) {
+    const key = `${sh.line_id}:${sh.station_id}:${sh.towards_station_id ?? ""}:${sh.day_type}`;
+    if (seenKeys.has(key)) {
+      errors.push(
+        `Duplicate service hours entry for line '${sh.line_id}', station '${sh.station_id}', towards '${sh.towards_station_id ?? "none"}', day_type '${sh.day_type}'`
+      );
+    }
+    seenKeys.add(key);
+
+    const line = lineById.get(sh.line_id);
+    if (!line) {
+      errors.push(`Service hours '${sh.id}' references unknown line_id '${sh.line_id}'`);
+    }
+
+    const station = stationById.get(sh.station_id);
+    if (!station) {
+      errors.push(`Service hours '${sh.id}' references unknown station_id '${sh.station_id}'`);
+    } else {
+      if (!station.properties.line_ids.includes(sh.line_id)) {
+        errors.push(
+          `Service hours '${sh.id}': station '${sh.station_id}' does not belong to line '${sh.line_id}'`
+        );
+      }
+    }
+
+    if (sh.towards_station_id) {
+      const towardsStation = stationById.get(sh.towards_station_id);
+      if (!towardsStation) {
+        errors.push(
+          `Service hours '${sh.id}' references unknown towards_station_id '${sh.towards_station_id}'`
+        );
+      } else if (sh.towards_station_id === sh.station_id) {
+        errors.push(
+          `Service hours '${sh.id}': towards_station_id cannot be the same as station_id '${sh.station_id}'`
+        );
+      }
+    }
+
+    if (sh.provenance.last_verified && sh.provenance.last_verified > today) {
+      errors.push(`Service hours '${sh.id}': last_verified cannot be in the future`);
+    }
+  }
+
+  return {
+    valid: errors.length === 0,
+    errors,
+    serviceHours: errors.length === 0 ? serviceHoursList : undefined,
+  };
+}
+
 /**
  * Validates raw metro data against Zod schemas and relational consistency rules.
  * Zero-code-change requirement: Cities, lines, and phases are dynamically checked
@@ -96,6 +278,8 @@ export function validateMetroDataset(
     lines: unknown;
     segments: unknown;
     stations: unknown;
+    fareRules?: unknown;
+    serviceHours?: unknown;
   },
   options?: { currentDate?: string }
 ): ValidationResult {
@@ -554,10 +738,50 @@ export function validateMetroDataset(
     }
   }
 
+  // Validate FareRules if provided
+  let validatedFareRules: FareRule[] | undefined = undefined;
+  if (rawData.fareRules !== undefined && rawData.fareRules !== null) {
+    const fareRes = validateFareRules(
+      rawData.fareRules,
+      { cities, lines },
+      options
+    );
+    if (!fareRes.valid) {
+      errors.push(...fareRes.errors);
+    } else {
+      validatedFareRules = fareRes.fareRules;
+    }
+  }
+
+  // Validate ServiceHours if provided
+  let validatedServiceHours: ServiceHours[] | undefined = undefined;
+  if (rawData.serviceHours !== undefined && rawData.serviceHours !== null) {
+    const shRes = validateServiceHours(
+      rawData.serviceHours,
+      { lines, stations: stations.features },
+      options
+    );
+    if (!shRes.valid) {
+      errors.push(...shRes.errors);
+    } else {
+      validatedServiceHours = shRes.serviceHours;
+    }
+  }
+
   return {
     valid: errors.length === 0,
     errors,
     warnings,
-    dataset: errors.length === 0 ? { cities, lines, segments, stations } : undefined,
+    dataset:
+      errors.length === 0
+        ? {
+            cities,
+            lines,
+            segments,
+            stations,
+            ...(validatedFareRules ? { fareRules: validatedFareRules } : {}),
+            ...(validatedServiceHours ? { serviceHours: validatedServiceHours } : {}),
+          }
+        : undefined,
   };
 }

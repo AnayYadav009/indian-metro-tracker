@@ -354,7 +354,7 @@ export default function ComparePage() {
             </span>
           </div>
           <div className="text-[11px] text-slate-400">
-            * All figures computed from verified geospatial vectors at build time.
+            * Figures are computed at build time from the geometry in this dataset. Unofficial; see each city&apos;s data status.
           </div>
         </div>
 

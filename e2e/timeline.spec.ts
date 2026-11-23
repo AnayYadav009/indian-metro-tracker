@@ -1,27 +1,38 @@
 import { test, expect } from "@playwright/test";
+import {
+  gotoHome,
+  timelineContainer,
+  timelineSlider,
+  timelineCurrentYear,
+  timelinePlayButton,
+  timelineResetButton,
+  timelineFutureToggle,
+  toggleStationsButton,
+  timelineSparkline,
+} from "./helpers";
 
 test.describe("M13 Timeline Slider", () => {
   test("renders timeline slider with accessible controls and current year", async ({
     page,
   }) => {
-    await page.goto("/");
+    await gotoHome(page);
 
-    const container = page.getByTestId("timeline-slider-container");
+    const container = timelineContainer(page);
     await expect(container).toBeVisible();
 
     // Verify accessible role and values
-    const slider = page.getByTestId("timeline-range-slider");
+    const slider = timelineSlider(page);
     await expect(slider).toBeVisible();
     await expect(slider).toHaveAttribute("role", "slider");
     await expect(slider).toHaveAttribute("aria-valuemin", "1984");
 
-    const currentYearText = page.getByTestId("timeline-current-year");
+    const currentYearText = timelineCurrentYear(page);
     await expect(currentYearText).toBeVisible();
     const currentYear = new Date().getFullYear().toString();
     await expect(currentYearText).toHaveText(currentYear);
 
     // Play button exists with appropriate label
-    const playBtn = page.getByTestId("timeline-play-btn");
+    const playBtn = timelinePlayButton(page);
     await expect(playBtn).toBeVisible();
     await expect(playBtn).toHaveAttribute("aria-label", "Play timeline");
   });
@@ -29,13 +40,13 @@ test.describe("M13 Timeline Slider", () => {
   test("scrubbing the year slider updates displayed year and URL param", async ({
     page,
   }) => {
-    await page.goto("/");
+    await gotoHome(page);
     await page.waitForLoadState("domcontentloaded");
 
-    const slider = page.getByTestId("timeline-range-slider");
+    const slider = timelineSlider(page);
     await expect(slider).toBeVisible();
 
-    const currentYearText = page.getByTestId("timeline-current-year");
+    const currentYearText = timelineCurrentYear(page);
 
     // Wait until hydration attaches change handlers and updates year
     await expect(async () => {
@@ -56,7 +67,7 @@ test.describe("M13 Timeline Slider", () => {
     await expect(page).toHaveURL(/year=2010/);
 
     // Reset button appears when year filter is active
-    const resetBtn = page.getByTestId("timeline-reset-btn");
+    const resetBtn = timelineResetButton(page);
     await expect(resetBtn).toBeVisible();
 
     // Clicking reset restores max year and removes ?year=
@@ -67,20 +78,20 @@ test.describe("M13 Timeline Slider", () => {
   });
 
   test("hydrates selected year from URL parameter ?year=2015", async ({ page }) => {
-    await page.goto("/?year=2015");
+    await gotoHome(page, { year: "2015" });
 
-    const currentYearText = page.getByTestId("timeline-current-year");
+    const currentYearText = timelineCurrentYear(page);
     await expect(currentYearText).toHaveText("2015");
 
-    const slider = page.getByTestId("timeline-range-slider");
+    const slider = timelineSlider(page);
     await expect(slider).toHaveValue("2015");
   });
 
   test("toggles play and pause state", async ({ page }) => {
-    await page.goto("/?year=2000");
+    await gotoHome(page, { year: "2000" });
     await page.waitForLoadState("domcontentloaded");
 
-    const playBtn = page.getByTestId("timeline-play-btn");
+    const playBtn = timelinePlayButton(page);
     await expect(playBtn).toBeVisible();
     await expect(playBtn).toHaveAttribute("aria-label", "Play timeline");
 
@@ -96,9 +107,9 @@ test.describe("M13 Timeline Slider", () => {
   });
 
   test("include future toggle toggles aria-pressed state", async ({ page }) => {
-    await page.goto("/");
+    await gotoHome(page);
 
-    const toggle = page.getByTestId("timeline-future-toggle");
+    const toggle = timelineFutureToggle(page);
     await expect(toggle).toBeVisible();
     await expect(toggle).toHaveAttribute("aria-pressed", "true");
 
@@ -112,9 +123,9 @@ test.describe("M13 Timeline Slider", () => {
   test("toggles station visibility and round-trips the URL parameter", async ({
     page,
   }) => {
-    await page.goto("/");
+    await gotoHome(page);
 
-    const toggle = page.getByTestId("toggle-stations-btn");
+    const toggle = toggleStationsButton(page);
     await expect(toggle).toBeVisible();
     await expect(toggle).toHaveAttribute("aria-pressed", "true");
 
@@ -123,20 +134,20 @@ test.describe("M13 Timeline Slider", () => {
     await expect(page).toHaveURL(/stations=0/);
 
     await page.reload();
-    await expect(page.getByTestId("toggle-stations-btn")).toHaveAttribute(
+    await expect(toggleStationsButton(page)).toHaveAttribute(
       "aria-pressed",
       "false"
     );
-    await page.getByTestId("toggle-stations-btn").click();
+    await toggleStationsButton(page).click();
     await expect(page).not.toHaveURL(/stations=0/);
   });
 
   test("displays mini inline SVG sparkline chart on desktop viewports", async ({
     page,
   }) => {
-    await page.goto("/");
+    await gotoHome(page);
 
-    const sparkline = page.getByTestId("timeline-sparkline-chart");
+    const sparkline = timelineSparkline(page);
     // Visible on standard desktop viewports
     if (page.viewportSize() && page.viewportSize()!.width >= 640) {
       await expect(sparkline).toBeVisible();

@@ -305,7 +305,7 @@ export function RouteFinderPanel() {
                 <Info className="h-4 w-4 shrink-0 text-sky-400 mt-0.5" />
                 <div className="text-[11px] leading-relaxed text-sky-200/90">
                   <span className="font-semibold text-sky-300">Partial Network:</span>{" "}
-                  {cityRoutability.routableLineIds.length} verified lines available. Lines under review:{" "}
+                  {cityRoutability.routableLineIds.length} routable lines available. Lines under review:{" "}
                   {cityRoutability.unroutableLines.map((u) => u.name).join(", ")}.
                 </div>
               </div>

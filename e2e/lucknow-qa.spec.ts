@@ -1,30 +1,39 @@
 import { test, expect } from "@playwright/test";
+import {
+  gotoHome,
+  filterPanel,
+  cityChip,
+  filterToggle,
+  phasePill,
+  mapLegend,
+  metadataPanel,
+} from "./helpers";
 
 test.describe("Lucknow Visual & Interaction QA (M15)", () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto("/");
+    await gotoHome(page);
   });
 
   test("verifies Lucknow in city selector, phases, line legend, and station panel", async ({
     page,
   }) => {
-    const filterPanel = page.getByTestId("filter-panel");
-    await expect(filterPanel).toBeVisible();
+    const panel = filterPanel(page);
+    await expect(panel).toBeVisible();
 
     // 1. Verify Lucknow button is present and click it
-    const lucknowBtn = page.getByTestId("city-select-lucknow");
+    const lucknowBtn = cityChip(page, "lucknow");
     await expect(lucknowBtn).toBeVisible();
     await lucknowBtn.click();
-    const filterToggle = page.getByTestId("collapse-filter-btn");
-    if ((await filterToggle.getAttribute("aria-expanded")) === "false") {
-      await filterToggle.click({ force: true });
+    const toggle = filterToggle(page);
+    if ((await toggle.getAttribute("aria-expanded")) === "false") {
+      await toggle.click({ force: true });
     }
 
     // 2. Verify dynamic phases for Lucknow render
-    await expect(page.getByTestId("phase-pill-1")).toBeVisible();
+    await expect(phasePill(page, "1")).toBeVisible();
 
     // 3. Verify lines in legend
-    const legend = page.getByTestId("map-legend");
+    const legend = mapLegend(page);
     await expect(legend).toBeVisible();
 
     // 4. Test searching or selecting Charbagh station
@@ -37,10 +46,10 @@ test.describe("Lucknow Visual & Interaction QA (M15)", () => {
       await searchResult.click();
 
       // Check metadata panel
-      const metadataPanel = page.getByTestId("metadata-panel");
-      await expect(metadataPanel).toBeVisible();
-      await expect(metadataPanel.getByText(/Charbagh/i).first()).toBeVisible();
-      await expect(metadataPanel.getByText(/UPMRC/i).first()).toBeVisible();
+      const metaPanel = metadataPanel(page);
+      await expect(metaPanel).toBeVisible();
+      await expect(metaPanel.getByText(/Charbagh/i).first()).toBeVisible();
+      await expect(metaPanel.getByText(/UPMRC/i).first()).toBeVisible();
     }
 
     // 5. Take screenshot of Lucknow network view

@@ -89,8 +89,8 @@ describe("M18 Route Finder", () => {
     it("returns null when no route exists between disconnected stations", () => {
       // Custom disconnected fixtures
       const customLines: Line[] = [
-        { id: "line-a", name: "Line A", city: "X", city_id: "x", color: "#f00", operator: "Test Operator", source: "test" },
-        { id: "line-b", name: "Line B", city: "X", city_id: "x", color: "#00f", operator: "Test Operator", source: "test" },
+        { id: "line-a", name: "Line A", city: "X", city_id: "x", color: "#f00", operator: "Test Operator", source: "test", provenance: { status: "unverified" } },
+        { id: "line-b", name: "Line B", city: "X", city_id: "x", color: "#00f", operator: "Test Operator", source: "test", provenance: { status: "unverified" } },
       ];
       const customSegments: SegmentFeature[] = [
         {
@@ -177,7 +177,7 @@ describe("M18 Route Finder", () => {
 
     it("excludes non-operational (construction/planned) stations from the routing graph", () => {
       const customLines: Line[] = [
-        { id: "test-line", name: "Test Line", city: "T", city_id: "t", color: "#10b981", operator: "Test Operator", source: "test" },
+        { id: "test-line", name: "Test Line", city: "T", city_id: "t", color: "#10b981", operator: "Test Operator", source: "test", provenance: { status: "unverified" } },
       ];
       const customSegments: SegmentFeature[] = [
         {
@@ -294,8 +294,8 @@ describe("M18 Route Finder", () => {
       // Direct Route on Line 1: A -> B -> C -> D -> E (4 stops, 0 transfers)
       // Faster Shortcut via Line 2: A -> Transfer -> X -> Transfer -> E (2 stops, 2 transfers)
       const customLines: Line[] = [
-        { id: "line-direct", name: "Direct Line", city: "C", city_id: "c", color: "#10b981", operator: "Test Operator", source: "test" },
-        { id: "line-express", name: "Express Line", city: "C", city_id: "c", color: "#f59e0b", operator: "Test Operator", source: "test" },
+        { id: "line-direct", name: "Direct Line", city: "C", city_id: "c", color: "#10b981", operator: "Test Operator", source: "test", provenance: { status: "unverified" } },
+        { id: "line-express", name: "Express Line", city: "C", city_id: "c", color: "#f59e0b", operator: "Test Operator", source: "test", provenance: { status: "unverified" } },
       ];
 
       const customSegments: SegmentFeature[] = [

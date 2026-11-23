@@ -1,24 +1,25 @@
 import { test, expect } from "@playwright/test";
+import { dataBadge, mapContainer, attribution, gotoHome } from "./helpers";
 
 test.describe("Home Page and Map Integration", () => {
   test("loads page and displays main title and data badges", async ({
     page,
   }) => {
-    await page.goto("/");
+    await gotoHome(page);
     await expect(
       page.getByRole("heading", { name: "Indian Metro Network Tracker" })
     ).toBeVisible();
-    await expect(page.getByTestId("data-last-updated")).toBeVisible();
+    await expect(dataBadge(page)).toBeVisible();
     await expect(page.getByText("OpenFreeMap Positron")).toBeVisible();
   });
 
   test("renders map container with persistent OSM attribution", async ({
     page,
   }) => {
-    await page.goto("/");
-    await expect(page.getByTestId("map-container")).toBeVisible();
-    await expect(page.getByTestId("osm-attribution")).toBeVisible();
-    await expect(page.getByTestId("osm-attribution")).toContainText(
+    await gotoHome(page);
+    await expect(mapContainer(page)).toBeVisible();
+    await expect(attribution(page)).toBeVisible();
+    await expect(attribution(page)).toContainText(
       "OpenStreetMap"
     );
   });

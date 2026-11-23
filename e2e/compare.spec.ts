@@ -1,14 +1,29 @@
 import { test, expect } from "@playwright/test";
+import {
+  goToCompare,
+  comparePage,
+  nationwideSummary,
+  compareTable,
+  cityRow,
+  sortCityButton,
+  sortOperationalKmButton,
+  tierFilter,
+  searchCitiesInput,
+  dataQualityFlag,
+  completenessCaveatCity,
+  navToMap,
+  navToCompare,
+} from "./helpers";
 
 test.describe("M14 Stats & Comparison Dashboard (/compare/)", () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto("/compare");
+    await goToCompare(page);
   });
 
   test("renders comparison dashboard header and nationwide summary metrics", async ({
     page,
   }) => {
-    await expect(page.getByTestId("compare-page")).toBeVisible();
+    await expect(comparePage(page)).toBeVisible();
 
     // Verify main title
     await expect(
@@ -16,7 +31,7 @@ test.describe("M14 Stats & Comparison Dashboard (/compare/)", () => {
     ).toBeVisible();
 
     // Verify nationwide summary section
-    const summary = page.getByTestId("nationwide-summary");
+    const summary = nationwideSummary(page);
     await expect(summary).toBeVisible();
 
     // Check key aggregate values
@@ -29,17 +44,17 @@ test.describe("M14 Stats & Comparison Dashboard (/compare/)", () => {
   test("renders all 21 cities in the comparison table with totals row", async ({
     page,
   }) => {
-    const table = page.getByTestId("compare-table");
+    const table = compareTable(page);
     await expect(table).toBeVisible();
 
     // Check key cities are present
-    await expect(page.getByTestId("city-row-delhi")).toBeVisible();
-    await expect(page.getByTestId("city-row-mumbai")).toBeVisible();
-    await expect(page.getByTestId("city-row-bengaluru")).toBeVisible();
-    await expect(page.getByTestId("city-row-kolkata")).toBeVisible();
-    await expect(page.getByTestId("city-row-surat")).toBeVisible();
-    await expect(page.getByTestId("city-row-patna")).toBeVisible();
-    await expect(page.getByTestId("city-row-agra")).toBeVisible();
+    await expect(cityRow(page, "delhi")).toBeVisible();
+    await expect(cityRow(page, "mumbai")).toBeVisible();
+    await expect(cityRow(page, "bengaluru")).toBeVisible();
+    await expect(cityRow(page, "kolkata")).toBeVisible();
+    await expect(cityRow(page, "surat")).toBeVisible();
+    await expect(cityRow(page, "patna")).toBeVisible();
+    await expect(cityRow(page, "agra")).toBeVisible();
 
     // Verify total row at bottom
     await expect(table).toContainText("Total (21 Cities)");
@@ -49,23 +64,21 @@ test.describe("M14 Stats & Comparison Dashboard (/compare/)", () => {
     page,
   }) => {
     // Sort by city name ascending
-    const sortCityBtn = page.getByTestId("sort-city");
+    const sortCityBtn = sortCityButton(page);
     await sortCityBtn.click();
 
     // First row should now be Agra (alphabetical)
-    const firstRowAfterSort = page
-      .getByTestId("compare-table")
+    const firstRowAfterSort = compareTable(page)
       .locator("tbody tr")
       .first();
     await expect(firstRowAfterSort).toContainText("Agra");
 
     // Sort by operational km descending
-    const sortOpKmBtn = page.getByTestId("sort-operational-km");
+    const sortOpKmBtn = sortOperationalKmButton(page);
     await sortOpKmBtn.click();
 
     // First row should now be Delhi (highest operational km)
-    const topOpKmRow = page
-      .getByTestId("compare-table")
+    const topOpKmRow = compareTable(page)
       .locator("tbody tr")
       .first();
     await expect(topOpKmRow).toContainText("Delhi");
@@ -75,42 +88,42 @@ test.describe("M14 Stats & Comparison Dashboard (/compare/)", () => {
     page,
   }) => {
     // Filter by Tier 1
-    const tier1Btn = page.getByTestId("tier-filter-tier1");
+    const tier1Btn = tierFilter(page, "tier1");
     await tier1Btn.click();
 
-    await expect(page.getByTestId("city-row-delhi")).toBeVisible();
-    await expect(page.getByTestId("city-row-mumbai")).toBeVisible();
-    await expect(page.getByTestId("city-row-agra")).not.toBeVisible();
-    await expect(page.getByTestId("city-row-patna")).not.toBeVisible();
+    await expect(cityRow(page, "delhi")).toBeVisible();
+    await expect(cityRow(page, "mumbai")).toBeVisible();
+    await expect(cityRow(page, "agra")).not.toBeVisible();
+    await expect(cityRow(page, "patna")).not.toBeVisible();
 
     // Filter by Tier 2
-    const tier2Btn = page.getByTestId("tier-filter-tier2");
+    const tier2Btn = tierFilter(page, "tier2");
     await tier2Btn.click();
 
-    await expect(page.getByTestId("city-row-delhi")).not.toBeVisible();
-    await expect(page.getByTestId("city-row-agra")).toBeVisible();
-    await expect(page.getByTestId("city-row-patna")).toBeVisible();
+    await expect(cityRow(page, "delhi")).not.toBeVisible();
+    await expect(cityRow(page, "agra")).toBeVisible();
+    await expect(cityRow(page, "patna")).toBeVisible();
 
     // Search filter
-    const searchInput = page.getByTestId("search-cities-input");
-    await page.getByTestId("tier-filter-all").click();
+    const searchInput = searchCitiesInput(page);
+    await tierFilter(page, "all").click();
     await searchInput.fill("Kolkata");
 
-    await expect(page.getByTestId("city-row-kolkata")).toBeVisible();
-    await expect(page.getByTestId("city-row-chennai")).not.toBeVisible();
+    await expect(cityRow(page, "kolkata")).toBeVisible();
+    await expect(cityRow(page, "chennai")).not.toBeVisible();
   });
 
   test("displays data quality flag for length variance and completeness caveats", async ({
     page,
   }) => {
     // Bhopal has > 3% variance vs reference
-    await expect(page.getByTestId("data-quality-flag-bhopal")).toBeVisible();
+    await expect(dataQualityFlag(page, "bhopal")).toBeVisible();
 
     // Bhopal has data completeness caveat
-    await expect(page.getByTestId("completeness-caveat-bhopal")).toBeVisible();
+    await expect(completenessCaveatCity(page, "bhopal")).toBeVisible();
 
     // Clicking a row expands the detail drawer
-    await page.getByTestId("city-row-bhopal").click();
+    await cityRow(page, "bhopal").click();
     await expect(page.getByRole("status")).toContainText(
       "Data Completeness Notice"
     );
@@ -120,17 +133,17 @@ test.describe("M14 Stats & Comparison Dashboard (/compare/)", () => {
     page,
   }) => {
     // Return to map from /compare
-    const navToMap = page.getByTestId("nav-to-map");
-    await expect(navToMap).toBeVisible();
-    await navToMap.click();
+    const toMap = navToMap(page);
+    await expect(toMap).toBeVisible();
+    await toMap.click();
 
     // Verify on home map
     await expect(page).toHaveURL(/\/$/);
-    await expect(page.getByTestId("nav-to-compare")).toBeVisible();
+    await expect(navToCompare(page)).toBeVisible();
 
     // Navigate back to compare from home map
-    await page.getByTestId("nav-to-compare").click();
+    await navToCompare(page).click();
     await expect(page).toHaveURL(/\/compare/);
-    await expect(page.getByTestId("compare-table")).toBeVisible();
+    await expect(compareTable(page)).toBeVisible();
   });
 });

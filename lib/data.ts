@@ -2,6 +2,8 @@ import citiesJson from "@/data/cities.json";
 import linesJson from "@/data/lines.json";
 import segmentsGeoJson from "@/data/segments.geojson";
 import stationsGeoJson from "@/data/stations.geojson";
+import faresJson from "@/data/fares.json";
+import timingsJson from "@/data/timings.json";
 
 import type {
   City,
@@ -13,6 +15,8 @@ import type {
   StationFeature,
   StationFeatureCollection,
   StationFilterOptions,
+  FareRule,
+  ServiceHours,
 } from "@/types/metro";
 
 export type DataSourceState = "mock" | "real" | "mixed";
@@ -76,6 +80,8 @@ export function getMetroData(): MetroDataset {
     lines: linesJson as Line[],
     segments: segmentsGeoJson as unknown as SegmentFeatureCollection,
     stations: stationsGeoJson as unknown as StationFeatureCollection,
+    fareRules: faresJson as FareRule[],
+    serviceHours: timingsJson as ServiceHours[],
   };
 
   // Build O(1) indexed lookup maps for performance
@@ -90,6 +96,20 @@ export function getMetroData(): MetroDataset {
   }
 
   return cachedDataset;
+}
+
+/**
+ * Get all available fare rules.
+ */
+export function getFareRules(): FareRule[] {
+  return getMetroData().fareRules || [];
+}
+
+/**
+ * Get all available service hours.
+ */
+export function getAllServiceHours(): ServiceHours[] {
+  return getMetroData().serviceHours || [];
 }
 
 /**
@@ -209,17 +229,23 @@ export function getDatasetMetadataSummary(): {
   sourcesFormatted: string;
   badgeLabel: string;
 } {
-  const { segments, stations } = getMetroData();
+  const { lines, segments, stations } = getMetroData();
 
   let latestDateStr = "";
-  const sourceTokens = new Set<string>();
 
-  [...segments.features, ...stations.features].forEach(({ properties: props }) => {
-    if (props.last_verified && props.last_verified > latestDateStr) latestDateStr = props.last_verified;
-    props.source?.split(/[+,]/).map((part) => part.trim().toLowerCase()).filter(Boolean).forEach((part) => sourceTokens.add(part));
-  });
+  const allRecords: Array<{ retrieved_at?: string | null; last_verified?: string | null }> = [
+    ...lines,
+    ...segments.features.map((f) => f.properties),
+    ...stations.features.map((f) => f.properties),
+  ];
 
-  let dateFormatted = "Unknown";
+  for (const record of allRecords) {
+    if (record.retrieved_at && record.retrieved_at > latestDateStr) {
+      latestDateStr = record.retrieved_at;
+    }
+  }
+
+  let dateFormatted = "";
   if (latestDateStr) {
     try {
       const [year, month] = latestDateStr.split("-");
@@ -238,29 +264,13 @@ export function getDatasetMetadataSummary(): {
     }
   }
 
-  const formattedSources = Array.from(sourceTokens).map((tok) => {
-    switch (tok) {
-      case "osm":
-        return "OSM";
-      case "dmrc":
-        return "DMRC";
-      case "bmrcl":
-        return "BMRCL";
-      case "mmrda":
-        return "MMRDA";
-      case "mock":
-        return "Mock";
-      default:
-        return tok.toUpperCase();
-    }
-  });
-
-  const sourcesStr = formattedSources.length > 0 ? formattedSources.join(", ") : "OSM";
-  const badgeLabel = `Data: ${dateFormatted} (${sourcesStr})`;
+  const badgeLabel = dateFormatted
+    ? `Data retrieved: ${dateFormatted}`
+    : "Data date not recorded";
 
   return {
     lastVerifiedFormatted: dateFormatted,
-    sourcesFormatted: sourcesStr,
+    sourcesFormatted: "",
     badgeLabel,
   };
 }

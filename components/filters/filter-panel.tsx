@@ -87,7 +87,8 @@ export function FilterPanel() {
               data-testid="filter-search-input"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search lines, phases, stations..."
+              placeholder="Search lines, phases..."
+              aria-label="Search lines, phases..."
               className="w-full rounded-md border border-slate-700/80 bg-slate-950/70 py-1.5 pl-8 pr-7 text-xs text-slate-200 placeholder:text-slate-500 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
             />
             {searchQuery && (

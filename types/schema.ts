@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { isOfficialSourceHost } from "../lib/official-source-hosts";
 
 export const StatusSchema = z.enum(["operational", "construction", "planned"]);
 
@@ -46,6 +47,20 @@ export const ProvenanceSchema = z
           message: "verified status requires source_url",
           path: ["source_url"],
         });
+      } else {
+        try {
+          const parsed = new URL(val.source_url);
+          const path = parsed.pathname;
+          if (!path || path === "/" || path === "") {
+            ctx.addIssue({
+              code: z.ZodIssueCode.custom,
+              message: "verified status requires a source_url with a non-root path (bare homepage URLs are not allowed)",
+              path: ["source_url"],
+            });
+          }
+        } catch {
+          // regex handles syntax errors
+        }
       }
       if (!val.last_verified) {
         ctx.addIssue({
@@ -361,3 +376,308 @@ export const StationFeatureCollectionSchema = z.object({
 export type StationFeatureCollection = z.infer<
   typeof StationFeatureCollectionSchema
 >;
+
+/* ==========================================================================
+   Fare and Timing Schemas (Milestone M21a, M21e-1)
+   ========================================================================== */
+
+export const FareKmBandSchema = z.object({
+  min_km: z.number().nonnegative(),
+  max_km: z.number().positive().nullable(),
+  fare_inr: z.number().int().nonnegative(),
+});
+export type FareKmBand = z.infer<typeof FareKmBandSchema>;
+
+// Alias for backward compatibility with M21a
+export const FareBandSchema = FareKmBandSchema;
+export type FareBand = FareKmBand;
+
+export const FareStationBandSchema = z.object({
+  min_stations: z.number().int().positive(),
+  max_stations: z.number().int().positive().nullable(),
+  fare_inr: z.number().int().nonnegative(),
+});
+export type FareStationBand = z.infer<typeof FareStationBandSchema>;
+
+export const FareDayScopeSchema = z.enum(["mon_sat", "sun_holiday", "all"]);
+export type FareDayScope = z.infer<typeof FareDayScopeSchema>;
+
+const BaseFareRuleSchema = z.object({
+  id: z.string().min(1),
+  city_id: z.string().min(1),
+  operator: z.string().min(1),
+  applies_to_line_ids: z.array(z.string().min(1)).min(1),
+  ticket_type: z.literal("single_journey"),
+  currency: z.literal("INR"),
+  day_scope: FareDayScopeSchema,
+  effective_from: z
+    .string()
+    .regex(/^\d{4}-\d{2}-\d{2}$/, "effective_from must be YYYY-MM-DD")
+    .optional(),
+  provenance: ProvenanceSchema,
+});
+
+export const FareRuleKmSchema = BaseFareRuleSchema.extend({
+  distance_basis: z.literal("computed_route_km"),
+  bands: z.array(FareKmBandSchema).min(1),
+});
+export type FareRuleKm = z.infer<typeof FareRuleKmSchema>;
+
+export const FareRuleStationCountSchema = BaseFareRuleSchema.extend({
+  distance_basis: z.literal("station_count"),
+  same_station_fare_inr: z.number().int().nonnegative().optional(),
+  bands: z.array(FareStationBandSchema).min(1),
+});
+export type FareRuleStationCount = z.infer<typeof FareRuleStationCountSchema>;
+
+export const FareRuleSchema = z
+  .discriminatedUnion("distance_basis", [
+    FareRuleKmSchema,
+    FareRuleStationCountSchema,
+  ])
+  .superRefine((rule, ctx) => {
+    // Verified FareRule requires allowlisted official source_url host.
+    // effective_from is optional if the official page states none; if absent, a non-empty note is required.
+    if (rule.provenance.status === "verified") {
+      if (!rule.effective_from) {
+        if (!rule.provenance.note || rule.provenance.note.trim() === "") {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            message:
+              "verified FareRule without effective_from requires a non-empty note explaining that the official page states none",
+            path: ["provenance", "note"],
+          });
+        }
+      }
+      if (rule.provenance.source_url) {
+        try {
+          const parsed = new URL(rule.provenance.source_url);
+          if (!isOfficialSourceHost(parsed.hostname)) {
+            ctx.addIssue({
+              code: z.ZodIssueCode.custom,
+              message: `source_url hostname '${parsed.hostname}' is not on the official-host allowlist. Host must be reviewed and added by the owner. News and blog hosts are never added.`,
+              path: ["provenance", "source_url"],
+            });
+          }
+        } catch {
+          // handled by URL format regex
+        }
+      }
+    }
+
+    if (rule.effective_from) {
+      const parts = rule.effective_from.split("-").map(Number);
+      const [y, m, d] = parts;
+      const date = new Date(Date.UTC(y, m - 1, d));
+      if (
+        isNaN(date.getTime()) ||
+        date.getUTCFullYear() !== y ||
+        date.getUTCMonth() !== m - 1 ||
+        date.getUTCDate() !== d
+      ) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: "effective_from must be a valid calendar date",
+          path: ["effective_from"],
+        });
+      }
+    }
+
+    if (rule.distance_basis === "computed_route_km") {
+      // Km band validation
+      // 1. first min_km is 0
+      if (rule.bands.length > 0 && rule.bands[0].min_km !== 0) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: "first band min_km must be 0",
+          path: ["bands", 0, "min_km"],
+        });
+      }
+
+      for (let i = 0; i < rule.bands.length; i++) {
+        const band = rule.bands[i];
+        const isLast = i === rule.bands.length - 1;
+
+        // 2. only the last band has max_km null
+        if (band.max_km === null && !isLast) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            message: "only the last band can have max_km null",
+            path: ["bands", i, "max_km"],
+          });
+        }
+
+        // 3. max_km > min_km if not null
+        if (band.max_km !== null && band.max_km <= band.min_km) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            message: `max_km (${band.max_km}) must be strictly greater than min_km (${band.min_km})`,
+            path: ["bands", i, "max_km"],
+          });
+        }
+
+        // 4. contiguous and non-overlapping: each min_km equals previous max_km
+        if (i > 0) {
+          const prevBand = rule.bands[i - 1];
+          if (prevBand.max_km !== null && band.min_km !== prevBand.max_km) {
+            ctx.addIssue({
+              code: z.ZodIssueCode.custom,
+              message: `band ${i} min_km (${band.min_km}) must equal previous band max_km (${prevBand.max_km})`,
+              path: ["bands", i, "min_km"],
+            });
+          }
+
+          // 5. fares are non-decreasing with distance
+          if (band.fare_inr < prevBand.fare_inr) {
+            ctx.addIssue({
+              code: z.ZodIssueCode.custom,
+              message: `fares must be non-decreasing with distance (band ${i} fare ${band.fare_inr} < previous ${prevBand.fare_inr})`,
+              path: ["bands", i, "fare_inr"],
+            });
+          }
+        }
+      }
+
+      const lastBand = rule.bands[rule.bands.length - 1];
+      if (lastBand && lastBand.max_km !== null) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message:
+            "only the last band can have max_km null, and the last band max_km must be null",
+          path: ["bands", rule.bands.length - 1, "max_km"],
+        });
+      }
+    } else if (rule.distance_basis === "station_count") {
+      // Station count band validation
+      // 1. first min_stations is 1
+      if (rule.bands.length > 0 && rule.bands[0].min_stations !== 1) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: "first band min_stations must be 1",
+          path: ["bands", 0, "min_stations"],
+        });
+      }
+
+      for (let i = 0; i < rule.bands.length; i++) {
+        const band = rule.bands[i];
+        const isLast = i === rule.bands.length - 1;
+
+        // 2. only the last band has max_stations null
+        if (band.max_stations === null && !isLast) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            message: "only the last band can have max_stations null",
+            path: ["bands", i, "max_stations"],
+          });
+        }
+
+        // 3. max_stations >= min_stations if not null
+        if (band.max_stations !== null && band.max_stations < band.min_stations) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            message: `max_stations (${band.max_stations}) must be greater than or equal to min_stations (${band.min_stations})`,
+            path: ["bands", i, "max_stations"],
+          });
+        }
+
+        // 4. contiguous: each min_stations equals previous max_stations + 1
+        if (i > 0) {
+          const prevBand = rule.bands[i - 1];
+          if (
+            prevBand.max_stations !== null &&
+            band.min_stations !== prevBand.max_stations + 1
+          ) {
+            ctx.addIssue({
+              code: z.ZodIssueCode.custom,
+              message: `band ${i} min_stations (${band.min_stations}) must equal previous band max_stations + 1 (${prevBand.max_stations + 1})`,
+              path: ["bands", i, "min_stations"],
+            });
+          }
+
+          // 5. fares are non-decreasing
+          if (band.fare_inr < prevBand.fare_inr) {
+            ctx.addIssue({
+              code: z.ZodIssueCode.custom,
+              message: `fares must be non-decreasing with station count (band ${i} fare ${band.fare_inr} < previous ${prevBand.fare_inr})`,
+              path: ["bands", i, "fare_inr"],
+            });
+          }
+        }
+      }
+
+      const lastBand = rule.bands[rule.bands.length - 1];
+      if (lastBand && lastBand.max_stations !== null) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message:
+            "only the last band can have max_stations null, and the last band max_stations must be null",
+          path: ["bands", rule.bands.length - 1, "max_stations"],
+        });
+      }
+    }
+  });
+export type FareRule = z.infer<typeof FareRuleSchema>;
+
+export const ServiceDayTypeSchema = z.enum([
+  "weekday",
+  "saturday",
+  "sunday",
+  "holiday",
+  "all",
+]);
+export type ServiceDayType = z.infer<typeof ServiceDayTypeSchema>;
+
+const timeFormatRegex = /^(?:[01]\d|2[0-3]):[0-5]\d$/;
+
+export const ServiceHoursSchema = z
+  .object({
+    id: z.string().min(1),
+    line_id: z.string().min(1),
+    station_id: z.string().min(1),
+    towards_station_id: z.string().min(1).optional(),
+    day_type: ServiceDayTypeSchema,
+    first_train: z.string().regex(timeFormatRegex, "first_train must be HH:MM in 24h format"),
+    last_train: z.string().regex(timeFormatRegex, "last_train must be HH:MM in 24h format"),
+    last_train_crosses_midnight: z.boolean(),
+    provenance: ProvenanceSchema,
+  })
+  .superRefine((sh, ctx) => {
+    // Verified ServiceHours requires allowlisted official source_url host
+    if (sh.provenance.status === "verified" && sh.provenance.source_url) {
+      try {
+        const parsed = new URL(sh.provenance.source_url);
+        if (!isOfficialSourceHost(parsed.hostname)) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            message: `source_url hostname '${parsed.hostname}' is not on the official-host allowlist. Host must be reviewed and added by the owner. News and blog hosts are never added.`,
+            path: ["provenance", "source_url"],
+          });
+        }
+      } catch {
+        // handled by regex
+      }
+    }
+
+    // If last_train is earlier than first_train, last_train_crosses_midnight must be true, and reverse.
+    const [firstH, firstM] = sh.first_train.split(":").map(Number);
+    const [lastH, lastM] = sh.last_train.split(":").map(Number);
+    const firstMins = firstH * 60 + firstM;
+    const lastMins = lastH * 60 + lastM;
+
+    const earlier = lastMins < firstMins;
+    if (earlier && !sh.last_train_crosses_midnight) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: "last_train is earlier than first_train, so last_train_crosses_midnight must be true",
+        path: ["last_train_crosses_midnight"],
+      });
+    } else if (!earlier && sh.last_train_crosses_midnight) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: "last_train_crosses_midnight is true but last_train is not earlier than first_train",
+        path: ["last_train_crosses_midnight"],
+      });
+    }
+  });
+export type ServiceHours = z.infer<typeof ServiceHoursSchema>;
+

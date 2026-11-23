@@ -1,16 +1,25 @@
 import { test, expect } from "@playwright/test";
+import {
+  openSegment,
+  openStation,
+  gotoHome,
+  goToCityPage,
+  metadataPanel,
+  reportIssueLink,
+  routeResults,
+} from "./helpers";
 
 test.describe("M20 Report-an-Error Expansion", () => {
   test("shows report issue button with prefilled GitHub issue URL on segment panel", async ({
     page,
   }) => {
     // Navigate using deep link for a segment
-    await page.goto("/?city=delhi&selected=segment:del-red-seg-01");
+    await openSegment(page, "delhi", "del-red-seg-01");
 
-    const metadataPanel = page.getByTestId("metadata-panel");
-    await expect(metadataPanel).toBeVisible();
+    const panel = metadataPanel(page);
+    await expect(panel).toBeVisible();
 
-    const reportButton = page.getByTestId("report-issue-button");
+    const reportButton = reportIssueLink(page);
     await expect(reportButton).toBeVisible();
     await expect(reportButton).toContainText("Report an issue");
 
@@ -51,12 +60,12 @@ test.describe("M20 Report-an-Error Expansion", () => {
     page,
   }) => {
     // Navigate using deep link for a station
-    await page.goto("/?city=delhi&selected=station:del-kashmere-gate");
+    await openStation(page, "delhi", "del-kashmere-gate");
 
-    const metadataPanel = page.getByTestId("metadata-panel");
-    await expect(metadataPanel).toBeVisible();
+    const panel = metadataPanel(page);
+    await expect(panel).toBeVisible();
 
-    const reportButton = page.getByTestId("report-issue-button");
+    const reportButton = reportIssueLink(page);
     await expect(reportButton).toBeVisible();
     await expect(reportButton).toContainText("Report an issue");
 
@@ -91,13 +100,13 @@ test.describe("M20 Report-an-Error Expansion", () => {
     page,
   }) => {
     // Navigate to a calculated route in Kochi
-    await page.goto("/?city=kochi&from=kochi-aluva&to=kochi-edappally");
+    await gotoHome(page, { city: "kochi", from: "kochi-aluva", to: "kochi-edappally" });
     await page.waitForLoadState("domcontentloaded");
 
-    const resultsContainer = page.locator('[data-testid="route-results-container"]');
+    const resultsContainer = routeResults(page);
     await expect(resultsContainer).toBeVisible();
 
-    const reportButton = resultsContainer.getByTestId("report-issue-button");
+    const reportButton = reportIssueLink(resultsContainer);
     await expect(reportButton).toBeVisible();
     await expect(reportButton).toHaveAttribute("target", "_blank");
     await expect(reportButton).toHaveAttribute("rel", "noopener noreferrer");
@@ -133,10 +142,10 @@ test.describe("M20 Report-an-Error Expansion", () => {
     page,
   }) => {
     // Navigate to city page for Kochi
-    await page.goto("/city/kochi");
+    await goToCityPage(page, "kochi");
     await page.waitForLoadState("domcontentloaded");
 
-    const reportButton = page.getByTestId("report-issue-button");
+    const reportButton = reportIssueLink(page);
     await expect(reportButton).toBeVisible();
     await expect(reportButton).toHaveAttribute("target", "_blank");
     await expect(reportButton).toHaveAttribute("rel", "noopener noreferrer");
@@ -177,8 +186,8 @@ test.describe("M20 Report-an-Error Expansion", () => {
       }
     });
 
-    await page.goto("/city/kochi");
-    await expect(page.getByTestId("report-issue-button")).toBeVisible();
+    await goToCityPage(page, "kochi");
+    await expect(reportIssueLink(page)).toBeVisible();
 
     // Give time to ensure no background fetch is fired
     await page.waitForTimeout(500);
