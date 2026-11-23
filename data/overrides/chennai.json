@@ -108,6 +108,7 @@
       "inaugurated_on": null,
       "expected_completion": "2026-12",
       "color": "#FFD100",
+      "stations_not_published": true,
       "references": [
         "https://chennaimetrorail.org",
         "https://pib.gov.in/PressReleasePage.aspx?PRID=2061557"
@@ -132,6 +133,10 @@
     },
     {
       "osmId": 12828618,
+      "orderedWayIds": [
+        { "id": 1540116146, "reversed": false },
+        { "id": 1533466785, "reversed": false }
+      ],
       "segment_id": "che-corridor-5-seg-01",
       "line_id": "che-corridor-5",
       "line_name": "Red Line (Madhavaram - Sholinganallur)",
@@ -141,6 +146,7 @@
       "inaugurated_on": null,
       "expected_completion": "2027",
       "color": "#ED1C24",
+      "stations_not_published": true,
       "references": [
         "https://chennaimetrorail.org",
         "https://pib.gov.in/PressReleasePage.aspx?PRID=2061557"

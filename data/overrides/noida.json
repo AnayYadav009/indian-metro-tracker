@@ -42,24 +42,6 @@
         "https://www.thehindu.com/news/cities/Delhi/noida-metro-aqua-line-inauguration/article26088219.ece"
       ]
     }
-    ,
-    {
-      "osmId": 538930428,
-      "segment_id": "noi-aqua-seg-02",
-      "line_id": "noi-aqua",
-      "line_name": "Aqua Line Extension (Botanical Garden - Sector 142)",
-      "phase": "2",
-      "status": "construction",
-      "gauge": "standard",
-      "inaugurated_on": null,
-      "expected_completion": "2030",
-      "color": "#00CED1",
-      "references": [
-        "https://ddnews.gov.in",
-        "https://www.openstreetmap.org/way/538930428"
-      ],
-      "city_id": "noida"
-    }
   ],
   "interchangeStationNames": [
     "Noida Sector 51"

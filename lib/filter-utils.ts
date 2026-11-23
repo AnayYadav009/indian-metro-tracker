@@ -40,7 +40,10 @@ export function isVisible(
 ): boolean {
   if (!options.statuses.includes(record.status)) return false;
   if (options.cityId && record.city_id !== options.cityId) return false;
-  if (options.phases.length > 0 && !options.phases.includes(record.phase ?? "")) {
+  if (
+    options.phases.length > 0 &&
+    !options.phases.includes(record.phase ?? "")
+  ) {
     return false;
   }
   if (record.status !== "operational") return options.includeFuture;
@@ -74,7 +77,10 @@ export function buildVisibilityExpression(
       ["==", ["get", "inaugurated_on"], null],
       [
         "<=",
-        ["to-string", ["coalesce", ["get", "opened_on"], ["get", "inaugurated_on"]]],
+        [
+          "to-string",
+          ["coalesce", ["get", "opened_on"], ["get", "inaugurated_on"]],
+        ],
         yearThreshold,
       ],
     ]);
@@ -100,14 +106,17 @@ export function matchesSegmentFilter(
     lineAliases = [],
   } = criteria;
 
-  if (activeCity) {
-    if (props.city_id) {
-      if (props.city_id.toLowerCase() !== activeCity.id.toLowerCase()) return false;
-    } else {
-      const cityName = activeCity.name.toLowerCase();
-      const cityId = activeCity.id.toLowerCase();
-      const segCity = props.city.toLowerCase();
-      if (segCity !== cityName && segCity !== cityId) return false;
+  if (activeCity && props.city_id) {
+    if (props.city_id.toLowerCase() !== activeCity.id.toLowerCase())
+      return false;
+  } else if (activeCity) {
+    const segmentCity = props.city.toLowerCase();
+    if (
+      ![activeCity.name, activeCity.id].some(
+        (city) => city.toLowerCase() === segmentCity
+      )
+    ) {
+      return false;
     }
   }
 
@@ -119,26 +128,27 @@ export function matchesSegmentFilter(
       year: selectedYear ?? null,
       includeFuture,
     })
-  ) {
+  )
     return false;
-  }
 
   const query = searchQuery.trim().toLowerCase();
   if (query) {
-    const matchesLine = props.line_name.toLowerCase().includes(query);
-    const matchesAlias = lineAliases.some((alias) =>
-      alias.toLowerCase().includes(query)
-    );
-    const matchesCity = props.city.toLowerCase().includes(query);
-    const matchesPhase = props.phase.toLowerCase().includes(query);
-    if (!matchesLine && !matchesAlias && !matchesCity && !matchesPhase) return false;
+    if (
+      ![props.line_name, props.city, props.phase, ...lineAliases].some(
+        (value) => value.toLowerCase().includes(query)
+      )
+    )
+      return false;
   }
 
   return true;
 }
 
 export function buildFilterCriteria(
-  dataset: { cities: City[]; lines: Array<{ id: string; city_id: string; aliases?: string[] }> },
+  dataset: {
+    cities: City[];
+    lines: Array<{ id: string; city_id: string; aliases?: string[] }>;
+  },
   selectedCityId: string | null,
   selectedStatuses: Status[],
   selectedPhases: string[],

@@ -1,0 +1,176 @@
+{
+  "city_id": "nagpur",
+  "compiled_on": "2026-10-15",
+  "lines": [
+    {
+      "line_id": "nag-orange",
+      "official_name": "Orange Line (Line 1 / North-South Corridor)",
+      "operator": "Maha Metro",
+      "topology": "linear",
+      "operational_stations": 18,
+      "operational_length_km": 19.66,
+      "planned_length_km": 50.28,
+      "terminals": [
+        "Automotive Square",
+        "Khapri"
+      ],
+      "status": "operational",
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "Khapri to Sitabuldi (Priority Section)",
+          "phase": null,
+          "opened_on": "2019-03-08",
+          "stations_added": 5,
+          "confidence": "sourced",
+          "source": {
+            "title": "Prime Minister inaugurates Nagpur Metro commercial service on Reach 1",
+            "url": "https://www.metrorailnagpur.com",
+            "retrieved_at": "2026-10-15",
+            "kind": "official"
+          }
+        },
+        {
+          "stage": "Sitabuldi to Kasturchand Park",
+          "phase": null,
+          "opened_on": "2021-08-20",
+          "stations_added": 2,
+          "confidence": "sourced",
+          "source": {
+            "title": "Nagpur Metro opens Zero Mile and Kasturchand Park stretch",
+            "url": "https://www.metrorailnagpur.com",
+            "retrieved_at": "2026-10-15",
+            "kind": "official"
+          }
+        },
+        {
+          "stage": "Kasturchand Park to Automotive Square",
+          "phase": null,
+          "opened_on": "2022-12-11",
+          "stations_added": 5,
+          "confidence": "sourced",
+          "source": {
+            "title": "PM Modi inaugurates Phase 1 completion including Automotive Square",
+            "url": "https://www.metrorailnagpur.com",
+            "retrieved_at": "2026-10-15",
+            "kind": "official"
+          }
+        },
+        {
+          "stage": "Infill stations (Chhatrapati Square, Congress Nagar, Rahate Colony, Ujjwal Nagar, etc.)",
+          "phase": null,
+          "opened_on": "2022-12-11",
+          "stations_added": 6,
+          "confidence": "sourced",
+          "source": {
+            "title": "Remaining infill stations opened for public passenger traffic",
+            "url": "https://www.metrorailnagpur.com",
+            "retrieved_at": "2026-10-15",
+            "kind": "official"
+          }
+        }
+      ],
+      "construction": [
+        {
+          "stretch": "Automotive Square to Kanhan River (Reach 2B extension)",
+          "phase": "2",
+          "expected_completion": "2027-12",
+          "stations": 12,
+          "notes": "Package C-08 and C-11 awarded to RVNL and KPIL",
+          "source": {
+            "title": "Nagpur Metro Phase 2 Reach 2B contract awarded",
+            "url": "https://themetrorailguy.com/nagpur-metro-phase-2-information-route-maps-project-updates/",
+            "retrieved_at": "2026-10-15",
+            "kind": "news"
+          }
+        },
+        {
+          "stretch": "Khapri to Butibori MIDC ESR (Reach 1A extension)",
+          "phase": "2",
+          "expected_completion": "2027-12",
+          "stations": 10,
+          "notes": "Package C-02 and C-09 awarded to GRIL and YFC-BBG JV",
+          "source": {
+            "title": "Nagpur Metro Phase 2 Reach 1A civil packages awarded",
+            "url": "https://themetrorailguy.com/nagpur-metro-phase-2-information-route-maps-project-updates/",
+            "retrieved_at": "2026-10-15",
+            "kind": "news"
+          }
+        }
+      ],
+      "notes": "North-South Corridor (Orange Line) extends 19.66 km with 18 stations in Phase 1, fully operational. Phase 2 extensions to Kanhan River and Butibori MIDC are under active construction."
+    },
+    {
+      "line_id": "nag-aqua",
+      "official_name": "Aqua Line (Line 2 / East-West Corridor)",
+      "operator": "Maha Metro",
+      "topology": "linear",
+      "operational_stations": 20,
+      "operational_length_km": 18.56,
+      "planned_length_km": 30.86,
+      "terminals": [
+        "Lokmanya Nagar",
+        "Prajapati Nagar"
+      ],
+      "status": "operational",
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "Lokmanya Nagar to Sitabuldi (Reach 3)",
+          "phase": null,
+          "opened_on": "2020-01-28",
+          "stations_added": 11,
+          "confidence": "sourced",
+          "source": {
+            "title": "Nagpur Metro opens Aqua Line Lokmanya Nagar to Sitabuldi for commercial traffic",
+            "url": "https://www.metrorailnagpur.com",
+            "retrieved_at": "2026-10-15",
+            "kind": "official"
+          }
+        },
+        {
+          "stage": "Sitabuldi to Prajapati Nagar (Reach 4)",
+          "phase": null,
+          "opened_on": "2022-12-11",
+          "stations_added": 9,
+          "confidence": "sourced",
+          "source": {
+            "title": "PM Modi inaugurates Aqua Line Reach 4 Prajapati Nagar to Sitabuldi",
+            "url": "https://www.metrorailnagpur.com",
+            "retrieved_at": "2026-10-15",
+            "kind": "official"
+          }
+        }
+      ],
+      "construction": [
+        {
+          "stretch": "Lokmanya Nagar to Hingna (Reach 3A extension)",
+          "phase": "2",
+          "expected_completion": "2027-12",
+          "stations": 7,
+          "notes": "Package C-06 and C-11 awarded to RVNL and KPIL",
+          "source": {
+            "title": "Nagpur Metro Phase 2 Reach 3A contract awarded",
+            "url": "https://themetrorailguy.com/nagpur-metro-phase-2-information-route-maps-project-updates/",
+            "retrieved_at": "2026-10-15",
+            "kind": "news"
+          }
+        },
+        {
+          "stretch": "Prajapati Nagar to Transport Nagar (Reach 4A extension)",
+          "phase": "2",
+          "expected_completion": "2027-12",
+          "stations": 3,
+          "notes": "Package C-06 and C-11 awarded to RVNL and KPIL",
+          "source": {
+            "title": "Nagpur Metro Phase 2 Reach 4A contract awarded",
+            "url": "https://themetrorailguy.com/nagpur-metro-phase-2-information-route-maps-project-updates/",
+            "retrieved_at": "2026-10-15",
+            "kind": "news"
+          }
+        }
+      ],
+      "notes": "East-West Corridor (Aqua Line) extends 18.56 km with 20 stations in Phase 1, fully operational. Phase 2 extensions to Hingna and Transport Nagar are under construction."
+    }
+  ]
+}

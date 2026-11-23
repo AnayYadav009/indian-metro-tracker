@@ -1,0 +1,1203 @@
+{
+  "version": 0.6,
+  "generator": "OSM-API-Full",
+  "elements": [
+    {
+      "type": "node",
+      "id": 7944681361,
+      "lat": 27.1728802,
+      "lon": 78.0266623,
+      "tags": {
+        "level": "-2",
+        "name": "Taj Mahal",
+        "name:en": "Taj Mahal",
+        "name:hi": "ताज महल",
+        "network": "Agra Metro",
+        "network:wikidata": "Q24088780",
+        "operator": "Uttar Pradesh Metro Rail Corporation",
+        "operator:short": "UPMRC",
+        "operator:wikidata": "Q17070250",
+        "public_transport": "stop_position",
+        "ref": "2"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7944685494,
+      "lat": 27.1578339,
+      "lon": 78.053353,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 7944685546,
+      "lat": 27.1682131,
+      "lon": 78.0357267,
+      "tags": {
+        "name": "Taj Mahal",
+        "name:en": "Taj Mahal",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "network": "Agra Metro",
+        "operator": "Uttar Pradesh Metro Rail Corporation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7944685678,
+      "lat": 27.1673634,
+      "lon": 78.0364681,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 7944685734,
+      "lat": 27.1577859,
+      "lon": 78.0477836,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 7944685785,
+      "lat": 27.1578871,
+      "lon": 78.0469561,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 7944685849,
+      "lat": 27.1582323,
+      "lon": 78.0566238,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 7944685928,
+      "lat": 27.1723846,
+      "lon": 78.0293827,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 7944685932,
+      "lat": 27.1613842,
+      "lon": 78.0404187,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 7944685970,
+      "lat": 27.1702019,
+      "lon": 78.0332108,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 7944685977,
+      "lat": 27.1710216,
+      "lon": 78.0320401,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 7944686135,
+      "lat": 27.1750628,
+      "lon": 78.0213368,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 7944686275,
+      "lat": 27.1585542,
+      "lon": 78.045305,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 7944686384,
+      "lat": 27.1716503,
+      "lon": 78.0310088,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 7944686677,
+      "lat": 27.1631671,
+      "lon": 78.0389213,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 7944686894,
+      "lat": 27.1693441,
+      "lon": 78.0343172,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 7944686977,
+      "lat": 27.1725463,
+      "lon": 78.0275849,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 7944687098,
+      "lat": 27.1767598,
+      "lon": 78.0186036,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 7944687403,
+      "lat": 27.1619347,
+      "lon": 78.039754,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 9924422712,
+      "lat": 27.1608895,
+      "lon": 78.0412717,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 11043337881,
+      "lat": 27.1604856,
+      "lon": 78.0419623,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 11043384125,
+      "lat": 27.1607229,
+      "lon": 78.0415577,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 11043384254,
+      "lat": 27.1627238,
+      "lon": 78.0391414,
+      "tags": {
+        "name": "Mankameshwar Mandir",
+        "name:en": "Mankameshwar Mandir",
+        "name:hi": "मनकामेश्वर मंदिर",
+        "network": "Agra Metro",
+        "network:wikidata": "Q24088780",
+        "operator": "Uttar Pradesh Metro Rail Corporation",
+        "operator:short": "UPMRC",
+        "operator:wikidata": "Q17070250",
+        "public_transport": "stop_position"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11043384255,
+      "lat": 27.1622348,
+      "lon": 78.039484,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 11043384256,
+      "lat": 27.1611974,
+      "lon": 78.0407524,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 11043384257,
+      "lat": 27.1603624,
+      "lon": 78.0421942,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 11043384258,
+      "lat": 27.159568,
+      "lon": 78.0436657,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 11043384259,
+      "lat": 27.1583558,
+      "lon": 78.0456543,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 11043384260,
+      "lat": 27.1581398,
+      "lon": 78.0460862,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 11043384261,
+      "lat": 27.1579672,
+      "lon": 78.0465765,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 11043384262,
+      "lat": 27.1578234,
+      "lon": 78.047327,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 11043384263,
+      "lat": 27.1578178,
+      "lon": 78.048939,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 11043384264,
+      "lat": 27.157813,
+      "lon": 78.0500199,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 11043384265,
+      "lat": 27.1577963,
+      "lon": 78.0520047,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 11043384266,
+      "lat": 27.1577939,
+      "lon": 78.0526538,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 11043384267,
+      "lat": 27.1578035,
+      "lon": 78.0529717,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 11043384268,
+      "lat": 27.1578082,
+      "lon": 78.0512242,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 11043384269,
+      "lat": 27.1579109,
+      "lon": 78.0539386,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 11043384270,
+      "lat": 27.1580385,
+      "lon": 78.0550101,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 11716178032,
+      "lat": 27.1653823,
+      "lon": 78.0376263,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 11716178036,
+      "lat": 27.1782489,
+      "lon": 78.0170412,
+      "tags": {
+        "name": "Mankameshwar Mandir",
+        "name:en": "Mankameshwar Mandir",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "network": "Agra Metro",
+        "operator": "Uttar Pradesh Metro Rail Corporation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11716178040,
+      "lat": 27.1759826,
+      "lon": 78.0195835,
+      "tags": {
+        "name": "Dr. Ambedkar Chowk Station",
+        "name:en": "Dr. Ambedkar Chowk Station",
+        "name:hi": "डॉ. अंबेडकर चौक",
+        "network": "Agra Metro",
+        "network:wikidata": "Q24088780",
+        "operator": "Uttar Pradesh Metro Rail Corporation",
+        "operator:short": "UPMRC",
+        "operator:wikidata": "Q17070250",
+        "public_transport": "stop_position"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11716178041,
+      "lat": 27.1753309,
+      "lon": 78.0206157,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 11716178043,
+      "lat": 27.1746031,
+      "lon": 78.0239124,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 11716178045,
+      "lat": 27.1747926,
+      "lon": 78.0228658,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 11716178048,
+      "lat": 27.1749047,
+      "lon": 78.0221874,
+      "tags": {
+        "name": "Dr. Ambedkar Chowk",
+        "name:en": "Dr. Ambedkar Chowk",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "network": "Agra Metro",
+        "operator": "Uttar Pradesh Metro Rail Corporation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11716178049,
+      "lat": 27.1679485,
+      "lon": 78.03602,
+      "tags": {
+        "name": "Fatehabad Road",
+        "name:hi": "फतेहाबाद रोड",
+        "network": "Agra Metro",
+        "network:wikidata": "Q24088780",
+        "operator": "Uttar Pradesh Metro Rail Corporation",
+        "operator:short": "UPMRC",
+        "operator:wikidata": "Q17070250",
+        "public_transport": "stop_position"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11716178051,
+      "lat": 27.1601435,
+      "lon": 78.0426474,
+      "tags": {
+        "name": "Fatehabad Road",
+        "name:en": "Fatehabad Road",
+        "railway": "station",
+        "station": "subway",
+        "subway": "yes",
+        "network": "Agra Metro",
+        "operator": "Uttar Pradesh Metro Rail Corporation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11716178065,
+      "lat": 27.1578101,
+      "lon": 78.0507357,
+      "tags": {
+        "name": "Shaheed Captain Shubham Gupta",
+        "name:en": "Shaheed Captain Shubham Gupta",
+        "name:hi": "शहीद कैप्टन शुभम गुप्ता",
+        "network": "Agra Metro",
+        "network:wikidata": "Q24088780",
+        "operator": "Uttar Pradesh Metro Rail Corporation",
+        "operator:short": "UPMRC",
+        "operator:wikidata": "Q17070250",
+        "public_transport": "stop_position",
+        "subway": "yes",
+        "railway": "station",
+        "station": "subway"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11716178067,
+      "lat": 27.1583884,
+      "lon": 78.0579076,
+      "tags": {
+        "name": "Taj East Gate",
+        "name:hi": "ताज ईस्ट गेट",
+        "network": "Agra Metro",
+        "network:wikidata": "Q24088780",
+        "operator": "Uttar Pradesh Metro Rail Corporation",
+        "operator:short": "UPMRC",
+        "operator:wikidata": "Q17070250",
+        "public_transport": "stop_position",
+        "subway": "yes",
+        "name:en": "Taj East Gate",
+        "railway": "station",
+        "station": "subway"
+      }
+    },
+    {
+      "type": "node",
+      "id": 14032628841,
+      "lat": 27.1614847,
+      "lon": 78.0402761,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 14032628842,
+      "lat": 27.1615902,
+      "lon": 78.0401382,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 14032628843,
+      "lat": 27.1617005,
+      "lon": 78.0400051,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 14032628844,
+      "lat": 27.1618154,
+      "lon": 78.0398769,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 14032628845,
+      "lat": 27.1620819,
+      "lon": 78.0396151,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 14032628846,
+      "lat": 27.1623929,
+      "lon": 78.0393612,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 14032628847,
+      "lat": 27.1625561,
+      "lon": 78.0392469,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 14053134531,
+      "lat": 27.1688326,
+      "lon": 78.0350217,
+      "tags": {}
+    },
+    {
+      "type": "node",
+      "id": 14053134550,
+      "lat": 27.1684972,
+      "lon": 78.0354246,
+      "tags": {}
+    },
+    {
+      "type": "way",
+      "id": 851795091,
+      "nodes": [
+        11043384254,
+        14032628847,
+        14032628846,
+        11043384255,
+        14032628845,
+        7944687403,
+        14032628844,
+        14032628843,
+        14032628842,
+        14032628841,
+        7944685932,
+        11043384256,
+        9924422712,
+        11043384125,
+        11043337881,
+        11043384257,
+        11716178051,
+        11043384258,
+        7944686275,
+        11043384259,
+        11043384260,
+        11043384261,
+        7944685785,
+        11043384262,
+        7944685734,
+        11043384263,
+        11043384264,
+        11716178065,
+        11043384268,
+        11043384265,
+        11043384266,
+        11043384267,
+        7944685494,
+        11043384269,
+        11043384270,
+        7944685849,
+        11716178067
+      ],
+      "tags": {
+        "bridge": "viaduct",
+        "layer": "1",
+        "name": "Yellow Line (Sikandra - Taj East Gate)",
+        "old_name": "Line-1: Sikandra – Taj East Gate (14 km)",
+        "operator": "Uttar Pradesh Metro Rail Corporation",
+        "operator:short": "UPMRC",
+        "operator:wikidata": "Q17070250",
+        "railway": "subway",
+        "start_date": "2024-03-06"
+      },
+      "geometry": [
+        {
+          "lat": 27.1627238,
+          "lon": 78.0391414
+        },
+        {
+          "lat": 27.1625561,
+          "lon": 78.0392469
+        },
+        {
+          "lat": 27.1623929,
+          "lon": 78.0393612
+        },
+        {
+          "lat": 27.1622348,
+          "lon": 78.039484
+        },
+        {
+          "lat": 27.1620819,
+          "lon": 78.0396151
+        },
+        {
+          "lat": 27.1619347,
+          "lon": 78.039754
+        },
+        {
+          "lat": 27.1618154,
+          "lon": 78.0398769
+        },
+        {
+          "lat": 27.1617005,
+          "lon": 78.0400051
+        },
+        {
+          "lat": 27.1615902,
+          "lon": 78.0401382
+        },
+        {
+          "lat": 27.1614847,
+          "lon": 78.0402761
+        },
+        {
+          "lat": 27.1613842,
+          "lon": 78.0404187
+        },
+        {
+          "lat": 27.1611974,
+          "lon": 78.0407524
+        },
+        {
+          "lat": 27.1608895,
+          "lon": 78.0412717
+        },
+        {
+          "lat": 27.1607229,
+          "lon": 78.0415577
+        },
+        {
+          "lat": 27.1604856,
+          "lon": 78.0419623
+        },
+        {
+          "lat": 27.1603624,
+          "lon": 78.0421942
+        },
+        {
+          "lat": 27.1601435,
+          "lon": 78.0426474
+        },
+        {
+          "lat": 27.159568,
+          "lon": 78.0436657
+        },
+        {
+          "lat": 27.1585542,
+          "lon": 78.045305
+        },
+        {
+          "lat": 27.1583558,
+          "lon": 78.0456543
+        },
+        {
+          "lat": 27.1581398,
+          "lon": 78.0460862
+        },
+        {
+          "lat": 27.1579672,
+          "lon": 78.0465765
+        },
+        {
+          "lat": 27.1578871,
+          "lon": 78.0469561
+        },
+        {
+          "lat": 27.1578234,
+          "lon": 78.047327
+        },
+        {
+          "lat": 27.1577859,
+          "lon": 78.0477836
+        },
+        {
+          "lat": 27.1578178,
+          "lon": 78.048939
+        },
+        {
+          "lat": 27.157813,
+          "lon": 78.0500199
+        },
+        {
+          "lat": 27.1578101,
+          "lon": 78.0507357
+        },
+        {
+          "lat": 27.1578082,
+          "lon": 78.0512242
+        },
+        {
+          "lat": 27.1577963,
+          "lon": 78.0520047
+        },
+        {
+          "lat": 27.1577939,
+          "lon": 78.0526538
+        },
+        {
+          "lat": 27.1578035,
+          "lon": 78.0529717
+        },
+        {
+          "lat": 27.1578339,
+          "lon": 78.053353
+        },
+        {
+          "lat": 27.1579109,
+          "lon": 78.0539386
+        },
+        {
+          "lat": 27.1580385,
+          "lon": 78.0550101
+        },
+        {
+          "lat": 27.1582323,
+          "lon": 78.0566238
+        },
+        {
+          "lat": 27.1583884,
+          "lon": 78.0579076
+        }
+      ]
+    },
+    {
+      "type": "way",
+      "id": 1189297880,
+      "nodes": [
+        11716178036,
+        7944687098,
+        11716178040,
+        11716178041,
+        7944686135,
+        11716178048,
+        11716178045,
+        11716178043,
+        7944681361,
+        7944686977,
+        7944685928,
+        7944686384,
+        7944685977,
+        7944685970,
+        7944686894,
+        14053134531,
+        14053134550,
+        7944685546,
+        11716178049,
+        7944685678,
+        11716178032
+      ],
+      "tags": {
+        "layer": "-1",
+        "name": "Yellow Line (Sikandra - Taj East Gate)",
+        "old_name": "Line-1: Sikandra – Taj East Gate (14 km)",
+        "operator": "Uttar Pradesh Metro Rail Corporation",
+        "operator:short": "UPMRC",
+        "operator:wikidata": "Q17070250",
+        "railway": "subway",
+        "start_date": "2024-03-06",
+        "tunnel": "yes"
+      },
+      "geometry": [
+        {
+          "lat": 27.1782489,
+          "lon": 78.0170412
+        },
+        {
+          "lat": 27.1767598,
+          "lon": 78.0186036
+        },
+        {
+          "lat": 27.1759826,
+          "lon": 78.0195835
+        },
+        {
+          "lat": 27.1753309,
+          "lon": 78.0206157
+        },
+        {
+          "lat": 27.1750628,
+          "lon": 78.0213368
+        },
+        {
+          "lat": 27.1749047,
+          "lon": 78.0221874
+        },
+        {
+          "lat": 27.1747926,
+          "lon": 78.0228658
+        },
+        {
+          "lat": 27.1746031,
+          "lon": 78.0239124
+        },
+        {
+          "lat": 27.1728802,
+          "lon": 78.0266623
+        },
+        {
+          "lat": 27.1725463,
+          "lon": 78.0275849
+        },
+        {
+          "lat": 27.1723846,
+          "lon": 78.0293827
+        },
+        {
+          "lat": 27.1716503,
+          "lon": 78.0310088
+        },
+        {
+          "lat": 27.1710216,
+          "lon": 78.0320401
+        },
+        {
+          "lat": 27.1702019,
+          "lon": 78.0332108
+        },
+        {
+          "lat": 27.1693441,
+          "lon": 78.0343172
+        },
+        {
+          "lat": 27.1688326,
+          "lon": 78.0350217
+        },
+        {
+          "lat": 27.1684972,
+          "lon": 78.0354246
+        },
+        {
+          "lat": 27.1682131,
+          "lon": 78.0357267
+        },
+        {
+          "lat": 27.1679485,
+          "lon": 78.03602
+        },
+        {
+          "lat": 27.1673634,
+          "lon": 78.0364681
+        },
+        {
+          "lat": 27.1653823,
+          "lon": 78.0376263
+        }
+      ]
+    },
+    {
+      "type": "way",
+      "id": 1260538501,
+      "nodes": [
+        11716178032,
+        7944686677,
+        11043384254
+      ],
+      "tags": {
+        "name": "Yellow Line (Sikandra - Taj East Gate)",
+        "old_name": "Line-1: Sikandra – Taj East Gate (14 km)",
+        "operator": "Uttar Pradesh Metro Rail Corporation",
+        "operator:short": "UPMRC",
+        "operator:wikidata": "Q17070250",
+        "railway": "subway",
+        "start_date": "2024-03-06"
+      },
+      "geometry": [
+        {
+          "lat": 27.1653823,
+          "lon": 78.0376263
+        },
+        {
+          "lat": 27.1631671,
+          "lon": 78.0389213
+        },
+        {
+          "lat": 27.1627238,
+          "lon": 78.0391414
+        }
+      ]
+    },
+    {
+      "type": "relation",
+      "id": 16087452,
+      "members": [
+        {
+          "type": "node",
+          "ref": 11716178036,
+          "role": "stop",
+          "lat": 27.1782489,
+          "lon": 78.0170412
+        },
+        {
+          "type": "node",
+          "ref": 11716178048,
+          "role": "stop",
+          "lat": 27.1749047,
+          "lon": 78.0221874
+        },
+        {
+          "type": "node",
+          "ref": 7944685546,
+          "role": "stop",
+          "lat": 27.1682131,
+          "lon": 78.0357267
+        },
+        {
+          "type": "node",
+          "ref": 11716178051,
+          "role": "stop",
+          "lat": 27.1601435,
+          "lon": 78.0426474
+        },
+        {
+          "type": "node",
+          "ref": 11716178065,
+          "role": "stop",
+          "lat": 27.1578101,
+          "lon": 78.0507357
+        },
+        {
+          "type": "node",
+          "ref": 11716178067,
+          "role": "stop",
+          "lat": 27.1583884,
+          "lon": 78.0579076
+        },
+        {
+          "type": "way",
+          "ref": 1189297880,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 27.1782489,
+              "lon": 78.0170412
+            },
+            {
+              "lat": 27.1767598,
+              "lon": 78.0186036
+            },
+            {
+              "lat": 27.1759826,
+              "lon": 78.0195835
+            },
+            {
+              "lat": 27.1753309,
+              "lon": 78.0206157
+            },
+            {
+              "lat": 27.1750628,
+              "lon": 78.0213368
+            },
+            {
+              "lat": 27.1749047,
+              "lon": 78.0221874
+            },
+            {
+              "lat": 27.1747926,
+              "lon": 78.0228658
+            },
+            {
+              "lat": 27.1746031,
+              "lon": 78.0239124
+            },
+            {
+              "lat": 27.1728802,
+              "lon": 78.0266623
+            },
+            {
+              "lat": 27.1725463,
+              "lon": 78.0275849
+            },
+            {
+              "lat": 27.1723846,
+              "lon": 78.0293827
+            },
+            {
+              "lat": 27.1716503,
+              "lon": 78.0310088
+            },
+            {
+              "lat": 27.1710216,
+              "lon": 78.0320401
+            },
+            {
+              "lat": 27.1702019,
+              "lon": 78.0332108
+            },
+            {
+              "lat": 27.1693441,
+              "lon": 78.0343172
+            },
+            {
+              "lat": 27.1688326,
+              "lon": 78.0350217
+            },
+            {
+              "lat": 27.1684972,
+              "lon": 78.0354246
+            },
+            {
+              "lat": 27.1682131,
+              "lon": 78.0357267
+            },
+            {
+              "lat": 27.1679485,
+              "lon": 78.03602
+            },
+            {
+              "lat": 27.1673634,
+              "lon": 78.0364681
+            },
+            {
+              "lat": 27.1653823,
+              "lon": 78.0376263
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 1260538501,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 27.1653823,
+              "lon": 78.0376263
+            },
+            {
+              "lat": 27.1631671,
+              "lon": 78.0389213
+            },
+            {
+              "lat": 27.1627238,
+              "lon": 78.0391414
+            }
+          ]
+        },
+        {
+          "type": "way",
+          "ref": 851795091,
+          "role": "",
+          "geometry": [
+            {
+              "lat": 27.1627238,
+              "lon": 78.0391414
+            },
+            {
+              "lat": 27.1625561,
+              "lon": 78.0392469
+            },
+            {
+              "lat": 27.1623929,
+              "lon": 78.0393612
+            },
+            {
+              "lat": 27.1622348,
+              "lon": 78.039484
+            },
+            {
+              "lat": 27.1620819,
+              "lon": 78.0396151
+            },
+            {
+              "lat": 27.1619347,
+              "lon": 78.039754
+            },
+            {
+              "lat": 27.1618154,
+              "lon": 78.0398769
+            },
+            {
+              "lat": 27.1617005,
+              "lon": 78.0400051
+            },
+            {
+              "lat": 27.1615902,
+              "lon": 78.0401382
+            },
+            {
+              "lat": 27.1614847,
+              "lon": 78.0402761
+            },
+            {
+              "lat": 27.1613842,
+              "lon": 78.0404187
+            },
+            {
+              "lat": 27.1611974,
+              "lon": 78.0407524
+            },
+            {
+              "lat": 27.1608895,
+              "lon": 78.0412717
+            },
+            {
+              "lat": 27.1607229,
+              "lon": 78.0415577
+            },
+            {
+              "lat": 27.1604856,
+              "lon": 78.0419623
+            },
+            {
+              "lat": 27.1603624,
+              "lon": 78.0421942
+            },
+            {
+              "lat": 27.1601435,
+              "lon": 78.0426474
+            },
+            {
+              "lat": 27.159568,
+              "lon": 78.0436657
+            },
+            {
+              "lat": 27.1585542,
+              "lon": 78.045305
+            },
+            {
+              "lat": 27.1583558,
+              "lon": 78.0456543
+            },
+            {
+              "lat": 27.1581398,
+              "lon": 78.0460862
+            },
+            {
+              "lat": 27.1579672,
+              "lon": 78.0465765
+            },
+            {
+              "lat": 27.1578871,
+              "lon": 78.0469561
+            },
+            {
+              "lat": 27.1578234,
+              "lon": 78.047327
+            },
+            {
+              "lat": 27.1577859,
+              "lon": 78.0477836
+            },
+            {
+              "lat": 27.1578178,
+              "lon": 78.048939
+            },
+            {
+              "lat": 27.157813,
+              "lon": 78.0500199
+            },
+            {
+              "lat": 27.1578101,
+              "lon": 78.0507357
+            },
+            {
+              "lat": 27.1578082,
+              "lon": 78.0512242
+            },
+            {
+              "lat": 27.1577963,
+              "lon": 78.0520047
+            },
+            {
+              "lat": 27.1577939,
+              "lon": 78.0526538
+            },
+            {
+              "lat": 27.1578035,
+              "lon": 78.0529717
+            },
+            {
+              "lat": 27.1578339,
+              "lon": 78.053353
+            },
+            {
+              "lat": 27.1579109,
+              "lon": 78.0539386
+            },
+            {
+              "lat": 27.1580385,
+              "lon": 78.0550101
+            },
+            {
+              "lat": 27.1582323,
+              "lon": 78.0566238
+            },
+            {
+              "lat": 27.1583884,
+              "lon": 78.0579076
+            }
+          ]
+        }
+      ],
+      "tags": {
+        "colour": "#FFD700",
+        "from": "Mankameshwar Mandir",
+        "name": "Metro 1: Mankameshwar Mandir → Taj East Gate",
+        "network": "Agra Metro",
+        "network:wikidata": "Q24088780",
+        "public_transport:version": "2",
+        "ref": "1",
+        "route": "subway",
+        "type": "route",
+        "wikidata": "Q120727502"
+      }
+    }
+  ]
+}

@@ -1,6 +1,14 @@
 import { z } from "zod";
 
 export const StatusSchema = z.enum(["operational", "construction", "planned"]);
+
+export const SharedCorridorSchema = z.object({
+  segment_ids: z.array(z.string().min(1)).length(2),
+  shared_station_ids: z.array(z.string().min(1)).min(2),
+  reason: z.string().trim().min(1),
+  source: z.string().url(),
+});
+export type SharedCorridor = z.infer<typeof SharedCorridorSchema>;
 export type Status = z.infer<typeof StatusSchema>;
 
 export const LayoutSchema = z.enum(["underground", "elevated", "at-grade"]);
@@ -43,6 +51,7 @@ export const LineSchema = z.object({
   operator: z.string().min(1),
   source: z.string().min(1, "source is required"),
   aliases: z.array(z.string().min(1)).default([]).optional(),
+  ordered_station_ids: z.array(z.string().min(1)).optional(),
   retrieved_at: z
     .string()
     .regex(/^\d{4}-\d{2}-\d{2}$/, "Format must be YYYY-MM-DD")
@@ -96,6 +105,8 @@ export const SegmentPropertiesSchema = z
       .enum(["exact", "schematic"])
       .default("exact")
       .optional(),
+    shared_corridor: SharedCorridorSchema.optional(),
+    stations_not_published: z.boolean().default(false).optional(),
   })
   .superRefine((data, ctx) => {
     if (data.status === "operational") {
@@ -144,6 +155,16 @@ export const SegmentPropertiesSchema = z
           code: z.ZodIssueCode.custom,
           message: "inaugurated_on must be null when status is 'planned'",
           path: ["inaugurated_on"],
+        });
+      }
+    }
+
+    if (data.geometry_quality === "schematic") {
+      if (!data.references.length) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: "Schematic geometry requires a source reference",
+          path: ["references"],
         });
       }
     }

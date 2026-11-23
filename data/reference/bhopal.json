@@ -1,0 +1,83 @@
+{
+  "city_id": "bhopal",
+  "compiled_on": "2026-10-15",
+  "lines": [
+    {
+      "line_id": "bho-orange",
+      "official_name": "Orange Line (Line 2)",
+      "operator": "MPMRCL",
+      "topology": "linear",
+      "operational_stations": 8,
+      "operational_length_km": 6.22,
+      "planned_length_km": 14.99,
+      "terminals": [
+        "Karond Circle",
+        "AIIMS Bhopal"
+      ],
+      "status": "operational",
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "Priority Corridor (Subhash Nagar to AIIMS)",
+          "phase": null,
+          "opened_on": "2025-12-21",
+          "stations_added": 8,
+          "confidence": "sourced",
+          "source": {
+            "title": "Bhopal Metro commercial operations begin on priority corridor Subhash Nagar to AIIMS",
+            "url": "https://www.mpmetrorail.com",
+            "retrieved_at": "2026-10-15",
+            "kind": "official"
+          }
+        }
+      ],
+      "construction": [
+        {
+          "stretch": "Karond Circle to Subhash Nagar via Pul Bogda and Bhopal Railway Station",
+          "phase": "1",
+          "expected_completion": "2028-06",
+          "stations": 8,
+          "notes": "Elevated and underground package BH-04 connecting Subhash Nagar to Karond Circle",
+          "source": {
+            "title": "Bhopal Metro Package BH-04 underground and extension updates",
+            "url": "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/",
+            "retrieved_at": "2026-10-15",
+            "kind": "news"
+          }
+        }
+      ],
+      "notes": "Orange Line (Line 2) runs north-south from Karond Circle to AIIMS Bhopal (14.99 km, 16 stations). The 6.22 km priority stretch from Subhash Nagar to AIIMS with 8 stations is operational. Northward extension to Karond Circle is under active construction."
+    },
+    {
+      "line_id": "bho-blue",
+      "official_name": "Blue Line (Line 5)",
+      "operator": "MPMRCL",
+      "topology": "linear",
+      "operational_stations": 0,
+      "operational_length_km": 0,
+      "planned_length_km": 12.91,
+      "terminals": [
+        "Bhadbhada Square",
+        "Ratnagiri Tiraha"
+      ],
+      "status": "under_construction",
+      "disjoint_stretches": false,
+      "construction": [
+        {
+          "stretch": "Bhadbhada Square to Ratnagiri Tiraha via Pul Bogda",
+          "phase": "1",
+          "expected_completion": "2028-12",
+          "stations": 14,
+          "notes": "Package BH-05 elevated viaduct and 13/14 stations awarded to Afcons",
+          "source": {
+            "title": "Bhopal Metro Blue Line Package BH-05 details",
+            "url": "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/",
+            "retrieved_at": "2026-10-15",
+            "kind": "news"
+          }
+        }
+      ],
+      "notes": "Blue Line (Line 5) runs east-west from Bhadbhada Square to Ratnagiri Tiraha (12.91 km, 14 stations). Fully under construction with interchange at Pul Bogda."
+    }
+  ]
+}

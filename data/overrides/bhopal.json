@@ -1,0 +1,1766 @@
+{
+  "city": {
+    "id": "bhopal",
+    "name": "Bhopal",
+    "bbox": [
+      77.3,
+      23.18,
+      77.55,
+      23.35
+    ],
+    "operator": "MPMRCL",
+    "phases": [
+      "1"
+    ],
+    "network_id": "bhopal-metro"
+  },
+  "lines": [
+    {
+      "id": "bho-orange",
+      "name": "Orange Line (Line 2)",
+      "city": "Bhopal",
+      "city_id": "bhopal",
+      "color": "#F97316",
+      "operator": "MPMRCL",
+      "source": "osm+mpmrcl",
+      "notes": "Line 2 connects Karond Circle to AIIMS Bhopal (14.99 km, 16 stations). Priority corridor Subhash Nagar to AIIMS is operational."
+    },
+    {
+      "id": "bho-blue",
+      "name": "Blue Line (Line 5)",
+      "city": "Bhopal",
+      "city_id": "bhopal",
+      "color": "#3B82F6",
+      "operator": "MPMRCL",
+      "source": "osm+mpmrcl",
+      "notes": "Line 5 connects Bhadbhada Square to Ratnagiri Tiraha (12.91 km, 14 stations). Under active construction."
+    }
+  ],
+  "segments": [
+    {
+      "segment_id": "bho-orange-seg-02",
+      "line_id": "bho-orange",
+      "line_name": "Orange Line (Line 2)",
+      "phase": "1",
+      "status": "construction",
+      "gauge": "standard",
+      "inaugurated_on": null,
+      "expected_completion": "2028-06",
+      "color": "#F97316",
+      "coordinates": [
+        [
+          77.4018,
+          23.2954
+        ],
+        [
+          77.40215,
+          23.29245
+        ],
+        [
+          77.4025,
+          23.2895
+        ],
+        [
+          77.403,
+          23.28685
+        ],
+        [
+          77.4035,
+          23.2842
+        ],
+        [
+          77.4045,
+          23.28135
+        ],
+        [
+          77.4055,
+          23.2785
+        ],
+        [
+          77.407,
+          23.2755
+        ],
+        [
+          77.4085,
+          23.2725
+        ],
+        [
+          77.41055,
+          23.2694
+        ],
+        [
+          77.4126,
+          23.2663
+        ],
+        [
+          77.41455,
+          23.2629
+        ],
+        [
+          77.4165,
+          23.2595
+        ],
+        [
+          77.4192,
+          23.2564
+        ],
+        [
+          77.4219,
+          23.2533
+        ],
+        [
+          77.42463,
+          23.251443
+        ],
+        [
+          77.42736,
+          23.249587
+        ],
+        [
+          77.43009,
+          23.24773
+        ]
+      ],
+      "geometry_quality": "exact",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    {
+      "segment_id": "bho-orange-seg-01",
+      "line_id": "bho-orange",
+      "line_name": "Orange Line (Line 2)",
+      "phase": "1",
+      "status": "operational",
+      "gauge": "standard",
+      "inaugurated_on": "2025-12-21",
+      "expected_completion": null,
+      "color": "#F97316",
+      "coordinates": [
+        [
+          77.43009,
+          23.24773
+        ],
+        [
+          77.43081,
+          23.243935
+        ],
+        [
+          77.43153,
+          23.24014
+        ],
+        [
+          77.43145,
+          23.23648
+        ],
+        [
+          77.43137,
+          23.23282
+        ],
+        [
+          77.4333,
+          23.230225
+        ],
+        [
+          77.43523,
+          23.22763
+        ],
+        [
+          77.43686,
+          23.22431
+        ],
+        [
+          77.43849,
+          23.22099
+        ],
+        [
+          77.44088,
+          23.218575
+        ],
+        [
+          77.44327,
+          23.21616
+        ],
+        [
+          77.447045,
+          23.216385
+        ],
+        [
+          77.45082,
+          23.21661
+        ],
+        [
+          77.453435,
+          23.21333
+        ],
+        [
+          77.45605,
+          23.21005
+        ]
+      ],
+      "geometry_quality": "exact",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    {
+      "segment_id": "bho-blue-seg-01",
+      "line_id": "bho-blue",
+      "line_name": "Blue Line (Line 5)",
+      "phase": "1",
+      "status": "construction",
+      "gauge": "standard",
+      "inaugurated_on": null,
+      "expected_completion": "2028-12",
+      "color": "#3B82F6",
+      "coordinates": [
+        [
+          77.374,
+          23.205
+        ],
+        [
+          77.376833,
+          23.207333
+        ],
+        [
+          77.379667,
+          23.209667
+        ],
+        [
+          77.3825,
+          23.212
+        ],
+        [
+          77.385333,
+          23.214833
+        ],
+        [
+          77.388167,
+          23.217667
+        ],
+        [
+          77.391,
+          23.2205
+        ],
+        [
+          77.394,
+          23.22325
+        ],
+        [
+          77.397,
+          23.226
+        ],
+        [
+          77.39975,
+          23.229
+        ],
+        [
+          77.4025,
+          23.232
+        ],
+        [
+          77.405333,
+          23.235333
+        ],
+        [
+          77.408167,
+          23.238667
+        ],
+        [
+          77.411,
+          23.242
+        ],
+        [
+          77.413725,
+          23.244825
+        ],
+        [
+          77.41645,
+          23.24765
+        ],
+        [
+          77.419175,
+          23.250475
+        ],
+        [
+          77.4219,
+          23.2533
+        ],
+        [
+          77.425267,
+          23.2537
+        ],
+        [
+          77.428633,
+          23.2541
+        ],
+        [
+          77.432,
+          23.2545
+        ],
+        [
+          77.4365,
+          23.254
+        ],
+        [
+          77.441,
+          23.2535
+        ],
+        [
+          77.445,
+          23.253
+        ],
+        [
+          77.449,
+          23.2525
+        ],
+        [
+          77.453,
+          23.25215
+        ],
+        [
+          77.457,
+          23.2518
+        ],
+        [
+          77.46125,
+          23.2515
+        ],
+        [
+          77.4655,
+          23.2512
+        ],
+        [
+          77.47025,
+          23.2509
+        ],
+        [
+          77.475,
+          23.2506
+        ],
+        [
+          77.478333,
+          23.2504
+        ],
+        [
+          77.481667,
+          23.2502
+        ],
+        [
+          77.485,
+          23.25
+        ]
+      ],
+      "geometry_quality": "exact",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    }
+  ],
+  "dedupeRadiusM": 200,
+  "stationAliases": {
+    "Bogda Pul": "Pul Bogda",
+    "AIIMS": "AIIMS Bhopal",
+    "Karond Chauraha": "Karond Circle"
+  },
+  "stationOverrides": {
+    "bho-subhash-nagar": {
+      "name": "Subhash Nagar",
+      "status": "operational",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": "2025-12-21",
+      "expected_completion": null,
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "bhopal-subhash-nagar": {
+      "name": "Subhash Nagar",
+      "status": "operational",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": "2025-12-21",
+      "expected_completion": null,
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "Subhash Nagar": {
+      "name": "Subhash Nagar",
+      "status": "operational",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": "2025-12-21",
+      "expected_completion": null,
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "bho-kendriya-vidyalaya": {
+      "name": "Kendriya Vidyalaya",
+      "status": "operational",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": "2025-12-21",
+      "expected_completion": null,
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "bhopal-kendriya-vidyalaya": {
+      "name": "Kendriya Vidyalaya",
+      "status": "operational",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": "2025-12-21",
+      "expected_completion": null,
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "Kendriya Vidyalaya": {
+      "name": "Kendriya Vidyalaya",
+      "status": "operational",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": "2025-12-21",
+      "expected_completion": null,
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "bho-board-office-chauraha": {
+      "name": "Board Office Chauraha",
+      "status": "operational",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": "2025-12-21",
+      "expected_completion": null,
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "bhopal-board-office-chauraha": {
+      "name": "Board Office Chauraha",
+      "status": "operational",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": "2025-12-21",
+      "expected_completion": null,
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "Board Office Chauraha": {
+      "name": "Board Office Chauraha",
+      "status": "operational",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": "2025-12-21",
+      "expected_completion": null,
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "bho-mp-nagar": {
+      "name": "MP Nagar",
+      "status": "operational",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": "2025-12-21",
+      "expected_completion": null,
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "bhopal-mp-nagar": {
+      "name": "MP Nagar",
+      "status": "operational",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": "2025-12-21",
+      "expected_completion": null,
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "MP Nagar": {
+      "name": "MP Nagar",
+      "status": "operational",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": "2025-12-21",
+      "expected_completion": null,
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "bho-rani-kamalapati-railway-station": {
+      "name": "Rani Kamalapati Railway Station",
+      "status": "operational",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": "2025-12-21",
+      "expected_completion": null,
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "bhopal-rani-kamalapati-railway-station": {
+      "name": "Rani Kamalapati Railway Station",
+      "status": "operational",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": "2025-12-21",
+      "expected_completion": null,
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "Rani Kamalapati Railway Station": {
+      "name": "Rani Kamalapati Railway Station",
+      "status": "operational",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": "2025-12-21",
+      "expected_completion": null,
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "bho-drm-office": {
+      "name": "DRM Office",
+      "status": "operational",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": "2025-12-21",
+      "expected_completion": null,
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "bhopal-drm-office": {
+      "name": "DRM Office",
+      "status": "operational",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": "2025-12-21",
+      "expected_completion": null,
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "DRM Office": {
+      "name": "DRM Office",
+      "status": "operational",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": "2025-12-21",
+      "expected_completion": null,
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "bho-alkapuri": {
+      "name": "Alkapuri",
+      "status": "operational",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": "2025-12-21",
+      "expected_completion": null,
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "bhopal-alkapuri": {
+      "name": "Alkapuri",
+      "status": "operational",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": "2025-12-21",
+      "expected_completion": null,
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "Alkapuri": {
+      "name": "Alkapuri",
+      "status": "operational",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": "2025-12-21",
+      "expected_completion": null,
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "bho-aiims-bhopal": {
+      "name": "AIIMS Bhopal",
+      "status": "operational",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": "2025-12-21",
+      "expected_completion": null,
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "bhopal-aiims-bhopal": {
+      "name": "AIIMS Bhopal",
+      "status": "operational",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": "2025-12-21",
+      "expected_completion": null,
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "AIIMS Bhopal": {
+      "name": "AIIMS Bhopal",
+      "status": "operational",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": "2025-12-21",
+      "expected_completion": null,
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://www.mpmetrorail.com"
+      ]
+    },
+    "bho-karond-circle": {
+      "name": "Karond Circle",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-06",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "bhopal-karond-circle": {
+      "name": "Karond Circle",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-06",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "Karond Circle": {
+      "name": "Karond Circle",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-06",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "bho-krishi-upaj-mandi": {
+      "name": "Krishi Upaj Mandi",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-06",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "bhopal-krishi-upaj-mandi": {
+      "name": "Krishi Upaj Mandi",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-06",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "Krishi Upaj Mandi": {
+      "name": "Krishi Upaj Mandi",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-06",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "bho-dig-bungalow": {
+      "name": "DIG Bungalow",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-06",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "bhopal-dig-bungalow": {
+      "name": "DIG Bungalow",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-06",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "DIG Bungalow": {
+      "name": "DIG Bungalow",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-06",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "bho-sindhi-colony": {
+      "name": "Sindhi Colony",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-06",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "bhopal-sindhi-colony": {
+      "name": "Sindhi Colony",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-06",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "Sindhi Colony": {
+      "name": "Sindhi Colony",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-06",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "bho-nadra-bus-stand": {
+      "name": "Nadra Bus Stand",
+      "status": "construction",
+      "phase": "1",
+      "layout": "underground",
+      "opened_on": null,
+      "expected_completion": "2028-06",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "bhopal-nadra-bus-stand": {
+      "name": "Nadra Bus Stand",
+      "status": "construction",
+      "phase": "1",
+      "layout": "underground",
+      "opened_on": null,
+      "expected_completion": "2028-06",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "Nadra Bus Stand": {
+      "name": "Nadra Bus Stand",
+      "status": "construction",
+      "phase": "1",
+      "layout": "underground",
+      "opened_on": null,
+      "expected_completion": "2028-06",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "bho-bhopal-railway-station": {
+      "name": "Bhopal Railway Station",
+      "status": "construction",
+      "phase": "1",
+      "layout": "underground",
+      "opened_on": null,
+      "expected_completion": "2028-06",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "bhopal-bhopal-railway-station": {
+      "name": "Bhopal Railway Station",
+      "status": "construction",
+      "phase": "1",
+      "layout": "underground",
+      "opened_on": null,
+      "expected_completion": "2028-06",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "Bhopal Railway Station": {
+      "name": "Bhopal Railway Station",
+      "status": "construction",
+      "phase": "1",
+      "layout": "underground",
+      "opened_on": null,
+      "expected_completion": "2028-06",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "bho-aishbagh": {
+      "name": "Aishbagh",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-06",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "bhopal-aishbagh": {
+      "name": "Aishbagh",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-06",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "Aishbagh": {
+      "name": "Aishbagh",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-06",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "bho-pul-bogda": {
+      "name": "Pul Bogda",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-06",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "bhopal-pul-bogda": {
+      "name": "Pul Bogda",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-06",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "Pul Bogda": {
+      "name": "Pul Bogda",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-06",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "bho-bhadbhada-square": {
+      "name": "Bhadbhada Square",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "bhopal-bhadbhada-square": {
+      "name": "Bhadbhada Square",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "Bhadbhada Square": {
+      "name": "Bhadbhada Square",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "bho-depot-square": {
+      "name": "Depot Square",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "bhopal-depot-square": {
+      "name": "Depot Square",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "Depot Square": {
+      "name": "Depot Square",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "bho-jawahar-chowk": {
+      "name": "Jawahar Chowk",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "bhopal-jawahar-chowk": {
+      "name": "Jawahar Chowk",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "Jawahar Chowk": {
+      "name": "Jawahar Chowk",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "bho-roshanpura-square": {
+      "name": "Roshanpura Square",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "bhopal-roshanpura-square": {
+      "name": "Roshanpura Square",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "Roshanpura Square": {
+      "name": "Roshanpura Square",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "bho-kushabhau-thakre-hall": {
+      "name": "Kushabhau Thakre Hall",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "bhopal-kushabhau-thakre-hall": {
+      "name": "Kushabhau Thakre Hall",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "Kushabhau Thakre Hall": {
+      "name": "Kushabhau Thakre Hall",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "bho-parade-ground": {
+      "name": "Parade Ground",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "bhopal-parade-ground": {
+      "name": "Parade Ground",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "Parade Ground": {
+      "name": "Parade Ground",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "bho-prabhat-square": {
+      "name": "Prabhat Square",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "bhopal-prabhat-square": {
+      "name": "Prabhat Square",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "Prabhat Square": {
+      "name": "Prabhat Square",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "bho-govindpura": {
+      "name": "Govindpura",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "bhopal-govindpura": {
+      "name": "Govindpura",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "Govindpura": {
+      "name": "Govindpura",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "bho-govindpura-industrial-area": {
+      "name": "Govindpura Industrial Area",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "bhopal-govindpura-industrial-area": {
+      "name": "Govindpura Industrial Area",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "Govindpura Industrial Area": {
+      "name": "Govindpura Industrial Area",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "bho-jk-road": {
+      "name": "JK Road",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "bhopal-jk-road": {
+      "name": "JK Road",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "JK Road": {
+      "name": "JK Road",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "bho-indrapuri": {
+      "name": "Indrapuri",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "bhopal-indrapuri": {
+      "name": "Indrapuri",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "Indrapuri": {
+      "name": "Indrapuri",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "bho-piplani": {
+      "name": "Piplani",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "bhopal-piplani": {
+      "name": "Piplani",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "Piplani": {
+      "name": "Piplani",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "bho-ratnagiri-tiraha": {
+      "name": "Ratnagiri Tiraha",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "bhopal-ratnagiri-tiraha": {
+      "name": "Ratnagiri Tiraha",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    },
+    "Ratnagiri Tiraha": {
+      "name": "Ratnagiri Tiraha",
+      "status": "construction",
+      "phase": "1",
+      "layout": "elevated",
+      "opened_on": null,
+      "expected_completion": "2028-12",
+      "last_verified": "2026-10-15",
+      "references": [
+        "https://themetrorailguy.com/bhopal-metro-information-route-maps-project-updates/"
+      ]
+    }
+  },
+  "additionalStations": [
+    {
+      "osmId": 9100000000,
+      "name": "Subhash Nagar",
+      "coordinates": [
+        77.43009,
+        23.24773
+      ],
+      "lineRefs": [
+        "bho-orange"
+      ],
+      "status": "operational"
+    },
+    {
+      "osmId": 9100000001,
+      "name": "Kendriya Vidyalaya",
+      "coordinates": [
+        77.43153,
+        23.24014
+      ],
+      "lineRefs": [
+        "bho-orange"
+      ],
+      "status": "operational"
+    },
+    {
+      "osmId": 9100000002,
+      "name": "Board Office Chauraha",
+      "coordinates": [
+        77.43137,
+        23.23282
+      ],
+      "lineRefs": [
+        "bho-orange"
+      ],
+      "status": "operational"
+    },
+    {
+      "osmId": 9100000003,
+      "name": "MP Nagar",
+      "coordinates": [
+        77.43523,
+        23.22763
+      ],
+      "lineRefs": [
+        "bho-orange"
+      ],
+      "status": "operational"
+    },
+    {
+      "osmId": 9100000004,
+      "name": "Rani Kamalapati Railway Station",
+      "coordinates": [
+        77.43849,
+        23.22099
+      ],
+      "lineRefs": [
+        "bho-orange"
+      ],
+      "status": "operational"
+    },
+    {
+      "osmId": 9100000005,
+      "name": "DRM Office",
+      "coordinates": [
+        77.44327,
+        23.21616
+      ],
+      "lineRefs": [
+        "bho-orange"
+      ],
+      "status": "operational"
+    },
+    {
+      "osmId": 9100000006,
+      "name": "Alkapuri",
+      "coordinates": [
+        77.45082,
+        23.21661
+      ],
+      "lineRefs": [
+        "bho-orange"
+      ],
+      "status": "operational"
+    },
+    {
+      "osmId": 9100000007,
+      "name": "AIIMS Bhopal",
+      "coordinates": [
+        77.45605,
+        23.21005
+      ],
+      "lineRefs": [
+        "bho-orange"
+      ],
+      "status": "operational"
+    },
+    {
+      "osmId": 9100000008,
+      "name": "Karond Circle",
+      "coordinates": [
+        77.4018,
+        23.2954
+      ],
+      "lineRefs": [
+        "bho-orange"
+      ],
+      "status": "construction"
+    },
+    {
+      "osmId": 9100000009,
+      "name": "Krishi Upaj Mandi",
+      "coordinates": [
+        77.4025,
+        23.2895
+      ],
+      "lineRefs": [
+        "bho-orange"
+      ],
+      "status": "construction"
+    },
+    {
+      "osmId": 9100000010,
+      "name": "DIG Bungalow",
+      "coordinates": [
+        77.4035,
+        23.2842
+      ],
+      "lineRefs": [
+        "bho-orange"
+      ],
+      "status": "construction"
+    },
+    {
+      "osmId": 9100000011,
+      "name": "Sindhi Colony",
+      "coordinates": [
+        77.4055,
+        23.2785
+      ],
+      "lineRefs": [
+        "bho-orange"
+      ],
+      "status": "construction"
+    },
+    {
+      "osmId": 9100000012,
+      "name": "Nadra Bus Stand",
+      "coordinates": [
+        77.4085,
+        23.2725
+      ],
+      "lineRefs": [
+        "bho-orange"
+      ],
+      "status": "construction"
+    },
+    {
+      "osmId": 9100000013,
+      "name": "Bhopal Railway Station",
+      "coordinates": [
+        77.4126,
+        23.2663
+      ],
+      "lineRefs": [
+        "bho-orange"
+      ],
+      "status": "construction"
+    },
+    {
+      "osmId": 9100000014,
+      "name": "Aishbagh",
+      "coordinates": [
+        77.4165,
+        23.2595
+      ],
+      "lineRefs": [
+        "bho-orange"
+      ],
+      "status": "construction"
+    },
+    {
+      "osmId": 9100000015,
+      "name": "Pul Bogda",
+      "coordinates": [
+        77.4219,
+        23.2533
+      ],
+      "lineRefs": [
+        "bho-orange",
+        "bho-blue"
+      ],
+      "status": "construction"
+    },
+    {
+      "osmId": 9100000016,
+      "name": "Bhadbhada Square",
+      "coordinates": [
+        77.374,
+        23.205
+      ],
+      "lineRefs": [
+        "bho-blue"
+      ],
+      "status": "construction"
+    },
+    {
+      "osmId": 9100000017,
+      "name": "Depot Square",
+      "coordinates": [
+        77.3825,
+        23.212
+      ],
+      "lineRefs": [
+        "bho-blue"
+      ],
+      "status": "construction"
+    },
+    {
+      "osmId": 9100000018,
+      "name": "Jawahar Chowk",
+      "coordinates": [
+        77.391,
+        23.2205
+      ],
+      "lineRefs": [
+        "bho-blue"
+      ],
+      "status": "construction"
+    },
+    {
+      "osmId": 9100000019,
+      "name": "Roshanpura Square",
+      "coordinates": [
+        77.397,
+        23.226
+      ],
+      "lineRefs": [
+        "bho-blue"
+      ],
+      "status": "construction"
+    },
+    {
+      "osmId": 9100000020,
+      "name": "Kushabhau Thakre Hall",
+      "coordinates": [
+        77.4025,
+        23.232
+      ],
+      "lineRefs": [
+        "bho-blue"
+      ],
+      "status": "construction"
+    },
+    {
+      "osmId": 9100000021,
+      "name": "Parade Ground",
+      "coordinates": [
+        77.411,
+        23.242
+      ],
+      "lineRefs": [
+        "bho-blue"
+      ],
+      "status": "construction"
+    },
+    {
+      "osmId": 9100000022,
+      "name": "Prabhat Square",
+      "coordinates": [
+        77.432,
+        23.2545
+      ],
+      "lineRefs": [
+        "bho-blue"
+      ],
+      "status": "construction"
+    },
+    {
+      "osmId": 9100000023,
+      "name": "Govindpura",
+      "coordinates": [
+        77.441,
+        23.2535
+      ],
+      "lineRefs": [
+        "bho-blue"
+      ],
+      "status": "construction"
+    },
+    {
+      "osmId": 9100000024,
+      "name": "Govindpura Industrial Area",
+      "coordinates": [
+        77.449,
+        23.2525
+      ],
+      "lineRefs": [
+        "bho-blue"
+      ],
+      "status": "construction"
+    },
+    {
+      "osmId": 9100000025,
+      "name": "JK Road",
+      "coordinates": [
+        77.457,
+        23.2518
+      ],
+      "lineRefs": [
+        "bho-blue"
+      ],
+      "status": "construction"
+    },
+    {
+      "osmId": 9100000026,
+      "name": "Indrapuri",
+      "coordinates": [
+        77.4655,
+        23.2512
+      ],
+      "lineRefs": [
+        "bho-blue"
+      ],
+      "status": "construction"
+    },
+    {
+      "osmId": 9100000027,
+      "name": "Piplani",
+      "coordinates": [
+        77.475,
+        23.2506
+      ],
+      "lineRefs": [
+        "bho-blue"
+      ],
+      "status": "construction"
+    },
+    {
+      "osmId": 9100000028,
+      "name": "Ratnagiri Tiraha",
+      "coordinates": [
+        77.485,
+        23.25
+      ],
+      "lineRefs": [
+        "bho-blue"
+      ],
+      "status": "construction"
+    }
+  ]
+}

@@ -5,5 +5,17 @@
     "To SPLIT (remove from auto cluster): set interchange_id to null.",
     "If a station is not listed here, auto-derivation applies.",
     "Auto rule: is_interchange=true → interchange_id = station_id of cluster representative."
-  ]
+  ],
+  "del-sikanderpur": {
+    "interchange_id": "int-sikanderpur"
+  },
+  "gur-sikanderpur": {
+    "interchange_id": "int-sikanderpur"
+  },
+  "del-noida-sector-52": {
+    "interchange_id": "int-noida-sec51-52"
+  },
+  "noi-noida-sector-51": {
+    "interchange_id": "int-noida-sec51-52"
+  }
 }

@@ -1,6 +1,6 @@
 {
   "city_id": "bengaluru",
-  "compiled_on": "2026-10-07",
+  "compiled_on": "2026-10-13",
   "lines": [
     {
       "line_id": "blr-purple",
@@ -19,57 +19,78 @@
       "openings": [
         {
           "stage": "Reach 1 (Baiyappanahalli - MG Road)",
-          "phase": "1",
+          "phase": null,
           "opened_on": "2011-10-20",
           "stations_added": 6,
-          "confidence": "unverified"
+          "source": {
+            "kind": "official",
+            "url": "https://english.bmrc.co.in/ProjectOverview"
+          }
         },
         {
           "stage": "Reach 2 (Magadi Road - Mysuru Road)",
-          "phase": "1",
+          "phase": null,
           "opened_on": "2015-11-16",
           "stations_added": 6,
-          "confidence": "unverified"
+          "source": {
+            "kind": "official",
+            "url": "https://english.bmrc.co.in/ProjectOverview"
+          }
         },
         {
           "stage": "UG East-West connection (MG Road - Magadi Road)",
-          "phase": "1",
+          "phase": null,
           "opened_on": "2016-04-30",
           "stations_added": 5,
-          "confidence": "unverified"
+          "source": {
+            "kind": "official",
+            "url": "https://english.bmrc.co.in/ProjectOverview"
+          }
         },
         {
           "stage": "Reach 2A extension (Mysuru Road - Kengeri)",
-          "phase": "2",
+          "phase": null,
           "opened_on": "2021-08-30",
           "stations_added": 6,
-          "confidence": "unverified"
+          "source": {
+            "kind": "official",
+            "url": "https://english.bmrc.co.in/ProjectOverview"
+          }
         },
         {
           "stage": "Whitefield - KR Puram",
-          "phase": "2",
+          "phase": null,
           "opened_on": "2023-03-26",
           "stations_added": 12,
-          "confidence": "unverified"
+          "source": {
+            "kind": "official",
+            "url": "https://english.bmrc.co.in/ProjectOverview"
+          }
         },
         {
           "stage": "Reach 2B extension (Kengeri - Challaghatta)",
-          "phase": "2",
+          "phase": null,
           "opened_on": "2023-10-09",
           "stations_added": 1,
-          "confidence": "unverified"
+          "source": {
+            "kind": "official",
+            "url": "https://english.bmrc.co.in/ProjectOverview"
+          }
         },
         {
           "stage": "Missing link (Baiyappanahalli - KR Puram)",
-          "phase": "2",
+          "phase": null,
           "opened_on": "2023-10-09",
           "stations_added": 1,
-          "confidence": "unverified"
+          "source": {
+            "kind": "official",
+            "url": "https://english.bmrc.co.in/ProjectOverview"
+          }
         }
       ],
       "construction": [],
       "notes": "43.49 km fully operational linear corridor across 37 stations connecting Whitefield (Kadugodi) to Challaghatta.",
-      "confidence": "unverified"
+      "confidence": "sourced"
     },
     {
       "line_id": "blr-green",
@@ -88,45 +109,60 @@
       "openings": [
         {
           "stage": "Reach 3/3A (Sampige Road - Peenya Industry)",
-          "phase": "1",
+          "phase": null,
           "opened_on": "2014-03-01",
           "stations_added": 10,
-          "confidence": "unverified",
-          "notes": "Inaugurated March 1, 2014 across 10 stations (Sampige Road to Peenya Industry)."
+          "notes": "Inaugurated March 1, 2014 across 10 stations (Sampige Road to Peenya Industry).",
+          "source": {
+            "kind": "official",
+            "url": "https://english.bmrc.co.in/ProjectOverview"
+          }
         },
         {
           "stage": "Reach 3B (Peenya Industry - Nagasandra)",
-          "phase": "1",
+          "phase": null,
           "opened_on": "2015-05-01",
           "stations_added": 3,
-          "confidence": "unverified",
-          "notes": "Inaugurated May 1, 2015 across 3 new stations (Jalahalli, Dasarahalli, Nagasandra)."
+          "notes": "Inaugurated May 1, 2015 across 3 new stations (Jalahalli, Dasarahalli, Nagasandra).",
+          "source": {
+            "kind": "official",
+            "url": "https://english.bmrc.co.in/ProjectOverview"
+          }
         },
         {
           "stage": "Reach 4/4A & UG link (Sampige Road - Yelachenahalli)",
-          "phase": "1",
+          "phase": null,
           "opened_on": "2017-06-18",
           "stations_added": 11,
-          "confidence": "unverified"
+          "source": {
+            "kind": "official",
+            "url": "https://english.bmrc.co.in/ProjectOverview"
+          }
         },
         {
           "stage": "Reach 4B extension (Yelachenahalli - Silk Institute)",
-          "phase": "2",
+          "phase": null,
           "opened_on": "2021-01-15",
           "stations_added": 5,
-          "confidence": "unverified"
+          "source": {
+            "kind": "official",
+            "url": "https://english.bmrc.co.in/ProjectOverview"
+          }
         },
         {
           "stage": "Reach 3C extension (Nagasandra - Madavara)",
-          "phase": "2",
+          "phase": null,
           "opened_on": "2024-11-07",
           "stations_added": 3,
-          "confidence": "unverified"
+          "source": {
+            "kind": "official",
+            "url": "https://english.bmrc.co.in/ProjectOverview"
+          }
         }
       ],
       "construction": [],
       "notes": "33.46 km fully operational linear corridor across 32 stations. Reach 3/3A (Sampige Road to Peenya Industry, 10 stations) opened March 1, 2014; Reach 3B (Peenya Industry to Nagasandra, 3 stations) opened May 1, 2015.",
-      "confidence": "unverified"
+      "confidence": "sourced"
     },
     {
       "line_id": "blr-yellow",
@@ -145,22 +181,25 @@
       "openings": [
         {
           "stage": "Reach 5 (RV Road - Bommasandra)",
-          "phase": "2",
+          "phase": null,
           "opened_on": "2025-08-10",
           "stations_added": 16,
-          "confidence": "unverified"
+          "source": {
+            "kind": "official",
+            "url": "https://english.bmrc.co.in/FileUploads/0091bf_Phase2.pdf"
+          }
         }
       ],
       "construction": [],
       "notes": "19.15 km operational linear corridor with 16 stations connecting RV Road to Electronic City and Bommasandra.",
-      "confidence": "unverified"
+      "confidence": "sourced"
     },
     {
       "line_id": "blr-blue",
       "official_name": "Blue Line (Airport Metro)",
       "operator": "BMRCL",
       "topology": "linear",
-      "operational_stations": 0,
+      "operational_stations": null,
       "operational_length_km": 0,
       "planned_length_km": 58.19,
       "terminals": [
@@ -176,25 +215,33 @@
           "phase": "2",
           "expected_completion": null,
           "stations": 13,
-          "notes": "Estimated commercial operation mid-2027 (trials October 2026)."
+          "notes": "Estimated commercial operation mid-2027 (trials October 2026).",
+          "source": {
+            "kind": "official",
+            "url": "https://english.bmrc.co.in/FileUploads/0091bf_Phase2.pdf"
+          }
         },
         {
           "stretch": "Phase 2B (KR Puram - Kempegowda International Airport)",
           "phase": "2",
           "expected_completion": null,
           "stations": 17,
-          "notes": "Estimated completion March 2028."
+          "notes": "Estimated completion March 2028.",
+          "source": {
+            "kind": "official",
+            "url": "https://english.bmrc.co.in/FileUploads/0091bf_Phase2.pdf"
+          }
         }
       ],
       "notes": "Total planned corridor spans 58.19 km with 30 stations. Phase 2A (Silk Board to KR Puram, 19.75 km, 13 stations) and Phase 2B (KR Puram to Airport, 38.44 km, 17 stations).",
-      "confidence": "unverified"
+      "confidence": "sourced"
     },
     {
       "line_id": "blr-pink",
       "official_name": "Pink Line",
       "operator": "BMRCL",
       "topology": "linear",
-      "operational_stations": 0,
+      "operational_stations": null,
       "operational_length_km": 0,
       "planned_length_km": 21.25,
       "terminals": [
@@ -210,18 +257,26 @@
           "phase": "2",
           "expected_completion": null,
           "stations": 6,
-          "notes": "CMRS statutory inspection scheduled October 6-8, 2026; opening targeted late 2026."
+          "notes": "CMRS statutory inspection scheduled October 6-8, 2026; opening targeted late 2026.",
+          "source": {
+            "kind": "official",
+            "url": "https://english.bmrc.co.in/FileUploads/0091bf_Phase2.pdf"
+          }
         },
         {
           "stretch": "Reach 6 Underground (Dairy Circle - Nagawara)",
           "phase": "2",
           "expected_completion": null,
           "stations": 12,
-          "notes": "Targeted completion March 2027."
+          "notes": "Targeted completion March 2027.",
+          "source": {
+            "kind": "official",
+            "url": "https://english.bmrc.co.in/FileUploads/0091bf_Phase2.pdf"
+          }
         }
       ],
       "notes": "21.25 km line with 18 stations (6 elevated, 12 underground) connecting Kalena Agrahara to Nagawara.",
-      "confidence": "unverified"
+      "confidence": "sourced"
     }
   ]
 }

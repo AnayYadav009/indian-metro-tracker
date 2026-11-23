@@ -33,11 +33,13 @@ export function calculateLineStringLengthKm(
 ): number {
   if (coordinates.length < 2) return 0;
 
-  let totalKm = 0;
-  for (let i = 0; i < coordinates.length - 1; i++) {
-    totalKm += haversineDistanceKm(coordinates[i], coordinates[i + 1]);
-  }
-  return totalKm;
+  return coordinates
+    .slice(1)
+    .reduce(
+      (total, coord, index) =>
+        total + haversineDistanceKm(coordinates[index], coord),
+      0
+    );
 }
 
 /**
@@ -185,28 +187,15 @@ export function nearestPointOnPolyline(
     };
   }
 
-  let minDistance = Infinity;
-  let bestResult = {
-    point: coordinates[0],
-    distanceM: Infinity,
-    segmentIndex: 0,
-    t: 0,
-  };
-
-  for (let i = 0; i < coordinates.length - 1; i++) {
-    const res = nearestPointOnSegment(point, coordinates[i], coordinates[i + 1]);
-    if (res.distanceM < minDistance) {
-      minDistance = res.distanceM;
-      bestResult = {
-        point: res.point,
-        distanceM: res.distanceM,
-        segmentIndex: i,
-        t: res.t,
-      };
-    }
-  }
-
-  return bestResult;
+  return coordinates.slice(1).reduce(
+    (nearest, coord, index) => {
+      const result = nearestPointOnSegment(point, coordinates[index], coord);
+      return result.distanceM < nearest.distanceM
+        ? { ...result, segmentIndex: index }
+        : nearest;
+    },
+    { point: coordinates[0], distanceM: Infinity, segmentIndex: 0, t: 0 }
+  );
 }
 
 /**
@@ -228,21 +217,14 @@ export function lineSlice(
   const indexB = projB.segmentIndex + projB.t;
 
   const isForward = indexA <= indexB;
-  const startProj = isForward ? projA : projB;
-  const endProj = isForward ? projB : projA;
+  const [startProj, endProj] = isForward ? [projA, projB] : [projB, projA];
 
   const slice: [number, number][] = [startProj.point];
 
-  if (startProj.segmentIndex === endProj.segmentIndex) {
-    // Both points project onto the same segment
-    slice.push(endProj.point);
-  } else {
-    // Add all intermediate vertices
-    for (let i = startProj.segmentIndex + 1; i <= endProj.segmentIndex; i++) {
-      slice.push(line[i]);
-    }
-    slice.push(endProj.point);
-  }
+  slice.push(
+    ...line.slice(startProj.segmentIndex + 1, endProj.segmentIndex + 1),
+    endProj.point
+  );
 
   // If originally requested from B to A, reverse so output starts at projA and ends at projB
   if (!isForward) {

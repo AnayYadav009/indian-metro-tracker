@@ -1,4 +1,5 @@
 import { calculateLineStringLengthKm } from "../../lib/geo";
+import { cleanStationName } from "../lib/station-name";
 
 export interface NormalizedStation {
   osmId: number;
@@ -28,6 +29,7 @@ export interface NormalizedCityData {
   cityName: string;
   segments: NormalizedSegment[];
   stations: NormalizedStation[];
+  filteredInactiveWays?: Array<{ relationId: number; wayId: number }>;
 }
 
 export function slugify(str: string): string {
@@ -50,6 +52,8 @@ export function isStationNode(e: { type: string; tags?: Record<string, string> }
     tags.subway === "yes" ||
     tags.station === "light_rail" ||
     tags.light_rail === "yes" ||
+    tags["construction:railway"] === "station" ||
+    tags["construction:station"] === "subway" ||
     (tags.railway === "construction" && (tags.construction === "station" || tags.subway === "yes"))
   );
 }
@@ -57,7 +61,16 @@ export function isStationNode(e: { type: string; tags?: Record<string, string> }
 /**
  * Normalizes raw Overpass response elements into structured transit segments and stations.
  */
-export function normalizeOverpassCity(cityId: string, rawData: any): NormalizedCityData {
+export interface RouteWayOrder {
+  id: number;
+  reversed?: boolean;
+}
+
+export function normalizeOverpassCity(
+  cityId: string,
+  rawData: any,
+  routeWayOrders: Record<number, RouteWayOrder[]> = {}
+): NormalizedCityData {
   const elements: any[] = rawData.elements || [];
 
   // 1. Extract stations (subway, light rail, and under-construction stations)
@@ -66,12 +79,7 @@ export function normalizeOverpassCity(cityId: string, rawData: any): NormalizedC
   const stationsMap = new Map<number, NormalizedStation>();
   for (const node of stationNodes) {
     const rawName = node.tags["name:en"] || node.tags.name || `Station ${node.id}`;
-    // Clean name (e.g., strip line qualifiers "(Blue Line)", " Metro Station", etc.)
-    const cleanName = rawName
-      .replace(/\s*\([^)]*(line|corridor|branch)[^)]*\)/gi, "")
-      .replace(/\s+metro\s+station/i, "")
-      .replace(/\s+station/i, "")
-      .trim();
+    const cleanName = cleanStationName(rawName);
 
     let stationStatus: "operational" | "construction" | "planned" = "operational";
     if (node.tags.railway === "construction" || node.tags.construction === "station") {
@@ -106,6 +114,7 @@ export function normalizeOverpassCity(cityId: string, rawData: any): NormalizedC
   );
 
   const segments: NormalizedSegment[] = [];
+  const filteredInactiveWays: Array<{ relationId: number; wayId: number }> = [];
 
   for (const rel of routeRelations) {
     const relName = rel.tags.name || `Relation ${rel.id}`;
@@ -119,7 +128,22 @@ export function normalizeOverpassCity(cityId: string, rawData: any): NormalizedC
     const stationOsmIds: number[] = [];
 
     if (rel.members && Array.isArray(rel.members)) {
-      for (const m of rel.members) {
+      for (const member of rel.members) {
+        if (member.type === "way" && member.role === "inactive") {
+          filteredInactiveWays.push({ relationId: rel.id, wayId: member.ref });
+        }
+      }
+      const orderedWays = routeWayOrders[rel.id];
+      const members = orderedWays
+        ? [
+            ...rel.members.filter((member: any) => member.type === "node"),
+            ...orderedWays.map((way) => {
+              const member = rel.members.find((candidate: any) => candidate.type === "way" && candidate.ref === way.id);
+              return member ? { ...member, reverseGeometry: way.reversed } : undefined;
+            }).filter(Boolean),
+          ]
+        : rel.members;
+      for (const m of members) {
         if (m.type === "node" && stationsMap.has(m.ref)) {
           stationOsmIds.push(m.ref);
           if (m.role === "stop" || m.role === "platform" || m.role === "station" || !m.role) {
@@ -128,11 +152,18 @@ export function normalizeOverpassCity(cityId: string, rawData: any): NormalizedC
               st.lineRefs.push(rel.id.toString());
             }
           }
-        } else if (m.type === "way" && m.geometry && Array.isArray(m.geometry) && m.geometry.length > 0) {
+        } else if (
+          m.type === "way" &&
+          m.geometry &&
+          Array.isArray(m.geometry) &&
+          m.geometry.length > 0 &&
+          (!m.role || m.role === "" || m.role === "route")
+        ) {
           const wayCoords: [number, number][] = m.geometry.map((pt: any) => [
             Number(Number(pt.lon).toFixed(6)),
             Number(Number(pt.lat).toFixed(6)),
           ]);
+          if (m.reverseGeometry) wayCoords.reverse();
 
           if (coords.length === 0) {
             coords.push(...wayCoords);
@@ -240,5 +271,6 @@ export function normalizeOverpassCity(cityId: string, rawData: any): NormalizedC
     cityName: cityId.charAt(0).toUpperCase() + cityId.slice(1),
     segments,
     stations: Array.from(stationsMap.values()),
+    filteredInactiveWays,
   };
 }

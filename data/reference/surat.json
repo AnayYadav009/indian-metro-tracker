@@ -1,0 +1,70 @@
+{
+  "city_id": "surat",
+  "compiled_on": "2026-10-15",
+  "lines": [
+    {
+      "line_id": "sur-red",
+      "official_name": "Red Line (Corridor 1 / Diamond Corridor)",
+      "operator": "GMRC",
+      "topology": "linear",
+      "operational_stations": 0,
+      "operational_length_km": 0,
+      "planned_length_km": 21.61,
+      "terminals": [
+        "Sarthana",
+        "Dream City"
+      ],
+      "status": "construction",
+      "disjoint_stretches": false,
+      "openings": [],
+      "construction": [
+        {
+          "stretch": "Sarthana to Dream City via Majura Gate and Surat Railway Station",
+          "phase": "1",
+          "expected_completion": "2027-12",
+          "stations": 21,
+          "notes": "15.14 km elevated and 6.47 km underground. Key stations include Sarthana, Nature Park, Varachha, Kapodra, Surat Railway Station, Chowk Bazar, Majura Gate (interchange), VIP Road, Dream City.",
+          "source": {
+            "title": "Surat Metro Phase 1 Corridor 1 Project Profile",
+            "url": "https://www.gujaratmetrorail.com",
+            "retrieved_at": "2026-10-15",
+            "kind": "official"
+          }
+        }
+      ],
+      "notes": "Corridor 1 (Diamond Corridor) spans 21.61 km with 21 stations connecting Sarthana to Dream City. Under active construction across civil packages CS-01 through CS-06."
+    },
+    {
+      "line_id": "sur-green",
+      "official_name": "Green Line (Corridor 2 / Textile Corridor)",
+      "operator": "GMRC",
+      "topology": "linear",
+      "operational_stations": 0,
+      "operational_length_km": 0,
+      "planned_length_km": 18.74,
+      "terminals": [
+        "Bhesan",
+        "Saroli"
+      ],
+      "status": "construction",
+      "disjoint_stretches": false,
+      "openings": [],
+      "construction": [
+        {
+          "stretch": "Bhesan to Saroli via Majura Gate and Athwa Chopati",
+          "phase": "1",
+          "expected_completion": "2027-12",
+          "stations": 18,
+          "notes": "18.74 km fully elevated corridor with 18 stations. Key stations include Bhesan, Botanical Garden, Palanpur Road, Adajan Gam, Athwa Chopati, Majura Gate (interchange), Udhna Darwaja, Saroli.",
+          "source": {
+            "title": "Surat Metro Phase 1 Corridor 2 Project Profile",
+            "url": "https://www.gujaratmetrorail.com",
+            "retrieved_at": "2026-10-15",
+            "kind": "official"
+          }
+        }
+      ],
+      "notes": "Corridor 2 (Textile Corridor) spans 18.74 km entirely elevated with 18 stations connecting Bhesan to Saroli, intersecting Corridor 1 at Majura Gate."
+    }
+  ]
+}

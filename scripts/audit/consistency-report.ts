@@ -14,7 +14,7 @@ import {
   formatMarkdownReport,
   formatJsonReport,
 } from "./audit-engine";
-import type { BaselineFile } from "./audit-engine";
+import type { AuditDeclarations, BaselineFile, CoverageGap } from "./audit-engine";
 import { loadMetroDatasetFromDisk } from "../lib/load-dataset";
 
 function main() {
@@ -28,6 +28,31 @@ function main() {
   const intentionalBreaks: string[] = [];
   const outOfScopeStations: Record<string, string[]> = {};
   const outOfScopeLineIds: string[] = [];
+  const declarations: AuditDeclarations = { segments: [], lines: [] };
+  const coverageGapsPath = path.join(dataDir, "audit", "coverage-gaps.json");
+  let coverageGaps: CoverageGap[] = [];
+  if (fs.existsSync(coverageGapsPath)) {
+    try {
+      const parsed: unknown = JSON.parse(fs.readFileSync(coverageGapsPath, "utf-8"));
+      if (Array.isArray(parsed)) {
+        coverageGaps = parsed.filter(
+          (gap): gap is CoverageGap =>
+            typeof gap?.city_id === "string" &&
+            typeof gap?.line_id === "string" &&
+            typeof gap?.stretch === "string" &&
+            (gap?.segment_id === undefined || typeof gap.segment_id === "string") &&
+            ["planned", "under_construction"].includes(gap?.status) &&
+            typeof gap?.source_url === "string" &&
+            /^https?:\/\//.test(gap.source_url) &&
+            typeof gap?.reason === "string" &&
+            typeof gap?.review_date === "string" &&
+            /^\d{4}-\d{2}-\d{2}$/.test(gap.review_date)
+        );
+      }
+    } catch {
+      console.error(`⚠️ Could not parse ${coverageGapsPath}; no gaps will be reclassified.`);
+    }
+  }
 
   // Look for exemptions in each city's override file
   const overridesDir = path.join(dataDir, "overrides");
@@ -39,6 +64,16 @@ function main() {
           fs.readFileSync(path.join(overridesDir, file), "utf-8")
         );
         const cityId = override.city?.id || file.replace(".json", "");
+        for (const segment of override.segments || []) {
+          if (segment.segment_id && segment.line_id) {
+            declarations.segments.push({
+              city_id: cityId,
+              line_id: segment.line_id,
+              segment_id: segment.segment_id,
+              status: segment.status,
+            });
+          }
+        }
         if (override.selfIntersectionExemptions) {
           selfIntersectionExemptions.push(...override.selfIntersectionExemptions);
         }
@@ -57,6 +92,23 @@ function main() {
     }
   }
 
+  const referenceDir = path.join(dataDir, "reference");
+  if (fs.existsSync(referenceDir)) {
+    for (const file of fs.readdirSync(referenceDir)) {
+      if (!file.endsWith(".json")) continue;
+      try {
+        const reference = JSON.parse(fs.readFileSync(path.join(referenceDir, file), "utf-8"));
+        for (const line of reference.lines || []) {
+          if (reference.city_id && line.line_id) {
+            declarations.lines.push({ city_id: reference.city_id, line_id: line.line_id });
+          }
+        }
+      } catch {
+        // Ignore malformed reference files here; reference schema checks report them separately.
+      }
+    }
+  }
+
   console.log("🔍 Running data audit...\n");
 
   const today = new Date().toISOString().slice(0, 10);
@@ -69,6 +121,8 @@ function main() {
       referenceDir: path.join(dataDir, "reference"),
       outOfScopeStations,
       outOfScopeLineIds,
+      declarations,
+      coverageGaps,
     }
   );
 
@@ -119,14 +173,48 @@ function main() {
   console.log(`🔵 Info: ${totalInfo}`);
 
   // Apply baseline and determine exit code
-  const { unbaselined } = applyBaseline(result.findings, baseline);
+  const {
+    unbaselined,
+    accepted,
+    unreviewed,
+    knownDefects,
+    pending,
+    staleAccepted,
+    staleUnreviewed,
+    staleKnownDefects,
+  } = applyBaseline(result.findings, baseline);
+
   const unbaselinedErrors = unbaselined.filter((f) => f.severity === "error").length;
   const unbaselinedWarns = unbaselined.filter((f) => f.severity === "warn").length;
   const warningsReportOnly = process.env.AUDIT_WARNINGS === "report-only";
 
+  console.log(`✅ Accepted warnings (reviewed): ${accepted.length}`);
+  console.log(`📋 Unreviewed warnings (awaiting city review): ${unreviewed.length}`);
+  console.log(`🚨 Known walkthrough defects tracked: ${knownDefects.length}`);
+  console.log(`⏳ Pending rules (report-only): ${pending.length}`);
+  console.log(`🗺️ Coverage gaps: ${result.findings.filter((f) => f.rule === "coverage-gap").length}`);
+
+  const totalStale = staleAccepted.length + staleUnreviewed.length + staleKnownDefects.length;
+  if (totalStale > 0) {
+    console.log("");
+    console.log(`⚠️ Warning: Found ${totalStale} stale baseline entry/entries that match no active finding:`);
+    for (const s of staleAccepted) {
+      console.log(`   • [stale accepted] ${s.city_id} | ${s.rule} | ${s.subject}`);
+    }
+    for (const s of staleUnreviewed) {
+      console.log(`   • [stale unreviewed] ${s.city_id} | ${s.rule} | ${s.subject}`);
+    }
+    for (const s of staleKnownDefects) {
+      console.log(`   • [stale defect ${s.finding_id}] ${s.city_id} | ${s.rule} | ${s.subject}`);
+    }
+  }
+
   if (unbaselinedErrors > 0 || (unbaselinedWarns > 0 && !warningsReportOnly)) {
     console.log("");
-    console.log(`❌ ${unbaselinedErrors} errors and ${unbaselinedWarns} un-baselined warnings remain.`);
+    console.log(`❌ ${unbaselinedErrors} errors and ${unbaselinedWarns} un-baselined warnings remain:`);
+    for (const u of unbaselined) {
+      console.log(`   • [${u.severity}] ${u.city_id} | ${u.rule} | ${u.subject} | ${u.message}`);
+    }
     process.exit(1);
   } else if (warningsReportOnly && unbaselinedWarns > 0) {
     console.log("");
@@ -136,7 +224,7 @@ function main() {
     process.exit(0);
   } else {
     console.log("");
-    console.log("✅ All checks pass (no errors, all warnings baselined).");
+    console.log("✅ All checks pass (no errors, all warnings baselined or tracked).");
     process.exit(0);
   }
 }

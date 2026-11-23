@@ -28,25 +28,29 @@ export function computeCumulativeOperationalKm(
   minYear: number = MIN_DATASET_YEAR,
   maxYear: number = MAX_DATASET_YEAR
 ): YearKmPoint[] {
-  const points: YearKmPoint[] = [];
+  const datedSegments = segments
+    .filter((segment) => segment.status === "operational")
+    .map(({ length_km, inaugurated_on }) => ({
+      lengthKm: length_km,
+      openedYear: extractYear(inaugurated_on),
+    }))
+    .filter(
+      (segment): segment is { lengthKm: number; openedYear: number } =>
+        segment.openedYear !== null
+    );
 
-  for (let yr = minYear; yr <= maxYear; yr++) {
-    let km = 0;
-    for (const seg of segments) {
-      if (seg.status === "operational") {
-        const openedYear = extractYear(seg.inaugurated_on);
-        if (openedYear !== null && openedYear <= yr) {
-          km += seg.length_km;
-        }
-      }
+  return Array.from(
+    { length: Math.max(0, maxYear - minYear + 1) },
+    (_, index) => {
+      const year = minYear + index;
+      const km = datedSegments.reduce(
+        (total, segment) =>
+          total + (segment.openedYear <= year ? segment.lengthKm : 0),
+        0
+      );
+      return { year, operationalKm: Math.round(km * 10) / 10 };
     }
-    points.push({
-      year: yr,
-      operationalKm: Math.round(km * 10) / 10,
-    });
-  }
-
-  return points;
+  );
 }
 
 export interface UndatedCounts {
@@ -61,22 +65,12 @@ export function countUndatedOperationalRecords(
   segments: SegmentProperties[],
   stations: StationProperties[]
 ): UndatedCounts {
-  let segs = 0;
-  for (const seg of segments) {
-    if (seg.status === "operational" && !seg.inaugurated_on) {
-      segs++;
-    }
-  }
-
-  let stns = 0;
-  for (const stn of stations) {
-    if (stn.status === "operational" && !stn.opened_on) {
-      stns++;
-    }
-  }
-
   return {
-    undatedOperationalSegments: segs,
-    undatedOperationalStations: stns,
+    undatedOperationalSegments: segments.filter(
+      (segment) => segment.status === "operational" && !segment.inaugurated_on
+    ).length,
+    undatedOperationalStations: stations.filter(
+      (station) => station.status === "operational" && !station.opened_on
+    ).length,
   };
 }

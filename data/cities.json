@@ -118,23 +118,6 @@
     ]
   },
   {
-    "id": "delhi",
-    "name": "Delhi",
-    "bbox": [
-      76.84,
-      28.4,
-      77.35,
-      28.88
-    ],
-    "operator": "DMRC",
-    "phases": [
-      "I",
-      "II",
-      "III",
-      "IV"
-    ]
-  },
-  {
     "id": "hyderabad",
     "name": "Hyderabad",
     "bbox": [
@@ -181,5 +164,173 @@
       "2"
     ],
     "network_id": "noida-metro"
+  },
+  {
+    "id": "delhi",
+    "name": "Delhi",
+    "bbox": [
+      76.84,
+      28.25,
+      77.45,
+      28.92
+    ],
+    "operator": "DMRC",
+    "phases": [
+      "I",
+      "II",
+      "III",
+      "IV"
+    ]
+  },
+  {
+    "id": "indore",
+    "name": "Indore",
+    "bbox": [
+      75.75,
+      22.65,
+      75.95,
+      22.82
+    ],
+    "operator": "MPMRCL",
+    "phases": [
+      "1"
+    ],
+    "network_id": "indore-metro"
+  },
+  {
+    "id": "bhopal",
+    "name": "Bhopal",
+    "bbox": [
+      77.3,
+      23.18,
+      77.55,
+      23.35
+    ],
+    "operator": "MPMRCL",
+    "phases": [
+      "1"
+    ],
+    "network_id": "bhopal-metro"
+  },
+  {
+    "id": "nagpur",
+    "name": "Nagpur",
+    "bbox": [
+      78.98,
+      21.03,
+      79.17,
+      21.2
+    ],
+    "operator": "Maha Metro",
+    "phases": [
+      "1",
+      "2"
+    ],
+    "network_id": "nagpur-metro"
+  },
+  {
+    "id": "surat",
+    "name": "Surat",
+    "bbox": [
+      72.74,
+      21.09,
+      72.93,
+      21.26
+    ],
+    "operator": "GMRC",
+    "phases": [
+      "1"
+    ],
+    "network_id": "surat-metro"
+  },
+  {
+    "id": "kochi",
+    "name": "Kochi",
+    "bbox": [
+      76.25,
+      9.92,
+      76.38,
+      10.14
+    ],
+    "operator": "KMRL",
+    "phases": [
+      "1"
+    ],
+    "network_id": "kochi-metro"
+  },
+  {
+    "id": "lucknow",
+    "name": "Lucknow",
+    "bbox": [
+      80.84,
+      26.74,
+      81.04,
+      26.92
+    ],
+    "operator": "UPMRC",
+    "phases": [
+      "1"
+    ],
+    "network_id": "lucknow-metro"
+  },
+  {
+    "id": "kanpur",
+    "name": "Kanpur",
+    "bbox": [
+      80.2,
+      26.42,
+      80.4,
+      26.54
+    ],
+    "operator": "UPMRC",
+    "phases": [
+      "1"
+    ],
+    "network_id": "kanpur-metro"
+  },
+  {
+    "id": "agra",
+    "name": "Agra",
+    "bbox": [
+      77.95,
+      27.12,
+      78.1,
+      27.22
+    ],
+    "operator": "UPMRC",
+    "phases": [
+      "1"
+    ],
+    "network_id": "agra-metro"
+  },
+  {
+    "id": "jaipur",
+    "name": "Jaipur",
+    "bbox": [
+      75.7,
+      26.85,
+      75.86,
+      26.95
+    ],
+    "operator": "JMRC",
+    "phases": [
+      "1"
+    ],
+    "network_id": "jaipur-metro"
+  },
+  {
+    "id": "patna",
+    "name": "Patna",
+    "bbox": [
+      85.05,
+      25.55,
+      85.25,
+      25.68
+    ],
+    "operator": "PMRC",
+    "phases": [
+      "1"
+    ],
+    "network_id": "patna-metro"
   }
 ]

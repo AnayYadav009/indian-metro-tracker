@@ -136,14 +136,14 @@ if (require.main === module) {
 
   const targetCities: { id: string; bbox: [number, number, number, number] }[] = [];
   if (cityArg) {
-    const foundInCities = cities.find((c: any) => c.id.toLowerCase() === cityArg.toLowerCase());
-    if (foundInCities) {
-      targetCities.push(foundInCities);
+    const overridePath = path.resolve(process.cwd(), "data", "overrides", `${cityArg.toLowerCase()}.json`);
+    if (fs.existsSync(overridePath)) {
+      const overrideData = JSON.parse(fs.readFileSync(overridePath, "utf-8"));
+      targetCities.push({ id: overrideData.city.id, bbox: overrideData.city.bbox });
     } else {
-      const overridePath = path.resolve(process.cwd(), "data", "overrides", `${cityArg.toLowerCase()}.json`);
-      if (fs.existsSync(overridePath)) {
-        const overrideData = JSON.parse(fs.readFileSync(overridePath, "utf-8"));
-        targetCities.push({ id: overrideData.city.id, bbox: overrideData.city.bbox });
+      const foundInCities = cities.find((c: any) => c.id.toLowerCase() === cityArg.toLowerCase());
+      if (foundInCities) {
+        targetCities.push(foundInCities);
       } else {
         console.error(`City ${cityArg} not found in cities.json or overrides directory.`);
       }

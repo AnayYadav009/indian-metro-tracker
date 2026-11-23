@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useMemo } from "react";
+import React from "react";
 import { AlertCircle, ExternalLink } from "lucide-react";
 import { buildDataCorrectionIssueUrl, type IssueTarget } from "@/lib/issue-url";
 
@@ -10,9 +10,7 @@ interface ReportIssueButtonProps {
 }
 
 export function ReportIssueButton({ target, className = "" }: ReportIssueButtonProps) {
-  const issueUrl = useMemo(() => {
-    return buildDataCorrectionIssueUrl(target);
-  }, [target]);
+  const issueUrl = buildDataCorrectionIssueUrl(target);
 
   return (
     <a

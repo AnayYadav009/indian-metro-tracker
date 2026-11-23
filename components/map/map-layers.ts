@@ -2,6 +2,7 @@ import type { LayerProps } from "react-map-gl/maplibre";
 import type { Status } from "@/types/schema";
 import { STATION_STYLE, stationStrokeExpression } from "@/lib/station-style";
 import { buildVisibilityExpression } from "@/lib/filter-utils";
+import { MIN_LINE_WIDTH_LOW_ZOOM, NATIONAL_ZOOM_THRESHOLD } from "@/lib/map-config";
 
 /**
  * Layer IDs that receive pointer events (click, hover).
@@ -11,29 +12,26 @@ export const INTERACTIVE_LAYER_IDS = [
   "station-points",
   "operational-lines",
   "construction-lines",
+  "schematic-lines",
   "planned-lines",
 ];
 
 /**
  * Standard data-driven zoom-based line width interpolation across all statuses.
+ * Ensures lines remain distinctly visible (>= MIN_LINE_WIDTH_LOW_ZOOM) even at national zoom.
  */
 export const LINE_WIDTH_ZOOM_EXPRESSION: unknown[] = [
   "interpolate",
   ["linear"],
   ["zoom"],
-  6,
-  2.5,
+  3.5,
+  MIN_LINE_WIDTH_LOW_ZOOM,
+  NATIONAL_ZOOM_THRESHOLD,
+  MIN_LINE_WIDTH_LOW_ZOOM,
   10,
-  4,
+  4.5,
   14,
   6,
-];
-
-const FUTURE_LINE_WIDTH_EXPRESSION: unknown[] = [
-  "case",
-  ["==", ["get", "geometry_quality"], "schematic"],
-  2,
-  4,
 ];
 
 /**
@@ -64,14 +62,35 @@ export const constructionLineLayer: LayerProps = {
   id: "construction-lines",
   type: "line",
   source: "metro-segments",
-  filter: ["==", ["get", "status"], "construction"],
+  filter: [
+    "all",
+    ["==", ["get", "status"], "construction"],
+    ["!=", ["get", "geometry_quality"], "schematic"],
+  ],
   layout: {
     "line-cap": "butt",
     "line-join": "round",
   },
   paint: {
     "line-color": ["get", "color"],
-    "line-width": FUTURE_LINE_WIDTH_EXPRESSION as any,
+    "line-width": LINE_WIDTH_ZOOM_EXPRESSION as any,
+    "line-dasharray": [4, 2],
+    "line-opacity": 0.9,
+  },
+};
+
+export const schematicLineLayer: LayerProps = {
+  id: "schematic-lines",
+  type: "line",
+  source: "metro-segments",
+  filter: ["==", ["get", "geometry_quality"], "schematic"],
+  layout: {
+    "line-cap": "butt",
+    "line-join": "round",
+  },
+  paint: {
+    "line-color": ["get", "color"],
+    "line-width": LINE_WIDTH_ZOOM_EXPRESSION as any,
     "line-dasharray": [4, 2],
     "line-opacity": 0.9,
   },
@@ -85,7 +104,11 @@ export const plannedLineLayer: LayerProps = {
   id: "planned-lines",
   type: "line",
   source: "metro-segments",
-  filter: ["==", ["get", "status"], "planned"],
+  filter: [
+    "all",
+    ["==", ["get", "status"], "planned"],
+    ["!=", ["get", "geometry_quality"], "schematic"],
+  ],
   layout: {
     "line-cap": "round",
     "line-join": "round",
@@ -106,7 +129,11 @@ export const getSelectedSegmentLayer = (selectedId: string | null): LayerProps =
   id: "selected-segment-glow",
   type: "line",
   source: "metro-segments",
-  filter: ["==", ["get", "segment_id"], selectedId || "__NONE__"],
+  filter: [
+    "all",
+    ["==", ["get", "segment_id"], selectedId || "__NONE__"],
+    ["!=", ["get", "geometry_quality"], "schematic"],
+  ],
   layout: {
     "line-cap": "round",
     "line-join": "round",
@@ -124,6 +151,29 @@ export const getSelectedSegmentLayer = (selectedId: string | null): LayerProps =
       14,
       12,
     ],
+    "line-opacity": 0.8,
+  },
+});
+
+export const getSelectedSchematicSegmentLayer = (
+  selectedId: string | null
+): LayerProps => ({
+  id: "selected-schematic-segment-glow",
+  type: "line",
+  source: "metro-segments",
+  filter: [
+    "all",
+    ["==", ["get", "segment_id"], selectedId || "__NONE__"],
+    ["==", ["get", "geometry_quality"], "schematic"],
+  ],
+  layout: {
+    "line-cap": "butt",
+    "line-join": "round",
+  },
+  paint: {
+    "line-color": "#38bdf8",
+    "line-width": ["interpolate", ["linear"], ["zoom"], 6, 5.5, 10, 8, 14, 12],
+    "line-dasharray": [4, 2],
     "line-opacity": 0.8,
   },
 });

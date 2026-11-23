@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { isStationNode } from "../pipeline/normalize";
 import { haversineDistanceM } from "../../lib/geo";
+import { cleanStationName } from "../lib/station-name";
 
 interface RawNode {
   type: string;
@@ -9,10 +10,6 @@ interface RawNode {
   lat: number;
   lon: number;
   tags?: Record<string, string>;
-}
-
-function pointDistanceM(p1: [number, number], p2: [number, number]): number {
-  return haversineDistanceM(p1, p2);
 }
 
 export function generateDedupeReport(cityId: string) {
@@ -70,11 +67,7 @@ export function generateDedupeReport(cityId: string) {
   for (const node of stationNodes) {
     const rawName = node.tags!.name || node.tags!["name:en"] || `Station ${node.id}`;
     // Strip line qualifiers and suffixes
-    const cleanName = rawName
-      .replace(/\s*\([^)]*(line|corridor|branch)[^)]*\)/gi, "")
-      .replace(/\s+metro\s+station/i, "")
-      .replace(/\s+station/i, "")
-      .trim();
+    const cleanName = cleanStationName(rawName);
 
     const resolvedName = aliasMap.get(cleanName.toLowerCase()) || cleanName;
 
@@ -91,7 +84,7 @@ export function generateDedupeReport(cityId: string) {
     let matchedDistM = Infinity;
 
     for (const r of retainedNodes) {
-      const distM = pointDistanceM(coords, r.coords);
+      const distM = haversineDistanceM(coords, r.coords);
       if (distM > dedupeRadiusM) continue;
 
       const sameName =

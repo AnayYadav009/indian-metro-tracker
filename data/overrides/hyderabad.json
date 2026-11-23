@@ -56,6 +56,7 @@
       "expected_completion": null,
       "completion_unconfirmed": true,
       "color": "#008D42",
+      "stations_not_published": true,
       "references": [
         "https://hmrl.co.in",
         "https://www.openstreetmap.org/way/770841024"

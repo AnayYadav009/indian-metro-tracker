@@ -1,5 +1,9 @@
 import { create } from "zustand";
-import type { Status, SegmentProperties, StationProperties } from "@/types/schema";
+import type {
+  Status,
+  SegmentProperties,
+  StationProperties,
+} from "@/types/schema";
 
 export type SelectedFeature =
   | { type: "segment"; data: SegmentProperties }
@@ -69,48 +73,37 @@ export const useMetroStore = create<MetroStoreState>((set) => ({
   includeFuture: true,
 
   setSelectedCity: (cityId) =>
-    set((state) => {
-      // Clear selected feature if switching cities and feature belongs to a different city
-      const shouldClearFeature =
-        cityId !== null &&
-        state.selectedFeature !== null &&
-        state.selectedFeature.data.city_id !== cityId;
-
-      return {
-        selectedCityId: cityId,
-        // Reset selected phases when changing city because phases are city-specific
-        selectedPhases: [],
-        ...(shouldClearFeature ? { selectedFeature: null } : {}),
-      };
-    }),
+    set((state) => ({
+      selectedCityId: cityId,
+      selectedPhases: [],
+      ...(cityId !== null &&
+      state.selectedFeature &&
+      state.selectedFeature.data.city_id !== cityId
+        ? { selectedFeature: null }
+        : {}),
+    })),
 
   toggleStatus: (status) =>
     set((state) => {
-      const exists = state.selectedStatuses.includes(status);
-      if (exists) {
-        // Don't remove if it's the only one active to avoid empty map confusion
-        if (state.selectedStatuses.length === 1) {
-          return state;
-        }
-        return {
-          selectedStatuses: state.selectedStatuses.filter((s) => s !== status),
-        };
-      }
-      return { selectedStatuses: [...state.selectedStatuses, status] };
+      const { selectedStatuses } = state;
+      const isSelected = selectedStatuses.includes(status);
+      // Keep at least one status active.
+      if (isSelected && selectedStatuses.length === 1) return state;
+      return {
+        selectedStatuses: isSelected
+          ? selectedStatuses.filter((selected) => selected !== status)
+          : [...selectedStatuses, status],
+      };
     }),
 
   setStatuses: (statuses) => set({ selectedStatuses: statuses }),
 
   togglePhase: (phase) =>
-    set((state) => {
-      const exists = state.selectedPhases.includes(phase);
-      if (exists) {
-        return {
-          selectedPhases: state.selectedPhases.filter((p) => p !== phase),
-        };
-      }
-      return { selectedPhases: [...state.selectedPhases, phase] };
-    }),
+    set(({ selectedPhases }) => ({
+      selectedPhases: selectedPhases.includes(phase)
+        ? selectedPhases.filter((selected) => selected !== phase)
+        : [...selectedPhases, phase],
+    })),
 
   setPhases: (phases) => set({ selectedPhases: phases }),
 
@@ -143,8 +136,18 @@ export const useMetroStore = create<MetroStoreState>((set) => ({
 
   setHoveredFeature: (hovered) =>
     set((state) => {
-      if (!state.hoveredFeature && !hovered) return state;
-      if (state.hoveredFeature?.id === hovered?.id) return state;
+      const current = state.hoveredFeature;
+      if (
+        current?.type === hovered?.type &&
+        current?.id === hovered?.id &&
+        current?.name === hovered?.name &&
+        current?.status === hovered?.status &&
+        current?.color === hovered?.color &&
+        current?.x === hovered?.x &&
+        current?.y === hovered?.y
+      ) {
+        return state;
+      }
       return { hoveredFeature: hovered };
     }),
 

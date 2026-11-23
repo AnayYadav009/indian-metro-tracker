@@ -1,0 +1,209 @@
+{
+  "city": {
+    "id": "patna",
+    "name": "Patna",
+    "bbox": [
+      85.05,
+      25.55,
+      85.25,
+      25.68
+    ],
+    "operator": "PMRC",
+    "phases": [
+      "1"
+    ],
+    "network_id": "patna-metro"
+  },
+  "lines": [
+    {
+      "id": "pat-blue",
+      "name": "Blue Line (Corridor 2)",
+      "city": "Patna",
+      "city_id": "patna",
+      "color": "#4169E1",
+      "operator": "PMRC",
+      "source": "osm+pmrc",
+      "notes": "Blue Line priority corridor connects New ISBT to Malahi Pakri (5.28 km, 5 stations). Elevated priority corridor fully operational."
+    }
+  ],
+  "segments": [
+    {
+      "osmId": 19717508,
+      "segment_id": "pat-blue-seg-01",
+      "line_id": "pat-blue",
+      "line_name": "Blue Line (Corridor 2)",
+      "phase": "1",
+      "status": "operational",
+      "gauge": "standard",
+      "inaugurated_on": "2025-10-06",
+      "expected_completion": null,
+      "color": "#4169E1",
+      "orderedWayIds": [
+        {
+          "id": 1442330712,
+          "reversed": false
+        },
+        {
+          "id": 1442310561,
+          "reversed": true
+        }
+      ],
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://patnametrorail.com"
+      ]
+    }
+  ],
+  "stationOverrides": {
+    "patna-new-isbt": {
+      "line_ids": [
+        "pat-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2025-10-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://patnametrorail.com"
+      ]
+    },
+    "New ISBT": {
+      "line_ids": [
+        "pat-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2025-10-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://patnametrorail.com"
+      ]
+    },
+    "patna-zero-mile": {
+      "line_ids": [
+        "pat-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2025-10-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://patnametrorail.com"
+      ]
+    },
+    "Zero Mile": {
+      "line_ids": [
+        "pat-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2025-10-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://patnametrorail.com"
+      ]
+    },
+    "patna-bhootnath": {
+      "line_ids": [
+        "pat-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2025-10-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://patnametrorail.com"
+      ]
+    },
+    "Bhootnath": {
+      "line_ids": [
+        "pat-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2025-10-06",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://patnametrorail.com"
+      ]
+    },
+    "patna-khemnichak": {
+      "line_ids": [
+        "pat-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2026-07-02",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://patnametrorail.com"
+      ]
+    },
+    "Khemnichak": {
+      "line_ids": [
+        "pat-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2026-07-02",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://patnametrorail.com"
+      ]
+    },
+    "patna-malahi-pakri": {
+      "line_ids": [
+        "pat-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2026-07-02",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://patnametrorail.com"
+      ]
+    },
+    "Malahi Pakri": {
+      "line_ids": [
+        "pat-blue"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2026-07-02",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://patnametrorail.com"
+      ]
+    }
+  }
+}

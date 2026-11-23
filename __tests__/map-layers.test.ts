@@ -2,7 +2,9 @@ import { describe, it, expect } from "vitest";
 import {
   operationalLineLayer,
   constructionLineLayer,
+  schematicLineLayer,
   plannedLineLayer,
+  getSelectedSchematicSegmentLayer,
   stationCircleLayer,
   stationLabelsLayer,
   withVisibility,
@@ -32,9 +34,9 @@ describe("MapLibre Layer Specifications", () => {
       expect(layer.type).toBe("line");
       expect(layer.source).toBe("metro-segments");
       expect(layer.filter).toEqual([
-        "==",
-        ["get", "status"],
-        "construction",
+        "all",
+        ["==", ["get", "status"], "construction"],
+        ["!=", ["get", "geometry_quality"], "schematic"],
       ]);
       expect(layer.paint?.["line-dasharray"]).toEqual([4, 2]);
       expect(layer.paint?.["line-color"]).toEqual(["get", "color"]);
@@ -46,13 +48,22 @@ describe("MapLibre Layer Specifications", () => {
       expect(layer.type).toBe("line");
       expect(layer.source).toBe("metro-segments");
       expect(layer.filter).toEqual([
-        "==",
-        ["get", "status"],
-        "planned",
+        "all",
+        ["==", ["get", "status"], "planned"],
+        ["!=", ["get", "geometry_quality"], "schematic"],
       ]);
       expect(layer.paint?.["line-dasharray"]).toEqual([0.1, 2]);
       expect(layer.paint?.["line-color"]).toEqual(["get", "color"]);
       expect(layer.layout?.["line-cap"]).toBe("round");
+    });
+
+    it("renders schematic construction or planned geometry as a dashed approximate alignment", () => {
+      const layer = schematicLineLayer as Record<string, any>;
+      expect(layer.id).toBe("schematic-lines");
+      expect(layer.filter).toEqual(["==", ["get", "geometry_quality"], "schematic"]);
+      expect(layer.paint?.["line-dasharray"]).toEqual([4, 2]);
+      const selected = getSelectedSchematicSegmentLayer("schematic-segment") as Record<string, any>;
+      expect(selected.paint?.["line-dasharray"]).toEqual([4, 2]);
     });
   });
 

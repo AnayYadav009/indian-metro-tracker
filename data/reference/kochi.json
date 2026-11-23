@@ -1,0 +1,103 @@
+{
+  "city_id": "kochi",
+  "compiled_on": "2026-10-16",
+  "lines": [
+    {
+      "line_id": "koc-blue",
+      "official_name": "Line 1 (Blue Line)",
+      "operator": "KMRL",
+      "topology": "linear",
+      "operational_stations": 25,
+      "operational_length_km": 28.12,
+      "planned_length_km": 28.12,
+      "terminals": [
+        "Aluva",
+        "Thrippunithura Terminal"
+      ],
+      "status": "operational",
+      "disjoint_stretches": false,
+      "openings": [
+        {
+          "stage": "Phase 1 Reach 1 (Aluva to Palarivattom)",
+          "phase": null,
+          "opened_on": "2017-06-19",
+          "stations_added": 11,
+          "confidence": "sourced",
+          "source": {
+            "title": "Kochi Metro commercial operations begin on Aluva - Palarivattom stretch",
+            "url": "https://kochimetro.org",
+            "retrieved_at": "2026-10-16",
+            "kind": "official"
+          }
+        },
+        {
+          "stage": "Phase 1 Reach 2 (Palarivattom to Maharaja's College)",
+          "phase": null,
+          "opened_on": "2017-10-03",
+          "stations_added": 5,
+          "confidence": "sourced",
+          "source": {
+            "title": "Kochi Metro extends services to Maharaja's College",
+            "url": "https://kochimetro.org",
+            "retrieved_at": "2026-10-16",
+            "kind": "official"
+          }
+        },
+        {
+          "stage": "Phase 1 Reach 3 (Maharaja's College to Thykoodam)",
+          "phase": null,
+          "opened_on": "2019-09-03",
+          "stations_added": 5,
+          "confidence": "sourced",
+          "source": {
+            "title": "Kochi Metro commences commercial service to Thykoodam",
+            "url": "https://kochimetro.org",
+            "retrieved_at": "2026-10-16",
+            "kind": "official"
+          }
+        },
+        {
+          "stage": "Phase 1 Reach 4 (Thykoodam to Petta)",
+          "phase": null,
+          "opened_on": "2020-09-07",
+          "stations_added": 1,
+          "confidence": "sourced",
+          "source": {
+            "title": "Kochi Metro Petta station opens to public",
+            "url": "https://kochimetro.org",
+            "retrieved_at": "2026-10-16",
+            "kind": "official"
+          }
+        },
+        {
+          "stage": "Phase 1A Extension (Petta to SN Junction)",
+          "phase": null,
+          "opened_on": "2022-09-01",
+          "stations_added": 2,
+          "confidence": "sourced",
+          "source": {
+            "title": "Prime Minister dedicates Kochi Metro Phase 1A extension from Petta to SN Junction",
+            "url": "https://kochimetro.org",
+            "retrieved_at": "2026-10-16",
+            "kind": "official"
+          }
+        },
+        {
+          "stage": "Phase 1B Extension (SN Junction to Thrippunithura Terminal)",
+          "phase": null,
+          "opened_on": "2024-03-06",
+          "stations_added": 1,
+          "confidence": "sourced",
+          "source": {
+            "title": "Inauguration of Kochi Metro Phase 1B Tripunithura Terminal",
+            "url": "https://kochimetro.org",
+            "retrieved_at": "2026-10-16",
+            "kind": "official"
+          }
+        }
+      ],
+      "construction": [],
+      "notes": "Kochi Metro Line 1 (Blue Line) operates 28.12 km from Aluva to Thrippunithura Terminal across 25 elevated stations. Phase 1 was constructed and opened in progressive reaches between 2017 and 2024."
+    }
+  ]
+}

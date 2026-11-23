@@ -39,6 +39,22 @@ export const AUDIT_THRESHOLDS = {
   bboxMarginDeg: 0.05,
   /** Ground truth: operational length difference threshold (fraction) → warn */
   groundTruthLengthWarnPct: 0.03,
+  /** Parallel duplicate check: maximum distance between parallel tracks (m) */
+  parallelDuplicateMaxDistM: 60,
+  /** Parallel duplicate check: minimum shared parallel length to flag (m) */
+  parallelDuplicateMinSharedM: 300,
+  /** Segment hairpin turn angle threshold (degrees) */
+  hairpinAngleDeg: 150,
+  /** Segment hairpin turn span along polyline (m) */
+  hairpinSpanM: 300,
+  /** Segment sparse vertices max chord length for non-schematic segments (m) */
+  sparseVertexMaxChordM: 1000,
+  /** City operational km vs reference mismatch threshold (fraction) → error */
+  cityKmVsReferenceErrorPct: 0.1,
+  /** Terminal station distance to segment end threshold (m) */
+  terminalToSegmentEndMaxM: 300,
+  /** Construction stretch endpoint to segment endpoint distance threshold (m) */
+  constructionStretchEndMaxM: 300,
 } as const;
 
 export type AuditThresholds = typeof AUDIT_THRESHOLDS;

@@ -93,22 +93,22 @@ describe("Metro Data Loader & Dataset Invariants", () => {
         cities: [
           ...dataset.cities,
           {
-            id: "lucknow",
-            name: "Lucknow",
+            id: "mock-test-city",
+            name: "Mock Test City",
             bbox: [80.8, 26.7, 81.1, 27.0] as [number, number, number, number],
-            operator: "UPMRC",
+            operator: "MTC",
             phases: ["Phase 1", "Phase 2"],
           },
         ],
         lines: [
           ...dataset.lines,
           {
-            id: "lko-red",
+            id: "mtc-red",
             name: "Red Line",
-            city_id: "lucknow",
-            city: "Lucknow",
+            city_id: "mock-test-city",
+            city: "Mock Test City",
             color: "#ED1C24",
-            operator: "UPMRC",
+            operator: "MTC",
             source: "mock",
           },
         ],
@@ -126,12 +126,12 @@ describe("Metro Data Loader & Dataset Invariants", () => {
                 ],
               },
               properties: {
-                segment_id: "lko-red-seg-01",
-                line_id: "lko-red",
+                segment_id: "mtc-red-seg-01",
+                line_id: "mtc-red",
                 line_name: "Red Line",
-                city_id: "lucknow",
-                city: "Lucknow",
-                operator: "UPMRC",
+                city_id: "mock-test-city",
+                city: "Mock Test City",
+                operator: "MTC",
                 status: "operational",
                 phase: "Phase 1",
                 length_km: 8.5,
@@ -151,10 +151,10 @@ describe("Metro Data Loader & Dataset Invariants", () => {
 
       const result = validateMetroDataset(mockRawData);
       expect(result.valid).toBe(true);
-      expect(result.dataset?.cities.some((c) => c.id === "lucknow")).toBe(true);
+      expect(result.dataset?.cities.some((c) => c.id === "mock-test-city")).toBe(true);
       expect(
         result.dataset?.segments.features.some(
-          (s) => s.properties.segment_id === "lko-red-seg-01"
+          (s) => s.properties.segment_id === "mtc-red-seg-01"
         )
       ).toBe(true);
     });
@@ -213,4 +213,48 @@ describe("Metro Data Loader & Dataset Invariants", () => {
       expect(station?.properties.name).toBe("Rajiv Chowk");
     });
   });
+
+  describe("M10.3 Provenance & Metadata Integrity", () => {
+    it("ensures no record carries last_verified without an official or non-OSM reference", () => {
+      const dataset = getMetroData();
+      for (const st of dataset.stations.features) {
+        if (st.properties.last_verified) {
+          const refs = st.properties.references || [];
+          const hasOfficial = refs.some(
+            (r) => !r.includes("openstreetmap.org") && r.trim().length > 0
+          );
+          expect(
+            hasOfficial,
+            `Station ${st.properties.station_id} has last_verified without official reference`
+          ).toBe(true);
+        }
+      }
+
+      for (const seg of dataset.segments.features) {
+        if (seg.properties.last_verified) {
+          const refs = seg.properties.references || [];
+          const hasOfficial = refs.some(
+            (r) => !r.includes("openstreetmap.org") && r.trim().length > 0
+          );
+          expect(
+            hasOfficial,
+            `Segment ${seg.properties.segment_id} has last_verified without official reference`
+          ).toBe(true);
+        }
+      }
+    });
+
+    it("ensures mergeCityOverrides never injects last_verified automatically for OSM-only stations", () => {
+      const dataset = getMetroData();
+      // Find OSM-only stations (no explicit override last_verified)
+      const osmStations = dataset.stations.features.filter(
+        (st) => (!st.properties.references || st.properties.references.length === 0)
+      );
+      expect(osmStations.length).toBeGreaterThan(0);
+      for (const st of osmStations) {
+        expect(st.properties.last_verified).toBeNull();
+      }
+    });
+  });
 });
+

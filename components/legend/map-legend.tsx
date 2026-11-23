@@ -17,7 +17,6 @@ export function MapLegend({ className = "" }: MapLegendProps) {
 
   const dataset = useMemo(() => getMetroData(), []);
 
-  // Filter lines to display in legend based on active city
   const activeLines = useMemo(() => {
     if (!selectedCityId) {
       return [];
@@ -37,7 +36,6 @@ export function MapLegend({ className = "" }: MapLegendProps) {
         isExpanded ? "w-64 sm:w-72" : "w-auto"
       } ${className}`}
     >
-      {/* Header bar / Toggle Button */}
       <button
         type="button"
         data-testid="toggle-legend-btn"
@@ -62,19 +60,16 @@ export function MapLegend({ className = "" }: MapLegendProps) {
         </div>
       </button>
 
-      {/* Expanded Legend Content */}
       {isExpanded && (
         <div
           data-testid="legend-content"
           className="flex flex-col gap-3.5 border-t border-slate-800/80 p-3.5 pt-3 text-xs text-slate-300"
         >
-          {/* Section 1: Line Status Symbology (Never relies on color alone) */}
           <div>
             <h4 className="mb-2 text-[10px] font-bold uppercase tracking-wider text-slate-400">
               Line Status Styles
             </h4>
             <div className="flex flex-col gap-2">
-              {/* Operational: Solid */}
               <div
                 data-testid="legend-status-operational"
                 className="flex items-center justify-between"
@@ -88,7 +83,6 @@ export function MapLegend({ className = "" }: MapLegendProps) {
                 <span className="text-[10px] font-mono text-slate-400">Solid</span>
               </div>
 
-              {/* Construction: Dashed [4, 2] */}
               <div
                 data-testid="legend-status-construction"
                 className="flex items-center justify-between"
@@ -104,7 +98,6 @@ export function MapLegend({ className = "" }: MapLegendProps) {
                 <span className="text-[10px] font-mono text-slate-400">Dashed</span>
               </div>
 
-              {/* Planned: Dotted [0.1, 2] round */}
               <div
                 data-testid="legend-status-planned"
                 className="flex items-center justify-between"
@@ -126,7 +119,6 @@ export function MapLegend({ className = "" }: MapLegendProps) {
             </div>
           </div>
 
-          {/* Section 2: Station Nodes Symbology */}
           <div className="border-t border-slate-800/80 pt-2.5">
             <h4 className="mb-2 text-[10px] font-bold uppercase tracking-wider text-slate-400">
               Station Markers
@@ -188,7 +180,6 @@ export function MapLegend({ className = "" }: MapLegendProps) {
             </div>
           </div>
 
-          {/* Section 3: Active Line Colors for Selected City */}
           {selectedCityId && activeLines.length > 0 && (
             <div className="border-t border-slate-800/80 pt-2.5">
               <div className="mb-2 flex items-center justify-between">
@@ -222,7 +213,6 @@ export function MapLegend({ className = "" }: MapLegendProps) {
             </div>
           )}
 
-          {/* Data Last Updated & Licence Note */}
           <div
             data-testid="legend-last-updated"
             className="border-t border-slate-800/80 pt-2 text-[10px] text-slate-400 flex flex-col gap-1"

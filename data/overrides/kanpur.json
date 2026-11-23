@@ -1,0 +1,697 @@
+{
+  "city": {
+    "id": "kanpur",
+    "name": "Kanpur",
+    "bbox": [
+      80.2,
+      26.42,
+      80.4,
+      26.54
+    ],
+    "operator": "UPMRC",
+    "phases": [
+      "1"
+    ],
+    "network_id": "kanpur-metro"
+  },
+  "lines": [
+    {
+      "id": "knp-orange",
+      "name": "Orange Line",
+      "city": "Kanpur",
+      "city_id": "kanpur",
+      "color": "#F97316",
+      "operator": "UPMRC",
+      "source": "osm+upmrc",
+      "notes": "Orange Line connects IIT Kanpur to Kanpur Central (14.65 km, 14 stations). Fully operational."
+    }
+  ],
+  "segments": [
+    {
+      "osmId": 13615304,
+      "segment_id": "knp-orange-seg-01",
+      "line_id": "knp-orange",
+      "line_name": "Orange Line",
+      "phase": "1",
+      "status": "operational",
+      "gauge": "standard",
+      "inaugurated_on": "2021-12-28",
+      "expected_completion": null,
+      "color": "#F97316",
+      "orderedWayIds": [
+        {
+          "id": 917364832,
+          "reversed": false
+        },
+        {
+          "id": 1391986658,
+          "reversed": false
+        },
+        {
+          "id": 1392878607,
+          "reversed": false
+        },
+        {
+          "id": 1392878610,
+          "reversed": false
+        }
+      ],
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    }
+  ],
+  "stationOverrides": {
+    "knp-iit-kanpur": {
+      "line_ids": [
+        "knp-orange"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2021-12-28",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "kanpur-iit-kanpur": {
+      "line_ids": [
+        "knp-orange"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2021-12-28",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "IIT Kanpur": {
+      "line_ids": [
+        "knp-orange"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2021-12-28",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "knp-kalyanpur": {
+      "line_ids": [
+        "knp-orange"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2021-12-28",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "kanpur-kalyanpur": {
+      "line_ids": [
+        "knp-orange"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2021-12-28",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "Kalyanpur": {
+      "line_ids": [
+        "knp-orange"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2021-12-28",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "knp-spm-hospital": {
+      "line_ids": [
+        "knp-orange"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2021-12-28",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "kanpur-spm-hospital": {
+      "line_ids": [
+        "knp-orange"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2021-12-28",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "SPM Hospital": {
+      "line_ids": [
+        "knp-orange"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2021-12-28",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "knp-vishwavidyalaya": {
+      "line_ids": [
+        "knp-orange"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2021-12-28",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "kanpur-vishwavidyalaya": {
+      "line_ids": [
+        "knp-orange"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2021-12-28",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "Vishwavidyalaya": {
+      "line_ids": [
+        "knp-orange"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2021-12-28",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "knp-gurudev-chauraha": {
+      "line_ids": [
+        "knp-orange"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2021-12-28",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "kanpur-gurudev-chauraha": {
+      "line_ids": [
+        "knp-orange"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2021-12-28",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "Gurudev Chauraha": {
+      "line_ids": [
+        "knp-orange"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2021-12-28",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "knp-geeta-nagar": {
+      "line_ids": [
+        "knp-orange"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2021-12-28",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "kanpur-geeta-nagar": {
+      "line_ids": [
+        "knp-orange"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2021-12-28",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "Geeta Nagar": {
+      "line_ids": [
+        "knp-orange"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2021-12-28",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "knp-rawatpur": {
+      "line_ids": [
+        "knp-orange"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2021-12-28",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "kanpur-rawatpur": {
+      "line_ids": [
+        "knp-orange"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2021-12-28",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "Rawatpur": {
+      "line_ids": [
+        "knp-orange"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2021-12-28",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "knp-llr-hospital": {
+      "line_ids": [
+        "knp-orange"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2021-12-28",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "kanpur-llr-hospital": {
+      "line_ids": [
+        "knp-orange"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2021-12-28",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "LLR Hospital": {
+      "line_ids": [
+        "knp-orange"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2021-12-28",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "knp-moti-jheel": {
+      "line_ids": [
+        "knp-orange"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2021-12-28",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "kanpur-moti-jheel": {
+      "line_ids": [
+        "knp-orange"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2021-12-28",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "Moti Jheel": {
+      "line_ids": [
+        "knp-orange"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2021-12-28",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "elevated",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "knp-chunniganj": {
+      "line_ids": [
+        "knp-orange"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2025-05-30",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "underground",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "kanpur-chunniganj": {
+      "line_ids": [
+        "knp-orange"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2025-05-30",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "underground",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "Chunniganj": {
+      "line_ids": [
+        "knp-orange"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2025-05-30",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "underground",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "knp-naveen-market": {
+      "line_ids": [
+        "knp-orange"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2025-05-30",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "underground",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "kanpur-naveen-market": {
+      "line_ids": [
+        "knp-orange"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2025-05-30",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "underground",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "Naveen Market": {
+      "line_ids": [
+        "knp-orange"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2025-05-30",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "underground",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "knp-bada-chauraha": {
+      "line_ids": [
+        "knp-orange"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2025-05-30",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "underground",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "kanpur-bada-chauraha": {
+      "line_ids": [
+        "knp-orange"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2025-05-30",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "underground",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "Bada Chauraha": {
+      "line_ids": [
+        "knp-orange"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2025-05-30",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "underground",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "knp-nayaganj": {
+      "line_ids": [
+        "knp-orange"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2025-05-30",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "underground",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "kanpur-nayaganj": {
+      "line_ids": [
+        "knp-orange"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2025-05-30",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "underground",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "Nayaganj": {
+      "line_ids": [
+        "knp-orange"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2025-05-30",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "underground",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "knp-kanpur-central": {
+      "line_ids": [
+        "knp-orange"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2025-05-30",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "underground",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "kanpur-kanpur-central": {
+      "line_ids": [
+        "knp-orange"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2025-05-30",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "underground",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    },
+    "Kanpur Central": {
+      "line_ids": [
+        "knp-orange"
+      ],
+      "phase": "1",
+      "status": "operational",
+      "opened_on": "2025-05-30",
+      "expected_completion": null,
+      "is_interchange": false,
+      "layout": "underground",
+      "last_verified": "2026-10-16",
+      "references": [
+        "https://upmetrorail.com"
+      ]
+    }
+  }
+}

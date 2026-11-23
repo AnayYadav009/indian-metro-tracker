@@ -11,7 +11,7 @@ import {
   type NormalizedCityData,
   type NormalizedSegment,
 } from "./normalize";
-import type { SegmentFeature, StationFeature } from "../../types/metro";
+import type { SegmentFeature, SharedCorridor, StationFeature } from "../../types/metro";
 
 type Coordinate = [number, number];
 
@@ -54,6 +54,47 @@ function removeShortSelfIntersectionSpur(coords: Coordinate[]): Coordinate[] {
   return coords;
 }
 
+function removeHairpinSpurs(
+  coords: Coordinate[],
+  maxSpanM = 300,
+  minAngleDeg = 150
+): Coordinate[] {
+  let modified = true;
+  let cur = [...coords];
+  while (modified) {
+    modified = false;
+    for (let i = 1; i < cur.length - 1; i++) {
+      const prev = cur[i - 1];
+      const p = cur[i];
+      const next = cur[i + 1];
+      const d1 = haversineDistanceM(prev, p);
+      const d2 = haversineDistanceM(p, next);
+      if (d1 + d2 > maxSpanM) continue;
+
+      const v1x = p[0] - prev[0];
+      const v1y = p[1] - prev[1];
+      const v2x = next[0] - p[0];
+      const v2y = next[1] - p[1];
+      const dot = v1x * v2x + v1y * v2y;
+      const mag1 = Math.hypot(v1x, v1y);
+      const mag2 = Math.hypot(v2x, v2y);
+      if (mag1 === 0 || mag2 === 0) {
+        cur.splice(i, 1);
+        modified = true;
+        break;
+      }
+      const cosVal = Math.max(-1, Math.min(1, dot / (mag1 * mag2)));
+      const deg = (Math.acos(cosVal) * 180) / Math.PI;
+      if (deg >= minAngleDeg) {
+        cur.splice(i, 1);
+        modified = true;
+        break;
+      }
+    }
+  }
+  return cur;
+}
+
 export interface CityOverrideData {
   city: {
     id: string;
@@ -74,6 +115,7 @@ export interface CityOverrideData {
   }>;
   segments: Array<{
     osmId?: number;
+    orderedWayIds?: Array<{ id: number; reversed?: boolean }>;
     segment_id: string;
     line_id: string;
     line_name: string;
@@ -89,7 +131,9 @@ export interface CityOverrideData {
     completion_unconfirmed?: boolean;
     last_verified?: string;
     geometry_quality?: "exact" | "schematic";
+    shared_corridor?: SharedCorridor;
     endpoint_station_ids?: string[];
+    stations_not_published?: boolean;
   }>;
   interchangeStationNames?: string[];
   dedupeRadiusM?: number;
@@ -113,6 +157,7 @@ export interface CityOverrideData {
       layout?: "underground" | "elevated" | "at-grade" | null;
       last_verified?: string;
       coordinates?: [number, number];
+      references?: string[];
     }
   >;
   out_of_scope_station_ids?: string[];
@@ -179,13 +224,13 @@ export function mergeCityOverrides(
     let coords: [number, number][] | undefined;
     let isOsmSourced = false;
 
-    if (segOverride.osmId && normalizedSegsByOsmId.has(segOverride.osmId)) {
+    if (segOverride.coordinates && segOverride.coordinates.length >= 2) {
+      coords = segOverride.coordinates;
+      isOsmSourced = false;
+    } else if (segOverride.osmId && normalizedSegsByOsmId.has(segOverride.osmId)) {
       const normSeg = normalizedSegsByOsmId.get(segOverride.osmId)!;
       coords = normSeg.coordinates;
       isOsmSourced = true;
-    } else if (segOverride.coordinates && segOverride.coordinates.length >= 2) {
-      coords = segOverride.coordinates;
-      isOsmSourced = false;
     }
 
     const geometryQuality: "exact" | "schematic" =
@@ -334,6 +379,7 @@ export function mergeCityOverrides(
     openedOn: string | null;
     expectedCompletion: string | null;
     lastVerified: string | null;
+    references: string[];
   }> = [];
 
   for (const st of deduplicatedStations) {
@@ -464,6 +510,9 @@ export function mergeCityOverrides(
       if (override.coordinates) st.coords = override.coordinates;
     }
 
+    let stationReferences: string[] = [];
+    if (override?.references) stationReferences = override.references;
+
     stationsWithLines.push({
       st,
       assignedLineIds: Array.from(lineIdsSet),
@@ -474,6 +523,7 @@ export function mergeCityOverrides(
       openedOn,
       expectedCompletion,
       lastVerified,
+      references: stationReferences,
     });
   }
 
@@ -551,7 +601,11 @@ export function mergeCityOverrides(
 
     const first = projections[0];
     const last = projections[projections.length - 1];
-    if (first.position !== last.position) {
+    const isClosedLoop =
+      coords.length >= 4 &&
+      haversineDistanceM(coords[0], coords[coords.length - 1]) <= 50;
+
+    if (!isClosedLoop && first.position !== last.position) {
       iseg.coords = lineSlice(first.point, last.point, coords);
     }
     iseg.coords = removeShortSelfIntersectionSpur(iseg.coords || coords);
@@ -600,8 +654,10 @@ export function mergeCityOverrides(
   for (const iseg of intermediateSegments) {
     if (iseg.coords) {
       iseg.coords = removeAdjacentDuplicateCoords(
-        removeShortSelfIntersectionSpur(
-          removeAdjacentDuplicateCoords(iseg.coords)
+        removeHairpinSpurs(
+          removeShortSelfIntersectionSpur(
+            removeAdjacentDuplicateCoords(iseg.coords)
+          )
         )
       );
     }
@@ -693,12 +749,14 @@ export function mergeCityOverrides(
             : null,
         stations_count: stationsCount,
         color: segOverride.color,
+        stations_not_published: segOverride.stations_not_published || false,
         source: segmentSource,
         references: segOverride.references || [],
         completion_unconfirmed: segOverride.completion_unconfirmed || false,
         last_verified: lastVerifiedDate,
         retrieved_at: iseg.isOsmSourced ? retrievedAt : undefined,
         geometry_quality: iseg.geometryQuality,
+        shared_corridor: segOverride.shared_corridor,
       },
     });
   }
@@ -707,7 +765,7 @@ export function mergeCityOverrides(
   const stationFeatures: StationFeature[] = [];
 
   for (const sw of stationsWithLines) {
-    const isInterchange =
+    let isInterchange =
       interchangeSet.has(sw.st.rawName.toLowerCase()) ||
       interchangeSet.has(sw.st.name.toLowerCase()) ||
       sw.assignedLineIds.length > 1;
@@ -724,9 +782,11 @@ export function mergeCityOverrides(
       if (correction.interchange_id === null) {
         // Forced split — remove interchange_id even if auto assigned
         interchangeId = undefined;
+        isInterchange = false;
       } else {
         // Forced merge — use the specified cluster id
         interchangeId = correction.interchange_id;
+        isInterchange = true;
       }
     }
 
@@ -757,7 +817,7 @@ export function mergeCityOverrides(
         layout: sw.layout,
         layout_source: sw.layoutSource,
         source: "osm",
-        references: [],
+        references: sw.references || [],
         last_verified: sw.lastVerified,
         retrieved_at: retrievedAt,
         ...(interchangeId !== undefined ? { interchange_id: interchangeId } : {}),
